@@ -28,6 +28,7 @@ REQUIRED = {
     "paper/greencert_arxiv.pdf",
     "scripts/reproduce_figures.py",
     "scripts/paper_plot_style.py",
+    "scripts/update_public_manifest.py",
 }
 FIGURES = (
     "paper_transformer_v3_anytime",
@@ -71,7 +72,14 @@ def main() -> None:
     )
     blocked = {".ckpt", ".pem", ".pt", ".pth"}
 
-    files = [path for path in root.rglob("*") if path.is_file() and ".git" not in path.parts]
+    ignored_roots = {".git", ".venv", "output", "tmp"}
+    files = [
+        path
+        for path in root.rglob("*")
+        if path.is_file()
+        and path.relative_to(root).parts[0] not in ignored_roots
+        and "__pycache__" not in path.parts
+    ]
     for path in files:
         relative = path.relative_to(root).as_posix()
         size = path.stat().st_size

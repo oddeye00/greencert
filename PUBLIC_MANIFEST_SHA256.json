@@ -3741,8 +3741,8 @@
       "sha256": "C36840F0BA7AB7187ACC4040F1B8528ECDA59A93E6C1A27B1928BD91E0456B6C"
     },
     "scripts/audit_public_release.py": {
-      "bytes": 5045,
-      "sha256": "BC038B378E72D48BD7893E9D6A27F57774CAB6A7206FC433FF1E5275EB962529"
+      "bytes": 5251,
+      "sha256": "08A9444B66C3101D40EC64BC70F385FD05BA388FD3947DC1284A5261BC1574C0"
     },
     "scripts/audit_real_dataset_confirmation.py": {
       "bytes": 23467,
@@ -4527,6 +4527,10 @@
     "scripts/transformer_v3_protocol.py": {
       "bytes": 3482,
       "sha256": "DBC8B77C9F16FFD5BFA70EF10E372890A0498F0F0287D284035532834C90847F"
+    },
+    "scripts/update_public_manifest.py": {
+      "bytes": 1374,
+      "sha256": "EA609F76C2F404451245F205D948BE84831E3C019459000388C763B0E253783D"
     },
     "scripts/variational_mlp_certificate.py": {
       "bytes": 9751,
