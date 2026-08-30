@@ -3989,8 +3989,8 @@
       "sha256": "09C3553279E5B379CC70BB58E2DDAF5C9119FCCA771FF5958D33B6F19E3E9197"
     },
     "scripts/build_public_repository.py": {
-      "bytes": 4776,
-      "sha256": "E33FE0E2BEFC4F714D03C4CA53547F12E553E50C574E6E17575E76018147EC72"
+      "bytes": 4817,
+      "sha256": "ED7B0FBD6AFE4D86EC705F660C0DD932EE48F7E9C5B26BBECA6D0C9F6B4D7FF5"
     },
     "scripts/causal_response_residual.py": {
       "bytes": 5045,

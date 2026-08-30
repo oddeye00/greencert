@@ -37,6 +37,7 @@ PUBLIC_FILES = (
     "scripts/check_reproduction_environment.py",
     "scripts/paper_plot_style.py",
     "scripts/reproduce_figures.py",
+    "scripts/update_public_manifest.py",
     "scripts/make_transformer_v3_anytime_figure.py",
     "scripts/paper_figure_new_evidence.py",
     "scripts/paper_figure_prefix_scaling.py",
