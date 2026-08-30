@@ -42,7 +42,16 @@ python reproduce.py smoke
 
 This tier checks core Green recurrences, variational recentering, inexact
 operator interfaces, event transport, deterministic neural-jet release, and
-the manuscript claim ledger. It does not retrain the neural networks.
+the manuscript claim ledger. Its first-passage check exhaustively enumerates
+109,152 valid lower/true/upper finite-window paths, including no-event cases,
+and compares both independent bracket implementations. It does not retrain the
+neural networks.
+
+The historical `scripts/test_transformer_v3_preseal.py` is intentionally a
+one-time pre-freeze gate: rerunning it after the archived experiment correctly
+fails because the target artifacts now exist. Use the sealed no-artifact record
+and Tier 3 auditors to verify that historical ordering; do not treat that
+precondition check as a post-release regression test.
 
 ## Tier 2: deterministic figures
 

@@ -16,7 +16,7 @@ paper/*.out
 paper/*.synctex.gz
 output/github/
 output/public_repo/
+output/reproduction_report.json
 *.pt
 *.pth
 *.ckpt
-

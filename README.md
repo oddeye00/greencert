@@ -22,6 +22,8 @@ outward continuation.
 - [`REPRODUCIBILITY.md`](REPRODUCIBILITY.md) explains the audit levels,
   expected runtimes, and exact commands.
 - [`DATA.md`](DATA.md) records dataset origins, licenses, and hashes.
+- [`LITERATURE_AUDIT.md`](LITERATURE_AUDIT.md) records the dated primary-source
+  novelty search and object-level comparisons.
 - [`FIGURES.md`](FIGURES.md) maps every paper figure to a Python/Matplotlib
   generator and its input records.
 - [`SUPPLEMENT_README.md`](SUPPLEMENT_README.md) documents the full sealed
@@ -102,5 +104,6 @@ source hash and the packaged hash.
 ## Citation and license
 
 Citation metadata are in [`CITATION.cff`](CITATION.cff). Code is released under
-the MIT License. The paper text and original figures are released under
-CC BY 4.0. Dataset-specific notices appear in [`DATA.md`](DATA.md).
+the [`MIT License`](LICENSE). The paper text and original figures are released
+under [`CC BY 4.0`](LICENSE-PAPER). Dataset-specific notices appear in
+[`DATA.md`](DATA.md).

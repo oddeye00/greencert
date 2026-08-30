@@ -37,7 +37,9 @@ def main() -> None:
     }
     output = ROOT / "PUBLIC_MANIFEST_SHA256.json"
     output.write_text(
-        json.dumps(manifest, indent=2, sort_keys=True) + "\n", encoding="utf-8"
+        json.dumps(manifest, indent=2, sort_keys=True) + "\n",
+        encoding="utf-8",
+        newline="\n",
     )
     print(
         json.dumps(

@@ -21,6 +21,8 @@ REQUIRED = {
     "DATA.md",
     "FIGURES.md",
     "LICENSE",
+    "LICENSE-PAPER",
+    "LITERATURE_AUDIT.md",
     "CITATION.cff",
     "requirements.in",
     "requirements.txt",
@@ -87,7 +89,7 @@ def main() -> None:
             oversized.append({"path": relative, "bytes": size})
         if path.suffix.lower() in blocked:
             forbidden_extensions.append(relative)
-        if path.suffix.lower() in TEXT_SUFFIXES or path.name in {"LICENSE", "Makefile", "Dockerfile"}:
+        if path.suffix.lower() in TEXT_SUFFIXES or path.name.startswith("LICENSE") or path.name in {"Makefile", "Dockerfile"}:
             text = path.read_text(encoding="utf-8", errors="replace")
             if any(pattern.search(text) for pattern in local_patterns):
                 bad_paths.append(relative)

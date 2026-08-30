@@ -23,6 +23,8 @@ PUBLIC_FILES = (
     "Dockerfile",
     "FIGURES.md",
     "LICENSE",
+    "LICENSE-PAPER",
+    "LITERATURE_AUDIT.md",
     "Makefile",
     "README.md",
     "REPRODUCIBILITY.md",
@@ -122,7 +124,9 @@ def main() -> None:
         },
     }
     (DESTINATION / "PUBLIC_MANIFEST_SHA256.json").write_text(
-        json.dumps(manifest, indent=2, sort_keys=True) + "\n", encoding="utf-8"
+        json.dumps(manifest, indent=2, sort_keys=True) + "\n",
+        encoding="utf-8",
+        newline="\n",
     )
 
     print(

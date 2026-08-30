@@ -20,6 +20,7 @@ TIERS = {
         "scripts/test_predictable_failure_budget.py",
         "scripts/test_inexact_anytime_gram.py",
         "scripts/test_response_centered_event_transport.py",
+        "scripts/test_persistent_first_passage_exhaustive.py",
         "scripts/test_prefix_gram_enclosure.py",
         "scripts/test_direct_image_green_bound.py",
         "scripts/test_analytic_jet_release.py",

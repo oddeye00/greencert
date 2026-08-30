@@ -1,0 +1,19 @@
+GREENCERT paper and figure license
+==================================
+
+Copyright (c) 2026 Ian Rhee.
+
+The GREENCERT paper text and original figures in this repository are licensed
+under the Creative Commons Attribution 4.0 International License (CC BY 4.0).
+
+SPDX-License-Identifier: CC-BY-4.0
+
+You may share and adapt this material for any purpose, including commercially,
+provided that you give appropriate credit, provide a link to the license, and
+indicate whether changes were made.
+
+Full legal terms: https://creativecommons.org/licenses/by/4.0/legalcode
+
+This notice does not relicense third-party datasets, software dependencies, or
+quoted material. Dataset-specific terms are recorded in DATA.md. Source code is
+licensed separately under the repository's MIT License.

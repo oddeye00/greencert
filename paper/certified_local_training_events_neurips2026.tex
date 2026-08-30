@@ -183,7 +183,8 @@ We improve a reference path by a causal variational sweep.  For sweep $k$,
 This is an anchor-preserving Newton/pseudo-orbit correction.  Let
 $\kappa_{\infty,H}$ be the induced gain from the maximum injection norm to the
 maximum state norm for this causal variational recurrence.  If $DG$ is
-$M$-Lipschitz, one sweep contracts the maximum path defect quadratically:
+$M$-Lipschitz throughout every segment joining a path point to its corrected
+point, one sweep contracts the maximum path defect quadratically:
 \begin{equation}
  \max_j\norm{r^{(k+1)}_j}
   \le \tfrac12M\kappa_{\infty,H}^2
@@ -200,14 +201,18 @@ The signed response below is \emph{not} an adaptive extra sweep; it encloses
 error around the already frozen final centerline.
 
 For evaluation examples $i=1,\ldots,N$, let $n_j$ be the number correctly
-classified at update $a+j$.  A gate requires $n_j\ge r$.  Its $K$-persistent
-first passage is
+classified at future update $a+j$.  A gate requires $n_j\ge r$.  Its
+unrestricted $K$-persistent first passage is
 \begin{equation}
- T_{r,K}=\min\{j:n_{j+\ell}\ge r\text{ for every }0\le\ell<K\}.
+ T_{r,K}=\inf\{j\in\mathbb N_0:n_{j+\ell}\ge r
+ \text{ for every }0\le\ell<K\},
  \label{eq:event}
 \end{equation}
-The scientific object is a bracket $[L,U]$ guaranteed to contain $T_{r,K}$,
-or abstention.
+with $\inf\varnothing=\infty$.  On a certified horizon $H$, endpoint searches
+are restricted to $0\le j\le H-K+1$, so every reported endpoint uses a
+complete persistence block.  If either endpoint cannot be established in this
+range, the method abstains.  The scientific object is a bracket $[L,U]$
+guaranteed to contain $T_{r,K}$, or abstention.
 
 \section{Signed finite-window certification}
 \label{sec:method}
@@ -498,12 +503,14 @@ Strict positive lower margins give a guaranteed-correct count $n^-_j$; one
 strict negative upper margin gives definite incorrectness and hence a
 possible-correct count $n^+_j$.  Define
 \begin{align}
- L&=\min\{j:n^+_{j+\ell}\ge r\ \forall 0\le\ell<K\},\nonumber\\
- U&=\min\{j:n^-_{j+\ell}\ge r\ \forall 0\le\ell<K\}.
+ L&=\min\{0\le j\le H-K+1:
+ n^+_{j+\ell}\ge r\ \forall 0\le\ell<K\},\nonumber\\
+ U&=\min\{0\le j\le H-K+1:
+ n^-_{j+\ell}\ge r\ \forall 0\le\ell<K\}.
  \label{eq:persistentbracket}
 \end{align}
-Whenever both exist, $L\le T_{r,K}\le U$.  No monotonicity of accuracy is
-assumed.
+Whenever both sets are nonempty, $T_{r,K}$ is finite and
+$L\le T_{r,K}\le U$.  No monotonicity of accuracy is assumed.
 
 \paragraph{\method{} in six steps.}
 At an eligible checkpoint: (1) build the anchor-affine HVP clock and apply the
@@ -793,6 +800,10 @@ and local quadratic forecasts reach 150M parameters \citep{meterez2026quadratic}
 \method{} instead certifies finite-window nonlinear validity and first passage.
 
 \paragraph{Trajectory verification and robust training.}
+Minute perturbations can send otherwise identical neural-training trajectories
+to different solutions \citep{altintas2025butterfly}, making the realized
+checkpoint---rather than an interchangeable nearby orbit---the relevant anchor
+for an event claim.
 Classical shadowing, pseudo-orbit, and radii-polynomial methods certify
 trajectory proximity/existence, including in learning dynamics
 \citep{chow1989shadowing,chow1992numerical,chow1994global,hammel1987numerical,sauer1991rigorous,lessard2014rigorous,bielecki2004shadowing,orvieto2019shadowing}.
@@ -1068,7 +1079,7 @@ Inexact Krylov and variable-accuracy eigensolver theory likewise study
 perturbed matrix--vector products
 \citep{simoncini2003inexact,simoncini2005variable}; recent residual-based
 Chebyshev iteration demonstrates the mixed-precision opportunity at large
-scale \citep{kodali2026residual}.  Proposition~\ref{prop:inexact-probe}
+scale \citep{kodali2025residual}.  Proposition~\ref{prop:inexact-probe}
 specializes residual transport to the one-sided randomized norm enclosure
 required here.
 
@@ -1510,8 +1521,10 @@ final path.
 \end{proof}
 
 \begin{proposition}[Persistent first-passage bracket]
-If $n^-_j\le n_j\le n^+_j$ for every update and $L,U$ are defined by
-Eq.~\eqref{eq:persistentbracket}, then $L\le T_{r,K}\le U$.
+If $n^-_j\le n_j\le n^+_j$ for $0\le j\le H$ and the finite endpoints
+$L,U\in\{0,\ldots,H-K+1\}$ are defined by
+Eq.~\eqref{eq:persistentbracket}, then $T_{r,K}$ is finite and
+$L\le T_{r,K}\le U$.
 \end{proposition}
 
 \begin{proof}

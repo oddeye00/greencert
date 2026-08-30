@@ -616,7 +616,11 @@ def main() -> None:
         "checked_required_phrases": list(required_phrases),
         "checked_forbidden_phrases": list(forbidden_phrases),
     }
-    OUTPUT.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
+    OUTPUT.write_text(
+        json.dumps(payload, indent=2) + "\n",
+        encoding="utf-8",
+        newline="\n",
+    )
     print(json.dumps({**payload, "output_sha256": sha256(OUTPUT)}, indent=2))
 
 
