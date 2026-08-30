@@ -1,0 +1,62 @@
+{
+  "status": "complete post-seal batched-probe primitive benchmark",
+  "profile": "100k",
+  "config": {
+    "modulus": 17,
+    "model_dim": 96,
+    "hidden_dim": 384,
+    "heads": 4,
+    "depth": 1,
+    "train_fraction": 0.6,
+    "learning_rate": 0.01,
+    "momentum": 0.9,
+    "weight_decay": 0.01,
+    "steps": 1,
+    "log_every": 50,
+    "checkpoint_every": 100,
+    "seed": 20260824,
+    "threads": 4,
+    "dtype": "float64",
+    "loss": "cross_entropy",
+    "normalization": "none"
+  },
+  "parameter_count": 115104,
+  "probe_block_size": 16,
+  "repeats": 1,
+  "timings_seconds": {
+    "serial_16_hvp_median": 3.086788500077091,
+    "serial_16_hvp_samples": [
+      3.086788500077091
+    ],
+    "batched_16_hvp_median": 0.9242445999989286,
+    "batched_16_hvp_samples": [
+      0.9242445999989286
+    ],
+    "serial_16_output_gram_median": 1.9211498000659049,
+    "serial_16_output_gram_samples": [
+      1.9211498000659049
+    ],
+    "batched_16_output_gram_median": 1.0647423999616876,
+    "batched_16_output_gram_samples": [
+      1.0647423999616876
+    ]
+  },
+  "speedups": {
+    "hvp_probe_block": 3.3397960886984563,
+    "output_gram_probe_block": 1.8043329542761077
+  },
+  "equivalence": {
+    "hvp_relative_error": 3.238052331218576e-16,
+    "output_gram_relative_error": 2.450561026748275e-16
+  },
+  "observed_process_peak_rss_bytes": 563826688,
+  "environment": {
+    "python": "3.12.10",
+    "torch": "2.13.0+cpu",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "logical_cpu_count": 16,
+    "torch_threads": 4,
+    "dtype": "float64",
+    "device": "cpu"
+  }
+}

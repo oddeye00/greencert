@@ -1,0 +1,64 @@
+{
+  "status": "complete matrix-free primitive benchmark",
+  "profile": "100k",
+  "config": {
+    "modulus": 17,
+    "model_dim": 96,
+    "hidden_dim": 384,
+    "heads": 4,
+    "depth": 1,
+    "train_fraction": 0.6,
+    "learning_rate": 0.01,
+    "momentum": 0.9,
+    "weight_decay": 0.01,
+    "steps": 1,
+    "log_every": 50,
+    "checkpoint_every": 100,
+    "seed": 20260824,
+    "threads": 4,
+    "dtype": "float64",
+    "loss": "cross_entropy",
+    "normalization": "none"
+  },
+  "parameter_count": 115104,
+  "optimizer_state_dimension": 230208,
+  "train_examples": 173,
+  "output_examples": 289,
+  "output_coordinates": 4913,
+  "repeats": 2,
+  "timings_seconds": {
+    "objective_forward_median": 0.04018149999319576,
+    "objective_forward_samples": [
+      0.04419799998868257,
+      0.036164999997708946
+    ],
+    "gradient_median": 0.1680832999991253,
+    "gradient_samples": [
+      0.15401890000794083,
+      0.18214769999030977
+    ],
+    "objective_hvp_median": 0.713428750023013,
+    "objective_hvp_samples": [
+      0.5762859000242315,
+      0.8505716000217944
+    ],
+    "output_jacobian_gram_median": 0.32327890003216453,
+    "output_jacobian_gram_samples": [
+      0.41803510003956035,
+      0.2285227000247687
+    ]
+  },
+  "observed_process_peak_rss_bytes": 333889536,
+  "observed_process_peak_rss_gib": 0.3109588623046875,
+  "total_elapsed_seconds": 4.174808799987659,
+  "environment": {
+    "python": "3.12.10",
+    "torch": "2.13.0+cpu",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 186 Stepping 2, GenuineIntel",
+    "logical_cpu_count": 16,
+    "torch_threads": 4,
+    "dtype": "float64",
+    "device": "cpu"
+  }
+}

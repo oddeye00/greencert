@@ -1,0 +1,393 @@
+{
+  "status": "post-seal outward exact-real map verification",
+  "scope_note": "Reference points and checkpoint are exact binary floats. The Arb tube encloses the exact-real optimizer map, independently of the Green radius.",
+  "version": "wdbc-arb-outward-v2-2026-08-24",
+  "method_seal_sha256": "3408AF37C03959264B3DC8888001F5BE4AA5702FEA4D7F90B694261AC2846F8C",
+  "candidate_sha256": [
+    "2833D0B4F63156749834C6C375615A1E001D4A29EF66954D6B6642C54D434C95",
+    "901E04FA9D02BEA1F0B1DAF45180F4ED3C60E5265F1C0E2E7E59346EFCE2538E"
+  ],
+  "python_flint_version": "0.9.0",
+  "arb_precision_bits": 192,
+  "seed": 101,
+  "anchor": 0,
+  "requested_horizon": 29,
+  "reached_horizon": 29,
+  "events": {
+    "0.900": {
+      "green_float_bracket": [
+        14,
+        14
+      ],
+      "outward_bracket": [
+        14,
+        14
+      ]
+    },
+    "0.925": {
+      "green_float_bracket": [
+        20,
+        20
+      ],
+      "outward_bracket": [
+        20,
+        20
+      ]
+    }
+  },
+  "maximum_radius": 4.251180976612183e-14,
+  "minimum_logic_slack": 0.00035313186811891607,
+  "maximum_hessian_interval_row_radius": 1.6156005718923008e-12,
+  "maximum_eigen_numeric_error": 2.3965799760916047e-11,
+  "elapsed_seconds": 2250.87318330002,
+  "diagnostics": [
+    {
+      "step": 0,
+      "beta_upper": 1.0061531758709397,
+      "defect_norm_upper": 1.4056503664222594e-15,
+      "optimizer_jacobian_lipschitz_upper": 377.16496053862255,
+      "next_radius": 1.4056503664222598e-15,
+      "hessian_interval_row_radius": 1.6156005718923008e-12,
+      "hessian_evaluation_error": 1.6156005718923008e-12,
+      "hessian_asymmetry_error": 3.767680247104037e-15,
+      "eigen_numeric_error": 2.3965799760916047e-11,
+      "total_eigenvalue_radius": 2.5585168013055458e-11
+    },
+    {
+      "step": 1,
+      "beta_upper": 1.006121630422085,
+      "defect_norm_upper": 1.389831171987073e-15,
+      "optimizer_jacobian_lipschitz_upper": 377.4433534054481,
+      "next_radius": 2.8040864104556118e-15,
+      "hessian_interval_row_radius": 1.613218130405284e-12,
+      "hessian_evaluation_error": 1.613218130405284e-12,
+      "hessian_asymmetry_error": 3.757956129798888e-15,
+      "eigen_numeric_error": 2.3832171815710073e-11,
+      "total_eigenvalue_radius": 2.544914790224516e-11
+    },
+    {
+      "step": 2,
+      "beta_upper": 1.0060903023273287,
+      "defect_norm_upper": 1.3819172245174568e-15,
+      "optimizer_jacobian_lipschitz_upper": 377.7272792954443,
+      "next_radius": 4.203081368966184e-15,
+      "hessian_interval_row_radius": 1.610544267567992e-12,
+      "hessian_evaluation_error": 1.610544267567992e-12,
+      "hessian_asymmetry_error": 3.736532306855584e-15,
+      "eigen_numeric_error": 2.3687766919462246e-11,
+      "total_eigenvalue_radius": 2.53020477193371e-11
+    },
+    {
+      "step": 3,
+      "beta_upper": 1.0060591889781954,
+      "defect_norm_upper": 1.3879032357241595e-15,
+      "optimizer_jacobian_lipschitz_upper": 378.0166631067059,
+      "next_radius": 5.6164518689989825e-15,
+      "hessian_interval_row_radius": 1.60748839792763e-12,
+      "hessian_evaluation_error": 1.60748839792763e-12,
+      "hessian_asymmetry_error": 3.730371341187613e-15,
+      "eigen_numeric_error": 2.348299943438286e-11,
+      "total_eigenvalue_radius": 2.5094218203651685e-11
+    },
+    {
+      "step": 4,
+      "beta_upper": 1.0060282878255786,
+      "defect_norm_upper": 1.3732175883286204e-15,
+      "optimizer_jacobian_lipschitz_upper": 378.31143079598354,
+      "next_radius": 7.023527045758407e-15,
+      "hessian_interval_row_radius": 1.6043899520696131e-12,
+      "hessian_evaluation_error": 1.6043899520696131e-12,
+      "hessian_asymmetry_error": 3.7097184722873915e-15,
+      "eigen_numeric_error": 2.360357415275378e-11,
+      "total_eigenvalue_radius": 2.5211673823295687e-11
+    },
+    {
+      "step": 5,
+      "beta_upper": 1.005997596378761,
+      "defect_norm_upper": 1.3838625654963754e-15,
+      "optimizer_jacobian_lipschitz_upper": 378.61150935750965,
+      "next_radius": 8.449513891639895e-15,
+      "hessian_interval_row_radius": 1.6022221394238172e-12,
+      "hessian_evaluation_error": 1.6022221394238172e-12,
+      "hessian_asymmetry_error": 3.69509881871187e-15,
+      "eigen_numeric_error": 2.3448210382425076e-11,
+      "total_eigenvalue_radius": 2.5054127620667613e-11
+    },
+    {
+      "step": 6,
+      "beta_upper": 1.0059671122043787,
+      "defect_norm_upper": 1.376155963338429e-15,
+      "optimizer_jacobian_lipschitz_upper": 378.9168268024125,
+      "next_radius": 9.876089052455727e-15,
+      "hessian_interval_row_radius": 1.599285382271166e-12,
+      "hessian_evaluation_error": 1.599285382271166e-12,
+      "hessian_asymmetry_error": 3.664889143411825e-15,
+      "eigen_numeric_error": 2.3182407755337402e-11,
+      "total_eigenvalue_radius": 2.4785358026751985e-11
+    },
+    {
+      "step": 7,
+      "beta_upper": 1.0059368329253018,
+      "defect_norm_upper": 1.36421007163066e-15,
+      "optimizer_jacobian_lipschitz_upper": 379.2273121387039,
+      "next_radius": 1.1298931814764718e-14,
+      "hessian_interval_row_radius": 1.5976733427328307e-12,
+      "hessian_evaluation_error": 1.5976733427328307e-12,
+      "hessian_asymmetry_error": 3.6728250409196646e-15,
+      "eigen_numeric_error": 2.2893102367045466e-11,
+      "total_eigenvalue_radius": 2.449444853481922e-11
+    },
+    {
+      "step": 8,
+      "beta_upper": 1.005906756219467,
+      "defect_norm_upper": 1.3414363498373272e-15,
+      "optimizer_jacobian_lipschitz_upper": 379.54289535182784,
+      "next_radius": 1.2707108200396472e-14,
+      "hessian_interval_row_radius": 1.5950947736134344e-12,
+      "hessian_evaluation_error": 1.5950947736134344e-12,
+      "hessian_asymmetry_error": 3.644472889350635e-15,
+      "eigen_numeric_error": 2.2494957169825514e-11,
+      "total_eigenvalue_radius": 2.4093696416328305e-11
+    },
+    {
+      "step": 9,
+      "beta_upper": 1.005876879818667,
+      "defect_norm_upper": 1.3811852737738373e-15,
+      "optimizer_jacobian_lipschitz_upper": 379.86350738575476,
+      "next_radius": 1.416297162193751e-14,
+      "hessian_interval_row_radius": 1.591550868106698e-12,
+      "hessian_evaluation_error": 1.591550868106698e-12,
+      "hessian_asymmetry_error": 3.625032715765944e-15,
+      "eigen_numeric_error": 2.227626663632989e-11,
+      "total_eigenvalue_radius": 2.387144253715236e-11
+    },
+    {
+      "step": 10,
+      "beta_upper": 1.005847201507294,
+      "defect_norm_upper": 1.3793073073832963e-15,
+      "optimizer_jacobian_lipschitz_upper": 380.1890801246124,
+      "next_radius": 1.56250926783745e-14,
+      "hessian_interval_row_radius": 1.5903924719162235e-12,
+      "hessian_evaluation_error": 1.5903924719162235e-12,
+      "hessian_asymmetry_error": 3.631568573622629e-15,
+      "eigen_numeric_error": 2.215701452924547e-11,
+      "total_eigenvalue_radius": 2.3751038569735323e-11
+    },
+    {
+      "step": 11,
+      "beta_upper": 1.005817719121065,
+      "defect_norm_upper": 1.3692449545952343e-15,
+      "optimizer_jacobian_lipschitz_upper": 380.51954637483215,
+      "next_radius": 1.708524003345959e-14,
+      "hessian_interval_row_radius": 1.5862974968527736e-12,
+      "hessian_evaluation_error": 1.5862974968527736e-12,
+      "hessian_asymmetry_error": 3.600185226639032e-15,
+      "eigen_numeric_error": 2.2063559624781122e-11,
+      "total_eigenvalue_radius": 2.365345730686054e-11
+    },
+    {
+      "step": 12,
+      "beta_upper": 1.0057884305457214,
+      "defect_norm_upper": 1.3281665840834599e-15,
+      "optimizer_jacobian_lipschitz_upper": 380.8548398478026,
+      "next_radius": 1.8512303342889307e-14,
+      "hessian_interval_row_radius": 1.5835399229787972e-12,
+      "hessian_evaluation_error": 1.5835399229787972e-12,
+      "hessian_asymmetry_error": 3.579542876487766e-15,
+      "eigen_numeric_error": 2.1936939990401524e-11,
+      "total_eigenvalue_radius": 2.3524059456256816e-11
+    },
+    {
+      "step": 13,
+      "beta_upper": 1.0057593337157218,
+      "defect_norm_upper": 1.3615709902059834e-15,
+      "optimizer_jacobian_lipschitz_upper": 381.19489514301347,
+      "next_radius": 1.998049286595899e-14,
+      "hessian_interval_row_radius": 1.5816887475462872e-12,
+      "hessian_evaluation_error": 1.5816887475462872e-12,
+      "hessian_asymmetry_error": 3.564654052147822e-15,
+      "eigen_numeric_error": 2.259828040022583e-11,
+      "total_eigenvalue_radius": 2.4183533801824274e-11
+    },
+    {
+      "step": 14,
+      "beta_upper": 1.0057304266129032,
+      "defect_norm_upper": 1.3704315012576352e-15,
+      "optimizer_jacobian_lipschitz_upper": 381.5396477316759,
+      "next_radius": 2.146542111535081e-14,
+      "hessian_interval_row_radius": 1.5790335288278322e-12,
+      "hessian_evaluation_error": 1.5790335288278322e-12,
+      "hessian_asymmetry_error": 3.5564130855876335e-15,
+      "eigen_numeric_error": 2.193976288297178e-11,
+      "total_eigenvalue_radius": 2.3522352824885206e-11
+    },
+    {
+      "step": 15,
+      "beta_upper": 1.0057017072651981,
+      "defect_norm_upper": 1.3306310437010698e-15,
+      "optimizer_jacobian_lipschitz_upper": 381.88903394080535,
+      "next_radius": 2.2918441706663803e-14,
+      "hessian_interval_row_radius": 1.576600543150872e-12,
+      "hessian_evaluation_error": 1.576600543150872e-12,
+      "hessian_asymmetry_error": 3.5395461501860327e-15,
+      "eigen_numeric_error": 2.180448224186605e-11,
+      "total_eigenvalue_radius": 2.3384622331167116e-11
+    },
+    {
+      "step": 16,
+      "beta_upper": 1.005673173745287,
+      "defect_norm_upper": 1.3465808465782881e-15,
+      "optimizer_jacobian_lipschitz_upper": 382.24299093775215,
+      "next_radius": 2.4395042855115624e-14,
+      "hessian_interval_row_radius": 1.5733972333936104e-12,
+      "hessian_evaluation_error": 1.5733972333936104e-12,
+      "hessian_asymmetry_error": 3.5275514408399306e-15,
+      "eigen_numeric_error": 2.1752642007189052e-11,
+      "total_eigenvalue_radius": 2.332956679202351e-11
+    },
+    {
+      "step": 17,
+      "beta_upper": 1.0056448241693068,
+      "defect_norm_upper": 1.3642986857843172e-15,
+      "optimizer_jacobian_lipschitz_upper": 382.60145671516705,
+      "next_radius": 2.589704726853363e-14,
+      "hessian_interval_row_radius": 1.5710253640192997e-12,
+      "hessian_evaluation_error": 1.5710253640192997e-12,
+      "hessian_asymmetry_error": 3.5074048631804987e-15,
+      "eigen_numeric_error": 2.1613761955913584e-11,
+      "total_eigenvalue_radius": 2.318829472479607e-11
+    },
+    {
+      "step": 18,
+      "beta_upper": 1.005616656695559,
+      "defect_norm_upper": 1.3484721402752632e-15,
+      "optimizer_jacobian_lipschitz_upper": 382.9643700763864,
+      "next_radius": 2.7390974232873344e-14,
+      "hessian_interval_row_radius": 1.5686500829519175e-12,
+      "hessian_evaluation_error": 1.5686500829519175e-12,
+      "hessian_asymmetry_error": 3.502077841312585e-15,
+      "eigen_numeric_error": 2.1541951430140093e-11,
+      "total_eigenvalue_radius": 2.311410359093333e-11
+    },
+    {
+      "step": 19,
+      "beta_upper": 1.0055886695232366,
+      "defect_norm_upper": 1.3377165942674085e-15,
+      "optimizer_jacobian_lipschitz_upper": 383.33167062122186,
+      "next_radius": 2.8881769930191587e-14,
+      "hessian_interval_row_radius": 1.5668020210848583e-12,
+      "hessian_evaluation_error": 1.5668020210848583e-12,
+      "hessian_asymmetry_error": 3.4951175041161255e-15,
+      "eigen_numeric_error": 2.2009255056385196e-11,
+      "total_eigenvalue_radius": 2.3579552194974178e-11
+    },
+    {
+      "step": 20,
+      "beta_upper": 1.005560860891159,
+      "defect_norm_upper": 1.3446939230681452e-15,
+      "optimizer_jacobian_lipschitz_upper": 383.7032987321473,
+      "next_radius": 3.0387071358292035e-14,
+      "hessian_interval_row_radius": 1.5643116582452973e-12,
+      "hessian_evaluation_error": 1.5643116582452973e-12,
+      "hessian_asymmetry_error": 3.466384699239276e-15,
+      "eigen_numeric_error": 2.1913167625892538e-11,
+      "total_eigenvalue_radius": 2.348094566883708e-11
+    },
+    {
+      "step": 21,
+      "beta_upper": 1.0055332290765577,
+      "defect_norm_upper": 1.3071108218328378e-15,
+      "optimizer_jacobian_lipschitz_upper": 384.07919556085847,
+      "next_radius": 3.186232080709335e-14,
+      "hessian_interval_row_radius": 1.5611511598499493e-12,
+      "hessian_evaluation_error": 1.5611511598499493e-12,
+      "hessian_asymmetry_error": 3.4634394270237535e-15,
+      "eigen_numeric_error": 2.1597403726548254e-11,
+      "total_eigenvalue_radius": 2.3162018325825234e-11
+    },
+    {
+      "step": 22,
+      "beta_upper": 1.005505772393863,
+      "defect_norm_upper": 1.3241688570419382e-15,
+      "optimizer_jacobian_lipschitz_upper": 384.459303015204,
+      "next_radius": 3.336191635063456e-14,
+      "hessian_interval_row_radius": 1.5582493983240014e-12,
+      "hessian_evaluation_error": 1.5582493983240014e-12,
+      "hessian_asymmetry_error": 3.4449713883995217e-15,
+      "eigen_numeric_error": 2.1292979141871067e-11,
+      "total_eigenvalue_radius": 2.2854673511583476e-11
+    },
+    {
+      "step": 23,
+      "beta_upper": 1.0054784891935258,
+      "defect_norm_upper": 1.3363129083856672e-15,
+      "optimizer_jacobian_lipschitz_upper": 384.8435637464674,
+      "next_radius": 3.4881002157436677e-14,
+      "hessian_interval_row_radius": 1.5551399166617807e-12,
+      "hessian_evaluation_error": 1.5551399166617807e-12,
+      "hessian_asymmetry_error": 3.4183640767886623e-15,
+      "eigen_numeric_error": 2.1320850291918908e-11,
+      "total_eigenvalue_radius": 2.2879408572657484e-11
+    },
+    {
+      "step": 24,
+      "beta_upper": 1.0054513778608658,
+      "defect_norm_upper": 1.3312827496339949e-15,
+      "optimizer_jacobian_lipschitz_upper": 385.2319211369883,
+      "next_radius": 3.640243443023091e-14,
+      "hessian_interval_row_radius": 1.5537810256964441e-12,
+      "hessian_evaluation_error": 1.5537810256964441e-12,
+      "hessian_asymmetry_error": 3.4197518515973164e-15,
+      "eigen_numeric_error": 2.145414024242956e-11,
+      "total_eigenvalue_radius": 2.301134101997761e-11
+    },
+    {
+      "step": 25,
+      "beta_upper": 1.0054244368149539,
+      "defect_norm_upper": 1.3353648592648398e-15,
+      "optimizer_jacobian_lipschitz_upper": 385.6243192881134,
+      "next_radius": 3.793526199522856e-14,
+      "hessian_interval_row_radius": 1.5518296118521815e-12,
+      "hessian_evaluation_error": 1.5518296118521815e-12,
+      "hessian_asymmetry_error": 3.3979908025750842e-15,
+      "eigen_numeric_error": 2.1364168003915992e-11,
+      "total_eigenvalue_radius": 2.2919395606570755e-11
+    },
+    {
+      "step": 26,
+      "beta_upper": 1.0053976645075238,
+      "defect_norm_upper": 1.3267004143240866e-15,
+      "optimizer_jacobian_lipschitz_upper": 386.02070300846265,
+      "next_radius": 3.946672422708569e-14,
+      "hessian_interval_row_radius": 1.548674040014824e-12,
+      "hessian_evaluation_error": 1.548674040014824e-12,
+      "hessian_asymmetry_error": 3.389344048239005e-15,
+      "eigen_numeric_error": 2.0941407505854635e-11,
+      "total_eigenvalue_radius": 2.2493470889917704e-11
+    },
+    {
+      "step": 27,
+      "beta_upper": 1.005371059421915,
+      "defect_norm_upper": 1.30305446008844e-15,
+      "optimizer_jacobian_lipschitz_upper": 386.42101780249953,
+      "next_radius": 4.098175680848711e-14,
+      "hessian_interval_row_radius": 1.5455387927163667e-12,
+      "hessian_evaluation_error": 1.5455387927163667e-12,
+      "hessian_asymmetry_error": 3.3655511298091136e-15,
+      "eigen_numeric_error": 2.0373846096710038e-11,
+      "total_eigenvalue_radius": 2.192275044055622e-11
+    },
+    {
+      "step": 28,
+      "beta_upper": 1.0053446200720482,
+      "defect_norm_upper": 1.311021037283421e-15,
+      "optimizer_jacobian_lipschitz_upper": 386.8252098593953,
+      "next_radius": 4.251180976612183e-14,
+      "hessian_interval_row_radius": 1.5434530211185166e-12,
+      "hessian_evaluation_error": 1.5434530211185166e-12,
+      "hessian_asymmetry_error": 3.3507083931288703e-15,
+      "eigen_numeric_error": 2.027846023098777e-11,
+      "total_eigenvalue_radius": 2.182526396049942e-11
+    }
+  ]
+}

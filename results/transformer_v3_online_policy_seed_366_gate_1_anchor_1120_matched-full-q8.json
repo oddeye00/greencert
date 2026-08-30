@@ -1,0 +1,753 @@
+{
+  "status": "POST-SEAL EXECUTABLE ONLINE-STOPPING BENCHMARK",
+  "execution_mode": "full-q8 control",
+  "run_label": "matched-full-q8",
+  "benchmark_script_sha256": "104189826A692DA35381D2CC54A6F1B6921C9C9BAE2274A39FC9F7B74469828C",
+  "candidate": {
+    "seed": 366,
+    "threshold": 0.8,
+    "anchor": 1120
+  },
+  "certificate_sha256": "9F773A441C44988A876BB4A707BA7F2C5B98C407A12F474C6D314F10862D639C",
+  "certificate_seal_sha256": "05D9FC835AEB58C81E658ED8B8F7423DEF4F49FAFF1FF7C076416E98ECCC79D7",
+  "policy": "q_output=1; advance Green until issue/q=8; then advance outputs and recheck stored Green powers",
+  "decision": {
+    "q_output": 1,
+    "q_green": 1,
+    "certificate_issued": true,
+    "certified_bracket": [
+      2,
+      2
+    ],
+    "certificate_logic_slack": 0.0018713446794124701,
+    "total_pointwise_radius": 2.3628147902686187e-15
+  },
+  "frozen_earliest_lockstep_power": 1,
+  "frozen_bracket": [
+    2,
+    2
+  ],
+  "maximum_relative_trace_deviation": 0.0,
+  "queried_output_power": 8,
+  "queried_green_power": 8,
+  "logical_gram_applications": 3456,
+  "full_q8_logical_gram_applications": 3456,
+  "logical_application_speedup": 1.0,
+  "online_measured_operator_seconds": 207.70314889999645,
+  "frozen_full_trace_operator_seconds": 359.0287938998081,
+  "measured_operator_time_speedup": 1.7285669273732143,
+  "allocated_live_probe_bytes": 137699328,
+  "allocated_live_probe_gib": 0.12824249267578125,
+  "timings_seconds": {
+    "centerline_and_signed_response": 116.07326049999983,
+    "output_q1_and_envelopes": 10.408413899999687,
+    "green_and_output_refinement": 199.0989196999999,
+    "end_to_end": 328.586225
+  },
+  "policy_trace": [
+    {
+      "q_output": 1,
+      "q_green": 1,
+      "certificate_issued": true,
+      "certified_bracket": [
+        2,
+        2
+      ],
+      "certificate_logic_slack": 0.0018713446794124701,
+      "total_pointwise_radius": 2.3628147902686187e-15
+    },
+    {
+      "q_output": 1,
+      "q_green": 2,
+      "certificate_issued": true,
+      "certified_bracket": [
+        2,
+        2
+      ],
+      "certificate_logic_slack": 0.0018713446881818189,
+      "total_pointwise_radius": 1.7709935634215114e-15
+    },
+    {
+      "q_output": 1,
+      "q_green": 3,
+      "certificate_issued": true,
+      "certified_bracket": [
+        2,
+        2
+      ],
+      "certificate_logic_slack": 0.0018713446889256123,
+      "total_pointwise_radius": 1.7207968170720533e-15
+    },
+    {
+      "q_output": 1,
+      "q_green": 4,
+      "certificate_issued": true,
+      "certified_bracket": [
+        2,
+        2
+      ],
+      "certificate_logic_slack": 0.0018713446891718282,
+      "total_pointwise_radius": 1.7041803225748814e-15
+    },
+    {
+      "q_output": 1,
+      "q_green": 5,
+      "certificate_issued": true,
+      "certified_bracket": [
+        2,
+        2
+      ],
+      "certificate_logic_slack": 0.0018713446892912459,
+      "total_pointwise_radius": 1.6961211318596057e-15
+    },
+    {
+      "q_output": 1,
+      "q_green": 6,
+      "certificate_issued": true,
+      "certified_bracket": [
+        2,
+        2
+      ],
+      "certificate_logic_slack": 0.001871344689361059,
+      "total_pointwise_radius": 1.6914096182467571e-15
+    },
+    {
+      "q_output": 1,
+      "q_green": 7,
+      "certificate_issued": true,
+      "certified_bracket": [
+        2,
+        2
+      ],
+      "certificate_logic_slack": 0.0018713446894066557,
+      "total_pointwise_radius": 1.688332404211892e-15
+    },
+    {
+      "q_output": 1,
+      "q_green": 8,
+      "certificate_issued": true,
+      "certified_bracket": [
+        2,
+        2
+      ],
+      "certificate_logic_slack": 0.0018713446894387,
+      "total_pointwise_radius": 1.6861698279821707e-15
+    },
+    {
+      "q_output": 2,
+      "q_green": 1,
+      "certificate_issued": true,
+      "certified_bracket": [
+        2,
+        2
+      ],
+      "certificate_logic_slack": 0.0018713446996102266,
+      "total_pointwise_radius": 1.793978546786654e-15
+    },
+    {
+      "q_output": 2,
+      "q_green": 2,
+      "certificate_issued": true,
+      "certified_bracket": [
+        2,
+        2
+      ],
+      "certificate_logic_slack": 0.001871344700563064,
+      "total_pointwise_radius": 1.6785850692396038e-15
+    },
+    {
+      "q_output": 2,
+      "q_green": 3,
+      "certificate_issued": true,
+      "certified_bracket": [
+        2,
+        2
+      ],
+      "certificate_logic_slack": 0.0018713447006645978,
+      "total_pointwise_radius": 1.6662888174837488e-15
+    },
+    {
+      "q_output": 2,
+      "q_green": 4,
+      "certificate_issued": true,
+      "certified_bracket": [
+        2,
+        2
+      ],
+      "certificate_logic_slack": 0.0018713447006989316,
+      "total_pointwise_radius": 1.6621308107818743e-15
+    },
+    {
+      "q_output": 2,
+      "q_green": 5,
+      "certificate_issued": true,
+      "certified_bracket": [
+        2,
+        2
+      ],
+      "certificate_logic_slack": 0.0018713447007157131,
+      "total_pointwise_radius": 1.6600984898241587e-15
+    },
+    {
+      "q_output": 2,
+      "q_green": 6,
+      "certificate_issued": true,
+      "certified_bracket": [
+        2,
+        2
+      ],
+      "certificate_logic_slack": 0.001871344700725563,
+      "total_pointwise_radius": 1.6589056426982518e-15
+    },
+    {
+      "q_output": 2,
+      "q_green": 7,
+      "certificate_issued": true,
+      "certified_bracket": [
+        2,
+        2
+      ],
+      "certificate_logic_slack": 0.0018713447007320115,
+      "total_pointwise_radius": 1.658124682604518e-15
+    },
+    {
+      "q_output": 2,
+      "q_green": 8,
+      "certificate_issued": true,
+      "certified_bracket": [
+        2,
+        2
+      ],
+      "certificate_logic_slack": 0.0018713447007365506,
+      "total_pointwise_radius": 1.6575749582982276e-15
+    },
+    {
+      "q_output": 3,
+      "q_green": 1,
+      "certificate_issued": true,
+      "certified_bracket": [
+        2,
+        2
+      ],
+      "certificate_logic_slack": 0.0018713447024396748,
+      "total_pointwise_radius": 1.753686616483971e-15
+    },
+    {
+      "q_output": 3,
+      "q_green": 2,
+      "certificate_issued": true,
+      "certified_bracket": [
+        2,
+        2
+      ],
+      "certificate_logic_slack": 0.0018713447030090258,
+      "total_pointwise_radius": 1.670369924060749e-15
+    },
+    {
+      "q_output": 3,
+      "q_green": 3,
+      "certificate_issued": true,
+      "certified_bracket": [
+        2,
+        2
+      ],
+      "certificate_logic_slack": 0.0018713447030706033,
+      "total_pointwise_radius": 1.6613589053970856e-15
+    },
+    {
+      "q_output": 3,
+      "q_green": 4,
+      "certificate_issued": true,
+      "certified_bracket": [
+        2,
+        2
+      ],
+      "certificate_logic_slack": 0.0018713447030914636,
+      "total_pointwise_radius": 1.6583063112088899e-15
+    },
+    {
+      "q_output": 3,
+      "q_green": 5,
+      "certificate_issued": true,
+      "certified_bracket": [
+        2,
+        2
+      ],
+      "certificate_logic_slack": 0.0018713447031016661,
+      "total_pointwise_radius": 1.6568132827529498e-15
+    },
+    {
+      "q_output": 3,
+      "q_green": 6,
+      "certificate_issued": true,
+      "certified_bracket": [
+        2,
+        2
+      ],
+      "certificate_logic_slack": 0.0018713447031076566,
+      "total_pointwise_radius": 1.655936661248973e-15
+    },
+    {
+      "q_output": 3,
+      "q_green": 7,
+      "certificate_issued": true,
+      "certified_bracket": [
+        2,
+        2
+      ],
+      "certificate_logic_slack": 0.0018713447031115794,
+      "total_pointwise_radius": 1.65536261254803e-15
+    },
+    {
+      "q_output": 3,
+      "q_green": 8,
+      "certificate_issued": true,
+      "certified_bracket": [
+        2,
+        2
+      ],
+      "certificate_logic_slack": 0.001871344703114341,
+      "total_pointwise_radius": 1.6549584768965236e-15
+    },
+    {
+      "q_output": 4,
+      "q_green": 1,
+      "certificate_issued": true,
+      "certified_bracket": [
+        2,
+        2
+      ],
+      "certificate_logic_slack": 0.0018713447035936515,
+      "total_pointwise_radius": 1.7404212516486717e-15
+    },
+    {
+      "q_output": 4,
+      "q_green": 2,
+      "certificate_issued": true,
+      "certified_bracket": [
+        2,
+        2
+      ],
+      "certificate_logic_slack": 0.0018713447040466951,
+      "total_pointwise_radius": 1.667615321839768e-15
+    },
+    {
+      "q_output": 4,
+      "q_green": 3,
+      "certificate_issued": true,
+      "certified_bracket": [
+        2,
+        2
+      ],
+      "certificate_logic_slack": 0.0018713447040959311,
+      "total_pointwise_radius": 1.6597028856620259e-15
+    },
+    {
+      "q_output": 4,
+      "q_green": 4,
+      "certificate_issued": true,
+      "certified_bracket": [
+        2,
+        2
+      ],
+      "certificate_logic_slack": 0.0018713447041126205,
+      "total_pointwise_radius": 1.6570208385127391e-15
+    },
+    {
+      "q_output": 4,
+      "q_green": 5,
+      "certificate_issued": true,
+      "certified_bracket": [
+        2,
+        2
+      ],
+      "certificate_logic_slack": 0.0018713447041207852,
+      "total_pointwise_radius": 1.6557087502651421e-15
+    },
+    {
+      "q_output": 4,
+      "q_green": 6,
+      "certificate_issued": true,
+      "certified_bracket": [
+        2,
+        2
+      ],
+      "certificate_logic_slack": 0.0018713447041255795,
+      "total_pointwise_radius": 1.6549382765593425e-15
+    },
+    {
+      "q_output": 4,
+      "q_green": 7,
+      "certificate_issued": true,
+      "certified_bracket": [
+        2,
+        2
+      ],
+      "certificate_logic_slack": 0.0018713447041287194,
+      "total_pointwise_radius": 1.654433701878812e-15
+    },
+    {
+      "q_output": 4,
+      "q_green": 8,
+      "certificate_issued": true,
+      "certified_bracket": [
+        2,
+        2
+      ],
+      "certificate_logic_slack": 0.0018713447041309298,
+      "total_pointwise_radius": 1.6540784594992119e-15
+    },
+    {
+      "q_output": 5,
+      "q_green": 1,
+      "certificate_issued": true,
+      "certified_bracket": [
+        2,
+        2
+      ],
+      "certificate_logic_slack": 0.0018713447042206562,
+      "total_pointwise_radius": 1.7339353480336687e-15
+    },
+    {
+      "q_output": 5,
+      "q_green": 2,
+      "certificate_issued": true,
+      "certified_bracket": [
+        2,
+        2
+      ],
+      "certificate_logic_slack": 0.0018713447046188804,
+      "total_pointwise_radius": 1.6662595015737705e-15
+    },
+    {
+      "q_output": 5,
+      "q_green": 3,
+      "certificate_issued": true,
+      "certified_bracket": [
+        2,
+        2
+      ],
+      "certificate_logic_slack": 0.0018713447046622609,
+      "total_pointwise_radius": 1.6588872418982117e-15
+    },
+    {
+      "q_output": 5,
+      "q_green": 4,
+      "certificate_issued": true,
+      "certified_bracket": [
+        2,
+        2
+      ],
+      "certificate_logic_slack": 0.0018713447046769698,
+      "total_pointwise_radius": 1.656387558473341e-15
+    },
+    {
+      "q_output": 5,
+      "q_green": 5,
+      "certificate_issued": true,
+      "certified_bracket": [
+        2,
+        2
+      ],
+      "certificate_logic_slack": 0.0018713447046841663,
+      "total_pointwise_radius": 1.655164549475721e-15
+    },
+    {
+      "q_output": 5,
+      "q_green": 6,
+      "certificate_issued": true,
+      "certified_bracket": [
+        2,
+        2
+      ],
+      "certificate_logic_slack": 0.0018713447046883923,
+      "total_pointwise_radius": 1.654446342878118e-15
+    },
+    {
+      "q_output": 5,
+      "q_green": 7,
+      "certificate_issued": true,
+      "certified_bracket": [
+        2,
+        2
+      ],
+      "certificate_logic_slack": 0.00187134470469116,
+      "total_pointwise_radius": 1.653975980819523e-15
+    },
+    {
+      "q_output": 5,
+      "q_green": 8,
+      "certificate_issued": true,
+      "certified_bracket": [
+        2,
+        2
+      ],
+      "certificate_logic_slack": 0.0018713447046931088,
+      "total_pointwise_radius": 1.6536448177647505e-15
+    },
+    {
+      "q_output": 6,
+      "q_green": 1,
+      "certificate_issued": true,
+      "certified_bracket": [
+        2,
+        2
+      ],
+      "certificate_logic_slack": 0.0018713447046146848,
+      "total_pointwise_radius": 1.730108894713822e-15
+    },
+    {
+      "q_output": 6,
+      "q_green": 2,
+      "certificate_issued": true,
+      "certified_bracket": [
+        2,
+        2
+      ],
+      "certificate_logic_slack": 0.001871344704981233,
+      "total_pointwise_radius": 1.6654568447281694e-15
+    },
+    {
+      "q_output": 6,
+      "q_green": 3,
+      "certificate_issued": true,
+      "certified_bracket": [
+        2,
+        2
+      ],
+      "certificate_logic_slack": 0.0018713447050212183,
+      "total_pointwise_radius": 1.658404203984431e-15
+    },
+    {
+      "q_output": 6,
+      "q_green": 4,
+      "certificate_issued": true,
+      "certified_bracket": [
+        2,
+        2
+      ],
+      "certificate_logic_slack": 0.0018713447050347784,
+      "total_pointwise_radius": 1.6560124750430324e-15
+    },
+    {
+      "q_output": 6,
+      "q_green": 5,
+      "certificate_issued": true,
+      "certified_bracket": [
+        2,
+        2
+      ],
+      "certificate_logic_slack": 0.0018713447050414133,
+      "total_pointwise_radius": 1.6548422079184675e-15
+    },
+    {
+      "q_output": 6,
+      "q_green": 6,
+      "certificate_issued": true,
+      "certified_bracket": [
+        2,
+        2
+      ],
+      "certificate_logic_slack": 0.0018713447050453097,
+      "total_pointwise_radius": 1.6541549503734158e-15
+    },
+    {
+      "q_output": 6,
+      "q_green": 7,
+      "certificate_issued": true,
+      "certified_bracket": [
+        2,
+        2
+      ],
+      "certificate_logic_slack": 0.0018713447050478615,
+      "total_pointwise_radius": 1.6537048478567104e-15
+    },
+    {
+      "q_output": 6,
+      "q_green": 8,
+      "certificate_issued": true,
+      "certified_bracket": [
+        2,
+        2
+      ],
+      "certificate_logic_slack": 0.0018713447050496582,
+      "total_pointwise_radius": 1.6533879442917368e-15
+    },
+    {
+      "q_output": 7,
+      "q_green": 1,
+      "certificate_issued": true,
+      "certified_bracket": [
+        2,
+        2
+      ],
+      "certificate_logic_slack": 0.0018713447048849538,
+      "total_pointwise_radius": 1.7276559307848903e-15
+    },
+    {
+      "q_output": 7,
+      "q_green": 2,
+      "certificate_issued": true,
+      "certified_bracket": [
+        2,
+        2
+      ],
+      "certificate_logic_slack": 0.001871344705231212,
+      "total_pointwise_radius": 1.6649412167668528e-15
+    },
+    {
+      "q_output": 7,
+      "q_green": 3,
+      "certificate_issued": true,
+      "certified_bracket": [
+        2,
+        2
+      ],
+      "certificate_logic_slack": 0.0018713447052690177,
+      "total_pointwise_radius": 1.6580938330466498e-15
+    },
+    {
+      "q_output": 7,
+      "q_green": 4,
+      "certificate_issued": true,
+      "certified_bracket": [
+        2,
+        2
+      ],
+      "certificate_logic_slack": 0.00187134470528184,
+      "total_pointwise_radius": 1.655771451718874e-15
+    },
+    {
+      "q_output": 7,
+      "q_green": 5,
+      "certificate_issued": true,
+      "certified_bracket": [
+        2,
+        2
+      ],
+      "certificate_logic_slack": 0.001871344705288114,
+      "total_pointwise_radius": 1.654635068482596e-15
+    },
+    {
+      "q_output": 7,
+      "q_green": 6,
+      "certificate_issued": true,
+      "certified_bracket": [
+        2,
+        2
+      ],
+      "certificate_logic_slack": 0.0018713447052917988,
+      "total_pointwise_radius": 1.6539676951961398e-15
+    },
+    {
+      "q_output": 7,
+      "q_green": 7,
+      "certificate_issued": true,
+      "certified_bracket": [
+        2,
+        2
+      ],
+      "certificate_logic_slack": 0.001871344705294212,
+      "total_pointwise_radius": 1.6535306095488666e-15
+    },
+    {
+      "q_output": 7,
+      "q_green": 8,
+      "certificate_issued": true,
+      "certified_bracket": [
+        2,
+        2
+      ],
+      "certificate_logic_slack": 0.0018713447052959111,
+      "total_pointwise_radius": 1.6532228679976672e-15
+    },
+    {
+      "q_output": 8,
+      "q_green": 1,
+      "certificate_issued": true,
+      "certified_bracket": [
+        2,
+        2
+      ],
+      "certificate_logic_slack": 0.0018713447050817708,
+      "total_pointwise_radius": 1.7259809899213945e-15
+    },
+    {
+      "q_output": 8,
+      "q_green": 2,
+      "certificate_issued": true,
+      "certified_bracket": [
+        2,
+        2
+      ],
+      "certificate_logic_slack": 0.0018713447054140564,
+      "total_pointwise_radius": 1.6645886486397689e-15
+    },
+    {
+      "q_output": 8,
+      "q_green": 3,
+      "certificate_issued": true,
+      "certified_bracket": [
+        2,
+        2
+      ],
+      "certificate_logic_slack": 0.0018713447054503583,
+      "total_pointwise_radius": 1.6578815823973914e-15
+    },
+    {
+      "q_output": 8,
+      "q_green": 4,
+      "certificate_issued": true,
+      "certified_bracket": [
+        2,
+        2
+      ],
+      "certificate_logic_slack": 0.0018713447054626716,
+      "total_pointwise_radius": 1.6556066173763543e-15
+    },
+    {
+      "q_output": 8,
+      "q_green": 5,
+      "certificate_issued": true,
+      "certified_bracket": [
+        2,
+        2
+      ],
+      "certificate_logic_slack": 0.0018713447054686967,
+      "total_pointwise_radius": 1.6544934038336194e-15
+    },
+    {
+      "q_output": 8,
+      "q_green": 6,
+      "certificate_issued": true,
+      "certified_bracket": [
+        2,
+        2
+      ],
+      "certificate_logic_slack": 0.0018713447054722354,
+      "total_pointwise_radius": 1.6538396278410549e-15
+    },
+    {
+      "q_output": 8,
+      "q_green": 7,
+      "certificate_issued": true,
+      "certified_bracket": [
+        2,
+        2
+      ],
+      "certificate_logic_slack": 0.001871344705474553,
+      "total_pointwise_radius": 1.6534114436166069e-15
+    },
+    {
+      "q_output": 8,
+      "q_green": 8,
+      "certificate_issued": true,
+      "certified_bracket": [
+        2,
+        2
+      ],
+      "certificate_logic_slack": 0.0018713447054761847,
+      "total_pointwise_radius": 1.653109967488805e-15
+    }
+  ]
+}

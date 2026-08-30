@@ -1,0 +1,44 @@
+{
+  "per_threshold": {
+    "0.900": {
+      "distinct_seeds": 21,
+      "outward_covered": 21,
+      "outward_issued": 21
+    },
+    "0.925": {
+      "distinct_seeds": 21,
+      "outward_covered": 21,
+      "outward_issued": 21
+    },
+    "0.950": {
+      "distinct_seeds": 14,
+      "outward_covered": 14,
+      "outward_issued": 14
+    }
+  },
+  "summary": {
+    "all_requested_horizons_reached": true,
+    "arithmetic_helper_sha256": "C85E2543D710619E47A57403351328E275C6C64E914C1B51753011AA9DA10F18",
+    "blind_summary_sha256": "2974DDD49C89D520FB98203E12692D01BF92FD77C84AA9E78981C10FC97E6D81",
+    "containment_test_sha256": "BC0D461651D2E888FF3BD8DF8BB8A699293C1E26CDBCC7A615B0E9E1D7849AF6",
+    "distinct_outward_issuing_seeds": 22,
+    "green_issued": 56,
+    "identical_singleton_brackets": 56,
+    "joined_summary_sha256": "3AE267A7E1678FD34C400DA4CA3CE99F811E29029FD6718D4038609FF5A172DE",
+    "maximum_eigen_numeric_error": 5.865637409652968e-11,
+    "maximum_hessian_evaluation_error": 3.7340590557010905e-12,
+    "maximum_outward_defect_norm": 1.886397574039082e-15,
+    "maximum_outward_radius": 4.364648977650407e-13,
+    "maximum_verified_optimizer_jacobian_norm": 1.0074310569602516,
+    "method_seal_sha256": "3408AF37C03959264B3DC8888001F5BE4AA5702FEA4D7F90B694261AC2846F8C",
+    "minimum_outward_logic_slack": 2.3753121239672582e-05,
+    "minimum_recorded_recurrence_rounding_slack": 3.944304526105059e-31,
+    "outward_covered": 56,
+    "outward_retained": 56,
+    "status": "PASS",
+    "total_verified_state_transitions": 5089,
+    "unique_seed_anchor_tubes": 40,
+    "verifier_source_sha256": "6F64701A0329F9CE971658AC742EBC44A5F4858A0887E9CD862744EC1C0BC232",
+    "version": "wdbc-arb-outward-v2-2026-08-24"
+  }
+}

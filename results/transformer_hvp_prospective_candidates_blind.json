@@ -1,0 +1,216 @@
+{
+  "status": "blind Transformer candidates; outcomes unopened",
+  "seeds": [
+    321,
+    322,
+    323,
+    324,
+    325,
+    326
+  ],
+  "thresholds": [
+    0.7,
+    0.8,
+    0.9
+  ],
+  "records": [
+    {
+      "seed": 321,
+      "threshold": 0.7,
+      "required": 41,
+      "eligibility_step": 800,
+      "anchor": 1440,
+      "predicted_offset": 211,
+      "disposition": "candidate frozen",
+      "forecast_file": "results\\transformer_modal_prospective_blind_seed_321_anchor_1440.json",
+      "forecast_sha256": "70a7168f43f80c65193889f1ba90fb652e3d27beab5f30bf6fbcb5ce41de48af"
+    },
+    {
+      "seed": 321,
+      "threshold": 0.8,
+      "required": 47,
+      "eligibility_step": 880,
+      "anchor": null,
+      "predicted_offset": null,
+      "disposition": "screened; no future modal candidate",
+      "forecast_file": null,
+      "forecast_sha256": null
+    },
+    {
+      "seed": 321,
+      "threshold": 0.9,
+      "required": 53,
+      "eligibility_step": 1280,
+      "anchor": null,
+      "predicted_offset": null,
+      "disposition": "screened; no future modal candidate",
+      "forecast_file": null,
+      "forecast_sha256": null
+    },
+    {
+      "seed": 322,
+      "threshold": 0.7,
+      "required": 41,
+      "eligibility_step": 2140,
+      "anchor": 2400,
+      "predicted_offset": 34,
+      "disposition": "candidate frozen",
+      "forecast_file": "results\\transformer_modal_prospective_blind_seed_322_anchor_2400.json",
+      "forecast_sha256": "5039993c5546d73627f9c1392231cf02d482a943e877a4a964144b5f532ea089"
+    },
+    {
+      "seed": 322,
+      "threshold": 0.8,
+      "required": 47,
+      "eligibility_step": 2420,
+      "anchor": 2640,
+      "predicted_offset": 87,
+      "disposition": "candidate frozen",
+      "forecast_file": "results\\transformer_modal_prospective_blind_seed_322_anchor_2640.json",
+      "forecast_sha256": "4a48765c5f66e68d10fa4f2d2ec08afcba9b9e4f5e27eee893af23e8b98c801a"
+    },
+    {
+      "seed": 322,
+      "threshold": 0.9,
+      "required": 53,
+      "eligibility_step": 2600,
+      "anchor": null,
+      "predicted_offset": null,
+      "disposition": "screened; no future modal candidate",
+      "forecast_file": null,
+      "forecast_sha256": null
+    },
+    {
+      "seed": 323,
+      "threshold": 0.7,
+      "required": 41,
+      "eligibility_step": 1040,
+      "anchor": null,
+      "predicted_offset": null,
+      "disposition": "screened; no future modal candidate",
+      "forecast_file": null,
+      "forecast_sha256": null
+    },
+    {
+      "seed": 323,
+      "threshold": 0.8,
+      "required": 47,
+      "eligibility_step": 1320,
+      "anchor": null,
+      "predicted_offset": null,
+      "disposition": "screened; no future modal candidate",
+      "forecast_file": null,
+      "forecast_sha256": null
+    },
+    {
+      "seed": 323,
+      "threshold": 0.9,
+      "required": 53,
+      "eligibility_step": 3340,
+      "anchor": null,
+      "predicted_offset": null,
+      "disposition": "screened; no future modal candidate",
+      "forecast_file": null,
+      "forecast_sha256": null
+    },
+    {
+      "seed": 324,
+      "threshold": 0.7,
+      "required": 41,
+      "eligibility_step": null,
+      "anchor": null,
+      "predicted_offset": null,
+      "disposition": "trigger never eligible",
+      "forecast_file": null,
+      "forecast_sha256": null
+    },
+    {
+      "seed": 324,
+      "threshold": 0.8,
+      "required": 47,
+      "eligibility_step": null,
+      "anchor": null,
+      "predicted_offset": null,
+      "disposition": "trigger never eligible",
+      "forecast_file": null,
+      "forecast_sha256": null
+    },
+    {
+      "seed": 324,
+      "threshold": 0.9,
+      "required": 53,
+      "eligibility_step": null,
+      "anchor": null,
+      "predicted_offset": null,
+      "disposition": "trigger never eligible",
+      "forecast_file": null,
+      "forecast_sha256": null
+    },
+    {
+      "seed": 325,
+      "threshold": 0.7,
+      "required": 41,
+      "eligibility_step": 1060,
+      "anchor": null,
+      "predicted_offset": null,
+      "disposition": "screened; no future modal candidate",
+      "forecast_file": null,
+      "forecast_sha256": null
+    },
+    {
+      "seed": 325,
+      "threshold": 0.8,
+      "required": 47,
+      "eligibility_step": 1220,
+      "anchor": null,
+      "predicted_offset": null,
+      "disposition": "screened; no future modal candidate",
+      "forecast_file": null,
+      "forecast_sha256": null
+    },
+    {
+      "seed": 325,
+      "threshold": 0.9,
+      "required": 53,
+      "eligibility_step": 2520,
+      "anchor": null,
+      "predicted_offset": null,
+      "disposition": "screened; no future modal candidate",
+      "forecast_file": null,
+      "forecast_sha256": null
+    },
+    {
+      "seed": 326,
+      "threshold": 0.7,
+      "required": 41,
+      "eligibility_step": 720,
+      "anchor": null,
+      "predicted_offset": null,
+      "disposition": "screened; no future modal candidate",
+      "forecast_file": null,
+      "forecast_sha256": null
+    },
+    {
+      "seed": 326,
+      "threshold": 0.8,
+      "required": 47,
+      "eligibility_step": 760,
+      "anchor": null,
+      "predicted_offset": null,
+      "disposition": "screened; no future modal candidate",
+      "forecast_file": null,
+      "forecast_sha256": null
+    },
+    {
+      "seed": 326,
+      "threshold": 0.9,
+      "required": 53,
+      "eligibility_step": 1360,
+      "anchor": null,
+      "predicted_offset": null,
+      "disposition": "screened; no future modal candidate",
+      "forecast_file": null,
+      "forecast_sha256": null
+    }
+  ]
+}

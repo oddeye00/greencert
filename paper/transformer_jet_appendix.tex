@@ -1,0 +1,380 @@
+\section{Complete analytic Transformer derivative envelope}
+\label{app:transformer-jet}
+
+This section derives the deterministic first-, second-, and third-order neural
+envelopes used in every Transformer certificate.  Random-direction tests are
+useful regression checks, but they are not part of the validity argument.  The
+argument below follows the computational graph line by line.
+
+\subsection{Norms, parameter blocks, and diagonal jets}
+
+Every activation tensor is flattened and given its Euclidean (equivalently,
+Frobenius) norm.  Matrix parameters use the Frobenius norm as coordinates and
+the spectral norm when acting on an activation.  The complete parameter vector
+is partitioned into 14 orthogonal blocks:
+\begin{center}
+\small
+\begin{tabular}{rll}
+\toprule
+$b$ & block & contents \\
+\midrule
+0 & embedding & token and position embeddings jointly \\
+1--3 & attention weights & $W_Q,W_K,W_V$ (disjoint row slices) \\
+4--6 & attention biases & $b_Q,b_K,b_V$ (disjoint slices) \\
+7--8 & attention output & $W_O,b_O$ \\
+9--10 & feed-forward 1 & $W_1,b_1$ \\
+11--12 & feed-forward 2 & $W_2,b_2$ \\
+13 & readout & $W_R$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+The grouped/sliced blocks are still orthogonal: the squared block Frobenius
+norms sum to the squared norm of the original flat perturbation.  Hence a unit
+direction $u$ has block radii $s_b=\norm{u_b}$ satisfying
+$\sum_b s_b^2=1$.
+
+For a smooth tensor-valued stage $f$, write $P_k^f(s)$ for a polynomial with
+nonnegative coefficients such that
+\begin{equation}
+ \norm{D^k f(\theta)[u,\ldots,u]}\le P_k^f(s),\qquad k=1,2,3.
+ \label{eq:jet-diagonal}
+\end{equation}
+The restriction to a repeated direction loses nothing for the Euclidean
+multilinear norm.  Indeed, each scalarization of $D^k f$ is a symmetric
+$k$-linear form on a real Hilbert space; Banach's theorem gives equality
+between its multilinear norm and the norm of its diagonal homogeneous
+polynomial.  Dualizing the output gives the same result for tensor-valued $f$
+\citep{carando2019symmetric}.  Thus a valid bound on
+Eq.~\eqref{eq:jet-diagonal}, maximized over $\sum_b s_b^2\le1$, bounds the full
+Fr\'echet derivative norm.
+
+For a monomial $m(s)=\prod_b s_b^{\alpha_b}$ of degree
+$d=\sum_b\alpha_b$, Lagrange multipliers give the exact sphere maximum
+\begin{equation}
+ \sup_{\sum_b s_b^2\le1}m(s)
+ =\prod_{b:\alpha_b>0}\left(\frac{\alpha_b}{d}\right)^{\alpha_b/2}.
+ \label{eq:monomial-sphere}
+\end{equation}
+We maximize a nonnegative polynomial by summing these exact monomial maxima.
+This can be conservative for a sum, but it is always valid and never exceeds
+the older scalar rule that sets every $s_b=1$.
+
+\subsection{Primitive jet rules}
+
+Represent a stage by $\mathcal J(f)=(V_f,P_1^f,P_2^f,P_3^f)$, where
+$V_f\ge\norm{f}$ on the relevant input set.  All inequalities below follow
+from the triangle inequality, submultiplicativity of Frobenius/spectral norms,
+and the ordinary Fr\'echet product and chain rules.
+
+For addition, $h=f+g$,
+\begin{equation}
+ V_h=V_f+V_g,\qquad P_k^h=P_k^f+P_k^g.
+ \label{eq:jet-add}
+\end{equation}
+For a bilinear contraction $h=\alpha f g$ (matrix multiplication included),
+\begin{align}
+V_h&=|\alpha|V_fV_g,\nonumber\\
+P_1^h&=|\alpha|(P_1^fV_g+V_fP_1^g),\nonumber\\
+P_2^h&=|\alpha|(P_2^fV_g+2P_1^fP_1^g+V_fP_2^g),\nonumber\\
+P_3^h&=|\alpha|(P_3^fV_g+3P_2^fP_1^g
+ +3P_1^fP_2^g+V_fP_3^g).
+ \label{eq:jet-product}
+\end{align}
+For an elementwise or rowwise smooth map $h=\phi\circ f$ with
+$\norm{D^k\phi}\le a_k$ on the stage range,
+\begin{align}
+P_1^h&=a_1P_1^f,\nonumber\\
+P_2^h&=a_1P_2^f+a_2(P_1^f)^2,\nonumber\\
+P_3^h&=a_1P_3^f+3a_2P_1^fP_2^f+a_3(P_1^f)^3.
+ \label{eq:jet-smooth}
+\end{align}
+Products of the $P_k$ in Eqs.~\eqref{eq:jet-product}--\eqref{eq:jet-smooth}
+are polynomial convolutions over block labels, so mixed derivatives and their
+combinatorial multiplicities are retained exactly before the sphere relaxation.
+
+For a parameterized affine stage with sequence length $\ell$,
+\begin{equation}
+ h(X,W,b)=XW^\top+\mathbf 1_\ell b^\top,
+ \label{eq:affine-stage}
+\end{equation}
+we assign the weight jet $(\lVert W\rVert_{\rm op},s_W,0,0)$ and bias jet
+$(\sqrt\ell\norm{b},\sqrt\ell s_b,0,0)$ and apply
+Eq.~\eqref{eq:jet-product} plus Eq.~\eqref{eq:jet-add}.  This is valid because
+\begin{equation}
+ \lVert XW^\top\rVert_F\le\lVert X\rVert_F\lVert W\rVert_{\rm op},\qquad
+ \lVert\mathbf 1_\ell b^\top\rVert_F=\sqrt\ell\norm{b}.
+ \label{eq:affine-norms}
+\end{equation}
+On a radius-$R$ parameter ball we replace $\lVert W\rVert_{\rm op}$ by
+$\lVert W_0\rVert_{\rm op}+R$ and $\norm{b}$ by $\norm{b_0}+R$; using the full
+radius for each value bound is conservative even though the derivative
+polynomial retains the sharper block allocation.
+
+\subsection{Global activation constants}
+
+The Gaussian-error linear unit is
+$\operatorname{GELU}(x)=x\Phi(x)$, with standard-normal density $\varphi$.
+Direct differentiation gives
+\begin{align}
+g'(x)&=\Phi(x)+x\varphi(x),\nonumber\\
+g''(x)&=(2-x^2)\varphi(x),\nonumber\\
+g'''(x)&=(x^3-4x)\varphi(x).
+\end{align}
+Elementary one-dimensional maximization yields
+\begin{equation}
+ \sup|g'|<1.13,\qquad \sup|g''|<0.80,\qquad \sup|g'''|<2.
+ \label{eq:gelu-constants}
+\end{equation}
+For an elementwise map these scalar constants also bound the induced
+Euclidean multilinear derivatives, since
+$\norm{x_1\odot\cdots\odot x_k}\le\prod_i\norm{x_i}$.
+
+For $p=\operatorname{softmax}(x)$, let
+$C(p)=\operatorname{diag}(p)-pp^\top$.  The categorical covariance bound gives
+$\lVert C(p)\rVert_{\rm op}\le1/2$.  If $q=C(p)h$, then
+\begin{equation}
+ DC(p)[h]=\operatorname{diag}(q)-qp^\top-pq^\top,
+\end{equation}
+whose norm is at most $3\norm{h}/2<2\norm{h}$.  Differentiating once more and
+using $\norm{p}\le1$, $\norm{q}\le\norm{h}/2$, and
+$\norm{DC(p)[k]}\le3\norm{k}/2$ gives the conservative bound $5<6$ for the
+third derivative.  Therefore the implementation uses
+\begin{equation}
+ (a_1,a_2,a_3)_{\rm softmax}=(1/2,2,6).
+ \label{eq:softmax-constants}
+\end{equation}
+The causal mask is a constant translation before softmax and contributes no
+derivative.  Rowwise application is block diagonal, so the same constants hold
+under the flattened Frobenius norm.
+
+\subsection{One-block causal Transformer graph}
+
+The certified architecture has sequence length three, one normalization-free
+causal attention block, one GELU feed-forward block, residual additions, and a
+linear readout.  For each of the finite $p^2$ input pairs the implementation
+applies the following graph.
+
+\paragraph{Embedding.}
+Token lookup and positional addition are linear.  A sequence may repeat an
+input token, and all three positions vary.  The joint lookup operator is
+bounded by $\sqrt3$, so
+\begin{equation}
+ \mathcal J(X_0)=(V_{X_0},\sqrt3,s_{\rm emb},0,0).
+\end{equation}
+
+\paragraph{Queries, keys, and values.}
+For $A\in\{Q,K,V\}$,
+\begin{equation}
+ A=X_0W_A^\top+\mathbf1_3b_A^\top.
+\end{equation}
+The three weight slices and three bias slices are disjoint blocks.  Each jet is
+given by Eqs.~\eqref{eq:jet-product} and \eqref{eq:affine-norms}.
+
+\paragraph{Scores and attention.}
+Reshaping into heads is an isometry.  With head dimension $d_h$,
+\begin{equation}
+ S=QK^\top/\sqrt{d_h},\qquad P=\operatorname{softmax}_{\rm row}(S+\mathcal M),
+ \qquad A=PV.
+\end{equation}
+The score and attended-value jets use Eq.~\eqref{eq:jet-product}; the
+probability jet uses Eqs.~\eqref{eq:jet-smooth} and
+\eqref{eq:softmax-constants}.  Matrix contraction is safe because
+$\lVert QK^\top\rVert_F\le\lVert Q\rVert_F\lVert K\rVert_F$ and
+$\lVert PV\rVert_F\le\lVert P\rVert_F\lVert V\rVert_F$.
+
+\paragraph{Output projection, residuals, feed-forward, and readout.}
+The remaining graph is
+\begin{align}
+X_1&=X_0+(AW_O^\top+\mathbf1_3b_O^\top),\nonumber\\
+U&=X_1W_1^\top+\mathbf1_3b_1^\top,\qquad V=g(U),\nonumber\\
+X_2&=X_1+(VW_2^\top+\mathbf1_3b_2^\top),\nonumber\\
+f_\theta(x)&=(X_2)_{3,:}W_R^\top.
+\end{align}
+Affine stages use Eq.~\eqref{eq:affine-stage}, residuals use
+Eq.~\eqref{eq:jet-add}, and GELU uses Eqs.~\eqref{eq:jet-smooth} and
+\eqref{eq:gelu-constants}.  Selecting the last token is nonexpansive.  This
+completes the line-by-line derivation of the three output derivative
+polynomials.  For hash-preserving reproducibility, the sealed implementation
+upper-bounds the bias-free readout by the larger affine family that also permits
+an auxiliary bias perturbation.  This is a model-class relaxation, not a stated
+graph component: algebraically it adds one nonnegative degree-one monomial and
+changes no higher derivative polynomial.  Deleting that monomial gives the
+exact bias-free graph and weakly decreases every downstream bound, so all
+sealed certificates remain valid.  A released regression test checks this
+identity in both scalar and block-polynomial implementations.
+
+\subsection{Making center values valid on the complete ball}
+
+The input set is finite, so every center-stage maximum $V_i^0$ is evaluated
+exactly over all $p^2$ pairs in the real-arithmetic specification.  Center
+values alone are not ball-valid.  Let $B_{1,i}(V^0+\Delta,R)$ be the first
+derivative polynomial for stage $i$ after substituting proposed inflated stage
+values.  All its coefficients are nonnegative and it is coordinatewise
+nondecreasing.  We seek a post-fixed inflation
+\begin{equation}
+ \Delta_i\ge R B_{1,i}(V^0+\Delta,R)\quad\text{for every stage }i.
+ \label{eq:value-postfixed}
+\end{equation}
+
+\begin{lemma}[Ball-valid value chain]
+\label{lem:value-chain}
+If Eq.~\eqref{eq:value-postfixed} holds, then every stage value on
+$B(\theta_0,R)$ is bounded by $V_i^0+\Delta_i$, and the derivative polynomials
+computed with those values enclose $D^k f$ for $k=1,2,3$ throughout the ball.
+\end{lemma}
+
+\begin{proof}
+Proceed in computational-graph order.  For any $\theta_0+h$ with
+$\norm{h}\le R$, the integral mean-value identity and the inductively valid
+upstream stage values give
+\begin{equation}
+ \norm{f_i(\theta_0+h)}
+ \le V_i^0+R B_{1,i}(V^0+\Delta,R)\le V_i^0+\Delta_i.
+\end{equation}
+The primitive rules above then apply with valid values at every stage.  Their
+composition encloses all derivatives through order three.
+\end{proof}
+
+The implementation starts at $\Delta=0$ and repeatedly replaces each
+coordinate by the maximum of its current value and the right side of
+Eq.~\eqref{eq:value-postfixed}.  This is monotone iteration.  The frozen
+Transformer records use a relative $10^{-9}$ binary64 consistency tolerance,
+so this check is part of their disclosed numerical rather than exact-real
+layer.  A post-seal strict wrapper instead inflates each iterate with directed
+binary64 \texttt{nextafter} steps until every displayed inequality is
+literally satisfied.  On the shortest sealed issuance, recomputation finds 338
+frozen stage inequalities with positive but tiny deficits (maximum
+$1.90\times10^{-23}$ absolute and $5.15\times10^{-14}$ relative); the strict
+wrapper removes all of them, leaves the rounded derivative jets unchanged, and
+reproduces the issued bracket.  This hardens the internal post-fixed check but
+is not a substitute for outward real arithmetic.  The same positivity gives a
+useful monotonicity fact.
+
+\begin{lemma}[Radius monotonicity]
+\label{lem:jet-monotone}
+For $0\le R_1\le R_2$, the analytic post-fixed envelopes may be chosen so that
+$B_k(R_1)\le B_k(R_2)$ for $k=1,2,3$.
+\end{lemma}
+
+\begin{proof}
+Every primitive coefficient, value inflation, and weight/bias enlargement is
+nonnegative and nondecreasing in $R$.  A post-fixed point for $R_2$ is therefore
+also an upper solution for the $R_1$ inequalities.  Substitution into the
+nonnegative derivative polynomials proves the claim.
+\end{proof}
+
+Lemma~\ref{lem:jet-monotone} is what makes the strong unsigned baseline audit
+decisive: once its required radius contains the signed ball, failure even with
+the smaller-ball $M$ rules out closure under the same analytic envelope.
+
+\subsection{Cross-entropy and optimizer-map drift}
+
+For one example, cross-entropy is
+$\ell_y(z)=-z_y+\log\sum_q e^{z_q}$.  With $p=\operatorname{softmax}(z)$,
+\begin{equation}
+ \norm{D\ell_y}=\norm{p-e_y}\le\sqrt2,qquad
+ \norm{D^2\ell_y}=\norm{C(p)}\le\tfrac12.
+\end{equation}
+The same calculation used above gives the generous global bound
+$\norm{D^3\ell_y}\le2$.  If $B_1,B_2,B_3$ enclose the first three derivatives
+of the per-example logit map on the parameter ball, the third-order chain rule
+therefore gives
+\begin{equation}
+ \norm{D^3(\ell_y\circ f_\theta)}
+ \le 2B_1^3+\tfrac32B_1B_2+\sqrt2 B_3.
+ \label{eq:ce-third-bound}
+\end{equation}
+An average over examples obeys the same maximum bound.  Weight decay is
+quadratic and contributes no Hessian drift.  The center logit Jacobian is
+bounded separately by the matrix-free Gram probe; if its bound is
+$\widehat B_{1,0}$, then
+\begin{equation}
+ B_1(R)=\widehat B_{1,0}+B_2(R)R
+\end{equation}
+is ball-valid.  Substitution into Eq.~\eqref{eq:ce-third-bound} yields the
+objective Hessian-Lipschitz constant $L$.
+
+In scaled momentum coordinates $x=(\theta,w=\eta v)$,
+\begin{equation}
+G(\theta,w)=(\theta-r,r),\qquad
+r=\mu w+\eta\nabla F(\theta).
+\end{equation}
+Only the Hessian block changes with the state.  Consequently
+\begin{equation}
+ \norm{DG(x+h)-DG(x)}\le\sqrt2\eta L\norm{h},
+\end{equation}
+which is the implemented $M=\sqrt2\eta L$.  The anchor error is exactly zero,
+so only transitions leaving $c_1,\ldots,c_{H-1}$ enter the maximum.
+
+\subsection{Output-margin transport}
+
+The parameter component of a scaled-state perturbation has norm at most the
+full state perturbation.  Taylor's theorem gives, for each logit vector,
+\begin{equation}
+ \norm{f(\theta+h)-f(\theta)}
+ \le B_1R+\tfrac12B_2R^2.
+\end{equation}
+A true-versus-competitor margin is the inner product with $e_y-e_q$, whose
+norm is $\sqrt2$.  Thus every margin changes by at most
+\begin{equation}
+ E=\sqrt2\left(B_1R+\tfrac12B_2R^2\right).
+\end{equation}
+Strictly positive lower margins certify correct examples.  A strictly negative
+upper margin certifies an incorrect example.  Counting these statements gives
+the lower/upper accuracy paths used by the persistent first-passage corollary.
+
+\section{Randomness and finite-precision claim boundary}
+\label{app:randomness-numerics}
+
+\subsection{What the Gaussian theorem randomizes}
+
+Proposition~\ref{prop:probe} is an exact-arithmetic statement about independent
+$N(0,I)$ vectors.  Its probability is over probe randomness only---not over
+training seeds, examples, candidate selection, or future outcomes.  The frozen
+protocol declares the complete operator family before training, divides the
+$10^{-6}$ family budget over that maximum family, and makes no randomized query
+during screening.
+
+The executable uses an OS-random master nonce frozen before training.  Each
+complete operator identity is domain-separated by SHA-256 into a 63-bit seed;
+a registry rejects unknown identities, repeated queries, and seed collisions.
+PyTorch then maps that seed deterministically to pseudorandom normal variates.
+Domain separation prevents accidental stream reuse, but deterministic PRNG
+outputs are not literally independent mathematical Gaussians.  Accordingly,
+the Transformer statement is a family-wise high-confidence numerical claim
+under the standard ideal-PRNG model.  It is not an unconditional theorem about
+the fixed bit strings produced by a particular generator.  A deterministic
+replacement would require an independently certified spectral-norm enclosure.
+
+\subsection{Robust theorem for computational error}
+
+The abstract Green theorem already admits explicit computational remainder.
+If $\widetilde s$ approximates the defect and a computed response
+$\widetilde z_0=0$ has exact-real recurrence residual
+\begin{equation}
+ d_j=\widetilde z_{j+1}-J_j\widetilde z_j-\widetilde s_j,
+\end{equation}
+then
+\begin{equation}
+ \lVert s-\widetilde s\rVert_U\le\sigma,\quad
+ \lVert d\rVert_U\le\tau
+ \quad\Longrightarrow\quad
+ \lVert K_Hs-\widetilde z\rVert_X\le\kappa(\sigma+\tau).
+\end{equation}
+Using $\alpha=\kappa(\sigma+\tau)$ in Theorem~\ref{thm:green} is sufficient.  Likewise,
+outward upper bounds on $\kappa,M,B_1,B_2$ and outward lower bounds on strict
+margin slacks preserve the event certificate.
+
+The Transformer implementation evaluates the neural jets, HVP/VJP products,
+Gram iterates, and margins in deterministic float64 and does not yet supply
+nonzero verified $\sigma,\tau$ for every operation.  Its 9/9 and 11/11 results
+therefore remain high-confidence numerical certificates rather than
+computer-assisted exact-real proofs.  The fixed-radius cohort has minimum
+closure slack $0.1445$ and minimum strict output slack
+$2.67\times10^{-5}$.  In contrast, the WDBC and digits tanh
+confirmations enclose all 63 issued events with direct 192-bit outward
+continuations whose recurrences are independent of the randomized Green event;
+the dense modular study provides an additional outward-verified regime.  These
+direct passes validate the retained exact-real event brackets, not every Green
+inequality.  This distinction is stated in the abstract, results table, and
+limitations.

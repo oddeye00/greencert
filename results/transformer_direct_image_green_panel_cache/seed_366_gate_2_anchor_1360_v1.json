@@ -1,0 +1,148 @@
+{
+  "version": 1,
+  "candidate": {
+    "seed": 366,
+    "threshold": 0.9,
+    "anchor": 1360
+  },
+  "horizon": 94,
+  "route": "gram_fallback",
+  "bracket": [
+    70,
+    70
+  ],
+  "panel_bracket": [
+    70,
+    70
+  ],
+  "prefix": 4,
+  "stage_rows": [
+    {
+      "prefix": 4,
+      "direct": {
+        "probes": 4,
+        "Y_direct": 59683.68152298246,
+        "c_delta": 0.015302900703286656,
+        "delta": 2.222222222222222e-08,
+        "operator_norm_upper_bound": 3900154.7928860304,
+        "operator_norm_lower_estimate": 37.10048782608411,
+        "forward_green_applications": 4,
+        "transpose_green_applications": 0,
+        "forcing_response_upper": 1.2854216096990761e-17,
+        "closure": {
+          "kappa": 3900154.7928860304,
+          "derivative_drift": 103455159897.23424,
+          "corrected_defect_response_bound": 1.2854216096990761e-17,
+          "correction_max_state_norm": 3.704660539277377e-15,
+          "domain_radius": 4.735797760867857e-14,
+          "discriminant": -9.373124554998208,
+          "remainder_radius": null,
+          "total_radius_about_original_reference": null,
+          "algebraic_closure_passed": false,
+          "domain_passed": false,
+          "closure_passed": false,
+          "closure_residual": null
+        },
+        "bracket": null,
+        "output_power": null,
+        "logic_slack": null,
+        "maximum_margin_radius": null,
+        "issued": false
+      },
+      "gram": {
+        "probes": 4,
+        "power": 1,
+        "Y": 26272994.231928285,
+        "c_delta": 0.015302900703286656,
+        "delta": 2.222222222222222e-08,
+        "operator_norm_upper_bound": 41435.05361362107,
+        "operator_norm_lower_estimate": 127.79586242709514,
+        "gram_applications": 4,
+        "forcing_response_upper": 1.3656256262222853e-19,
+        "closure": {
+          "kappa": 41435.05361362107,
+          "derivative_drift": 103455159897.23424,
+          "corrected_defect_response_bound": 1.3656256262222853e-19,
+          "correction_max_state_norm": 3.704660539277377e-15,
+          "domain_radius": 4.735797760867857e-14,
+          "discriminant": 0.9988292026928896,
+          "remainder_radius": 1.3660255780892804e-19,
+          "total_radius_about_original_reference": 3.704797141835186e-15,
+          "algebraic_closure_passed": true,
+          "domain_passed": true,
+          "closure_passed": true,
+          "closure_residual": 0.0
+        },
+        "bracket": [
+          70,
+          70
+        ],
+        "output_power": 1,
+        "logic_slack": 0.0013621531813591448,
+        "maximum_margin_radius": 2.795673570052695e-15,
+        "issued": true
+      }
+    }
+  ],
+  "probe_hashes": [
+    "F3279F790FAC7A4C2BEFF8C5F1080B7441AEE4E5456A5755A93CD299BBB26893",
+    "792252ADE6327F45EE2856E4D34B2489F65F8D04E9120077D6D5E97C87FE4890",
+    "18521A25EA1A8105AF3034342948B56588C168CAF81777E32927DE73D6EE6A2D",
+    "94859336D4FE71ACC6B1027ED6086189C32A2DE5A00ECC28B6C9636257C297B9"
+  ],
+  "initial_probe_norms": [
+    1610.5062885539855,
+    1611.033038433623,
+    1608.7034165901414,
+    1609.4675040774137
+  ],
+  "direct_image_norms": [
+    58818.70787695347,
+    58630.26397178514,
+    59683.68152298246,
+    58549.89675370605
+  ],
+  "gram_norms_computed": [
+    25823363.097467244,
+    25739903.948205393,
+    26272994.231928285,
+    25696963.350688342
+  ],
+  "logical_forward_green_applications": 4,
+  "logical_transpose_green_applications": 4,
+  "logical_total_green_sweeps": 8,
+  "panel_logical_green_sweeps": 8,
+  "probe_sweep_reduction": 1.0,
+  "transpose_sweeps_avoided": 0,
+  "timings_seconds": {
+    "streaming_centerline": 12.17066339997109,
+    "corrected_path": 3.1956362000200897,
+    "operator_setup": 0.0006832999642938375,
+    "direct_forward_queries": 4.375907099980395,
+    "transpose_fallback_queries": 4.265412300010212,
+    "staged_green_queries": 8.641319399990607,
+    "total": 24.892341699975077
+  },
+  "corrected_path_sha256": "574F52E7EA23024D7797AD0AA3622CF0996875E2454242BD762B5CC661D64C37",
+  "panel_result_sha256": "08E501B51FEAC3D96FFE02BE0B5D84E0E682C2E73CB906C083ED0FEF7E75E12B",
+  "certificate_sha256": "2AE37E3B9E914F9E38EA6EDF813887AB4C9CD41FA845DDC7E1958A2DEF947A95",
+  "protocol_sha256": "11813379A4B388EB71C409BE4709EB366E6E5BE8BF53C27AA5334802226EC428",
+  "source_sha256": "A46FFE4F68AA15E75EA37755231227481233A8EFD9C35D2066CBB1141A095BB7",
+  "dependency_sha256": {
+    "scripts/audit_transformer_direct_image_green_panel.py": "A46FFE4F68AA15E75EA37755231227481233A8EFD9C35D2066CBB1141A095BB7",
+    "scripts/direct_image_green_bound.py": "EC8B9DECA1FE6E17B4C03AA145A8829BA141BE8A5D223CDA86F82305B360F778",
+    "scripts/streaming_variational_centerline.py": "CEA0ADE5FC1255969B7A93CB1D8525EBBEE9020709CEB5399DB9A090E450228A",
+    "scripts/batched_green_operator.py": "C30C1DAF0E8A8494B518CD12E6328146B1A20DD297033192C78408C2E46F54BF",
+    "scripts/audit_transformer_relinearized_prefix_panel.py": "BE35D0771CF49B53B2D0721AA4BF3035EE9A9BF2F2DFA1BABB2B9B37A47A2B58",
+    "scripts/relinearized_green_closure.py": "ACFB21152D0467E6DDAAB627138325B2079C4F75C1F8BD7FF708C427F67FE5E1",
+    "scripts/transformer_green_operator.py": "F529F42D8DC6B01C94D5F5496AC60BB8F63B4BC030FF85449F106362C8CE20B4",
+    "scripts/transformer_optimizer_probe.py": "3C7665274245731141F4E0F451652F486CB65D7A16B0DCF233BAA66E8BFD5C79",
+    "scripts/transformer_v3_certificate.py": "5050DA95BAE58B02CB15AFAAF4802F9968A70562A26934B9F5E13FD224E71CBF",
+    "DIRECT_IMAGE_GREEN_THEOREM.md": "EC5A854A67CCA47EF0A0F21ED08AD2E538D1F39BC74E70D18D86A941F6122159",
+    "CAUSAL_PREFIX_RECENTERING_THEOREM.md": "FC20EA02DB556C43E751A33161907DBC728EF7FEBB5BF65A58EBDC758C30319D",
+    "results/transformer_v3_relinearized_prefix_panel_audit.json": "08E501B51FEAC3D96FFE02BE0B5D84E0E682C2E73CB906C083ED0FEF7E75E12B",
+    "results/transformer_v3_two_response_postseal_audit.json": "2DAF416457E016F9D9A77F2E49B4B8B4FBAC8C69C98C9A3051D9105F11A3C287"
+  },
+  "combined_family_failure_upper": 2e-06,
+  "outcome_files_read": 0
+}

@@ -1,0 +1,261 @@
+{
+  "status": "complete Transformer matrix-free scaling and cost audit",
+  "interpretation": "The matrix-free primitives execute at approximately one million parameters, but the frozen m=16, q=8, H=300 verification workload is orders of magnitude more expensive than continuing training. This supports scalability of memory representation, not current end-to-end computational practicality.",
+  "benchmark_source_sha256": "C32CF5E6B067E570C0299562E7B0F1BDA9789A40915D9685366601C715B2146E",
+  "profile_source_hashes": {
+    "paper": "EFD6B89593ED3C76353348FB2219CCCCAEA6DEB64A49E3630A27279121C355DE",
+    "100k": "838F7DC072C8359F90C4E17C11CFB7E32C9714DDAF55A3D2EECC59438693C8AE",
+    "1m": "24BB34FD4442307B453958C4DB8B12E99ACE87D9D0A5E3F66BC2E3784384AD23"
+  },
+  "existing_paper_scale_cost": {
+    "candidate_certificates_with_runtime": 22,
+    "aggregate_candidate_hours": 19.43694956777774,
+    "median_candidate_minutes": 58.0174975633335,
+    "median_issued_candidate_minutes": 41.95605355166675,
+    "training_runs": 24,
+    "median_measured_300_step_continuation_seconds": 5.308161827501317,
+    "certificate_to_300_step_continuation_ratio": 655.7919609317236
+  },
+  "scaling": {
+    "paper_to_largest_parameter_ratio": 73.14849187935035,
+    "paper_to_largest_hvp_runtime_ratio": 9.759027323005709,
+    "paper_to_largest_output_gram_runtime_ratio": 12.6195516400995,
+    "two_point_hvp_parameter_exponent": 0.5307390196101659,
+    "two_point_output_gram_parameter_exponent": 0.5906237257769502,
+    "largest_profile_completes_matrix_free_hvp": true,
+    "largest_profile_completes_output_gram_product": true
+  },
+  "profiles": [
+    {
+      "status": "complete matrix-free primitive benchmark",
+      "profile": "paper",
+      "config": {
+        "modulus": 17,
+        "model_dim": 32,
+        "hidden_dim": 128,
+        "heads": 4,
+        "depth": 1,
+        "train_fraction": 0.6,
+        "learning_rate": 0.01,
+        "momentum": 0.9,
+        "weight_decay": 0.01,
+        "steps": 1,
+        "log_every": 50,
+        "checkpoint_every": 100,
+        "seed": 20260824,
+        "threads": 4,
+        "dtype": "float64",
+        "loss": "cross_entropy",
+        "normalization": "none"
+      },
+      "parameter_count": 13792,
+      "optimizer_state_dimension": 27584,
+      "train_examples": 173,
+      "output_examples": 289,
+      "output_coordinates": 4913,
+      "repeats": 3,
+      "timings_seconds": {
+        "objective_forward_median": 0.04567620001034811,
+        "objective_forward_samples": [
+          0.04567620001034811,
+          0.04698789998656139,
+          0.041555400006473064
+        ],
+        "gradient_median": 0.022272600035648793,
+        "gradient_samples": [
+          0.07532290002563968,
+          0.022272600035648793,
+          0.018165600020438433
+        ],
+        "objective_hvp_median": 0.19010619999608025,
+        "objective_hvp_samples": [
+          0.19670159998349845,
+          0.19010619999608025,
+          0.13237669999944046
+        ],
+        "output_jacobian_gram_median": 0.18900409998605028,
+        "output_jacobian_gram_samples": [
+          0.18900409998605028,
+          0.148218399961479,
+          0.18937189999269322
+        ]
+      },
+      "observed_process_peak_rss_bytes": 303980544,
+      "observed_process_peak_rss_gib": 0.28310394287109375,
+      "total_elapsed_seconds": 3.2643330999999307,
+      "environment": {
+        "python": "3.12.10",
+        "torch": "2.13.0+cpu",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "processor": "Intel64 Family 6 Model 186 Stepping 2, GenuineIntel",
+        "logical_cpu_count": 16,
+        "torch_threads": 4,
+        "dtype": "float64",
+        "device": "cpu"
+      },
+      "projection_h300": {
+        "horizon": 300,
+        "centerline_objective_hvp_calls": 1500,
+        "green_probe_objective_hvp_calls": 76800,
+        "output_probe_gram_calls": 38528,
+        "projected_centerline_seconds": 285.1592999941204,
+        "projected_green_probe_seconds": 14600.156159698963,
+        "projected_output_probe_seconds": 7281.949964262545,
+        "projected_core_certificate_seconds": 22167.26542395563,
+        "projected_300_step_training_seconds": 6.681780010694638,
+        "projected_core_certificate_to_training_ratio": 3317.5688796212135,
+        "excluded_from_projection": "analytic derivative envelopes, Python orchestration, checkpoint I/O, and cache effects; operation-count projection only"
+      }
+    },
+    {
+      "status": "complete matrix-free primitive benchmark",
+      "profile": "100k",
+      "config": {
+        "modulus": 17,
+        "model_dim": 96,
+        "hidden_dim": 384,
+        "heads": 4,
+        "depth": 1,
+        "train_fraction": 0.6,
+        "learning_rate": 0.01,
+        "momentum": 0.9,
+        "weight_decay": 0.01,
+        "steps": 1,
+        "log_every": 50,
+        "checkpoint_every": 100,
+        "seed": 20260824,
+        "threads": 4,
+        "dtype": "float64",
+        "loss": "cross_entropy",
+        "normalization": "none"
+      },
+      "parameter_count": 115104,
+      "optimizer_state_dimension": 230208,
+      "train_examples": 173,
+      "output_examples": 289,
+      "output_coordinates": 4913,
+      "repeats": 2,
+      "timings_seconds": {
+        "objective_forward_median": 0.04018149999319576,
+        "objective_forward_samples": [
+          0.04419799998868257,
+          0.036164999997708946
+        ],
+        "gradient_median": 0.1680832999991253,
+        "gradient_samples": [
+          0.15401890000794083,
+          0.18214769999030977
+        ],
+        "objective_hvp_median": 0.713428750023013,
+        "objective_hvp_samples": [
+          0.5762859000242315,
+          0.8505716000217944
+        ],
+        "output_jacobian_gram_median": 0.32327890003216453,
+        "output_jacobian_gram_samples": [
+          0.41803510003956035,
+          0.2285227000247687
+        ]
+      },
+      "observed_process_peak_rss_bytes": 333889536,
+      "observed_process_peak_rss_gib": 0.3109588623046875,
+      "total_elapsed_seconds": 4.174808799987659,
+      "environment": {
+        "python": "3.12.10",
+        "torch": "2.13.0+cpu",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "processor": "Intel64 Family 6 Model 186 Stepping 2, GenuineIntel",
+        "logical_cpu_count": 16,
+        "torch_threads": 4,
+        "dtype": "float64",
+        "device": "cpu"
+      },
+      "projection_h300": {
+        "horizon": 300,
+        "centerline_objective_hvp_calls": 1500,
+        "green_probe_objective_hvp_calls": 76800,
+        "output_probe_gram_calls": 38528,
+        "projected_centerline_seconds": 1070.1431250345195,
+        "projected_green_probe_seconds": 54791.3280017674,
+        "projected_output_probe_seconds": 12455.289460439235,
+        "projected_core_certificate_seconds": 68316.76058724115,
+        "projected_300_step_training_seconds": 50.42498999973759,
+        "projected_core_certificate_to_training_ratio": 1354.8195168228426,
+        "excluded_from_projection": "analytic derivative envelopes, Python orchestration, checkpoint I/O, and cache effects; operation-count projection only"
+      }
+    },
+    {
+      "status": "complete matrix-free primitive benchmark",
+      "profile": "1m",
+      "config": {
+        "modulus": 17,
+        "model_dim": 288,
+        "hidden_dim": 1152,
+        "heads": 4,
+        "depth": 1,
+        "train_fraction": 0.6,
+        "learning_rate": 0.01,
+        "momentum": 0.9,
+        "weight_decay": 0.01,
+        "steps": 1,
+        "log_every": 50,
+        "checkpoint_every": 100,
+        "seed": 20260824,
+        "threads": 4,
+        "dtype": "float64",
+        "loss": "cross_entropy",
+        "normalization": "none"
+      },
+      "parameter_count": 1008864,
+      "optimizer_state_dimension": 2017728,
+      "train_examples": 173,
+      "output_examples": 289,
+      "output_coordinates": 4913,
+      "repeats": 1,
+      "timings_seconds": {
+        "objective_forward_median": 0.11819410003954545,
+        "objective_forward_samples": [
+          0.11819410003954545
+        ],
+        "gradient_median": 0.7627645999891683,
+        "gradient_samples": [
+          0.7627645999891683
+        ],
+        "objective_hvp_median": 1.855251600034535,
+        "objective_hvp_samples": [
+          1.855251600034535
+        ],
+        "output_jacobian_gram_median": 2.3851469999644905,
+        "output_jacobian_gram_samples": [
+          2.3851469999644905
+        ]
+      },
+      "observed_process_peak_rss_bytes": 448090112,
+      "observed_process_peak_rss_gib": 0.4173164367675781,
+      "total_elapsed_seconds": 6.768633400031831,
+      "environment": {
+        "python": "3.12.10",
+        "torch": "2.13.0+cpu",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "processor": "Intel64 Family 6 Model 186 Stepping 2, GenuineIntel",
+        "logical_cpu_count": 16,
+        "torch_threads": 4,
+        "dtype": "float64",
+        "device": "cpu"
+      },
+      "projection_h300": {
+        "horizon": 300,
+        "centerline_objective_hvp_calls": 1500,
+        "green_probe_objective_hvp_calls": 76800,
+        "output_probe_gram_calls": 38528,
+        "projected_centerline_seconds": 2782.8774000518024,
+        "projected_green_probe_seconds": 142483.32288265228,
+        "projected_output_probe_seconds": 91894.94361463189,
+        "projected_core_certificate_seconds": 237161.14389733598,
+        "projected_300_step_training_seconds": 228.8293799967505,
+        "projected_core_certificate_to_training_ratio": 1036.410376590208,
+        "excluded_from_projection": "analytic derivative envelopes, Python orchestration, checkpoint I/O, and cache effects; operation-count projection only"
+      }
+    }
+  ]
+}

@@ -1,0 +1,709 @@
+{
+  "status": "complete frozen fresh signed-Green Transformer confirmation; execution amendment v1.1",
+  "method_seal_sha256": "14EABFDE3823E2289F53E1B5D39D89F103A4FB8D4B80C98E60CF8E5F879C57EA",
+  "candidate_seal_sha256": "5C6136AE0942500CBBB5AF0B9DACAD1FE8ADF8839D8B8E042C8942A5A9FF47B8",
+  "certificate_seal_sha256": "4B6EBBAA877280F6A0E6AB87130CB65763C812E332E999F632D1ADDB39227642",
+  "execution_amendment_seal_sha256": "912D869B704A25F73417E8BB4F57CD1CA770BBB8A0B07AA51796CA4FCE9A1BE9",
+  "summary": {
+    "fresh_seeds": 24,
+    "seed_threshold_cases": 72,
+    "dispositions": {
+      "candidate frozen": 23,
+      "screened; no future modal candidate": 29,
+      "trigger never eligible": 19,
+      "gate already present before candidate": 1
+    },
+    "candidates": 23,
+    "distinct_candidate_seeds": 12,
+    "construction_abstentions": 1,
+    "issued": 9,
+    "covered": 9,
+    "distinct_issuing_seeds": 6,
+    "abstention_rate_among_candidates": 0.6086956521739131,
+    "median_bracket_width": 0.0,
+    "median_certified_lead": 192.0,
+    "maximum_certified_lead": 274,
+    "raw_exact_timing_matches": 23,
+    "observed_issued_sequence_tube_violations": 0,
+    "observed_issued_state_tube_violations": 0
+  },
+  "probability_budget": {
+    "queried_operators": 4961,
+    "queried_union_bound": 2.281548933038999e-07,
+    "maximum_family_union_bound": 1e-06,
+    "maximum_operator_accounting": {
+      "maximum_seeds": 24,
+      "gates_per_seed": 3,
+      "maximum_candidates_per_gate": 1,
+      "maximum_candidates": 72,
+      "probabilistic_screen_operators": 0,
+      "output_jacobian_states_per_candidate": 301,
+      "green_operators_per_candidate": 1,
+      "operators_per_candidate": 302,
+      "maximum_probabilistic_operators": 21744
+    }
+  },
+  "rows": [
+    {
+      "candidate": {
+        "seed": 331,
+        "threshold": 0.7,
+        "anchor": 1160
+      },
+      "predicted_event": 262,
+      "actual_event": 262,
+      "raw_timing_error": 0,
+      "construction_abstention": false,
+      "early_abstention": true,
+      "green_upper": null,
+      "closure_lhs": null,
+      "closure_slack": null,
+      "signed_radius": 3.2232172061121486e-10,
+      "certificate_issued": false,
+      "certified_bracket": null,
+      "output_logic_slack": null,
+      "bracket_contains_actual": null,
+      "actual_sequence_error": 1.611607137588075e-10,
+      "actual_sequence_error_to_radius_ratio": 0.49999954533998003,
+      "actual_max_state_error": 6.67521218483507e-11,
+      "queried_operators": 286,
+      "certificate_sha256": "8E1CACDCF8F884A526F4ED3221D10D423C960C35B91D61D32BD5AA1166165AFB",
+      "audit_sha256": "AAA18E3ABD6D90BB0ADEF61597ED96660868904DBA1DB8CB7518509CB63E48B8"
+    },
+    {
+      "candidate": {
+        "seed": 331,
+        "threshold": 0.8,
+        "anchor": 1520
+      },
+      "predicted_event": 271,
+      "actual_event": 271,
+      "raw_timing_error": 0,
+      "construction_abstention": false,
+      "early_abstention": false,
+      "green_upper": 2471.3318030806768,
+      "closure_lhs": 51.219401853242076,
+      "closure_slack": -50.219401853242076,
+      "signed_radius": 6.227245030142546e-12,
+      "certificate_issued": false,
+      "certified_bracket": null,
+      "output_logic_slack": null,
+      "bracket_contains_actual": null,
+      "actual_sequence_error": 3.1136698046728207e-12,
+      "actual_sequence_error_to_radius_ratio": 0.5000075939843894,
+      "actual_max_state_error": 1.7167885112924586e-12,
+      "queried_operators": 296,
+      "certificate_sha256": "C50E46A5C271BFDB7CB9C1BCA4686123E4676AEECDE321C3FE59923E0C402C37",
+      "audit_sha256": "80BDC2F0CAF917A0A5F3E8C602E346A65C505C1AA64A4EC11FC965D4E6EF5E3A"
+    },
+    {
+      "candidate": {
+        "seed": 333,
+        "threshold": 0.7,
+        "anchor": 3000
+      },
+      "predicted_event": 28,
+      "actual_event": 28,
+      "raw_timing_error": 0,
+      "construction_abstention": false,
+      "early_abstention": false,
+      "green_upper": 345.2281763681271,
+      "closure_lhs": 0.012716246931102647,
+      "closure_slack": 0.9872837530688974,
+      "signed_radius": 1.2866033145816553e-14,
+      "certificate_issued": true,
+      "certified_bracket": [
+        28,
+        28
+      ],
+      "output_logic_slack": {
+        "lower_endpoint_exclusion_slack": 0.0046356024193783514,
+        "upper_endpoint_guarantee_slack": 2.671665839253655e-05,
+        "minimum_logic_slack": 2.671665839253655e-05
+      },
+      "bracket_contains_actual": true,
+      "actual_sequence_error": 6.10520220920812e-15,
+      "actual_sequence_error_to_radius_ratio": 0.474520945190729,
+      "actual_max_state_error": 1.3513242891726812e-15,
+      "queried_operators": 53,
+      "certificate_sha256": "DD6E0CDCB79BE87CA837985978C0D39734829082AFBC83181F622A0E2548FC6F",
+      "audit_sha256": "9907C2EB0F630B9A0E16B5D8E6C18DAA309AC0E97FFF4F74533E431FC638ABB0"
+    },
+    {
+      "candidate": {
+        "seed": 333,
+        "threshold": 0.8,
+        "anchor": 3080
+      },
+      "predicted_event": 192,
+      "actual_event": 192,
+      "raw_timing_error": 0,
+      "construction_abstention": false,
+      "early_abstention": false,
+      "green_upper": 1640.9107638302266,
+      "closure_lhs": 0.6068451153431147,
+      "closure_slack": 0.3931548846568853,
+      "signed_radius": 1.3350121593164551e-13,
+      "certificate_issued": true,
+      "certified_bracket": [
+        192,
+        192
+      ],
+      "output_logic_slack": {
+        "lower_endpoint_exclusion_slack": 0.004312572224254119,
+        "upper_endpoint_guarantee_slack": 6.21204107414472e-05,
+        "minimum_logic_slack": 6.21204107414472e-05
+      },
+      "bracket_contains_actual": true,
+      "actual_sequence_error": 6.707105705022618e-14,
+      "actual_sequence_error_to_radius_ratio": 0.5024003458108389,
+      "actual_max_state_error": 8.693399820789287e-15,
+      "queried_operators": 217,
+      "certificate_sha256": "BF0B0E64653CF338C71B281635F9BE609C21549572CBB6D8650DA9F279C52439",
+      "audit_sha256": "3F35A486FB3D475333EC9B195E51A5509EC156EFAD8BD2E1255067CE64275A54"
+    },
+    {
+      "candidate": {
+        "seed": 335,
+        "threshold": 0.7,
+        "anchor": 2440
+      },
+      "predicted_event": 201,
+      "actual_event": 201,
+      "raw_timing_error": 0,
+      "construction_abstention": true,
+      "early_abstention": true,
+      "green_upper": null,
+      "closure_lhs": null,
+      "closure_slack": null,
+      "signed_radius": null,
+      "certificate_issued": false,
+      "certified_bracket": null,
+      "output_logic_slack": null,
+      "bracket_contains_actual": null,
+      "actual_sequence_error": null,
+      "actual_sequence_error_to_radius_ratio": null,
+      "actual_max_state_error": null,
+      "queried_operators": 0,
+      "certificate_sha256": "CBF5F2074D8574AB204BE428E0644313E4D4E28D1D2DD7E8E752FB5182666296",
+      "audit_sha256": "7E57AF2F69760F55F17D117DF59D352F8E589C87F0EFDB9978885F6277B21726"
+    },
+    {
+      "candidate": {
+        "seed": 335,
+        "threshold": 0.8,
+        "anchor": 2880
+      },
+      "predicted_event": 110,
+      "actual_event": 110,
+      "raw_timing_error": 0,
+      "construction_abstention": false,
+      "early_abstention": false,
+      "green_upper": 1002.431463111953,
+      "closure_lhs": 0.15448526813777488,
+      "closure_slack": 0.8455147318622251,
+      "signed_radius": 4.190729575570809e-14,
+      "certificate_issued": true,
+      "certified_bracket": [
+        110,
+        110
+      ],
+      "output_logic_slack": {
+        "lower_endpoint_exclusion_slack": 0.004437233904922338,
+        "upper_endpoint_guarantee_slack": 0.00012092245300406139,
+        "minimum_logic_slack": 0.00012092245300406139
+      },
+      "bracket_contains_actual": true,
+      "actual_sequence_error": 1.9696018662086062e-14,
+      "actual_sequence_error_to_radius_ratio": 0.469990208313628,
+      "actual_max_state_error": 2.628179410294754e-15,
+      "queried_operators": 135,
+      "certificate_sha256": "BB606DE1E7478985947CBCCBB9D62337D24C034EA62C350556A1F74865337D22",
+      "audit_sha256": "4E15F1AA5CF692D6DFEAD63D17DFAB0BCFA20AD0BFB665E94F1FE9DC8127C66A"
+    },
+    {
+      "candidate": {
+        "seed": 335,
+        "threshold": 0.9,
+        "anchor": 3240
+      },
+      "predicted_event": 229,
+      "actual_event": 229,
+      "raw_timing_error": 0,
+      "construction_abstention": false,
+      "early_abstention": false,
+      "green_upper": 1914.7043135335853,
+      "closure_lhs": 0.8554513191376432,
+      "closure_slack": 0.14454868086235684,
+      "signed_radius": 1.5596936899510484e-13,
+      "certificate_issued": true,
+      "certified_bracket": [
+        229,
+        229
+      ],
+      "output_logic_slack": {
+        "lower_endpoint_exclusion_slack": 0.0012672268699695296,
+        "upper_endpoint_guarantee_slack": 0.001400275446868669,
+        "minimum_logic_slack": 0.0012672268699695296
+      },
+      "bracket_contains_actual": true,
+      "actual_sequence_error": 7.841611990487006e-14,
+      "actual_sequence_error_to_radius_ratio": 0.5027661547270297,
+      "actual_max_state_error": 8.92925502356242e-15,
+      "queried_operators": 254,
+      "certificate_sha256": "AB7FBE60FB9B3B5068BC2510538DFAA266655C6D451FAB93E2347AF89D3C4FE3",
+      "audit_sha256": "F22738DCA9A63DFFCBEE08255D9769BC07CA587D346A924CC5E9D750AE8F3659"
+    },
+    {
+      "candidate": {
+        "seed": 337,
+        "threshold": 0.7,
+        "anchor": 1080
+      },
+      "predicted_event": 242,
+      "actual_event": 242,
+      "raw_timing_error": 0,
+      "construction_abstention": false,
+      "early_abstention": false,
+      "green_upper": 2045.8740590799616,
+      "closure_lhs": 8.602988878140254,
+      "closure_slack": -7.602988878140254,
+      "signed_radius": 1.427664194537593e-12,
+      "certificate_issued": false,
+      "certified_bracket": null,
+      "output_logic_slack": null,
+      "bracket_contains_actual": null,
+      "actual_sequence_error": 7.13969920303738e-13,
+      "actual_sequence_error_to_radius_ratio": 0.5000965374318896,
+      "actual_max_state_error": 3.3707258820048493e-13,
+      "queried_operators": 267,
+      "certificate_sha256": "C0945421589B02D21A3A5CC65D9844452767A898521FE3FD6AE34DDE49C33CD3",
+      "audit_sha256": "EF8EF043D84B11C3ED9F6C625290BEEE6E77BB10276D4A48D983072941CA9154"
+    },
+    {
+      "candidate": {
+        "seed": 337,
+        "threshold": 0.8,
+        "anchor": 1720
+      },
+      "predicted_event": 250,
+      "actual_event": 250,
+      "raw_timing_error": 0,
+      "construction_abstention": false,
+      "early_abstention": false,
+      "green_upper": 2077.331272674816,
+      "closure_lhs": 0.5802857344105153,
+      "closure_slack": 0.41971426558948466,
+      "signed_radius": 1.471238507591492e-13,
+      "certificate_issued": true,
+      "certified_bracket": [
+        250,
+        250
+      ],
+      "output_logic_slack": {
+        "lower_endpoint_exclusion_slack": 0.0022681282419434847,
+        "upper_endpoint_guarantee_slack": 0.002949291068901829,
+        "minimum_logic_slack": 0.0022681282419434847
+      },
+      "bracket_contains_actual": true,
+      "actual_sequence_error": 7.160840659573605e-14,
+      "actual_sequence_error_to_radius_ratio": 0.48672194362940796,
+      "actual_max_state_error": 8.426139412822558e-15,
+      "queried_operators": 275,
+      "certificate_sha256": "4B9039F6763A419B6410AB4F7AC99BEA487817AE7B812DD2389C1BD7CBFA017D",
+      "audit_sha256": "D8B1205CA0D592C3535C9F8DBEE6B93EA35476BF58AC9588989A2666C9E551BE"
+    },
+    {
+      "candidate": {
+        "seed": 342,
+        "threshold": 0.7,
+        "anchor": 1480
+      },
+      "predicted_event": 69,
+      "actual_event": 69,
+      "raw_timing_error": 0,
+      "construction_abstention": false,
+      "early_abstention": false,
+      "green_upper": 677.7380978194338,
+      "closure_lhs": 1.9960556477990576,
+      "closure_slack": -0.9960556477990576,
+      "signed_radius": 6.526303899390481e-14,
+      "certificate_issued": false,
+      "certified_bracket": null,
+      "output_logic_slack": null,
+      "bracket_contains_actual": null,
+      "actual_sequence_error": 3.1171534196282953e-14,
+      "actual_sequence_error_to_radius_ratio": 0.4776292167331373,
+      "actual_max_state_error": 5.67015983794117e-15,
+      "queried_operators": 94,
+      "certificate_sha256": "D3DFD8C614180FFF65D9E22752DA60EE0EB61143C3A6AB620AFA33F0E094FF51",
+      "audit_sha256": "4EC95EBEB7E389C2B7C422AE5942B855BB64069438611F81C813785521A8FF5C"
+    },
+    {
+      "candidate": {
+        "seed": 345,
+        "threshold": 0.7,
+        "anchor": 960
+      },
+      "predicted_event": 236,
+      "actual_event": 236,
+      "raw_timing_error": 0,
+      "construction_abstention": false,
+      "early_abstention": true,
+      "green_upper": null,
+      "closure_lhs": null,
+      "closure_slack": null,
+      "signed_radius": 6.993241319465104e-07,
+      "certificate_issued": false,
+      "certified_bracket": null,
+      "output_logic_slack": null,
+      "bracket_contains_actual": null,
+      "actual_sequence_error": 3.4966210514746784e-07,
+      "actual_sequence_error_to_radius_ratio": 0.500000056017247,
+      "actual_max_state_error": 2.1141739204138787e-07,
+      "queried_operators": 260,
+      "certificate_sha256": "C76FD7B93129E02043624332A0B8321BF0F6B87B367F10552FB9779DCB31B614",
+      "audit_sha256": "3D8ED76AA11DE52B11970CBD28DC882222F9DB2364F33B607D16B80B7503F03F"
+    },
+    {
+      "candidate": {
+        "seed": 345,
+        "threshold": 0.8,
+        "anchor": 1320
+      },
+      "predicted_event": 30,
+      "actual_event": 30,
+      "raw_timing_error": 0,
+      "construction_abstention": false,
+      "early_abstention": false,
+      "green_upper": 361.45516195615505,
+      "closure_lhs": 0.009437526379617268,
+      "closure_slack": 0.9905624736203827,
+      "signed_radius": 1.4220777799644615e-14,
+      "certificate_issued": true,
+      "certified_bracket": [
+        30,
+        30
+      ],
+      "output_logic_slack": {
+        "lower_endpoint_exclusion_slack": 0.0010334195690669314,
+        "upper_endpoint_guarantee_slack": 0.004450307821850375,
+        "minimum_logic_slack": 0.0010334195690669314
+      },
+      "bracket_contains_actual": true,
+      "actual_sequence_error": 6.772011152892229e-15,
+      "actual_sequence_error_to_radius_ratio": 0.47620539806630446,
+      "actual_max_state_error": 1.5214886357809335e-15,
+      "queried_operators": 55,
+      "certificate_sha256": "243ED8EE3633989AF1BA21C689C9F734DEF7999DE15DD2CDBB803DC5F263A893",
+      "audit_sha256": "D11109CE7B22F8DC6C9CB1A3614A553CE24432F5F6726049C511E8AB107AA469"
+    },
+    {
+      "candidate": {
+        "seed": 345,
+        "threshold": 0.9,
+        "anchor": 2120
+      },
+      "predicted_event": 261,
+      "actual_event": 261,
+      "raw_timing_error": 0,
+      "construction_abstention": false,
+      "early_abstention": false,
+      "green_upper": 2150.2338202221104,
+      "closure_lhs": 0.38649812980229603,
+      "closure_slack": 0.613501870197704,
+      "signed_radius": 9.392733129829198e-14,
+      "certificate_issued": true,
+      "certified_bracket": [
+        261,
+        261
+      ],
+      "output_logic_slack": {
+        "lower_endpoint_exclusion_slack": 0.002161238135961689,
+        "upper_endpoint_guarantee_slack": 0.0014992574975944966,
+        "minimum_logic_slack": 0.0014992574975944966
+      },
+      "bracket_contains_actual": true,
+      "actual_sequence_error": 4.532595266215232e-14,
+      "actual_sequence_error_to_radius_ratio": 0.48256404217647086,
+      "actual_max_state_error": 5.614354202270993e-15,
+      "queried_operators": 286,
+      "certificate_sha256": "37D0898896A5AB545DB24A39E2AD58BD73715978704858723F66B951DEF5DB44",
+      "audit_sha256": "706B16BD954A4B2D92E7FB87E1227CF97F646B5092AE717541938C8D0F187946"
+    },
+    {
+      "candidate": {
+        "seed": 347,
+        "threshold": 0.7,
+        "anchor": 2000
+      },
+      "predicted_event": 266,
+      "actual_event": 266,
+      "raw_timing_error": 0,
+      "construction_abstention": false,
+      "early_abstention": true,
+      "green_upper": null,
+      "closure_lhs": null,
+      "closure_slack": null,
+      "signed_radius": 6.899491505628174e-10,
+      "certificate_issued": false,
+      "certified_bracket": null,
+      "output_logic_slack": null,
+      "bracket_contains_actual": null,
+      "actual_sequence_error": 3.4497457356789694e-10,
+      "actual_sequence_error_to_radius_ratio": 0.49999999751646657,
+      "actual_max_state_error": 1.9368245137080793e-10,
+      "queried_operators": 290,
+      "certificate_sha256": "79B854B628FF27FAABBBD3009C66F1DD580DB09D7552B5A811A330784D6AA29B",
+      "audit_sha256": "6862945320C429DA5DAEB28B9B2BDE5C814EC60C6082BD1B495E586546B11A94"
+    },
+    {
+      "candidate": {
+        "seed": 348,
+        "threshold": 0.7,
+        "anchor": 2200
+      },
+      "predicted_event": 56,
+      "actual_event": 56,
+      "raw_timing_error": 0,
+      "construction_abstention": false,
+      "early_abstention": false,
+      "green_upper": 573.042412286998,
+      "closure_lhs": 0.31764551687755443,
+      "closure_slack": 0.6823544831224455,
+      "signed_radius": 3.7285450887458797e-14,
+      "certificate_issued": true,
+      "certified_bracket": [
+        56,
+        56
+      ],
+      "output_logic_slack": {
+        "lower_endpoint_exclusion_slack": 0.0003255826268864067,
+        "upper_endpoint_guarantee_slack": 0.004353770838091464,
+        "minimum_logic_slack": 0.0003255826268864067
+      },
+      "bracket_contains_actual": true,
+      "actual_sequence_error": 1.8181265627549958e-14,
+      "actual_sequence_error_to_radius_ratio": 0.4876235956600794,
+      "actual_max_state_error": 3.1363603157941422e-15,
+      "queried_operators": 81,
+      "certificate_sha256": "F422F4A09EDA66AF787D355EDC7BAC9D71B91FD5392C4074F5EF67A7E6FABC37",
+      "audit_sha256": "C3DDFED86E4BCDCFB04489406313A5169A58CD8C183568D5C899B14069A667FD"
+    },
+    {
+      "candidate": {
+        "seed": 348,
+        "threshold": 0.8,
+        "anchor": 2840
+      },
+      "predicted_event": 264,
+      "actual_event": 264,
+      "raw_timing_error": 0,
+      "construction_abstention": false,
+      "early_abstention": false,
+      "green_upper": 2175.9852017479793,
+      "closure_lhs": 5.239767690758244,
+      "closure_slack": -4.239767690758244,
+      "signed_radius": 1.542577964695667e-13,
+      "certificate_issued": false,
+      "certified_bracket": null,
+      "output_logic_slack": null,
+      "bracket_contains_actual": null,
+      "actual_sequence_error": 7.616940461768331e-14,
+      "actual_sequence_error_to_radius_ratio": 0.4937799343757038,
+      "actual_max_state_error": 8.030812742253908e-15,
+      "queried_operators": 289,
+      "certificate_sha256": "313A98C216D219FAC4E81F325288B5B44D9FC7141F6E3CF506093C25A888532A",
+      "audit_sha256": "D30824EC88377185AEB4A397195CA46279DE19E581BFADF6D723FBFE5767E772"
+    },
+    {
+      "candidate": {
+        "seed": 348,
+        "threshold": 0.9,
+        "anchor": 3240
+      },
+      "predicted_event": 176,
+      "actual_event": 176,
+      "raw_timing_error": 0,
+      "construction_abstention": false,
+      "early_abstention": false,
+      "green_upper": 1507.4419595992522,
+      "closure_lhs": 2.4713357357177843,
+      "closure_slack": -1.4713357357177843,
+      "signed_radius": 1.0300335179364107e-13,
+      "certificate_issued": false,
+      "certified_bracket": null,
+      "output_logic_slack": null,
+      "bracket_contains_actual": null,
+      "actual_sequence_error": 5.035388908906022e-14,
+      "actual_sequence_error_to_radius_ratio": 0.48885680137807735,
+      "actual_max_state_error": 4.941508808882908e-15,
+      "queried_operators": 201,
+      "certificate_sha256": "907F1F8FDE9C7640C5406CB3AC7FF845A0265091362CDAD0CED189269A6C1D56",
+      "audit_sha256": "FAA54815ED6BB6196591D5FEC9A7F7294482CEDF3E26ADFCC625E69027BEB629"
+    },
+    {
+      "candidate": {
+        "seed": 350,
+        "threshold": 0.7,
+        "anchor": 1440
+      },
+      "predicted_event": 262,
+      "actual_event": 262,
+      "raw_timing_error": 0,
+      "construction_abstention": false,
+      "early_abstention": true,
+      "green_upper": null,
+      "closure_lhs": null,
+      "closure_slack": null,
+      "signed_radius": 1.484528272499605e-07,
+      "certificate_issued": false,
+      "certified_bracket": null,
+      "output_logic_slack": null,
+      "bracket_contains_actual": null,
+      "actual_sequence_error": 7.422642363068699e-08,
+      "actual_sequence_error_to_radius_ratio": 0.5000000673999069,
+      "actual_max_state_error": 1.917418300145875e-08,
+      "queried_operators": 286,
+      "certificate_sha256": "747CF64D542267EA20BB4765A3F5EC37CF0333CE2325BA6D4DD0B4319C29C466",
+      "audit_sha256": "0B93018AB1455FAC3C8701F210C7FFC5D8EE4BD494D3A1738503899FF74FE7E9"
+    },
+    {
+      "candidate": {
+        "seed": 350,
+        "threshold": 0.8,
+        "anchor": 2920
+      },
+      "predicted_event": 274,
+      "actual_event": 274,
+      "raw_timing_error": 0,
+      "construction_abstention": false,
+      "early_abstention": false,
+      "green_upper": 2249.4165192786,
+      "closure_lhs": 0.74741301071866,
+      "closure_slack": 0.25258698928134005,
+      "signed_radius": 1.1629276285418273e-13,
+      "certificate_issued": true,
+      "certified_bracket": [
+        274,
+        274
+      ],
+      "output_logic_slack": {
+        "lower_endpoint_exclusion_slack": 0.001073667497368721,
+        "upper_endpoint_guarantee_slack": 0.0009309212928866406,
+        "minimum_logic_slack": 0.0009309212928866406
+      },
+      "bracket_contains_actual": true,
+      "actual_sequence_error": 5.762429290164617e-14,
+      "actual_sequence_error_to_radius_ratio": 0.4955105673592103,
+      "actual_max_state_error": 7.211225436404918e-15,
+      "queried_operators": 299,
+      "certificate_sha256": "328F211EE347174E9E618A45767A2D771A43F6D2C2BE641EC78F4957E3B9DD48",
+      "audit_sha256": "4DE275EA62FD3DFE3E2B5AE28935E430805BA65EDC8ADEB73DB950B840E30130"
+    },
+    {
+      "candidate": {
+        "seed": 351,
+        "threshold": 0.7,
+        "anchor": 1600
+      },
+      "predicted_event": 167,
+      "actual_event": 167,
+      "raw_timing_error": 0,
+      "construction_abstention": false,
+      "early_abstention": false,
+      "green_upper": 1440.8326300088763,
+      "closure_lhs": 11.062048277302944,
+      "closure_slack": -10.062048277302944,
+      "signed_radius": 1.415115314932752e-13,
+      "certificate_issued": false,
+      "certified_bracket": null,
+      "output_logic_slack": null,
+      "bracket_contains_actual": null,
+      "actual_sequence_error": 6.742339605334609e-14,
+      "actual_sequence_error_to_radius_ratio": 0.47645160321475377,
+      "actual_max_state_error": 8.421283959052642e-15,
+      "queried_operators": 192,
+      "certificate_sha256": "6D8350C0434BB5079DE42ACD1115935693EEA2DFA8F23A4E2753848B83626794",
+      "audit_sha256": "3443FDC7E04F6575B1C15F829EEDD5AEFC0741485C40B8DF28CD70E9ACD976AB"
+    },
+    {
+      "candidate": {
+        "seed": 351,
+        "threshold": 0.8,
+        "anchor": 2200
+      },
+      "predicted_event": 240,
+      "actual_event": 240,
+      "raw_timing_error": 0,
+      "construction_abstention": false,
+      "early_abstention": false,
+      "green_upper": 1987.5000620142453,
+      "closure_lhs": 22.904664325420857,
+      "closure_slack": -21.904664325420857,
+      "signed_radius": 1.761322844283886e-13,
+      "certificate_issued": false,
+      "certified_bracket": null,
+      "output_logic_slack": null,
+      "bracket_contains_actual": null,
+      "actual_sequence_error": 8.816226286022954e-14,
+      "actual_sequence_error_to_radius_ratio": 0.500545729854962,
+      "actual_max_state_error": 9.099049911690307e-15,
+      "queried_operators": 265,
+      "certificate_sha256": "59E149BCD845DC823CE1AE5F46D18BD754C4B9828F905EC526DE02EA7E71FFB5",
+      "audit_sha256": "66EB4C72FC9884D1C0E5E09C40C345F552A1015CFE504623135851C0652D314B"
+    },
+    {
+      "candidate": {
+        "seed": 352,
+        "threshold": 0.8,
+        "anchor": 5320
+      },
+      "predicted_event": 259,
+      "actual_event": 259,
+      "raw_timing_error": 0,
+      "construction_abstention": false,
+      "early_abstention": false,
+      "green_upper": 2156.156226758531,
+      "closure_lhs": 1.5046020891675689,
+      "closure_slack": -0.5046020891675689,
+      "signed_radius": 1.6962254126006293e-13,
+      "certificate_issued": false,
+      "certified_bracket": null,
+      "output_logic_slack": null,
+      "bracket_contains_actual": null,
+      "actual_sequence_error": 8.392057539930059e-14,
+      "actual_sequence_error_to_radius_ratio": 0.4947489571603265,
+      "actual_max_state_error": 9.600982073212442e-15,
+      "queried_operators": 284,
+      "certificate_sha256": "99F86EE55B081E6ADD2A3A3B0ABDE9FA660D55CB747B00210CACA7C16C13BDA7",
+      "audit_sha256": "E93D771141FE1B8783AB724D37B9C69D80718445A66DD632E7487BD1DE1099F4"
+    },
+    {
+      "candidate": {
+        "seed": 354,
+        "threshold": 0.7,
+        "anchor": 2120
+      },
+      "predicted_event": 271,
+      "actual_event": 271,
+      "raw_timing_error": 0,
+      "construction_abstention": false,
+      "early_abstention": false,
+      "green_upper": 2239.424674341332,
+      "closure_lhs": 2.3457507100849524,
+      "closure_slack": -1.3457507100849524,
+      "signed_radius": 2.0496872238706547e-13,
+      "certificate_issued": false,
+      "certified_bracket": null,
+      "output_logic_slack": null,
+      "bracket_contains_actual": null,
+      "actual_sequence_error": 1.0209640458961899e-13,
+      "actual_sequence_error_to_radius_ratio": 0.49810723997595535,
+      "actual_max_state_error": 1.0639765761916519e-14,
+      "queried_operators": 296,
+      "certificate_sha256": "55C7315D92AFB51707BAC2837DC69CE6C9D6EBDDE4FA6C62CD7BFB5E7191BFF8",
+      "audit_sha256": "FBBBB3D53B1BEBDDDB5174E6AF7334846773730EEA9A6DCC1B25A1225F5391E3"
+    }
+  ]
+}

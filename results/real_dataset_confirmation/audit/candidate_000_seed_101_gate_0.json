@@ -1,0 +1,33 @@
+{
+  "actual_event": 14,
+  "anchor": 0,
+  "bracket_contains_actual": true,
+  "certificate_issued": true,
+  "certificate_sha256": "2833D0B4F63156749834C6C375615A1E001D4A29EF66954D6B6642C54D434C95",
+  "certificate_status": "certificate issued",
+  "certified_bracket": [
+    14,
+    14
+  ],
+  "closure_slack": 0.9999999999997897,
+  "closure_statistic": 2.102915358163502e-13,
+  "directional_gain_ratio": 7.591047460288643,
+  "gate_index": 0,
+  "maximum_observed_state_error": 1.791395985745431e-18,
+  "maximum_observed_state_error_to_radius": 0.2000771712496775,
+  "minimum_output_slack": 0.0003531318682403556,
+  "observed_sequence_error": 4.180851664513855e-18,
+  "observed_sequence_error_to_radius": 0.4669503454884424,
+  "observed_sequence_tube_violation": false,
+  "observed_state_tube_violation": false,
+  "predicted_event": 14,
+  "raw_timing_error": 0,
+  "seed": 101,
+  "threshold": 0.9,
+  "unsigned_right_inverse_certificate_issued": true,
+  "unsigned_right_inverse_certified_bracket": [
+    14,
+    14
+  ],
+  "unsigned_right_inverse_closure_statistic": 1.5963330288789042e-12
+}

@@ -1,0 +1,44 @@
+{
+  "status": "INDEPENDENT RELINEARIZED PREFIX-PANEL AUDIT PASSED",
+  "result_sha256": "08E501B51FEAC3D96FFE02BE0B5D84E0E682C2E73CB906C083ED0FEF7E75E12B",
+  "cases": 15,
+  "issued": 15,
+  "same_as_directional_bracket": 15,
+  "regenerated_probe_vectors": 64,
+  "unique_probe_hashes": 64,
+  "prefix_distribution": {
+    "4": 14,
+    "8": 1,
+    "16": 0
+  },
+  "direct_response_computed": 1,
+  "conservative_response_release_short_circuits": [
+    {
+      "candidate": [
+        373,
+        0.7,
+        1280
+      ],
+      "prefix": 8,
+      "stored_norm_only_response_upper": 8.959740869759852e-18,
+      "latent_response_aware_upper": 8.959740770707588e-18,
+      "latent_to_stored_ratio": 0.9999999889447401
+    }
+  ],
+  "selected_method_distribution": {
+    "norm_only": 15,
+    "direct_response": 0
+  },
+  "old_green_gram_applications": 560,
+  "new_green_gram_applications": 64,
+  "aggregate_green_reduction": 8.75,
+  "median_pairwise_green_reduction": 8.0,
+  "old_theoretical_linearized_sweeps": 1150,
+  "new_theoretical_linearized_sweeps": 144,
+  "aggregate_theoretical_sweep_reduction": 7.986111111111111,
+  "minimum_logic_slack": 1.446608571861377e-06,
+  "minimum_forcing_headroom": 2.293290248676895,
+  "new_green_family_failure_upper": 1e-06,
+  "combined_output_green_failure_upper": 2e-06,
+  "outcome_files_read": 0
+}

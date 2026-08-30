@@ -1,0 +1,50 @@
+{
+  "anchor": 35,
+  "candidate_seal_sha256": "BFA31D77050F164DBE3B3F07C908715434E45F58849F63F13CFF1C81EBAC5587",
+  "centerline_sha256": "8A5772E0353D67723557F2DF358EDB1D5419573EA0CD9FA214C9D56A219B2DF4",
+  "certificate_horizon": 147,
+  "certificate_issued": false,
+  "defect_sequence_norm": 0.00023749882998955833,
+  "elapsed_seconds": 7.477369100088254,
+  "gate_index": 1,
+  "maximum_optimizer_derivative_drift_upper": 48604.882427905584,
+  "method_seal_sha256": "9901CD1A0E3FEABF2A1893C61960898C892194D3F0F2ECC18B70A2CF3981DE31",
+  "minimum_closure_statistic_using_kappa_ge_1": 113.85526877759649,
+  "outcome_joined": false,
+  "predicted_event": 138,
+  "probability_budget": {
+    "family_failure_probability": 1e-06,
+    "maximum_operators": 24,
+    "per_operator_failure_probability": 4.166666666666666e-08,
+    "queried_operator": false
+  },
+  "required_correct": 334,
+  "seed": 503,
+  "signed_response_sequence_norm": 0.0011712328380433302,
+  "status": "safe early closure abstention",
+  "status_tier": "FRESH OUTCOME-BLIND HIGH-CONFIDENCE FLOAT64",
+  "sweep_diagnostics": [
+    {
+      "hvp_calls": 400,
+      "maximum_correction_norm": 37.63012826704131,
+      "maximum_uncorrected_defect_norm": 0.4263829025749543,
+      "reached_horizon": 400,
+      "sweep": 1
+    },
+    {
+      "hvp_calls": 400,
+      "maximum_correction_norm": 55.92593637407676,
+      "maximum_uncorrected_defect_norm": 0.4975559435132221,
+      "reached_horizon": 400,
+      "sweep": 2
+    },
+    {
+      "hvp_calls": 400,
+      "maximum_correction_norm": 1378.7652439885362,
+      "maximum_uncorrected_defect_norm": 1.932207634660036,
+      "reached_horizon": 400,
+      "sweep": 3
+    }
+  ],
+  "threshold": 0.925
+}

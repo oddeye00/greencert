@@ -1,0 +1,26 @@
+{
+  "status": "independent role-fused benchmark audit passed",
+  "candidate": {
+    "seed": 366,
+    "threshold": 0.7,
+    "anchor": 1040
+  },
+  "horizon": 52,
+  "benchmark_sha256": "DE00A5CE171A2758A2E654F6D09CCEB8AC5DD306D2E69FE6ACBD2A8BB0536496",
+  "cache_sha256": "67CE643202095B6A8192727C9EE1FA5959A2DA80291A8CA65226B5EAEA74DD07",
+  "certificate_sha256": "63DA40D4989669A1D1349B25323732C6800FD05E7EF793FBDE9C624E709CE24B",
+  "same_bracket": true,
+  "baseline_trace_maximum_relative_error": 0.0,
+  "baseline_output_times": 52,
+  "fused_path_times": 52,
+  "fallback_output_times": 0,
+  "baseline_pair_work": 15028,
+  "fused_pair_work": 10389,
+  "baseline_operator_seconds": 28.27847529994324,
+  "fused_operator_seconds": 19.77105409989599,
+  "baseline_output_wall_seconds": 29.10322410002118,
+  "fused_output_wall_seconds": 20.832177199947182,
+  "naive_separate_operator_speedup": 1.2507731692183062,
+  "fused_operator_speedup": 1.430296794347045,
+  "fused_output_wall_speedup": 1.3970322842729548
+}

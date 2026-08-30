@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use GREENCERT, please cite the paper and this software release."
+title: "GREENCERT: Signed Green Operators for Certified Neural Training Transitions"
+type: software
+authors:
+  - family-names: Rhee
+    given-names: Ian
+version: 1.0.0
+date-released: 2026-08-29
+url: "https://github.com/oddeye00/greencert"
+license: MIT
+preferred-citation:
+  type: article
+  title: "GREENCERT: Signed Green Operators for Certified Neural Training Transitions"
+  authors:
+    - family-names: Rhee
+      given-names: Ian
+  year: 2026
+  url: "https://github.com/oddeye00/greencert/blob/main/paper/greencert_arxiv.pdf"
+

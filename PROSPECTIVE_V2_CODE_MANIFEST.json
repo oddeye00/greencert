@@ -1,0 +1,66 @@
+{
+  "status": "frozen before training seeds 17-24",
+  "frozen_at": "2026-08-21T22:05:23.2372997-07:00",
+  "pipeline_version": "prospective-primary-v1-2026-08-21",
+  "method_version": "recentered-variational-v2-frozen-2026-08-21",
+  "interval_version": "arb-outward-v1-2026-08-21",
+  "protocol_sha256": "ef79c9e06170ba6bdafb39ee106b215c503b40873e4cb121276d3f23313e3092",
+  "files": [
+    {
+      "path": "PROSPECTIVE_V2_PRIMARY_PROTOCOL.md",
+      "sha256": "ef79c9e06170ba6bdafb39ee106b215c503b40873e4cb121276d3f23313e3092"
+    },
+    {
+      "path": "PROSPECTIVE_V2_PREFREEZE_AUDIT.json",
+      "sha256": "e94ab472b3a103a97fdf8458eab8b3f54b6436b60326d0ea7f5687148c8db48b"
+    },
+    {
+      "path": "scripts/prospective_v2_primary.py",
+      "sha256": "7b5e882888945cb3b1780e82b75783f06b0641cf582e60e1c1b4928daa282a0f"
+    },
+    {
+      "path": "scripts/outward_interval_certificate.py",
+      "sha256": "c85e2543d710619e47a57403351328e275c6c64e914c1b51753011aa9da10f18"
+    },
+    {
+      "path": "scripts/generate_prospective_v2_seed.py",
+      "sha256": "b2aa9b956ba6bc2ebc6ef10f14cb8ce30509be9f1fec83c12558fb84a0560b21"
+    },
+    {
+      "path": "scripts/generate_smooth_mlp_seed.py",
+      "sha256": "6bbb5a0bb1a904147b8bb15bc933fa2080f423b2ae05bfac1c22c06451e36531"
+    },
+    {
+      "path": "scripts/smooth_mlp_modular_grokking.py",
+      "sha256": "74439aa5b4b5f8caf11e94ec5d9b8d6bd838bd4ffe6e8711c373b02144ef77a4"
+    },
+    {
+      "path": "scripts/smooth_mlp_certificate.py",
+      "sha256": "c112a1f11acebd14be1c1690ea139d439afa17d603735f6ab956c3e53334e56c"
+    },
+    {
+      "path": "scripts/variational_mlp_certificate.py",
+      "sha256": "2b694e537a42d541089ceb43f9feb8180b080b612b8c0d2bd53f1d592ea6542a"
+    },
+    {
+      "path": "scripts/variational_shadowing.py",
+      "sha256": "7994bde174d78109d6789f3f505778fd79ee3966fa9ca1cf690c37bf718e0043"
+    },
+    {
+      "path": "scripts/modular_accuracy_certificate.py",
+      "sha256": "58e35a9cf501823491ff5918eabd9fc15f4b6ef700926676cc48631705ca24b0"
+    },
+    {
+      "path": "scripts/replay_smooth_mlp_thresholds.py",
+      "sha256": "efb69cc173b01c4cb943493be831d6b64b5abfeeceb61ff733817efa04d423d2"
+    },
+    {
+      "path": "scripts/test_prospective_v2_primary.py",
+      "sha256": "8968a3522d67dcf577a62af1c8d85e8dc6866a0ce16cd68003aad1ec4036b211"
+    },
+    {
+      "path": "scripts/test_outward_interval_certificate.py",
+      "sha256": "7529d3c880041183db6a4ca56c97a268a74499497d707cb31c8fb6c1827d84e1"
+    }
+  ]
+}

@@ -1,0 +1,2217 @@
+{
+  "status": "POST-SEAL DIAGNOSTIC; DOES NOT CHANGE V3 ISSUANCE",
+  "certificate_seal_sha256": "05D9FC835AEB58C81E658ED8B8F7423DEF4F49FAFF1FF7C076416E98ECCC79D7",
+  "aggregate_sha256": "E8BEEC6A28AC1AC3ADF5DCBBB1D960C5231D96F37CEFF2A6672F24FA4815FE21",
+  "join_seal_sha256": "62200716AF85DB8EBD9995FFE218B70BA23D6B5E08FAED12F9461CA601C68C05",
+  "candidate_count": 19,
+  "grid_evaluable_candidates": 15,
+  "frozen_issued": 11,
+  "q_output_one_retains_frozen_issued": 8,
+  "median_minimum_logical_speedup_over_full_q8": 7.894736842105263,
+  "minimum_minimum_logical_speedup_over_full_q8": 3.963436928702011,
+  "maximum_minimum_logical_speedup_over_full_q8": 8.0,
+  "median_trace_operator_time_speedup_over_full_q8": 4.038730220745343,
+  "minimum_trace_operator_time_speedup_over_full_q8": 2.2372510140825126,
+  "maximum_trace_operator_time_speedup_over_full_q8": 7.410826201801646,
+  "maximum_float64_response_remainder_deficit": 3.064615806865485e-14,
+  "padding_sensitivity_on_frozen_issued": {
+    "0.0e+00": {
+      "issued": 11,
+      "covered": 11,
+      "maximum_bracket_width": 0
+    },
+    "1.0e-15": {
+      "issued": 11,
+      "covered": 11,
+      "maximum_bracket_width": 0
+    },
+    "1.0e-14": {
+      "issued": 11,
+      "covered": 11,
+      "maximum_bracket_width": 0
+    },
+    "1.0e-13": {
+      "issued": 11,
+      "covered": 11,
+      "maximum_bracket_width": 0
+    },
+    "1.0e-12": {
+      "issued": 11,
+      "covered": 11,
+      "maximum_bracket_width": 0
+    },
+    "1.0e-11": {
+      "issued": 11,
+      "covered": 11,
+      "maximum_bracket_width": 0
+    },
+    "1.0e-10": {
+      "issued": 11,
+      "covered": 11,
+      "maximum_bracket_width": 0
+    },
+    "1.0e-09": {
+      "issued": 11,
+      "covered": 11,
+      "maximum_bracket_width": 0
+    },
+    "1.0e-08": {
+      "issued": 11,
+      "covered": 11,
+      "maximum_bracket_width": 0
+    },
+    "1.0e-07": {
+      "issued": 11,
+      "covered": 11,
+      "maximum_bracket_width": 1
+    },
+    "1.0e-06": {
+      "issued": 2,
+      "covered": 2,
+      "maximum_bracket_width": 1
+    }
+  },
+  "interpretation": "q-pair optimization and padding are retrospective audits. Same-event validity permits asynchronous powers, but a prospective online policy must be frozen and implemented before claiming realized wall-time gains.",
+  "rows": [
+    {
+      "candidate": {
+        "seed": 360,
+        "threshold": 0.7,
+        "anchor": 3480
+      },
+      "horizon": 131,
+      "original_issued": true,
+      "original_covered": true,
+      "grid_available": true,
+      "frozen_lockstep_first": {
+        "q_output": 3,
+        "q_green": 3,
+        "certificate_issued": true,
+        "certified_bracket": [
+          107,
+          107
+        ],
+        "certificate_logic_slack": 0.0012607820877289652,
+        "total_pointwise_radius": 1.1066314141104113e-14,
+        "logical_gram_applications": 6336,
+        "measured_cumulative_operator_seconds": 626.9928054010961,
+        "output_operator_seconds": 207.61103080108296,
+        "green_operator_seconds": 419.38177460001316
+      },
+      "minimum_logical_pair": {
+        "q_output": 2,
+        "q_green": 3,
+        "certificate_issued": true,
+        "certified_bracket": [
+          107,
+          107
+        ],
+        "certificate_logic_slack": 0.0012607820633944362,
+        "total_pointwise_radius": 1.2979739776814098e-14,
+        "logical_gram_applications": 4240,
+        "measured_cumulative_operator_seconds": 556.6572184014367,
+        "output_operator_seconds": 137.27544380142353,
+        "green_operator_seconds": 419.38177460001316
+      },
+      "minimum_measured_pair": {
+        "q_output": 3,
+        "q_green": 2,
+        "certificate_issued": true,
+        "certified_bracket": [
+          107,
+          107
+        ],
+        "certificate_logic_slack": 0.0012607820370226996,
+        "total_pointwise_radius": 1.9527574671692573e-14,
+        "logical_gram_applications": 6320,
+        "measured_cumulative_operator_seconds": 500.02285230113193,
+        "output_operator_seconds": 207.61103080108296,
+        "green_operator_seconds": 292.411821500049
+      },
+      "q_output_one_first": null,
+      "full_q8_pair": {
+        "q_output": 8,
+        "q_green": 8,
+        "certificate_issued": true,
+        "certified_bracket": [
+          107,
+          107
+        ],
+        "certificate_logic_slack": 0.0012607821131770767,
+        "total_pointwise_radius": 8.232124621189207e-15,
+        "logical_gram_applications": 16896,
+        "measured_cumulative_operator_seconds": 1685.6267181001604,
+        "output_operator_seconds": 559.2996277001221,
+        "green_operator_seconds": 1126.3270904000383
+      },
+      "padding_sensitivity": {
+        "0.0e+00": {
+          "issued": true,
+          "bracket": [
+            107,
+            107
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.0012607820877289652
+        },
+        "1.0e-15": {
+          "issued": true,
+          "bracket": [
+            107,
+            107
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.0012607820817362096
+        },
+        "1.0e-14": {
+          "issued": true,
+          "bracket": [
+            107,
+            107
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.00126078202780141
+        },
+        "1.0e-13": {
+          "issued": true,
+          "bracket": [
+            107,
+            107
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.001260781488453414
+        },
+        "1.0e-12": {
+          "issued": true,
+          "bracket": [
+            107,
+            107
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.0012607760949734168
+        },
+        "1.0e-11": {
+          "issued": true,
+          "bracket": [
+            107,
+            107
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.0012607221601697394
+        },
+        "1.0e-10": {
+          "issued": true,
+          "bracket": [
+            107,
+            107
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.0012601828117624594
+        },
+        "1.0e-09": {
+          "issued": true,
+          "bracket": [
+            107,
+            107
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.0012547892906391736
+        },
+        "1.0e-08": {
+          "issued": true,
+          "bracket": [
+            107,
+            107
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.001200850374357622
+        },
+        "1.0e-07": {
+          "issued": true,
+          "bracket": [
+            107,
+            107
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.000661090706672764
+        },
+        "1.0e-06": {
+          "issued": false,
+          "bracket": null,
+          "contains_actual": false,
+          "logic_slack": null
+        }
+      }
+    },
+    {
+      "candidate": {
+        "seed": 361,
+        "threshold": 0.7,
+        "anchor": 1880
+      },
+      "horizon": 275,
+      "original_issued": false,
+      "original_covered": null,
+      "grid_available": true,
+      "frozen_lockstep_first": null,
+      "minimum_logical_pair": null,
+      "minimum_measured_pair": null,
+      "q_output_one_first": null,
+      "full_q8_pair": {
+        "q_output": 8,
+        "q_green": 8,
+        "certificate_issued": false,
+        "certified_bracket": null,
+        "certificate_logic_slack": null,
+        "total_pointwise_radius": null,
+        "logical_gram_applications": 35328,
+        "measured_cumulative_operator_seconds": 3560.5233709969325,
+        "output_operator_seconds": 1156.1192318968242,
+        "green_operator_seconds": 2404.4041391001083
+      },
+      "padding_sensitivity": {}
+    },
+    {
+      "candidate": {
+        "seed": 361,
+        "threshold": 0.8,
+        "anchor": 2800
+      },
+      "horizon": 289,
+      "original_issued": true,
+      "original_covered": true,
+      "grid_available": true,
+      "frozen_lockstep_first": {
+        "q_output": 2,
+        "q_green": 2,
+        "certificate_issued": true,
+        "certified_bracket": [
+          265,
+          265
+        ],
+        "certificate_logic_slack": 0.00018040466854271495,
+        "total_pointwise_radius": 1.0153896504981095e-14,
+        "logical_gram_applications": 9280,
+        "measured_cumulative_operator_seconds": 957.7053896985017,
+        "output_operator_seconds": 307.5146322983783,
+        "green_operator_seconds": 650.1907574001234
+      },
+      "minimum_logical_pair": {
+        "q_output": 1,
+        "q_green": 4,
+        "certificate_issued": true,
+        "certified_bracket": [
+          265,
+          265
+        ],
+        "certificate_logic_slack": 0.00018040459037977174,
+        "total_pointwise_radius": 1.7372165551803023e-14,
+        "logical_gram_applications": 4688,
+        "measured_cumulative_operator_seconds": 1495.464135499671,
+        "output_operator_seconds": 152.7878504996188,
+        "green_operator_seconds": 1342.6762850000523
+      },
+      "minimum_measured_pair": {
+        "q_output": 2,
+        "q_green": 2,
+        "certificate_issued": true,
+        "certified_bracket": [
+          265,
+          265
+        ],
+        "certificate_logic_slack": 0.00018040466854271495,
+        "total_pointwise_radius": 1.0153896504981095e-14,
+        "logical_gram_applications": 9280,
+        "measured_cumulative_operator_seconds": 957.7053896985017,
+        "output_operator_seconds": 307.5146322983783,
+        "green_operator_seconds": 650.1907574001234
+      },
+      "q_output_one_first": {
+        "q_output": 1,
+        "q_green": 4,
+        "certificate_issued": true,
+        "certified_bracket": [
+          265,
+          265
+        ],
+        "certificate_logic_slack": 0.00018040459037977174,
+        "total_pointwise_radius": 1.7372165551803023e-14,
+        "logical_gram_applications": 4688,
+        "measured_cumulative_operator_seconds": 1495.464135499671,
+        "output_operator_seconds": 152.7878504996188,
+        "green_operator_seconds": 1342.6762850000523
+      },
+      "full_q8_pair": {
+        "q_output": 8,
+        "q_green": 8,
+        "certificate_issued": true,
+        "certified_bracket": [
+          265,
+          265
+        ],
+        "certificate_logic_slack": 0.00018040469057035259,
+        "total_pointwise_radius": 7.029670123853963e-15,
+        "logical_gram_applications": 37120,
+        "measured_cumulative_operator_seconds": 3697.8035265995422,
+        "output_operator_seconds": 1201.2756883994443,
+        "green_operator_seconds": 2496.527838200098
+      },
+      "padding_sensitivity": {
+        "0.0e+00": {
+          "issued": true,
+          "bracket": [
+            265,
+            265
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.00018040466854271495
+        },
+        "1.0e-15": {
+          "issued": true,
+          "bracket": [
+            265,
+            265
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.00018040466427796453
+        },
+        "1.0e-14": {
+          "issued": true,
+          "bracket": [
+            265,
+            265
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.00018040462589521101
+        },
+        "1.0e-13": {
+          "issued": true,
+          "bracket": [
+            265,
+            265
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.00018040424206767553
+        },
+        "1.0e-12": {
+          "issued": true,
+          "bracket": [
+            265,
+            265
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.00018040040379231279
+        },
+        "1.0e-11": {
+          "issued": true,
+          "bracket": [
+            265,
+            265
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.00018036202103787472
+        },
+        "1.0e-10": {
+          "issued": true,
+          "bracket": [
+            265,
+            265
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.00017997819341244623
+        },
+        "1.0e-09": {
+          "issued": true,
+          "bracket": [
+            265,
+            265
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.00017613990905337133
+        },
+        "1.0e-08": {
+          "issued": true,
+          "bracket": [
+            265,
+            265
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.00013775625498363127
+        },
+        "1.0e-07": {
+          "issued": true,
+          "bracket": [
+            264,
+            265
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.0020795012552241587
+        },
+        "1.0e-06": {
+          "issued": false,
+          "bracket": null,
+          "contains_actual": false,
+          "logic_slack": null
+        }
+      }
+    },
+    {
+      "candidate": {
+        "seed": 365,
+        "threshold": 0.7,
+        "anchor": 1480
+      },
+      "original_issued": false,
+      "grid_available": false,
+      "reason": "deterministic early abstention or reference construction failure"
+    },
+    {
+      "candidate": {
+        "seed": 366,
+        "threshold": 0.7,
+        "anchor": 1040
+      },
+      "horizon": 52,
+      "original_issued": true,
+      "original_covered": true,
+      "grid_available": true,
+      "frozen_lockstep_first": {
+        "q_output": 2,
+        "q_green": 2,
+        "certificate_issued": true,
+        "certified_bracket": [
+          28,
+          28
+        ],
+        "certificate_logic_slack": 0.00693722198607869,
+        "total_pointwise_radius": 2.9944350752099158e-15,
+        "logical_gram_applications": 1696,
+        "measured_cumulative_operator_seconds": 184.32762989972252,
+        "output_operator_seconds": 61.02484999981243,
+        "green_operator_seconds": 123.30277989991009
+      },
+      "minimum_logical_pair": {
+        "q_output": 1,
+        "q_green": 2,
+        "certificate_issued": true,
+        "certified_bracket": [
+          28,
+          28
+        ],
+        "certificate_logic_slack": 0.006937221962032139,
+        "total_pointwise_radius": 3.809791569982535e-15,
+        "logical_gram_applications": 864,
+        "measured_cumulative_operator_seconds": 153.15760209970176,
+        "output_operator_seconds": 29.85482219979167,
+        "green_operator_seconds": 123.30277989991009
+      },
+      "minimum_measured_pair": {
+        "q_output": 2,
+        "q_green": 1,
+        "certificate_issued": true,
+        "certified_bracket": [
+          28,
+          28
+        ],
+        "certificate_logic_slack": 0.0069372219773576,
+        "total_pointwise_radius": 4.2490577306363016e-15,
+        "logical_gram_applications": 1680,
+        "measured_cumulative_operator_seconds": 122.48933769972064,
+        "output_operator_seconds": 61.02484999981243,
+        "green_operator_seconds": 61.464487699908204
+      },
+      "q_output_one_first": {
+        "q_output": 1,
+        "q_green": 2,
+        "certificate_issued": true,
+        "certified_bracket": [
+          28,
+          28
+        ],
+        "certificate_logic_slack": 0.006937221962032139,
+        "total_pointwise_radius": 3.809791569982535e-15,
+        "logical_gram_applications": 864,
+        "measured_cumulative_operator_seconds": 153.15760209970176,
+        "output_operator_seconds": 29.85482219979167,
+        "green_operator_seconds": 123.30277989991009
+      },
+      "full_q8_pair": {
+        "q_output": 8,
+        "q_green": 8,
+        "certificate_issued": true,
+        "certified_bracket": [
+          28,
+          28
+        ],
+        "certificate_logic_slack": 0.006937221993474749,
+        "total_pointwise_radius": 2.7739136759660003e-15,
+        "logical_gram_applications": 6784,
+        "measured_cumulative_operator_seconds": 731.2892746988218,
+        "output_operator_seconds": 257.835849198862,
+        "green_operator_seconds": 473.45342549995985
+      },
+      "padding_sensitivity": {
+        "0.0e+00": {
+          "issued": true,
+          "bracket": [
+            28,
+            28
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.00693722198607869
+        },
+        "1.0e-15": {
+          "issued": true,
+          "bracket": [
+            28,
+            28
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.006937221979127524
+        },
+        "1.0e-14": {
+          "issued": true,
+          "bracket": [
+            28,
+            28
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.006937221916567028
+        },
+        "1.0e-13": {
+          "issued": true,
+          "bracket": [
+            28,
+            28
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.006937221290962069
+        },
+        "1.0e-12": {
+          "issued": true,
+          "bracket": [
+            28,
+            28
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.006937215034912447
+        },
+        "1.0e-11": {
+          "issued": true,
+          "bracket": [
+            28,
+            28
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.006937152474413499
+        },
+        "1.0e-10": {
+          "issued": true,
+          "bracket": [
+            28,
+            28
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.006936526869150668
+        },
+        "1.0e-09": {
+          "issued": true,
+          "bracket": [
+            28,
+            28
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.006930270789187475
+        },
+        "1.0e-08": {
+          "issued": true,
+          "bracket": [
+            28,
+            28
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.006867707256066927
+        },
+        "1.0e-07": {
+          "issued": true,
+          "bracket": [
+            28,
+            28
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.006241798576000396
+        },
+        "1.0e-06": {
+          "issued": false,
+          "bracket": null,
+          "contains_actual": false,
+          "logic_slack": null
+        }
+      }
+    },
+    {
+      "candidate": {
+        "seed": 366,
+        "threshold": 0.8,
+        "anchor": 1120
+      },
+      "horizon": 26,
+      "original_issued": true,
+      "original_covered": true,
+      "grid_available": true,
+      "frozen_lockstep_first": {
+        "q_output": 1,
+        "q_green": 1,
+        "certificate_issued": true,
+        "certified_bracket": [
+          2,
+          2
+        ],
+        "certificate_logic_slack": 0.0018713446794124701,
+        "total_pointwise_radius": 2.3628147902686187e-15,
+        "logical_gram_applications": 432,
+        "measured_cumulative_operator_seconds": 48.446527299820445,
+        "output_operator_seconds": 20.648021799745038,
+        "green_operator_seconds": 27.798505500075407
+      },
+      "minimum_logical_pair": {
+        "q_output": 1,
+        "q_green": 1,
+        "certificate_issued": true,
+        "certified_bracket": [
+          2,
+          2
+        ],
+        "certificate_logic_slack": 0.0018713446794124701,
+        "total_pointwise_radius": 2.3628147902686187e-15,
+        "logical_gram_applications": 432,
+        "measured_cumulative_operator_seconds": 48.446527299820445,
+        "output_operator_seconds": 20.648021799745038,
+        "green_operator_seconds": 27.798505500075407
+      },
+      "minimum_measured_pair": {
+        "q_output": 1,
+        "q_green": 1,
+        "certificate_issued": true,
+        "certified_bracket": [
+          2,
+          2
+        ],
+        "certificate_logic_slack": 0.0018713446794124701,
+        "total_pointwise_radius": 2.3628147902686187e-15,
+        "logical_gram_applications": 432,
+        "measured_cumulative_operator_seconds": 48.446527299820445,
+        "output_operator_seconds": 20.648021799745038,
+        "green_operator_seconds": 27.798505500075407
+      },
+      "q_output_one_first": {
+        "q_output": 1,
+        "q_green": 1,
+        "certificate_issued": true,
+        "certified_bracket": [
+          2,
+          2
+        ],
+        "certificate_logic_slack": 0.0018713446794124701,
+        "total_pointwise_radius": 2.3628147902686187e-15,
+        "logical_gram_applications": 432,
+        "measured_cumulative_operator_seconds": 48.446527299820445,
+        "output_operator_seconds": 20.648021799745038,
+        "green_operator_seconds": 27.798505500075407
+      },
+      "full_q8_pair": {
+        "q_output": 8,
+        "q_green": 8,
+        "certificate_issued": true,
+        "certified_bracket": [
+          2,
+          2
+        ],
+        "certificate_logic_slack": 0.0018713447054761847,
+        "total_pointwise_radius": 1.653109967488805e-15,
+        "logical_gram_applications": 3456,
+        "measured_cumulative_operator_seconds": 359.0287938998081,
+        "output_operator_seconds": 121.46325909974985,
+        "green_operator_seconds": 237.56553480005823
+      },
+      "padding_sensitivity": {
+        "0.0e+00": {
+          "issued": true,
+          "bracket": [
+            2,
+            2
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.0018713446794124701
+        },
+        "1.0e-15": {
+          "issued": true,
+          "bracket": [
+            2,
+            2
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.0018713446645949067
+        },
+        "1.0e-14": {
+          "issued": true,
+          "bracket": [
+            2,
+            2
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.0018713445312368354
+        },
+        "1.0e-13": {
+          "issued": true,
+          "bracket": [
+            2,
+            2
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.0018713431976561216
+        },
+        "1.0e-12": {
+          "issued": true,
+          "bracket": [
+            2,
+            2
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.001871329861848954
+        },
+        "1.0e-11": {
+          "issued": true,
+          "bracket": [
+            2,
+            2
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.001871196503774273
+        },
+        "1.0e-10": {
+          "issued": true,
+          "bracket": [
+            2,
+            2
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.0018698629227269867
+        },
+        "1.0e-09": {
+          "issued": true,
+          "bracket": [
+            2,
+            2
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.001856527082206542
+        },
+        "1.0e-08": {
+          "issued": true,
+          "bracket": [
+            2,
+            2
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.0017231656722438758
+        },
+        "1.0e-07": {
+          "issued": true,
+          "bracket": [
+            2,
+            2
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.0003892510967951608
+        },
+        "1.0e-06": {
+          "issued": false,
+          "bracket": null,
+          "contains_actual": false,
+          "logic_slack": null
+        }
+      }
+    },
+    {
+      "candidate": {
+        "seed": 366,
+        "threshold": 0.9,
+        "anchor": 1360
+      },
+      "horizon": 94,
+      "original_issued": true,
+      "original_covered": true,
+      "grid_available": true,
+      "frozen_lockstep_first": {
+        "q_output": 2,
+        "q_green": 2,
+        "certificate_issued": true,
+        "certified_bracket": [
+          70,
+          70
+        ],
+        "certificate_logic_slack": 0.0013621531226683699,
+        "total_pointwise_radius": 6.50612980639465e-15,
+        "logical_gram_applications": 3040,
+        "measured_cumulative_operator_seconds": 320.8030581002822,
+        "output_operator_seconds": 106.72355320025235,
+        "green_operator_seconds": 214.07950490002986
+      },
+      "minimum_logical_pair": {
+        "q_output": 1,
+        "q_green": 7,
+        "certificate_issued": true,
+        "certified_bracket": [
+          70,
+          70
+        ],
+        "certificate_logic_slack": 0.0013621530130378035,
+        "total_pointwise_radius": 1.0992521959718083e-14,
+        "logical_gram_applications": 1616,
+        "measured_cumulative_operator_seconds": 753.8293004004518,
+        "output_operator_seconds": 52.86733530042693,
+        "green_operator_seconds": 700.9619651000248
+      },
+      "minimum_measured_pair": {
+        "q_output": 2,
+        "q_green": 2,
+        "certificate_issued": true,
+        "certified_bracket": [
+          70,
+          70
+        ],
+        "certificate_logic_slack": 0.0013621531226683699,
+        "total_pointwise_radius": 6.50612980639465e-15,
+        "logical_gram_applications": 3040,
+        "measured_cumulative_operator_seconds": 320.8030581002822,
+        "output_operator_seconds": 106.72355320025235,
+        "green_operator_seconds": 214.07950490002986
+      },
+      "q_output_one_first": {
+        "q_output": 1,
+        "q_green": 7,
+        "certificate_issued": true,
+        "certified_bracket": [
+          70,
+          70
+        ],
+        "certificate_logic_slack": 0.0013621530130378035,
+        "total_pointwise_radius": 1.0992521959718083e-14,
+        "logical_gram_applications": 1616,
+        "measured_cumulative_operator_seconds": 753.8293004004518,
+        "output_operator_seconds": 52.86733530042693,
+        "green_operator_seconds": 700.9619651000248
+      },
+      "full_q8_pair": {
+        "q_output": 8,
+        "q_green": 8,
+        "certificate_issued": true,
+        "certified_bracket": [
+          70,
+          70
+        ],
+        "certificate_logic_slack": 0.0013621531556501788,
+        "total_pointwise_radius": 4.0453447977976095e-15,
+        "logical_gram_applications": 12160,
+        "measured_cumulative_operator_seconds": 1226.859976599575,
+        "output_operator_seconds": 429.6767593995901,
+        "green_operator_seconds": 797.1832171999849
+      },
+      "padding_sensitivity": {
+        "0.0e+00": {
+          "issued": true,
+          "bracket": [
+            70,
+            70
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.0013621531226683699
+        },
+        "1.0e-15": {
+          "issued": true,
+          "bracket": [
+            70,
+            70
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.0013621531136482974
+        },
+        "1.0e-14": {
+          "issued": true,
+          "bracket": [
+            70,
+            70
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.001362153032467647
+        },
+        "1.0e-13": {
+          "issued": true,
+          "bracket": [
+            70,
+            70
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.00136215222066114
+        },
+        "1.0e-12": {
+          "issued": true,
+          "bracket": [
+            70,
+            70
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.001362144102596041
+        },
+        "1.0e-11": {
+          "issued": true,
+          "bracket": [
+            70,
+            70
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.001362062921942116
+        },
+        "1.0e-10": {
+          "issued": true,
+          "bracket": [
+            70,
+            70
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.0013612511151090858
+        },
+        "1.0e-09": {
+          "issued": true,
+          "bracket": [
+            70,
+            70
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.0013531330174009343
+        },
+        "1.0e-08": {
+          "issued": true,
+          "bracket": [
+            70,
+            70
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.0012719491025344782
+        },
+        "1.0e-07": {
+          "issued": true,
+          "bracket": [
+            70,
+            70
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.00045981617537580984
+        },
+        "1.0e-06": {
+          "issued": false,
+          "bracket": null,
+          "contains_actual": false,
+          "logic_slack": null
+        }
+      }
+    },
+    {
+      "candidate": {
+        "seed": 368,
+        "threshold": 0.8,
+        "anchor": 2880
+      },
+      "original_issued": false,
+      "grid_available": false,
+      "reason": "deterministic early abstention or reference construction failure"
+    },
+    {
+      "candidate": {
+        "seed": 369,
+        "threshold": 0.7,
+        "anchor": 4160
+      },
+      "horizon": 181,
+      "original_issued": true,
+      "original_covered": true,
+      "grid_available": true,
+      "frozen_lockstep_first": {
+        "q_output": 2,
+        "q_green": 2,
+        "certificate_issued": true,
+        "certified_bracket": [
+          157,
+          157
+        ],
+        "certificate_logic_slack": 0.0022846993850114063,
+        "total_pointwise_radius": 8.122488233808475e-15,
+        "logical_gram_applications": 5824,
+        "measured_cumulative_operator_seconds": 530.6968642999418,
+        "output_operator_seconds": 161.9969298999058,
+        "green_operator_seconds": 368.699934400036
+      },
+      "minimum_logical_pair": {
+        "q_output": 1,
+        "q_green": 3,
+        "certificate_issued": true,
+        "certified_bracket": [
+          157,
+          157
+        ],
+        "certificate_logic_slack": 0.0022846993037214185,
+        "total_pointwise_radius": 1.3581903736738015e-14,
+        "logical_gram_applications": 2944,
+        "measured_cumulative_operator_seconds": 653.770765199908,
+        "output_operator_seconds": 81.76344609982334,
+        "green_operator_seconds": 572.0073191000847
+      },
+      "minimum_measured_pair": {
+        "q_output": 2,
+        "q_green": 2,
+        "certificate_issued": true,
+        "certified_bracket": [
+          157,
+          157
+        ],
+        "certificate_logic_slack": 0.0022846993850114063,
+        "total_pointwise_radius": 8.122488233808475e-15,
+        "logical_gram_applications": 5824,
+        "measured_cumulative_operator_seconds": 530.6968642999418,
+        "output_operator_seconds": 161.9969298999058,
+        "green_operator_seconds": 368.699934400036
+      },
+      "q_output_one_first": {
+        "q_output": 1,
+        "q_green": 3,
+        "certificate_issued": true,
+        "certified_bracket": [
+          157,
+          157
+        ],
+        "certificate_logic_slack": 0.0022846993037214185,
+        "total_pointwise_radius": 1.3581903736738015e-14,
+        "logical_gram_applications": 2944,
+        "measured_cumulative_operator_seconds": 653.770765199908,
+        "output_operator_seconds": 81.76344609982334,
+        "green_operator_seconds": 572.0073191000847
+      },
+      "full_q8_pair": {
+        "q_output": 8,
+        "q_green": 8,
+        "certificate_issued": true,
+        "certified_bracket": [
+          157,
+          157
+        ],
+        "certificate_logic_slack": 0.0022846994062495243,
+        "total_pointwise_radius": 5.9680507921775364e-15,
+        "logical_gram_applications": 23296,
+        "measured_cumulative_operator_seconds": 2143.341463902965,
+        "output_operator_seconds": 643.3400571028469,
+        "green_operator_seconds": 1500.0014068001183
+      },
+      "padding_sensitivity": {
+        "0.0e+00": {
+          "issued": true,
+          "bracket": [
+            157,
+            157
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.0022846993850114063
+        },
+        "1.0e-15": {
+          "issued": true,
+          "bracket": [
+            157,
+            157
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.002284699379952499
+        },
+        "1.0e-14": {
+          "issued": true,
+          "bracket": [
+            157,
+            157
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.002284699334422334
+        },
+        "1.0e-13": {
+          "issued": true,
+          "bracket": [
+            157,
+            157
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.002284698879120679
+        },
+        "1.0e-12": {
+          "issued": true,
+          "bracket": [
+            157,
+            157
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.0022846943261041193
+        },
+        "1.0e-11": {
+          "issued": true,
+          "bracket": [
+            157,
+            157
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.0022846487959371745
+        },
+        "1.0e-10": {
+          "issued": true,
+          "bracket": [
+            157,
+            157
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.0022841934941332234
+        },
+        "1.0e-09": {
+          "issued": true,
+          "bracket": [
+            157,
+            157
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.002279640462643266
+        },
+        "1.0e-08": {
+          "issued": true,
+          "bracket": [
+            157,
+            157
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.0022341088026989813
+        },
+        "1.0e-07": {
+          "issued": true,
+          "bracket": [
+            157,
+            157
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.0017786576987851908
+        },
+        "1.0e-06": {
+          "issued": true,
+          "bracket": [
+            156,
+            157
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.0012961603592037858
+        }
+      }
+    },
+    {
+      "candidate": {
+        "seed": 369,
+        "threshold": 0.8,
+        "anchor": 4480
+      },
+      "horizon": 142,
+      "original_issued": true,
+      "original_covered": true,
+      "grid_available": true,
+      "frozen_lockstep_first": {
+        "q_output": 2,
+        "q_green": 2,
+        "certificate_issued": true,
+        "certified_bracket": [
+          118,
+          118
+        ],
+        "certificate_logic_slack": 0.0004586047628342139,
+        "total_pointwise_radius": 4.571023832842043e-15,
+        "logical_gram_applications": 4576,
+        "measured_cumulative_operator_seconds": 419.1433210999239,
+        "output_operator_seconds": 125.94290219980758,
+        "green_operator_seconds": 293.20041890011635
+      },
+      "minimum_logical_pair": {
+        "q_output": 1,
+        "q_green": 2,
+        "certificate_issued": true,
+        "certified_bracket": [
+          118,
+          118
+        ],
+        "certificate_logic_slack": 0.00045860473590874046,
+        "total_pointwise_radius": 6.4760094096601116e-15,
+        "logical_gram_applications": 2304,
+        "measured_cumulative_operator_seconds": 356.1532426994527,
+        "output_operator_seconds": 62.95282379933633,
+        "green_operator_seconds": 293.20041890011635
+      },
+      "minimum_measured_pair": {
+        "q_output": 2,
+        "q_green": 1,
+        "certificate_issued": true,
+        "certified_bracket": [
+          118,
+          118
+        ],
+        "certificate_logic_slack": 0.0004586047486923682,
+        "total_pointwise_radius": 7.78497925567505e-15,
+        "logical_gram_applications": 4560,
+        "measured_cumulative_operator_seconds": 261.0832887998549,
+        "output_operator_seconds": 125.94290219980758,
+        "green_operator_seconds": 135.14038660004735
+      },
+      "q_output_one_first": {
+        "q_output": 1,
+        "q_green": 2,
+        "certificate_issued": true,
+        "certified_bracket": [
+          118,
+          118
+        ],
+        "certificate_logic_slack": 0.00045860473590874046,
+        "total_pointwise_radius": 6.4760094096601116e-15,
+        "logical_gram_applications": 2304,
+        "measured_cumulative_operator_seconds": 356.1532426994527,
+        "output_operator_seconds": 62.95282379933633,
+        "green_operator_seconds": 293.20041890011635
+      },
+      "full_q8_pair": {
+        "q_output": 8,
+        "q_green": 8,
+        "certificate_issued": true,
+        "certified_bracket": [
+          118,
+          118
+        ],
+        "certificate_logic_slack": 0.00045860477043969277,
+        "total_pointwise_radius": 4.081346621270896e-15,
+        "logical_gram_applications": 18304,
+        "measured_cumulative_operator_seconds": 1733.8906146988738,
+        "output_operator_seconds": 505.89940589887556,
+        "green_operator_seconds": 1227.9912087999983
+      },
+      "padding_sensitivity": {
+        "0.0e+00": {
+          "issued": true,
+          "bracket": [
+            118,
+            118
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.0004586047628342139
+        },
+        "1.0e-15": {
+          "issued": true,
+          "bracket": [
+            118,
+            118
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.00045860475843407644
+        },
+        "1.0e-14": {
+          "issued": true,
+          "bracket": [
+            118,
+            118
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.0004586047188328391
+        },
+        "1.0e-13": {
+          "issued": true,
+          "bracket": [
+            118,
+            118
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.0004586043228204659
+        },
+        "1.0e-12": {
+          "issued": true,
+          "bracket": [
+            118,
+            118
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.0004586003626967228
+        },
+        "1.0e-11": {
+          "issued": true,
+          "bracket": [
+            118,
+            118
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.0004585607614582125
+        },
+        "1.0e-10": {
+          "issued": true,
+          "bracket": [
+            118,
+            118
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.00045816474896520154
+        },
+        "1.0e-09": {
+          "issued": true,
+          "bracket": [
+            118,
+            118
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.00045420461324422975
+        },
+        "1.0e-08": {
+          "issued": true,
+          "bracket": [
+            118,
+            118
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.0004146021769482936
+        },
+        "1.0e-07": {
+          "issued": true,
+          "bracket": [
+            118,
+            118
+          ],
+          "contains_actual": true,
+          "logic_slack": 1.846990536711956e-05
+        },
+        "1.0e-06": {
+          "issued": false,
+          "bracket": null,
+          "contains_actual": false,
+          "logic_slack": null
+        }
+      }
+    },
+    {
+      "candidate": {
+        "seed": 369,
+        "threshold": 0.9,
+        "anchor": 5760
+      },
+      "horizon": 256,
+      "original_issued": true,
+      "original_covered": true,
+      "grid_available": true,
+      "frozen_lockstep_first": {
+        "q_output": 2,
+        "q_green": 2,
+        "certificate_issued": true,
+        "certified_bracket": [
+          232,
+          232
+        ],
+        "certificate_logic_slack": 0.000686237513695941,
+        "total_pointwise_radius": 8.490171681128347e-15,
+        "logical_gram_applications": 8224,
+        "measured_cumulative_operator_seconds": 731.4989688990172,
+        "output_operator_seconds": 251.51291729905643,
+        "green_operator_seconds": 479.9860515999608
+      },
+      "minimum_logical_pair": {
+        "q_output": 1,
+        "q_green": 3,
+        "certificate_issued": true,
+        "certified_bracket": [
+          232,
+          232
+        ],
+        "certificate_logic_slack": 0.0006862374262757465,
+        "total_pointwise_radius": 1.5220982074351305e-14,
+        "logical_gram_applications": 4144,
+        "measured_cumulative_operator_seconds": 844.9997652991442,
+        "output_operator_seconds": 127.05084949918091,
+        "green_operator_seconds": 717.9489157999633
+      },
+      "minimum_measured_pair": {
+        "q_output": 2,
+        "q_green": 2,
+        "certificate_issued": true,
+        "certified_bracket": [
+          232,
+          232
+        ],
+        "certificate_logic_slack": 0.000686237513695941,
+        "total_pointwise_radius": 8.490171681128347e-15,
+        "logical_gram_applications": 8224,
+        "measured_cumulative_operator_seconds": 731.4989688990172,
+        "output_operator_seconds": 251.51291729905643,
+        "green_operator_seconds": 479.9860515999608
+      },
+      "q_output_one_first": {
+        "q_output": 1,
+        "q_green": 3,
+        "certificate_issued": true,
+        "certified_bracket": [
+          232,
+          232
+        ],
+        "certificate_logic_slack": 0.0006862374262757465,
+        "total_pointwise_radius": 1.5220982074351305e-14,
+        "logical_gram_applications": 4144,
+        "measured_cumulative_operator_seconds": 844.9997652991442,
+        "output_operator_seconds": 127.05084949918091,
+        "green_operator_seconds": 717.9489157999633
+      },
+      "full_q8_pair": {
+        "q_output": 8,
+        "q_green": 8,
+        "certificate_issued": true,
+        "certified_bracket": [
+          232,
+          232
+        ],
+        "certificate_logic_slack": 0.0006862375325744753,
+        "total_pointwise_radius": 6.652331237607844e-15,
+        "logical_gram_applications": 32896,
+        "measured_cumulative_operator_seconds": 3077.8245783976745,
+        "output_operator_seconds": 1006.1397641976364,
+        "green_operator_seconds": 2071.684814200038
+      },
+      "padding_sensitivity": {
+        "0.0e+00": {
+          "issued": true,
+          "bracket": [
+            232,
+            232
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.000686237513695941
+        },
+        "1.0e-15": {
+          "issued": true,
+          "bracket": [
+            232,
+            232
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.0006862375092312005
+        },
+        "1.0e-14": {
+          "issued": true,
+          "bracket": [
+            232,
+            232
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.000686237469048537
+        },
+        "1.0e-13": {
+          "issued": true,
+          "bracket": [
+            232,
+            232
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.0006862370672219019
+        },
+        "1.0e-12": {
+          "issued": true,
+          "bracket": [
+            232,
+            232
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.0006862330489555435
+        },
+        "1.0e-11": {
+          "issued": true,
+          "bracket": [
+            232,
+            232
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.0006861928662912933
+        },
+        "1.0e-10": {
+          "issued": true,
+          "bracket": [
+            232,
+            232
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.0006857910395821019
+        },
+        "1.0e-09": {
+          "issued": true,
+          "bracket": [
+            232,
+            232
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.0006817727658212364
+        },
+        "1.0e-08": {
+          "issued": true,
+          "bracket": [
+            232,
+            232
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.0006415893613174892
+        },
+        "1.0e-07": {
+          "issued": true,
+          "bracket": [
+            232,
+            232
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.00023968862677081548
+        },
+        "1.0e-06": {
+          "issued": false,
+          "bracket": null,
+          "contains_actual": false,
+          "logic_slack": null
+        }
+      }
+    },
+    {
+      "candidate": {
+        "seed": 370,
+        "threshold": 0.7,
+        "anchor": 2280
+      },
+      "horizon": 299,
+      "original_issued": true,
+      "original_covered": true,
+      "grid_available": true,
+      "frozen_lockstep_first": {
+        "q_output": 2,
+        "q_green": 2,
+        "certificate_issued": true,
+        "certified_bracket": [
+          275,
+          275
+        ],
+        "certificate_logic_slack": 0.0007507767080781868,
+        "total_pointwise_radius": 1.4055703665018139e-14,
+        "logical_gram_applications": 9600,
+        "measured_cumulative_operator_seconds": 876.0291457999265,
+        "output_operator_seconds": 298.56725939991884,
+        "green_operator_seconds": 577.4618864000076
+      },
+      "minimum_logical_pair": {
+        "q_output": 1,
+        "q_green": 5,
+        "certificate_issued": true,
+        "certified_bracket": [
+          275,
+          275
+        ],
+        "certificate_logic_slack": 0.0007507765825589521,
+        "total_pointwise_radius": 2.4198182267125496e-14,
+        "logical_gram_applications": 4864,
+        "measured_cumulative_operator_seconds": 1708.0051443000557,
+        "output_operator_seconds": 150.43719750002492,
+        "green_operator_seconds": 1557.5679468000308
+      },
+      "minimum_measured_pair": {
+        "q_output": 2,
+        "q_green": 2,
+        "certificate_issued": true,
+        "certified_bracket": [
+          275,
+          275
+        ],
+        "certificate_logic_slack": 0.0007507767080781868,
+        "total_pointwise_radius": 1.4055703665018139e-14,
+        "logical_gram_applications": 9600,
+        "measured_cumulative_operator_seconds": 876.0291457999265,
+        "output_operator_seconds": 298.56725939991884,
+        "green_operator_seconds": 577.4618864000076
+      },
+      "q_output_one_first": {
+        "q_output": 1,
+        "q_green": 5,
+        "certificate_issued": true,
+        "certified_bracket": [
+          275,
+          275
+        ],
+        "certificate_logic_slack": 0.0007507765825589521,
+        "total_pointwise_radius": 2.4198182267125496e-14,
+        "logical_gram_applications": 4864,
+        "measured_cumulative_operator_seconds": 1708.0051443000557,
+        "output_operator_seconds": 150.43719750002492,
+        "green_operator_seconds": 1557.5679468000308
+      },
+      "full_q8_pair": {
+        "q_output": 8,
+        "q_green": 8,
+        "certificate_issued": true,
+        "certified_bracket": [
+          275,
+          275
+        ],
+        "certificate_logic_slack": 0.0007507767445460674,
+        "total_pointwise_radius": 8.573298541885751e-15,
+        "logical_gram_applications": 38400,
+        "measured_cumulative_operator_seconds": 3593.944252402871,
+        "output_operator_seconds": 1188.897612002911,
+        "green_operator_seconds": 2405.04664039996
+      },
+      "padding_sensitivity": {
+        "0.0e+00": {
+          "issued": true,
+          "bracket": [
+            275,
+            275
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.0007507767080781868
+        },
+        "1.0e-15": {
+          "issued": true,
+          "bracket": [
+            275,
+            275
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.0007507767036793387
+        },
+        "1.0e-14": {
+          "issued": true,
+          "bracket": [
+            275,
+            275
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.0007507766640897065
+        },
+        "1.0e-13": {
+          "issued": true,
+          "bracket": [
+            275,
+            275
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.0007507762681933839
+        },
+        "1.0e-12": {
+          "issued": true,
+          "bracket": [
+            275,
+            275
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.0007507723092301493
+        },
+        "1.0e-11": {
+          "issued": true,
+          "bracket": [
+            275,
+            275
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.0007507327195968988
+        },
+        "1.0e-10": {
+          "issued": true,
+          "bracket": [
+            275,
+            275
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.0007503368231739342
+        },
+        "1.0e-09": {
+          "issued": true,
+          "bracket": [
+            275,
+            275
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.0007463778498982887
+        },
+        "1.0e-08": {
+          "issued": true,
+          "bracket": [
+            275,
+            275
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.0007067872125420124
+        },
+        "1.0e-07": {
+          "issued": true,
+          "bracket": [
+            275,
+            275
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.00031079037899708407
+        },
+        "1.0e-06": {
+          "issued": false,
+          "bracket": null,
+          "contains_actual": false,
+          "logic_slack": null
+        }
+      }
+    },
+    {
+      "candidate": {
+        "seed": 372,
+        "threshold": 0.7,
+        "anchor": 3440
+      },
+      "horizon": 270,
+      "original_issued": true,
+      "original_covered": true,
+      "grid_available": true,
+      "frozen_lockstep_first": {
+        "q_output": 4,
+        "q_green": 4,
+        "certificate_issued": true,
+        "certified_bracket": [
+          246,
+          246
+        ],
+        "certificate_logic_slack": 0.0008635959768065564,
+        "total_pointwise_radius": 2.731524053036462e-14,
+        "logical_gram_applications": 17344,
+        "measured_cumulative_operator_seconds": 1545.9966237008339,
+        "output_operator_seconds": 508.4810219007777,
+        "green_operator_seconds": 1037.5156018000562
+      },
+      "minimum_logical_pair": {
+        "q_output": 2,
+        "q_green": 7,
+        "certificate_issued": true,
+        "certified_bracket": [
+          246,
+          246
+        ],
+        "certificate_logic_slack": 0.0008635959012182096,
+        "total_pointwise_radius": 3.4769371141173335e-14,
+        "logical_gram_applications": 8752,
+        "measured_cumulative_operator_seconds": 2122.1905304000247,
+        "output_operator_seconds": 254.73562499997206,
+        "green_operator_seconds": 1867.4549054000527
+      },
+      "minimum_measured_pair": {
+        "q_output": 3,
+        "q_green": 4,
+        "certificate_issued": true,
+        "certified_bracket": [
+          246,
+          246
+        ],
+        "certificate_logic_slack": 0.0008635959297241028,
+        "total_pointwise_radius": 3.463196189318888e-14,
+        "logical_gram_applications": 13024,
+        "measured_cumulative_operator_seconds": 1419.805960800266,
+        "output_operator_seconds": 382.2903590002097,
+        "green_operator_seconds": 1037.5156018000562
+      },
+      "q_output_one_first": null,
+      "full_q8_pair": {
+        "q_output": 8,
+        "q_green": 8,
+        "certificate_issued": true,
+        "certified_bracket": [
+          246,
+          246
+        ],
+        "certificate_logic_slack": 0.0008635960289435078,
+        "total_pointwise_radius": 1.821094009501407e-14,
+        "logical_gram_applications": 34688,
+        "measured_cumulative_operator_seconds": 3176.462325600791,
+        "output_operator_seconds": 1022.7553094007308,
+        "green_operator_seconds": 2153.70701620006
+      },
+      "padding_sensitivity": {
+        "0.0e+00": {
+          "issued": true,
+          "bracket": [
+            246,
+            246
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.0008635959768065564
+        },
+        "1.0e-15": {
+          "issued": true,
+          "bracket": [
+            246,
+            246
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.000863595972049297
+        },
+        "1.0e-14": {
+          "issued": true,
+          "bracket": [
+            246,
+            246
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.0008635959292339628
+        },
+        "1.0e-13": {
+          "issued": true,
+          "bracket": [
+            246,
+            246
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.0008635955010806197
+        },
+        "1.0e-12": {
+          "issued": true,
+          "bracket": [
+            246,
+            246
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.0008635912195471676
+        },
+        "1.0e-11": {
+          "issued": true,
+          "bracket": [
+            246,
+            246
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.0008635484042105001
+        },
+        "1.0e-10": {
+          "issued": true,
+          "bracket": [
+            246,
+            246
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.000863120250629186
+        },
+        "1.0e-09": {
+          "issued": true,
+          "bracket": [
+            246,
+            246
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.0008588386933520315
+        },
+        "1.0e-08": {
+          "issued": true,
+          "bracket": [
+            246,
+            246
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.000816020974179244
+        },
+        "1.0e-07": {
+          "issued": true,
+          "bracket": [
+            246,
+            246
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.00038762914232707435
+        },
+        "1.0e-06": {
+          "issued": true,
+          "bracket": [
+            245,
+            246
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.0018992391232266403
+        }
+      }
+    },
+    {
+      "candidate": {
+        "seed": 373,
+        "threshold": 0.7,
+        "anchor": 1280
+      },
+      "horizon": 271,
+      "original_issued": false,
+      "original_covered": null,
+      "grid_available": true,
+      "frozen_lockstep_first": null,
+      "minimum_logical_pair": null,
+      "minimum_measured_pair": null,
+      "q_output_one_first": null,
+      "full_q8_pair": {
+        "q_output": 8,
+        "q_green": 8,
+        "certificate_issued": false,
+        "certified_bracket": null,
+        "certificate_logic_slack": null,
+        "total_pointwise_radius": null,
+        "logical_gram_applications": 34816,
+        "measured_cumulative_operator_seconds": 3189.8901830031537,
+        "output_operator_seconds": 1070.5791211032774,
+        "green_operator_seconds": 2119.311061899876
+      },
+      "padding_sensitivity": {}
+    },
+    {
+      "candidate": {
+        "seed": 373,
+        "threshold": 0.8,
+        "anchor": 1760
+      },
+      "horizon": 238,
+      "original_issued": false,
+      "original_covered": null,
+      "grid_available": true,
+      "frozen_lockstep_first": null,
+      "minimum_logical_pair": null,
+      "minimum_measured_pair": null,
+      "q_output_one_first": null,
+      "full_q8_pair": {
+        "q_output": 8,
+        "q_green": 8,
+        "certificate_issued": false,
+        "certified_bracket": null,
+        "certificate_logic_slack": null,
+        "total_pointwise_radius": null,
+        "logical_gram_applications": 30592,
+        "measured_cumulative_operator_seconds": 2757.112820099108,
+        "output_operator_seconds": 872.0149295991287,
+        "green_operator_seconds": 1885.0978904999793
+      },
+      "padding_sensitivity": {}
+    },
+    {
+      "candidate": {
+        "seed": 375,
+        "threshold": 0.7,
+        "anchor": 920
+      },
+      "original_issued": false,
+      "grid_available": false,
+      "reason": "deterministic early abstention or reference construction failure"
+    },
+    {
+      "candidate": {
+        "seed": 375,
+        "threshold": 0.8,
+        "anchor": 1800
+      },
+      "horizon": 142,
+      "original_issued": true,
+      "original_covered": true,
+      "grid_available": true,
+      "frozen_lockstep_first": {
+        "q_output": 3,
+        "q_green": 3,
+        "certificate_issued": true,
+        "certified_bracket": [
+          118,
+          118
+        ],
+        "certificate_logic_slack": 0.0015589757138641744,
+        "total_pointwise_radius": 8.024796661386544e-15,
+        "logical_gram_applications": 6864,
+        "measured_cumulative_operator_seconds": 642.8448880002834,
+        "output_operator_seconds": 196.6307953003561,
+        "green_operator_seconds": 446.2140926999273
+      },
+      "minimum_logical_pair": {
+        "q_output": 2,
+        "q_green": 3,
+        "certificate_issued": true,
+        "certified_bracket": [
+          118,
+          118
+        ],
+        "certificate_logic_slack": 0.001558975663701145,
+        "total_pointwise_radius": 1.1506900062761972e-14,
+        "logical_gram_applications": 4592,
+        "measured_cumulative_operator_seconds": 577.2283082995564,
+        "output_operator_seconds": 131.0142155996291,
+        "green_operator_seconds": 446.2140926999273
+      },
+      "minimum_measured_pair": {
+        "q_output": 4,
+        "q_green": 2,
+        "certificate_issued": true,
+        "certified_bracket": [
+          118,
+          118
+        ],
+        "certificate_logic_slack": 0.0015589756971306856,
+        "total_pointwise_radius": 1.0937183251518983e-14,
+        "logical_gram_applications": 9120,
+        "measured_cumulative_operator_seconds": 574.3806633008644,
+        "output_operator_seconds": 262.41752680088393,
+        "green_operator_seconds": 311.96313649998046
+      },
+      "q_output_one_first": null,
+      "full_q8_pair": {
+        "q_output": 8,
+        "q_green": 8,
+        "certificate_issued": true,
+        "certified_bracket": [
+          118,
+          118
+        ],
+        "certificate_logic_slack": 0.001558975745165051,
+        "total_pointwise_radius": 5.499352091348648e-15,
+        "logical_gram_applications": 18304,
+        "measured_cumulative_operator_seconds": 1422.6585339989979,
+        "output_operator_seconds": 522.0667956990656,
+        "green_operator_seconds": 900.5917382999323
+      },
+      "padding_sensitivity": {
+        "0.0e+00": {
+          "issued": true,
+          "bracket": [
+            118,
+            118
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.0015589757138641744
+        },
+        "1.0e-15": {
+          "issued": true,
+          "bracket": [
+            118,
+            118
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.0015589757052871514
+        },
+        "1.0e-14": {
+          "issued": true,
+          "bracket": [
+            118,
+            118
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.001558975628093945
+        },
+        "1.0e-13": {
+          "issued": true,
+          "bracket": [
+            118,
+            118
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.0015589748561618787
+        },
+        "1.0e-12": {
+          "issued": true,
+          "bracket": [
+            118,
+            118
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.0015589671368411858
+        },
+        "1.0e-11": {
+          "issued": true,
+          "bracket": [
+            118,
+            118
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.001558889943631026
+        },
+        "1.0e-10": {
+          "issued": true,
+          "bracket": [
+            118,
+            118
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.0015581180112063
+        },
+        "1.0e-09": {
+          "issued": true,
+          "bracket": [
+            118,
+            118
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.0015503986546464578
+        },
+        "1.0e-08": {
+          "issued": true,
+          "bracket": [
+            118,
+            118
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.001473201857789605
+        },
+        "1.0e-07": {
+          "issued": true,
+          "bracket": [
+            118,
+            118
+          ],
+          "contains_actual": true,
+          "logic_slack": 0.000700910763378122
+        },
+        "1.0e-06": {
+          "issued": false,
+          "bracket": null,
+          "contains_actual": false,
+          "logic_slack": null
+        }
+      }
+    },
+    {
+      "candidate": {
+        "seed": 378,
+        "threshold": 0.7,
+        "anchor": 3640
+      },
+      "horizon": 285,
+      "original_issued": false,
+      "original_covered": null,
+      "grid_available": true,
+      "frozen_lockstep_first": null,
+      "minimum_logical_pair": null,
+      "minimum_measured_pair": null,
+      "q_output_one_first": null,
+      "full_q8_pair": {
+        "q_output": 8,
+        "q_green": 8,
+        "certificate_issued": false,
+        "certified_bracket": null,
+        "certificate_logic_slack": null,
+        "total_pointwise_radius": null,
+        "logical_gram_applications": 36608,
+        "measured_cumulative_operator_seconds": 2117.669187197811,
+        "output_operator_seconds": 1024.5359295980306,
+        "green_operator_seconds": 1093.1332575997803
+      },
+      "padding_sensitivity": {}
+    },
+    {
+      "candidate": {
+        "seed": 378,
+        "threshold": 0.9,
+        "anchor": 4800
+      },
+      "original_issued": false,
+      "grid_available": false,
+      "reason": "deterministic early abstention or reference construction failure"
+    }
+  ]
+}

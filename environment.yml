@@ -1,0 +1,9 @@
+name: greencert-repro
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12.10
+  - pip
+  - pip:
+      - -r requirements.txt
+

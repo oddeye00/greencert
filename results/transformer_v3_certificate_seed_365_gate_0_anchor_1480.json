@@ -1,0 +1,94 @@
+{
+  "status": "FROZEN V3 OUTCOME-BLIND EXECUTION ABSTENTION",
+  "candidate": {
+    "seed": 365,
+    "threshold": 0.7,
+    "anchor": 1480
+  },
+  "method_seal_sha256": "2CB9738FD630392CCA088C3E23C8CCE7142FAB046C9AFB6AEDC36906D51B7866",
+  "candidate_seal_sha256": "43A016761DEB48CB4923BEDDBA82B005AFD18479622E6D587248AC127A910543",
+  "candidate_manifest_sha256": "0AB04F552C9DC2A06D974E7E973E48C3BC6E829B2222D5E81AC19ECB5FFD4843",
+  "protocol": {
+    "sweeps": 4,
+    "horizon": 151,
+    "persistence": 25,
+    "disposition": "deterministic reference-path construction failure"
+  },
+  "centerline_sha256": null,
+  "sweep_diagnostics": [
+    {
+      "sweep": 1,
+      "reached_horizon": 300,
+      "maximum_uncorrected_defect_norm": 5.502647560386675,
+      "maximum_correction_norm": 20139.219871658523,
+      "hvp_calls": 300
+    },
+    {
+      "sweep": 2,
+      "reached_horizon": 244,
+      "maximum_uncorrected_defect_norm": 100.3460566064291,
+      "maximum_correction_norm": 850280.131195731,
+      "hvp_calls": 244
+    },
+    {
+      "sweep": 3,
+      "reached_horizon": 234,
+      "maximum_uncorrected_defect_norm": 9511.952097132564,
+      "maximum_correction_norm": 66054.07278670162,
+      "hvp_calls": 234
+    },
+    {
+      "sweep": 4,
+      "reached_horizon": 233,
+      "maximum_uncorrected_defect_norm": 158042.777191805,
+      "maximum_correction_norm": 197524.65207750342,
+      "hvp_calls": 233
+    }
+  ],
+  "required_correct": 41,
+  "predicted_persistent_event": 127,
+  "defect_sequence_norm": null,
+  "signed_response_sequence_norm": null,
+  "signed_response_max_state_norm": null,
+  "outer_domain_radius": null,
+  "directional_green_norm_lower_bound": null,
+  "optimistic_one_shot_closure": null,
+  "early_abstention_before_green_probe": true,
+  "block_fixed_points_all_consistent": null,
+  "green_trace": null,
+  "power_rows": [],
+  "earliest_issuing_power": null,
+  "certified_total_pointwise_radius": null,
+  "certified_remainder_sequence_radius": null,
+  "certified_bracket": null,
+  "certificate_issued": false,
+  "certificate_logic_slack": null,
+  "matched_fixed_radius_baseline": null,
+  "output_rows": [],
+  "probability_budget": {
+    "queried_operators": 0,
+    "queried_union_bound": 0.0,
+    "maximum_family_union_bound": 1e-06,
+    "no_union_over_power_levels": true,
+    "allowed_operator_count": 21744,
+    "collision_free_stream_count": null,
+    "queried_operator_count": 0,
+    "all_queries_predeclared": true,
+    "probe_delta_if_queried": 4.59896983075791e-11
+  },
+  "timings_seconds": {
+    "centerline": null,
+    "output_phase_this_process": 0.0,
+    "green_phase_this_process": 0.0,
+    "total_this_process": null
+  },
+  "execution_failure": {
+    "reason": "RuntimeError: recentring sweep 2 truncated",
+    "failed_log": "results\\transformer_v3_certificate_seed_365_gate_0_anchor_1480.process.log",
+    "failed_log_sha256": "D9C9688EA5C787CA034EA9C64760C1948BC15A8E6C1FA0FB70E8844F65EA23F7",
+    "blind_forecast": "results\\transformer_modal_prospective_blind_seed_365_anchor_1480.json",
+    "blind_forecast_sha256": "B140D7B17CC8A55577D813A9B38EA30F27723A1DD86FA02A372E4F30BCA7C9D9",
+    "handling": "candidate retained; zero-query abstention; no retry"
+  },
+  "outcome_joined": false
+}

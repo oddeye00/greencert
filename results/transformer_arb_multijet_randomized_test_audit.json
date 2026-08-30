@@ -1,0 +1,12 @@
+{
+  "status": "SEALED RANDOMIZED ARB MULTIJET TEST PASSED",
+  "cases": 12,
+  "probe_directions_per_case": 3,
+  "maximum_objective_midpoint_error": 4.440892098500626e-16,
+  "maximum_jet_midpoint_error": 6.661338147750939e-16,
+  "maximum_ball_radius": 5.880057218286567e-55,
+  "finite": true,
+  "test_sha256": "E659D645F2ED06520B0B91F5F13EFBBF21E383A7914825B8B31C67D52C1AF9F6",
+  "frozen_multijet_sha256": "186C6C3A7CCA06AC322778C242FA882D662EE9349F536045D50470623F92754C",
+  "stderr": ""
+}

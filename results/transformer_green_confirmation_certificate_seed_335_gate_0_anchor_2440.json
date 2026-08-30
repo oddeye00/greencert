@@ -1,0 +1,57 @@
+{
+  "status": "FROZEN FRESH conservative construction abstention; outcomes unopened",
+  "candidate": {
+    "seed": 335,
+    "threshold": 0.7,
+    "anchor": 2440
+  },
+  "method_seal_sha256": "14EABFDE3823E2289F53E1B5D39D89F103A4FB8D4B80C98E60CF8E5F879C57EA",
+  "candidate_seal_sha256": "5C6136AE0942500CBBB5AF0B9DACAD1FE8ADF8839D8B8E042C8942A5A9FF47B8",
+  "candidate_manifest_sha256": "D61FDFA72DAC8D70C189526B00D1F6905A1BFBD1161C64ED68CE09D44A7A4699",
+  "execution_amendment_seal_sha256": "912D869B704A25F73417E8BB4F57CD1CA770BBB8A0B07AA51796CA4FCE9A1BE9",
+  "protocol": {
+    "sweeps": 4,
+    "horizon": 225,
+    "persistence": 25,
+    "radius_rule": "R = 2 ||K_H s||_sequence",
+    "probe_config": {
+      "probes": 16,
+      "power": 8,
+      "delta": 4.59896983075791e-11
+    },
+    "family_failure_probability": 1e-06,
+    "maximum_operator_accounting": {
+      "maximum_seeds": 24,
+      "gates_per_seed": 3,
+      "maximum_candidates_per_gate": 1,
+      "maximum_candidates": 72,
+      "probabilistic_screen_operators": 0,
+      "output_jacobian_states_per_candidate": 301,
+      "green_operators_per_candidate": 1,
+      "operators_per_candidate": 302,
+      "maximum_probabilistic_operators": 21744
+    },
+    "master_nonce": "c0b81a6cb799088f0679c5b5ad39cb25e5eac84a2bca01762bf4a8f07f529ab7"
+  },
+  "required_correct": 41,
+  "predicted_persistent_event": 201,
+  "construction_abstention_reason": "frozen recentering sweep 2 truncated",
+  "centerline_sha256": null,
+  "signed_radius": null,
+  "green_probe": null,
+  "minimum_closure_lhs_using_kappa_ge_1": null,
+  "early_abstention_before_green_probe": true,
+  "closure_lhs_2_kappa_M_Z": null,
+  "closure_slack": null,
+  "closure_passed": false,
+  "raw_margin_bracket": null,
+  "certified_bracket": null,
+  "certificate_issued": false,
+  "certificate_output_logic_slack": null,
+  "probability_budget": {
+    "queried_operators": 0,
+    "queried_union_bound": 0.0,
+    "maximum_family_union_bound": 1e-06
+  },
+  "outcome_joined": false
+}

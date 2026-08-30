@@ -1,0 +1,140 @@
+{
+  "summary": {
+    "status": "post-seal digits outward verification joined to sealed outcomes",
+    "green_issued": 7,
+    "outward_issued": 7,
+    "outward_covered": 7,
+    "outward_brackets_identical_to_green": 7,
+    "signed_only_outward_issued": 1,
+    "signed_only_outward_covered": 1,
+    "maximum_outward_bracket_width": 0
+  },
+  "rows": [
+    {
+      "seed": 503,
+      "gate_index": 0,
+      "threshold": 0.9,
+      "anchor": 35,
+      "green_float_bracket": [
+        49,
+        49
+      ],
+      "outward_bracket": [
+        49,
+        49
+      ],
+      "outward_issued": true,
+      "signed_only": false,
+      "actual_event": 49,
+      "outward_covered": true
+    },
+    {
+      "seed": 504,
+      "gate_index": 0,
+      "threshold": 0.9,
+      "anchor": 60,
+      "green_float_bracket": [
+        49,
+        49
+      ],
+      "outward_bracket": [
+        49,
+        49
+      ],
+      "outward_issued": true,
+      "signed_only": false,
+      "actual_event": 49,
+      "outward_covered": true
+    },
+    {
+      "seed": 506,
+      "gate_index": 0,
+      "threshold": 0.9,
+      "anchor": 20,
+      "green_float_bracket": [
+        70,
+        70
+      ],
+      "outward_bracket": [
+        70,
+        70
+      ],
+      "outward_issued": true,
+      "signed_only": false,
+      "actual_event": 70,
+      "outward_covered": true
+    },
+    {
+      "seed": 507,
+      "gate_index": 0,
+      "threshold": 0.9,
+      "anchor": 35,
+      "green_float_bracket": [
+        117,
+        117
+      ],
+      "outward_bracket": [
+        117,
+        117
+      ],
+      "outward_issued": true,
+      "signed_only": false,
+      "actual_event": 117,
+      "outward_covered": true
+    },
+    {
+      "seed": 509,
+      "gate_index": 0,
+      "threshold": 0.9,
+      "anchor": 35,
+      "green_float_bracket": [
+        147,
+        147
+      ],
+      "outward_bracket": [
+        147,
+        147
+      ],
+      "outward_issued": true,
+      "signed_only": true,
+      "actual_event": 147,
+      "outward_covered": true
+    },
+    {
+      "seed": 512,
+      "gate_index": 0,
+      "threshold": 0.9,
+      "anchor": 20,
+      "green_float_bracket": [
+        42,
+        42
+      ],
+      "outward_bracket": [
+        42,
+        42
+      ],
+      "outward_issued": true,
+      "signed_only": false,
+      "actual_event": 42,
+      "outward_covered": true
+    },
+    {
+      "seed": 512,
+      "gate_index": 1,
+      "threshold": 0.925,
+      "anchor": 35,
+      "green_float_bracket": [
+        73,
+        73
+      ],
+      "outward_bracket": [
+        73,
+        73
+      ],
+      "outward_issued": true,
+      "signed_only": false,
+      "actual_event": 73,
+      "outward_covered": true
+    }
+  ]
+}

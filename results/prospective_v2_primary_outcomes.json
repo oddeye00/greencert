@@ -1,0 +1,194 @@
+{
+  "protocol": "PROSPECTIVE_V2_PRIMARY_PROTOCOL.md",
+  "protocol_sha256": "ef79c9e06170ba6bdafb39ee106b215c503b40873e4cb121276d3f23313e3092",
+  "manifest_sha256": "e365e2c64a46b6ffa900fd46bbd036c97bc20320d3d74ef6b60616c4e29418c4",
+  "pipeline_version": "prospective-primary-v1-2026-08-21",
+  "seeds": [
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24
+  ],
+  "seed_rows": [
+    {
+      "seed": 17,
+      "training_summary": {
+        "fit_step": 6800,
+        "generalization_step": 123700,
+        "delay_steps": 116900,
+        "delay_ratio": 18.191176470588236,
+        "final_train_accuracy": 1.0,
+        "final_test_accuracy": 1.0,
+        "minimum_test_mse": 0.01093762990768095,
+        "parameter_count": 827,
+        "finite": true
+      },
+      "crossings": {
+        "0.60": 30631,
+        "0.70": 40905,
+        "0.80": 47039,
+        "0.90": 115321,
+        "0.95": 123690
+      },
+      "maximum_correct": 36
+    },
+    {
+      "seed": 18,
+      "training_summary": {
+        "fit_step": 7400,
+        "generalization_step": null,
+        "delay_steps": null,
+        "delay_ratio": null,
+        "final_train_accuracy": 1.0,
+        "final_test_accuracy": 0.8888888888888888,
+        "minimum_test_mse": 0.020901502443436547,
+        "parameter_count": 827,
+        "finite": true
+      },
+      "crossings": {
+        "0.60": 22382,
+        "0.70": 24200,
+        "0.80": 26500,
+        "0.90": 56235,
+        "0.95": null
+      },
+      "maximum_correct": 33
+    },
+    {
+      "seed": 19,
+      "training_summary": {
+        "fit_step": 8025,
+        "generalization_step": 17050,
+        "delay_steps": 9025,
+        "delay_ratio": 2.1246105919003115,
+        "final_train_accuracy": 1.0,
+        "final_test_accuracy": 1.0,
+        "minimum_test_mse": 0.0074796287707829135,
+        "parameter_count": 827,
+        "finite": true
+      },
+      "crossings": {
+        "0.60": 12346,
+        "0.70": 13002,
+        "0.80": 13225,
+        "0.90": 16557,
+        "0.95": 17018
+      },
+      "maximum_correct": 36
+    },
+    {
+      "seed": 20,
+      "training_summary": {
+        "fit_step": 5950,
+        "generalization_step": 59675,
+        "delay_steps": 53725,
+        "delay_ratio": 10.029411764705882,
+        "final_train_accuracy": 1.0,
+        "final_test_accuracy": 0.9722222222222222,
+        "minimum_test_mse": 0.007951352080727324,
+        "parameter_count": 827,
+        "finite": true
+      },
+      "crossings": {
+        "0.60": 42152,
+        "0.70": 47340,
+        "0.80": 55409,
+        "0.90": 56895,
+        "0.95": 59669
+      },
+      "maximum_correct": 36
+    },
+    {
+      "seed": 21,
+      "training_summary": {
+        "fit_step": 7275,
+        "generalization_step": 25175,
+        "delay_steps": 17900,
+        "delay_ratio": 3.4604810996563575,
+        "final_train_accuracy": 1.0,
+        "final_test_accuracy": 1.0,
+        "minimum_test_mse": 0.009280412468500875,
+        "parameter_count": 827,
+        "finite": true
+      },
+      "crossings": {
+        "0.60": 17066,
+        "0.70": 18215,
+        "0.80": 19272,
+        "0.90": 21487,
+        "0.95": 25158
+      },
+      "maximum_correct": 36
+    },
+    {
+      "seed": 22,
+      "training_summary": {
+        "fit_step": 7600,
+        "generalization_step": null,
+        "delay_steps": null,
+        "delay_ratio": null,
+        "final_train_accuracy": 1.0,
+        "final_test_accuracy": 0.8333333333333334,
+        "minimum_test_mse": 0.027589957953355924,
+        "parameter_count": 827,
+        "finite": true
+      },
+      "crossings": {
+        "0.60": 60751,
+        "0.70": 100264,
+        "0.80": 107213,
+        "0.90": null,
+        "0.95": null
+      },
+      "maximum_correct": 30
+    },
+    {
+      "seed": 23,
+      "training_summary": {
+        "fit_step": 8100,
+        "generalization_step": 29550,
+        "delay_steps": 21450,
+        "delay_ratio": 3.6481481481481484,
+        "final_train_accuracy": 1.0,
+        "final_test_accuracy": 0.9722222222222222,
+        "minimum_test_mse": 0.010473763066368815,
+        "parameter_count": 827,
+        "finite": true
+      },
+      "crossings": {
+        "0.60": 21536,
+        "0.70": 22939,
+        "0.80": 24682,
+        "0.90": 26104,
+        "0.95": 29540
+      },
+      "maximum_correct": 36
+    },
+    {
+      "seed": 24,
+      "training_summary": {
+        "fit_step": 6525,
+        "generalization_step": 52700,
+        "delay_steps": 46175,
+        "delay_ratio": 8.076628352490422,
+        "final_train_accuracy": 1.0,
+        "final_test_accuracy": 1.0,
+        "minimum_test_mse": 0.009823317519087016,
+        "parameter_count": 827,
+        "finite": true
+      },
+      "crossings": {
+        "0.60": 23699,
+        "0.70": 24288,
+        "0.80": 27294,
+        "0.90": 36863,
+        "0.95": 52698
+      },
+      "maximum_correct": 36
+    }
+  ]
+}

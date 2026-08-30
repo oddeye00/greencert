@@ -1,0 +1,18 @@
+{
+  "status": "INDEPENDENT PAIRED TWO-RESPONSE BENCHMARK AUDIT PASSED",
+  "candidate": {
+    "seed": 366,
+    "threshold": 0.7,
+    "anchor": 1040
+  },
+  "horizon": 52,
+  "repeats": 4,
+  "median_directional_seconds": 78.58018739998806,
+  "median_additional_gram_power_seconds": 233.44951584999217,
+  "median_paired_speedup": 2.9129207123058674,
+  "minimum_paired_speedup": 2.773219603089279,
+  "maximum_paired_speedup": 3.2810227163066106,
+  "outcome_files_read": 0,
+  "benchmark_sha256": "3BD59F935A58D4F02C82698C09FE76DA86394918B0C4E5B2C0EF3A52C7FC77D8",
+  "source_sha256": "2DAF416457E016F9D9A77F2E49B4B8B4FBAC8C69C98C9A3051D9105F11A3C287"
+}

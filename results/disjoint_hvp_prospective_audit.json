@@ -1,0 +1,2836 @@
+{
+  "status": "frozen prospective audit",
+  "protocol": {
+    "seeds": [
+      202,
+      203,
+      204,
+      205
+    ],
+    "horizon": 250,
+    "persistence": 25,
+    "active_rank": 64,
+    "margin_starts": 1,
+    "geometry_stride": 5,
+    "power": 12,
+    "probes": 4,
+    "recenter_sweeps": 2,
+    "per_certificate_failure_probability": 1e-09,
+    "maximum_trigger_lag": 5000,
+    "checkpoint_stride": 250,
+    "maximum_prospective_tests": 420,
+    "familywise_failure_probability_upper": 4.2e-07
+  },
+  "seeds": [
+    {
+      "seed": 202,
+      "config": {
+        "modulus": 13,
+        "width": 48,
+        "train_fraction": 0.6,
+        "learning_rate": 1.0,
+        "weight_decay": 0.0001,
+        "init_multiplier": 1.0,
+        "steps": 240000,
+        "log_every": 50,
+        "checkpoint_every": 250,
+        "seed": 202,
+        "train_accuracy_gate": 0.99,
+        "trigger_accuracy_gate": 0.95,
+        "certificate_accuracy_gate": 0.95
+      },
+      "thresholds": {
+        "0.60": {
+          "threshold": 0.6,
+          "required_correct": 21,
+          "trigger_eligibility_checkpoint": 106750,
+          "screens": [
+            {
+              "anchor": 106750,
+              "current_certificate_count": 12,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 2.2573580625198376e-06,
+                  "maximum_correction_norm": 2.0698816638914238e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 3.777248641735626e-12,
+                  "maximum_correction_norm": 1.381348364613544e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 107000,
+              "current_certificate_count": 12,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 2.268088160486733e-06,
+                  "maximum_correction_norm": 2.0598255846662115e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 3.753661567233537e-12,
+                  "maximum_correction_norm": 1.376761334562951e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 107250,
+              "current_certificate_count": 12,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 2.27916023669189e-06,
+                  "maximum_correction_norm": 2.050331249540212e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 3.732556987739161e-12,
+                  "maximum_correction_norm": 1.3729171609471056e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 107500,
+              "current_certificate_count": 12,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 2.2905706752962224e-06,
+                  "maximum_correction_norm": 2.0414009772178758e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 3.7136104408040815e-12,
+                  "maximum_correction_norm": 1.369864188688474e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 107750,
+              "current_certificate_count": 12,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 2.3023195697502502e-06,
+                  "maximum_correction_norm": 2.0330370603595803e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 3.697046243213953e-12,
+                  "maximum_correction_norm": 1.367597815829116e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 108000,
+              "current_certificate_count": 12,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 2.3144102937731736e-06,
+                  "maximum_correction_norm": 2.025241792388168e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 3.682810655600672e-12,
+                  "maximum_correction_norm": 1.366130956657063e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 108250,
+              "current_certificate_count": 13,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 2.3268490573649372e-06,
+                  "maximum_correction_norm": 2.0180174898284474e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 3.671013445783115e-12,
+                  "maximum_correction_norm": 1.3654786721320541e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 108500,
+              "current_certificate_count": 13,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 2.3396444509257563e-06,
+                  "maximum_correction_norm": 2.01136650873868e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 3.6616442660219935e-12,
+                  "maximum_correction_norm": 1.3656623417866696e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 108750,
+              "current_certificate_count": 13,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 2.352806981918475e-06,
+                  "maximum_correction_norm": 2.00529125526896e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 3.654857692928706e-12,
+                  "maximum_correction_norm": 1.366716470520464e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 109000,
+              "current_certificate_count": 14,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 2.366348608167393e-06,
+                  "maximum_correction_norm": 1.999794189608401e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 3.650597734802811e-12,
+                  "maximum_correction_norm": 1.3686524121577332e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 109250,
+              "current_certificate_count": 14,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 2.3802822694959927e-06,
+                  "maximum_correction_norm": 1.9948778226866307e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 3.649004939227545e-12,
+                  "maximum_correction_norm": 1.371500170092163e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 109500,
+              "current_certificate_count": 14,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 2.3946214228276845e-06,
+                  "maximum_correction_norm": 1.990544705047244e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 3.650160078297126e-12,
+                  "maximum_correction_norm": 1.375304535988456e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 109750,
+              "current_certificate_count": 14,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 2.4093795824855862e-06,
+                  "maximum_correction_norm": 1.9867974072302616e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 3.653954002089048e-12,
+                  "maximum_correction_norm": 1.380084171245309e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 110000,
+              "current_certificate_count": 14,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 2.424569869176315e-06,
+                  "maximum_correction_norm": 1.9836384911313168e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 3.660842504504718e-12,
+                  "maximum_correction_norm": 1.3858710288437343e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 110250,
+              "current_certificate_count": 15,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 2.440204570811774e-06,
+                  "maximum_correction_norm": 1.9810704714744423e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 3.670524973829791e-12,
+                  "maximum_correction_norm": 1.39269911769758e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 110500,
+              "current_certificate_count": 15,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 2.456294717487421e-06,
+                  "maximum_correction_norm": 1.9790957669970393e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 3.683286018645107e-12,
+                  "maximum_correction_norm": 1.4005938078700485e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 110750,
+              "current_certificate_count": 15,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 2.4728496736646794e-06,
+                  "maximum_correction_norm": 1.9777166405923262e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 3.699181355446826e-12,
+                  "maximum_correction_norm": 1.409602756655227e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 111000,
+              "current_certificate_count": 15,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 2.48987674963015e-06,
+                  "maximum_correction_norm": 1.9769351276111674e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 3.7182449177869165e-12,
+                  "maximum_correction_norm": 1.4197498738579284e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 111250,
+              "current_certificate_count": 15,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 2.507380835783388e-06,
+                  "maximum_correction_norm": 1.9767529521891235e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 3.740523462008226e-12,
+                  "maximum_correction_norm": 1.4310701114485121e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 111500,
+              "current_certificate_count": 15,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 2.525364060541363e-06,
+                  "maximum_correction_norm": 1.9771714305966323e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 3.766207259392784e-12,
+                  "maximum_correction_norm": 1.4435776510250976e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 111750,
+              "current_certificate_count": 15,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 2.543825475259338e-06,
+                  "maximum_correction_norm": 1.9781913616608456e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 3.795246075737156e-12,
+                  "maximum_correction_norm": 1.4572990727888534e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            }
+          ],
+          "status": "screened without a future centerline event",
+          "issued_anchor": null,
+          "certified_bracket": null,
+          "actual_crossing": null,
+          "covered": null
+        },
+        "0.70": {
+          "threshold": 0.7,
+          "required_correct": 24,
+          "trigger_eligibility_checkpoint": 123500,
+          "screens": [
+            {
+              "anchor": 123500,
+              "current_certificate_count": 23,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 3.18244918614393e-06,
+                  "maximum_correction_norm": 2.2968444950886937e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 6.6972635059077616e-12,
+                  "maximum_correction_norm": 2.638026686017973e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 123750,
+              "current_certificate_count": 23,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 3.1720718815061204e-06,
+                  "maximum_correction_norm": 2.2941620809617864e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 6.6758736021414704e-12,
+                  "maximum_correction_norm": 2.6259511767910773e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 124000,
+              "current_certificate_count": 23,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 3.1605692599439346e-06,
+                  "maximum_correction_norm": 2.2908464286671224e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 6.648006643004902e-12,
+                  "maximum_correction_norm": 2.611188251833917e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 124250,
+              "current_certificate_count": 23,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 3.1479952188994867e-06,
+                  "maximum_correction_norm": 2.2869497134449723e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 6.614336103539442e-12,
+                  "maximum_correction_norm": 2.5938861773538253e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 124500,
+              "current_certificate_count": 23,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 3.1344061102946154e-06,
+                  "maximum_correction_norm": 2.2825275118203812e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 6.575037476683112e-12,
+                  "maximum_correction_norm": 2.5742148013486627e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 124750,
+              "current_certificate_count": 23,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 3.119860435137067e-06,
+                  "maximum_correction_norm": 2.2776378654958097e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 6.5306111938945884e-12,
+                  "maximum_correction_norm": 2.5523747111428403e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 125000,
+              "current_certificate_count": 23,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 3.1044186125189034e-06,
+                  "maximum_correction_norm": 2.2723403452585267e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 6.481705940371717e-12,
+                  "maximum_correction_norm": 2.528516414119702e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 125250,
+              "current_certificate_count": 23,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 3.088142822118166e-06,
+                  "maximum_correction_norm": 2.2666951366667506e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 6.428380202253373e-12,
+                  "maximum_correction_norm": 2.5028411996865067e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 125500,
+              "current_certificate_count": 23,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 3.071096913833296e-06,
+                  "maximum_correction_norm": 2.260762167032657e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 6.371469865854887e-12,
+                  "maximum_correction_norm": 2.4755390813797134e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 125750,
+              "current_certificate_count": 23,
+              "predicted_persistent_crossing": 31,
+              "candidate": true,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 3.0533463750869723e-06,
+                  "maximum_correction_norm": 2.254600291099054e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 6.311100335321958e-12,
+                  "maximum_correction_norm": 2.4467732239909135e-10,
+                  "hvp_calls": 250
+                }
+              ],
+              "reached_horizon": 250,
+              "certified_bracket": [
+                31,
+                31
+              ]
+            }
+          ],
+          "status": "certificate issued",
+          "issued_anchor": 125750,
+          "certified_bracket": [
+            31,
+            31
+          ],
+          "actual_crossing": 31,
+          "covered": true,
+          "certificate_result": "seed_202_anchor_125750_h250_r64_m1_g5_q12_p4_s2_k25.json"
+        },
+        "0.80": {
+          "threshold": 0.8,
+          "required_correct": 28,
+          "trigger_eligibility_checkpoint": 127500,
+          "screens": [
+            {
+              "anchor": 127500,
+              "current_certificate_count": 25,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 2.9152191713956663e-06,
+                  "maximum_correction_norm": 2.2094738889831046e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 5.8269541313699154e-12,
+                  "maximum_correction_norm": 2.2185032431800803e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 127750,
+              "current_certificate_count": 25,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 2.89439308475801e-06,
+                  "maximum_correction_norm": 2.2032668493553937e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 5.752711251878878e-12,
+                  "maximum_correction_norm": 2.183811903009006e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 128000,
+              "current_certificate_count": 25,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 2.873527430701305e-06,
+                  "maximum_correction_norm": 2.1972194581659635e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 5.67795014282655e-12,
+                  "maximum_correction_norm": 2.1489994167379603e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 128250,
+              "current_certificate_count": 26,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 2.852702844570936e-06,
+                  "maximum_correction_norm": 2.191353920529277e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 5.602777286854507e-12,
+                  "maximum_correction_norm": 2.11417547733758e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 128500,
+              "current_certificate_count": 26,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 2.8320000699022005e-06,
+                  "maximum_correction_norm": 2.1856881199317988e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 5.527429944031676e-12,
+                  "maximum_correction_norm": 2.0794697291370924e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 128750,
+              "current_certificate_count": 26,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 2.8114992586543873e-06,
+                  "maximum_correction_norm": 2.1802357845012983e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 5.452097363386824e-12,
+                  "maximum_correction_norm": 2.0449924343719535e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 129000,
+              "current_certificate_count": 27,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 2.7912791305804778e-06,
+                  "maximum_correction_norm": 2.1750066969866468e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 5.376922994514952e-12,
+                  "maximum_correction_norm": 2.0108388270977887e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 129250,
+              "current_certificate_count": 27,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 2.771415992161778e-06,
+                  "maximum_correction_norm": 2.1700069383551715e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 5.301987624259288e-12,
+                  "maximum_correction_norm": 1.9771287372302752e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 129500,
+              "current_certificate_count": 27,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 2.7519826259848368e-06,
+                  "maximum_correction_norm": 2.1652391553270058e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 5.22739020683791e-12,
+                  "maximum_correction_norm": 1.9439657582627466e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 129750,
+              "current_certificate_count": 27,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 2.733047061838969e-06,
+                  "maximum_correction_norm": 2.160702841681972e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 5.153537212444791e-12,
+                  "maximum_correction_norm": 1.9114551921899e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 130000,
+              "current_certificate_count": 27,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 2.71467125342117e-06,
+                  "maximum_correction_norm": 2.156394623981755e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 5.080286893962595e-12,
+                  "maximum_correction_norm": 1.8797070452293804e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 130250,
+              "current_certificate_count": 27,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 2.6969096890838426e-06,
+                  "maximum_correction_norm": 2.1523085424145405e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 5.007997997665146e-12,
+                  "maximum_correction_norm": 1.8488104865118441e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 130500,
+              "current_certificate_count": 27,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 2.679807973075283e-06,
+                  "maximum_correction_norm": 2.1484363180250864e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 4.936736833324011e-12,
+                  "maximum_correction_norm": 1.8188609392325293e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 130750,
+              "current_certificate_count": 27,
+              "predicted_persistent_crossing": 4,
+              "candidate": true,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 2.6634014233078986e-06,
+                  "maximum_correction_norm": 2.144767598619496e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 4.8668812906406665e-12,
+                  "maximum_correction_norm": 1.7899683583136244e-10,
+                  "hvp_calls": 250
+                }
+              ],
+              "reached_horizon": 250,
+              "certified_bracket": [
+                4,
+                4
+              ]
+            }
+          ],
+          "status": "certificate issued",
+          "issued_anchor": 130750,
+          "certified_bracket": [
+            4,
+            4
+          ],
+          "actual_crossing": 4,
+          "covered": true,
+          "certificate_result": "seed_202_anchor_130750_h250_r64_m1_g5_q12_p4_s2_k25.json"
+        },
+        "0.90": {
+          "threshold": 0.9,
+          "required_correct": 31,
+          "trigger_eligibility_checkpoint": 135750,
+          "screens": [
+            {
+              "anchor": 135750,
+              "current_certificate_count": 30,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 2.4212772070695092e-06,
+                  "maximum_correction_norm": 2.0847693417581034e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 4.016534105585393e-12,
+                  "maximum_correction_norm": 1.4804686577743176e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 136000,
+              "current_certificate_count": 30,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 2.406400530977952e-06,
+                  "maximum_correction_norm": 2.0804258037876784e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 4.000566699722224e-12,
+                  "maximum_correction_norm": 1.47322482311998e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 136250,
+              "current_certificate_count": 30,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 2.3905861279536297e-06,
+                  "maximum_correction_norm": 2.0757427467600398e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 3.985187263468557e-12,
+                  "maximum_correction_norm": 1.4656566695995635e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 136500,
+              "current_certificate_count": 30,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 2.373802973303507e-06,
+                  "maximum_correction_norm": 2.07069924650448e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 3.9698434866381545e-12,
+                  "maximum_correction_norm": 1.4575932439354758e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 136750,
+              "current_certificate_count": 30,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 2.3560371751879704e-06,
+                  "maximum_correction_norm": 2.0652785150163528e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 3.954537784681912e-12,
+                  "maximum_correction_norm": 1.4489133086249808e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 137000,
+              "current_certificate_count": 30,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 2.3372916521396624e-06,
+                  "maximum_correction_norm": 2.0594683910721624e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 3.938550547923441e-12,
+                  "maximum_correction_norm": 1.4395053695040103e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 137250,
+              "current_certificate_count": 30,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 2.3175853945435692e-06,
+                  "maximum_correction_norm": 2.053261712787191e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 3.921942575546142e-12,
+                  "maximum_correction_norm": 1.4292688573871987e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 137500,
+              "current_certificate_count": 30,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 2.296952360960304e-06,
+                  "maximum_correction_norm": 2.0466565558289298e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 3.904360801348505e-12,
+                  "maximum_correction_norm": 1.418173657103835e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 137750,
+              "current_certificate_count": 30,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 2.275440077788154e-06,
+                  "maximum_correction_norm": 2.0396563264717955e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 3.885621915842164e-12,
+                  "maximum_correction_norm": 1.4061678924652487e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 138000,
+              "current_certificate_count": 30,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 2.253108008722918e-06,
+                  "maximum_correction_norm": 2.032269707801518e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 3.865801430197275e-12,
+                  "maximum_correction_norm": 1.3932711237766664e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 138250,
+              "current_certificate_count": 30,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 2.230025769552433e-06,
+                  "maximum_correction_norm": 2.024510465181439e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 3.844721066465348e-12,
+                  "maximum_correction_norm": 1.3794970665286863e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 138500,
+              "current_certificate_count": 30,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 2.2062712565771092e-06,
+                  "maximum_correction_norm": 2.016397122676809e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 3.8223785617327e-12,
+                  "maximum_correction_norm": 1.3648622041664092e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 138750,
+              "current_certificate_count": 30,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 2.1819287561128476e-06,
+                  "maximum_correction_norm": 2.007952529184121e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 3.798948940919995e-12,
+                  "maximum_correction_norm": 1.349462834930044e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 139000,
+              "current_certificate_count": 30,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 2.1570870927356492e-06,
+                  "maximum_correction_norm": 1.99920333519224e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 3.7744031175013985e-12,
+                  "maximum_correction_norm": 1.3333610823163617e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 139250,
+              "current_certificate_count": 30,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 2.1318378664960585e-06,
+                  "maximum_correction_norm": 1.9901794042942002e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 3.748907567433468e-12,
+                  "maximum_correction_norm": 1.316644248208935e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 139500,
+              "current_certificate_count": 30,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 2.106273819285091e-06,
+                  "maximum_correction_norm": 1.980913183562074e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 3.722560808811415e-12,
+                  "maximum_correction_norm": 1.2994342737539282e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 139750,
+              "current_certificate_count": 30,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 2.080487360184441e-06,
+                  "maximum_correction_norm": 1.9714390565871516e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 3.695530671815139e-12,
+                  "maximum_correction_norm": 1.2818089953573583e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 140000,
+              "current_certificate_count": 30,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 2.0545692700368624e-06,
+                  "maximum_correction_norm": 1.9617927003596642e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 3.668099827363915e-12,
+                  "maximum_correction_norm": 1.263891977978803e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 140250,
+              "current_certificate_count": 30,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 2.0286075969485663e-06,
+                  "maximum_correction_norm": 1.9520104647462844e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 3.6402024253802094e-12,
+                  "maximum_correction_norm": 1.2457994417382347e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 140500,
+              "current_certificate_count": 30,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 2.0026867447165773e-06,
+                  "maximum_correction_norm": 1.9421287900195325e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 3.6122452204094418e-12,
+                  "maximum_correction_norm": 1.22762957974222e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 140750,
+              "current_certificate_count": 30,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 1.9768867513728753e-06,
+                  "maximum_correction_norm": 1.9321836743548696e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 3.5840874510133727e-12,
+                  "maximum_correction_norm": 1.2095015541667796e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            }
+          ],
+          "status": "screened without a future centerline event",
+          "issued_anchor": null,
+          "certified_bracket": null,
+          "actual_crossing": null,
+          "covered": null
+        },
+        "0.95": {
+          "threshold": 0.95,
+          "required_correct": 33,
+          "trigger_eligibility_checkpoint": 164750,
+          "screens": [
+            {
+              "anchor": 164750,
+              "current_certificate_count": 33,
+              "predicted_persistent_crossing": null,
+              "candidate": false
+            }
+          ],
+          "status": "certificate threshold already present at eligible checkpoint",
+          "issued_anchor": null,
+          "certified_bracket": null,
+          "actual_crossing": null,
+          "covered": null
+        }
+      },
+      "candidate_certificates": 2,
+      "issued_certificates": 2,
+      "covered_certificates": 2
+    },
+    {
+      "seed": 203,
+      "config": {
+        "modulus": 13,
+        "width": 48,
+        "train_fraction": 0.6,
+        "learning_rate": 1.0,
+        "weight_decay": 0.0001,
+        "init_multiplier": 1.0,
+        "steps": 240000,
+        "log_every": 50,
+        "checkpoint_every": 250,
+        "seed": 203,
+        "train_accuracy_gate": 0.99,
+        "trigger_accuracy_gate": 0.95,
+        "certificate_accuracy_gate": 0.95
+      },
+      "thresholds": {
+        "0.60": {
+          "threshold": 0.6,
+          "required_correct": 21,
+          "trigger_eligibility_checkpoint": 78250,
+          "screens": [
+            {
+              "anchor": 78250,
+              "current_certificate_count": 15,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 4.7788209498734455e-06,
+                  "maximum_correction_norm": 2.8195238222120795e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 1.0600600852120202e-11,
+                  "maximum_correction_norm": 4.183428594829822e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 78500,
+              "current_certificate_count": 15,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 4.767358447974441e-06,
+                  "maximum_correction_norm": 2.7944904084348793e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 1.0462958240350914e-11,
+                  "maximum_correction_norm": 4.131128793406318e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 78750,
+              "current_certificate_count": 15,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 4.754715693925511e-06,
+                  "maximum_correction_norm": 2.7695586286347648e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 1.0326205346917187e-11,
+                  "maximum_correction_norm": 4.0789900060751866e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 79000,
+              "current_certificate_count": 15,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 4.740964049077662e-06,
+                  "maximum_correction_norm": 2.744746070659786e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 1.019075142948336e-11,
+                  "maximum_correction_norm": 4.027143645776071e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 79250,
+              "current_certificate_count": 15,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 4.726178679836646e-06,
+                  "maximum_correction_norm": 2.7200705987594242e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 1.0057042392626655e-11,
+                  "maximum_correction_norm": 3.975705514279465e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 79500,
+              "current_certificate_count": 15,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 4.710438132994955e-06,
+                  "maximum_correction_norm": 2.6955501838113537e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 9.925317636904878e-12,
+                  "maximum_correction_norm": 3.924804367654201e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 79750,
+              "current_certificate_count": 15,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 4.693823865801369e-06,
+                  "maximum_correction_norm": 2.671202741524659e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 9.796015770542465e-12,
+                  "maximum_correction_norm": 3.874568120807965e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 80000,
+              "current_certificate_count": 15,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 4.67641973628635e-06,
+                  "maximum_correction_norm": 2.6470459808482182e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 9.669425554678159e-12,
+                  "maximum_correction_norm": 3.825091244055405e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 80250,
+              "current_certificate_count": 15,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 4.658311458899042e-06,
+                  "maximum_correction_norm": 2.6230972626975258e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 9.545760800291356e-12,
+                  "maximum_correction_norm": 3.776501607236299e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 80500,
+              "current_certificate_count": 15,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 4.6395860317911324e-06,
+                  "maximum_correction_norm": 2.5993734701676653e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 9.42540993214683e-12,
+                  "maximum_correction_norm": 3.728892432708315e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 80750,
+              "current_certificate_count": 15,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 4.620331143386779e-06,
+                  "maximum_correction_norm": 2.5758908909051284e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 9.308514310602366e-12,
+                  "maximum_correction_norm": 3.6823631573488725e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 81000,
+              "current_certificate_count": 15,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 4.600634563012196e-06,
+                  "maximum_correction_norm": 2.5526651118690163e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 9.19539932849392e-12,
+                  "maximum_correction_norm": 3.637011266902715e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 81250,
+              "current_certificate_count": 15,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 4.5805835262830305e-06,
+                  "maximum_correction_norm": 2.529710926944069e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 9.086176075392941e-12,
+                  "maximum_correction_norm": 3.59290189164045e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 81500,
+              "current_certificate_count": 15,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 4.560264119756977e-06,
+                  "maximum_correction_norm": 2.5070422572478232e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 8.981107254531653e-12,
+                  "maximum_correction_norm": 3.550114944616626e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 81750,
+              "current_certificate_count": 16,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 4.539760674231588e-06,
+                  "maximum_correction_norm": 2.484672084265864e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 8.880229567464446e-12,
+                  "maximum_correction_norm": 3.508719497828984e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 82000,
+              "current_certificate_count": 16,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 4.519155173612281e-06,
+                  "maximum_correction_norm": 2.462612395948937e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 8.783700023941419e-12,
+                  "maximum_correction_norm": 3.4687702587724135e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 82250,
+              "current_certificate_count": 16,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 4.498526686301903e-06,
+                  "maximum_correction_norm": 2.4408741448452383e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 8.691550259824651e-12,
+                  "maximum_correction_norm": 3.4303046819382386e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 82500,
+              "current_certificate_count": 17,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 4.477950826615753e-06,
+                  "maximum_correction_norm": 2.41946721869123e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 8.603965509181653e-12,
+                  "maximum_correction_norm": 3.393367914107295e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 82750,
+              "current_certificate_count": 17,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 4.457499251727327e-06,
+                  "maximum_correction_norm": 2.3984004225764598e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 8.520701808998455e-12,
+                  "maximum_correction_norm": 3.357982929758445e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 83000,
+              "current_certificate_count": 17,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 4.4372392012730265e-06,
+                  "maximum_correction_norm": 2.377681472179578e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 8.44198305502291e-12,
+                  "maximum_correction_norm": 3.324144190896122e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 83250,
+              "current_certificate_count": 17,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 4.41723308357207e-06,
+                  "maximum_correction_norm": 2.3573169978104186e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 8.367646386830746e-12,
+                  "maximum_correction_norm": 3.291874431856618e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            }
+          ],
+          "status": "screened without a future centerline event",
+          "issued_anchor": null,
+          "certified_bracket": null,
+          "actual_crossing": null,
+          "covered": null
+        },
+        "0.70": {
+          "threshold": 0.7,
+          "required_correct": 24,
+          "trigger_eligibility_checkpoint": 103000,
+          "screens": [
+            {
+              "anchor": 103000,
+              "current_certificate_count": 22,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 3.4048568452667724e-06,
+                  "maximum_correction_norm": 1.753437678645548e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 4.9939077125778095e-12,
+                  "maximum_correction_norm": 2.0118499426838231e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 103250,
+              "current_certificate_count": 22,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 3.4002126364901803e-06,
+                  "maximum_correction_norm": 1.7558282155529694e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 4.9756287064492755e-12,
+                  "maximum_correction_norm": 2.007261740812563e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 103500,
+              "current_certificate_count": 22,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 3.3966799509986124e-06,
+                  "maximum_correction_norm": 1.7583296793653138e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 4.9617284741631655e-12,
+                  "maximum_correction_norm": 2.004361184124353e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 103750,
+              "current_certificate_count": 22,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 3.3942905088807492e-06,
+                  "maximum_correction_norm": 1.7609318945581094e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 4.9525038258846955e-12,
+                  "maximum_correction_norm": 2.003243500002428e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 104000,
+              "current_certificate_count": 21,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 3.3930701871335874e-06,
+                  "maximum_correction_norm": 1.7636244606744604e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 4.948229654432016e-12,
+                  "maximum_correction_norm": 2.0039628885554753e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 104250,
+              "current_certificate_count": 21,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 3.3930385986133272e-06,
+                  "maximum_correction_norm": 1.7663967600460974e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 4.948824179278246e-12,
+                  "maximum_correction_norm": 2.0065655258758502e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 104500,
+              "current_certificate_count": 21,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 3.3942087337456163e-06,
+                  "maximum_correction_norm": 1.7692379682151526e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 4.954552474640612e-12,
+                  "maximum_correction_norm": 2.0110943768901265e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 104750,
+              "current_certificate_count": 21,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 3.3965866746505323e-06,
+                  "maximum_correction_norm": 1.7721370681633048e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 4.9655021713305685e-12,
+                  "maximum_correction_norm": 2.0175853761278288e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 105000,
+              "current_certificate_count": 21,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 3.4001713876087517e-06,
+                  "maximum_correction_norm": 1.7750828685858037e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 4.98158899925708e-12,
+                  "maximum_correction_norm": 2.0260224685534021e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 105250,
+              "current_certificate_count": 21,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 3.40495460008229e-06,
+                  "maximum_correction_norm": 1.7780640264673882e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 5.002895239792175e-12,
+                  "maximum_correction_norm": 2.036427092302181e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 105500,
+              "current_certificate_count": 21,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 3.410920765266472e-06,
+                  "maximum_correction_norm": 1.7810690744293883e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 5.0291867111843244e-12,
+                  "maximum_correction_norm": 2.0487563099390284e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 105750,
+              "current_certificate_count": 21,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 3.4180471160935594e-06,
+                  "maximum_correction_norm": 1.7840864528384362e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 5.0605750393591355e-12,
+                  "maximum_correction_norm": 2.0629884229789335e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 106000,
+              "current_certificate_count": 20,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 3.426303805682324e-06,
+                  "maximum_correction_norm": 1.7871045468325996e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 5.096877178863214e-12,
+                  "maximum_correction_norm": 2.079068490942512e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 106250,
+              "current_certificate_count": 20,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 3.435654132890981e-06,
+                  "maximum_correction_norm": 1.7901117282897333e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 5.137739773146924e-12,
+                  "maximum_correction_norm": 2.0969170292605309e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 106500,
+              "current_certificate_count": 20,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 3.446054846125252e-06,
+                  "maximum_correction_norm": 1.7930964021155634e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 5.183157237866461e-12,
+                  "maximum_correction_norm": 2.116457461082619e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 106750,
+              "current_certificate_count": 20,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 3.4574565177253415e-06,
+                  "maximum_correction_norm": 1.7960470568138733e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 5.232671360383115e-12,
+                  "maximum_correction_norm": 2.137610397649214e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 107000,
+              "current_certificate_count": 20,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 3.469803980994135e-06,
+                  "maximum_correction_norm": 1.7989523189631152e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 5.2861297367523564e-12,
+                  "maximum_correction_norm": 2.1602467124798036e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 107250,
+              "current_certificate_count": 20,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 3.4830368168783178e-06,
+                  "maximum_correction_norm": 1.8018010104922605e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 5.343341837960838e-12,
+                  "maximum_correction_norm": 2.184262771258271e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 107500,
+              "current_certificate_count": 21,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 3.497089881748035e-06,
+                  "maximum_correction_norm": 1.804582208189287e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 5.403826128993069e-12,
+                  "maximum_correction_norm": 2.2095356675138125e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 107750,
+              "current_certificate_count": 21,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 3.511893860890741e-06,
+                  "maximum_correction_norm": 1.807285304816886e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 5.467202506137042e-12,
+                  "maximum_correction_norm": 2.2359210388907593e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            },
+            {
+              "anchor": 108000,
+              "current_certificate_count": 22,
+              "predicted_persistent_crossing": null,
+              "candidate": false,
+              "recenter_diagnostics": [
+                {
+                  "sweep": 1,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 3.527375837413471e-06,
+                  "maximum_correction_norm": 1.8099000703982043e-05,
+                  "hvp_calls": 250
+                },
+                {
+                  "sweep": 2,
+                  "reached_horizon": 250,
+                  "maximum_uncorrected_defect_norm": 5.5332611592573826e-12,
+                  "maximum_correction_norm": 2.263304159421988e-10,
+                  "hvp_calls": 250
+                }
+              ]
+            }
+          ],
+          "status": "screened without a future centerline event",
+          "issued_anchor": null,
+          "certified_bracket": null,
+          "actual_crossing": null,
+          "covered": null
+        },
+        "0.80": {
+          "threshold": 0.8,
+          "required_correct": 28,
+          "trigger_eligibility_checkpoint": 126750,
+          "screens": [
+            {
+              "anchor": 126750,
+              "current_certificate_count": 28,
+              "predicted_persistent_crossing": null,
+              "candidate": false
+            }
+          ],
+          "status": "certificate threshold already present at eligible checkpoint",
+          "issued_anchor": null,
+          "certified_bracket": null,
+          "actual_crossing": null,
+          "covered": null
+        },
+        "0.90": {
+          "threshold": 0.9,
+          "required_correct": 31,
+          "trigger_eligibility_checkpoint": 145500,
+          "screens": [
+            {
+              "anchor": 145500,
+              "current_certificate_count": 31,
+              "predicted_persistent_crossing": null,
+              "candidate": false
+            }
+          ],
+          "status": "certificate threshold already present at eligible checkpoint",
+          "issued_anchor": null,
+          "certified_bracket": null,
+          "actual_crossing": null,
+          "covered": null
+        },
+        "0.95": {
+          "threshold": 0.95,
+          "required_correct": 33,
+          "trigger_eligibility_checkpoint": null,
+          "screens": [],
+          "status": "trigger never became eligible",
+          "issued_anchor": null,
+          "certified_bracket": null,
+          "actual_crossing": null,
+          "covered": null
+        }
+      },
+      "candidate_certificates": 0,
+      "issued_certificates": 0,
+      "covered_certificates": 0
+    },
+    {
+      "seed": 204,
+      "config": {
+        "modulus": 13,
+        "width": 48,
+        "train_fraction": 0.6,
+        "learning_rate": 1.0,
+        "weight_decay": 0.0001,
+        "init_multiplier": 1.0,
+        "steps": 240000,
+        "log_every": 50,
+        "checkpoint_every": 250,
+        "seed": 204,
+        "train_accuracy_gate": 0.99,
+        "trigger_accuracy_gate": 0.95,
+        "certificate_accuracy_gate": 0.95
+      },
+      "thresholds": {
+        "0.60": {
+          "threshold": 0.6,
+          "required_correct": 21,
+          "trigger_eligibility_checkpoint": 67500,
+          "screens": [
+            {
+              "anchor": 67500,
+              "current_certificate_count": 21,
+              "predicted_persistent_crossing": null,
+              "candidate": false
+            }
+          ],
+          "status": "certificate threshold already present at eligible checkpoint",
+          "issued_anchor": null,
+          "certified_bracket": null,
+          "actual_crossing": null,
+          "covered": null
+        },
+        "0.70": {
+          "threshold": 0.7,
+          "required_correct": 24,
+          "trigger_eligibility_checkpoint": 71750,
+          "screens": [
+            {
+              "anchor": 71750,
+              "current_certificate_count": 27,
+              "predicted_persistent_crossing": null,
+              "candidate": false
+            }
+          ],
+          "status": "certificate threshold already present at eligible checkpoint",
+          "issued_anchor": null,
+          "certified_bracket": null,
+          "actual_crossing": null,
+          "covered": null
+        },
+        "0.80": {
+          "threshold": 0.8,
+          "required_correct": 28,
+          "trigger_eligibility_checkpoint": 79250,
+          "screens": [
+            {
+              "anchor": 79250,
+              "current_certificate_count": 28,
+              "predicted_persistent_crossing": null,
+              "candidate": false
+            }
+          ],
+          "status": "certificate threshold already present at eligible checkpoint",
+          "issued_anchor": null,
+          "certified_bracket": null,
+          "actual_crossing": null,
+          "covered": null
+        },
+        "0.90": {
+          "threshold": 0.9,
+          "required_correct": 31,
+          "trigger_eligibility_checkpoint": 118500,
+          "screens": [
+            {
+              "anchor": 118500,
+              "current_certificate_count": 34,
+              "predicted_persistent_crossing": null,
+              "candidate": false
+            }
+          ],
+          "status": "certificate threshold already present at eligible checkpoint",
+          "issued_anchor": null,
+          "certified_bracket": null,
+          "actual_crossing": null,
+          "covered": null
+        },
+        "0.95": {
+          "threshold": 0.95,
+          "required_correct": 33,
+          "trigger_eligibility_checkpoint": 166250,
+          "screens": [
+            {
+              "anchor": 166250,
+              "current_certificate_count": 34,
+              "predicted_persistent_crossing": null,
+              "candidate": false
+            }
+          ],
+          "status": "certificate threshold already present at eligible checkpoint",
+          "issued_anchor": null,
+          "certified_bracket": null,
+          "actual_crossing": null,
+          "covered": null
+        }
+      },
+      "candidate_certificates": 0,
+      "issued_certificates": 0,
+      "covered_certificates": 0
+    },
+    {
+      "seed": 205,
+      "config": {
+        "modulus": 13,
+        "width": 48,
+        "train_fraction": 0.6,
+        "learning_rate": 1.0,
+        "weight_decay": 0.0001,
+        "init_multiplier": 1.0,
+        "steps": 240000,
+        "log_every": 50,
+        "checkpoint_every": 250,
+        "seed": 205,
+        "train_accuracy_gate": 0.99,
+        "trigger_accuracy_gate": 0.95,
+        "certificate_accuracy_gate": 0.95
+      },
+      "thresholds": {
+        "0.60": {
+          "threshold": 0.6,
+          "required_correct": 21,
+          "trigger_eligibility_checkpoint": 101750,
+          "screens": [
+            {
+              "anchor": 101750,
+              "current_certificate_count": 21,
+              "predicted_persistent_crossing": null,
+              "candidate": false
+            }
+          ],
+          "status": "certificate threshold already present at eligible checkpoint",
+          "issued_anchor": null,
+          "certified_bracket": null,
+          "actual_crossing": null,
+          "covered": null
+        },
+        "0.70": {
+          "threshold": 0.7,
+          "required_correct": 24,
+          "trigger_eligibility_checkpoint": 118500,
+          "screens": [
+            {
+              "anchor": 118500,
+              "current_certificate_count": 26,
+              "predicted_persistent_crossing": null,
+              "candidate": false
+            }
+          ],
+          "status": "certificate threshold already present at eligible checkpoint",
+          "issued_anchor": null,
+          "certified_bracket": null,
+          "actual_crossing": null,
+          "covered": null
+        },
+        "0.80": {
+          "threshold": 0.8,
+          "required_correct": 28,
+          "trigger_eligibility_checkpoint": 140000,
+          "screens": [
+            {
+              "anchor": 140000,
+              "current_certificate_count": 31,
+              "predicted_persistent_crossing": null,
+              "candidate": false
+            }
+          ],
+          "status": "certificate threshold already present at eligible checkpoint",
+          "issued_anchor": null,
+          "certified_bracket": null,
+          "actual_crossing": null,
+          "covered": null
+        },
+        "0.90": {
+          "threshold": 0.9,
+          "required_correct": 31,
+          "trigger_eligibility_checkpoint": 165000,
+          "screens": [
+            {
+              "anchor": 165000,
+              "current_certificate_count": 32,
+              "predicted_persistent_crossing": null,
+              "candidate": false
+            }
+          ],
+          "status": "certificate threshold already present at eligible checkpoint",
+          "issued_anchor": null,
+          "certified_bracket": null,
+          "actual_crossing": null,
+          "covered": null
+        },
+        "0.95": {
+          "threshold": 0.95,
+          "required_correct": 33,
+          "trigger_eligibility_checkpoint": 189250,
+          "screens": [
+            {
+              "anchor": 189250,
+              "current_certificate_count": 34,
+              "predicted_persistent_crossing": null,
+              "candidate": false
+            }
+          ],
+          "status": "certificate threshold already present at eligible checkpoint",
+          "issued_anchor": null,
+          "certified_bracket": null,
+          "actual_crossing": null,
+          "covered": null
+        }
+      },
+      "candidate_certificates": 0,
+      "issued_certificates": 0,
+      "covered_certificates": 0
+    }
+  ],
+  "summary": {
+    "seed_count": 4,
+    "candidate_certificates": 2,
+    "issued_certificates": 2,
+    "covered_certificates": 2,
+    "issuing_seeds": 1
+  }
+}

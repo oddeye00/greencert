@@ -1,0 +1,25 @@
+{
+  "status": "frozen before prospective training",
+  "timestamp": "2026-08-21T22:05:23.2372997-07:00",
+  "timezone": "America/Los_Angeles",
+  "seeds": [17, 18, 19, 20, 21, 22, 23, 24],
+  "candidate_training_paths_checked": 16,
+  "existing_training_or_checkpoint_paths": [],
+  "results_directory_seed_filename_search": [],
+  "tests_before_freeze": {
+    "command": "PYTHONPATH=scripts python -m unittest discover -s scripts -p test_*.py -v",
+    "tests_run": 89,
+    "failures": 0,
+    "errors": 0
+  },
+  "environment": {
+    "python": "3.12.10",
+    "implementation": "CPython MSC v.1943 64 bit AMD64",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "numpy": "2.5.2",
+    "scipy": "1.18.0",
+    "torch": "2.13.0+cpu",
+    "python_flint": "0.9.0",
+    "arb_precision_bits": 192
+  }
+}

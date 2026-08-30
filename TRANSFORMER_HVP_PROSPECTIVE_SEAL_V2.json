@@ -1,0 +1,40 @@
+{
+  "frozen_at": "2026-08-23",
+  "status": "corrected seal before training seeds 321-326",
+  "excluded_preconfirmation_seeds": [311, 312, 313],
+  "exclusion_reason": "training CLI exposed certification summaries before blind candidate construction",
+  "seeds": [321, 322, 323, 324, 325, 326],
+  "training": {
+    "modulus": 17,
+    "train_fraction": 0.6,
+    "model_dim": 32,
+    "hidden_dim": 128,
+    "heads": 4,
+    "depth": 1,
+    "normalization": "none",
+    "loss": "cross_entropy",
+    "learning_rate": 0.01,
+    "momentum": 0.9,
+    "weight_decay": 0.01,
+    "steps": 6000,
+    "log_every": 20,
+    "checkpoint_every": 40,
+    "dtype": "float64",
+    "terminal_output": "redirected to unopened per-seed sealed logs"
+  },
+  "audit": {
+    "thresholds": [0.7, 0.8, 0.9],
+    "persistence": 25,
+    "horizon": 300,
+    "sweeps": 2,
+    "scan_steps": 1200,
+    "maximum_current_count_deficit": 3
+  },
+  "sha256": {
+    "scripts/transformer_hvp_grokking.py": "7860D3F9B14427CC7AD49020943922DD07A655C269D846E17FB731F27C823F4F",
+    "scripts/transformer_modal_forecast.py": "1FE76CA893EC84E880EC6917274CBE51766C5A1857D96132F55D99532BC71E06",
+    "scripts/run_transformer_hvp_prospective_audit.py": "D05FC38CE4161984955D4E4241A623C66E59BE4DA43C35F1128F4B82F44D6F09",
+    "scripts/matrix_free_mlp.py": "D4EB03510EA161A4B507D4BBC6CDD5738A9A880E13E9D507FBE86FC2DED32783",
+    "TRANSFORMER_HVP_PROSPECTIVE_PROTOCOL_V2.md": "C6F63C7BB07E756AD8BB2FC7BF60AB8844FB60F1708E766BB34F00B5DD2533F5"
+  }
+}

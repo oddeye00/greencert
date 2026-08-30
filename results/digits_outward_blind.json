@@ -1,0 +1,121 @@
+{
+  "status": "post-seal outward verification before outcome join within this script",
+  "version": "digits-arb-outward-v1-2026-08-25",
+  "issued_green_candidates": 7,
+  "unique_seed_anchor_tubes": 7,
+  "outward_retained": 7,
+  "rows": [
+    {
+      "seed": 503,
+      "gate_index": 0,
+      "threshold": 0.9,
+      "anchor": 35,
+      "green_float_bracket": [
+        49,
+        49
+      ],
+      "outward_bracket": [
+        49,
+        49
+      ],
+      "outward_issued": true,
+      "signed_only": false
+    },
+    {
+      "seed": 504,
+      "gate_index": 0,
+      "threshold": 0.9,
+      "anchor": 60,
+      "green_float_bracket": [
+        49,
+        49
+      ],
+      "outward_bracket": [
+        49,
+        49
+      ],
+      "outward_issued": true,
+      "signed_only": false
+    },
+    {
+      "seed": 506,
+      "gate_index": 0,
+      "threshold": 0.9,
+      "anchor": 20,
+      "green_float_bracket": [
+        70,
+        70
+      ],
+      "outward_bracket": [
+        70,
+        70
+      ],
+      "outward_issued": true,
+      "signed_only": false
+    },
+    {
+      "seed": 507,
+      "gate_index": 0,
+      "threshold": 0.9,
+      "anchor": 35,
+      "green_float_bracket": [
+        117,
+        117
+      ],
+      "outward_bracket": [
+        117,
+        117
+      ],
+      "outward_issued": true,
+      "signed_only": false
+    },
+    {
+      "seed": 509,
+      "gate_index": 0,
+      "threshold": 0.9,
+      "anchor": 35,
+      "green_float_bracket": [
+        147,
+        147
+      ],
+      "outward_bracket": [
+        147,
+        147
+      ],
+      "outward_issued": true,
+      "signed_only": true
+    },
+    {
+      "seed": 512,
+      "gate_index": 0,
+      "threshold": 0.9,
+      "anchor": 20,
+      "green_float_bracket": [
+        42,
+        42
+      ],
+      "outward_bracket": [
+        42,
+        42
+      ],
+      "outward_issued": true,
+      "signed_only": false
+    },
+    {
+      "seed": 512,
+      "gate_index": 1,
+      "threshold": 0.925,
+      "anchor": 35,
+      "green_float_bracket": [
+        73,
+        73
+      ],
+      "outward_bracket": [
+        73,
+        73
+      ],
+      "outward_issued": true,
+      "signed_only": false
+    }
+  ]
+}

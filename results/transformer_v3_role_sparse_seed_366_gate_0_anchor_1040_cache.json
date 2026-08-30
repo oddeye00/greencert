@@ -1,0 +1,5742 @@
+{
+  "status": "post-seal matched output-transport benchmark cache",
+  "candidate": {
+    "seed": 366,
+    "threshold": 0.7,
+    "anchor": 1040
+  },
+  "horizon": 52,
+  "power": 2,
+  "centerline_sha256": "24B349DCE9653F72AAD8DA885B4E5D7255076FEBADABF506D5EFE91E0782830E",
+  "certificate_sha256": "63DA40D4989669A1D1349B25323732C6800FD05E7EF793FBDE9C624E709CE24B",
+  "output_delta": 1.1554816047328526e-11,
+  "green_delta": 6.944444444444444e-09,
+  "baseline": {
+    "1": {
+      "power": 2,
+      "operator_norm_upper_bound": 4442.273149685467,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 17949547.82030866,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 7908.126472151862,
+          "operator_norm_lower_estimate": 391.2324516119934,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.284578100006911
+        },
+        {
+          "power": 2,
+          "Y": 111770536859516.5,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 4442.273149685467,
+          "operator_norm_lower_estimate": 988.0658554921991,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.49619730000267737
+        }
+      ],
+      "operator_seconds": 0.49619730000267737,
+      "wall_seconds": 0.54596329999913,
+      "pairs": 289,
+      "seed": 2556208313930788202,
+      "frozen_relative_error": 0.0
+    },
+    "2": {
+      "power": 2,
+      "operator_norm_upper_bound": 4777.9680647426385,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 20182332.657457333,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 8385.568869953015,
+          "operator_norm_lower_estimate": 414.55284557875336,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.20099490000575315
+        },
+        {
+          "power": 2,
+          "Y": 149581977583611.8,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 4777.9680647426385,
+          "operator_norm_lower_estimate": 1062.3483015464983,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.4018514000053983
+        }
+      ],
+      "operator_seconds": 0.4018514000053983,
+      "wall_seconds": 0.4166661000053864,
+      "pairs": 289,
+      "seed": 6262465158371623713,
+      "frozen_relative_error": 0.0
+    },
+    "3": {
+      "power": 2,
+      "operator_norm_upper_bound": 4902.903708379478,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 21548930.844766434,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 8664.823361012626,
+          "operator_norm_lower_estimate": 428.5528718810539,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.20710179999878164
+        },
+        {
+          "power": 2,
+          "Y": 165851634379372.12,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 4902.903708379478,
+          "operator_norm_lower_estimate": 1090.3745643239365,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.4041935999994166
+        }
+      ],
+      "operator_seconds": 0.4041935999994166,
+      "wall_seconds": 0.4184899999963818,
+      "pairs": 289,
+      "seed": 4164212422327317394,
+      "frozen_relative_error": 0.0
+    },
+    "4": {
+      "power": 2,
+      "operator_norm_upper_bound": 5094.329139849852,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 24615409.066630468,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 9260.839952669901,
+          "operator_norm_lower_estimate": 458.40677267898207,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.2063343000045279
+        },
+        {
+          "power": 2,
+          "Y": 193309992310430.38,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 5094.329139849852,
+          "operator_norm_lower_estimate": 1133.410741652968,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.4474190000037197
+        }
+      ],
+      "operator_seconds": 0.4474190000037197,
+      "wall_seconds": 0.46262900000147056,
+      "pairs": 289,
+      "seed": 6050756249868551714,
+      "frozen_relative_error": 0.0
+    },
+    "5": {
+      "power": 2,
+      "operator_norm_upper_bound": 4618.137911800698,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 19423735.626545686,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 8226.46452380645,
+          "operator_norm_lower_estimate": 406.59680158083813,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.2599424999934854
+        },
+        {
+          "power": 2,
+          "Y": 130549103122057.66,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 4618.137911800698,
+          "operator_norm_lower_estimate": 1026.6969280059961,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.46285809999972116
+        }
+      ],
+      "operator_seconds": 0.46285809999972116,
+      "wall_seconds": 0.48060789999726694,
+      "pairs": 289,
+      "seed": 2708572303738343317,
+      "frozen_relative_error": 0.0
+    },
+    "6": {
+      "power": 2,
+      "operator_norm_upper_bound": 4154.865531543214,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 14875733.587909507,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 7199.229956881587,
+          "operator_norm_lower_estimate": 353.78667309134846,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.22612459999800194
+        },
+        {
+          "power": 2,
+          "Y": 85533095786053.9,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 4154.865531543214,
+          "operator_norm_lower_estimate": 923.3666498313244,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.5070051999937277
+        }
+      ],
+      "operator_seconds": 0.5070051999937277,
+      "wall_seconds": 0.5270860000018729,
+      "pairs": 289,
+      "seed": 7032191370898190593,
+      "frozen_relative_error": 0.0
+    },
+    "7": {
+      "power": 2,
+      "operator_norm_upper_bound": 4881.751184979083,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 21782684.941880316,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 8711.69285036308,
+          "operator_norm_lower_estimate": 431.600906901361,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.2790406999993138
+        },
+        {
+          "power": 2,
+          "Y": 163007978393981.88,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 4881.751184979083,
+          "operator_norm_lower_estimate": 1086.5895828435919,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.5848579000012251
+        }
+      ],
+      "operator_seconds": 0.5848579000012251,
+      "wall_seconds": 0.6073644999996759,
+      "pairs": 289,
+      "seed": 7642507880270934059,
+      "frozen_relative_error": 0.0
+    },
+    "8": {
+      "power": 2,
+      "operator_norm_upper_bound": 4957.74025100895,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 23239967.88826017,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 8998.385851911522,
+          "operator_norm_lower_estimate": 443.4008922282433,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.2666311999928439
+        },
+        {
+          "power": 2,
+          "Y": 173396919131549.38,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 4957.74025100895,
+          "operator_norm_lower_estimate": 1100.5245742979594,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.523755699992762
+        }
+      ],
+      "operator_seconds": 0.523755699992762,
+      "wall_seconds": 0.5392953999980818,
+      "pairs": 289,
+      "seed": 4170010143520987955,
+      "frozen_relative_error": 0.0
+    },
+    "9": {
+      "power": 2,
+      "operator_norm_upper_bound": 4779.590958139482,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 19866901.155104563,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 8319.781400967282,
+          "operator_norm_lower_estimate": 412.9297237357866,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.32182189999730326
+        },
+        {
+          "power": 2,
+          "Y": 149785310306347.25,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 4779.590958139482,
+          "operator_norm_lower_estimate": 1063.692257642145,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.6889387999981409
+        }
+      ],
+      "operator_seconds": 0.6889387999981409,
+      "wall_seconds": 0.7055718000046909,
+      "pairs": 289,
+      "seed": 8175230517627795659,
+      "frozen_relative_error": 0.0
+    },
+    "10": {
+      "power": 2,
+      "operator_norm_upper_bound": 4867.569286427034,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 21321857.65682473,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 8619.049399859236,
+          "operator_norm_lower_estimate": 427.06391999745864,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.3174786000017775
+        },
+        {
+          "power": 2,
+          "Y": 161122009016403.28,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 4867.569286427034,
+          "operator_norm_lower_estimate": 1083.499956534478,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.6307056000077864
+        }
+      ],
+      "operator_seconds": 0.6307056000077864,
+      "wall_seconds": 0.6507866999891121,
+      "pairs": 289,
+      "seed": 640167031507896977,
+      "frozen_relative_error": 0.0
+    },
+    "11": {
+      "power": 2,
+      "operator_norm_upper_bound": 4735.146202100256,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 19240868.958227575,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 8187.648519046376,
+          "operator_norm_lower_estimate": 404.82210921997745,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.2365548000088893
+        },
+        {
+          "power": 2,
+          "Y": 144291208611239.12,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 4735.146202100256,
+          "operator_norm_lower_estimate": 1052.8970502852007,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.4571806000021752
+        }
+      ],
+      "operator_seconds": 0.4571806000021752,
+      "wall_seconds": 0.47205379999650177,
+      "pairs": 289,
+      "seed": 2233254516930167662,
+      "frozen_relative_error": 0.0
+    },
+    "12": {
+      "power": 2,
+      "operator_norm_upper_bound": 4838.356362280362,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 19853549.294009827,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 8316.985211590782,
+          "operator_norm_lower_estimate": 411.1723705085217,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.33009090000996366
+        },
+        {
+          "power": 2,
+          "Y": 157288767793562.1,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 4838.356362280362,
+          "operator_norm_lower_estimate": 1075.7883819711558,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.5551324999978533
+        }
+      ],
+      "operator_seconds": 0.5551324999978533,
+      "wall_seconds": 0.5732287999999244,
+      "pairs": 289,
+      "seed": 7283084345433333149,
+      "frozen_relative_error": 0.0
+    },
+    "13": {
+      "power": 2,
+      "operator_norm_upper_bound": 4748.11075553848,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 20222887.014396664,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 8393.989618325673,
+          "operator_norm_lower_estimate": 414.2289938150558,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.2073614999972051
+        },
+        {
+          "power": 2,
+          "Y": 145877953957100.78,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 4748.11075553848,
+          "operator_norm_lower_estimate": 1054.806348851268,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.41975299999467097
+        }
+      ],
+      "operator_seconds": 0.41975299999467097,
+      "wall_seconds": 0.4345188000006601,
+      "pairs": 289,
+      "seed": 4016106202745730685,
+      "frozen_relative_error": 0.0
+    },
+    "14": {
+      "power": 2,
+      "operator_norm_upper_bound": 5025.439825194598,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 24738469.719349112,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 9283.960108606538,
+          "operator_norm_lower_estimate": 459.29432997464403,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.27525629999581724
+        },
+        {
+          "power": 2,
+          "Y": 183063857008967.72,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 5025.439825194598,
+          "operator_norm_lower_estimate": 1117.771381924636,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.6163583999878028
+        }
+      ],
+      "operator_seconds": 0.6163583999878028,
+      "wall_seconds": 0.6355653000064194,
+      "pairs": 289,
+      "seed": 6976145886907379906,
+      "frozen_relative_error": 0.0
+    },
+    "15": {
+      "power": 2,
+      "operator_norm_upper_bound": 4762.651747511651,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 18012902.438667085,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 7922.070417202762,
+          "operator_norm_lower_estimate": 391.403792443814,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.2232608999911463
+        },
+        {
+          "power": 2,
+          "Y": 147673172662712.25,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 4762.651747511651,
+          "operator_norm_lower_estimate": 1058.6246245846494,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.5171685999812325
+        }
+      ],
+      "operator_seconds": 0.5171685999812325,
+      "wall_seconds": 0.5329460999928415,
+      "pairs": 289,
+      "seed": 6762495115530964821,
+      "frozen_relative_error": 0.0
+    },
+    "16": {
+      "power": 2,
+      "operator_norm_upper_bound": 5132.397062383087,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 25129887.609956868,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 9357.118363528782,
+          "operator_norm_lower_estimate": 461.98454923042556,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.2856213999912143
+        },
+        {
+          "power": 2,
+          "Y": 199153200838112.0,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 5132.397062383087,
+          "operator_norm_lower_estimate": 1140.4149756041986,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.6768012999818893
+        }
+      ],
+      "operator_seconds": 0.6768012999818893,
+      "wall_seconds": 0.6967884000041522,
+      "pairs": 289,
+      "seed": 4800687614300522539,
+      "frozen_relative_error": 0.0
+    },
+    "17": {
+      "power": 2,
+      "operator_norm_upper_bound": 4562.319199521465,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 17569556.128431715,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 7823.971231463328,
+          "operator_norm_lower_estimate": 385.2195513831195,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.3757478999905288
+        },
+        {
+          "power": 2,
+          "Y": 124350910189002.28,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 4562.319199521465,
+          "operator_norm_lower_estimate": 1013.2565831629785,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.8106281999935163
+        }
+      ],
+      "operator_seconds": 0.8106281999935163,
+      "wall_seconds": 0.8339414999936707,
+      "pairs": 289,
+      "seed": 446545130845865704,
+      "frozen_relative_error": 0.0
+    },
+    "18": {
+      "power": 2,
+      "operator_norm_upper_bound": 4675.236853350915,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 22781964.788953837,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 8909.276513475848,
+          "operator_norm_lower_estimate": 440.99198623194343,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.3376368999888655
+        },
+        {
+          "power": 2,
+          "Y": 137126304040072.6,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 4675.236853350915,
+          "operator_norm_lower_estimate": 1040.1542486034507,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.5875440999807324
+        }
+      ],
+      "operator_seconds": 0.5875440999807324,
+      "wall_seconds": 0.6185241999919526,
+      "pairs": 289,
+      "seed": 2746776115495904639,
+      "frozen_relative_error": 0.0
+    },
+    "19": {
+      "power": 2,
+      "operator_norm_upper_bound": 4798.830221912988,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 18693392.299020182,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 8070.32287323012,
+          "operator_norm_lower_estimate": 396.80990758179416,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.12597759999334812
+        },
+        {
+          "power": 2,
+          "Y": 152211631517332.8,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 4798.830221912988,
+          "operator_norm_lower_estimate": 1064.0969142337951,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.2570765999989817
+        }
+      ],
+      "operator_seconds": 0.2570765999989817,
+      "wall_seconds": 0.2649657000001753,
+      "pairs": 289,
+      "seed": 4190044767837020213,
+      "frozen_relative_error": 0.0
+    },
+    "20": {
+      "power": 2,
+      "operator_norm_upper_bound": 5138.770472391925,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 24220860.075125523,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 9186.321282856448,
+          "operator_norm_lower_estimate": 453.7911174648056,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.11992829998780508
+        },
+        {
+          "power": 2,
+          "Y": 200144278685688.53,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 5138.770472391925,
+          "operator_norm_lower_estimate": 1142.1322642514078,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.27430169998842757
+        }
+      ],
+      "operator_seconds": 0.27430169998842757,
+      "wall_seconds": 0.2842323000077158,
+      "pairs": 289,
+      "seed": 4801549216465737084,
+      "frozen_relative_error": 0.0
+    },
+    "21": {
+      "power": 2,
+      "operator_norm_upper_bound": 4737.397005285183,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 19897183.764924675,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 8326.119801628633,
+          "operator_norm_lower_estimate": 411.81168078278483,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.19621590001042932
+        },
+        {
+          "power": 2,
+          "Y": 144565753671808.44,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 4737.397005285183,
+          "operator_norm_lower_estimate": 1053.580645386989,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.4097679000115022
+        }
+      ],
+      "operator_seconds": 0.4097679000115022,
+      "wall_seconds": 0.4264445999870077,
+      "pairs": 289,
+      "seed": 4693200552641514902,
+      "frozen_relative_error": 0.0
+    },
+    "22": {
+      "power": 2,
+      "operator_norm_upper_bound": 5011.2215633867545,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 21201719.461147368,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 8594.73304372923,
+          "operator_norm_lower_estimate": 425.43076885618683,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.22824579999723937
+        },
+        {
+          "power": 2,
+          "Y": 181000893718633.4,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 5011.2215633867545,
+          "operator_norm_lower_estimate": 1114.915253474385,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.47078590000455733
+        }
+      ],
+      "operator_seconds": 0.47078590000455733,
+      "wall_seconds": 0.48983880000014324,
+      "pairs": 289,
+      "seed": 8090750831562603806,
+      "frozen_relative_error": 0.0
+    },
+    "23": {
+      "power": 2,
+      "operator_norm_upper_bound": 4728.175942165507,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 17334730.306827255,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 7771.50972253119,
+          "operator_norm_lower_estimate": 385.2166976398164,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.23935780000465456
+        },
+        {
+          "power": 2,
+          "Y": 143443480886367.44,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 4728.175942165507,
+          "operator_norm_lower_estimate": 1052.6729990544093,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.5489004000119166
+        }
+      ],
+      "operator_seconds": 0.5489004000119166,
+      "wall_seconds": 0.5660902000090573,
+      "pairs": 289,
+      "seed": 5807843934715807294,
+      "frozen_relative_error": 0.0
+    },
+    "24": {
+      "power": 2,
+      "operator_norm_upper_bound": 5133.398386014254,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 24173648.23298132,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 9177.363824261918,
+          "operator_norm_lower_estimate": 453.2631324847517,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.3711572000029264
+        },
+        {
+          "power": 2,
+          "Y": 199308664392709.44,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 5133.398386014254,
+          "operator_norm_lower_estimate": 1140.8306829033763,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.5879226000106428
+        }
+      ],
+      "operator_seconds": 0.5879226000106428,
+      "wall_seconds": 0.6041384999989532,
+      "pairs": 289,
+      "seed": 792259156138981466,
+      "frozen_relative_error": 0.0
+    },
+    "25": {
+      "power": 2,
+      "operator_norm_upper_bound": 4985.2934816904235,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 21459543.90387134,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 8646.833444794867,
+          "operator_norm_lower_estimate": 427.41451586169404,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.19454720000794623
+        },
+        {
+          "power": 2,
+          "Y": 177283868700204.75,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 4985.2934816904235,
+          "operator_norm_lower_estimate": 1108.3752439350326,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.4800787000131095
+        }
+      ],
+      "operator_seconds": 0.4800787000131095,
+      "wall_seconds": 0.4950329999992391,
+      "pairs": 289,
+      "seed": 7700620549988607493,
+      "frozen_relative_error": 0.0
+    },
+    "26": {
+      "power": 2,
+      "operator_norm_upper_bound": 4489.03143296274,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 15847357.58263628,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 7430.623877318218,
+          "operator_norm_lower_estimate": 365.82981435588636,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.20590080000692979
+        },
+        {
+          "power": 2,
+          "Y": 116551236579699.8,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 4489.03143296274,
+          "operator_norm_lower_estimate": 997.9645328003211,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.44210169999860227
+        }
+      ],
+      "operator_seconds": 0.44210169999860227,
+      "wall_seconds": 0.45656000000599306,
+      "pairs": 289,
+      "seed": 5943609627678050268,
+      "frozen_relative_error": 0.0
+    },
+    "27": {
+      "power": 2,
+      "operator_norm_upper_bound": 5048.431531282609,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 23299139.840950143,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 9009.834094275071,
+          "operator_norm_lower_estimate": 446.308771677887,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.2061154999973951
+        },
+        {
+          "power": 2,
+          "Y": 186437032742815.8,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 5048.431531282609,
+          "operator_norm_lower_estimate": 1123.6104891933132,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.4658532000030391
+        }
+      ],
+      "operator_seconds": 0.4658532000030391,
+      "wall_seconds": 0.4807952999981353,
+      "pairs": 289,
+      "seed": 4001812996464475503,
+      "frozen_relative_error": 0.0
+    },
+    "28": {
+      "power": 2,
+      "operator_norm_upper_bound": 4915.216765764256,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 19898433.075848177,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 8326.381189101023,
+          "operator_norm_lower_estimate": 413.5706084958181,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.20710120000876486
+        },
+        {
+          "power": 2,
+          "Y": 167523987409480.4,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 4915.216765764256,
+          "operator_norm_lower_estimate": 1095.441939655719,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.502810900012264
+        }
+      ],
+      "operator_seconds": 0.502810900012264,
+      "wall_seconds": 0.5173494000046048,
+      "pairs": 289,
+      "seed": 6226608668423972341,
+      "frozen_relative_error": 0.0
+    },
+    "29": {
+      "power": 2,
+      "operator_norm_upper_bound": 5469.517772466194,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 29088308.292501613,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 10067.139397443687,
+          "operator_norm_lower_estimate": 496.8956020344065,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 1.018963899987284
+        },
+        {
+          "power": 2,
+          "Y": 256863532805630.53,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 5469.517772466194,
+          "operator_norm_lower_estimate": 1215.146312106232,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 1.3950460999767529
+        }
+      ],
+      "operator_seconds": 1.3950460999767529,
+      "wall_seconds": 1.414064500000677,
+      "pairs": 289,
+      "seed": 6092794040781260821,
+      "frozen_relative_error": 0.0
+    },
+    "30": {
+      "power": 2,
+      "operator_norm_upper_bound": 4618.81263139276,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 21510424.65628977,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 8657.078231840385,
+          "operator_norm_lower_estimate": 430.30595626444455,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.24210580000362825
+        },
+        {
+          "power": 2,
+          "Y": 130625413830016.75,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 4618.81263139276,
+          "operator_norm_lower_estimate": 1025.6236280999428,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.436121999999159
+        }
+      ],
+      "operator_seconds": 0.436121999999159,
+      "wall_seconds": 0.45591740000236314,
+      "pairs": 289,
+      "seed": 7482451443838967135,
+      "frozen_relative_error": 0.0
+    },
+    "31": {
+      "power": 2,
+      "operator_norm_upper_bound": 5537.757788204138,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 32245141.86348385,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 10599.344211298705,
+          "operator_norm_lower_estimate": 522.9844238943464,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.21156019999762066
+        },
+        {
+          "power": 2,
+          "Y": 269924388492927.4,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 5537.757788204138,
+          "operator_norm_lower_estimate": 1230.095517034327,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.40991079999366775
+        }
+      ],
+      "operator_seconds": 0.40991079999366775,
+      "wall_seconds": 0.4264975999976741,
+      "pairs": 289,
+      "seed": 8204850557514267615,
+      "frozen_relative_error": 0.0
+    },
+    "32": {
+      "power": 2,
+      "operator_norm_upper_bound": 5336.67764144638,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 25923222.117947772,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 9503.669843010879,
+          "operator_norm_lower_estimate": 469.8537219814808,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.2524687000113772
+        },
+        {
+          "power": 2,
+          "Y": 232803862358921.88,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 5336.67764144638,
+          "operator_norm_lower_estimate": 1186.6062617881407,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.45888670001295395
+        }
+      ],
+      "operator_seconds": 0.45888670001295395,
+      "wall_seconds": 0.4735839000059059,
+      "pairs": 289,
+      "seed": 4106172696974302803,
+      "frozen_relative_error": 0.0
+    },
+    "33": {
+      "power": 2,
+      "operator_norm_upper_bound": 5287.14888389636,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 25947029.403605964,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 9508.032816455412,
+          "operator_norm_lower_estimate": 470.650149965122,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.2147617999871727
+        },
+        {
+          "power": 2,
+          "Y": 224280987950728.2,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 5287.14888389636,
+          "operator_norm_lower_estimate": 1176.319522735894,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.4765799999877345
+        }
+      ],
+      "operator_seconds": 0.4765799999877345,
+      "wall_seconds": 0.4909747000056086,
+      "pairs": 289,
+      "seed": 4380479408660435597,
+      "frozen_relative_error": 0.0
+    },
+    "34": {
+      "power": 2,
+      "operator_norm_upper_bound": 5647.331184505524,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 32800327.42614534,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 10690.202686777346,
+          "operator_norm_lower_estimate": 526.6312410906411,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.2345608000032371
+        },
+        {
+          "power": 2,
+          "Y": 291930404954381.8,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 5647.331184505524,
+          "operator_norm_lower_estimate": 1253.4401364841617,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.4652427999972133
+        }
+      ],
+      "operator_seconds": 0.4652427999972133,
+      "wall_seconds": 0.47996599999896716,
+      "pairs": 289,
+      "seed": 5463189654913239434,
+      "frozen_relative_error": 0.0
+    },
+    "35": {
+      "power": 2,
+      "operator_norm_upper_bound": 4741.7626515580605,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 17729059.897162404,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 7859.4056304182905,
+          "operator_norm_lower_estimate": 388.431384327231,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.18524059999617748
+        },
+        {
+          "power": 2,
+          "Y": 145099376567025.6,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 4741.7626515580605,
+          "operator_norm_lower_estimate": 1052.5549550842866,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.32630719999724533
+        }
+      ],
+      "operator_seconds": 0.32630719999724533,
+      "wall_seconds": 0.3412737000035122,
+      "pairs": 289,
+      "seed": 855149614792353559,
+      "frozen_relative_error": 0.0
+    },
+    "36": {
+      "power": 2,
+      "operator_norm_upper_bound": 5484.372365050749,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 29211281.044298593,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 10088.396704086046,
+          "operator_norm_lower_estimate": 497.26649279043755,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.14317579999624286
+        },
+        {
+          "power": 2,
+          "Y": 259665370607782.66,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 5484.372365050749,
+          "operator_norm_lower_estimate": 1217.616308053983,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.2760589999961667
+        }
+      ],
+      "operator_seconds": 0.2760589999961667,
+      "wall_seconds": 0.28527250001206994,
+      "pairs": 289,
+      "seed": 3628457243345479573,
+      "frozen_relative_error": 0.0
+    },
+    "37": {
+      "power": 2,
+      "operator_norm_upper_bound": 5172.056801258854,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 22805427.26785945,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 8913.86303449077,
+          "operator_norm_lower_estimate": 442.17074627919305,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.13161569999647327
+        },
+        {
+          "power": 2,
+          "Y": 205380611778563.75,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 5172.056801258854,
+          "operator_norm_lower_estimate": 1151.927936110343,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.2626072999992175
+        }
+      ],
+      "operator_seconds": 0.2626072999992175,
+      "wall_seconds": 0.2722829999984242,
+      "pairs": 289,
+      "seed": 2038448407232381012,
+      "frozen_relative_error": 0.0
+    },
+    "38": {
+      "power": 2,
+      "operator_norm_upper_bound": 5319.101879036558,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 26893871.078925416,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 9679.95881085353,
+          "operator_norm_lower_estimate": 479.91074572503817,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.1327090999984648
+        },
+        {
+          "power": 2,
+          "Y": 229752123718470.7,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 5319.101879036558,
+          "operator_norm_lower_estimate": 1184.3547089802732,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.26852520000829827
+        }
+      ],
+      "operator_seconds": 0.26852520000829827,
+      "wall_seconds": 0.27796989999478683,
+      "pairs": 289,
+      "seed": 1995612823227452082,
+      "frozen_relative_error": 0.0
+    },
+    "39": {
+      "power": 2,
+      "operator_norm_upper_bound": 4778.306520093663,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 20230926.518871363,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 8395.657946182393,
+          "operator_norm_lower_estimate": 415.7959612461752,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.13755140001012478
+        },
+        {
+          "power": 2,
+          "Y": 149624365644520.6,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 4778.306520093663,
+          "operator_norm_lower_estimate": 1063.2913738127954,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.28532400001131464
+        }
+      ],
+      "operator_seconds": 0.28532400001131464,
+      "wall_seconds": 0.2949443999968935,
+      "pairs": 289,
+      "seed": 8405707206990239231,
+      "frozen_relative_error": 0.0
+    },
+    "40": {
+      "power": 2,
+      "operator_norm_upper_bound": 5403.494870786569,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 26103833.996863585,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 9536.719289532137,
+          "operator_norm_lower_estimate": 472.58192457024967,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.12181359999522101
+        },
+        {
+          "power": 2,
+          "Y": 244683832458513.06,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 5403.494870786569,
+          "operator_norm_lower_estimate": 1202.8564383264404,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.5939313999988372
+        }
+      ],
+      "operator_seconds": 0.5939313999988372,
+      "wall_seconds": 0.6033879000024172,
+      "pairs": 289,
+      "seed": 7439028904360387420,
+      "frozen_relative_error": 0.0
+    },
+    "41": {
+      "power": 2,
+      "operator_norm_upper_bound": 5082.481312487597,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 21152745.694186617,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 8584.800835084778,
+          "operator_norm_lower_estimate": 424.159796113827,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.5697752999985823
+        },
+        {
+          "power": 2,
+          "Y": 191517940063566.6,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 5082.481312487597,
+          "operator_norm_lower_estimate": 1129.731996848475,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 4.276846500011743
+        }
+      ],
+      "operator_seconds": 4.276846500011743,
+      "wall_seconds": 4.293584200000623,
+      "pairs": 289,
+      "seed": 1318472161927903323,
+      "frozen_relative_error": 0.0
+    },
+    "42": {
+      "power": 2,
+      "operator_norm_upper_bound": 4882.825800997833,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 21176056.60335829,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 8589.529876209492,
+          "operator_norm_lower_estimate": 424.19352184656736,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.23083329999644775
+        },
+        {
+          "power": 2,
+          "Y": 163151557062365.66,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 4882.825800997833,
+          "operator_norm_lower_estimate": 1085.0969664420256,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.4496385999955237
+        }
+      ],
+      "operator_seconds": 0.4496385999955237,
+      "wall_seconds": 0.46590890000516083,
+      "pairs": 289,
+      "seed": 2763947534843405832,
+      "frozen_relative_error": 0.0
+    },
+    "43": {
+      "power": 2,
+      "operator_norm_upper_bound": 5301.8357464980745,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 25257127.897426516,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 9380.777425528946,
+          "operator_norm_lower_estimate": 465.9468324289382,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.21528590000525583
+        },
+        {
+          "power": 2,
+          "Y": 226783459367038.78,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 5301.8357464980745,
+          "operator_norm_lower_estimate": 1181.612386538544,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.4258999000157928
+        }
+      ],
+      "operator_seconds": 0.4258999000157928,
+      "wall_seconds": 0.44041459998697974,
+      "pairs": 289,
+      "seed": 6101501516332321018,
+      "frozen_relative_error": 0.0
+    },
+    "44": {
+      "power": 2,
+      "operator_norm_upper_bound": 4742.635215523066,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 21837809.502117854,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 8722.709049671486,
+          "operator_norm_lower_estimate": 431.3676286492397,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.23003109999990556
+        },
+        {
+          "power": 2,
+          "Y": 145206208939763.56,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 4742.635215523066,
+          "operator_norm_lower_estimate": 1054.6729414266517,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.45663439999043476
+        }
+      ],
+      "operator_seconds": 0.45663439999043476,
+      "wall_seconds": 0.47142620000522584,
+      "pairs": 289,
+      "seed": 5611214197994636669,
+      "frozen_relative_error": 0.0
+    },
+    "45": {
+      "power": 2,
+      "operator_norm_upper_bound": 5140.191038672299,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 22383559.725499377,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 8831.031369021674,
+          "operator_norm_lower_estimate": 434.9636805810489,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.2264221999939764
+        },
+        {
+          "power": 2,
+          "Y": 200365682721955.7,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 5140.191038672299,
+          "operator_norm_lower_estimate": 1143.4112155779226,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.4500844999856781
+        }
+      ],
+      "operator_seconds": 0.4500844999856781,
+      "wall_seconds": 0.46552720000909176,
+      "pairs": 289,
+      "seed": 2489682626553653688,
+      "frozen_relative_error": 0.0
+    },
+    "46": {
+      "power": 2,
+      "operator_norm_upper_bound": 4872.470340604654,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 18496959.173330817,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 8027.808776865081,
+          "operator_norm_lower_estimate": 393.7422688289949,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.22407669998938218
+        },
+        {
+          "power": 2,
+          "Y": 161771911338957.97,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 4872.470340604654,
+          "operator_norm_lower_estimate": 1079.0876308357854,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.4505232999945292
+        }
+      ],
+      "operator_seconds": 0.4505232999945292,
+      "wall_seconds": 0.46522169999661855,
+      "pairs": 289,
+      "seed": 7739362721667918129,
+      "frozen_relative_error": 0.0
+    },
+    "47": {
+      "power": 2,
+      "operator_norm_upper_bound": 5077.348272542615,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 21976332.460912574,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 8750.330533080622,
+          "operator_norm_lower_estimate": 434.2085436132885,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.24820729999919422
+        },
+        {
+          "power": 2,
+          "Y": 190745419000736.94,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 5077.348272542615,
+          "operator_norm_lower_estimate": 1129.975191555628,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.374155299999984
+        }
+      ],
+      "operator_seconds": 0.374155299999984,
+      "wall_seconds": 0.38954170000215527,
+      "pairs": 289,
+      "seed": 5089378923146927437,
+      "frozen_relative_error": 0.0
+    },
+    "48": {
+      "power": 2,
+      "operator_norm_upper_bound": 5168.915967052645,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 23645357.22341248,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 9076.528795023012,
+          "operator_norm_lower_estimate": 448.3989234434782,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.12001749999762978
+        },
+        {
+          "power": 2,
+          "Y": 204882180211192.4,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 5168.915967052645,
+          "operator_norm_lower_estimate": 1148.8725619041052,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.28719610000553075
+        }
+      ],
+      "operator_seconds": 0.28719610000553075,
+      "wall_seconds": 0.2960081000055652,
+      "pairs": 289,
+      "seed": 6172787522903689207,
+      "frozen_relative_error": 0.0
+    },
+    "49": {
+      "power": 2,
+      "operator_norm_upper_bound": 5034.436400839742,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 22528140.82520264,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 8859.506398915797,
+          "operator_norm_lower_estimate": 440.0512574852246,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.19926999999734107
+        },
+        {
+          "power": 2,
+          "Y": 184378269869026.88,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 5034.436400839742,
+          "operator_norm_lower_estimate": 1122.0125870039094,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.39112819998990744
+        }
+      ],
+      "operator_seconds": 0.39112819998990744,
+      "wall_seconds": 0.40027850000478793,
+      "pairs": 289,
+      "seed": 6949718860958899648,
+      "frozen_relative_error": 0.0
+    },
+    "50": {
+      "power": 2,
+      "operator_norm_upper_bound": 5052.751655509833,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 21158942.66175481,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 8586.058256634407,
+          "operator_norm_lower_estimate": 426.1958359027217,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.18892279999272432
+        },
+        {
+          "power": 2,
+          "Y": 187076015826161.4,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 5052.751655509833,
+          "operator_norm_lower_estimate": 1125.7336257691286,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.3075321999931475
+        }
+      ],
+      "operator_seconds": 0.3075321999931475,
+      "wall_seconds": 0.31735500000650063,
+      "pairs": 289,
+      "seed": 3506515417809532405,
+      "frozen_relative_error": 0.0
+    },
+    "51": {
+      "power": 2,
+      "operator_norm_upper_bound": 5178.275371414577,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 24487802.36050392,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 9236.804585051035,
+          "operator_norm_lower_estimate": 456.85323507825325,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.13465930000529625
+        },
+        {
+          "power": 2,
+          "Y": 206370143823077.66,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 5178.275371414577,
+          "operator_norm_lower_estimate": 1152.1223751446832,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.2790536000102293
+        }
+      ],
+      "operator_seconds": 0.2790536000102293,
+      "wall_seconds": 0.28769979999924544,
+      "pairs": 289,
+      "seed": 826597631481798995,
+      "frozen_relative_error": 0.0
+    },
+    "52": {
+      "power": 2,
+      "operator_norm_upper_bound": 5366.483032090373,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 25343057.16504585,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 9396.721417479033,
+          "operator_norm_lower_estimate": 466.6197965036178,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.13237279999884777
+        },
+        {
+          "power": 2,
+          "Y": 238048441283849.44,
+          "c_delta": 0.28701612713630525,
+          "operator_norm_upper_bound": 5366.483032090373,
+          "operator_norm_lower_estimate": 1192.578859777638,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.2472912999946857
+        }
+      ],
+      "operator_seconds": 0.2472912999946857,
+      "wall_seconds": 0.2566472999897087,
+      "pairs": 289,
+      "seed": 397395168904843241,
+      "frozen_relative_error": 0.0
+    }
+  },
+  "train": {
+    "1": {
+      "power": 2,
+      "operator_norm_upper_bound": 3880.509477375749,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 13171638.771250555,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 7080.9661095409465,
+          "operator_norm_lower_estimate": 334.01009350810693,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.10271069999726024
+        },
+        {
+          "power": 2,
+          "Y": 59567554933199.3,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 3880.509477375749,
+          "operator_norm_lower_estimate": 842.7956513376944,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.20822960000077728
+        }
+      ],
+      "operator_seconds": 0.20822960000077728,
+      "wall_seconds": 0.2177508000022499,
+      "pairs": 173,
+      "seed": 9211789803709806823
+    },
+    "2": {
+      "power": 2,
+      "operator_norm_upper_bound": 3621.864508646136,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 10718728.527573792,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 6387.696096024365,
+          "operator_norm_lower_estimate": 302.58134861090514,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.1430392999900505
+        },
+        {
+          "power": 2,
+          "Y": 45204698681753.195,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 3621.864508646136,
+          "operator_norm_lower_estimate": 788.2811724397363,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.28551419998984784
+        }
+      ],
+      "operator_seconds": 0.28551419998984784,
+      "wall_seconds": 0.2943494000064675,
+      "pairs": 173,
+      "seed": 9009959931970752785
+    },
+    "3": {
+      "power": 2,
+      "operator_norm_upper_bound": 3870.177866596111,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 13220396.405387267,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 7094.059857618361,
+          "operator_norm_lower_estimate": 334.72969041108877,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.08647579999524169
+        },
+        {
+          "power": 2,
+          "Y": 58935704558340.586,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 3870.177866596111,
+          "operator_norm_lower_estimate": 840.6798121395112,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.34634979999100324
+        }
+      ],
+      "operator_seconds": 0.34634979999100324,
+      "wall_seconds": 0.35622390000207815,
+      "pairs": 173,
+      "seed": 8856965861738827060
+    },
+    "4": {
+      "power": 2,
+      "operator_norm_upper_bound": 3891.2572581017307,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 13597007.594816469,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 7194.3950230719165,
+          "operator_norm_lower_estimate": 337.83609003118625,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.15095679998921696
+        },
+        {
+          "power": 2,
+          "Y": 60230234658801.66,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 3891.2572581017307,
+          "operator_norm_lower_estimate": 843.2295642528798,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.30856279998261016
+        }
+      ],
+      "operator_seconds": 0.30856279998261016,
+      "wall_seconds": 0.3241723999963142,
+      "pairs": 173,
+      "seed": 5735260652188891158
+    },
+    "5": {
+      "power": 2,
+      "operator_norm_upper_bound": 3778.1229343562345,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 11568363.921492634,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 6636.033672917063,
+          "operator_norm_lower_estimate": 315.2000003388775,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.1764200999896275
+        },
+        {
+          "power": 2,
+          "Y": 53525301288565.03,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 3778.1229343562345,
+          "operator_norm_lower_estimate": 823.4076531025497,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.3406986999907531
+        }
+      ],
+      "operator_seconds": 0.3406986999907531,
+      "wall_seconds": 0.36097669998707715,
+      "pairs": 173,
+      "seed": 4810989748472548311
+    },
+    "6": {
+      "power": 2,
+      "operator_norm_upper_bound": 3673.1709346550033,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 10945673.486298786,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 6454.964443120565,
+          "operator_norm_lower_estimate": 304.7209664847493,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.18664569999964442
+        },
+        {
+          "power": 2,
+          "Y": 47821075229507.766,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 3673.1709346550033,
+          "operator_norm_lower_estimate": 798.0780761207682,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.5900078000122448
+        }
+      ],
+      "operator_seconds": 0.5900078000122448,
+      "wall_seconds": 0.6034719999879599,
+      "pairs": 173,
+      "seed": 722930533709801886
+    },
+    "7": {
+      "power": 2,
+      "operator_norm_upper_bound": 4133.693745352762,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 15656713.895716192,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 7720.0998541336985,
+          "operator_norm_lower_estimate": 366.7088736781565,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.4203265999967698
+        },
+        {
+          "power": 2,
+          "Y": 76702226562543.66,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 4133.693745352762,
+          "operator_norm_lower_estimate": 900.9227389857045,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.7384518999897409
+        }
+      ],
+      "operator_seconds": 0.7384518999897409,
+      "wall_seconds": 0.7584663000016008,
+      "pairs": 173,
+      "seed": 3862091979347425659
+    },
+    "8": {
+      "power": 2,
+      "operator_norm_upper_bound": 3862.180277800626,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 12295998.821305538,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 6841.550174518939,
+          "operator_norm_lower_estimate": 322.32517290936534,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.18762889999197796
+        },
+        {
+          "power": 2,
+          "Y": 58450058124834.31,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 3862.180277800626,
+          "operator_norm_lower_estimate": 838.3056549496554,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.47935079998569563
+        }
+      ],
+      "operator_seconds": 0.47935079998569563,
+      "wall_seconds": 0.4882701000024099,
+      "pairs": 173,
+      "seed": 6269007673806188807
+    },
+    "9": {
+      "power": 2,
+      "operator_norm_upper_bound": 3750.780853552841,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 12329333.562832428,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 6850.817699235739,
+          "operator_norm_lower_estimate": 323.71386693621054,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.18494370000553317
+        },
+        {
+          "power": 2,
+          "Y": 51992600726702.5,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 3750.780853552841,
+          "operator_norm_lower_estimate": 815.4196466861773,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.39127750000625383
+        }
+      ],
+      "operator_seconds": 0.39127750000625383,
+      "wall_seconds": 0.4084742999984883,
+      "pairs": 173,
+      "seed": 5838556332158455619
+    },
+    "10": {
+      "power": 2,
+      "operator_norm_upper_bound": 3534.782870213193,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 12249430.46176004,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 6828.582460304468,
+          "operator_norm_lower_estimate": 322.9285413261638,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.2093114000017522
+        },
+        {
+          "power": 2,
+          "Y": 41011508789342.83,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 3534.782870213193,
+          "operator_norm_lower_estimate": 768.6890207306058,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.3704135000007227
+        }
+      ],
+      "operator_seconds": 0.3704135000007227,
+      "wall_seconds": 0.3991918999963673,
+      "pairs": 173,
+      "seed": 3227290279656797481
+    },
+    "11": {
+      "power": 2,
+      "operator_norm_upper_bound": 3576.691184634833,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 9880926.737471417,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 6132.978603083276,
+          "operator_norm_lower_estimate": 291.1922717637152,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.298399099992821
+        },
+        {
+          "power": 2,
+          "Y": 42991297985004.734,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 3576.691184634833,
+          "operator_norm_lower_estimate": 779.3555668566255,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.5861473999975715
+        }
+      ],
+      "operator_seconds": 0.5861473999975715,
+      "wall_seconds": 0.5931951999955345,
+      "pairs": 173,
+      "seed": 3624808150064285619
+    },
+    "12": {
+      "power": 2,
+      "operator_norm_upper_bound": 3663.9049963990637,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 10765006.529341571,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 6401.470650735667,
+          "operator_norm_lower_estimate": 303.90150185554853,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.3420584000123199
+        },
+        {
+          "power": 2,
+          "Y": 47340364384709.0,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 3663.9049963990637,
+          "operator_norm_lower_estimate": 798.1955257465277,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.5292437000171049
+        }
+      ],
+      "operator_seconds": 0.5292437000171049,
+      "wall_seconds": 0.5375116000068374,
+      "pairs": 173,
+      "seed": 8089027518848102816
+    },
+    "13": {
+      "power": 2,
+      "operator_norm_upper_bound": 3861.9609267383676,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 12329310.535696497,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 6850.811301696763,
+          "operator_norm_lower_estimate": 324.4349480666124,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.1376546999963466
+        },
+        {
+          "power": 2,
+          "Y": 58436780660598.88,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 3861.9609267383676,
+          "operator_norm_lower_estimate": 840.428338176235,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.28645259999029804
+        }
+      ],
+      "operator_seconds": 0.28645259999029804,
+      "wall_seconds": 0.3013463000097545,
+      "pairs": 173,
+      "seed": 9053929580031936258
+    },
+    "14": {
+      "power": 2,
+      "operator_norm_upper_bound": 4064.481567490438,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 15009673.858383073,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 7558.893696417885,
+          "operator_norm_lower_estimate": 355.7716660307725,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.14610050000192132
+        },
+        {
+          "power": 2,
+          "Y": 71692778756049.17,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 4064.481567490438,
+          "operator_norm_lower_estimate": 881.7829928928468,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.27518029999919236
+        }
+      ],
+      "operator_seconds": 0.27518029999919236,
+      "wall_seconds": 0.2954977999906987,
+      "pairs": 173,
+      "seed": 1792977099320228567
+    },
+    "15": {
+      "power": 2,
+      "operator_norm_upper_bound": 4097.644684782173,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 14515677.484634899,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 7433.464386110859,
+          "operator_norm_lower_estimate": 351.2188442035307,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.1475256999983685
+        },
+        {
+          "power": 2,
+          "Y": 74061408755449.42,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 4097.644684782173,
+          "operator_norm_lower_estimate": 890.6920362922085,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.33060859999386594
+        }
+      ],
+      "operator_seconds": 0.33060859999386594,
+      "wall_seconds": 0.35323670000070706,
+      "pairs": 173,
+      "seed": 3097309394910885189
+    },
+    "16": {
+      "power": 2,
+      "operator_norm_upper_bound": 3833.614147898895,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 11902666.716497941,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 6731.2349015915925,
+          "operator_norm_lower_estimate": 319.7218466750324,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.16276659999857657
+        },
+        {
+          "power": 2,
+          "Y": 56739875265478.87,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 3833.614147898895,
+          "operator_norm_lower_estimate": 835.5014005752588,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.31668799999170005
+        }
+      ],
+      "operator_seconds": 0.31668799999170005,
+      "wall_seconds": 0.3318979999894509,
+      "pairs": 173,
+      "seed": 6184902545787207744
+    },
+    "17": {
+      "power": 2,
+      "operator_norm_upper_bound": 4139.327001448009,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 15904454.144794492,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 7780.93870370066,
+          "operator_norm_lower_estimate": 366.1936076304257,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.1840220999874873
+        },
+        {
+          "power": 2,
+          "Y": 77121190672718.25,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 4139.327001448009,
+          "operator_norm_lower_estimate": 897.9850757105149,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.34345489999395795
+        }
+      ],
+      "operator_seconds": 0.34345489999395795,
+      "wall_seconds": 0.3669041999964975,
+      "pairs": 173,
+      "seed": 9096864163145124964
+    },
+    "18": {
+      "power": 2,
+      "operator_norm_upper_bound": 3493.6585241656344,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 9973510.031410059,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 6161.644308588747,
+          "operator_norm_lower_estimate": 291.60411215192596,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.1491699000034714
+        },
+        {
+          "power": 2,
+          "Y": 39136014520963.43,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 3493.6585241656344,
+          "operator_norm_lower_estimate": 760.6036732018689,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.2899712999933399
+        }
+      ],
+      "operator_seconds": 0.2899712999933399,
+      "wall_seconds": 0.30718659999547526,
+      "pairs": 173,
+      "seed": 3999115929541037204
+    },
+    "19": {
+      "power": 2,
+      "operator_norm_upper_bound": 3744.384845020466,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 10390853.264642714,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 6289.240694696398,
+          "operator_norm_lower_estimate": 296.82998997985237,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.13998330000322312
+        },
+        {
+          "power": 2,
+          "Y": 51638865875257.16,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 3744.384845020466,
+          "operator_norm_lower_estimate": 813.3495252900942,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.2788377999968361
+        }
+      ],
+      "operator_seconds": 0.2788377999968361,
+      "wall_seconds": 0.3059493999899132,
+      "pairs": 173,
+      "seed": 6198695418358524757
+    },
+    "20": {
+      "power": 2,
+      "operator_norm_upper_bound": 4229.619640414452,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 16271821.870570809,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 7870.289370809493,
+          "operator_norm_lower_estimate": 371.14351586361056,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.12722339999163523
+        },
+        {
+          "power": 2,
+          "Y": 84073675946761.48,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 4229.619640414452,
+          "operator_norm_lower_estimate": 918.4952243057443,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.25388699999894015
+        }
+      ],
+      "operator_seconds": 0.25388699999894015,
+      "wall_seconds": 0.2689243999921018,
+      "pairs": 173,
+      "seed": 3919157678479049499
+    },
+    "21": {
+      "power": 2,
+      "operator_norm_upper_bound": 4241.112671983305,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 16472391.579219792,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 7918.646188338788,
+          "operator_norm_lower_estimate": 373.3737513860212,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.16469689999939874
+        },
+        {
+          "power": 2,
+          "Y": 84991211827274.88,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 4241.112671983305,
+          "operator_norm_lower_estimate": 920.9291770788773,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.3128558000025805
+        }
+      ],
+      "operator_seconds": 0.3128558000025805,
+      "wall_seconds": 0.3439846000110265,
+      "pairs": 173,
+      "seed": 6305013857683201338
+    },
+    "22": {
+      "power": 2,
+      "operator_norm_upper_bound": 3950.480455829128,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 12588825.017812336,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 6922.535768277869,
+          "operator_norm_lower_estimate": 329.34540163782117,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.1350343999947654
+        },
+        {
+          "power": 2,
+          "Y": 63981504836960.61,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 3950.480455829128,
+          "operator_norm_lower_estimate": 861.6742512142358,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.2675377999985358
+        }
+      ],
+      "operator_seconds": 0.2675377999985358,
+      "wall_seconds": 0.28570190000755247,
+      "pairs": 173,
+      "seed": 4358097739493363951
+    },
+    "23": {
+      "power": 2,
+      "operator_norm_upper_bound": 3652.699262158082,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 10047601.627201833,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 6184.488890299196,
+          "operator_norm_lower_estimate": 294.5941099710526,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.13774950000515673
+        },
+        {
+          "power": 2,
+          "Y": 46763870349599.805,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 3652.699262158082,
+          "operator_norm_lower_estimate": 797.2123900557328,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.28019940000376664
+        }
+      ],
+      "operator_seconds": 0.28019940000376664,
+      "wall_seconds": 0.30412330001126975,
+      "pairs": 173,
+      "seed": 7715178542081173982
+    },
+    "24": {
+      "power": 2,
+      "operator_norm_upper_bound": 3630.5190151272463,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 9381901.078415424,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 5976.102457508027,
+          "operator_norm_lower_estimate": 282.5707156449881,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.16629079999984242
+        },
+        {
+          "power": 2,
+          "Y": 45638319373803.5,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 3630.5190151272463,
+          "operator_norm_lower_estimate": 790.1503160961606,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.3540205000026617
+        }
+      ],
+      "operator_seconds": 0.3540205000026617,
+      "wall_seconds": 0.36923949999618344,
+      "pairs": 173,
+      "seed": 6456220227568046563
+    },
+    "25": {
+      "power": 2,
+      "operator_norm_upper_bound": 4465.780506200362,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 19834978.817204494,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 8689.373805527133,
+          "operator_norm_lower_estimate": 409.3900282620463,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.13945100001001265
+        },
+        {
+          "power": 2,
+          "Y": 104482672989735.12,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 4465.780506200362,
+          "operator_norm_lower_estimate": 969.3302442916082,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.29381620000640396
+        }
+      ],
+      "operator_seconds": 0.29381620000640396,
+      "wall_seconds": 0.31820999999763444,
+      "pairs": 173,
+      "seed": 1845109797274525088
+    },
+    "26": {
+      "power": 2,
+      "operator_norm_upper_bound": 4281.7932793951795,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 17187299.7008464,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 8088.657286275897,
+          "operator_norm_lower_estimate": 382.1270812041963,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.15455890000157524
+        },
+        {
+          "power": 2,
+          "Y": 88299361846521.86,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 4281.7932793951795,
+          "operator_norm_lower_estimate": 930.6607265149048,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.29005560000950936
+        }
+      ],
+      "operator_seconds": 0.29005560000950936,
+      "wall_seconds": 0.30689259999780916,
+      "pairs": 173,
+      "seed": 1696855202352330958
+    },
+    "27": {
+      "power": 2,
+      "operator_norm_upper_bound": 4039.8028267682857,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 13182319.479028275,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 7083.836458688045,
+          "operator_norm_lower_estimate": 334.1852859904187,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.14485989999957383
+        },
+        {
+          "power": 2,
+          "Y": 69967354792738.734,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 4039.8028267682857,
+          "operator_norm_lower_estimate": 877.4443214732565,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.28082549999817275
+        }
+      ],
+      "operator_seconds": 0.28082549999817275,
+      "wall_seconds": 0.29738289999659173,
+      "pairs": 173,
+      "seed": 5443273219266160779
+    },
+    "28": {
+      "power": 2,
+      "operator_norm_upper_bound": 3957.068452974572,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 13314406.0828961,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 7119.237956030353,
+          "operator_norm_lower_estimate": 337.47861491034456,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.1253427999909036
+        },
+        {
+          "power": 2,
+          "Y": 64409367262178.35,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 3957.068452974572,
+          "operator_norm_lower_estimate": 861.5489104671097,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.26437049997912254
+        }
+      ],
+      "operator_seconds": 0.26437049997912254,
+      "wall_seconds": 0.2796576999971876,
+      "pairs": 173,
+      "seed": 1030384873408281144
+    },
+    "29": {
+      "power": 2,
+      "operator_norm_upper_bound": 4022.366347247648,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 13582878.149108326,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 7190.655993169626,
+          "operator_norm_lower_estimate": 339.90784895226085,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.23288270000193734
+        },
+        {
+          "power": 2,
+          "Y": 68767188732729.52,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 4022.366347247648,
+          "operator_norm_lower_estimate": 874.536546153019,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.4054065000091214
+        }
+      ],
+      "operator_seconds": 0.4054065000091214,
+      "wall_seconds": 0.42181369999889284,
+      "pairs": 173,
+      "seed": 7028999224739628890
+    },
+    "30": {
+      "power": 2,
+      "operator_norm_upper_bound": 3596.349904759065,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 11634841.77732706,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 6655.073415216498,
+          "operator_norm_lower_estimate": 313.3599447757261,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.17565570000442676
+        },
+        {
+          "power": 2,
+          "Y": 43944298734476.055,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 3596.349904759065,
+          "operator_norm_lower_estimate": 782.805290951425,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.3122969000105513
+        }
+      ],
+      "operator_seconds": 0.3122969000105513,
+      "wall_seconds": 0.3276344999903813,
+      "pairs": 173,
+      "seed": 1746887619133285071
+    },
+    "31": {
+      "power": 2,
+      "operator_norm_upper_bound": 3909.6082446262385,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 11560821.077611841,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 6633.869895559682,
+          "operator_norm_lower_estimate": 315.59993692647936,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.14222579999477603
+        },
+        {
+          "power": 2,
+          "Y": 61374468991572.3,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 3909.6082446262385,
+          "operator_norm_lower_estimate": 852.7431134360467,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.32144139999581967
+        }
+      ],
+      "operator_seconds": 0.32144139999581967,
+      "wall_seconds": 0.3391721999942092,
+      "pairs": 173,
+      "seed": 5557847268583288096
+    },
+    "32": {
+      "power": 2,
+      "operator_norm_upper_bound": 4019.784564153663,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 14732018.005533924,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 7488.653399104847,
+          "operator_norm_lower_estimate": 353.77046697461606,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.139370399992913
+        },
+        {
+          "power": 2,
+          "Y": 68590803900180.04,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 4019.784564153663,
+          "operator_norm_lower_estimate": 872.398805226094,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.2712698999821441
+        }
+      ],
+      "operator_seconds": 0.2712698999821441,
+      "wall_seconds": 0.2895464000030188,
+      "pairs": 173,
+      "seed": 8886723245771802214
+    },
+    "33": {
+      "power": 2,
+      "operator_norm_upper_bound": 3593.2119887798035,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 9124138.924993895,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 5893.4357676931795,
+          "operator_norm_lower_estimate": 280.3616963414054,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.1305789000034565
+        },
+        {
+          "power": 2,
+          "Y": 43791128824019.13,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 3593.2119887798035,
+          "operator_norm_lower_estimate": 783.7145366128684,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.27771320000465494
+        }
+      ],
+      "operator_seconds": 0.27771320000465494,
+      "wall_seconds": 0.2952473000041209,
+      "pairs": 173,
+      "seed": 4336787897253546183
+    },
+    "34": {
+      "power": 2,
+      "operator_norm_upper_bound": 4178.115096646083,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 14707489.097000867,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 7482.416472888888,
+          "operator_norm_lower_estimate": 354.4760841792739,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.1383170000044629
+        },
+        {
+          "power": 2,
+          "Y": 80052772635110.2,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 4178.115096646083,
+          "operator_norm_lower_estimate": 909.3957716266405,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.2660008000093512
+        }
+      ],
+      "operator_seconds": 0.2660008000093512,
+      "wall_seconds": 0.2814197999978205,
+      "pairs": 173,
+      "seed": 5669473972572829810
+    },
+    "35": {
+      "power": 2,
+      "operator_norm_upper_bound": 4043.417942192925,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 13659699.989680342,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 7210.961725140581,
+          "operator_norm_lower_estimate": 340.1529111663252,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.13586920000670943
+        },
+        {
+          "power": 2,
+          "Y": 70218139102080.68,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 4043.417942192925,
+          "operator_norm_lower_estimate": 878.1913089646856,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.29640560000552796
+        }
+      ],
+      "operator_seconds": 0.29640560000552796,
+      "wall_seconds": 0.3114828999969177,
+      "pairs": 173,
+      "seed": 5213303812586908513
+    },
+    "36": {
+      "power": 2,
+      "operator_norm_upper_bound": 4048.4927869583134,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 13146116.302988345,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 7074.102447121608,
+          "operator_norm_lower_estimate": 334.68314036239116,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.14579580001009163
+        },
+        {
+          "power": 2,
+          "Y": 70571323057704.81,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 4048.4927869583134,
+          "operator_norm_lower_estimate": 883.4655284454175,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.28219340000941884
+        }
+      ],
+      "operator_seconds": 0.28219340000941884,
+      "wall_seconds": 0.2997501000063494,
+      "pairs": 173,
+      "seed": 4966543283050040913
+    },
+    "37": {
+      "power": 2,
+      "operator_norm_upper_bound": 3659.229310092775,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 10986784.236303398,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 6467.075151657422,
+          "operator_norm_lower_estimate": 306.0441294491752,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.13988940000126604
+        },
+        {
+          "power": 2,
+          "Y": 47099173258394.58,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 3659.229310092775,
+          "operator_norm_lower_estimate": 797.6422209925975,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.2869151999911992
+        }
+      ],
+      "operator_seconds": 0.2869151999911992,
+      "wall_seconds": 0.30669829998805653,
+      "pairs": 173,
+      "seed": 1107197945307804984
+    },
+    "38": {
+      "power": 2,
+      "operator_norm_upper_bound": 4113.171801197556,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 13954236.207663644,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 7288.290002557371,
+          "operator_norm_lower_estimate": 344.48123454780364,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.14107559999683872
+        },
+        {
+          "power": 2,
+          "Y": 75190362591715.23,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 4113.171801197556,
+          "operator_norm_lower_estimate": 894.2250089631405,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.2721694999927422
+        }
+      ],
+      "operator_seconds": 0.2721694999927422,
+      "wall_seconds": 0.2896967999986373,
+      "pairs": 173,
+      "seed": 5209693476799061875
+    },
+    "39": {
+      "power": 2,
+      "operator_norm_upper_bound": 4175.789760717132,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 14415832.661827018,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 7407.855053685024,
+          "operator_norm_lower_estimate": 348.8604263635263,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.1488307999970857
+        },
+        {
+          "power": 2,
+          "Y": 79874707417622.69,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 4175.789760717132,
+          "operator_norm_lower_estimate": 906.1878618116843,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.2994625999854179
+        }
+      ],
+      "operator_seconds": 0.2994625999854179,
+      "wall_seconds": 0.3160076000058325,
+      "pairs": 173,
+      "seed": 443926134966020970
+    },
+    "40": {
+      "power": 2,
+      "operator_norm_upper_bound": 3972.113760508558,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 12695627.92600248,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 6951.838956747365,
+          "operator_norm_lower_estimate": 327.331116779878,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.1574280000058934
+        },
+        {
+          "power": 2,
+          "Y": 65394540513782.04,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 3972.113760508558,
+          "operator_norm_lower_estimate": 861.9170519504853,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.29409310000482947
+        }
+      ],
+      "operator_seconds": 0.29409310000482947,
+      "wall_seconds": 0.309913700009929,
+      "pairs": 173,
+      "seed": 7511944196398337026
+    },
+    "41": {
+      "power": 2,
+      "operator_norm_upper_bound": 4039.024540939278,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 13190797.924374245,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 7086.114140787192,
+          "operator_norm_lower_estimate": 335.27446441691836,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.12432149999949615
+        },
+        {
+          "power": 2,
+          "Y": 69913452294319.51,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 4039.024540939278,
+          "operator_norm_lower_estimate": 878.5624933318344,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.2772300000069663
+        }
+      ],
+      "operator_seconds": 0.2772300000069663,
+      "wall_seconds": 0.29408360000525136,
+      "pairs": 173,
+      "seed": 7298924969421325370
+    },
+    "42": {
+      "power": 2,
+      "operator_norm_upper_bound": 3835.8006158751373,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 11051690.651796527,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 6486.149729719963,
+          "operator_norm_lower_estimate": 307.60173237291946,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.15889639999659266
+        },
+        {
+          "power": 2,
+          "Y": 56869430396000.34,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 3835.8006158751373,
+          "operator_norm_lower_estimate": 834.0507063030876,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.30382199998712167
+        }
+      ],
+      "operator_seconds": 0.30382199998712167,
+      "wall_seconds": 0.3224035000021104,
+      "pairs": 173,
+      "seed": 7605287876160782540
+    },
+    "43": {
+      "power": 2,
+      "operator_norm_upper_bound": 3977.7782065449246,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 13528688.192594752,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 7176.297815373869,
+          "operator_norm_lower_estimate": 337.0913570714783,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.1651265999971656
+        },
+        {
+          "power": 2,
+          "Y": 65768363609497.51,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 3977.7782065449246,
+          "operator_norm_lower_estimate": 862.8635465571449,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.35085740000067744
+        }
+      ],
+      "operator_seconds": 0.35085740000067744,
+      "wall_seconds": 0.366820800001733,
+      "pairs": 173,
+      "seed": 8822798346481736165
+    },
+    "44": {
+      "power": 2,
+      "operator_norm_upper_bound": 4226.216571020602,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 14754243.850677934,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 7494.300246719122,
+          "operator_norm_lower_estimate": 352.0246259733373,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.20187419999274425
+        },
+        {
+          "power": 2,
+          "Y": 83803426168410.55,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 4226.216571020602,
+          "operator_norm_lower_estimate": 915.9520251831482,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.39881979998608585
+        }
+      ],
+      "operator_seconds": 0.39881979998608585,
+      "wall_seconds": 0.41574620000028517,
+      "pairs": 173,
+      "seed": 798629509453817913
+    },
+    "45": {
+      "power": 2,
+      "operator_norm_upper_bound": 4173.82518010524,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 15166919.791781416,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 7598.385175660802,
+          "operator_norm_lower_estimate": 360.26717419726367,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.17792779998853803
+        },
+        {
+          "power": 2,
+          "Y": 79724499091987.23,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 4173.82518010524,
+          "operator_norm_lower_estimate": 908.8368941185113,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.44699779998336453
+        }
+      ],
+      "operator_seconds": 0.44699779998336453,
+      "wall_seconds": 0.46508280000125524,
+      "pairs": 173,
+      "seed": 1216056104316421526
+    },
+    "46": {
+      "power": 2,
+      "operator_norm_upper_bound": 3983.876503669087,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 13355197.709586767,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 7130.135295539551,
+          "operator_norm_lower_estimate": 336.1807867500626,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.17809509999642614
+        },
+        {
+          "power": 2,
+          "Y": 66172607659073.664,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 3983.876503669087,
+          "operator_norm_lower_estimate": 865.0544139920331,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.3270625999866752
+        }
+      ],
+      "operator_seconds": 0.3270625999866752,
+      "wall_seconds": 0.34318110000458546,
+      "pairs": 173,
+      "seed": 7705942212760730482
+    },
+    "47": {
+      "power": 2,
+      "operator_norm_upper_bound": 4181.55431613384,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 14704781.501638496,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 7481.727698329477,
+          "operator_norm_lower_estimate": 353.39927799507694,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.14910999999847263
+        },
+        {
+          "power": 2,
+          "Y": 80316680334758.14,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 4181.55431613384,
+          "operator_norm_lower_estimate": 908.8027289702449,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.3150941999920178
+        }
+      ],
+      "operator_seconds": 0.3150941999920178,
+      "wall_seconds": 0.33064339999691583,
+      "pairs": 173,
+      "seed": 5834419196057720349
+    },
+    "48": {
+      "power": 2,
+      "operator_norm_upper_bound": 4299.052692425458,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 16223733.374693155,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 7858.651140606254,
+          "operator_norm_lower_estimate": 370.7244875777471,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.15381659999547992
+        },
+        {
+          "power": 2,
+          "Y": 89731691167736.8,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 4299.052692425458,
+          "operator_norm_lower_estimate": 933.7366378114413,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.3026460999972187
+        }
+      ],
+      "operator_seconds": 0.3026460999972187,
+      "wall_seconds": 0.32012899999972433,
+      "pairs": 173,
+      "seed": 8641356030822092891
+    },
+    "49": {
+      "power": 2,
+      "operator_norm_upper_bound": 3968.2130943229795,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 13316154.595620988,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 7119.705407203968,
+          "operator_norm_lower_estimate": 335.49935917536476,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.14165099999809172
+        },
+        {
+          "power": 2,
+          "Y": 65138045566115.72,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 3968.2130943229795,
+          "operator_norm_lower_estimate": 861.4098257410842,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.28470579998975154
+        }
+      ],
+      "operator_seconds": 0.28470579998975154,
+      "wall_seconds": 0.2996899999998277,
+      "pairs": 173,
+      "seed": 6642397570849706608
+    },
+    "50": {
+      "power": 2,
+      "operator_norm_upper_bound": 4099.196198905968,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 13664120.66557177,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 7212.128469138857,
+          "operator_norm_lower_estimate": 339.8514387658066,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.13965169999573845
+        },
+        {
+          "power": 2,
+          "Y": 74173641619970.11,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 4099.196198905968,
+          "operator_norm_lower_estimate": 889.8392018966972,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.3024853999959305
+        }
+      ],
+      "operator_seconds": 0.3024853999959305,
+      "wall_seconds": 0.31970569999248255,
+      "pairs": 173,
+      "seed": 3638769024867662378
+    },
+    "51": {
+      "power": 2,
+      "operator_norm_upper_bound": 4132.040183312699,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 14185420.317581302,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 7348.415663085119,
+          "operator_norm_lower_estimate": 348.8670744199791,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.1630762999993749
+        },
+        {
+          "power": 2,
+          "Y": 76579570347246.89,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 4132.040183312699,
+          "operator_norm_lower_estimate": 900.3216025539336,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.33336820000840817
+        }
+      ],
+      "operator_seconds": 0.33336820000840817,
+      "wall_seconds": 0.3527570000005653,
+      "pairs": 173,
+      "seed": 7353294787925320454
+    }
+  },
+  "cert": {
+    "28": {
+      "power": 2,
+      "operator_norm_upper_bound": 2425.4258952585565,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 4835389.245189553,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 4290.30660535689,
+          "operator_norm_lower_estimate": 202.4311134724109,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.08890960000280757
+        },
+        {
+          "power": 2,
+          "Y": 9090898739895.898,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 2425.4258952585565,
+          "operator_norm_lower_estimate": 526.8445320558441,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.18523440000717528
+        }
+      ],
+      "operator_seconds": 0.18523440000717528,
+      "wall_seconds": 0.20480330000282265,
+      "pairs": 58,
+      "seed": 6749884687854330288
+    },
+    "29": {
+      "power": 2,
+      "operator_norm_upper_bound": 2366.852416239154,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 4484581.977844518,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 4131.745792922325,
+          "operator_norm_lower_estimate": 194.85135260685408,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.08379800000693649
+        },
+        {
+          "power": 2,
+          "Y": 8244028690552.637,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 2366.852416239154,
+          "operator_norm_lower_estimate": 513.9916860861813,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.16661390001536347
+        }
+      ],
+      "operator_seconds": 0.16661390001536347,
+      "wall_seconds": 0.1840445000125328,
+      "pairs": 58,
+      "seed": 483102464504907061
+    },
+    "30": {
+      "power": 2,
+      "operator_norm_upper_bound": 2344.6778695049247,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 4072920.7035668325,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 3937.545518376074,
+          "operator_norm_lower_estimate": 185.62212014126172,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.1148587000061525
+        },
+        {
+          "power": 2,
+          "Y": 7939396974540.692,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 2344.6778695049247,
+          "operator_norm_lower_estimate": 509.07908524400693,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.20521410000219475
+        }
+      ],
+      "operator_seconds": 0.20521410000219475,
+      "wall_seconds": 0.2253772999974899,
+      "pairs": 58,
+      "seed": 4629092043487240389
+    },
+    "31": {
+      "power": 2,
+      "operator_norm_upper_bound": 2345.2688743673093,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 4214466.048174867,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 4005.381519186436,
+          "operator_norm_lower_estimate": 189.0423874483147,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.1256982000049902
+        },
+        {
+          "power": 2,
+          "Y": 7947404891831.046,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 2345.2688743673093,
+          "operator_norm_lower_estimate": 509.507160280229,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.22330759999749716
+        }
+      ],
+      "operator_seconds": 0.22330759999749716,
+      "wall_seconds": 0.2441606999927899,
+      "pairs": 58,
+      "seed": 663882216092246078
+    },
+    "32": {
+      "power": 2,
+      "operator_norm_upper_bound": 2503.740580369981,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 5189442.918063326,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 4444.603045589717,
+          "operator_norm_lower_estimate": 209.90007346191436,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.09745000000111759
+        },
+        {
+          "power": 2,
+          "Y": 10323146574264.879,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 2503.740580369981,
+          "operator_norm_lower_estimate": 544.1005111755909,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.208578400008264
+        }
+      ],
+      "operator_seconds": 0.208578400008264,
+      "wall_seconds": 0.23278979999304283,
+      "pairs": 58,
+      "seed": 3385196955465961883
+    },
+    "33": {
+      "power": 2,
+      "operator_norm_upper_bound": 2287.056473336922,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 3957604.7243559426,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 3881.4037203670277,
+          "operator_norm_lower_estimate": 183.94422144967515,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.10592230000474956
+        },
+        {
+          "power": 2,
+          "Y": 7187243099326.408,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 2287.056473336922,
+          "operator_norm_lower_estimate": 497.88100126937366,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.19731010000396054
+        }
+      ],
+      "operator_seconds": 0.19731010000396054,
+      "wall_seconds": 0.21306549999280833,
+      "pairs": 58,
+      "seed": 2938938566541880460
+    },
+    "34": {
+      "power": 2,
+      "operator_norm_upper_bound": 2308.924618398886,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 3841472.4349453053,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 3824.031583054153,
+          "operator_norm_lower_estimate": 180.47818087689419,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.10915469999599736
+        },
+        {
+          "power": 2,
+          "Y": 7466099914280.927,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 2308.924618398886,
+          "operator_norm_lower_estimate": 501.604439399895,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.21649010000692215
+        }
+      ],
+      "operator_seconds": 0.21649010000692215,
+      "wall_seconds": 0.2356601000064984,
+      "pairs": 58,
+      "seed": 8289473199898773197
+    },
+    "35": {
+      "power": 2,
+      "operator_norm_upper_bound": 2193.468760441359,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 3476654.5991809615,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 3637.9219986499597,
+          "operator_norm_lower_estimate": 171.10064574113724,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.10595859999011736
+        },
+        {
+          "power": 2,
+          "Y": 6081078284266.615,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 2193.468760441359,
+          "operator_norm_lower_estimate": 475.69719033395495,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.19766679999884218
+        }
+      ],
+      "operator_seconds": 0.19766679999884218,
+      "wall_seconds": 0.21305599999323022,
+      "pairs": 58,
+      "seed": 7861614985762986428
+    },
+    "36": {
+      "power": 2,
+      "operator_norm_upper_bound": 2537.1215951518634,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 5337827.272627864,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 4507.698580348218,
+          "operator_norm_lower_estimate": 212.3143554697441,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.11398379999445751
+        },
+        {
+          "power": 2,
+          "Y": 10884786319861.44,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 2537.1215951518634,
+          "operator_norm_lower_estimate": 550.6219596005224,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.1990903999976581
+        }
+      ],
+      "operator_seconds": 0.1990903999976581,
+      "wall_seconds": 0.22083719998772722,
+      "pairs": 58,
+      "seed": 3641146719568618502
+    },
+    "37": {
+      "power": 2,
+      "operator_norm_upper_bound": 2594.831347195911,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 5858759.299821042,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 4722.537746493548,
+          "operator_norm_lower_estimate": 223.48805714082087,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.09320370000205003
+        },
+        {
+          "power": 2,
+          "Y": 11909439527738.426,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 2594.831347195911,
+          "operator_norm_lower_estimate": 564.480023169515,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.19420679999166168
+        }
+      ],
+      "operator_seconds": 0.19420679999166168,
+      "wall_seconds": 0.20917679999547545,
+      "pairs": 58,
+      "seed": 5934648589664737384
+    },
+    "38": {
+      "power": 2,
+      "operator_norm_upper_bound": 2299.7228112486446,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 4335918.579945788,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 4062.6851727715853,
+          "operator_norm_lower_estimate": 191.5657583957938,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.10077780000574421
+        },
+        {
+          "power": 2,
+          "Y": 7347790283740.762,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 2299.7228112486446,
+          "operator_norm_lower_estimate": 499.37621136987286,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.21719180000945926
+        }
+      ],
+      "operator_seconds": 0.21719180000945926,
+      "wall_seconds": 0.23459890000231098,
+      "pairs": 58,
+      "seed": 7240777615780548315
+    },
+    "39": {
+      "power": 2,
+      "operator_norm_upper_bound": 2601.566334386416,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 5888373.311576373,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 4734.4581035926285,
+          "operator_norm_lower_estimate": 223.0786733146148,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.10114579999935813
+        },
+        {
+          "power": 2,
+          "Y": 12033567433768.29,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 2601.566334386416,
+          "operator_norm_lower_estimate": 564.7143081676144,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.21511479999753647
+        }
+      ],
+      "operator_seconds": 0.21511479999753647,
+      "wall_seconds": 0.2344991999998456,
+      "pairs": 58,
+      "seed": 8473003430318320645
+    },
+    "40": {
+      "power": 2,
+      "operator_norm_upper_bound": 2289.4010458837147,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 4159295.2776525007,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 3979.078310600844,
+          "operator_norm_lower_estimate": 188.0908117398125,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.08155640000768472
+        },
+        {
+          "power": 2,
+          "Y": 7216760416374.817,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 2289.4010458837147,
+          "operator_norm_lower_estimate": 497.9728114619705,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.18940620000648778
+        }
+      ],
+      "operator_seconds": 0.18940620000648778,
+      "wall_seconds": 0.20444180000049528,
+      "pairs": 58,
+      "seed": 85881798625071480
+    },
+    "41": {
+      "power": 2,
+      "operator_norm_upper_bound": 2367.9161822242845,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 4529459.002810313,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 4152.367435349686,
+          "operator_norm_lower_estimate": 196.49659613251487,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.09620840000570752
+        },
+        {
+          "power": 2,
+          "Y": 8258859579456.526,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 2367.9161822242845,
+          "operator_norm_lower_estimate": 515.2582988681085,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.24176689999876544
+        }
+      ],
+      "operator_seconds": 0.24176689999876544,
+      "wall_seconds": 0.2610920000006445,
+      "pairs": 58,
+      "seed": 2478879158353485204
+    },
+    "42": {
+      "power": 2,
+      "operator_norm_upper_bound": 2544.7492197168453,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 5712814.627332799,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 4663.346392132041,
+          "operator_norm_lower_estimate": 220.4924176221314,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.09603359999891836
+        },
+        {
+          "power": 2,
+          "Y": 11016274263646.34,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 2544.7492197168453,
+          "operator_norm_lower_estimate": 553.3411668853975,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.18904269998893142
+        }
+      ],
+      "operator_seconds": 0.18904269998893142,
+      "wall_seconds": 0.20743330000550486,
+      "pairs": 58,
+      "seed": 8127381277093404411
+    },
+    "43": {
+      "power": 2,
+      "operator_norm_upper_bound": 2481.67745791747,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 4704051.829145973,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 4231.639466870388,
+          "operator_norm_lower_estimate": 199.75722609092952,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.10394050000468269
+        },
+        {
+          "power": 2,
+          "Y": 9964055171288.766,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 2481.67745791747,
+          "operator_norm_lower_estimate": 539.1905296707505,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.23335860000224784
+        }
+      ],
+      "operator_seconds": 0.23335860000224784,
+      "wall_seconds": 0.2493267000099877,
+      "pairs": 58,
+      "seed": 1735409024675745323
+    },
+    "44": {
+      "power": 2,
+      "operator_norm_upper_bound": 2196.4524510984843,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 4037189.987590479,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 3920.235919906809,
+          "operator_norm_lower_estimate": 185.2527523450964,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.08221560000674799
+        },
+        {
+          "power": 2,
+          "Y": 6114233278511.495,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 2196.4524510984843,
+          "operator_norm_lower_estimate": 477.12748047303046,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.2105269000021508
+        }
+      ],
+      "operator_seconds": 0.2105269000021508,
+      "wall_seconds": 0.22854770001140423,
+      "pairs": 58,
+      "seed": 4216422172099789004
+    },
+    "45": {
+      "power": 2,
+      "operator_norm_upper_bound": 2479.222430586141,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 5517032.744179132,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 4582.741817784161,
+          "operator_norm_lower_estimate": 216.49489678235076,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.0806297000090126
+        },
+        {
+          "power": 2,
+          "Y": 9924685425429.285,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 2479.222430586141,
+          "operator_norm_lower_estimate": 538.8608464483061,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.17245300000649877
+        }
+      ],
+      "operator_seconds": 0.17245300000649877,
+      "wall_seconds": 0.190522000004421,
+      "pairs": 58,
+      "seed": 1563228942012802510
+    },
+    "46": {
+      "power": 2,
+      "operator_norm_upper_bound": 2736.053482247342,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 6864219.589896611,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 5111.733385478975,
+          "operator_norm_lower_estimate": 241.51694649860534,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.08667049999348819
+        },
+        {
+          "power": 2,
+          "Y": 14721535471105.193,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 2736.053482247342,
+          "operator_norm_lower_estimate": 594.7223912625682,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.1774544999934733
+        }
+      ],
+      "operator_seconds": 0.1774544999934733,
+      "wall_seconds": 0.19746570001007058,
+      "pairs": 58,
+      "seed": 974533111409148777
+    },
+    "47": {
+      "power": 2,
+      "operator_norm_upper_bound": 2352.92569143138,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 4229399.433361352,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 4012.4715054890794,
+          "operator_norm_lower_estimate": 190.0382069676304,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.12562150000303518
+        },
+        {
+          "power": 2,
+          "Y": 8051700784054.85,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 2352.92569143138,
+          "operator_norm_lower_estimate": 511.2483558329369,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.25465130001248326
+        }
+      ],
+      "operator_seconds": 0.25465130001248326,
+      "wall_seconds": 0.2757627999963006,
+      "pairs": 58,
+      "seed": 7128825704045480164
+    },
+    "48": {
+      "power": 2,
+      "operator_norm_upper_bound": 2478.169488166821,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 5222909.695565798,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 4458.911661823197,
+          "operator_norm_lower_estimate": 211.74737498179255,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.09136869999929331
+        },
+        {
+          "power": 2,
+          "Y": 9907835841167.605,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 2478.169488166821,
+          "operator_norm_lower_estimate": 540.0395776072296,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.1800230999942869
+        }
+      ],
+      "operator_seconds": 0.1800230999942869,
+      "wall_seconds": 0.20590080000692979,
+      "pairs": 58,
+      "seed": 2615046750451516918
+    },
+    "49": {
+      "power": 2,
+      "operator_norm_upper_bound": 2363.790545817062,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 3947317.015727787,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 3876.355624752173,
+          "operator_norm_lower_estimate": 182.8903827258133,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.09827829999267124
+        },
+        {
+          "power": 2,
+          "Y": 8201451962002.706,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 2363.790545817062,
+          "operator_norm_lower_estimate": 513.1549671114813,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.19230699999025092
+        }
+      ],
+      "operator_seconds": 0.19230699999025092,
+      "wall_seconds": 0.2096258000092348,
+      "pairs": 58,
+      "seed": 5082953752308450282
+    },
+    "50": {
+      "power": 2,
+      "operator_norm_upper_bound": 2352.753939321497,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 4390640.326038179,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 4088.2414847481155,
+          "operator_norm_lower_estimate": 193.31248511660104,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.09429989999625832
+        },
+        {
+          "power": 2,
+          "Y": 8049350101764.895,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 2352.753939321497,
+          "operator_norm_lower_estimate": 511.29523909320324,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.17471849999856204
+        }
+      ],
+      "operator_seconds": 0.17471849999856204,
+      "wall_seconds": 0.1965193000069121,
+      "pairs": 58,
+      "seed": 3299931643392978082
+    },
+    "51": {
+      "power": 2,
+      "operator_norm_upper_bound": 2414.646159139056,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 4825844.794836595,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 4286.0702509353705,
+          "operator_norm_lower_estimate": 203.57967994941436,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.09293610000167973
+        },
+        {
+          "power": 2,
+          "Y": 8930356044683.219,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 2414.646159139056,
+          "operator_norm_lower_estimate": 525.6707588716359,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.18342410000332166
+        }
+      ],
+      "operator_seconds": 0.18342410000332166,
+      "wall_seconds": 0.19812719999754336,
+      "pairs": 58,
+      "seed": 2917350728640834559
+    },
+    "52": {
+      "power": 2,
+      "operator_norm_upper_bound": 2563.5125942187046,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 5479114.870521832,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 4566.966360678375,
+          "operator_norm_lower_estimate": 215.46165518717055,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.1030592000024626
+        },
+        {
+          "power": 2,
+          "Y": 11344793674274.73,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 2563.5125942187046,
+          "operator_norm_lower_estimate": 556.8093828014012,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.218733700006851
+        }
+      ],
+      "operator_seconds": 0.218733700006851,
+      "wall_seconds": 0.23567860000184737,
+      "pairs": 58,
+      "seed": 4186164381420624165
+    },
+    "25": {
+      "power": 2,
+      "operator_norm_upper_bound": 2579.592973520177,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 5985898.201072997,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 4773.5038072158695,
+          "operator_norm_lower_estimate": 224.65549082984066,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.12679400001070462
+        },
+        {
+          "power": 2,
+          "Y": 11632137344641.303,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 2579.592973520177,
+          "operator_norm_lower_estimate": 559.617217161673,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.2263307000102941
+        }
+      ],
+      "operator_seconds": 0.2263307000102941,
+      "wall_seconds": 0.24582110000483226,
+      "pairs": 58,
+      "seed": 8888368874363575665
+    },
+    "27": {
+      "power": 2,
+      "operator_norm_upper_bound": 2434.18757217728,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 5192950.123819619,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 4446.104700465826,
+          "operator_norm_lower_estimate": 211.2090086975792,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.09793509999872185
+        },
+        {
+          "power": 2,
+          "Y": 9222973129407.812,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 2434.18757217728,
+          "operator_norm_lower_estimate": 530.5427902285616,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.2171126000030199
+        }
+      ],
+      "operator_seconds": 0.2171126000030199,
+      "wall_seconds": 0.23324909999791998,
+      "pairs": 58,
+      "seed": 7022504624198303233
+    }
+  },
+  "fused_train": {
+    "1": {
+      "power": 2,
+      "operator_norm_upper_bound": 3880.509477375749,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 13171638.771250555,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 7080.9661095409465,
+          "operator_norm_lower_estimate": 334.01009350810693,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.16045939999457914
+        },
+        {
+          "power": 2,
+          "Y": 59567554933199.3,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 3880.509477375749,
+          "operator_norm_lower_estimate": 842.7956513376944,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.33456570000271313
+        }
+      ],
+      "operator_seconds": 0.33456570000271313,
+      "wall_seconds": 0.34992480000073556,
+      "pairs": 173,
+      "seed": 9211789803709806823
+    },
+    "2": {
+      "power": 2,
+      "operator_norm_upper_bound": 3621.864508646136,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 10718728.527573792,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 6387.696096024365,
+          "operator_norm_lower_estimate": 302.58134861090514,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.1734636000037426
+        },
+        {
+          "power": 2,
+          "Y": 45204698681753.195,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 3621.864508646136,
+          "operator_norm_lower_estimate": 788.2811724397363,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.34310070000356063
+        }
+      ],
+      "operator_seconds": 0.34310070000356063,
+      "wall_seconds": 0.36343610000039916,
+      "pairs": 173,
+      "seed": 9009959931970752785
+    },
+    "3": {
+      "power": 2,
+      "operator_norm_upper_bound": 3870.177866596111,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 13220396.405387267,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 7094.059857618361,
+          "operator_norm_lower_estimate": 334.72969041108877,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.1713257999945199
+        },
+        {
+          "power": 2,
+          "Y": 58935704558340.586,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 3870.177866596111,
+          "operator_norm_lower_estimate": 840.6798121395112,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.35582339999382384
+        }
+      ],
+      "operator_seconds": 0.35582339999382384,
+      "wall_seconds": 0.3753504999913275,
+      "pairs": 173,
+      "seed": 8856965861738827060
+    },
+    "4": {
+      "power": 2,
+      "operator_norm_upper_bound": 3891.2572581017307,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 13597007.594816469,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 7194.3950230719165,
+          "operator_norm_lower_estimate": 337.83609003118625,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.1590280999953393
+        },
+        {
+          "power": 2,
+          "Y": 60230234658801.66,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 3891.2572581017307,
+          "operator_norm_lower_estimate": 843.2295642528798,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.34952059999341145
+        }
+      ],
+      "operator_seconds": 0.34952059999341145,
+      "wall_seconds": 0.3665820000023814,
+      "pairs": 173,
+      "seed": 5735260652188891158
+    },
+    "5": {
+      "power": 2,
+      "operator_norm_upper_bound": 3778.1229343562345,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 11568363.921492634,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 6636.033672917063,
+          "operator_norm_lower_estimate": 315.2000003388775,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.14978389999305364
+        },
+        {
+          "power": 2,
+          "Y": 53525301288565.03,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 3778.1229343562345,
+          "operator_norm_lower_estimate": 823.4076531025497,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.2899592999892775
+        }
+      ],
+      "operator_seconds": 0.2899592999892775,
+      "wall_seconds": 0.30837239998800214,
+      "pairs": 173,
+      "seed": 4810989748472548311
+    },
+    "6": {
+      "power": 2,
+      "operator_norm_upper_bound": 3673.1709346550033,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 10945673.486298786,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 6454.964443120565,
+          "operator_norm_lower_estimate": 304.7209664847493,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.16729399999894667
+        },
+        {
+          "power": 2,
+          "Y": 47821075229507.766,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 3673.1709346550033,
+          "operator_norm_lower_estimate": 798.0780761207682,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.3139724000066053
+        }
+      ],
+      "operator_seconds": 0.3139724000066053,
+      "wall_seconds": 0.33099489999585785,
+      "pairs": 173,
+      "seed": 722930533709801886
+    },
+    "7": {
+      "power": 2,
+      "operator_norm_upper_bound": 4133.693745352762,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 15656713.895716192,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 7720.0998541336985,
+          "operator_norm_lower_estimate": 366.7088736781565,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.22239589999662712
+        },
+        {
+          "power": 2,
+          "Y": 76702226562543.66,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 4133.693745352762,
+          "operator_norm_lower_estimate": 900.9227389857045,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.4075278999953298
+        }
+      ],
+      "operator_seconds": 0.4075278999953298,
+      "wall_seconds": 0.4266905999975279,
+      "pairs": 173,
+      "seed": 3862091979347425659
+    },
+    "8": {
+      "power": 2,
+      "operator_norm_upper_bound": 3862.180277800626,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 12295998.821305538,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 6841.550174518939,
+          "operator_norm_lower_estimate": 322.32517290936534,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.17032649999600835
+        },
+        {
+          "power": 2,
+          "Y": 58450058124834.31,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 3862.180277800626,
+          "operator_norm_lower_estimate": 838.3056549496554,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.323395299987169
+        }
+      ],
+      "operator_seconds": 0.323395299987169,
+      "wall_seconds": 0.343625500012422,
+      "pairs": 173,
+      "seed": 6269007673806188807
+    },
+    "9": {
+      "power": 2,
+      "operator_norm_upper_bound": 3750.780853552841,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 12329333.562832428,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 6850.817699235739,
+          "operator_norm_lower_estimate": 323.71386693621054,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.14633370000228751
+        },
+        {
+          "power": 2,
+          "Y": 51992600726702.5,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 3750.780853552841,
+          "operator_norm_lower_estimate": 815.4196466861773,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.2903099000104703
+        }
+      ],
+      "operator_seconds": 0.2903099000104703,
+      "wall_seconds": 0.3061617000057595,
+      "pairs": 173,
+      "seed": 5838556332158455619
+    },
+    "10": {
+      "power": 2,
+      "operator_norm_upper_bound": 3534.782870213193,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 12249430.46176004,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 6828.582460304468,
+          "operator_norm_lower_estimate": 322.9285413261638,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.1342376999964472
+        },
+        {
+          "power": 2,
+          "Y": 41011508789342.83,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 3534.782870213193,
+          "operator_norm_lower_estimate": 768.6890207306058,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.2954777999984799
+        }
+      ],
+      "operator_seconds": 0.2954777999984799,
+      "wall_seconds": 0.31202650000341237,
+      "pairs": 173,
+      "seed": 3227290279656797481
+    },
+    "11": {
+      "power": 2,
+      "operator_norm_upper_bound": 3576.691184634833,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 9880926.737471417,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 6132.978603083276,
+          "operator_norm_lower_estimate": 291.1922717637152,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.19112710001354571
+        },
+        {
+          "power": 2,
+          "Y": 42991297985004.734,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 3576.691184634833,
+          "operator_norm_lower_estimate": 779.3555668566255,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.3374774000112666
+        }
+      ],
+      "operator_seconds": 0.3374774000112666,
+      "wall_seconds": 0.356633100003819,
+      "pairs": 173,
+      "seed": 3624808150064285619
+    },
+    "12": {
+      "power": 2,
+      "operator_norm_upper_bound": 3663.9049963990637,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 10765006.529341571,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 6401.470650735667,
+          "operator_norm_lower_estimate": 303.90150185554853,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.14550030000100378
+        },
+        {
+          "power": 2,
+          "Y": 47340364384709.0,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 3663.9049963990637,
+          "operator_norm_lower_estimate": 798.1955257465277,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.2933545999985654
+        }
+      ],
+      "operator_seconds": 0.2933545999985654,
+      "wall_seconds": 0.30828260000271257,
+      "pairs": 173,
+      "seed": 8089027518848102816
+    },
+    "13": {
+      "power": 2,
+      "operator_norm_upper_bound": 3861.9609267383676,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 12329310.535696497,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 6850.811301696763,
+          "operator_norm_lower_estimate": 324.4349480666124,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.153094900000724
+        },
+        {
+          "power": 2,
+          "Y": 58436780660598.88,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 3861.9609267383676,
+          "operator_norm_lower_estimate": 840.428338176235,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.3133099999977276
+        }
+      ],
+      "operator_seconds": 0.3133099999977276,
+      "wall_seconds": 0.33644519999506883,
+      "pairs": 173,
+      "seed": 9053929580031936258
+    },
+    "14": {
+      "power": 2,
+      "operator_norm_upper_bound": 4064.481567490438,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 15009673.858383073,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 7558.893696417885,
+          "operator_norm_lower_estimate": 355.7716660307725,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.23636969999643043
+        },
+        {
+          "power": 2,
+          "Y": 71692778756049.17,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 4064.481567490438,
+          "operator_norm_lower_estimate": 881.7829928928468,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.40277029998833314
+        }
+      ],
+      "operator_seconds": 0.40277029998833314,
+      "wall_seconds": 0.42395319999195635,
+      "pairs": 173,
+      "seed": 1792977099320228567
+    },
+    "15": {
+      "power": 2,
+      "operator_norm_upper_bound": 4097.644684782173,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 14515677.484634899,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 7433.464386110859,
+          "operator_norm_lower_estimate": 351.2188442035307,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.17552760000398848
+        },
+        {
+          "power": 2,
+          "Y": 74061408755449.42,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 4097.644684782173,
+          "operator_norm_lower_estimate": 890.6920362922085,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.34996989999490324
+        }
+      ],
+      "operator_seconds": 0.34996989999490324,
+      "wall_seconds": 0.36519149999367073,
+      "pairs": 173,
+      "seed": 3097309394910885189
+    },
+    "16": {
+      "power": 2,
+      "operator_norm_upper_bound": 3833.614147898895,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 11902666.716497941,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 6731.2349015915925,
+          "operator_norm_lower_estimate": 319.7218466750324,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.1415502000018023
+        },
+        {
+          "power": 2,
+          "Y": 56739875265478.87,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 3833.614147898895,
+          "operator_norm_lower_estimate": 835.5014005752588,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.2975707000005059
+        }
+      ],
+      "operator_seconds": 0.2975707000005059,
+      "wall_seconds": 0.31407839999883436,
+      "pairs": 173,
+      "seed": 6184902545787207744
+    },
+    "17": {
+      "power": 2,
+      "operator_norm_upper_bound": 4139.327001448009,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 15904454.144794492,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 7780.93870370066,
+          "operator_norm_lower_estimate": 366.1936076304257,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.14072589999705087
+        },
+        {
+          "power": 2,
+          "Y": 77121190672718.25,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 4139.327001448009,
+          "operator_norm_lower_estimate": 897.9850757105149,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.2727120999916224
+        }
+      ],
+      "operator_seconds": 0.2727120999916224,
+      "wall_seconds": 0.2887492000008933,
+      "pairs": 173,
+      "seed": 9096864163145124964
+    },
+    "18": {
+      "power": 2,
+      "operator_norm_upper_bound": 3493.6585241656344,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 9973510.031410059,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 6161.644308588747,
+          "operator_norm_lower_estimate": 291.60411215192596,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.14455050000105985
+        },
+        {
+          "power": 2,
+          "Y": 39136014520963.43,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 3493.6585241656344,
+          "operator_norm_lower_estimate": 760.6036732018689,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.2777386999950977
+        }
+      ],
+      "operator_seconds": 0.2777386999950977,
+      "wall_seconds": 0.2927868999977363,
+      "pairs": 173,
+      "seed": 3999115929541037204
+    },
+    "19": {
+      "power": 2,
+      "operator_norm_upper_bound": 3744.384845020466,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 10390853.264642714,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 6289.240694696398,
+          "operator_norm_lower_estimate": 296.82998997985237,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.136815599995316
+        },
+        {
+          "power": 2,
+          "Y": 51638865875257.16,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 3744.384845020466,
+          "operator_norm_lower_estimate": 813.3495252900942,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.27278389999992214
+        }
+      ],
+      "operator_seconds": 0.27278389999992214,
+      "wall_seconds": 0.2874766000022646,
+      "pairs": 173,
+      "seed": 6198695418358524757
+    },
+    "20": {
+      "power": 2,
+      "operator_norm_upper_bound": 4229.619640414452,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 16271821.870570809,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 7870.289370809493,
+          "operator_norm_lower_estimate": 371.14351586361056,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.14829159999499097
+        },
+        {
+          "power": 2,
+          "Y": 84073675946761.48,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 4229.619640414452,
+          "operator_norm_lower_estimate": 918.4952243057443,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.28715610000654124
+        }
+      ],
+      "operator_seconds": 0.28715610000654124,
+      "wall_seconds": 0.30386270000599325,
+      "pairs": 173,
+      "seed": 3919157678479049499
+    },
+    "21": {
+      "power": 2,
+      "operator_norm_upper_bound": 4241.112671983305,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 16472391.579219792,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 7918.646188338788,
+          "operator_norm_lower_estimate": 373.3737513860212,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.15913600000203587
+        },
+        {
+          "power": 2,
+          "Y": 84991211827274.88,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 4241.112671983305,
+          "operator_norm_lower_estimate": 920.9291770788773,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.2939706000033766
+        }
+      ],
+      "operator_seconds": 0.2939706000033766,
+      "wall_seconds": 0.31439189999946393,
+      "pairs": 173,
+      "seed": 6305013857683201338
+    },
+    "22": {
+      "power": 2,
+      "operator_norm_upper_bound": 3950.480455829128,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 12588825.017812336,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 6922.535768277869,
+          "operator_norm_lower_estimate": 329.34540163782117,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.13096699999005068
+        },
+        {
+          "power": 2,
+          "Y": 63981504836960.61,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 3950.480455829128,
+          "operator_norm_lower_estimate": 861.6742512142358,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.2705941000021994
+        }
+      ],
+      "operator_seconds": 0.2705941000021994,
+      "wall_seconds": 0.2858888999908231,
+      "pairs": 173,
+      "seed": 4358097739493363951
+    },
+    "23": {
+      "power": 2,
+      "operator_norm_upper_bound": 3652.699262158082,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 10047601.627201833,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 6184.488890299196,
+          "operator_norm_lower_estimate": 294.5941099710526,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.18423889999394305
+        },
+        {
+          "power": 2,
+          "Y": 46763870349599.805,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 3652.699262158082,
+          "operator_norm_lower_estimate": 797.2123900557328,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.39233709999825805
+        }
+      ],
+      "operator_seconds": 0.39233709999825805,
+      "wall_seconds": 0.4084428000060143,
+      "pairs": 173,
+      "seed": 7715178542081173982
+    },
+    "24": {
+      "power": 2,
+      "operator_norm_upper_bound": 3630.5190151272463,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 9381901.078415424,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 5976.102457508027,
+          "operator_norm_lower_estimate": 282.5707156449881,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.13681099998939317
+        },
+        {
+          "power": 2,
+          "Y": 45638319373803.5,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 3630.5190151272463,
+          "operator_norm_lower_estimate": 790.1503160961606,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.27969969998230226
+        }
+      ],
+      "operator_seconds": 0.27969969998230226,
+      "wall_seconds": 0.2977690999978222,
+      "pairs": 173,
+      "seed": 6456220227568046563
+    },
+    "26": {
+      "power": 2,
+      "operator_norm_upper_bound": 4281.7932793951795,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 17187299.7008464,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 8088.657286275897,
+          "operator_norm_lower_estimate": 382.1270812041963,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.1658562999946298
+        },
+        {
+          "power": 2,
+          "Y": 88299361846521.86,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 4281.7932793951795,
+          "operator_norm_lower_estimate": 930.6607265149048,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.3369230999960564
+        }
+      ],
+      "operator_seconds": 0.3369230999960564,
+      "wall_seconds": 0.3559780000068713,
+      "pairs": 173,
+      "seed": 1696855202352330958
+    }
+  },
+  "fused": {
+    "25": {
+      "power": 2,
+      "operator_norm_upper_bound": 4662.082019463157,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 20080201.099095333,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 8742.922704404567,
+          "operator_norm_lower_estimate": 413.7394154443699,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.21691699999792036
+        },
+        {
+          "power": 2,
+          "Y": 124100753717891.16,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 4662.082019463157,
+          "operator_norm_lower_estimate": 1015.9180467858339,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.5005508000031114
+        }
+      ],
+      "operator_seconds": 0.5005508000031114,
+      "wall_seconds": 0.5162039999995613,
+      "pairs": 231,
+      "seed": 8695107035219827096
+    },
+    "27": {
+      "power": 2,
+      "operator_norm_upper_bound": 4993.168812568521,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 23073366.17836361,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 9371.909563887482,
+          "operator_norm_lower_estimate": 446.4419832321155,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.203292699996382
+        },
+        {
+          "power": 2,
+          "Y": 163290070724625.97,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 4993.168812568521,
+          "operator_norm_lower_estimate": 1089.7947691820132,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.42493199999444187
+        }
+      ],
+      "operator_seconds": 0.42493199999444187,
+      "wall_seconds": 0.44298459999845363,
+      "pairs": 231,
+      "seed": 5263514199045379343
+    },
+    "28": {
+      "power": 2,
+      "operator_norm_upper_bound": 4393.299674119592,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 15249435.954054255,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 7619.026779723512,
+          "operator_norm_lower_estimate": 360.17793498277115,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.2565549999999348
+        },
+        {
+          "power": 2,
+          "Y": 97862902667310.42,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 4393.299674119592,
+          "operator_norm_lower_estimate": 955.2116928838982,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.45119100000010803
+        }
+      ],
+      "operator_seconds": 0.45119100000010803,
+      "wall_seconds": 0.46755419998953585,
+      "pairs": 231,
+      "seed": 4285283640762836211
+    },
+    "29": {
+      "power": 2,
+      "operator_norm_upper_bound": 4442.58791461263,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 14491038.036877539,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 7427.152787917674,
+          "operator_norm_lower_estimate": 352.08090995580244,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.19824740001058672
+        },
+        {
+          "power": 2,
+          "Y": 102329040880440.58,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 4442.58791461263,
+          "operator_norm_lower_estimate": 967.2663751956773,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.3969721000030404
+        }
+      ],
+      "operator_seconds": 0.3969721000030404,
+      "wall_seconds": 0.4116479999938747,
+      "pairs": 231,
+      "seed": 72701467322950476
+    },
+    "30": {
+      "power": 2,
+      "operator_norm_upper_bound": 4660.14703688241,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 17451111.382213786,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 8150.49818634205,
+          "operator_norm_lower_estimate": 385.06715364610005,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.19306930000311695
+        },
+        {
+          "power": 2,
+          "Y": 123894851430019.86,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 4660.14703688241,
+          "operator_norm_lower_estimate": 1014.0845674538151,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.3771108000073582
+        }
+      ],
+      "operator_seconds": 0.3771108000073582,
+      "wall_seconds": 0.39370219998818357,
+      "pairs": 231,
+      "seed": 2406916489920857161
+    },
+    "31": {
+      "power": 2,
+      "operator_norm_upper_bound": 5017.189142741426,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 22609537.04585968,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 9277.232586778631,
+          "operator_norm_lower_estimate": 438.44074274491373,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.20669350000389386
+        },
+        {
+          "power": 2,
+          "Y": 166454934928203.8,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 5017.189142741426,
+          "operator_norm_lower_estimate": 1090.7034925068485,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.39047060000302736
+        }
+      ],
+      "operator_seconds": 0.39047060000302736,
+      "wall_seconds": 0.40962730000319425,
+      "pairs": 231,
+      "seed": 1993729919384272779
+    },
+    "32": {
+      "power": 2,
+      "operator_norm_upper_bound": 4866.117413571015,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 20243443.266630724,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 8778.388602883944,
+          "operator_norm_lower_estimate": 414.833018871813,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.20623049999994691
+        },
+        {
+          "power": 2,
+          "Y": 147294019947329.44,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 4866.117413571015,
+          "operator_norm_lower_estimate": 1057.8201636257918,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.39898640000319574
+        }
+      ],
+      "operator_seconds": 0.39898640000319574,
+      "wall_seconds": 0.4235595999925863,
+      "pairs": 231,
+      "seed": 3640604873141638534
+    },
+    "33": {
+      "power": 2,
+      "operator_norm_upper_bound": 4594.969681193685,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 16891716.182239816,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 8018.802142908505,
+          "operator_norm_lower_estimate": 378.07320166160304,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.25426380000135396
+        },
+        {
+          "power": 2,
+          "Y": 117107680926591.0,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 4594.969681193685,
+          "operator_norm_lower_estimate": 997.7364737641166,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.45468569999502506
+        }
+      ],
+      "operator_seconds": 0.45468569999502506,
+      "wall_seconds": 0.4784612999937963,
+      "pairs": 231,
+      "seed": 8321764088193919372
+    },
+    "34": {
+      "power": 2,
+      "operator_norm_upper_bound": 4822.830245074565,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 20085824.593067586,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 8744.146853782559,
+          "operator_norm_lower_estimate": 412.6830767495236,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.2376149999909103
+        },
+        {
+          "power": 2,
+          "Y": 142122449309588.88,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 4822.830245074565,
+          "operator_norm_lower_estimate": 1047.7353193392182,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.4798477999866009
+        }
+      ],
+      "operator_seconds": 0.4798477999866009,
+      "wall_seconds": 0.5065133000025526,
+      "pairs": 231,
+      "seed": 4494473626858075269
+    },
+    "35": {
+      "power": 2,
+      "operator_norm_upper_bound": 3996.645937017459,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 12487748.054151813,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 6894.688885395749,
+          "operator_norm_lower_estimate": 324.86166813033356,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.2623989999992773
+        },
+        {
+          "power": 2,
+          "Y": 67025101973947.4,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 3996.645937017459,
+          "operator_norm_lower_estimate": 867.5361361737167,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.5005671999970218
+        }
+      ],
+      "operator_seconds": 0.5005671999970218,
+      "wall_seconds": 0.5295052000001306,
+      "pairs": 231,
+      "seed": 127215860794564157
+    },
+    "36": {
+      "power": 2,
+      "operator_norm_upper_bound": 5043.056540956255,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 24167512.724689033,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 9591.545423674337,
+          "operator_norm_lower_estimate": 454.46800917697124,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.23030419999849983
+        },
+        {
+          "power": 2,
+          "Y": 169914377816203.1,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 5043.056540956255,
+          "operator_norm_lower_estimate": 1097.7443293586705,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.4210538000043016
+        }
+      ],
+      "operator_seconds": 0.4210538000043016,
+      "wall_seconds": 0.44381320000684354,
+      "pairs": 231,
+      "seed": 518879504258597617
+    },
+    "37": {
+      "power": 2,
+      "operator_norm_upper_bound": 5351.131521045536,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 28986414.247189756,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 10504.366285714112,
+          "operator_norm_lower_estimate": 495.6324844013232,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.23741239999071695
+        },
+        {
+          "power": 2,
+          "Y": 215395825063047.75,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 5351.131521045536,
+          "operator_norm_lower_estimate": 1162.3597908563204,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.43130459998792503
+        }
+      ],
+      "operator_seconds": 0.43130459998792503,
+      "wall_seconds": 0.4540061000006972,
+      "pairs": 231,
+      "seed": 5574200531600110556
+    },
+    "38": {
+      "power": 2,
+      "operator_norm_upper_bound": 4624.337726836313,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 18559866.93067432,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 8405.431998131113,
+          "operator_norm_lower_estimate": 398.3305932522352,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.19338879999122582
+        },
+        {
+          "power": 2,
+          "Y": 120130409329285.56,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 4624.337726836313,
+          "operator_norm_lower_estimate": 1006.6798048204831,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.3860767999867676
+        }
+      ],
+      "operator_seconds": 0.3860767999867676,
+      "wall_seconds": 0.40930080000543967,
+      "pairs": 231,
+      "seed": 7929834656669230525
+    },
+    "39": {
+      "power": 2,
+      "operator_norm_upper_bound": 5139.436390884926,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 26009729.126028582,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 9950.399658641087,
+          "operator_norm_lower_estimate": 471.98912811464214,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.20451989999855869
+        },
+        {
+          "power": 2,
+          "Y": 183280711204461.34,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 5139.436390884926,
+          "operator_norm_lower_estimate": 1119.337955853178,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.39666199999919627
+        }
+      ],
+      "operator_seconds": 0.39666199999919627,
+      "wall_seconds": 0.42006089999631513,
+      "pairs": 231,
+      "seed": 1046558468702912827
+    },
+    "40": {
+      "power": 2,
+      "operator_norm_upper_bound": 4840.421633217058,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 19972906.8578534,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 8719.533453974615,
+          "operator_norm_lower_estimate": 412.474403938452,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.19117829999595415
+        },
+        {
+          "power": 2,
+          "Y": 144207402141783.9,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 4840.421633217058,
+          "operator_norm_lower_estimate": 1052.7738064496823,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.37683179999294225
+        }
+      ],
+      "operator_seconds": 0.37683179999294225,
+      "wall_seconds": 0.3995973999990383,
+      "pairs": 231,
+      "seed": 1381305275022331484
+    },
+    "41": {
+      "power": 2,
+      "operator_norm_upper_bound": 4928.416384282784,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 20744014.247526262,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 8886.259896978168,
+          "operator_norm_lower_estimate": 420.3542016081122,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.2314161999966018
+        },
+        {
+          "power": 2,
+          "Y": 154983102672743.1,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 4928.416384282784,
+          "operator_norm_lower_estimate": 1070.132402778539,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.41591099998913705
+        }
+      ],
+      "operator_seconds": 0.41591099998913705,
+      "wall_seconds": 0.44214780000038445,
+      "pairs": 231,
+      "seed": 727801927423869232
+    },
+    "42": {
+      "power": 2,
+      "operator_norm_upper_bound": 4836.671504375196,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 19511718.038589075,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 8618.27535249716,
+          "operator_norm_lower_estimate": 406.26470404825454,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.21935269999084994
+        },
+        {
+          "power": 2,
+          "Y": 143761021038257.8,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 4836.671504375196,
+          "operator_norm_lower_estimate": 1050.1248984138513,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.42752489999111276
+        }
+      ],
+      "operator_seconds": 0.42752489999111276,
+      "wall_seconds": 0.4533054000057746,
+      "pairs": 231,
+      "seed": 370218544809009946
+    },
+    "43": {
+      "power": 2,
+      "operator_norm_upper_bound": 4821.466062176518,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 19553412.22046317,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 8627.478544698866,
+          "operator_norm_lower_estimate": 408.6520222200884,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.21606960000644904
+        },
+        {
+          "power": 2,
+          "Y": 141961714837225.66,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 4821.466062176518,
+          "operator_norm_lower_estimate": 1049.3346076333805,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.40763680000964087
+        }
+      ],
+      "operator_seconds": 0.40763680000964087,
+      "wall_seconds": 0.43090269999811426,
+      "pairs": 231,
+      "seed": 3544578061869065927
+    },
+    "44": {
+      "power": 2,
+      "operator_norm_upper_bound": 4570.32228633512,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 16338620.389909541,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 7886.4272452247915,
+          "operator_norm_lower_estimate": 373.6897877069694,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.2743685000023106
+        },
+        {
+          "power": 2,
+          "Y": 114615165465867.3,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 4570.32228633512,
+          "operator_norm_lower_estimate": 994.6879047188058,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.5671231000014814
+        }
+      ],
+      "operator_seconds": 0.5671231000014814,
+      "wall_seconds": 0.5901786000031279,
+      "pairs": 231,
+      "seed": 8238736199600380464
+    },
+    "45": {
+      "power": 2,
+      "operator_norm_upper_bound": 5020.672270569423,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 24309661.474764727,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 9619.711897183059,
+          "operator_norm_lower_estimate": 454.8496552878953,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.30168119999871124
+        },
+        {
+          "power": 2,
+          "Y": 166917654464294.25,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 5020.672270569423,
+          "operator_norm_lower_estimate": 1091.7288208576995,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.5798639999993611
+        }
+      ],
+      "operator_seconds": 0.5798639999993611,
+      "wall_seconds": 0.605812199995853,
+      "pairs": 231,
+      "seed": 5272061496180300772
+    },
+    "46": {
+      "power": 2,
+      "operator_norm_upper_bound": 5055.014118630767,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 22361438.258970283,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 9226.191753976102,
+          "operator_norm_lower_estimate": 436.5106951653597,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.2771338000020478
+        },
+        {
+          "power": 2,
+          "Y": 171531652617886.34,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 5055.014118630767,
+          "operator_norm_lower_estimate": 1099.533787058381,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.4721286999993026
+        }
+      ],
+      "operator_seconds": 0.4721286999993026,
+      "wall_seconds": 0.497302400006447,
+      "pairs": 231,
+      "seed": 170751456694829166
+    },
+    "47": {
+      "power": 2,
+      "operator_norm_upper_bound": 5031.4312045354,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 23490721.258987676,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 9456.290070797071,
+          "operator_norm_lower_estimate": 446.345337063012,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.2485681999969529
+        },
+        {
+          "power": 2,
+          "Y": 168353029456890.66,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 5031.4312045354,
+          "operator_norm_lower_estimate": 1093.1169966269827,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.46421760000521317
+        }
+      ],
+      "operator_seconds": 0.46421760000521317,
+      "wall_seconds": 0.4826500999915879,
+      "pairs": 231,
+      "seed": 7515733182936115712
+    },
+    "48": {
+      "power": 2,
+      "operator_norm_upper_bound": 5057.059510865544,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 22186740.691846717,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 9190.081518033874,
+          "operator_norm_lower_estimate": 434.85210652392385,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.2177994000085164
+        },
+        {
+          "power": 2,
+          "Y": 171809446114767.6,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 5057.059510865544,
+          "operator_norm_lower_estimate": 1100.0417585274708,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.42439090000698343
+        }
+      ],
+      "operator_seconds": 0.42439090000698343,
+      "wall_seconds": 0.4559115999873029,
+      "pairs": 231,
+      "seed": 3976666514896009284
+    },
+    "49": {
+      "power": 2,
+      "operator_norm_upper_bound": 4887.653830621015,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 20606020.14513485,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 8856.653824023682,
+          "operator_norm_lower_estimate": 417.8265092352327,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.288857099993038
+        },
+        {
+          "power": 2,
+          "Y": 149918951915537.16,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 4887.653830621015,
+          "operator_norm_lower_estimate": 1061.6065749405739,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.5073130999953719
+        }
+      ],
+      "operator_seconds": 0.5073130999953719,
+      "wall_seconds": 0.5367418999958318,
+      "pairs": 231,
+      "seed": 8346451106853815829
+    },
+    "50": {
+      "power": 2,
+      "operator_norm_upper_bound": 4751.285445789403,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 21002523.489995856,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 8941.458175977443,
+          "operator_norm_lower_estimate": 421.8501118775567,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.23056470000301488
+        },
+        {
+          "power": 2,
+          "Y": 133874934226984.36,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 4751.285445789403,
+          "operator_norm_lower_estimate": 1032.0150534312281,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.4760834999906365
+        }
+      ],
+      "operator_seconds": 0.4760834999906365,
+      "wall_seconds": 0.5056681999994908,
+      "pairs": 231,
+      "seed": 6978533349038702177
+    },
+    "51": {
+      "power": 2,
+      "operator_norm_upper_bound": 5134.640776184997,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 25530966.24392308,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 9858.395463099296,
+          "operator_norm_lower_estimate": 466.1437390799555,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.24334929999895394
+        },
+        {
+          "power": 2,
+          "Y": 182597590211416.28,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 5134.640776184997,
+          "operator_norm_lower_estimate": 1116.5209471176786,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.4755938999878708
+        }
+      ],
+      "operator_seconds": 0.4755938999878708,
+      "wall_seconds": 0.49791170000389684,
+      "pairs": 231,
+      "seed": 5037882597197102229
+    },
+    "52": {
+      "power": 2,
+      "operator_norm_upper_bound": 2563.5125942187046,
+      "trace": [
+        {
+          "power": 1,
+          "Y": 5479114.870521832,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 4566.966360678375,
+          "operator_norm_lower_estimate": 215.46165518717055,
+          "logical_gram_applications": 16,
+          "batched_gram_calls": 1,
+          "cumulative_operator_seconds": 0.09794430001056753
+        },
+        {
+          "power": 2,
+          "Y": 11344793674274.73,
+          "c_delta": 0.262696798586526,
+          "operator_norm_upper_bound": 2563.5125942187046,
+          "operator_norm_lower_estimate": 556.8093828014012,
+          "logical_gram_applications": 32,
+          "batched_gram_calls": 2,
+          "cumulative_operator_seconds": 0.18400190000829753
+        }
+      ],
+      "operator_seconds": 0.18400190000829753,
+      "wall_seconds": 0.20401139999739826,
+      "pairs": 58,
+      "seed": 4186164381420624165
+    }
+  },
+  "fused_cert_extra": {},
+  "policy": {
+    "issued": true,
+    "reason": "success window and every earlier failure witness certified",
+    "success_times": [
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52
+    ],
+    "failure_witnesses": [
+      0,
+      25,
+      27
+    ],
+    "query_order": [
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      25,
+      27
+    ],
+    "certified_bracket": [
+      28,
+      28
+    ],
+    "kappa_upper": 982.3905298518129,
+    "maximum_optimizer_derivative_drift_upper": 9933843827.565228,
+    "closure": {
+      "kappa": 982.3905298518129,
+      "derivative_drift": 9933843827.565228,
+      "response_sequence_norm": 1.3015925531782942e-14,
+      "response_max_state_norm": 2.722605360507416e-15,
+      "linear_response_error_bound": 0.0,
+      "corrected_defect_response_bound": 1.7291443506747046e-16,
+      "linearized_remainder_coefficient": 0.026569671844731947,
+      "discriminant": 0.9441916895351017,
+      "remainder_radius": 1.7779256579296785e-16,
+      "total_pointwise_radius": 2.900397926300384e-15,
+      "domain_radius": 2.6031851063565883e-14,
+      "algebraic_closure_passed": true,
+      "domain_passed": true,
+      "closure_passed": true,
+      "closure_residual": -2.465190328815662e-32
+    }
+  },
+  "fused_policy": {
+    "issued": true,
+    "reason": "success window and every earlier failure witness certified",
+    "preplanned_query_order": [
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      25,
+      27
+    ],
+    "query_order": [
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      25,
+      27
+    ],
+    "success_times": [
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52
+    ],
+    "failure_witnesses": [
+      0,
+      25,
+      27
+    ],
+    "certified_bracket": [
+      28,
+      28
+    ],
+    "kappa_upper": 982.3905298518129,
+    "maximum_optimizer_derivative_drift_upper": 12816493641.227268,
+    "closure": {
+      "kappa": 982.3905298518129,
+      "derivative_drift": 12816493641.227268,
+      "response_sequence_norm": 1.3015925531782942e-14,
+      "response_max_state_norm": 2.722605360507416e-15,
+      "linear_response_error_bound": 0.0,
+      "corrected_defect_response_bound": 2.2309156415053264e-16,
+      "linearized_remainder_coefficient": 0.03427978496124251,
+      "discriminant": 0.9269977303196733,
+      "remainder_radius": 2.313594931055246e-16,
+      "total_pointwise_radius": 2.9539648536129406e-15,
+      "domain_radius": 2.6031851063565883e-14,
+      "algebraic_closure_passed": true,
+      "domain_passed": true,
+      "closure_passed": true,
+      "closure_residual": 0.0
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "candidate_seal_sha256": "BFA31D77050F164DBE3B3F07C908715434E45F58849F63F13CFF1C81EBAC5587",
+  "certificate_count": 24,
+  "certificate_manifest_sha256": "B370801F388BB9C9D44ADB8834EF361FFB6655F21798B3698332784A5817EC79",
+  "issued_unopened": 7,
+  "method_seal_sha256": "9901CD1A0E3FEABF2A1893C61960898C892194D3F0F2ECC18B70A2CF3981DE31",
+  "queried_operators": 12,
+  "realized_union_failure_bound": 5e-07,
+  "signed_only_unopened": 1,
+  "status": "FROZEN BEFORE OUTCOME JOIN",
+  "unsigned_issued_unopened": 6
+}

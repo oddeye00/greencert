@@ -1,0 +1,96 @@
+{
+  "status": "PASS: independent artifact, inequality, bracket, and statistics audit",
+  "source_aggregate_sha256": "A3D480FB92BFEC8981907C5F49687AE176D8C26FC1D633B3B2C653926D13A2BF",
+  "method_seal_sha256": "14EABFDE3823E2289F53E1B5D39D89F103A4FB8D4B80C98E60CF8E5F879C57EA",
+  "certificate_seal_sha256": "4B6EBBAA877280F6A0E6AB87130CB65763C812E332E999F632D1ADDB39227642",
+  "recomputed_summary": {
+    "fresh_seeds": 24,
+    "seed_threshold_cases": 72,
+    "candidates": 23,
+    "distinct_candidate_seeds": 12,
+    "construction_abstentions": 1,
+    "issued": 9,
+    "covered": 9,
+    "distinct_issuing_seeds": 6,
+    "abstention_rate_among_candidates": 0.6086956521739131,
+    "median_bracket_width": 0.0,
+    "median_certified_lead": 192.0,
+    "maximum_certified_lead": 274,
+    "raw_exact_timing_matches": 23,
+    "observed_issued_sequence_tube_violations": 0,
+    "observed_issued_state_tube_violations": 0
+  },
+  "rates": {
+    "candidate_per_seed_threshold_case": 0.3194444444444444,
+    "issued_per_seed_threshold_case": 0.125,
+    "issued_per_candidate": 0.391304347826087,
+    "candidate_seed_fraction": 0.5,
+    "issuing_seed_fraction": 0.25
+  },
+  "seed_clustered": {
+    "candidate_seeds": [
+      331,
+      333,
+      335,
+      337,
+      342,
+      345,
+      347,
+      348,
+      350,
+      351,
+      352,
+      354
+    ],
+    "issuing_seeds": [
+      333,
+      335,
+      337,
+      345,
+      348,
+      350
+    ],
+    "all_certificates_covered_in_each_issuing_seed": true,
+    "two_sided_95pct_cp_lower_if_issuing_seeds_are_exchangeable": 0.5407418735600995
+  },
+  "event_level": {
+    "two_sided_95pct_cp_lower_if_issued_events_are_independent": 0.6637328831200572,
+    "minimum_lead": 28,
+    "median_lead": 192.0,
+    "maximum_lead": 274,
+    "singleton_brackets": 9,
+    "minimum_closure_slack": 0.14454868086235684,
+    "minimum_output_logic_slack": 2.671665839253655e-05,
+    "maximum_actual_sequence_error_to_radius_ratio": 0.5027661547270297
+  },
+  "per_threshold": {
+    "0.7": {
+      "candidates": 11,
+      "issued": 2,
+      "covered": 2
+    },
+    "0.8": {
+      "candidates": 9,
+      "issued": 5,
+      "covered": 5
+    },
+    "0.9": {
+      "candidates": 3,
+      "issued": 2,
+      "covered": 2
+    }
+  },
+  "randomized_operator_budget": {
+    "queried_operators": 4961,
+    "maximum_predeclared_operators": 21744,
+    "per_operator_delta": 4.59896983075791e-11,
+    "realized_union_bound": 2.281548933038999e-07,
+    "maximum_family_union_bound": 1e-06
+  },
+  "interpretation": {
+    "coverage_is_conditional_on_issuance": true,
+    "thresholds_within_seed_are_correlated": true,
+    "clopper_pearson_intervals_are_sensitivity_analyses_not_population_claims": true,
+    "float64_neural_and_operator_arithmetic_is_not_a_formal_interval_proof": true
+  }
+}

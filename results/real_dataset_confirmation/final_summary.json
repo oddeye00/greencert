@@ -1,0 +1,39 @@
+{
+  "candidate_dispositions": {
+    "candidate frozen": 71,
+    "no trigger-only anchor": 1
+  },
+  "candidate_rate": 0.9861111111111112,
+  "candidate_seal_sha256": "F552930042296C8954F794A560BF8FD79E92A94FA2852B2BA675DAEDE779B16A",
+  "candidates": 71,
+  "certificate_dispositions": {
+    "centerline has no future certification-set event": 15,
+    "certificate issued": 56
+  },
+  "certificate_seal_sha256": "0444FE25E4C414B92CA867BEF592F8D3FCFB902904E629498EDA8FE220516783",
+  "conditional_coverage": 1.0,
+  "conditional_issuance_rate": 0.7887323943661971,
+  "covered": 56,
+  "distinct_issuing_seeds": 22,
+  "final_audit_sha256": "54DA92445CC7E909B37351689E421F1572396DA1E6AC626D3499A6C1C42BEC2F",
+  "fresh_seeds": 24,
+  "issued": 56,
+  "maximum_bracket_width": 0,
+  "maximum_certified_lead": 256,
+  "maximum_checkpoint_reconstruction_error": 0.0,
+  "median_bracket_width": 0.0,
+  "median_certified_lead": 79.0,
+  "method_seal_sha256": "3408AF37C03959264B3DC8888001F5BE4AA5702FEA4D7F90B694261AC2846F8C",
+  "minimum_closure_slack": 0.9999999907275747,
+  "minimum_issued_output_slack": 2.3753121954839393e-05,
+  "observed_sequence_tube_violations": 0,
+  "observed_state_tube_violations": 0,
+  "overall_issuance_rate": 0.7777777777777778,
+  "queried_operators": 56,
+  "raw_exact_timing_matches": 59,
+  "raw_timing_comparable": 59,
+  "realized_union_failure_bound": 7.777777777777778e-07,
+  "seed_threshold_cases": 72,
+  "status": "FRESH REAL-DATA CONFIRMATION COMPLETE",
+  "unsigned_right_inverse_issued": 56
+}

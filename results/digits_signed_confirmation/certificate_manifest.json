@@ -1,0 +1,247 @@
+{
+  "candidate_seal_sha256": "BFA31D77050F164DBE3B3F07C908715434E45F58849F63F13CFF1C81EBAC5587",
+  "method_seal_sha256": "9901CD1A0E3FEABF2A1893C61960898C892194D3F0F2ECC18B70A2CF3981DE31",
+  "records": [
+    {
+      "gate_index": 0,
+      "index": 0,
+      "issued": false,
+      "path": "candidate_000_seed_501_gate_0.json",
+      "queried_operator": false,
+      "seed": 501,
+      "sha256": "9E7A5F90C2BA94E5941D8957B8231430EDB0589ED88836E3DAB2CD63257FC18B",
+      "unsigned_issued": false
+    },
+    {
+      "gate_index": 1,
+      "index": 1,
+      "issued": false,
+      "path": "candidate_001_seed_501_gate_1.json",
+      "queried_operator": false,
+      "seed": 501,
+      "sha256": "83FCD77F9B2C5077334C4437651CB02D2504AE842964C74E504C92EBA5430F73",
+      "unsigned_issued": false
+    },
+    {
+      "gate_index": 0,
+      "index": 2,
+      "issued": false,
+      "path": "candidate_002_seed_502_gate_0.json",
+      "queried_operator": true,
+      "seed": 502,
+      "sha256": "B75695D36395DC1A50E02BB7E1CC8538B13FF7ACCC1D83BB9E8918A338020522",
+      "unsigned_issued": false
+    },
+    {
+      "gate_index": 1,
+      "index": 3,
+      "issued": false,
+      "path": "candidate_003_seed_502_gate_1.json",
+      "queried_operator": false,
+      "seed": 502,
+      "sha256": "DCFFC555C5C71CE8244E14D126D0647A6082B5ED5AE2E54530C67F69F23D39D6",
+      "unsigned_issued": false
+    },
+    {
+      "gate_index": 0,
+      "index": 4,
+      "issued": true,
+      "path": "candidate_004_seed_503_gate_0.json",
+      "queried_operator": true,
+      "seed": 503,
+      "sha256": "689A8D8CAEBC0C7F8958BCBBD860C77969B253B3AD8F9B6477D2D64CAF0516DF",
+      "unsigned_issued": true
+    },
+    {
+      "gate_index": 1,
+      "index": 5,
+      "issued": false,
+      "path": "candidate_005_seed_503_gate_1.json",
+      "queried_operator": false,
+      "seed": 503,
+      "sha256": "30DDB9D6DBD92D08A301455E1159A2499EBD493DC7E91F9ADB935AE863F9EE76",
+      "unsigned_issued": false
+    },
+    {
+      "gate_index": 0,
+      "index": 6,
+      "issued": true,
+      "path": "candidate_006_seed_504_gate_0.json",
+      "queried_operator": true,
+      "seed": 504,
+      "sha256": "BA75276AFC20D26AEF6C6E57605E955E6FA6130AA83874BE55F7B2FF96FE4C68",
+      "unsigned_issued": true
+    },
+    {
+      "gate_index": 1,
+      "index": 7,
+      "issued": false,
+      "path": "candidate_007_seed_504_gate_1.json",
+      "queried_operator": false,
+      "seed": 504,
+      "sha256": "C11D723E4D6FF5BC0A2D25DC44EC2445CABD93114F83002EA5C9EE93D0B45EA3",
+      "unsigned_issued": false
+    },
+    {
+      "gate_index": 0,
+      "index": 8,
+      "issued": false,
+      "path": "candidate_008_seed_505_gate_0.json",
+      "queried_operator": true,
+      "seed": 505,
+      "sha256": "7F61DF5D28FFC37200CFED64579B214F927CF46CF93D4718AE8DD518D3A4D95D",
+      "unsigned_issued": false
+    },
+    {
+      "gate_index": 1,
+      "index": 9,
+      "issued": false,
+      "path": "candidate_009_seed_505_gate_1.json",
+      "queried_operator": false,
+      "seed": 505,
+      "sha256": "F3C332D2F3467E6A521031A3165E3DBEB09C1CDFA3FC52B15DC61F173B4052E1",
+      "unsigned_issued": false
+    },
+    {
+      "gate_index": 0,
+      "index": 10,
+      "issued": true,
+      "path": "candidate_010_seed_506_gate_0.json",
+      "queried_operator": true,
+      "seed": 506,
+      "sha256": "7DDD1188CB40452A6F62450F6948E5E25E8B8036F137F655EFC76AC175143D34",
+      "unsigned_issued": true
+    },
+    {
+      "gate_index": 1,
+      "index": 11,
+      "issued": false,
+      "path": "candidate_011_seed_506_gate_1.json",
+      "queried_operator": true,
+      "seed": 506,
+      "sha256": "B9A9E7D7DCA424CD04C1218213FBA7A97FB10CD50BF2C199409CC8D438043951",
+      "unsigned_issued": false
+    },
+    {
+      "gate_index": 0,
+      "index": 12,
+      "issued": true,
+      "path": "candidate_012_seed_507_gate_0.json",
+      "queried_operator": true,
+      "seed": 507,
+      "sha256": "867990A8674A6F3D81EC075EC3841CBB41A66D7D471C8DFC98F83AEE5075C11D",
+      "unsigned_issued": true
+    },
+    {
+      "gate_index": 1,
+      "index": 13,
+      "issued": false,
+      "path": "candidate_013_seed_507_gate_1.json",
+      "queried_operator": false,
+      "seed": 507,
+      "sha256": "9C27674F9BB8E75F3133FF7ECF89A3E47E82BE0D6F2C8F5DAAC88B8F8CEE3BD7",
+      "unsigned_issued": false
+    },
+    {
+      "gate_index": 0,
+      "index": 14,
+      "issued": false,
+      "path": "candidate_014_seed_508_gate_0.json",
+      "queried_operator": true,
+      "seed": 508,
+      "sha256": "4CE344E37379E3D021679F816D8537E6FBB91DE0BEA647034FB1B7AD531CC26A",
+      "unsigned_issued": false
+    },
+    {
+      "gate_index": 1,
+      "index": 15,
+      "issued": false,
+      "path": "candidate_015_seed_508_gate_1.json",
+      "queried_operator": false,
+      "seed": 508,
+      "sha256": "0CCCFF843D965E753742B33F0336F16D3CA136B22019E2FA20248F12DC3702C6",
+      "unsigned_issued": false
+    },
+    {
+      "gate_index": 0,
+      "index": 16,
+      "issued": true,
+      "path": "candidate_016_seed_509_gate_0.json",
+      "queried_operator": true,
+      "seed": 509,
+      "sha256": "F816318D48AEE872025E7A0E8D2D07D03FDD5CBFAED89E0BC964995944EBBE08",
+      "unsigned_issued": false
+    },
+    {
+      "gate_index": 1,
+      "index": 17,
+      "issued": false,
+      "path": "candidate_017_seed_509_gate_1.json",
+      "queried_operator": false,
+      "seed": 509,
+      "sha256": "3595E68FF8DF875CE2D9D3BA9B21AA91295CF8D9CC92D6DCE15E0A95378BC1C8",
+      "unsigned_issued": false
+    },
+    {
+      "gate_index": 0,
+      "index": 18,
+      "issued": false,
+      "path": "candidate_018_seed_510_gate_0.json",
+      "queried_operator": true,
+      "seed": 510,
+      "sha256": "F359C0C244BEC44BAB0577A56F31B777C5402389BC5AECD145A9896B5F9BA229",
+      "unsigned_issued": false
+    },
+    {
+      "gate_index": 1,
+      "index": 19,
+      "issued": false,
+      "path": "candidate_019_seed_510_gate_1.json",
+      "queried_operator": false,
+      "seed": 510,
+      "sha256": "309F87467E068F226FCD56C464A08EBD4EBA54F51D0A6DD7EB07B339FF8B518D",
+      "unsigned_issued": false
+    },
+    {
+      "gate_index": 0,
+      "index": 20,
+      "issued": false,
+      "path": "candidate_020_seed_511_gate_0.json",
+      "queried_operator": false,
+      "seed": 511,
+      "sha256": "3A2AEFDF52389D4A8A0143FE78057F9DA5600D67A29F0320C3B60593F2D0D408",
+      "unsigned_issued": false
+    },
+    {
+      "gate_index": 1,
+      "index": 21,
+      "issued": false,
+      "path": "candidate_021_seed_511_gate_1.json",
+      "queried_operator": false,
+      "seed": 511,
+      "sha256": "0795D6B354B882CC56C164D8ECCCF52894E21DF6D8F94263968C7358275A00CD",
+      "unsigned_issued": false
+    },
+    {
+      "gate_index": 0,
+      "index": 22,
+      "issued": true,
+      "path": "candidate_022_seed_512_gate_0.json",
+      "queried_operator": true,
+      "seed": 512,
+      "sha256": "75D81C1C555AE9EB9F7C64F0E3031A0312980DD94FDB5CB4DF8A04B6E8F07C80",
+      "unsigned_issued": true
+    },
+    {
+      "gate_index": 1,
+      "index": 23,
+      "issued": true,
+      "path": "candidate_023_seed_512_gate_1.json",
+      "queried_operator": true,
+      "seed": 512,
+      "sha256": "CC4D38A82EF5E3064FA2EBF74F7EBF47B72B2E35D0758E499A9CB709C0700070",
+      "unsigned_issued": true
+    }
+  ],
+  "status": "ALL CERTIFICATE-OR-ABSTAIN RECORDS FROZEN; OUTCOMES UNOPENED"
+}

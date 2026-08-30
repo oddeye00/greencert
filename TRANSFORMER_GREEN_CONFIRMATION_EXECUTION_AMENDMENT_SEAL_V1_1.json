@@ -1,0 +1,19 @@
+{
+  "status": "FROZEN BEFORE RETRY OR OUTCOME ROLLOUT",
+  "timestamp_utc": "2026-08-24T15:39:10.6599241Z",
+  "purpose": "Conservative execution-only recovery: exact retries for two transient cache PermissionErrors and construction failure mapped to abstention",
+  "original_method_seal_sha256": "14EABFDE3823E2289F53E1B5D39D89F103A4FB8D4B80C98E60CF8E5F879C57EA",
+  "candidate_seal_sha256": "5C6136AE0942500CBBB5AF0B9DACAD1FE8ADF8839D8B8E042C8942A5A9FF47B8",
+  "candidate_manifest_sha256": "D61FDFA72DAC8D70C189526B00D1F6905A1BFBD1161C64ED68CE09D44A7A4699",
+  "outcomes_opened": false,
+  "mathematical_method_changed": false,
+  "candidate_rule_changed": false,
+  "issuance_rule_changed": false,
+  "construction_failure_policy": "certificate_issued = false; candidate remains in denominator",
+  "maximum_io_retry_attempts": 3,
+  "amendment_manifest": {
+    "TRANSFORMER_GREEN_CONFIRMATION_EXECUTION_AMENDMENT_V1_1.md": "09000FC157F7D6E4000EFB9C647FC152CC0E3C9F0BF99405A68BC76C665B5AD6",
+    "scripts/transformer_green_confirmation_execution_amendment_v1_1.py": "162941BE09557411FAF07ECBE357FB856E13B09C5F8BC6DBBB44315FD6363C22",
+    "scripts/test_transformer_green_confirmation_execution_amendment_v1_1.py": "F1FC29C022F7F5EB7EF67E5A49D8F37B8B4EC8BF076916A1B75702326525E335"
+  }
+}

@@ -1,0 +1,245 @@
+{
+  "status": "INDEPENDENT ANALYTIC-JET RELEASE AUDIT PASSED",
+  "source_sha256": "9AB4EB61CBD2D01E01B3A60288CCEBE321320742E2C28EEC573E0CCC4728252C",
+  "source_script_sha256": "5D8830F08DD71523F11AC610A545710879273D1959F00EC7F3396FEB562C932D",
+  "cases": 15,
+  "analytic_jet_issued": 8,
+  "same_brackets": true,
+  "future_outcome_files_read": 0,
+  "rows": [
+    {
+      "candidate": {
+        "seed": 360,
+        "threshold": 0.7,
+        "anchor": 3480
+      },
+      "issued": true,
+      "bracket": [
+        107,
+        107
+      ],
+      "drift": 1907452259846.26,
+      "discriminant": 0.9070199222615862,
+      "remainder_radius": 4.2423508827888695e-19,
+      "logic_slack": 0.0012607817851546033,
+      "maximum_margin_radius": 3.76232261627766e-10
+    },
+    {
+      "candidate": {
+        "seed": 361,
+        "threshold": 0.7,
+        "anchor": 1880
+      },
+      "issued": false,
+      "bracket": null,
+      "drift": 287933008564.07654,
+      "discriminant": -4.998501972836962,
+      "remainder_radius": null,
+      "logic_slack": null,
+      "maximum_margin_radius": null
+    },
+    {
+      "candidate": {
+        "seed": 361,
+        "threshold": 0.8,
+        "anchor": 2800
+      },
+      "issued": true,
+      "bracket": [
+        265,
+        265
+      ],
+      "drift": 134880990299.17216,
+      "discriminant": 0.9981041431701042,
+      "remainder_radius": 5.506883213066443e-20,
+      "logic_slack": 0.0001804045650110337,
+      "maximum_margin_radius": 1.513881243368766e-10
+    },
+    {
+      "candidate": {
+        "seed": 366,
+        "threshold": 0.7,
+        "anchor": 1040
+      },
+      "issued": false,
+      "bracket": null,
+      "drift": 1283613246495.0044,
+      "discriminant": -4.929086314932684,
+      "remainder_radius": null,
+      "logic_slack": null,
+      "maximum_margin_radius": null
+    },
+    {
+      "candidate": {
+        "seed": 366,
+        "threshold": 0.8,
+        "anchor": 1120
+      },
+      "issued": true,
+      "bracket": [
+        2,
+        2
+      ],
+      "drift": 1509134765740.1948,
+      "discriminant": 0.8267427713704584,
+      "remainder_radius": 7.906718178824575e-20,
+      "logic_slack": 0.0018713446291084832,
+      "maximum_margin_radius": 8.695602567095355e-11
+    },
+    {
+      "candidate": {
+        "seed": 366,
+        "threshold": 0.9,
+        "anchor": 1360
+      },
+      "issued": true,
+      "bracket": [
+        70,
+        70
+      ],
+      "drift": 1645302826514.7263,
+      "discriminant": 0.9813801832544824,
+      "remainder_radius": 1.3720424311670902e-19,
+      "logic_slack": 0.0013621529807519915,
+      "maximum_margin_radius": 2.0125261184039766e-10
+    },
+    {
+      "candidate": {
+        "seed": 369,
+        "threshold": 0.7,
+        "anchor": 4160
+      },
+      "issued": true,
+      "bracket": [
+        157,
+        157
+      ],
+      "drift": 367786132097.01465,
+      "discriminant": 0.9973569501884375,
+      "remainder_radius": 4.4109172898690586e-20,
+      "logic_slack": 0.002284699258610645,
+      "maximum_margin_radius": 1.81521060808211e-10
+    },
+    {
+      "candidate": {
+        "seed": 369,
+        "threshold": 0.8,
+        "anchor": 4480
+      },
+      "issued": false,
+      "bracket": null,
+      "drift": 226850284728.31754,
+      "discriminant": -0.559257081109733,
+      "remainder_radius": null,
+      "logic_slack": null,
+      "maximum_margin_radius": null
+    },
+    {
+      "candidate": {
+        "seed": 369,
+        "threshold": 0.9,
+        "anchor": 5760
+      },
+      "issued": false,
+      "bracket": null,
+      "drift": 94491816138.4636,
+      "discriminant": -4.535086489501387,
+      "remainder_radius": null,
+      "logic_slack": null,
+      "maximum_margin_radius": null
+    },
+    {
+      "candidate": {
+        "seed": 370,
+        "threshold": 0.7,
+        "anchor": 2280
+      },
+      "issued": true,
+      "bracket": [
+        275,
+        275
+      ],
+      "drift": 163378133498.22263,
+      "discriminant": 0.9962177772990644,
+      "remainder_radius": 8.755186475453876e-20,
+      "logic_slack": 0.0007507765853122514,
+      "maximum_margin_radius": 1.907981561431403e-10
+    },
+    {
+      "candidate": {
+        "seed": 372,
+        "threshold": 0.7,
+        "anchor": 3440
+      },
+      "issued": true,
+      "bracket": [
+        246,
+        246
+      ],
+      "drift": 760197454506.9602,
+      "discriminant": 0.7124811247345888,
+      "remainder_radius": 1.7018186730060746e-18,
+      "logic_slack": 0.000863595658818445,
+      "maximum_margin_radius": 4.554086605439273e-10
+    },
+    {
+      "candidate": {
+        "seed": 373,
+        "threshold": 0.7,
+        "anchor": 1280
+      },
+      "issued": false,
+      "bracket": null,
+      "drift": 5229973570633.007,
+      "discriminant": -2.7647953374991925,
+      "remainder_radius": null,
+      "logic_slack": null,
+      "maximum_margin_radius": null
+    },
+    {
+      "candidate": {
+        "seed": 373,
+        "threshold": 0.8,
+        "anchor": 1760
+      },
+      "issued": false,
+      "bracket": null,
+      "drift": 5201063819340.68,
+      "discriminant": -10.100654834111271,
+      "remainder_radius": null,
+      "logic_slack": null,
+      "maximum_margin_radius": null
+    },
+    {
+      "candidate": {
+        "seed": 375,
+        "threshold": 0.8,
+        "anchor": 1800
+      },
+      "issued": true,
+      "bracket": [
+        118,
+        118
+      ],
+      "drift": 1900441520072.157,
+      "discriminant": 0.8945946916491544,
+      "remainder_radius": 4.453737144196132e-19,
+      "logic_slack": 0.0015589755370255657,
+      "maximum_margin_radius": 2.4965837036616186e-10
+    },
+    {
+      "candidate": {
+        "seed": 378,
+        "threshold": 0.7,
+        "anchor": 3640
+      },
+      "issued": false,
+      "bracket": null,
+      "drift": 550120749914.2671,
+      "discriminant": -1.6657604797076848,
+      "remainder_radius": null,
+      "logic_slack": null,
+      "maximum_margin_radius": null
+    }
+  ]
+}

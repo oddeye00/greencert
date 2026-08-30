@@ -1,0 +1,70 @@
+{
+  "status": "OUTWARD ARB TRANSFORMER SECANT CHECKPOINT AUDIT PASSED",
+  "evidence_boundary": "Post-seal, outcome-blind numerical-rigor audit. Arb encloses exact scalar objective jets conditional on stored dyadic center/response and ideal-PRNG probe values; it is one selected checkpoint, not the full sequence or a complete Transformer certificate.",
+  "candidate": {
+    "seed": 366,
+    "threshold": 0.7,
+    "anchor": 1040
+  },
+  "horizon": 52,
+  "selected_checkpoint": 27,
+  "selection_rule": "largest float64 amplified-forcing row norm among steps 1..51",
+  "amplification": 4096.0,
+  "probes": 4,
+  "precision_bits": 192,
+  "base_mixed_jet_seconds": 25.025058299972443,
+  "shifted_first_jet_seconds": 12.99289689998841,
+  "total_jet_seconds": 38.01795519996085,
+  "projected_full_sequence_jet_minutes": 32.31526191996672,
+  "selected_forcing_row_norm": 7.965686147165583e-24,
+  "maximum_midpoint_difference": 9.448706206051628e-24,
+  "maximum_outward_radius": 5.4904681360278196e-61,
+  "maximum_outward_projection_magnitude": 8.313897213502613e-32,
+  "minimum_float_to_outward_magnitude_ratio": 12546674.783491025,
+  "intervals": [
+    {
+      "probe": 0,
+      "lower": -9.519968440157973e-33,
+      "upper": -9.519968440157973e-33,
+      "midpoint": -9.519968440157973e-33,
+      "radius": 5.461682157810526e-61,
+      "float64_vector_projection": -7.119134576297915e-24,
+      "midpoint_difference": 7.119134566777947e-24,
+      "float_to_outward_magnitude_ratio": 747810732.8872385
+    },
+    {
+      "probe": 1,
+      "lower": 8.313897213502613e-32,
+      "upper": 8.313897213502613e-32,
+      "midpoint": 8.313897213502613e-32,
+      "radius": 5.4904681360278196e-61,
+      "float64_vector_projection": -1.0431176452118954e-24,
+      "midpoint_difference": 1.0431177283508676e-24,
+      "float_to_outward_magnitude_ratio": 12546674.783491025
+    },
+    {
+      "probe": 2,
+      "lower": -1.6789804923758484e-33,
+      "upper": -1.6789804923758484e-33,
+      "midpoint": -1.6789804923758484e-33,
+      "radius": 4.972736480812524e-61,
+      "float64_vector_projection": -9.448706207730609e-24,
+      "midpoint_difference": 9.448706206051628e-24,
+      "float_to_outward_magnitude_ratio": 5627645020.675718
+    },
+    {
+      "probe": 3,
+      "lower": 9.686940001578189e-33,
+      "upper": 9.686940001578189e-33,
+      "midpoint": 9.686940001578189e-33,
+      "radius": 5.117959331615507e-61,
+      "float64_vector_projection": 4.126142301679379e-24,
+      "midpoint_difference": 4.126142291992439e-24,
+      "float_to_outward_magnitude_ratio": 425948989.15520805
+    }
+  ],
+  "protocol_sha256": "8D18DB8B7842C247CF94C2C66DF2B3892E900EF30D2185F93B3BAC06A2D055AE",
+  "certificate_sha256": "63DA40D4989669A1D1349B25323732C6800FD05E7EF793FBDE9C624E709CE24B",
+  "centerline_sha256": "24B349DCE9653F72AAD8DA885B4E5D7255076FEBADABF506D5EFE91E0782830E",
+  "outcome_files_read": 0
+}

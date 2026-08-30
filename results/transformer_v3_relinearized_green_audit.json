@@ -1,0 +1,72 @@
+{
+  "status": "FRESH-PROBE RELINEARIZED GREEN AUDIT COMPLETED",
+  "evidence_boundary": "Post-seal, outcome-blind method-development audit. The rebuilt operator receives one fresh fixed Gaussian block. Float64 model products are not an outward exact-real proof, and no prospective issuance count is changed.",
+  "candidate": {
+    "seed": 366,
+    "threshold": 0.7,
+    "anchor": 1040
+  },
+  "horizon": 52,
+  "sweeps_before_correction": 4,
+  "probe": {
+    "identity": [
+      91,
+      366,
+      0,
+      1040,
+      52,
+      4,
+      1
+    ],
+    "rng_seed": 8156632336479000561,
+    "Y": 6665726.406646009,
+    "c_delta": 0.28701612713630525,
+    "operator_norm_upper_bound": 4819.151640191725,
+    "operator_norm_lower_estimate": 74.60221336554822,
+    "gram_applications": 16,
+    "delta": 4.59896983075791e-11,
+    "probes": 16,
+    "power": 1
+  },
+  "probe_registry": {
+    "allowed_operator_count": 1,
+    "collision_free_stream_count": 1,
+    "queried_operator_count": 1,
+    "all_queries_predeclared": true
+  },
+  "old_power_one_kappa": 4804.639273433786,
+  "relinearized_kappa": 4819.151640191725,
+  "old_mixed_coefficient": 0.6273518016998689,
+  "correction_sequence_norm": 1.3015925531782942e-14,
+  "correction_max_state_norm": 2.722605360507416e-15,
+  "corrected_defect_sequence_norm": 3.101357457947468e-15,
+  "corrected_defect_response_norm": 1.2065500971278407e-14,
+  "closure": {
+    "kappa": 4819.151640191725,
+    "derivative_drift": 47958508416.319336,
+    "corrected_defect_response_bound": 1.2065500971278407e-14,
+    "correction_max_state_norm": 2.722605360507416e-15,
+    "domain_radius": 2.6031851063565883e-14,
+    "discriminant": -4.577140868367045,
+    "remainder_radius": null,
+    "total_radius_about_original_reference": null,
+    "algebraic_closure_passed": false,
+    "domain_passed": false,
+    "closure_passed": false,
+    "closure_residual": null
+  },
+  "bracket": null,
+  "logic_slack": null,
+  "maximum_margin_radius": null,
+  "old_power_one_bracket": null,
+  "probe_seconds": 28.43937380000716,
+  "total_seconds": 64.65057930001058,
+  "old_power_one_logical_green_gram_applications": 16,
+  "new_logical_green_gram_applications": 16,
+  "extra_causal_response_sweeps": 1,
+  "certificate_sha256": "63DA40D4989669A1D1349B25323732C6800FD05E7EF793FBDE9C624E709CE24B",
+  "centerline_sha256": "24B349DCE9653F72AAD8DA885B4E5D7255076FEBADABF506D5EFE91E0782830E",
+  "protocol_sha256": "C55EBACEF156F01911EBB6A976E00A3A8A15FC152E58C8DCCFDAED90E6114FCC",
+  "source_sha256": "0DF8614D80C09FFDB99D5982B31ABDAFA4F399DF76D49E075F0A1246F65E7932",
+  "outcome_files_read": 0
+}

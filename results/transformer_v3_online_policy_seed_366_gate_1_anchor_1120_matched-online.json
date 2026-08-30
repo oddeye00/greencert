@@ -1,0 +1,60 @@
+{
+  "status": "POST-SEAL EXECUTABLE ONLINE-STOPPING BENCHMARK",
+  "execution_mode": "online stopping",
+  "run_label": "matched-online",
+  "benchmark_script_sha256": "104189826A692DA35381D2CC54A6F1B6921C9C9BAE2274A39FC9F7B74469828C",
+  "candidate": {
+    "seed": 366,
+    "threshold": 0.8,
+    "anchor": 1120
+  },
+  "certificate_sha256": "9F773A441C44988A876BB4A707BA7F2C5B98C407A12F474C6D314F10862D639C",
+  "certificate_seal_sha256": "05D9FC835AEB58C81E658ED8B8F7423DEF4F49FAFF1FF7C076416E98ECCC79D7",
+  "policy": "q_output=1; advance Green until issue/q=8; then advance outputs and recheck stored Green powers",
+  "decision": {
+    "q_output": 1,
+    "q_green": 1,
+    "certificate_issued": true,
+    "certified_bracket": [
+      2,
+      2
+    ],
+    "certificate_logic_slack": 0.0018713446794124701,
+    "total_pointwise_radius": 2.3628147902686187e-15
+  },
+  "frozen_earliest_lockstep_power": 1,
+  "frozen_bracket": [
+    2,
+    2
+  ],
+  "maximum_relative_trace_deviation": 0.0,
+  "queried_output_power": 1,
+  "queried_green_power": 1,
+  "logical_gram_applications": 432,
+  "full_q8_logical_gram_applications": 3456,
+  "logical_application_speedup": 8.0,
+  "online_measured_operator_seconds": 25.860013600000457,
+  "frozen_full_trace_operator_seconds": 359.0287938998081,
+  "measured_operator_time_speedup": 13.883550080569243,
+  "allocated_live_probe_bytes": 137699328,
+  "allocated_live_probe_gib": 0.12824249267578125,
+  "timings_seconds": {
+    "centerline_and_signed_response": 119.39652460000025,
+    "output_q1_and_envelopes": 10.253122699999949,
+    "green_and_output_refinement": 17.14676389999977,
+    "end_to_end": 149.86623250000002
+  },
+  "policy_trace": [
+    {
+      "q_output": 1,
+      "q_green": 1,
+      "certificate_issued": true,
+      "certified_bracket": [
+        2,
+        2
+      ],
+      "certificate_logic_slack": 0.0018713446794124701,
+      "total_pointwise_radius": 2.3628147902686187e-15
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "actual_absolute": 411,
+  "actual_relative": 361,
+  "anchor": 50,
+  "bracket": null,
+  "closure_statistic": null,
+  "covered": false,
+  "directional_gain_ratio": null,
+  "elapsed_seconds": 8.624869499937631,
+  "gate_index": 0,
+  "issued": false,
+  "minimum_output_slack": null,
+  "predicted_event": 358,
+  "seed": 511,
+  "signed_only": false,
+  "threshold": 0.9,
+  "unsigned_bracket": null,
+  "unsigned_closure_statistic": null,
+  "unsigned_covered": false,
+  "unsigned_issued": false
+}

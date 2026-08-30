@@ -1,0 +1,19 @@
+{
+  "status": "INDEPENDENT FOUR-PROBE AUDIT PASSED",
+  "source_sha256": "DD346E58AE938878F621A1BBB212AA2AAECE2CD6C68A12DC106F4EA66115AF3D",
+  "protocol_sha256": "8D18DB8B7842C247CF94C2C66DF2B3892E900EF30D2185F93B3BAC06A2D055AE",
+  "candidate": {
+    "seed": 366,
+    "threshold": 0.7,
+    "anchor": 1040
+  },
+  "probes": 4,
+  "calibration": 0.039643654651021064,
+  "bound_to_observed_ratio": 32.13468336403352,
+  "forcing_headroom_ratio": 16.25303212587122,
+  "bracket": [
+    28,
+    28
+  ],
+  "outcome_files_read": 0
+}

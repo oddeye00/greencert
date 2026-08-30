@@ -1,0 +1,80 @@
+{
+  "status": "three-invocation mixed-precision timing aggregate passed",
+  "scope": "Fifteen matched wall-time pairs across three separately launched, warmed, alternating-order invocations on one immutable q=1 candidate.",
+  "aggregator_sha256": "3458DDD2AF5996787F92259C25CA76FDBBF1FF35B688111A12437BE7E7531507",
+  "inputs": [
+    {
+      "result": "results\\transformer_v3_mixed_precision_residual_replication1_postseal_audit.json",
+      "result_sha256": "D9FBF530E4CC9E2241A3A344589B582799C5FF0F54ECF168A86BBD745B841109",
+      "independent_audit": "results\\transformer_v3_mixed_precision_residual_replication1_independent_audit.json",
+      "independent_audit_sha256": "092BC2FE1CB35145D7747D1C07133043940CEA658E738F546A8E3C3E37EE1260",
+      "paired_speedups": [
+        1.8796898657989656,
+        1.4003975717467558,
+        1.0368268314666373,
+        1.6614120162549417,
+        1.7979904300835388
+      ],
+      "median_paired_speedup": 1.6614120162549417
+    },
+    {
+      "result": "results\\transformer_v3_mixed_precision_residual_replication2_postseal_audit.json",
+      "result_sha256": "467EF229977ABF0A4A9E9ED07E89E7447B8A6CBDD4071FFB3697469615D4203D",
+      "independent_audit": "results\\transformer_v3_mixed_precision_residual_replication2_independent_audit.json",
+      "independent_audit_sha256": "2B8F6E5DA90F17080F105D8AA731B75B9710A0934AC55BE0F9436A4A92E24583",
+      "paired_speedups": [
+        1.7863171861648868,
+        2.0606037011620133,
+        1.8627156935924536,
+        1.8564679192068723,
+        1.9467975085346672
+      ],
+      "median_paired_speedup": 1.8627156935924536
+    },
+    {
+      "result": "results\\transformer_v3_mixed_precision_residual_postseal_audit.json",
+      "result_sha256": "70E12D4FFCB547ECB16E4E85A06A2DC8396242147D6BE458881F5F62D2008F91",
+      "independent_audit": "results\\transformer_v3_mixed_precision_residual_independent_audit.json",
+      "independent_audit_sha256": "D7910AE65E8D1E22A45A2EA4DA47258AEEA507FB079A5C0522DEB1ECE38F04F5",
+      "paired_speedups": [
+        1.8910091661306316,
+        1.7860921542289232,
+        1.698722216411437,
+        1.8942521832787633,
+        1.8921396157125567
+      ],
+      "median_paired_speedup": 1.8910091661306316
+    }
+  ],
+  "invocations": 3,
+  "paired_trials": 15,
+  "pooled_paired_speedups": [
+    1.8796898657989656,
+    1.4003975717467558,
+    1.0368268314666373,
+    1.6614120162549417,
+    1.7979904300835388,
+    1.7863171861648868,
+    2.0606037011620133,
+    1.8627156935924536,
+    1.8564679192068723,
+    1.9467975085346672,
+    1.8910091661306316,
+    1.7860921542289232,
+    1.698722216411437,
+    1.8942521832787633,
+    1.8921396157125567
+  ],
+  "pooled_median_paired_speedup": 1.8564679192068723,
+  "pooled_minimum_paired_speedup": 1.0368268314666373,
+  "pooled_maximum_paired_speedup": 2.0606037011620133,
+  "all_paired_speedups_above_one": true,
+  "same_non_timing_certificate_record": true,
+  "same_bracket": [
+    2,
+    2
+  ],
+  "maximum_measured_relative_residual": 3.3593789499600366e-07,
+  "admissible_to_measured_ratio": 1785831.7082554684,
+  "claim_boundary": "Wall-time variability is reported rather than filtered. This is a three-invocation systems benchmark, not a confidence interval or an outward exact-real neural-kernel proof."
+}

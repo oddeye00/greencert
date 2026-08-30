@@ -1,0 +1,272 @@
+{
+  "status": "FROZEN BEFORE OUTCOME JOIN; execution amendment v1.1",
+  "timestamp_utc": "2026-08-24T16:21:55.694559+00:00",
+  "method_seal_sha256": "14EABFDE3823E2289F53E1B5D39D89F103A4FB8D4B80C98E60CF8E5F879C57EA",
+  "candidate_seal_sha256": "5C6136AE0942500CBBB5AF0B9DACAD1FE8ADF8839D8B8E042C8942A5A9FF47B8",
+  "candidate_manifest_sha256": "D61FDFA72DAC8D70C189526B00D1F6905A1BFBD1161C64ED68CE09D44A7A4699",
+  "execution_amendment_seal_sha256": "912D869B704A25F73417E8BB4F57CD1CA770BBB8A0B07AA51796CA4FCE9A1BE9",
+  "pre_amendment_failure_log_sha256": {
+    "Candidate(seed=333, threshold=0.8, anchor=3080)": "893A23774C677DF24A8B0D69A036BE9BB854B8ACB6D10CD3F2D83E8D02C96CD2",
+    "Candidate(seed=350, threshold=0.7, anchor=1440)": "E9EF74C509B05DFF2046E474D38CC016ADA27F094EC9FCA574C2795273B2E0AB",
+    "Candidate(seed=335, threshold=0.7, anchor=2440)": "8F2D272D2A65B294C9421D9C41F7BDA524ECD885FE0F1FE846E08949246C4529"
+  },
+  "certificate_files": [
+    {
+      "candidate": {
+        "seed": 331,
+        "threshold": 0.7,
+        "anchor": 1160
+      },
+      "path": "results\\transformer_green_confirmation_certificate_seed_331_gate_0_anchor_1160.json",
+      "sha256": "8E1CACDCF8F884A526F4ED3221D10D423C960C35B91D61D32BD5AA1166165AFB",
+      "issued": false,
+      "construction_abstention": false
+    },
+    {
+      "candidate": {
+        "seed": 331,
+        "threshold": 0.8,
+        "anchor": 1520
+      },
+      "path": "results\\transformer_green_confirmation_certificate_seed_331_gate_1_anchor_1520.json",
+      "sha256": "C50E46A5C271BFDB7CB9C1BCA4686123E4676AEECDE321C3FE59923E0C402C37",
+      "issued": false,
+      "construction_abstention": false
+    },
+    {
+      "candidate": {
+        "seed": 333,
+        "threshold": 0.7,
+        "anchor": 3000
+      },
+      "path": "results\\transformer_green_confirmation_certificate_seed_333_gate_0_anchor_3000.json",
+      "sha256": "DD6E0CDCB79BE87CA837985978C0D39734829082AFBC83181F622A0E2548FC6F",
+      "issued": true,
+      "construction_abstention": false
+    },
+    {
+      "candidate": {
+        "seed": 333,
+        "threshold": 0.8,
+        "anchor": 3080
+      },
+      "path": "results\\transformer_green_confirmation_certificate_seed_333_gate_1_anchor_3080.json",
+      "sha256": "BF0B0E64653CF338C71B281635F9BE609C21549572CBB6D8650DA9F279C52439",
+      "issued": true,
+      "construction_abstention": false
+    },
+    {
+      "candidate": {
+        "seed": 335,
+        "threshold": 0.7,
+        "anchor": 2440
+      },
+      "path": "results\\transformer_green_confirmation_certificate_seed_335_gate_0_anchor_2440.json",
+      "sha256": "CBF5F2074D8574AB204BE428E0644313E4D4E28D1D2DD7E8E752FB5182666296",
+      "issued": false,
+      "construction_abstention": true
+    },
+    {
+      "candidate": {
+        "seed": 335,
+        "threshold": 0.8,
+        "anchor": 2880
+      },
+      "path": "results\\transformer_green_confirmation_certificate_seed_335_gate_1_anchor_2880.json",
+      "sha256": "BB606DE1E7478985947CBCCBB9D62337D24C034EA62C350556A1F74865337D22",
+      "issued": true,
+      "construction_abstention": false
+    },
+    {
+      "candidate": {
+        "seed": 335,
+        "threshold": 0.9,
+        "anchor": 3240
+      },
+      "path": "results\\transformer_green_confirmation_certificate_seed_335_gate_2_anchor_3240.json",
+      "sha256": "AB7FBE60FB9B3B5068BC2510538DFAA266655C6D451FAB93E2347AF89D3C4FE3",
+      "issued": true,
+      "construction_abstention": false
+    },
+    {
+      "candidate": {
+        "seed": 337,
+        "threshold": 0.7,
+        "anchor": 1080
+      },
+      "path": "results\\transformer_green_confirmation_certificate_seed_337_gate_0_anchor_1080.json",
+      "sha256": "C0945421589B02D21A3A5CC65D9844452767A898521FE3FD6AE34DDE49C33CD3",
+      "issued": false,
+      "construction_abstention": false
+    },
+    {
+      "candidate": {
+        "seed": 337,
+        "threshold": 0.8,
+        "anchor": 1720
+      },
+      "path": "results\\transformer_green_confirmation_certificate_seed_337_gate_1_anchor_1720.json",
+      "sha256": "4B9039F6763A419B6410AB4F7AC99BEA487817AE7B812DD2389C1BD7CBFA017D",
+      "issued": true,
+      "construction_abstention": false
+    },
+    {
+      "candidate": {
+        "seed": 342,
+        "threshold": 0.7,
+        "anchor": 1480
+      },
+      "path": "results\\transformer_green_confirmation_certificate_seed_342_gate_0_anchor_1480.json",
+      "sha256": "D3DFD8C614180FFF65D9E22752DA60EE0EB61143C3A6AB620AFA33F0E094FF51",
+      "issued": false,
+      "construction_abstention": false
+    },
+    {
+      "candidate": {
+        "seed": 345,
+        "threshold": 0.7,
+        "anchor": 960
+      },
+      "path": "results\\transformer_green_confirmation_certificate_seed_345_gate_0_anchor_960.json",
+      "sha256": "C76FD7B93129E02043624332A0B8321BF0F6B87B367F10552FB9779DCB31B614",
+      "issued": false,
+      "construction_abstention": false
+    },
+    {
+      "candidate": {
+        "seed": 345,
+        "threshold": 0.8,
+        "anchor": 1320
+      },
+      "path": "results\\transformer_green_confirmation_certificate_seed_345_gate_1_anchor_1320.json",
+      "sha256": "243ED8EE3633989AF1BA21C689C9F734DEF7999DE15DD2CDBB803DC5F263A893",
+      "issued": true,
+      "construction_abstention": false
+    },
+    {
+      "candidate": {
+        "seed": 345,
+        "threshold": 0.9,
+        "anchor": 2120
+      },
+      "path": "results\\transformer_green_confirmation_certificate_seed_345_gate_2_anchor_2120.json",
+      "sha256": "37D0898896A5AB545DB24A39E2AD58BD73715978704858723F66B951DEF5DB44",
+      "issued": true,
+      "construction_abstention": false
+    },
+    {
+      "candidate": {
+        "seed": 347,
+        "threshold": 0.7,
+        "anchor": 2000
+      },
+      "path": "results\\transformer_green_confirmation_certificate_seed_347_gate_0_anchor_2000.json",
+      "sha256": "79B854B628FF27FAABBBD3009C66F1DD580DB09D7552B5A811A330784D6AA29B",
+      "issued": false,
+      "construction_abstention": false
+    },
+    {
+      "candidate": {
+        "seed": 348,
+        "threshold": 0.7,
+        "anchor": 2200
+      },
+      "path": "results\\transformer_green_confirmation_certificate_seed_348_gate_0_anchor_2200.json",
+      "sha256": "F422F4A09EDA66AF787D355EDC7BAC9D71B91FD5392C4074F5EF67A7E6FABC37",
+      "issued": true,
+      "construction_abstention": false
+    },
+    {
+      "candidate": {
+        "seed": 348,
+        "threshold": 0.8,
+        "anchor": 2840
+      },
+      "path": "results\\transformer_green_confirmation_certificate_seed_348_gate_1_anchor_2840.json",
+      "sha256": "313A98C216D219FAC4E81F325288B5B44D9FC7141F6E3CF506093C25A888532A",
+      "issued": false,
+      "construction_abstention": false
+    },
+    {
+      "candidate": {
+        "seed": 348,
+        "threshold": 0.9,
+        "anchor": 3240
+      },
+      "path": "results\\transformer_green_confirmation_certificate_seed_348_gate_2_anchor_3240.json",
+      "sha256": "907F1F8FDE9C7640C5406CB3AC7FF845A0265091362CDAD0CED189269A6C1D56",
+      "issued": false,
+      "construction_abstention": false
+    },
+    {
+      "candidate": {
+        "seed": 350,
+        "threshold": 0.7,
+        "anchor": 1440
+      },
+      "path": "results\\transformer_green_confirmation_certificate_seed_350_gate_0_anchor_1440.json",
+      "sha256": "747CF64D542267EA20BB4765A3F5EC37CF0333CE2325BA6D4DD0B4319C29C466",
+      "issued": false,
+      "construction_abstention": false
+    },
+    {
+      "candidate": {
+        "seed": 350,
+        "threshold": 0.8,
+        "anchor": 2920
+      },
+      "path": "results\\transformer_green_confirmation_certificate_seed_350_gate_1_anchor_2920.json",
+      "sha256": "328F211EE347174E9E618A45767A2D771A43F6D2C2BE641EC78F4957E3B9DD48",
+      "issued": true,
+      "construction_abstention": false
+    },
+    {
+      "candidate": {
+        "seed": 351,
+        "threshold": 0.7,
+        "anchor": 1600
+      },
+      "path": "results\\transformer_green_confirmation_certificate_seed_351_gate_0_anchor_1600.json",
+      "sha256": "6D8350C0434BB5079DE42ACD1115935693EEA2DFA8F23A4E2753848B83626794",
+      "issued": false,
+      "construction_abstention": false
+    },
+    {
+      "candidate": {
+        "seed": 351,
+        "threshold": 0.8,
+        "anchor": 2200
+      },
+      "path": "results\\transformer_green_confirmation_certificate_seed_351_gate_1_anchor_2200.json",
+      "sha256": "59E149BCD845DC823CE1AE5F46D18BD754C4B9828F905EC526DE02EA7E71FFB5",
+      "issued": false,
+      "construction_abstention": false
+    },
+    {
+      "candidate": {
+        "seed": 352,
+        "threshold": 0.8,
+        "anchor": 5320
+      },
+      "path": "results\\transformer_green_confirmation_certificate_seed_352_gate_1_anchor_5320.json",
+      "sha256": "99F86EE55B081E6ADD2A3A3B0ABDE9FA660D55CB747B00210CACA7C16C13BDA7",
+      "issued": false,
+      "construction_abstention": false
+    },
+    {
+      "candidate": {
+        "seed": 354,
+        "threshold": 0.7,
+        "anchor": 2120
+      },
+      "path": "results\\transformer_green_confirmation_certificate_seed_354_gate_0_anchor_2120.json",
+      "sha256": "55C7315D92AFB51707BAC2837DC69CE6C9D6EBDDE4FA6C62CD7BFB5E7191BFF8",
+      "issued": false,
+      "construction_abstention": false
+    }
+  ],
+  "candidates": 23,
+  "issued_unopened": 9,
+  "construction_abstentions": 1,
+  "exact_original_executable_retries": 2
+}

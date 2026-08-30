@@ -1,0 +1,16 @@
+{
+  "status": "INDEPENDENT OUTPUT-RECENTERING AUDIT PASSED",
+  "source": "results/transformer_v3_output_recentering_postseal_audit.json",
+  "source_sha256": "EAE166D80962BA03DF7CF3299445650BB065E61B4170ABB51CBDBBE5F8312082",
+  "generator_script_sha256": "5765E834B4BAF5FBD86113AF0237531047A000011967AFF6BE4D42E8FBFCDB55",
+  "records": 19,
+  "evaluable": 15,
+  "old_issued_retained": 11,
+  "hybrid_issued": 11,
+  "minimum_maximum_margin_radius_ratio": 0.09077829636531191,
+  "median_maximum_margin_radius_ratio": 0.36505254056767006,
+  "maximum_maximum_margin_radius_ratio": 0.6020999753221202,
+  "same_power_and_bracket": true,
+  "outcome_files_read": 0,
+  "randomized_queries_added": 0
+}

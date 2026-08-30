@@ -1,0 +1,2437 @@
+{
+  "status": "OUTCOME-BLIND POST-SEAL RESPONSE-CENTERED OUTPUT AUDIT PASSED",
+  "evidence_boundary": "The output-recentering corollary was introduced after the v3 seal. This audit reads no future outcomes and changes no prospective record; any issuance gain is method-development evidence until frozen confirmation.",
+  "construction": "evaluate logits at c+z; charge only the theorem remainder E; intersect with the original valid output enclosure",
+  "certificate_records": 19,
+  "evaluable_records": 15,
+  "old_issued": 11,
+  "recentered_only_issued": 11,
+  "hybrid_issued": 11,
+  "hybrid_converted_old_abstentions": 0,
+  "hybrid_converted_candidates": [],
+  "old_issued_retained": 11,
+  "earlier_power_cases": 0,
+  "earlier_power_candidates": [],
+  "median_maximum_margin_radius_ratio_at_hybrid_issue": 0.36505254056767006,
+  "maximum_margin_radius_ratio_at_hybrid_issue": 0.6020999753221202,
+  "randomized_queries_added": 0,
+  "outcome_files_read": 0,
+  "deterministic_forward_evaluations": 2951,
+  "aggregate_elapsed_seconds": 2194.4811059000203,
+  "audit_script_sha256": "5765E834B4BAF5FBD86113AF0237531047A000011967AFF6BE4D42E8FBFCDB55",
+  "rows": [
+    {
+      "candidate": {
+        "seed": 360,
+        "threshold": 0.7,
+        "anchor": 3480
+      },
+      "certificate_path": "results/transformer_v3_certificate_seed_360_gate_0_anchor_3480.json",
+      "certificate_sha256": "BF9A46F67BD8AD23DA7C77945B0203BB8B4CA4A99CEDF297E23ED4BF64B3CBBA",
+      "old_certificate_issued": true,
+      "old_earliest_power": 3,
+      "old_bracket": [
+        107,
+        107
+      ],
+      "outcome_files_read": 0,
+      "randomized_queries_added": 0,
+      "evaluable": true,
+      "horizon": 131,
+      "deterministic_corrected_forward_evaluations": 131,
+      "observed_signed_response_sequence_norm": 4.003044491696253e-14,
+      "recentered_issued": true,
+      "recentered_earliest_power": 3,
+      "recentered_bracket": [
+        107,
+        107
+      ],
+      "hybrid_issued": true,
+      "hybrid_earliest_power": 3,
+      "hybrid_bracket": [
+        107,
+        107
+      ],
+      "old_issued_retained_by_hybrid": true,
+      "elapsed_seconds": 220.118439199985,
+      "power_audits": [
+        {
+          "power": 1,
+          "closure_passed": false,
+          "recentered_bracket": null,
+          "hybrid_bracket": null
+        },
+        {
+          "power": 2,
+          "closure_passed": false,
+          "recentered_bracket": null,
+          "hybrid_bracket": null
+        },
+        {
+          "power": 3,
+          "closure_passed": true,
+          "old_recomputed_bracket": [
+            107,
+            107
+          ],
+          "recentered_bracket": [
+            107,
+            107
+          ],
+          "hybrid_bracket": [
+            107,
+            107
+          ],
+          "recentered_logic_slack": 0.0012607821272902428,
+          "hybrid_logic_slack": 0.0012607821272902428,
+          "maximum_origin_margin_radius": 7.374343365638417e-11,
+          "maximum_recentered_margin_radius": 2.974647982548859e-11,
+          "maximum_margin_radius_ratio": 0.40337801415778474
+        },
+        {
+          "power": 4,
+          "closure_passed": true,
+          "old_recomputed_bracket": [
+            107,
+            107
+          ],
+          "recentered_bracket": [
+            107,
+            107
+          ],
+          "hybrid_bracket": [
+            107,
+            107
+          ],
+          "recentered_logic_slack": 0.0012607821381299547,
+          "hybrid_logic_slack": 0.0012607821381299547,
+          "maximum_origin_margin_radius": 5.695662603038674e-11,
+          "maximum_recentered_margin_radius": 1.7228318218307326e-11,
+          "maximum_margin_radius_ratio": 0.30248136905293344
+        },
+        {
+          "power": 5,
+          "closure_passed": true,
+          "old_recomputed_bracket": [
+            107,
+            107
+          ],
+          "recentered_bracket": [
+            107,
+            107
+          ],
+          "hybrid_bracket": [
+            107,
+            107
+          ],
+          "recentered_logic_slack": 0.001260782142044335,
+          "hybrid_logic_slack": 0.001260782142044335,
+          "maximum_origin_margin_radius": 5.0153090094645026e-11,
+          "maximum_recentered_margin_radius": 1.2782934871643466e-11,
+          "maximum_margin_radius_ratio": 0.2548783105392011
+        },
+        {
+          "power": 6,
+          "closure_passed": true,
+          "old_recomputed_bracket": [
+            107,
+            107
+          ],
+          "recentered_bracket": [
+            107,
+            107
+          ],
+          "hybrid_bracket": [
+            107,
+            107
+          ],
+          "recentered_logic_slack": 0.0012607821440020722,
+          "hybrid_logic_slack": 0.0012607821440020722,
+          "maximum_origin_margin_radius": 4.645940409001617e-11,
+          "maximum_recentered_margin_radius": 1.0582856145675091e-11,
+          "maximum_margin_radius_ratio": 0.2277871693138931
+        },
+        {
+          "power": 7,
+          "closure_passed": true,
+          "old_recomputed_bracket": [
+            107,
+            107
+          ],
+          "recentered_bracket": [
+            107,
+            107
+          ],
+          "hybrid_bracket": [
+            107,
+            107
+          ],
+          "recentered_logic_slack": 0.0012607821451743274,
+          "hybrid_logic_slack": 0.0012607821451743274,
+          "maximum_origin_margin_radius": 4.412219814906628e-11,
+          "maximum_recentered_margin_radius": 9.27579405723491e-12,
+          "maximum_margin_radius_ratio": 0.21022964508469774
+        },
+        {
+          "power": 8,
+          "closure_passed": true,
+          "old_recomputed_bracket": [
+            107,
+            107
+          ],
+          "recentered_bracket": [
+            107,
+            107
+          ],
+          "hybrid_bracket": [
+            107,
+            107
+          ],
+          "recentered_logic_slack": 0.0012607821459503729,
+          "hybrid_logic_slack": 0.0012607821459503729,
+          "maximum_origin_margin_radius": 4.25087367680281e-11,
+          "maximum_recentered_margin_radius": 8.415478324975173e-12,
+          "maximum_margin_radius_ratio": 0.19797055769732186
+        }
+      ]
+    },
+    {
+      "candidate": {
+        "seed": 361,
+        "threshold": 0.7,
+        "anchor": 1880
+      },
+      "certificate_path": "results/transformer_v3_certificate_seed_361_gate_0_anchor_1880.json",
+      "certificate_sha256": "D26ECDAFA3568040C30790090B286CCF9925AEA2FC76ED3A1D1881C7149F6F30",
+      "old_certificate_issued": false,
+      "old_earliest_power": null,
+      "old_bracket": null,
+      "outcome_files_read": 0,
+      "randomized_queries_added": 0,
+      "evaluable": true,
+      "horizon": 275,
+      "deterministic_corrected_forward_evaluations": 275,
+      "observed_signed_response_sequence_norm": 2.4013849628062e-13,
+      "recentered_issued": false,
+      "recentered_earliest_power": null,
+      "recentered_bracket": null,
+      "hybrid_issued": false,
+      "hybrid_earliest_power": null,
+      "hybrid_bracket": null,
+      "old_issued_retained_by_hybrid": true,
+      "elapsed_seconds": 240.0513419000199,
+      "power_audits": [
+        {
+          "power": 1,
+          "closure_passed": false,
+          "recentered_bracket": null,
+          "hybrid_bracket": null
+        },
+        {
+          "power": 2,
+          "closure_passed": false,
+          "recentered_bracket": null,
+          "hybrid_bracket": null
+        },
+        {
+          "power": 3,
+          "closure_passed": false,
+          "recentered_bracket": null,
+          "hybrid_bracket": null
+        },
+        {
+          "power": 4,
+          "closure_passed": false,
+          "recentered_bracket": null,
+          "hybrid_bracket": null
+        },
+        {
+          "power": 5,
+          "closure_passed": false,
+          "recentered_bracket": null,
+          "hybrid_bracket": null
+        },
+        {
+          "power": 6,
+          "closure_passed": false,
+          "recentered_bracket": null,
+          "hybrid_bracket": null
+        },
+        {
+          "power": 7,
+          "closure_passed": false,
+          "recentered_bracket": null,
+          "hybrid_bracket": null
+        },
+        {
+          "power": 8,
+          "closure_passed": false,
+          "recentered_bracket": null,
+          "hybrid_bracket": null
+        }
+      ]
+    },
+    {
+      "candidate": {
+        "seed": 361,
+        "threshold": 0.8,
+        "anchor": 2800
+      },
+      "certificate_path": "results/transformer_v3_certificate_seed_361_gate_1_anchor_2800.json",
+      "certificate_sha256": "896292CEF8EDB70B5B2ECFB8241F737154576E99B20CCAD7745BF7F8683624A2",
+      "old_certificate_issued": true,
+      "old_earliest_power": 2,
+      "old_bracket": [
+        265,
+        265
+      ],
+      "outcome_files_read": 0,
+      "randomized_queries_added": 0,
+      "evaluable": true,
+      "horizon": 289,
+      "deterministic_corrected_forward_evaluations": 289,
+      "observed_signed_response_sequence_norm": 5.174000101980113e-14,
+      "recentered_issued": true,
+      "recentered_earliest_power": 2,
+      "recentered_bracket": [
+        265,
+        265
+      ],
+      "hybrid_issued": true,
+      "hybrid_earliest_power": 2,
+      "hybrid_bracket": [
+        265,
+        265
+      ],
+      "old_issued_retained_by_hybrid": true,
+      "elapsed_seconds": 242.9741674999823,
+      "power_audits": [
+        {
+          "power": 1,
+          "closure_passed": false,
+          "recentered_bracket": null,
+          "hybrid_bracket": null
+        },
+        {
+          "power": 2,
+          "closure_passed": true,
+          "old_recomputed_bracket": [
+            265,
+            265
+          ],
+          "recentered_bracket": [
+            265,
+            265
+          ],
+          "hybrid_bracket": [
+            265,
+            265
+          ],
+          "recentered_logic_slack": 0.0001804046960383744,
+          "hybrid_logic_slack": 0.0001804046960383744,
+          "maximum_origin_margin_radius": 5.1136963930162585e-11,
+          "maximum_recentered_margin_radius": 1.8667678599623157e-11,
+          "maximum_margin_radius_ratio": 0.36505254056767006
+        },
+        {
+          "power": 3,
+          "closure_passed": true,
+          "old_recomputed_bracket": [
+            265,
+            265
+          ],
+          "recentered_bracket": [
+            265,
+            265
+          ],
+          "hybrid_bracket": [
+            265,
+            265
+          ],
+          "recentered_logic_slack": 0.00018040470643406676,
+          "hybrid_logic_slack": 0.00018040470643406676,
+          "maximum_origin_margin_radius": 3.241689449063859e-11,
+          "maximum_recentered_margin_radius": 6.0490814987893985e-12,
+          "maximum_margin_radius_ratio": 0.18660274507591293
+        },
+        {
+          "power": 4,
+          "closure_passed": true,
+          "old_recomputed_bracket": [
+            265,
+            265
+          ],
+          "recentered_bracket": [
+            265,
+            265
+          ],
+          "hybrid_bracket": [
+            265,
+            265
+          ],
+          "recentered_logic_slack": 0.00018040470848380087,
+          "hybrid_logic_slack": 0.00018040470848380087,
+          "maximum_origin_margin_radius": 2.7420845100906332e-11,
+          "maximum_recentered_margin_radius": 3.654968272982261e-12,
+          "maximum_margin_radius_ratio": 0.133291598400133
+        },
+        {
+          "power": 5,
+          "closure_passed": true,
+          "old_recomputed_bracket": [
+            265,
+            265
+          ],
+          "recentered_bracket": [
+            265,
+            265
+          ],
+          "hybrid_bracket": [
+            265,
+            265
+          ],
+          "recentered_logic_slack": 0.00018040470926956629,
+          "hybrid_logic_slack": 0.00018040470926956629,
+          "maximum_origin_margin_radius": 2.5084237825404222e-11,
+          "maximum_recentered_margin_radius": 2.754338571959348e-12,
+          "maximum_margin_radius_ratio": 0.10980355835926073
+        },
+        {
+          "power": 6,
+          "closure_passed": true,
+          "old_recomputed_bracket": [
+            265,
+            265
+          ],
+          "recentered_bracket": [
+            265,
+            265
+          ],
+          "hybrid_bracket": [
+            265,
+            265
+          ],
+          "recentered_logic_slack": 0.00018040470967696075,
+          "hybrid_logic_slack": 0.00018040470967696075,
+          "maximum_origin_margin_radius": 2.3714221703739405e-11,
+          "maximum_recentered_margin_radius": 2.2930884257239306e-12,
+          "maximum_margin_radius_ratio": 0.09669676088768042
+        },
+        {
+          "power": 7,
+          "closure_passed": true,
+          "old_recomputed_bracket": [
+            265,
+            265
+          ],
+          "recentered_bracket": [
+            265,
+            265
+          ],
+          "hybrid_bracket": [
+            265,
+            265
+          ],
+          "recentered_logic_slack": 0.00018040470992191534,
+          "hybrid_logic_slack": 0.00018040470992191534,
+          "maximum_origin_margin_radius": 2.2812720518695435e-11,
+          "maximum_recentered_margin_radius": 2.0179716739400253e-12,
+          "maximum_margin_radius_ratio": 0.08845817719487954
+        },
+        {
+          "power": 8,
+          "closure_passed": true,
+          "old_recomputed_bracket": [
+            265,
+            265
+          ],
+          "recentered_bracket": [
+            265,
+            265
+          ],
+          "hybrid_bracket": [
+            265,
+            265
+          ],
+          "recentered_logic_slack": 0.00018040471008360078,
+          "hybrid_logic_slack": 0.00018040471008360078,
+          "maximum_origin_margin_radius": 2.2174382455241625e-11,
+          "maximum_recentered_margin_radius": 1.837372068933827e-12,
+          "maximum_margin_radius_ratio": 0.08286012350704744
+        }
+      ]
+    },
+    {
+      "candidate": {
+        "seed": 365,
+        "threshold": 0.7,
+        "anchor": 1480
+      },
+      "certificate_path": "results/transformer_v3_certificate_seed_365_gate_0_anchor_1480.json",
+      "certificate_sha256": "6CB21193FA4947E35867CF2EC69053BCF3A8391171247C25AC73198EA8988A22",
+      "old_certificate_issued": false,
+      "old_earliest_power": null,
+      "old_bracket": null,
+      "outcome_files_read": 0,
+      "randomized_queries_added": 0,
+      "evaluable": false,
+      "reason": "no sealed Green trace"
+    },
+    {
+      "candidate": {
+        "seed": 366,
+        "threshold": 0.7,
+        "anchor": 1040
+      },
+      "certificate_path": "results/transformer_v3_certificate_seed_366_gate_0_anchor_1040.json",
+      "certificate_sha256": "63DA40D4989669A1D1349B25323732C6800FD05E7EF793FBDE9C624E709CE24B",
+      "old_certificate_issued": true,
+      "old_earliest_power": 2,
+      "old_bracket": [
+        28,
+        28
+      ],
+      "outcome_files_read": 0,
+      "randomized_queries_added": 0,
+      "evaluable": true,
+      "horizon": 52,
+      "deterministic_corrected_forward_evaluations": 52,
+      "observed_signed_response_sequence_norm": 1.3015925531782942e-14,
+      "recentered_issued": true,
+      "recentered_earliest_power": 2,
+      "recentered_bracket": [
+        28,
+        28
+      ],
+      "hybrid_issued": true,
+      "hybrid_earliest_power": 2,
+      "hybrid_bracket": [
+        28,
+        28
+      ],
+      "old_issued_retained_by_hybrid": true,
+      "elapsed_seconds": 209.1346708999772,
+      "power_audits": [
+        {
+          "power": 1,
+          "closure_passed": false,
+          "recentered_bracket": null,
+          "hybrid_bracket": null
+        },
+        {
+          "power": 2,
+          "closure_passed": true,
+          "old_recomputed_bracket": [
+            28,
+            28
+          ],
+          "recentered_bracket": [
+            28,
+            28
+          ],
+          "hybrid_bracket": [
+            28,
+            28
+          ],
+          "recentered_logic_slack": 0.006937222005003973,
+          "hybrid_logic_slack": 0.006937222005003973,
+          "maximum_origin_margin_radius": 2.391515260542543e-11,
+          "maximum_recentered_margin_radius": 2.170976810836971e-12,
+          "maximum_margin_radius_ratio": 0.09077829636531191
+        },
+        {
+          "power": 3,
+          "closure_passed": true,
+          "old_recomputed_bracket": [
+            28,
+            28
+          ],
+          "recentered_bracket": [
+            28,
+            28
+          ],
+          "hybrid_bracket": [
+            28,
+            28
+          ],
+          "recentered_logic_slack": 0.006937222006172038,
+          "hybrid_logic_slack": 0.006937222006172038,
+          "maximum_origin_margin_radius": 1.851013288642184e-11,
+          "maximum_recentered_margin_radius": 7.945742155661912e-13,
+          "maximum_margin_radius_ratio": 0.042926445771172904
+        },
+        {
+          "power": 4,
+          "closure_passed": true,
+          "old_recomputed_bracket": [
+            28,
+            28
+          ],
+          "recentered_bracket": [
+            28,
+            28
+          ],
+          "hybrid_bracket": [
+            28,
+            28
+          ],
+          "recentered_logic_slack": 0.006937222006434195,
+          "hybrid_logic_slack": 0.006937222006434195,
+          "maximum_origin_margin_radius": 1.6502821123906206e-11,
+          "maximum_recentered_margin_radius": 4.952506928355158e-13,
+          "maximum_margin_radius_ratio": 0.030010062468536915
+        },
+        {
+          "power": 5,
+          "closure_passed": true,
+          "old_recomputed_bracket": [
+            28,
+            28
+          ],
+          "recentered_bracket": [
+            28,
+            28
+          ],
+          "hybrid_bracket": [
+            28,
+            28
+          ],
+          "recentered_logic_slack": 0.0069372220065359,
+          "hybrid_logic_slack": 0.0069372220065359,
+          "maximum_origin_margin_radius": 1.5466758866874476e-11,
+          "maximum_recentered_margin_radius": 3.8122332097438445e-13,
+          "maximum_margin_radius_ratio": 0.024647912614119787
+        },
+        {
+          "power": 6,
+          "closure_passed": true,
+          "old_recomputed_bracket": [
+            28,
+            28
+          ],
+          "recentered_bracket": [
+            28,
+            28
+          ],
+          "hybrid_bracket": [
+            28,
+            28
+          ],
+          "recentered_logic_slack": 0.006937222006589752,
+          "hybrid_logic_slack": 0.006937222006589752,
+          "maximum_origin_margin_radius": 1.4891029797227717e-11,
+          "maximum_recentered_margin_radius": 3.2285290740455203e-13,
+          "maximum_margin_radius_ratio": 0.021681032930620955
+        },
+        {
+          "power": 7,
+          "closure_passed": true,
+          "old_recomputed_bracket": [
+            28,
+            28
+          ],
+          "recentered_bracket": [
+            28,
+            28
+          ],
+          "hybrid_bracket": [
+            28,
+            28
+          ],
+          "recentered_logic_slack": 0.006937222006622934,
+          "hybrid_logic_slack": 0.006937222006622934,
+          "maximum_origin_margin_radius": 1.4496519768868013e-11,
+          "maximum_recentered_margin_radius": 2.8697123868857175e-13,
+          "maximum_margin_radius_ratio": 0.01979587123420178
+        },
+        {
+          "power": 8,
+          "closure_passed": true,
+          "old_recomputed_bracket": [
+            28,
+            28
+          ],
+          "recentered_bracket": [
+            28,
+            28
+          ],
+          "hybrid_bracket": [
+            28,
+            28
+          ],
+          "recentered_logic_slack": 0.006937222006645303,
+          "hybrid_logic_slack": 0.006937222006645303,
+          "maximum_origin_margin_radius": 1.4209209788882611e-11,
+          "maximum_recentered_margin_radius": 2.6282383067446574e-13,
+          "maximum_margin_radius_ratio": 0.0184967239262032
+        }
+      ]
+    },
+    {
+      "candidate": {
+        "seed": 366,
+        "threshold": 0.8,
+        "anchor": 1120
+      },
+      "certificate_path": "results/transformer_v3_certificate_seed_366_gate_1_anchor_1120.json",
+      "certificate_sha256": "9F773A441C44988A876BB4A707BA7F2C5B98C407A12F474C6D314F10862D639C",
+      "old_certificate_issued": true,
+      "old_earliest_power": 1,
+      "old_bracket": [
+        2,
+        2
+      ],
+      "outcome_files_read": 0,
+      "randomized_queries_added": 0,
+      "evaluable": true,
+      "horizon": 26,
+      "deterministic_corrected_forward_evaluations": 26,
+      "observed_signed_response_sequence_norm": 4.957427740197084e-15,
+      "recentered_issued": true,
+      "recentered_earliest_power": 1,
+      "recentered_bracket": [
+        2,
+        2
+      ],
+      "hybrid_issued": true,
+      "hybrid_earliest_power": 1,
+      "hybrid_bracket": [
+        2,
+        2
+      ],
+      "old_issued_retained_by_hybrid": true,
+      "elapsed_seconds": 126.58658650002326,
+      "power_audits": [
+        {
+          "power": 1,
+          "closure_passed": true,
+          "old_recomputed_bracket": [
+            2,
+            2
+          ],
+          "recentered_bracket": [
+            2,
+            2
+          ],
+          "hybrid_bracket": [
+            2,
+            2
+          ],
+          "recentered_logic_slack": 0.0018713447038268445,
+          "hybrid_logic_slack": 0.0018713447038268445,
+          "maximum_origin_margin_radius": 4.075092266044497e-11,
+          "maximum_recentered_margin_radius": 1.2334031225239098e-11,
+          "maximum_margin_radius_ratio": 0.3026687598710782
+        },
+        {
+          "power": 2,
+          "closure_passed": true,
+          "old_recomputed_bracket": [
+            2,
+            2
+          ],
+          "recentered_bracket": [
+            2,
+            2
+          ],
+          "hybrid_bracket": [
+            2,
+            2
+          ],
+          "recentered_logic_slack": 0.0018713447141683087,
+          "hybrid_logic_slack": 0.0018713447141683087,
+          "maximum_origin_margin_radius": 1.5085675722778403e-11,
+          "maximum_recentered_margin_radius": 2.7788681374469924e-13,
+          "maximum_margin_radius_ratio": 0.01842057451394822
+        },
+        {
+          "power": 3,
+          "closure_passed": true,
+          "old_recomputed_bracket": [
+            2,
+            2
+          ],
+          "recentered_bracket": [
+            2,
+            2
+          ],
+          "hybrid_bracket": [
+            2,
+            2
+          ],
+          "recentered_logic_slack": 0.001871344714330047,
+          "hybrid_logic_slack": 0.001871344714330047,
+          "maximum_origin_margin_radius": 1.2096474706543176e-11,
+          "maximum_recentered_margin_radius": 9.97094647606779e-14,
+          "maximum_margin_radius_ratio": 0.008242853160081711
+        },
+        {
+          "power": 4,
+          "closure_passed": true,
+          "old_recomputed_bracket": [
+            2,
+            2
+          ],
+          "recentered_bracket": [
+            2,
+            2
+          ],
+          "hybrid_bracket": [
+            2,
+            2
+          ],
+          "recentered_logic_slack": 0.0018713447143654078,
+          "hybrid_logic_slack": 0.0018713447143654078,
+          "maximum_origin_margin_radius": 1.0868818154042866e-11,
+          "maximum_recentered_margin_radius": 6.137014188034983e-14,
+          "maximum_margin_radius_ratio": 0.005646441131920311
+        },
+        {
+          "power": 5,
+          "closure_passed": true,
+          "old_recomputed_bracket": [
+            2,
+            2
+          ],
+          "recentered_bracket": [
+            2,
+            2
+          ],
+          "hybrid_bracket": [
+            2,
+            2
+          ],
+          "recentered_logic_slack": 0.0018713447143794964,
+          "hybrid_logic_slack": 0.0018713447143794964,
+          "maximum_origin_margin_radius": 1.0199655832720741e-11,
+          "maximum_recentered_margin_radius": 4.621729658989558e-14,
+          "maximum_margin_radius_ratio": 0.004531260402103901
+        },
+        {
+          "power": 6,
+          "closure_passed": true,
+          "old_recomputed_bracket": [
+            2,
+            2
+          ],
+          "recentered_bracket": [
+            2,
+            2
+          ],
+          "hybrid_bracket": [
+            2,
+            2
+          ],
+          "recentered_logic_slack": 0.0018713447143868308,
+          "hybrid_logic_slack": 0.0018713447143868308,
+          "maximum_origin_margin_radius": 9.778576645717936e-12,
+          "maximum_recentered_margin_radius": 3.8368051628671985e-14,
+          "maximum_margin_radius_ratio": 0.003923684705736131
+        },
+        {
+          "power": 7,
+          "closure_passed": true,
+          "old_recomputed_bracket": [
+            2,
+            2
+          ],
+          "recentered_bracket": [
+            2,
+            2
+          ],
+          "hybrid_bracket": [
+            2,
+            2
+          ],
+          "recentered_logic_slack": 0.001871344714391241,
+          "hybrid_logic_slack": 0.001871344714391241,
+          "maximum_origin_margin_radius": 9.489246297179436e-12,
+          "maximum_recentered_margin_radius": 3.3663915100061926e-14,
+          "maximum_margin_radius_ratio": 0.0035475857666449357
+        },
+        {
+          "power": 8,
+          "closure_passed": true,
+          "old_recomputed_bracket": [
+            2,
+            2
+          ],
+          "recentered_bracket": [
+            2,
+            2
+          ],
+          "hybrid_bracket": [
+            2,
+            2
+          ],
+          "recentered_logic_slack": 0.0018713447143941552,
+          "hybrid_logic_slack": 0.0018713447143941552,
+          "maximum_origin_margin_radius": 9.278214108377242e-12,
+          "maximum_recentered_margin_radius": 3.0562747997713283e-14,
+          "maximum_margin_radius_ratio": 0.003294033489712031
+        }
+      ]
+    },
+    {
+      "candidate": {
+        "seed": 366,
+        "threshold": 0.9,
+        "anchor": 1360
+      },
+      "certificate_path": "results/transformer_v3_certificate_seed_366_gate_2_anchor_1360.json",
+      "certificate_sha256": "2AE37E3B9E914F9E38EA6EDF813887AB4C9CD41FA845DDC7E1958A2DEF947A95",
+      "old_certificate_issued": true,
+      "old_earliest_power": 2,
+      "old_bracket": [
+        70,
+        70
+      ],
+      "outcome_files_read": 0,
+      "randomized_queries_added": 0,
+      "evaluable": true,
+      "horizon": 94,
+      "deterministic_corrected_forward_evaluations": 94,
+      "observed_signed_response_sequence_norm": 2.3678988804339286e-14,
+      "recentered_issued": true,
+      "recentered_earliest_power": 2,
+      "recentered_bracket": [
+        70,
+        70
+      ],
+      "hybrid_issued": true,
+      "hybrid_earliest_power": 2,
+      "hybrid_bracket": [
+        70,
+        70
+      ],
+      "old_issued_retained_by_hybrid": true,
+      "elapsed_seconds": 126.48066930001369,
+      "power_audits": [
+        {
+          "power": 1,
+          "closure_passed": false,
+          "recentered_bracket": null,
+          "hybrid_bracket": null
+        },
+        {
+          "power": 2,
+          "closure_passed": true,
+          "old_recomputed_bracket": [
+            70,
+            70
+          ],
+          "recentered_bracket": [
+            70,
+            70
+          ],
+          "hybrid_bracket": [
+            70,
+            70
+          ],
+          "recentered_logic_slack": 0.001362153156091781,
+          "hybrid_logic_slack": 0.001362153156091781,
+          "maximum_origin_margin_radius": 6.899579445247599e-11,
+          "maximum_recentered_margin_radius": 2.970884434713527e-11,
+          "maximum_margin_radius_ratio": 0.4305892059493364
+        },
+        {
+          "power": 3,
+          "closure_passed": true,
+          "old_recomputed_bracket": [
+            70,
+            70
+          ],
+          "recentered_bracket": [
+            70,
+            70
+          ],
+          "hybrid_bracket": [
+            70,
+            70
+          ],
+          "recentered_logic_slack": 0.0013621531739339053,
+          "hybrid_logic_slack": 0.0013621531739339053,
+          "maximum_origin_margin_radius": 4.008604694017746e-11,
+          "maximum_recentered_margin_radius": 8.295787862341641e-12,
+          "maximum_margin_radius_ratio": 0.20694951225103056
+        },
+        {
+          "power": 4,
+          "closure_passed": true,
+          "old_recomputed_bracket": [
+            70,
+            70
+          ],
+          "recentered_bracket": [
+            70,
+            70
+          ],
+          "hybrid_bracket": [
+            70,
+            70
+          ],
+          "recentered_logic_slack": 0.0013621531769322335,
+          "hybrid_logic_slack": 0.0013621531769322335,
+          "maximum_origin_margin_radius": 3.354140632713703e-11,
+          "maximum_recentered_margin_radius": 4.8283549469758436e-12,
+          "maximum_margin_radius_ratio": 0.14395207225015522
+        },
+        {
+          "power": 5,
+          "closure_passed": true,
+          "old_recomputed_bracket": [
+            70,
+            70
+          ],
+          "recentered_bracket": [
+            70,
+            70
+          ],
+          "hybrid_bracket": [
+            70,
+            70
+          ],
+          "recentered_logic_slack": 0.0013621531780580484,
+          "hybrid_logic_slack": 0.0013621531780580484,
+          "maximum_origin_margin_radius": 3.056222840754079e-11,
+          "maximum_recentered_margin_radius": 3.545968579891265e-12,
+          "maximum_margin_radius_ratio": 0.11602454286403895
+        },
+        {
+          "power": 6,
+          "closure_passed": true,
+          "old_recomputed_bracket": [
+            70,
+            70
+          ],
+          "recentered_bracket": [
+            70,
+            70
+          ],
+          "hybrid_bracket": [
+            70,
+            70
+          ],
+          "recentered_logic_slack": 0.001362153178630215,
+          "hybrid_logic_slack": 0.001362153178630215,
+          "maximum_origin_margin_radius": 2.884208672289366e-11,
+          "maximum_recentered_margin_radius": 2.9005548113406936e-12,
+          "maximum_margin_radius_ratio": 0.10056674606135042
+        },
+        {
+          "power": 7,
+          "closure_passed": true,
+          "old_recomputed_bracket": [
+            70,
+            70
+          ],
+          "recentered_bracket": [
+            70,
+            70
+          ],
+          "hybrid_bracket": [
+            70,
+            70
+          ],
+          "recentered_logic_slack": 0.0013621531789715115,
+          "hybrid_logic_slack": 0.0013621531789715115,
+          "maximum_origin_margin_radius": 2.771857794105599e-11,
+          "maximum_recentered_margin_radius": 2.5182838053858338e-12,
+          "maximum_margin_radius_ratio": 0.09085183990105862
+        },
+        {
+          "power": 8,
+          "closure_passed": true,
+          "old_recomputed_bracket": [
+            70,
+            70
+          ],
+          "recentered_bracket": [
+            70,
+            70
+          ],
+          "hybrid_bracket": [
+            70,
+            70
+          ],
+          "recentered_logic_slack": 0.0013621531791965429,
+          "hybrid_logic_slack": 0.0013621531791965429,
+          "maximum_origin_margin_radius": 2.6931331086152548e-11,
+          "maximum_recentered_margin_radius": 2.2680589716879355e-12,
+          "maximum_margin_radius_ratio": 0.08421637105245487
+        }
+      ]
+    },
+    {
+      "candidate": {
+        "seed": 368,
+        "threshold": 0.8,
+        "anchor": 2880
+      },
+      "certificate_path": "results/transformer_v3_certificate_seed_368_gate_1_anchor_2880.json",
+      "certificate_sha256": "96B2765A4E703C2988E9F4ADE1FB0C4D0AD08DE3D21EEA7B22406A4FE14E7252",
+      "old_certificate_issued": false,
+      "old_earliest_power": null,
+      "old_bracket": null,
+      "outcome_files_read": 0,
+      "randomized_queries_added": 0,
+      "evaluable": false,
+      "reason": "no sealed Green trace"
+    },
+    {
+      "candidate": {
+        "seed": 369,
+        "threshold": 0.7,
+        "anchor": 4160
+      },
+      "certificate_path": "results/transformer_v3_certificate_seed_369_gate_0_anchor_4160.json",
+      "certificate_sha256": "06EFAC13FA25E054C69EFDCCA4776124684999982C4EB88CF7ADC18BD4E723CF",
+      "old_certificate_issued": true,
+      "old_earliest_power": 2,
+      "old_bracket": [
+        157,
+        157
+      ],
+      "outcome_files_read": 0,
+      "randomized_queries_added": 0,
+      "evaluable": true,
+      "horizon": 181,
+      "deterministic_corrected_forward_evaluations": 181,
+      "observed_signed_response_sequence_norm": 3.56487303759435e-14,
+      "recentered_issued": true,
+      "recentered_earliest_power": 2,
+      "recentered_bracket": [
+        157,
+        157
+      ],
+      "hybrid_issued": true,
+      "hybrid_earliest_power": 2,
+      "hybrid_bracket": [
+        157,
+        157
+      ],
+      "old_issued_retained_by_hybrid": true,
+      "elapsed_seconds": 122.71508550000726,
+      "power_audits": [
+        {
+          "power": 1,
+          "closure_passed": false,
+          "recentered_bracket": null,
+          "hybrid_bracket": null
+        },
+        {
+          "power": 2,
+          "closure_passed": true,
+          "old_recomputed_bracket": [
+            157,
+            157
+          ],
+          "recentered_bracket": [
+            157,
+            157
+          ],
+          "hybrid_bracket": [
+            157,
+            157
+          ],
+          "recentered_logic_slack": 0.002284699412971738,
+          "hybrid_logic_slack": 0.002284699412971738,
+          "maximum_origin_margin_radius": 4.5915203886608736e-11,
+          "maximum_recentered_margin_radius": 1.4672182850744893e-11,
+          "maximum_margin_radius_ratio": 0.31954955240924166
+        },
+        {
+          "power": 3,
+          "closure_passed": true,
+          "old_recomputed_bracket": [
+            157,
+            157
+          ],
+          "recentered_bracket": [
+            157,
+            157
+          ],
+          "hybrid_bracket": [
+            157,
+            157
+          ],
+          "recentered_logic_slack": 0.0022846994215144413,
+          "hybrid_logic_slack": 0.0022846994215144413,
+          "maximum_origin_margin_radius": 3.029149148778438e-11,
+          "maximum_recentered_margin_radius": 5.0022328602541164e-12,
+          "maximum_margin_radius_ratio": 0.16513656523883485
+        },
+        {
+          "power": 4,
+          "closure_passed": true,
+          "old_recomputed_bracket": [
+            157,
+            157
+          ],
+          "recentered_bracket": [
+            157,
+            157
+          ],
+          "hybrid_bracket": [
+            157,
+            157
+          ],
+          "recentered_logic_slack": 0.0022846994232443713,
+          "hybrid_logic_slack": 0.0022846994232443713,
+          "maximum_origin_margin_radius": 2.5843098409976154e-11,
+          "maximum_recentered_margin_radius": 3.0784851745429352e-12,
+          "maximum_margin_radius_ratio": 0.11912213952466917
+        },
+        {
+          "power": 5,
+          "closure_passed": true,
+          "old_recomputed_bracket": [
+            157,
+            157
+          ],
+          "recentered_bracket": [
+            157,
+            157
+          ],
+          "hybrid_bracket": [
+            157,
+            157
+          ],
+          "recentered_logic_slack": 0.0022846994239267933,
+          "hybrid_logic_slack": 0.0022846994239267933,
+          "maximum_origin_margin_radius": 2.3701806911693722e-11,
+          "maximum_recentered_margin_radius": 2.3265486516300293e-12,
+          "maximum_margin_radius_ratio": 0.0981591260235178
+        },
+        {
+          "power": 6,
+          "closure_passed": true,
+          "old_recomputed_bracket": [
+            157,
+            157
+          ],
+          "recentered_bracket": [
+            157,
+            157
+          ],
+          "hybrid_bracket": [
+            157,
+            157
+          ],
+          "recentered_logic_slack": 0.0022846994242808416,
+          "hybrid_logic_slack": 0.0022846994242808416,
+          "maximum_origin_margin_radius": 2.2436008023656052e-11,
+          "maximum_recentered_margin_radius": 1.9386163137836276e-12,
+          "maximum_margin_radius_ratio": 0.08640647265501027
+        },
+        {
+          "power": 7,
+          "closure_passed": true,
+          "old_recomputed_bracket": [
+            157,
+            157
+          ],
+          "recentered_bracket": [
+            157,
+            157
+          ],
+          "hybrid_bracket": [
+            157,
+            157
+          ],
+          "recentered_logic_slack": 0.0022846994244943215,
+          "hybrid_logic_slack": 0.0022846994244943215,
+          "maximum_origin_margin_radius": 2.159844676242729e-11,
+          "maximum_recentered_margin_radius": 1.705577348109613e-12,
+          "maximum_margin_radius_ratio": 0.07896759275656061
+        },
+        {
+          "power": 8,
+          "closure_passed": true,
+          "old_recomputed_bracket": [
+            157,
+            157
+          ],
+          "recentered_bracket": [
+            157,
+            157
+          ],
+          "hybrid_bracket": [
+            157,
+            157
+          ],
+          "recentered_logic_slack": 0.0022846994246349963,
+          "hybrid_logic_slack": 0.0022846994246349963,
+          "maximum_origin_margin_radius": 2.1003749048238635e-11,
+          "maximum_recentered_margin_radius": 1.55239203302098e-12,
+          "maximum_margin_radius_ratio": 0.07391023523732125
+        }
+      ]
+    },
+    {
+      "candidate": {
+        "seed": 369,
+        "threshold": 0.8,
+        "anchor": 4480
+      },
+      "certificate_path": "results/transformer_v3_certificate_seed_369_gate_1_anchor_4480.json",
+      "certificate_sha256": "557661FE278E39AEB1E066B539212A1A25C33F2DE5ADBBD972718DC76DE865BF",
+      "old_certificate_issued": true,
+      "old_earliest_power": 2,
+      "old_bracket": [
+        118,
+        118
+      ],
+      "outcome_files_read": 0,
+      "randomized_queries_added": 0,
+      "evaluable": true,
+      "horizon": 142,
+      "deterministic_corrected_forward_evaluations": 142,
+      "observed_signed_response_sequence_norm": 2.321853819348209e-14,
+      "recentered_issued": true,
+      "recentered_earliest_power": 2,
+      "recentered_bracket": [
+        118,
+        118
+      ],
+      "hybrid_issued": true,
+      "hybrid_earliest_power": 2,
+      "hybrid_bracket": [
+        118,
+        118
+      ],
+      "old_issued_retained_by_hybrid": true,
+      "elapsed_seconds": 118.52805269998498,
+      "power_audits": [
+        {
+          "power": 1,
+          "closure_passed": false,
+          "recentered_bracket": null,
+          "hybrid_bracket": null
+        },
+        {
+          "power": 2,
+          "closure_passed": true,
+          "old_recomputed_bracket": [
+            118,
+            118
+          ],
+          "recentered_bracket": [
+            118,
+            118
+          ],
+          "hybrid_bracket": [
+            118,
+            118
+          ],
+          "recentered_logic_slack": 0.0004586047803137023,
+          "hybrid_logic_slack": 0.0004586047803137023,
+          "maximum_origin_margin_radius": 2.3410230651998755e-11,
+          "maximum_recentered_margin_radius": 3.0736421469815516e-12,
+          "maximum_margin_radius_ratio": 0.13129482544073634
+        },
+        {
+          "power": 3,
+          "closure_passed": true,
+          "old_recomputed_bracket": [
+            118,
+            118
+          ],
+          "recentered_bracket": [
+            118,
+            118
+          ],
+          "hybrid_bracket": [
+            118,
+            118
+          ],
+          "recentered_logic_slack": 0.0004586047819478634,
+          "hybrid_logic_slack": 0.0004586047819478634,
+          "maximum_origin_margin_radius": 1.7594159828501233e-11,
+          "maximum_recentered_margin_radius": 1.1152539797821143e-12,
+          "maximum_margin_radius_ratio": 0.06338773721809016
+        },
+        {
+          "power": 4,
+          "closure_passed": true,
+          "old_recomputed_bracket": [
+            118,
+            118
+          ],
+          "recentered_bracket": [
+            118,
+            118
+          ],
+          "hybrid_bracket": [
+            118,
+            118
+          ],
+          "recentered_logic_slack": 0.0004586047823126656,
+          "hybrid_logic_slack": 0.0004586047823126656,
+          "maximum_origin_margin_radius": 1.5547425467104727e-11,
+          "maximum_recentered_margin_radius": 6.945322333844439e-13,
+          "maximum_margin_radius_ratio": 0.04467184839405962
+        },
+        {
+          "power": 5,
+          "closure_passed": true,
+          "old_recomputed_bracket": [
+            118,
+            118
+          ],
+          "recentered_bracket": [
+            118,
+            118
+          ],
+          "hybrid_bracket": [
+            118,
+            118
+          ],
+          "recentered_logic_slack": 0.0004586047824602651,
+          "hybrid_logic_slack": 0.0004586047824602651,
+          "maximum_origin_margin_radius": 1.4493505159337191e-11,
+          "maximum_recentered_margin_radius": 5.276755184005718e-13,
+          "maximum_margin_radius_ratio": 0.036407722810974125
+        },
+        {
+          "power": 6,
+          "closure_passed": true,
+          "old_recomputed_bracket": [
+            118,
+            118
+          ],
+          "recentered_bracket": [
+            118,
+            118
+          ],
+          "hybrid_bracket": [
+            118,
+            118
+          ],
+          "recentered_logic_slack": 0.0004586047825378235,
+          "hybrid_logic_slack": 0.0004586047825378235,
+          "maximum_origin_margin_radius": 1.3851336009198983e-11,
+          "maximum_recentered_margin_radius": 4.4109123750100813e-13,
+          "maximum_margin_radius_ratio": 0.031844670955066684
+        },
+        {
+          "power": 7,
+          "closure_passed": true,
+          "old_recomputed_bracket": [
+            118,
+            118
+          ],
+          "recentered_bracket": [
+            118,
+            118
+          ],
+          "hybrid_bracket": [
+            118,
+            118
+          ],
+          "recentered_logic_slack": 0.0004586047825849409,
+          "hybrid_logic_slack": 0.0004586047825849409,
+          "maximum_origin_margin_radius": 1.3419624699880676e-11,
+          "maximum_recentered_margin_radius": 3.889402430990522e-13,
+          "maximum_margin_radius_ratio": 0.02898294488835523
+        },
+        {
+          "power": 8,
+          "closure_passed": true,
+          "old_recomputed_bracket": [
+            118,
+            118
+          ],
+          "recentered_bracket": [
+            118,
+            118
+          ],
+          "hybrid_bracket": [
+            118,
+            118
+          ],
+          "recentered_logic_slack": 0.00045860478261589336,
+          "hybrid_logic_slack": 0.00045860478261589336,
+          "maximum_origin_margin_radius": 1.3110203765976252e-11,
+          "maximum_recentered_margin_radius": 3.5486916156115753e-13,
+          "maximum_margin_radius_ratio": 0.0270681652166321
+        }
+      ]
+    },
+    {
+      "candidate": {
+        "seed": 369,
+        "threshold": 0.9,
+        "anchor": 5760
+      },
+      "certificate_path": "results/transformer_v3_certificate_seed_369_gate_2_anchor_5760.json",
+      "certificate_sha256": "AD8D4896899E4B6C719634260347BE0BCD072C7552C229C3C5F65257E122F30D",
+      "old_certificate_issued": true,
+      "old_earliest_power": 2,
+      "old_bracket": [
+        232,
+        232
+      ],
+      "outcome_files_read": 0,
+      "randomized_queries_added": 0,
+      "evaluable": true,
+      "horizon": 256,
+      "deterministic_corrected_forward_evaluations": 256,
+      "observed_signed_response_sequence_norm": 4.626057145058465e-14,
+      "recentered_issued": true,
+      "recentered_earliest_power": 2,
+      "recentered_bracket": [
+        232,
+        232
+      ],
+      "hybrid_issued": true,
+      "hybrid_earliest_power": 2,
+      "hybrid_bracket": [
+        232,
+        232
+      ],
+      "old_issued_retained_by_hybrid": true,
+      "elapsed_seconds": 115.74269949999871,
+      "power_audits": [
+        {
+          "power": 1,
+          "closure_passed": false,
+          "recentered_bracket": null,
+          "hybrid_bracket": null
+        },
+        {
+          "power": 2,
+          "closure_passed": true,
+          "old_recomputed_bracket": [
+            232,
+            232
+          ],
+          "recentered_bracket": [
+            232,
+            232
+          ],
+          "hybrid_bracket": [
+            232,
+            232
+          ],
+          "recentered_logic_slack": 0.000686237541823973,
+          "hybrid_logic_slack": 0.000686237541823973,
+          "maximum_origin_margin_radius": 4.039635117265753e-11,
+          "maximum_recentered_margin_radius": 1.0415955152745746e-11,
+          "maximum_margin_radius_ratio": 0.25784395992170295
+        },
+        {
+          "power": 3,
+          "closure_passed": true,
+          "old_recomputed_bracket": [
+            232,
+            232
+          ],
+          "recentered_bracket": [
+            232,
+            232
+          ],
+          "hybrid_bracket": [
+            232,
+            232
+          ],
+          "recentered_logic_slack": 0.0006862375483291521,
+          "hybrid_logic_slack": 0.0006862375483291521,
+          "maximum_origin_margin_radius": 2.75430338335861e-11,
+          "maximum_recentered_margin_radius": 3.4239087434110736e-12,
+          "maximum_margin_radius_ratio": 0.12431124196768563
+        },
+        {
+          "power": 4,
+          "closure_passed": true,
+          "old_recomputed_bracket": [
+            232,
+            232
+          ],
+          "recentered_bracket": [
+            232,
+            232
+          ],
+          "hybrid_bracket": [
+            232,
+            232
+          ],
+          "recentered_logic_slack": 0.0006862375495974657,
+          "hybrid_logic_slack": 0.0006862375495974657,
+          "maximum_origin_margin_radius": 2.371516676659871e-11,
+          "maximum_recentered_margin_radius": 2.075704089716655e-12,
+          "maximum_margin_radius_ratio": 0.0875264386772161
+        },
+        {
+          "power": 5,
+          "closure_passed": true,
+          "old_recomputed_bracket": [
+            232,
+            232
+          ],
+          "recentered_bracket": [
+            232,
+            232
+          ],
+          "hybrid_bracket": [
+            232,
+            232
+          ],
+          "recentered_logic_slack": 0.0006862375500905854,
+          "hybrid_logic_slack": 0.0006862375500905854,
+          "maximum_origin_margin_radius": 2.1833422414419188e-11,
+          "maximum_recentered_margin_radius": 1.5545536945385489e-12,
+          "maximum_margin_radius_ratio": 0.07120064207212395
+        },
+        {
+          "power": 6,
+          "closure_passed": true,
+          "old_recomputed_bracket": [
+            232,
+            232
+          ],
+          "recentered_bracket": [
+            232,
+            232
+          ],
+          "hybrid_bracket": [
+            232,
+            232
+          ],
+          "recentered_logic_slack": 0.0006862375503433365,
+          "hybrid_logic_slack": 0.0006862375503433365,
+          "maximum_origin_margin_radius": 2.0709756549590328e-11,
+          "maximum_recentered_margin_radius": 1.2883422475439982e-12,
+          "maximum_margin_radius_ratio": 0.062209434691277606
+        },
+        {
+          "power": 7,
+          "closure_passed": true,
+          "old_recomputed_bracket": [
+            232,
+            232
+          ],
+          "recentered_bracket": [
+            232,
+            232
+          ],
+          "hybrid_bracket": [
+            232,
+            232
+          ],
+          "recentered_logic_slack": 0.0006862375504941891,
+          "hybrid_logic_slack": 0.0006862375504941891,
+          "maximum_origin_margin_radius": 1.9962050629553922e-11,
+          "maximum_recentered_margin_radius": 1.1297958710139888e-12,
+          "maximum_margin_radius_ratio": 0.05659718492755048
+        },
+        {
+          "power": 8,
+          "closure_passed": true,
+          "old_recomputed_bracket": [
+            232,
+            232
+          ],
+          "recentered_bracket": [
+            232,
+            232
+          ],
+          "hybrid_bracket": [
+            232,
+            232
+          ],
+          "recentered_logic_slack": 0.0006862375505930805,
+          "hybrid_logic_slack": 0.0006862375505930805,
+          "maximum_origin_margin_radius": 1.9428758157394494e-11,
+          "maximum_recentered_margin_radius": 1.026001849079501e-12,
+          "maximum_margin_radius_ratio": 0.05280841115874457
+        }
+      ]
+    },
+    {
+      "candidate": {
+        "seed": 370,
+        "threshold": 0.7,
+        "anchor": 2280
+      },
+      "certificate_path": "results/transformer_v3_certificate_seed_370_gate_0_anchor_2280.json",
+      "certificate_sha256": "D1CE3675187805FCF94911432036A41792C43939918163F2AA9B6C243935594D",
+      "old_certificate_issued": true,
+      "old_earliest_power": 2,
+      "old_bracket": [
+        275,
+        275
+      ],
+      "outcome_files_read": 0,
+      "randomized_queries_added": 0,
+      "evaluable": true,
+      "horizon": 299,
+      "deterministic_corrected_forward_evaluations": 299,
+      "observed_signed_response_sequence_norm": 6.133695812227108e-14,
+      "recentered_issued": true,
+      "recentered_earliest_power": 2,
+      "recentered_bracket": [
+        275,
+        275
+      ],
+      "hybrid_issued": true,
+      "hybrid_earliest_power": 2,
+      "hybrid_bracket": [
+        275,
+        275
+      ],
+      "old_issued_retained_by_hybrid": true,
+      "elapsed_seconds": 119.58065570000326,
+      "power_audits": [
+        {
+          "power": 1,
+          "closure_passed": false,
+          "recentered_bracket": null,
+          "hybrid_bracket": null
+        },
+        {
+          "power": 2,
+          "closure_passed": true,
+          "old_recomputed_bracket": [
+            275,
+            275
+          ],
+          "recentered_bracket": [
+            275,
+            275
+          ],
+          "hybrid_bracket": [
+            275,
+            275
+          ],
+          "recentered_logic_slack": 0.0007507767416061214,
+          "hybrid_logic_slack": 0.0007507767416061214,
+          "maximum_origin_margin_radius": 7.053343608097914e-11,
+          "maximum_recentered_margin_radius": 3.228327202003285e-11,
+          "maximum_margin_radius_ratio": 0.457701677584069
+        },
+        {
+          "power": 3,
+          "closure_passed": true,
+          "old_recomputed_bracket": [
+            275,
+            275
+          ],
+          "recentered_bracket": [
+            275,
+            275
+          ],
+          "hybrid_bracket": [
+            275,
+            275
+          ],
+          "recentered_logic_slack": 0.0007507767609547879,
+          "hybrid_logic_slack": 0.0007507767609547879,
+          "maximum_origin_margin_radius": 4.06870739737439e-11,
+          "maximum_recentered_margin_radius": 9.86635056421342e-12,
+          "maximum_margin_radius_ratio": 0.24249348996146425
+        },
+        {
+          "power": 4,
+          "closure_passed": true,
+          "old_recomputed_bracket": [
+            275,
+            275
+          ],
+          "recentered_bracket": [
+            275,
+            275
+          ],
+          "hybrid_bracket": [
+            275,
+            275
+          ],
+          "recentered_logic_slack": 0.0007507767644253516,
+          "hybrid_logic_slack": 0.0007507767644253516,
+          "maximum_origin_margin_radius": 3.3605913983144806e-11,
+          "maximum_recentered_margin_radius": 5.927649688698723e-12,
+          "maximum_margin_radius_ratio": 0.176387099356136
+        },
+        {
+          "power": 5,
+          "closure_passed": true,
+          "old_recomputed_bracket": [
+            275,
+            275
+          ],
+          "recentered_bracket": [
+            275,
+            275
+          ],
+          "hybrid_bracket": [
+            275,
+            275
+          ],
+          "recentered_logic_slack": 0.0007507767657527402,
+          "hybrid_logic_slack": 0.0007507767657527402,
+          "maximum_origin_margin_radius": 3.038900115309096e-11,
+          "maximum_recentered_margin_radius": 4.436003917928579e-12,
+          "maximum_margin_radius_ratio": 0.14597399551177348
+        },
+        {
+          "power": 6,
+          "closure_passed": true,
+          "old_recomputed_bracket": [
+            275,
+            275
+          ],
+          "recentered_bracket": [
+            275,
+            275
+          ],
+          "hybrid_bracket": [
+            275,
+            275
+          ],
+          "recentered_logic_slack": 0.0007507767664285082,
+          "hybrid_logic_slack": 0.0007507767664285082,
+          "maximum_origin_margin_radius": 2.8545527532132995e-11,
+          "maximum_recentered_margin_radius": 3.680468858354395e-12,
+          "maximum_margin_radius_ratio": 0.12893329276228585
+        },
+        {
+          "power": 7,
+          "closure_passed": true,
+          "old_recomputed_bracket": [
+            275,
+            275
+          ],
+          "recentered_bracket": [
+            275,
+            275
+          ],
+          "hybrid_bracket": [
+            275,
+            275
+          ],
+          "recentered_logic_slack": 0.000750776766829864,
+          "hybrid_logic_slack": 0.000750776766829864,
+          "maximum_origin_margin_radius": 2.7350060812450643e-11,
+          "maximum_recentered_margin_radius": 3.2329364331273683e-12,
+          "maximum_margin_radius_ratio": 0.1182058224768418
+        },
+        {
+          "power": 8,
+          "closure_passed": true,
+          "old_recomputed_bracket": [
+            275,
+            275
+          ],
+          "recentered_bracket": [
+            275,
+            275
+          ],
+          "hybrid_bracket": [
+            275,
+            275
+          ],
+          "recentered_logic_slack": 0.0007507767670923772,
+          "hybrid_logic_slack": 0.0007507767670923772,
+          "maximum_origin_margin_radius": 2.6512243868972976e-11,
+          "maximum_recentered_margin_radius": 2.940625988610115e-12,
+          "maximum_margin_radius_ratio": 0.11091577171449835
+        }
+      ]
+    },
+    {
+      "candidate": {
+        "seed": 372,
+        "threshold": 0.7,
+        "anchor": 3440
+      },
+      "certificate_path": "results/transformer_v3_certificate_seed_372_gate_0_anchor_3440.json",
+      "certificate_sha256": "0E0323259DFD5A8C4A87870B42CF95D9EF991660C9DA0BA5905AB4D92DE54383",
+      "old_certificate_issued": true,
+      "old_earliest_power": 4,
+      "old_bracket": [
+        246,
+        246
+      ],
+      "outcome_files_read": 0,
+      "randomized_queries_added": 0,
+      "evaluable": true,
+      "horizon": 270,
+      "deterministic_corrected_forward_evaluations": 270,
+      "observed_signed_response_sequence_norm": 9.6649352153368e-14,
+      "recentered_issued": true,
+      "recentered_earliest_power": 4,
+      "recentered_bracket": [
+        246,
+        246
+      ],
+      "hybrid_issued": true,
+      "hybrid_earliest_power": 4,
+      "hybrid_bracket": [
+        246,
+        246
+      ],
+      "old_issued_retained_by_hybrid": true,
+      "elapsed_seconds": 117.86102970002685,
+      "power_audits": [
+        {
+          "power": 1,
+          "closure_passed": false,
+          "recentered_bracket": null,
+          "hybrid_bracket": null
+        },
+        {
+          "power": 2,
+          "closure_passed": false,
+          "recentered_bracket": null,
+          "hybrid_bracket": null
+        },
+        {
+          "power": 3,
+          "closure_passed": false,
+          "recentered_bracket": null,
+          "hybrid_bracket": null
+        },
+        {
+          "power": 4,
+          "closure_passed": true,
+          "old_recomputed_bracket": [
+            246,
+            246
+          ],
+          "recentered_bracket": [
+            246,
+            246
+          ],
+          "hybrid_bracket": [
+            246,
+            246
+          ],
+          "recentered_logic_slack": 0.0008635960285048417,
+          "hybrid_logic_slack": 0.0008635960285048417,
+          "maximum_origin_margin_radius": 1.4502218799308868e-10,
+          "maximum_recentered_margin_radius": 8.731785581179858e-11,
+          "maximum_margin_radius_ratio": 0.6020999753221202
+        },
+        {
+          "power": 5,
+          "closure_passed": true,
+          "old_recomputed_bracket": [
+            246,
+            246
+          ],
+          "recentered_bracket": [
+            246,
+            246
+          ],
+          "hybrid_bracket": [
+            246,
+            246
+          ],
+          "recentered_logic_slack": 0.0008635960556664136,
+          "hybrid_logic_slack": 0.0008635960556664136,
+          "maximum_origin_margin_radius": 1.0963049427929823e-10,
+          "maximum_recentered_margin_radius": 5.5659395438129186e-11,
+          "maximum_margin_radius_ratio": 0.5076999406417843
+        },
+        {
+          "power": 6,
+          "closure_passed": true,
+          "old_recomputed_bracket": [
+            246,
+            246
+          ],
+          "recentered_bracket": [
+            246,
+            246
+          ],
+          "hybrid_bracket": [
+            246,
+            246
+          ],
+          "recentered_logic_slack": 0.0008635960661980534,
+          "hybrid_logic_slack": 0.0008635960661980534,
+          "maximum_origin_margin_radius": 9.510230830751168e-11,
+          "maximum_recentered_margin_radius": 4.3484615948239946e-11,
+          "maximum_margin_radius_ratio": 0.4572403837731592
+        },
+        {
+          "power": 7,
+          "closure_passed": true,
+          "old_recomputed_bracket": [
+            246,
+            246
+          ],
+          "recentered_bracket": [
+            246,
+            246
+          ],
+          "hybrid_bracket": [
+            246,
+            246
+          ],
+          "recentered_logic_slack": 0.0008635960718583654,
+          "hybrid_logic_slack": 0.0008635960718583654,
+          "maximum_origin_margin_radius": 8.699040804117695e-11,
+          "maximum_recentered_margin_radius": 3.699058237375381e-11,
+          "maximum_margin_radius_ratio": 0.42522598993034155
+        },
+        {
+          "power": 8,
+          "closure_passed": true,
+          "old_recomputed_bracket": [
+            246,
+            246
+          ],
+          "recentered_bracket": [
+            246,
+            246
+          ],
+          "hybrid_bracket": [
+            246,
+            246
+          ],
+          "recentered_logic_slack": 0.0008635960753745587,
+          "hybrid_logic_slack": 0.0008635960753745587,
+          "maximum_origin_margin_radius": 8.179925776187837e-11,
+          "maximum_recentered_margin_radius": 3.297945815527943e-11,
+          "maximum_margin_radius_ratio": 0.40317551842932664
+        }
+      ]
+    },
+    {
+      "candidate": {
+        "seed": 373,
+        "threshold": 0.7,
+        "anchor": 1280
+      },
+      "certificate_path": "results/transformer_v3_certificate_seed_373_gate_0_anchor_1280.json",
+      "certificate_sha256": "E9A33BD6F367468238649A81D0CA91ED89AB732AAEA47FDFD4E017B7FB4782D0",
+      "old_certificate_issued": false,
+      "old_earliest_power": null,
+      "old_bracket": null,
+      "outcome_files_read": 0,
+      "randomized_queries_added": 0,
+      "evaluable": true,
+      "horizon": 271,
+      "deterministic_corrected_forward_evaluations": 271,
+      "observed_signed_response_sequence_norm": 9.980433559937687e-14,
+      "recentered_issued": false,
+      "recentered_earliest_power": null,
+      "recentered_bracket": null,
+      "hybrid_issued": false,
+      "hybrid_earliest_power": null,
+      "hybrid_bracket": null,
+      "old_issued_retained_by_hybrid": true,
+      "elapsed_seconds": 117.9610621999891,
+      "power_audits": [
+        {
+          "power": 1,
+          "closure_passed": false,
+          "recentered_bracket": null,
+          "hybrid_bracket": null
+        },
+        {
+          "power": 2,
+          "closure_passed": false,
+          "recentered_bracket": null,
+          "hybrid_bracket": null
+        },
+        {
+          "power": 3,
+          "closure_passed": false,
+          "recentered_bracket": null,
+          "hybrid_bracket": null
+        },
+        {
+          "power": 4,
+          "closure_passed": false,
+          "recentered_bracket": null,
+          "hybrid_bracket": null
+        },
+        {
+          "power": 5,
+          "closure_passed": false,
+          "recentered_bracket": null,
+          "hybrid_bracket": null
+        },
+        {
+          "power": 6,
+          "closure_passed": false,
+          "recentered_bracket": null,
+          "hybrid_bracket": null
+        },
+        {
+          "power": 7,
+          "closure_passed": false,
+          "recentered_bracket": null,
+          "hybrid_bracket": null
+        },
+        {
+          "power": 8,
+          "closure_passed": false,
+          "recentered_bracket": null,
+          "hybrid_bracket": null
+        }
+      ]
+    },
+    {
+      "candidate": {
+        "seed": 373,
+        "threshold": 0.8,
+        "anchor": 1760
+      },
+      "certificate_path": "results/transformer_v3_certificate_seed_373_gate_1_anchor_1760.json",
+      "certificate_sha256": "2C7FCD2C64990577BBAF143C716FD09F55A3FC9E3B847491AE99D9D363AEE90F",
+      "old_certificate_issued": false,
+      "old_earliest_power": null,
+      "old_bracket": null,
+      "outcome_files_read": 0,
+      "randomized_queries_added": 0,
+      "evaluable": true,
+      "horizon": 238,
+      "deterministic_corrected_forward_evaluations": 238,
+      "observed_signed_response_sequence_norm": 7.243426988620553e-14,
+      "recentered_issued": false,
+      "recentered_earliest_power": null,
+      "recentered_bracket": null,
+      "hybrid_issued": false,
+      "hybrid_earliest_power": null,
+      "hybrid_bracket": null,
+      "old_issued_retained_by_hybrid": true,
+      "elapsed_seconds": 107.1703766999999,
+      "power_audits": [
+        {
+          "power": 1,
+          "closure_passed": false,
+          "recentered_bracket": null,
+          "hybrid_bracket": null
+        },
+        {
+          "power": 2,
+          "closure_passed": false,
+          "recentered_bracket": null,
+          "hybrid_bracket": null
+        },
+        {
+          "power": 3,
+          "closure_passed": false,
+          "recentered_bracket": null,
+          "hybrid_bracket": null
+        },
+        {
+          "power": 4,
+          "closure_passed": false,
+          "recentered_bracket": null,
+          "hybrid_bracket": null
+        },
+        {
+          "power": 5,
+          "closure_passed": false,
+          "recentered_bracket": null,
+          "hybrid_bracket": null
+        },
+        {
+          "power": 6,
+          "closure_passed": false,
+          "recentered_bracket": null,
+          "hybrid_bracket": null
+        },
+        {
+          "power": 7,
+          "closure_passed": false,
+          "recentered_bracket": null,
+          "hybrid_bracket": null
+        },
+        {
+          "power": 8,
+          "closure_passed": false,
+          "recentered_bracket": null,
+          "hybrid_bracket": null
+        }
+      ]
+    },
+    {
+      "candidate": {
+        "seed": 375,
+        "threshold": 0.7,
+        "anchor": 920
+      },
+      "certificate_path": "results/transformer_v3_certificate_seed_375_gate_0_anchor_920.json",
+      "certificate_sha256": "B2B703002C82AD455A07F60C03DDFA948CDDD900E93625709037DF5B600011F2",
+      "old_certificate_issued": false,
+      "old_earliest_power": null,
+      "old_bracket": null,
+      "outcome_files_read": 0,
+      "randomized_queries_added": 0,
+      "evaluable": false,
+      "reason": "no sealed Green trace"
+    },
+    {
+      "candidate": {
+        "seed": 375,
+        "threshold": 0.8,
+        "anchor": 1800
+      },
+      "certificate_path": "results/transformer_v3_certificate_seed_375_gate_1_anchor_1800.json",
+      "certificate_sha256": "43E6ADEF120EDEBE35063C83F12CD7CB2B94F07C945665DB1F42DD0B63BA3738",
+      "old_certificate_issued": true,
+      "old_earliest_power": 3,
+      "old_bracket": [
+        118,
+        118
+      ],
+      "outcome_files_read": 0,
+      "randomized_queries_added": 0,
+      "evaluable": true,
+      "horizon": 142,
+      "deterministic_corrected_forward_evaluations": 142,
+      "observed_signed_response_sequence_norm": 3.479889507931872e-14,
+      "recentered_issued": true,
+      "recentered_earliest_power": 3,
+      "recentered_bracket": [
+        118,
+        118
+      ],
+      "hybrid_issued": true,
+      "hybrid_earliest_power": 3,
+      "hybrid_bracket": [
+        118,
+        118
+      ],
+      "old_issued_retained_by_hybrid": true,
+      "elapsed_seconds": 99.62755669999751,
+      "power_audits": [
+        {
+          "power": 1,
+          "closure_passed": false,
+          "recentered_bracket": null,
+          "hybrid_bracket": null
+        },
+        {
+          "power": 2,
+          "closure_passed": false,
+          "recentered_bracket": null,
+          "hybrid_bracket": null
+        },
+        {
+          "power": 3,
+          "closure_passed": true,
+          "old_recomputed_bracket": [
+            118,
+            118
+          ],
+          "recentered_bracket": [
+            118,
+            118
+          ],
+          "hybrid_bracket": [
+            118,
+            118
+          ],
+          "recentered_logic_slack": 0.0015589757514497045,
+          "hybrid_logic_slack": 0.0015589757514497045,
+          "maximum_origin_margin_radius": 7.291373162431139e-11,
+          "maximum_recentered_margin_radius": 3.311262352500788e-11,
+          "maximum_margin_radius_ratio": 0.4541342595880424
+        },
+        {
+          "power": 4,
+          "closure_passed": true,
+          "old_recomputed_bracket": [
+            118,
+            118
+          ],
+          "recentered_bracket": [
+            118,
+            118
+          ],
+          "hybrid_bracket": [
+            118,
+            118
+          ],
+          "recentered_logic_slack": 0.001558975765868412,
+          "hybrid_logic_slack": 0.001558975765868412,
+          "maximum_origin_margin_radius": 5.3395216638481685e-11,
+          "maximum_recentered_margin_radius": 1.7592593393751192e-11,
+          "maximum_margin_radius_ratio": 0.3294788279044511
+        },
+        {
+          "power": 5,
+          "closure_passed": true,
+          "old_recomputed_bracket": [
+            118,
+            118
+          ],
+          "recentered_bracket": [
+            118,
+            118
+          ],
+          "hybrid_bracket": [
+            118,
+            118
+          ],
+          "recentered_logic_slack": 0.0015589757705987055,
+          "hybrid_logic_slack": 0.0015589757705987055,
+          "maximum_origin_margin_radius": 4.614660562250218e-11,
+          "maximum_recentered_margin_radius": 1.2542806690881249e-11,
+          "maximum_margin_radius_ratio": 0.2718034516663362
+        },
+        {
+          "power": 6,
+          "closure_passed": true,
+          "old_recomputed_bracket": [
+            118,
+            118
+          ],
+          "recentered_bracket": [
+            118,
+            118
+          ],
+          "hybrid_bracket": [
+            118,
+            118
+          ],
+          "recentered_logic_slack": 0.0015589757728843774,
+          "hybrid_logic_slack": 0.0015589757728843774,
+          "maximum_origin_margin_radius": 4.233236199837542e-11,
+          "maximum_recentered_margin_radius": 1.0116622737133686e-11,
+          "maximum_margin_radius_ratio": 0.23898082364319592
+        },
+        {
+          "power": 7,
+          "closure_passed": true,
+          "old_recomputed_bracket": [
+            118,
+            118
+          ],
+          "recentered_bracket": [
+            118,
+            118
+          ],
+          "hybrid_bracket": [
+            118,
+            118
+          ],
+          "recentered_logic_slack": 0.0015589757742116548,
+          "hybrid_logic_slack": 0.0015589757742116548,
+          "maximum_origin_margin_radius": 3.997409494540339e-11,
+          "maximum_recentered_margin_radius": 8.713444313192423e-12,
+          "maximum_margin_radius_ratio": 0.21797727566048072
+        },
+        {
+          "power": 8,
+          "closure_passed": true,
+          "old_recomputed_bracket": [
+            118,
+            118
+          ],
+          "recentered_bracket": [
+            118,
+            118
+          ],
+          "hybrid_bracket": [
+            118,
+            118
+          ],
+          "recentered_logic_slack": 0.001558975775071858,
+          "hybrid_logic_slack": 0.001558975775071858,
+          "maximum_origin_margin_radius": 3.837032121074191e-11,
+          "maximum_recentered_margin_radius": 7.806772132893618e-12,
+          "maximum_margin_radius_ratio": 0.20345860776135707
+        }
+      ]
+    },
+    {
+      "candidate": {
+        "seed": 378,
+        "threshold": 0.7,
+        "anchor": 3640
+      },
+      "certificate_path": "results/transformer_v3_certificate_seed_378_gate_0_anchor_3640.json",
+      "certificate_sha256": "262950FDE6B2C8E7CD4F6B4F9945A4FAF5D1FD90EE3245AF470BBEF64C62876C",
+      "old_certificate_issued": false,
+      "old_earliest_power": null,
+      "old_bracket": null,
+      "outcome_files_read": 0,
+      "randomized_queries_added": 0,
+      "evaluable": true,
+      "horizon": 285,
+      "deterministic_corrected_forward_evaluations": 285,
+      "observed_signed_response_sequence_norm": 1.3329996003210245e-13,
+      "recentered_issued": false,
+      "recentered_earliest_power": null,
+      "recentered_bracket": null,
+      "hybrid_issued": false,
+      "hybrid_earliest_power": null,
+      "hybrid_bracket": null,
+      "old_issued_retained_by_hybrid": true,
+      "elapsed_seconds": 109.9487119000114,
+      "power_audits": [
+        {
+          "power": 1,
+          "closure_passed": false,
+          "recentered_bracket": null,
+          "hybrid_bracket": null
+        },
+        {
+          "power": 2,
+          "closure_passed": false,
+          "recentered_bracket": null,
+          "hybrid_bracket": null
+        },
+        {
+          "power": 3,
+          "closure_passed": false,
+          "recentered_bracket": null,
+          "hybrid_bracket": null
+        },
+        {
+          "power": 4,
+          "closure_passed": false,
+          "recentered_bracket": null,
+          "hybrid_bracket": null
+        },
+        {
+          "power": 5,
+          "closure_passed": false,
+          "recentered_bracket": null,
+          "hybrid_bracket": null
+        },
+        {
+          "power": 6,
+          "closure_passed": false,
+          "recentered_bracket": null,
+          "hybrid_bracket": null
+        },
+        {
+          "power": 7,
+          "closure_passed": false,
+          "recentered_bracket": null,
+          "hybrid_bracket": null
+        },
+        {
+          "power": 8,
+          "closure_passed": false,
+          "recentered_bracket": null,
+          "hybrid_bracket": null
+        }
+      ]
+    },
+    {
+      "candidate": {
+        "seed": 378,
+        "threshold": 0.9,
+        "anchor": 4800
+      },
+      "certificate_path": "results/transformer_v3_certificate_seed_378_gate_2_anchor_4800.json",
+      "certificate_sha256": "EB9DE134EDD0A9FC59472D5933D44D7C9F41452F32A9BC5870E53100A3691496",
+      "old_certificate_issued": false,
+      "old_earliest_power": null,
+      "old_bracket": null,
+      "outcome_files_read": 0,
+      "randomized_queries_added": 0,
+      "evaluable": false,
+      "reason": "no sealed Green trace"
+    }
+  ]
+}

@@ -1,0 +1,793 @@
+{
+  "status": "post-seal outward verification before outcome join within this script",
+  "version": "wdbc-arb-outward-v2-2026-08-24",
+  "issued_green_candidates": 56,
+  "unique_seed_anchor_tubes": 40,
+  "outward_retained": 56,
+  "rows": [
+    {
+      "seed": 101,
+      "threshold": 0.9,
+      "anchor": 0,
+      "green_float_bracket": [
+        14,
+        14
+      ],
+      "outward_bracket": [
+        14,
+        14
+      ],
+      "outward_issued": true
+    },
+    {
+      "seed": 101,
+      "threshold": 0.925,
+      "anchor": 0,
+      "green_float_bracket": [
+        20,
+        20
+      ],
+      "outward_bracket": [
+        20,
+        20
+      ],
+      "outward_issued": true
+    },
+    {
+      "seed": 102,
+      "threshold": 0.9,
+      "anchor": 10,
+      "green_float_bracket": [
+        20,
+        20
+      ],
+      "outward_bracket": [
+        20,
+        20
+      ],
+      "outward_issued": true
+    },
+    {
+      "seed": 102,
+      "threshold": 0.925,
+      "anchor": 10,
+      "green_float_bracket": [
+        54,
+        54
+      ],
+      "outward_bracket": [
+        54,
+        54
+      ],
+      "outward_issued": true
+    },
+    {
+      "seed": 102,
+      "threshold": 0.95,
+      "anchor": 10,
+      "green_float_bracket": [
+        197,
+        197
+      ],
+      "outward_bracket": [
+        197,
+        197
+      ],
+      "outward_issued": true
+    },
+    {
+      "seed": 103,
+      "threshold": 0.9,
+      "anchor": 60,
+      "green_float_bracket": [
+        168,
+        168
+      ],
+      "outward_bracket": [
+        168,
+        168
+      ],
+      "outward_issued": true
+    },
+    {
+      "seed": 104,
+      "threshold": 0.9,
+      "anchor": 10,
+      "green_float_bracket": [
+        30,
+        30
+      ],
+      "outward_bracket": [
+        30,
+        30
+      ],
+      "outward_issued": true
+    },
+    {
+      "seed": 104,
+      "threshold": 0.925,
+      "anchor": 10,
+      "green_float_bracket": [
+        78,
+        78
+      ],
+      "outward_bracket": [
+        78,
+        78
+      ],
+      "outward_issued": true
+    },
+    {
+      "seed": 104,
+      "threshold": 0.95,
+      "anchor": 20,
+      "green_float_bracket": [
+        206,
+        206
+      ],
+      "outward_bracket": [
+        206,
+        206
+      ],
+      "outward_issued": true
+    },
+    {
+      "seed": 105,
+      "threshold": 0.9,
+      "anchor": 95,
+      "green_float_bracket": [
+        48,
+        48
+      ],
+      "outward_bracket": [
+        48,
+        48
+      ],
+      "outward_issued": true
+    },
+    {
+      "seed": 105,
+      "threshold": 0.925,
+      "anchor": 95,
+      "green_float_bracket": [
+        76,
+        76
+      ],
+      "outward_bracket": [
+        76,
+        76
+      ],
+      "outward_issued": true
+    },
+    {
+      "seed": 105,
+      "threshold": 0.95,
+      "anchor": 95,
+      "green_float_bracket": [
+        119,
+        119
+      ],
+      "outward_bracket": [
+        119,
+        119
+      ],
+      "outward_issued": true
+    },
+    {
+      "seed": 106,
+      "threshold": 0.9,
+      "anchor": 30,
+      "green_float_bracket": [
+        160,
+        160
+      ],
+      "outward_bracket": [
+        160,
+        160
+      ],
+      "outward_issued": true
+    },
+    {
+      "seed": 106,
+      "threshold": 0.925,
+      "anchor": 45,
+      "green_float_bracket": [
+        200,
+        200
+      ],
+      "outward_bracket": [
+        200,
+        200
+      ],
+      "outward_issued": true
+    },
+    {
+      "seed": 107,
+      "threshold": 0.9,
+      "anchor": 5,
+      "green_float_bracket": [
+        79,
+        79
+      ],
+      "outward_bracket": [
+        79,
+        79
+      ],
+      "outward_issued": true
+    },
+    {
+      "seed": 107,
+      "threshold": 0.925,
+      "anchor": 10,
+      "green_float_bracket": [
+        179,
+        179
+      ],
+      "outward_bracket": [
+        179,
+        179
+      ],
+      "outward_issued": true
+    },
+    {
+      "seed": 108,
+      "threshold": 0.9,
+      "anchor": 15,
+      "green_float_bracket": [
+        161,
+        161
+      ],
+      "outward_bracket": [
+        161,
+        161
+      ],
+      "outward_issued": true
+    },
+    {
+      "seed": 108,
+      "threshold": 0.925,
+      "anchor": 20,
+      "green_float_bracket": [
+        188,
+        188
+      ],
+      "outward_bracket": [
+        188,
+        188
+      ],
+      "outward_issued": true
+    },
+    {
+      "seed": 108,
+      "threshold": 0.95,
+      "anchor": 30,
+      "green_float_bracket": [
+        220,
+        220
+      ],
+      "outward_bracket": [
+        220,
+        220
+      ],
+      "outward_issued": true
+    },
+    {
+      "seed": 109,
+      "threshold": 0.9,
+      "anchor": 60,
+      "green_float_bracket": [
+        24,
+        24
+      ],
+      "outward_bracket": [
+        24,
+        24
+      ],
+      "outward_issued": true
+    },
+    {
+      "seed": 109,
+      "threshold": 0.925,
+      "anchor": 65,
+      "green_float_bracket": [
+        28,
+        28
+      ],
+      "outward_bracket": [
+        28,
+        28
+      ],
+      "outward_issued": true
+    },
+    {
+      "seed": 109,
+      "threshold": 0.95,
+      "anchor": 70,
+      "green_float_bracket": [
+        118,
+        118
+      ],
+      "outward_bracket": [
+        118,
+        118
+      ],
+      "outward_issued": true
+    },
+    {
+      "seed": 110,
+      "threshold": 0.9,
+      "anchor": 40,
+      "green_float_bracket": [
+        32,
+        32
+      ],
+      "outward_bracket": [
+        32,
+        32
+      ],
+      "outward_issued": true
+    },
+    {
+      "seed": 110,
+      "threshold": 0.925,
+      "anchor": 45,
+      "green_float_bracket": [
+        39,
+        39
+      ],
+      "outward_bracket": [
+        39,
+        39
+      ],
+      "outward_issued": true
+    },
+    {
+      "seed": 110,
+      "threshold": 0.95,
+      "anchor": 50,
+      "green_float_bracket": [
+        102,
+        102
+      ],
+      "outward_bracket": [
+        102,
+        102
+      ],
+      "outward_issued": true
+    },
+    {
+      "seed": 111,
+      "threshold": 0.9,
+      "anchor": 75,
+      "green_float_bracket": [
+        43,
+        43
+      ],
+      "outward_bracket": [
+        43,
+        43
+      ],
+      "outward_issued": true
+    },
+    {
+      "seed": 111,
+      "threshold": 0.925,
+      "anchor": 75,
+      "green_float_bracket": [
+        102,
+        102
+      ],
+      "outward_bracket": [
+        102,
+        102
+      ],
+      "outward_issued": true
+    },
+    {
+      "seed": 113,
+      "threshold": 0.9,
+      "anchor": 45,
+      "green_float_bracket": [
+        51,
+        51
+      ],
+      "outward_bracket": [
+        51,
+        51
+      ],
+      "outward_issued": true
+    },
+    {
+      "seed": 113,
+      "threshold": 0.925,
+      "anchor": 45,
+      "green_float_bracket": [
+        79,
+        79
+      ],
+      "outward_bracket": [
+        79,
+        79
+      ],
+      "outward_issued": true
+    },
+    {
+      "seed": 113,
+      "threshold": 0.95,
+      "anchor": 45,
+      "green_float_bracket": [
+        205,
+        205
+      ],
+      "outward_bracket": [
+        205,
+        205
+      ],
+      "outward_issued": true
+    },
+    {
+      "seed": 114,
+      "threshold": 0.9,
+      "anchor": 40,
+      "green_float_bracket": [
+        93,
+        93
+      ],
+      "outward_bracket": [
+        93,
+        93
+      ],
+      "outward_issued": true
+    },
+    {
+      "seed": 114,
+      "threshold": 0.925,
+      "anchor": 50,
+      "green_float_bracket": [
+        118,
+        118
+      ],
+      "outward_bracket": [
+        118,
+        118
+      ],
+      "outward_issued": true
+    },
+    {
+      "seed": 115,
+      "threshold": 0.925,
+      "anchor": 0,
+      "green_float_bracket": [
+        188,
+        188
+      ],
+      "outward_bracket": [
+        188,
+        188
+      ],
+      "outward_issued": true
+    },
+    {
+      "seed": 116,
+      "threshold": 0.9,
+      "anchor": 10,
+      "green_float_bracket": [
+        22,
+        22
+      ],
+      "outward_bracket": [
+        22,
+        22
+      ],
+      "outward_issued": true
+    },
+    {
+      "seed": 116,
+      "threshold": 0.925,
+      "anchor": 10,
+      "green_float_bracket": [
+        92,
+        92
+      ],
+      "outward_bracket": [
+        92,
+        92
+      ],
+      "outward_issued": true
+    },
+    {
+      "seed": 116,
+      "threshold": 0.95,
+      "anchor": 10,
+      "green_float_bracket": [
+        135,
+        135
+      ],
+      "outward_bracket": [
+        135,
+        135
+      ],
+      "outward_issued": true
+    },
+    {
+      "seed": 117,
+      "threshold": 0.9,
+      "anchor": 25,
+      "green_float_bracket": [
+        65,
+        65
+      ],
+      "outward_bracket": [
+        65,
+        65
+      ],
+      "outward_issued": true
+    },
+    {
+      "seed": 117,
+      "threshold": 0.925,
+      "anchor": 25,
+      "green_float_bracket": [
+        170,
+        170
+      ],
+      "outward_bracket": [
+        170,
+        170
+      ],
+      "outward_issued": true
+    },
+    {
+      "seed": 117,
+      "threshold": 0.95,
+      "anchor": 30,
+      "green_float_bracket": [
+        256,
+        256
+      ],
+      "outward_bracket": [
+        256,
+        256
+      ],
+      "outward_issued": true
+    },
+    {
+      "seed": 118,
+      "threshold": 0.9,
+      "anchor": 60,
+      "green_float_bracket": [
+        7,
+        7
+      ],
+      "outward_bracket": [
+        7,
+        7
+      ],
+      "outward_issued": true
+    },
+    {
+      "seed": 118,
+      "threshold": 0.925,
+      "anchor": 70,
+      "green_float_bracket": [
+        30,
+        30
+      ],
+      "outward_bracket": [
+        30,
+        30
+      ],
+      "outward_issued": true
+    },
+    {
+      "seed": 118,
+      "threshold": 0.95,
+      "anchor": 75,
+      "green_float_bracket": [
+        63,
+        63
+      ],
+      "outward_bracket": [
+        63,
+        63
+      ],
+      "outward_issued": true
+    },
+    {
+      "seed": 119,
+      "threshold": 0.9,
+      "anchor": 55,
+      "green_float_bracket": [
+        57,
+        57
+      ],
+      "outward_bracket": [
+        57,
+        57
+      ],
+      "outward_issued": true
+    },
+    {
+      "seed": 119,
+      "threshold": 0.925,
+      "anchor": 55,
+      "green_float_bracket": [
+        152,
+        152
+      ],
+      "outward_bracket": [
+        152,
+        152
+      ],
+      "outward_issued": true
+    },
+    {
+      "seed": 119,
+      "threshold": 0.95,
+      "anchor": 60,
+      "green_float_bracket": [
+        223,
+        223
+      ],
+      "outward_bracket": [
+        223,
+        223
+      ],
+      "outward_issued": true
+    },
+    {
+      "seed": 120,
+      "threshold": 0.9,
+      "anchor": 30,
+      "green_float_bracket": [
+        20,
+        20
+      ],
+      "outward_bracket": [
+        20,
+        20
+      ],
+      "outward_issued": true
+    },
+    {
+      "seed": 120,
+      "threshold": 0.925,
+      "anchor": 30,
+      "green_float_bracket": [
+        31,
+        31
+      ],
+      "outward_bracket": [
+        31,
+        31
+      ],
+      "outward_issued": true
+    },
+    {
+      "seed": 120,
+      "threshold": 0.95,
+      "anchor": 35,
+      "green_float_bracket": [
+        206,
+        206
+      ],
+      "outward_bracket": [
+        206,
+        206
+      ],
+      "outward_issued": true
+    },
+    {
+      "seed": 122,
+      "threshold": 0.9,
+      "anchor": 65,
+      "green_float_bracket": [
+        10,
+        10
+      ],
+      "outward_bracket": [
+        10,
+        10
+      ],
+      "outward_issued": true
+    },
+    {
+      "seed": 122,
+      "threshold": 0.925,
+      "anchor": 65,
+      "green_float_bracket": [
+        48,
+        48
+      ],
+      "outward_bracket": [
+        48,
+        48
+      ],
+      "outward_issued": true
+    },
+    {
+      "seed": 122,
+      "threshold": 0.95,
+      "anchor": 70,
+      "green_float_bracket": [
+        135,
+        135
+      ],
+      "outward_bracket": [
+        135,
+        135
+      ],
+      "outward_issued": true
+    },
+    {
+      "seed": 123,
+      "threshold": 0.9,
+      "anchor": 40,
+      "green_float_bracket": [
+        14,
+        14
+      ],
+      "outward_bracket": [
+        14,
+        14
+      ],
+      "outward_issued": true
+    },
+    {
+      "seed": 123,
+      "threshold": 0.925,
+      "anchor": 45,
+      "green_float_bracket": [
+        22,
+        22
+      ],
+      "outward_bracket": [
+        22,
+        22
+      ],
+      "outward_issued": true
+    },
+    {
+      "seed": 123,
+      "threshold": 0.95,
+      "anchor": 55,
+      "green_float_bracket": [
+        50,
+        50
+      ],
+      "outward_bracket": [
+        50,
+        50
+      ],
+      "outward_issued": true
+    },
+    {
+      "seed": 124,
+      "threshold": 0.9,
+      "anchor": 50,
+      "green_float_bracket": [
+        102,
+        102
+      ],
+      "outward_bracket": [
+        102,
+        102
+      ],
+      "outward_issued": true
+    },
+    {
+      "seed": 124,
+      "threshold": 0.925,
+      "anchor": 50,
+      "green_float_bracket": [
+        163,
+        163
+      ],
+      "outward_bracket": [
+        163,
+        163
+      ],
+      "outward_issued": true
+    }
+  ]
+}

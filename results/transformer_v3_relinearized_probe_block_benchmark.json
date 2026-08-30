@@ -1,0 +1,86 @@
+{
+  "status": "RELINEARIZED GREEN PROBE-BLOCK BENCHMARK COMPLETED",
+  "evidence_boundary": "Post-seal timing replay on one fixed corrected operator. No outcome is read and no prospective count changes.",
+  "candidate": {
+    "seed": 366,
+    "threshold": 0.7,
+    "anchor": 1040
+  },
+  "horizon": 52,
+  "setup_seconds_excluded": 29.855620899994392,
+  "rows": [
+    {
+      "repeat": 0,
+      "order": [
+        4,
+        16
+      ],
+      "probes": 4,
+      "seconds": 5.857191699993564,
+      "Y": 6591083.124261674,
+      "gram_applications": 4
+    },
+    {
+      "repeat": 0,
+      "order": [
+        4,
+        16
+      ],
+      "probes": 16,
+      "seconds": 23.98844210000243,
+      "Y": 6653502.457435702,
+      "gram_applications": 16
+    },
+    {
+      "repeat": 1,
+      "order": [
+        16,
+        4
+      ],
+      "probes": 16,
+      "seconds": 23.639498800010188,
+      "Y": 6639867.798503887,
+      "gram_applications": 16
+    },
+    {
+      "repeat": 1,
+      "order": [
+        16,
+        4
+      ],
+      "probes": 4,
+      "seconds": 6.512193500006106,
+      "Y": 6614521.107555494,
+      "gram_applications": 4
+    },
+    {
+      "repeat": 2,
+      "order": [
+        4,
+        16
+      ],
+      "probes": 4,
+      "seconds": 6.6257732000085525,
+      "Y": 6587298.831339555,
+      "gram_applications": 4
+    },
+    {
+      "repeat": 2,
+      "order": [
+        4,
+        16
+      ],
+      "probes": 16,
+      "seconds": 23.030396399990423,
+      "Y": 6686122.592825491,
+      "gram_applications": 16
+    }
+  ],
+  "median_four_probe_seconds": 6.512193500006106,
+  "median_sixteen_probe_seconds": 23.639498800010188,
+  "median_paired_speedup": 3.6300363003630074,
+  "minimum_paired_speedup": 3.4758805809955424,
+  "maximum_paired_speedup": 4.095553522693955,
+  "logical_gram_application_reduction": 4.0,
+  "outcome_files_read": 0
+}

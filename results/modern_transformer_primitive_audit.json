@@ -1,0 +1,60 @@
+{
+  "status": "post-seal modern-architecture matrix-free primitive audit passed",
+  "scope": "This validates exact matrix-free optimizer/Green products on a two-block pre-LayerNorm AdamW Transformer. It is not a first-passage certificate; LayerNorm/AdamW global derivative envelopes remain unimplemented.",
+  "config": {
+    "modulus": 17,
+    "model_dim": 64,
+    "hidden_dim": 256,
+    "heads": 4,
+    "depth": 2,
+    "train_fraction": 0.6,
+    "learning_rate": 0.001,
+    "momentum": 0.0,
+    "weight_decay": 0.0,
+    "steps": 1,
+    "log_every": 50,
+    "checkpoint_every": 100,
+    "seed": 20260825,
+    "threads": 4,
+    "dtype": "float64",
+    "loss": "cross_entropy",
+    "normalization": "layernorm"
+  },
+  "adamw": {
+    "learning_rate": 0.001,
+    "beta1": 0.9,
+    "beta2": 0.999,
+    "epsilon": 1e-08,
+    "weight_decay": 0.01,
+    "step": 6
+  },
+  "parameter_count": 102400,
+  "optimizer_state_dimension": 307200,
+  "green_horizon": 3,
+  "strictly_positive_second_moment_minimum": 9.95009990004999e-13,
+  "finite": true,
+  "optimizer_adjoint_relative_error": 5.442891023731882e-15,
+  "green_adjoint_relative_error": 4.397267002200284e-15,
+  "timings_seconds": {
+    "five_step_checkpoint_construction": 5.08371120004449,
+    "adamw_jvp": 0.7853846000507474,
+    "adamw_vjp": 0.4884907000232488,
+    "green_apply_horizon_3": 1.477044100058265,
+    "green_transpose_horizon_3": 1.085500199929811,
+    "output_gram_batch_2": 0.7404527000617236
+  },
+  "observed_process_peak_rss_bytes": 398065664,
+  "source_sha256": {
+    "adamw_optimizer_probe.py": "6A343A549157D873105C553CFAD02C948B231DD08195DFF82E0FFE752F3A1CA9",
+    "batched_green_operator.py": "1CCF48A6FC9D1985EA9B8BE8E331F452A63D17EF95B58D1A0FC83CE0A2D7CF73",
+    "audit_modern_transformer_primitives.py": "3FA11B558CCFE328E7F203FE375816E5EED23CFD9E7C6C2A39180646A0A2CD30"
+  },
+  "environment": {
+    "python": "3.12.10",
+    "torch": "2.13.0+cpu",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "torch_threads": 4,
+    "dtype": "float64",
+    "device": "cpu"
+  }
+}

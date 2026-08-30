@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "persistent_first_passage": {
+    "envelopes": 400,
+    "issued_envelopes": 142,
+    "admissible_actual_paths_checked": 2428,
+    "violations": 0
+  },
+  "projected_state_tube": {
+    "random_maps": 40,
+    "state_checks": 1000,
+    "violations": 0,
+    "maximum_observed_error_to_bound_ratio": 1.0000000000000002
+  },
+  "note": "Post-outcome theorem audit; not part of the prospective seal."
+}

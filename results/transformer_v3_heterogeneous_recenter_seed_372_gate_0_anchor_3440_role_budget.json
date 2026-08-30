@@ -1,0 +1,559 @@
+{
+  "status": "POST-SEAL TIME-RESOLVED RECENTER AUDIT",
+  "prospective_v3_result_changed": false,
+  "candidate": {
+    "seed": 372,
+    "threshold": 0.7,
+    "anchor": 3440
+  },
+  "certificate_path": "results\\transformer_v3_certificate_seed_372_gate_0_anchor_3440.json",
+  "certificate_sha256": "0E0323259DFD5A8C4A87870B42CF95D9EF991660C9DA0BA5905AB4D92DE54383",
+  "sealed_scalar_earliest_power": 4,
+  "sealed_scalar_bracket": [
+    246,
+    246
+  ],
+  "heterogeneous_earliest_power": 4,
+  "heterogeneous_bracket": [
+    246,
+    246
+  ],
+  "role_stratified_budget_audit": {
+    "status": "post-seal diagnostic; not prospective v3 evidence",
+    "sealed_candidate_count": 19,
+    "candidate_budget": 5.2631578947368416e-08,
+    "green_delta": 2.6315789473684208e-08,
+    "per_output_delta": 9.746588693957115e-11,
+    "total_budget_upper_bound": 1e-06,
+    "earliest_power": 3,
+    "bracket": [
+      246,
+      246
+    ],
+    "rows": [
+      {
+        "power": 1,
+        "kappa_upper": 22598.90841284063,
+        "heterogeneous_closure": {
+          "kappa": 22598.90841284063,
+          "response_sequence_norm": 9.6649352153368e-14,
+          "response_max_state_norm": 1.0868734881129252e-14,
+          "maximum_derivative_drift": 38756540540.03225,
+          "aligned_linear_coefficient_before_green": 0.00023730547432797828,
+          "corrected_defect_norm_before_green": 7.50723800555611e-18,
+          "linear_response_error_bound": 0.0,
+          "corrected_defect_response_bound": 1.6965538412095889e-13,
+          "linearized_remainder_coefficient": 5.362844680203684,
+          "quadratic_remainder_coefficient": 437927755031366.8,
+          "discriminant": -278.1527922847213,
+          "remainder_radius": null,
+          "total_pointwise_radius": null,
+          "domain_radius": 1.93298704306736e-13,
+          "algebraic_closure_passed": false,
+          "domain_passed": false,
+          "closure_passed": false,
+          "closure_residual": null
+        },
+        "bracket": null,
+        "issued": false,
+        "logic_slack": null
+      },
+      {
+        "power": 2,
+        "kappa_upper": 5563.791839500148,
+        "heterogeneous_closure": {
+          "kappa": 5563.791839500148,
+          "response_sequence_norm": 9.6649352153368e-14,
+          "response_max_state_norm": 1.0868734881129252e-14,
+          "maximum_derivative_drift": 10184536785.12675,
+          "aligned_linear_coefficient_before_green": 8.47642490544045e-05,
+          "corrected_defect_norm_before_green": 3.108541801631275e-18,
+          "linear_response_error_bound": 0.0,
+          "corrected_defect_response_bound": 1.7295279508661176e-14,
+          "linearized_remainder_coefficient": 0.4716106371702539,
+          "quadratic_remainder_coefficient": 28332321327088.645,
+          "discriminant": -1.680866347173176,
+          "remainder_radius": null,
+          "total_pointwise_radius": null,
+          "domain_radius": 1.93298704306736e-13,
+          "algebraic_closure_passed": false,
+          "domain_passed": false,
+          "closure_passed": false,
+          "closure_residual": null
+        },
+        "bracket": null,
+        "issued": false,
+        "logic_slack": null
+      },
+      {
+        "power": 3,
+        "kappa_upper": 3500.6503872504604,
+        "heterogeneous_closure": {
+          "kappa": 3500.6503872504604,
+          "response_sequence_norm": 9.6649352153368e-14,
+          "response_max_state_norm": 1.0868734881129252e-14,
+          "maximum_derivative_drift": 7532569029.751466,
+          "aligned_linear_coefficient_before_green": 6.891766957807764e-05,
+          "corrected_defect_norm_before_green": 2.561560630868489e-18,
+          "linear_response_error_bound": 0.0,
+          "corrected_defect_response_bound": 8.96712821441531e-15,
+          "linearized_remainder_coefficient": 0.24125666669689677,
+          "quadratic_remainder_coefficient": 13184445345495.146,
+          "discriminant": 0.10278499843587963,
+          "remainder_radius": 1.661588053703029e-14,
+          "total_pointwise_radius": 2.7484615418159542e-14,
+          "domain_radius": 1.93298704306736e-13,
+          "algebraic_closure_passed": true,
+          "domain_passed": true,
+          "closure_passed": true,
+          "closure_residual": 3.1554436208840472e-30
+        },
+        "bracket": [
+          246,
+          246
+        ],
+        "issued": true,
+        "logic_slack": 0.0008635959673860716
+      },
+      {
+        "power": 4,
+        "kappa_upper": 2782.8751004583205,
+        "heterogeneous_closure": {
+          "kappa": 2782.8751004583205,
+          "response_sequence_norm": 9.6649352153368e-14,
+          "response_max_state_norm": 1.0868734881129252e-14,
+          "maximum_derivative_drift": 6643227577.285349,
+          "aligned_linear_coefficient_before_green": 6.349160927961846e-05,
+          "corrected_defect_norm_before_green": 2.3578303151640247e-18,
+          "linear_response_error_bound": 0.0,
+          "corrected_defect_response_bound": 6.561547275175759e-15,
+          "linearized_remainder_coefficient": 0.17668921855227868,
+          "quadratic_remainder_coefficient": 9243636305752.725,
+          "discriminant": 0.4352304163891474,
+          "remainder_radius": 8.848835189662872e-15,
+          "total_pointwise_radius": 1.9717570070792124e-14,
+          "domain_radius": 1.93298704306736e-13,
+          "algebraic_closure_passed": true,
+          "domain_passed": true,
+          "closure_passed": true,
+          "closure_residual": 0.0
+        },
+        "bracket": [
+          246,
+          246
+        ],
+        "issued": true,
+        "logic_slack": 0.0008635960135154979
+      },
+      {
+        "power": 5,
+        "kappa_upper": 2429.3260312617936,
+        "heterogeneous_closure": {
+          "kappa": 2429.3260312617936,
+          "response_sequence_norm": 9.6649352153368e-14,
+          "response_max_state_norm": 1.0868734881129252e-14,
+          "maximum_derivative_drift": 6205853443.21044,
+          "aligned_linear_coefficient_before_green": 6.065990780176885e-05,
+          "corrected_defect_norm_before_green": 2.2520762909354254e-18,
+          "linear_response_error_bound": 0.0,
+          "corrected_defect_response_bound": 5.4710275579569375e-15,
+          "linearized_remainder_coefficient": 0.14736269307677743,
+          "quadratic_remainder_coefficient": 7538020657893.377,
+          "discriminant": 0.5620275021501523,
+          "remainder_radius": 6.828873011854721e-15,
+          "total_pointwise_radius": 1.7697607892983973e-14,
+          "domain_radius": 1.93298704306736e-13,
+          "algebraic_closure_passed": true,
+          "domain_passed": true,
+          "closure_passed": true,
+          "closure_residual": 7.888609052210118e-31
+        },
+        "bracket": [
+          246,
+          246
+        ],
+        "issued": true,
+        "logic_slack": 0.0008635960264921103
+      },
+      {
+        "power": 6,
+        "kappa_upper": 2222.5243360181153,
+        "heterogeneous_closure": {
+          "kappa": 2222.5243360181153,
+          "response_sequence_norm": 9.6649352153368e-14,
+          "response_max_state_norm": 1.0868734881129252e-14,
+          "maximum_derivative_drift": 5947170756.798287,
+          "aligned_linear_coefficient_before_green": 5.892430875003125e-05,
+          "corrected_defect_norm_before_green": 2.1874419162806095e-18,
+          "linear_response_error_bound": 0.0,
+          "corrected_defect_response_bound": 4.861642892559755e-15,
+          "linearized_remainder_coefficient": 0.13096071017998961,
+          "quadratic_remainder_coefficient": 6608865868719.732,
+          "discriminant": 0.6267095041366998,
+          "remainder_radius": 5.8549703741816914e-15,
+          "total_pointwise_radius": 1.6723705255310944e-14,
+          "domain_radius": 1.93298704306736e-13,
+          "algebraic_closure_passed": true,
+          "domain_passed": true,
+          "closure_passed": true,
+          "closure_residual": -7.888609052210118e-31
+        },
+        "bracket": [
+          246,
+          246
+        ],
+        "issued": true,
+        "logic_slack": 0.0008635960329911547
+      },
+      {
+        "power": 7,
+        "kappa_upper": 2088.7159648582647,
+        "heterogeneous_closure": {
+          "kappa": 2088.7159648582647,
+          "response_sequence_norm": 9.6649352153368e-14,
+          "response_max_state_norm": 1.0868734881129252e-14,
+          "maximum_derivative_drift": 5776632066.190655,
+          "aligned_linear_coefficient_before_green": 5.775271521843836e-05,
+          "corrected_defect_norm_before_green": 2.143885279876715e-18,
+          "linear_response_error_bound": 0.0,
+          "corrected_defect_response_bound": 4.4779674109031236e-15,
+          "linearized_remainder_coefficient": 0.12062901829066507,
+          "quadratic_remainder_coefficient": 6032871809882.302,
+          "discriminant": 0.665233310037203,
+          "remainder_radius": 5.283770581095566e-15,
+          "total_pointwise_radius": 1.6152505462224818e-14,
+          "domain_radius": 1.93298704306736e-13,
+          "algebraic_closure_passed": true,
+          "domain_passed": true,
+          "closure_passed": true,
+          "closure_residual": 0.0
+        },
+        "bracket": [
+          246,
+          246
+        ],
+        "issued": true,
+        "logic_slack": 0.0008635960369129134
+      },
+      {
+        "power": 8,
+        "kappa_upper": 1996.2301711416912,
+        "heterogeneous_closure": {
+          "kappa": 1996.2301711416912,
+          "response_sequence_norm": 9.6649352153368e-14,
+          "response_max_state_norm": 1.0868734881129252e-14,
+          "maximum_derivative_drift": 5655875163.3122835,
+          "aligned_linear_coefficient_before_green": 5.690906192407944e-05,
+          "corrected_defect_norm_before_green": 2.1125556707908358e-18,
+          "linear_response_error_bound": 0.0,
+          "corrected_defect_response_bound": 4.2171473682491406e-15,
+          "linearized_remainder_coefficient": 0.1136035864242182,
+          "quadratic_remainder_coefficient": 5645214322607.46,
+          "discriminant": 0.6904717991048628,
+          "remainder_radius": 4.911247204768136e-15,
+          "total_pointwise_radius": 1.577998208589739e-14,
+          "domain_radius": 1.93298704306736e-13,
+          "algebraic_closure_passed": true,
+          "domain_passed": true,
+          "closure_passed": true,
+          "closure_residual": 0.0
+        },
+        "bracket": [
+          246,
+          246
+        ],
+        "issued": true,
+        "logic_slack": 0.0008635960395334155
+      }
+    ]
+  },
+  "rows": [
+    {
+      "power": 1,
+      "heterogeneous_closure": {
+        "kappa": 27799.532429756397,
+        "response_sequence_norm": 9.6649352153368e-14,
+        "response_max_state_norm": 1.0868734881129252e-14,
+        "maximum_derivative_drift": 41111453453.13092,
+        "aligned_linear_coefficient_before_green": 0.00025049508313387445,
+        "corrected_defect_norm_before_green": 7.897788734997254e-18,
+        "linear_response_error_bound": 0.0,
+        "corrected_defect_response_bound": 2.1955483406192092e-13,
+        "linearized_remainder_coefficient": 6.9636461870746675,
+        "quadratic_remainder_coefficient": 571439591752366.8,
+        "discriminant": -466.2842231298007,
+        "remainder_radius": null,
+        "total_pointwise_radius": null,
+        "domain_radius": 1.93298704306736e-13,
+        "algebraic_closure_passed": false,
+        "domain_passed": false,
+        "closure_passed": false,
+        "closure_residual": null
+      },
+      "heterogeneous_bracket": null,
+      "heterogeneous_issued": false,
+      "heterogeneous_logic_slack": null,
+      "scalar_closure_passed": false,
+      "scalar_total_pointwise_radius": null,
+      "scalar_issued": false,
+      "scalar_bracket": null,
+      "forcing_ratio_to_scalar": 0.3657587582644236,
+      "linear_ratio_to_scalar": 0.5606055324714757
+    },
+    {
+      "power": 2,
+      "heterogeneous_closure": {
+        "kappa": 6170.862760596957,
+        "response_sequence_norm": 9.6649352153368e-14,
+        "response_max_state_norm": 1.0868734881129252e-14,
+        "maximum_derivative_drift": 10376372166.371983,
+        "aligned_linear_coefficient_before_green": 8.623528625290317e-05,
+        "corrected_defect_norm_before_green": 3.158227819084418e-18,
+        "linear_response_error_bound": 0.0,
+        "corrected_defect_response_bound": 1.9488990438269378e-14,
+        "linearized_remainder_coefficient": 0.5321461165874588,
+        "quadratic_remainder_coefficient": 32015584295779.82,
+        "discriminant": -2.276918408640045,
+        "remainder_radius": null,
+        "total_pointwise_radius": null,
+        "domain_radius": 1.93298704306736e-13,
+        "algebraic_closure_passed": false,
+        "domain_passed": false,
+        "closure_passed": false,
+        "closure_residual": null
+      },
+      "heterogeneous_bracket": null,
+      "heterogeneous_issued": false,
+      "heterogeneous_logic_slack": null,
+      "scalar_closure_passed": false,
+      "scalar_total_pointwise_radius": null,
+      "scalar_issued": false,
+      "scalar_bracket": null,
+      "forcing_ratio_to_scalar": 0.5794953664619612,
+      "linear_ratio_to_scalar": 0.7646460933573543
+    },
+    {
+      "power": 3,
+      "heterogeneous_closure": {
+        "kappa": 3750.870607572863,
+        "response_sequence_norm": 9.6649352153368e-14,
+        "response_max_state_norm": 1.0868734881129252e-14,
+        "maximum_derivative_drift": 7607258817.861189,
+        "aligned_linear_coefficient_before_green": 6.952775882514622e-05,
+        "corrected_defect_norm_before_green": 2.584142467463759e-18,
+        "linear_response_error_bound": 0.0,
+        "corrected_defect_response_bound": 9.692784026990626e-15,
+        "linearized_remainder_coefficient": 0.2607896269876557,
+        "quadratic_remainder_coefficient": 14266921752057.508,
+        "discriminant": -0.006712789521623463,
+        "remainder_radius": null,
+        "total_pointwise_radius": null,
+        "domain_radius": 1.93298704306736e-13,
+        "algebraic_closure_passed": false,
+        "domain_passed": false,
+        "closure_passed": false,
+        "closure_residual": null
+      },
+      "heterogeneous_bracket": null,
+      "heterogeneous_issued": false,
+      "heterogeneous_logic_slack": null,
+      "scalar_closure_passed": false,
+      "scalar_total_pointwise_radius": null,
+      "scalar_issued": false,
+      "scalar_bracket": null,
+      "forcing_ratio_to_scalar": 0.646755773273223,
+      "linear_ratio_to_scalar": 0.8409129544741835
+    },
+    {
+      "power": 4,
+      "heterogeneous_closure": {
+        "kappa": 2930.766524426591,
+        "response_sequence_norm": 9.6649352153368e-14,
+        "response_max_state_norm": 1.0868734881129252e-14,
+        "maximum_derivative_drift": 6686736703.916109,
+        "aligned_linear_coefficient_before_green": 6.387529522470165e-05,
+        "corrected_defect_norm_before_green": 2.371987539721824e-18,
+        "linear_response_error_bound": 0.0,
+        "corrected_defect_response_bound": 6.951741677773711e-15,
+        "linearized_remainder_coefficient": 0.1872035769824213,
+        "quadratic_remainder_coefficient": 9798632044745.967,
+        "discriminant": 0.3881677901876525,
+        "remainder_radius": 9.68325431330689e-15,
+        "total_pointwise_radius": 2.0551989194436142e-14,
+        "domain_radius": 1.93298704306736e-13,
+        "algebraic_closure_passed": true,
+        "domain_passed": true,
+        "closure_passed": true,
+        "closure_residual": 1.5777218104420236e-30
+      },
+      "heterogeneous_bracket": [
+        246,
+        246
+      ],
+      "heterogeneous_issued": true,
+      "heterogeneous_logic_slack": 0.0008635960089810971,
+      "scalar_closure_passed": true,
+      "scalar_total_pointwise_radius": 2.731524053036462e-14,
+      "scalar_issued": true,
+      "scalar_bracket": [
+        246,
+        246
+      ],
+      "forcing_ratio_to_scalar": 0.6753831692125299,
+      "linear_ratio_to_scalar": 0.878900481446666
+    },
+    {
+      "power": 5,
+      "heterogeneous_closure": {
+        "kappa": 2532.0705945318678,
+        "response_sequence_norm": 9.6649352153368e-14,
+        "response_max_state_norm": 1.0868734881129252e-14,
+        "maximum_derivative_drift": 6235930592.443866,
+        "aligned_linear_coefficient_before_green": 6.093694214803937e-05,
+        "corrected_defect_norm_before_green": 2.2622846775342728e-18,
+        "linear_response_error_bound": 0.0,
+        "corrected_defect_response_bound": 5.728264508444541e-15,
+        "linearized_remainder_coefficient": 0.15429663933374008,
+        "quadratic_remainder_coefficient": 7894908241334.4,
+        "discriminant": 0.5343176835371575,
+        "remainder_radius": 7.266264912971463e-15,
+        "total_pointwise_radius": 1.8134999794100715e-14,
+        "domain_radius": 1.93298704306736e-13,
+        "algebraic_closure_passed": true,
+        "domain_passed": true,
+        "closure_passed": true,
+        "closure_residual": 0.0
+      },
+      "heterogeneous_bracket": [
+        246,
+        246
+      ],
+      "heterogeneous_issued": true,
+      "heterogeneous_logic_slack": 0.0008635960241101391,
+      "scalar_closure_passed": true,
+      "scalar_total_pointwise_radius": 2.207746002567483e-14,
+      "scalar_issued": true,
+      "scalar_bracket": [
+        246,
+        246
+      ],
+      "forcing_ratio_to_scalar": 0.6907136432935922,
+      "linear_ratio_to_scalar": 0.8990842489324868
+    },
+    {
+      "power": 6,
+      "heterogeneous_closure": {
+        "kappa": 2300.5845380722776,
+        "response_sequence_norm": 9.6649352153368e-14,
+        "response_max_state_norm": 1.0868734881129252e-14,
+        "maximum_derivative_drift": 5969963495.335927,
+        "aligned_linear_coefficient_before_green": 5.91401895976913e-05,
+        "corrected_defect_norm_before_green": 2.1953914529642172e-18,
+        "linear_response_error_bound": 0.0,
+        "corrected_defect_response_bound": 5.05068363170551e-15,
+        "linearized_remainder_coefficient": 0.13605700576711155,
+        "quadratic_remainder_coefficient": 6867202855112.882,
+        "discriminant": 0.6076612210604089,
+        "remainder_radius": 6.146368187332391e-15,
+        "total_pointwise_radius": 1.7015103068461645e-14,
+        "domain_radius": 1.93298704306736e-13,
+        "algebraic_closure_passed": true,
+        "domain_passed": true,
+        "closure_passed": true,
+        "closure_residual": 0.0
+      },
+      "heterogeneous_bracket": [
+        246,
+        246
+      ],
+      "heterogeneous_issued": true,
+      "heterogeneous_logic_slack": 0.0008635960314031291,
+      "scalar_closure_passed": true,
+      "scalar_total_pointwise_radius": 2.0024951297366727e-14,
+      "scalar_issued": true,
+      "scalar_bracket": [
+        246,
+        246
+      ],
+      "forcing_ratio_to_scalar": 0.7001520209398168,
+      "linear_ratio_to_scalar": 0.9114483052100393
+    },
+    {
+      "power": 7,
+      "heterogeneous_closure": {
+        "kappa": 2151.440750859493,
+        "response_sequence_norm": 9.6649352153368e-14,
+        "response_max_state_norm": 1.0868734881129252e-14,
+        "maximum_derivative_drift": 5794908428.16781,
+        "aligned_linear_coefficient_before_green": 5.7929206235954327e-05,
+        "corrected_defect_norm_before_green": 2.1503817717332668e-18,
+        "linear_response_error_bound": 0.0,
+        "corrected_defect_response_bound": 4.626418973612387e-15,
+        "linearized_remainder_coefficient": 0.124631254960976,
+        "quadratic_remainder_coefficient": 6233701069929.68,
+        "discriminant": 0.6509115881681937,
+        "remainder_radius": 5.500570570667667e-15,
+        "total_pointwise_radius": 1.636930545179692e-14,
+        "domain_radius": 1.93298704306736e-13,
+        "algebraic_closure_passed": true,
+        "domain_passed": true,
+        "closure_passed": true,
+        "closure_residual": 0.0
+      },
+      "heterogeneous_bracket": [
+        246,
+        246
+      ],
+      "heterogeneous_issued": true,
+      "heterogeneous_logic_slack": 0.0008635960357308231,
+      "scalar_closure_passed": true,
+      "scalar_total_pointwise_radius": 1.8909579575116145e-14,
+      "scalar_issued": true,
+      "scalar_bracket": [
+        246,
+        246
+      ],
+      "forcing_ratio_to_scalar": 0.7065144449165243,
+      "linear_ratio_to_scalar": 0.9197546769509284
+    },
+    {
+      "power": 8,
+      "heterogeneous_closure": {
+        "kappa": 2048.58679478675,
+        "response_sequence_norm": 9.6649352153368e-14,
+        "response_max_state_norm": 1.0868734881129252e-14,
+        "maximum_derivative_drift": 5671096717.099446,
+        "aligned_linear_coefficient_before_green": 5.705815897242018e-05,
+        "corrected_defect_norm_before_green": 2.1180424446146516e-18,
+        "linear_response_error_bound": 0.0,
+        "corrected_defect_response_bound": 4.338993782835422e-15,
+        "linearized_remainder_coefficient": 0.11688859100574309,
+        "quadratic_remainder_coefficient": 5808866923304.208,
+        "discriminant": 0.6790672108336805,
+        "remainder_radius": 5.0832688416651005e-15,
+        "total_pointwise_radius": 1.5952003722794353e-14,
+        "domain_radius": 1.93298704306736e-13,
+        "algebraic_closure_passed": true,
+        "domain_passed": true,
+        "closure_passed": true,
+        "closure_residual": -7.888609052210118e-31
+      },
+      "heterogeneous_bracket": [
+        246,
+        246
+      ],
+      "heterogeneous_issued": true,
+      "heterogeneous_logic_slack": 0.0008635960385951224,
+      "scalar_closure_passed": true,
+      "scalar_total_pointwise_radius": 1.821094009501407e-14,
+      "scalar_issued": true,
+      "scalar_bracket": [
+        246,
+        246
+      ],
+      "forcing_ratio_to_scalar": 0.7110819555699729,
+      "linear_ratio_to_scalar": 0.9257030731070426
+    }
+  ],
+  "interpretation": "Post-seal theorem audit using sealed probes; it is not a new prospective certificate or coverage observation."
+}

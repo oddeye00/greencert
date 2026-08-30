@@ -1,0 +1,28 @@
+{
+  "status": "INDEPENDENT AMPLIFIED-SECANT AUDIT PASSED",
+  "candidate": {
+    "seed": 366,
+    "threshold": 0.7,
+    "anchor": 1040
+  },
+  "horizon": 52,
+  "amplification": 4096.0,
+  "bracket": [
+    28,
+    28
+  ],
+  "analytic_headroom_ratio": 24.413592002410677,
+  "remaining_arithmetic_and_recurrence_headroom": 6.014744428490773e-20,
+  "median_secant_seconds": 6.558657099987613,
+  "median_third_product_seconds": 8.100442700000713,
+  "median_additional_gram_power_seconds": 26.007475799997337,
+  "median_paired_third_over_secant_speedup": 1.1923708890424844,
+  "median_paired_power_over_secant_speedup": 4.0413260665889394,
+  "minimum_power_over_secant_speedup": 3.8198985845418694,
+  "maximum_power_over_secant_speedup": 4.370522476848509,
+  "full_audit_sha256": "029E364FC6D773F9BD1BCFA7444F7879A1DACF918268B354A89F38B0791807FF",
+  "benchmark_sha256": "537C4AC44CB50083F50D787C96FA5A667997EED92CD6F4EFCE060E259DFC8C4D",
+  "two_response_source_sha256": "2DAF416457E016F9D9A77F2E49B4B8B4FBAC8C69C98C9A3051D9105F11A3C287",
+  "theorem_sha256": "672D7B9800E6D0D0D8B7585EF56225C331F2A4641E39394A98CC745F638833CD",
+  "outcome_files_read": 0
+}

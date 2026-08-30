@@ -1,0 +1,22 @@
+{
+  "status": "INDEPENDENT FULL-SEQUENCE ARB SECANT AUDIT V2 PASSED",
+  "source_sha256": "53FAC54D02AA21983610C79D45DCCD19C95CB82FB0ECE01F1A7AD9B0C34FBE37",
+  "protocol_sha256": "49DE9CD78FAA6074087CCA52299F8409AD6A7F75A1146F4E9A8E3A27D968EDDE",
+  "candidate": {
+    "seed": 366,
+    "threshold": 0.7,
+    "anchor": 1040
+  },
+  "intervals_recomputed": 204,
+  "calibration_interval": "[0.0396436546510209341971272668395937054256671939755884245323850164572678137437528267899705884 +/- 4.36e-59]",
+  "secant_forcing_norm_upper": 1.3054822832359867e-29,
+  "forcing_headroom_ratio": 24.413591878344434,
+  "closure_radius": 2.7560732299117518e-15,
+  "bracket": [
+    28,
+    28
+  ],
+  "jet_wall_seconds": 514.6332501999859,
+  "total_wall_seconds": 587.9634028,
+  "outcome_files_read": 0
+}

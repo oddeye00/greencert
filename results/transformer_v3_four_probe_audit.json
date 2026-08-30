@@ -1,0 +1,56 @@
+{
+  "status": "OUTCOME-BLIND FOUR-PROBE AUDIT COMPLETED",
+  "evidence_boundary": "Fresh post-development four-probe block under the ideal-PRNG model; no future outcome is read. Float64 points validate geometry but are not outward scalar intervals or an exact-real proof.",
+  "candidate": {
+    "seed": 366,
+    "threshold": 0.7,
+    "anchor": 1040
+  },
+  "horizon": 52,
+  "power": 1,
+  "amplification": 4096.0,
+  "probes": 4,
+  "delta": 1e-06,
+  "probe_seed": 4031038820208563628,
+  "protocol_sha256": "8D18DB8B7842C247CF94C2C66DF2B3892E900EF30D2185F93B3BAC06A2D055AE",
+  "certificate_sha256": "63DA40D4989669A1D1349B25323732C6800FD05E7EF793FBDE9C624E709CE24B",
+  "centerline_sha256": "24B349DCE9653F72AAD8DA885B4E5D7255076FEBADABF506D5EFE91E0782830E",
+  "outcome_files_read": 0,
+  "secant_injection_norm_float64": 4.013845661895033e-23,
+  "analytic_secant_discrepancy_upper": 2.568911437370008e-21,
+  "projections_float64": [
+    -5.113383649556292e-23,
+    -1.359299009261305e-23,
+    -1.404970297982232e-23,
+    9.913396225617345e-24
+  ],
+  "projection_absolute_max_float64": 5.113383649556292e-23,
+  "calibration": 0.039643654651021064,
+  "secant_norm_upper_point_projection": 1.2898365941709645e-21,
+  "probe_bound_to_observed_norm_ratio": 32.13468336403352,
+  "response_free_beta_upper_point_projection": 1.853989233862707e-17,
+  "forcing_cap": 6.271635572227775e-20,
+  "forcing_headroom_ratio": 16.25303212587122,
+  "closure": {
+    "kappa": 4804.639273433786,
+    "derivative_drift": 47958508416.319336,
+    "response_sequence_norm": 1.3015925531782942e-14,
+    "response_max_state_norm": 2.722605360507416e-15,
+    "linear_response_error_bound": 0.0,
+    "corrected_defect_response_bound": 1.853989233862707e-17,
+    "linearized_remainder_coefficient": 0.6273518016998689,
+    "discriminant": 0.13032263212287895,
+    "remainder_radius": 5.054148638484245e-17,
+    "total_pointwise_radius": 2.7731468468922587e-15,
+    "domain_radius": 2.6031851063565883e-14,
+    "algebraic_closure_passed": true,
+    "domain_passed": true,
+    "closure_passed": true,
+    "closure_residual": -6.162975822039155e-33
+  },
+  "bracket": [
+    28,
+    28
+  ],
+  "logic_slack": 0.0069372219742389225
+}

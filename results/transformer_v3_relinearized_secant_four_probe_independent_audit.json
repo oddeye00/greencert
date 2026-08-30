@@ -1,0 +1,18 @@
+{
+  "status": "INDEPENDENT FOUR-PROBE RELINEARIZED SECANT AUDIT PASSED",
+  "result_sha256": "0EF37EEEDF09301C3FE6CF785F569AC550C2F56EFD3ECB30F56F95850BAB692D",
+  "protocol_sha256": "A4B94DB67A78758BF0DA3824816D25B8B00D4CA0FE8F384B8AA7B12BB257E47A",
+  "probe_seed": 365379454072541152,
+  "probes_recomputed": 4,
+  "gram_power": 1,
+  "Y": 6613734.756606853,
+  "c_delta": 0.0032638173724032033,
+  "kappa_upper": 45015.33245584873,
+  "forcing_upper": 2.5689114504248307e-21,
+  "closure_radius": 1.35442169609162e-16,
+  "bracket": [
+    28,
+    28
+  ],
+  "outcome_files_read": 0
+}

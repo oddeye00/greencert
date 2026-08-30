@@ -1,0 +1,81 @@
+{
+  "status_tier": "DEVELOPMENT ONLY; OUTCOMES PREVIOUSLY INSPECTED",
+  "dataset": "scikit-learn digits, binary parity target",
+  "config": {
+    "width": 8,
+    "learning_rate": 0.01,
+    "weight_decay": 0.001,
+    "steps": 600,
+    "checkpoint_every": 5,
+    "seed": 0,
+    "threads": 1,
+    "dtype": "float64"
+  },
+  "parameter_count": 538,
+  "anchor": 70,
+  "threshold": 0.85,
+  "horizon": 300,
+  "sweeps": 1,
+  "probe": {
+    "probes": 4,
+    "power": 2,
+    "delta": 1e-06
+  },
+  "certificate": {
+    "seed": 0,
+    "gate_index": 0,
+    "threshold": 0.85,
+    "anchor": 70,
+    "required_correct": 307,
+    "predicted_event": 56,
+    "centerline_sha256": "C5B69F7334A9F55FBE6D39256AF17D151A0AB830377E04F81A2DED3703F956D2",
+    "sweep_diagnostics": [
+      {
+        "sweep": 1,
+        "reached_horizon": 300,
+        "maximum_uncorrected_defect_norm": 0.00295290229844871,
+        "maximum_correction_norm": 0.29905579432666735,
+        "hvp_calls": 300
+      }
+    ],
+    "outcome_joined": false,
+    "certificate_horizon": 65,
+    "defect_sequence_norm": 1.1867131774758928e-06,
+    "signed_response_sequence_norm": 1.13401049055098e-05,
+    "maximum_optimizer_derivative_drift_upper": 9817.574613860428,
+    "minimum_closure_statistic_using_kappa_ge_1": 0.22266465207769426,
+    "green_probe": {
+      "identity": [
+        371,
+        0,
+        850,
+        70,
+        1,
+        300
+      ],
+      "rng_seed": 1616660184624863849,
+      "Y": 70492248.95461269,
+      "c_delta": 0.039643654651021064,
+      "operator_norm_upper_bound": 205.34868237348846,
+      "operator_norm_lower_estimate": 24.780054938200976,
+      "gram_applications": 8,
+      "delta": 1e-06,
+      "probes": 4,
+      "power": 2
+    },
+    "closure_statistic": 45.723892915305754,
+    "closure_slack": -44.723892915305754,
+    "unsigned_right_inverse_response_upper": 0.00024368998734993036,
+    "directional_gain_ratio": 21.48921807870834,
+    "unsigned_right_inverse_derivative_drift_upper": 9824.686190861372,
+    "unsigned_right_inverse_closure_statistic": 983.282453056496,
+    "unsigned_right_inverse_minimal_radius": null,
+    "unsigned_right_inverse_certified_bracket": null,
+    "unsigned_right_inverse_certificate_issued": false,
+    "unsigned_right_inverse_maximum_margin_radius": null,
+    "unsigned_right_inverse_minimum_output_slack": null,
+    "status": "Green closure abstention",
+    "certificate_issued": false,
+    "elapsed_seconds": 4.985092799994163
+  }
+}

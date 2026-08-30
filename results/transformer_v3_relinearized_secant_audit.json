@@ -1,0 +1,87 @@
+{
+  "status": "FRESH-PROBE RELINEARIZED AMPLIFIED-SECANT AUDIT COMPLETED",
+  "evidence_boundary": "Post-seal, outcome-blind method-development audit frozen after the literal corrected-defect branch exposed cancellation. The rebuilt operator receives a new fixed Gaussian block. The secant scalar forcing is outward conditional on stored dyadic inputs; upstream Green products and output margins remain float64. Prospective counts are unchanged.",
+  "candidate": {
+    "seed": 366,
+    "threshold": 0.7,
+    "anchor": 1040
+  },
+  "horizon": 52,
+  "probe": {
+    "identity": [
+      92,
+      366,
+      0,
+      1040,
+      52,
+      4,
+      1
+    ],
+    "rng_seed": 5623422153940743113,
+    "Y": 6704695.711983903,
+    "c_delta": 0.28701612713630525,
+    "operator_norm_upper_bound": 4833.218022543474,
+    "operator_norm_lower_estimate": 74.84094489376793,
+    "gram_applications": 16,
+    "delta": 4.59896983075791e-11,
+    "probes": 16,
+    "power": 1
+  },
+  "probe_registry": {
+    "allowed_operator_count": 1,
+    "collision_free_stream_count": 1,
+    "queried_operator_count": 1,
+    "all_queries_predeclared": true
+  },
+  "old_power_one_kappa": 4804.639273433786,
+  "relinearized_kappa": 4833.218022543474,
+  "old_mixed_coefficient": 0.6273518016998689,
+  "new_mixed_coefficient": 0.0,
+  "correction_sequence_norm": 1.3015925531782942e-14,
+  "correction_max_state_norm": 2.722605360507416e-15,
+  "amplification": 4096.0,
+  "analytic_secant_discrepancy_upper": 2.568911437370008e-21,
+  "outward_secant_forcing_norm_upper": 1.3054822832359867e-29,
+  "total_injection_forcing_upper": 2.5689114504248307e-21,
+  "corrected_defect_response_bound": 1.2416109120511589e-17,
+  "forcing_capacity": {
+    "radius": 4.3141768726544175e-15,
+    "response_cap": 2.157088436327209e-15,
+    "injection_cap": 4.463048069145543e-19
+  },
+  "forcing_headroom_ratio": 173.7330443370273,
+  "closure": {
+    "kappa": 4833.218022543474,
+    "derivative_drift": 47958508416.319336,
+    "corrected_defect_response_bound": 1.2416109120511589e-17,
+    "correction_max_state_norm": 2.722605360507416e-15,
+    "domain_radius": 2.6031851063565883e-14,
+    "discriminant": 0.9942440426125263,
+    "remainder_radius": 1.2434027374830041e-17,
+    "total_radius_about_original_reference": 2.735039387882246e-15,
+    "algebraic_closure_passed": true,
+    "domain_passed": true,
+    "closure_passed": true,
+    "closure_residual": 1.5407439555097887e-33
+  },
+  "bracket": [
+    28,
+    28
+  ],
+  "logic_slack": 0.006937222006747092,
+  "maximum_margin_radius": 1.8798048100738465e-13,
+  "old_power_one_bracket": null,
+  "probe_seconds": 25.231438599992543,
+  "total_seconds": 62.4934655999823,
+  "old_power_one_logical_green_gram_applications": 16,
+  "new_logical_green_gram_applications": 16,
+  "extra_causal_response_sweeps": 0,
+  "certificate_sha256": "63DA40D4989669A1D1349B25323732C6800FD05E7EF793FBDE9C624E709CE24B",
+  "centerline_sha256": "24B349DCE9653F72AAD8DA885B4E5D7255076FEBADABF506D5EFE91E0782830E",
+  "amplified_result_sha256": "029E364FC6D773F9BD1BCFA7444F7879A1DACF918268B354A89F38B0791807FF",
+  "outward_result_sha256": "C05C3C274AC12B17FB1EC992752981CB55986F75C23B13783C48EEFE52ABEBE2",
+  "protocol_sha256": "91258C8F1D13218E990FBD5F8419B6621E2EFABE3F87FD79D677B84C6723510A",
+  "source_sha256": "D6459D702F62AF11427FA26E197AA0C8F5D6D2EFEFC1C05C36FEA1EB0E90C8F6",
+  "combined_failure_upper": 1.0000459896983075e-06,
+  "outcome_files_read": 0
+}

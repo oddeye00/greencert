@@ -1,0 +1,58 @@
+{
+  "audit_type": "post-seal aggregation of prospectively frozen decisions",
+  "method_or_threshold_changed": false,
+  "digits": {
+    "candidate_records": 24,
+    "finite_prediction_outcome_pairs": 16,
+    "exact_finite_predictions": 14,
+    "inaccurate_finite_predictions": 2,
+    "inaccurate_issued": 0,
+    "inaccurate_abstained": 2,
+    "inaccurate_records": [
+      {
+        "record": "results/digits_signed_confirmation/audit/candidate_019_seed_510_gate_1.json",
+        "predicted": 218,
+        "actual": 219,
+        "error": -1,
+        "issued": false,
+        "seed": 510,
+        "threshold": 0.925,
+        "anchor": 45,
+        "certificate_status": "safe early closure abstention",
+        "minimum_closure_statistic_using_kappa_ge_1": 6512.448128334701,
+        "randomized_operator_queried": false
+      },
+      {
+        "record": "results/digits_signed_confirmation/audit/candidate_020_seed_511_gate_0.json",
+        "predicted": 358,
+        "actual": 361,
+        "error": -3,
+        "issued": false,
+        "seed": 511,
+        "threshold": 0.9,
+        "anchor": 50,
+        "certificate_status": "safe early closure abstention",
+        "minimum_closure_statistic_using_kappa_ge_1": 4505.382961084091,
+        "randomized_operator_queried": false
+      }
+    ]
+  },
+  "wdbc": {
+    "candidate_records": 71,
+    "finite_prediction_outcome_pairs": 59,
+    "exact_finite_predictions": 59,
+    "inaccurate_finite_predictions": 0,
+    "inaccurate_issued": 0,
+    "inaccurate_abstained": 0,
+    "inaccurate_records": []
+  },
+  "transformer": {
+    "candidate_records": 23,
+    "finite_prediction_outcome_pairs": 23,
+    "exact_finite_predictions": 23,
+    "inaccurate_finite_predictions": 0,
+    "inaccurate_issued": 0,
+    "inaccurate_abstained": 0,
+    "inaccurate_records": []
+  }
+}

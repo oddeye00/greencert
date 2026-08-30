@@ -1,0 +1,1449 @@
+{
+  "protocol": "PROSPECTIVE_V2_PRIMARY_PROTOCOL.md",
+  "protocol_sha256": "ef79c9e06170ba6bdafb39ee106b215c503b40873e4cb121276d3f23313e3092",
+  "manifest_sha256": "e365e2c64a46b6ffa900fd46bbd036c97bc20320d3d74ef6b60616c4e29418c4",
+  "pipeline_version": "prospective-primary-v1-2026-08-21",
+  "method_version": "recentered-variational-v2-frozen-2026-08-21",
+  "seeds": [
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24
+  ],
+  "summary": {
+    "models_trained": 8,
+    "models_fitted": 8,
+    "models_with_95_event": 6,
+    "natural_grokking_models_ratio_gt_10": 2,
+    "seed_threshold_pairs": 40,
+    "events_observed": 37,
+    "triggers_available": 27,
+    "unique_trigger_anchors": 27,
+    "v1_certificates_issued": 6,
+    "v1_coverage_count": [
+      6,
+      6
+    ],
+    "v2_certificates_issued": 16,
+    "v2_issuance_per_trigger": 0.5925925925925926,
+    "v2_abstention_rate_when_triggered": 0.40740740740740744,
+    "v2_coverage_count": [
+      16,
+      16
+    ],
+    "v2_coverage_exact_95_interval_iid_event_working_model": [
+      0.7940927857921773,
+      1.0
+    ],
+    "issuing_seeds": [
+      17,
+      19,
+      21,
+      23,
+      24
+    ],
+    "all_covered_issuing_seeds": [
+      17,
+      19,
+      21,
+      23,
+      24
+    ],
+    "seed_level_all_covered_count": [
+      5,
+      5
+    ],
+    "seed_level_exact_95_interval_iid_seed_working_model": [
+      0.47817624989501856,
+      1.0
+    ],
+    "false_issued_brackets": 0,
+    "v1_median_reached_horizon": 26.0,
+    "v2_median_reached_horizon": 174.0,
+    "v2_full_250_step_tubes": 13,
+    "median_pairwise_horizon_gain": 4.3076923076923075,
+    "v2_median_bracket_span": 0.0,
+    "v2_maximum_bracket_span": 6,
+    "v2_median_lead": 108.5,
+    "v2_minimum_lead": 2,
+    "v2_maximum_lead": 237,
+    "raw_modal_median_absolute_timing_error": 6.0,
+    "state_tube_violations": 0,
+    "maximum_observed_error_to_bound_ratio": 0.9999999970132211,
+    "failure_modes": {
+      "no_trigger": 13,
+      "issued": 16,
+      "state_horizon": 6,
+      "event_beyond_window": 4,
+      "output_margin": 1
+    }
+  },
+  "issued_brackets": [
+    {
+      "seed": 17,
+      "threshold": 0.8,
+      "anchor": 47000,
+      "raw_trigger_prediction": 39,
+      "actual_crossing": 47039,
+      "actual_lead": 39,
+      "v1_reached_horizon": 67,
+      "v2_reached_horizon": 250,
+      "v1_certificate_issued": false,
+      "v2_certificate_issued": true,
+      "v1_bracket": null,
+      "v2_bracket": [
+        39,
+        39
+      ],
+      "v1_covered": null,
+      "v2_covered": true,
+      "v2_reference_prediction": 39
+    },
+    {
+      "seed": 17,
+      "threshold": 0.9,
+      "anchor": 115250,
+      "raw_trigger_prediction": 71,
+      "actual_crossing": 115321,
+      "actual_lead": 71,
+      "v1_reached_horizon": 250,
+      "v2_reached_horizon": 250,
+      "v1_certificate_issued": true,
+      "v2_certificate_issued": true,
+      "v1_bracket": [
+        71,
+        71
+      ],
+      "v2_bracket": [
+        71,
+        71
+      ],
+      "v1_covered": true,
+      "v2_covered": true,
+      "v2_reference_prediction": 71
+    },
+    {
+      "seed": 17,
+      "threshold": 0.95,
+      "anchor": 123500,
+      "raw_trigger_prediction": 190,
+      "actual_crossing": 123690,
+      "actual_lead": 190,
+      "v1_reached_horizon": 250,
+      "v2_reached_horizon": 250,
+      "v1_certificate_issued": true,
+      "v2_certificate_issued": true,
+      "v1_bracket": [
+        188,
+        192
+      ],
+      "v2_bracket": [
+        190,
+        190
+      ],
+      "v1_covered": true,
+      "v2_covered": true,
+      "v2_reference_prediction": 190
+    },
+    {
+      "seed": 19,
+      "threshold": 0.7,
+      "anchor": 13000,
+      "raw_trigger_prediction": 2,
+      "actual_crossing": 13002,
+      "actual_lead": 2,
+      "v1_reached_horizon": 18,
+      "v2_reached_horizon": 101,
+      "v1_certificate_issued": true,
+      "v2_certificate_issued": true,
+      "v1_bracket": [
+        2,
+        2
+      ],
+      "v2_bracket": [
+        2,
+        2
+      ],
+      "v1_covered": true,
+      "v2_covered": true,
+      "v2_reference_prediction": 2
+    },
+    {
+      "seed": 19,
+      "threshold": 0.95,
+      "anchor": 17000,
+      "raw_trigger_prediction": 16,
+      "actual_crossing": 17018,
+      "actual_lead": 18,
+      "v1_reached_horizon": 13,
+      "v2_reached_horizon": 56,
+      "v1_certificate_issued": false,
+      "v2_certificate_issued": true,
+      "v1_bracket": null,
+      "v2_bracket": [
+        18,
+        20
+      ],
+      "v1_covered": null,
+      "v2_covered": true,
+      "v2_reference_prediction": 18
+    },
+    {
+      "seed": 21,
+      "threshold": 0.6,
+      "anchor": 17000,
+      "raw_trigger_prediction": 68,
+      "actual_crossing": 17066,
+      "actual_lead": 66,
+      "v1_reached_horizon": 21,
+      "v2_reached_horizon": 136,
+      "v1_certificate_issued": false,
+      "v2_certificate_issued": true,
+      "v1_bracket": null,
+      "v2_bracket": [
+        64,
+        70
+      ],
+      "v1_covered": null,
+      "v2_covered": true,
+      "v2_reference_prediction": 66
+    },
+    {
+      "seed": 21,
+      "threshold": 0.9,
+      "anchor": 21250,
+      "raw_trigger_prediction": 243,
+      "actual_crossing": 21487,
+      "actual_lead": 237,
+      "v1_reached_horizon": 180,
+      "v2_reached_horizon": 250,
+      "v1_certificate_issued": false,
+      "v2_certificate_issued": true,
+      "v1_bracket": null,
+      "v2_bracket": [
+        237,
+        237
+      ],
+      "v1_covered": null,
+      "v2_covered": true,
+      "v2_reference_prediction": 237
+    },
+    {
+      "seed": 21,
+      "threshold": 0.95,
+      "anchor": 25000,
+      "raw_trigger_prediction": 158,
+      "actual_crossing": 25158,
+      "actual_lead": 158,
+      "v1_reached_horizon": 224,
+      "v2_reached_horizon": 250,
+      "v1_certificate_issued": false,
+      "v2_certificate_issued": true,
+      "v1_bracket": null,
+      "v2_bracket": [
+        158,
+        158
+      ],
+      "v1_covered": null,
+      "v2_covered": true,
+      "v2_reference_prediction": 158
+    },
+    {
+      "seed": 23,
+      "threshold": 0.6,
+      "anchor": 21500,
+      "raw_trigger_prediction": 36,
+      "actual_crossing": 21536,
+      "actual_lead": 36,
+      "v1_reached_horizon": 175,
+      "v2_reached_horizon": 250,
+      "v1_certificate_issued": true,
+      "v2_certificate_issued": true,
+      "v1_bracket": [
+        36,
+        36
+      ],
+      "v2_bracket": [
+        36,
+        36
+      ],
+      "v1_covered": true,
+      "v2_covered": true,
+      "v2_reference_prediction": 36
+    },
+    {
+      "seed": 23,
+      "threshold": 0.7,
+      "anchor": 22750,
+      "raw_trigger_prediction": 189,
+      "actual_crossing": 22939,
+      "actual_lead": 189,
+      "v1_reached_horizon": 172,
+      "v2_reached_horizon": 250,
+      "v1_certificate_issued": false,
+      "v2_certificate_issued": true,
+      "v1_bracket": null,
+      "v2_bracket": [
+        189,
+        189
+      ],
+      "v1_covered": null,
+      "v2_covered": true,
+      "v2_reference_prediction": 189
+    },
+    {
+      "seed": 23,
+      "threshold": 0.8,
+      "anchor": 24500,
+      "raw_trigger_prediction": 244,
+      "actual_crossing": 24682,
+      "actual_lead": 182,
+      "v1_reached_horizon": 170,
+      "v2_reached_horizon": 250,
+      "v1_certificate_issued": false,
+      "v2_certificate_issued": true,
+      "v1_bracket": null,
+      "v2_bracket": [
+        182,
+        182
+      ],
+      "v1_covered": null,
+      "v2_covered": true,
+      "v2_reference_prediction": 182
+    },
+    {
+      "seed": 23,
+      "threshold": 0.9,
+      "anchor": 26000,
+      "raw_trigger_prediction": 108,
+      "actual_crossing": 26104,
+      "actual_lead": 104,
+      "v1_reached_horizon": 130,
+      "v2_reached_horizon": 250,
+      "v1_certificate_issued": false,
+      "v2_certificate_issued": true,
+      "v1_bracket": null,
+      "v2_bracket": [
+        104,
+        104
+      ],
+      "v1_covered": null,
+      "v2_covered": true,
+      "v2_reference_prediction": 104
+    },
+    {
+      "seed": 24,
+      "threshold": 0.6,
+      "anchor": 23500,
+      "raw_trigger_prediction": 198,
+      "actual_crossing": 23699,
+      "actual_lead": 199,
+      "v1_reached_horizon": 178,
+      "v2_reached_horizon": 250,
+      "v1_certificate_issued": false,
+      "v2_certificate_issued": true,
+      "v1_bracket": null,
+      "v2_bracket": [
+        199,
+        199
+      ],
+      "v1_covered": null,
+      "v2_covered": true,
+      "v2_reference_prediction": 199
+    },
+    {
+      "seed": 24,
+      "threshold": 0.8,
+      "anchor": 27250,
+      "raw_trigger_prediction": 44,
+      "actual_crossing": 27294,
+      "actual_lead": 44,
+      "v1_reached_horizon": 229,
+      "v2_reached_horizon": 250,
+      "v1_certificate_issued": true,
+      "v2_certificate_issued": true,
+      "v1_bracket": [
+        44,
+        44
+      ],
+      "v2_bracket": [
+        44,
+        44
+      ],
+      "v1_covered": true,
+      "v2_covered": true,
+      "v2_reference_prediction": 44
+    },
+    {
+      "seed": 24,
+      "threshold": 0.9,
+      "anchor": 36750,
+      "raw_trigger_prediction": 111,
+      "actual_crossing": 36863,
+      "actual_lead": 113,
+      "v1_reached_horizon": 205,
+      "v2_reached_horizon": 250,
+      "v1_certificate_issued": true,
+      "v2_certificate_issued": true,
+      "v1_bracket": [
+        108,
+        125
+      ],
+      "v2_bracket": [
+        113,
+        113
+      ],
+      "v1_covered": true,
+      "v2_covered": true,
+      "v2_reference_prediction": 113
+    },
+    {
+      "seed": 24,
+      "threshold": 0.95,
+      "anchor": 52500,
+      "raw_trigger_prediction": 192,
+      "actual_crossing": 52698,
+      "actual_lead": 198,
+      "v1_reached_horizon": 250,
+      "v2_reached_horizon": 250,
+      "v1_certificate_issued": false,
+      "v2_certificate_issued": true,
+      "v1_bracket": null,
+      "v2_bracket": [
+        198,
+        198
+      ],
+      "v1_covered": null,
+      "v2_covered": true,
+      "v2_reference_prediction": 198
+    }
+  ],
+  "rows": [
+    {
+      "seed": 17,
+      "threshold": 0.6,
+      "anchor": null,
+      "raw_trigger_prediction": null,
+      "actual_crossing": 30631,
+      "actual_lead": null,
+      "v1_reached_horizon": null,
+      "v2_reached_horizon": null,
+      "v1_certificate_issued": false,
+      "v2_certificate_issued": false,
+      "v1_bracket": null,
+      "v2_bracket": null,
+      "v1_covered": null,
+      "v2_covered": null,
+      "v2_reference_prediction": null
+    },
+    {
+      "seed": 17,
+      "threshold": 0.7,
+      "anchor": null,
+      "raw_trigger_prediction": null,
+      "actual_crossing": 40905,
+      "actual_lead": null,
+      "v1_reached_horizon": null,
+      "v2_reached_horizon": null,
+      "v1_certificate_issued": false,
+      "v2_certificate_issued": false,
+      "v1_bracket": null,
+      "v2_bracket": null,
+      "v1_covered": null,
+      "v2_covered": null,
+      "v2_reference_prediction": null
+    },
+    {
+      "seed": 17,
+      "threshold": 0.8,
+      "anchor": 47000,
+      "raw_trigger_prediction": 39,
+      "actual_crossing": 47039,
+      "actual_lead": 39,
+      "v1_reached_horizon": 67,
+      "v2_reached_horizon": 250,
+      "v1_certificate_issued": false,
+      "v2_certificate_issued": true,
+      "v1_bracket": null,
+      "v2_bracket": [
+        39,
+        39
+      ],
+      "v1_covered": null,
+      "v2_covered": true,
+      "v2_reference_prediction": 39
+    },
+    {
+      "seed": 17,
+      "threshold": 0.9,
+      "anchor": 115250,
+      "raw_trigger_prediction": 71,
+      "actual_crossing": 115321,
+      "actual_lead": 71,
+      "v1_reached_horizon": 250,
+      "v2_reached_horizon": 250,
+      "v1_certificate_issued": true,
+      "v2_certificate_issued": true,
+      "v1_bracket": [
+        71,
+        71
+      ],
+      "v2_bracket": [
+        71,
+        71
+      ],
+      "v1_covered": true,
+      "v2_covered": true,
+      "v2_reference_prediction": 71
+    },
+    {
+      "seed": 17,
+      "threshold": 0.95,
+      "anchor": 123500,
+      "raw_trigger_prediction": 190,
+      "actual_crossing": 123690,
+      "actual_lead": 190,
+      "v1_reached_horizon": 250,
+      "v2_reached_horizon": 250,
+      "v1_certificate_issued": true,
+      "v2_certificate_issued": true,
+      "v1_bracket": [
+        188,
+        192
+      ],
+      "v2_bracket": [
+        190,
+        190
+      ],
+      "v1_covered": true,
+      "v2_covered": true,
+      "v2_reference_prediction": 190
+    },
+    {
+      "seed": 18,
+      "threshold": 0.6,
+      "anchor": null,
+      "raw_trigger_prediction": null,
+      "actual_crossing": 22382,
+      "actual_lead": null,
+      "v1_reached_horizon": null,
+      "v2_reached_horizon": null,
+      "v1_certificate_issued": false,
+      "v2_certificate_issued": false,
+      "v1_bracket": null,
+      "v2_bracket": null,
+      "v1_covered": null,
+      "v2_covered": null,
+      "v2_reference_prediction": null
+    },
+    {
+      "seed": 18,
+      "threshold": 0.7,
+      "anchor": 24000,
+      "raw_trigger_prediction": 224,
+      "actual_crossing": 24200,
+      "actual_lead": 200,
+      "v1_reached_horizon": 22,
+      "v2_reached_horizon": 154,
+      "v1_certificate_issued": false,
+      "v2_certificate_issued": false,
+      "v1_bracket": null,
+      "v2_bracket": null,
+      "v1_covered": null,
+      "v2_covered": null,
+      "v2_reference_prediction": null
+    },
+    {
+      "seed": 18,
+      "threshold": 0.8,
+      "anchor": null,
+      "raw_trigger_prediction": null,
+      "actual_crossing": 26500,
+      "actual_lead": null,
+      "v1_reached_horizon": null,
+      "v2_reached_horizon": null,
+      "v1_certificate_issued": false,
+      "v2_certificate_issued": false,
+      "v1_bracket": null,
+      "v2_bracket": null,
+      "v1_covered": null,
+      "v2_covered": null,
+      "v2_reference_prediction": null
+    },
+    {
+      "seed": 18,
+      "threshold": 0.9,
+      "anchor": 56000,
+      "raw_trigger_prediction": 167,
+      "actual_crossing": 56235,
+      "actual_lead": 235,
+      "v1_reached_horizon": 21,
+      "v2_reached_horizon": 129,
+      "v1_certificate_issued": false,
+      "v2_certificate_issued": false,
+      "v1_bracket": null,
+      "v2_bracket": null,
+      "v1_covered": null,
+      "v2_covered": null,
+      "v2_reference_prediction": null
+    },
+    {
+      "seed": 18,
+      "threshold": 0.95,
+      "anchor": null,
+      "raw_trigger_prediction": null,
+      "actual_crossing": null,
+      "actual_lead": null,
+      "v1_reached_horizon": null,
+      "v2_reached_horizon": null,
+      "v1_certificate_issued": false,
+      "v2_certificate_issued": false,
+      "v1_bracket": null,
+      "v2_bracket": null,
+      "v1_covered": null,
+      "v2_covered": null,
+      "v2_reference_prediction": null
+    },
+    {
+      "seed": 19,
+      "threshold": 0.6,
+      "anchor": 12250,
+      "raw_trigger_prediction": 84,
+      "actual_crossing": 12346,
+      "actual_lead": 96,
+      "v1_reached_horizon": 14,
+      "v2_reached_horizon": 66,
+      "v1_certificate_issued": false,
+      "v2_certificate_issued": false,
+      "v1_bracket": null,
+      "v2_bracket": null,
+      "v1_covered": null,
+      "v2_covered": null,
+      "v2_reference_prediction": null
+    },
+    {
+      "seed": 19,
+      "threshold": 0.7,
+      "anchor": 13000,
+      "raw_trigger_prediction": 2,
+      "actual_crossing": 13002,
+      "actual_lead": 2,
+      "v1_reached_horizon": 18,
+      "v2_reached_horizon": 101,
+      "v1_certificate_issued": true,
+      "v2_certificate_issued": true,
+      "v1_bracket": [
+        2,
+        2
+      ],
+      "v2_bracket": [
+        2,
+        2
+      ],
+      "v1_covered": true,
+      "v2_covered": true,
+      "v2_reference_prediction": 2
+    },
+    {
+      "seed": 19,
+      "threshold": 0.8,
+      "anchor": null,
+      "raw_trigger_prediction": null,
+      "actual_crossing": 13225,
+      "actual_lead": null,
+      "v1_reached_horizon": null,
+      "v2_reached_horizon": null,
+      "v1_certificate_issued": false,
+      "v2_certificate_issued": false,
+      "v1_bracket": null,
+      "v2_bracket": null,
+      "v1_covered": null,
+      "v2_covered": null,
+      "v2_reference_prediction": null
+    },
+    {
+      "seed": 19,
+      "threshold": 0.9,
+      "anchor": 16000,
+      "raw_trigger_prediction": 193,
+      "actual_crossing": 16557,
+      "actual_lead": 557,
+      "v1_reached_horizon": 13,
+      "v2_reached_horizon": 71,
+      "v1_certificate_issued": false,
+      "v2_certificate_issued": false,
+      "v1_bracket": null,
+      "v2_bracket": null,
+      "v1_covered": null,
+      "v2_covered": null,
+      "v2_reference_prediction": null
+    },
+    {
+      "seed": 19,
+      "threshold": 0.95,
+      "anchor": 17000,
+      "raw_trigger_prediction": 16,
+      "actual_crossing": 17018,
+      "actual_lead": 18,
+      "v1_reached_horizon": 13,
+      "v2_reached_horizon": 56,
+      "v1_certificate_issued": false,
+      "v2_certificate_issued": true,
+      "v1_bracket": null,
+      "v2_bracket": [
+        18,
+        20
+      ],
+      "v1_covered": null,
+      "v2_covered": true,
+      "v2_reference_prediction": 18
+    },
+    {
+      "seed": 20,
+      "threshold": 0.6,
+      "anchor": 40750,
+      "raw_trigger_prediction": 247,
+      "actual_crossing": 42152,
+      "actual_lead": 1402,
+      "v1_reached_horizon": 15,
+      "v2_reached_horizon": 86,
+      "v1_certificate_issued": false,
+      "v2_certificate_issued": false,
+      "v1_bracket": null,
+      "v2_bracket": null,
+      "v1_covered": null,
+      "v2_covered": null,
+      "v2_reference_prediction": null
+    },
+    {
+      "seed": 20,
+      "threshold": 0.7,
+      "anchor": 47250,
+      "raw_trigger_prediction": 74,
+      "actual_crossing": 47340,
+      "actual_lead": 90,
+      "v1_reached_horizon": 18,
+      "v2_reached_horizon": 90,
+      "v1_certificate_issued": false,
+      "v2_certificate_issued": false,
+      "v1_bracket": null,
+      "v2_bracket": null,
+      "v1_covered": null,
+      "v2_covered": null,
+      "v2_reference_prediction": null
+    },
+    {
+      "seed": 20,
+      "threshold": 0.8,
+      "anchor": 55250,
+      "raw_trigger_prediction": 207,
+      "actual_crossing": 55409,
+      "actual_lead": 159,
+      "v1_reached_horizon": 16,
+      "v2_reached_horizon": 100,
+      "v1_certificate_issued": false,
+      "v2_certificate_issued": false,
+      "v1_bracket": null,
+      "v2_bracket": null,
+      "v1_covered": null,
+      "v2_covered": null,
+      "v2_reference_prediction": null
+    },
+    {
+      "seed": 20,
+      "threshold": 0.9,
+      "anchor": null,
+      "raw_trigger_prediction": null,
+      "actual_crossing": 56895,
+      "actual_lead": null,
+      "v1_reached_horizon": null,
+      "v2_reached_horizon": null,
+      "v1_certificate_issued": false,
+      "v2_certificate_issued": false,
+      "v1_bracket": null,
+      "v2_bracket": null,
+      "v1_covered": null,
+      "v2_covered": null,
+      "v2_reference_prediction": null
+    },
+    {
+      "seed": 20,
+      "threshold": 0.95,
+      "anchor": 59500,
+      "raw_trigger_prediction": 209,
+      "actual_crossing": 59669,
+      "actual_lead": 169,
+      "v1_reached_horizon": 19,
+      "v2_reached_horizon": 124,
+      "v1_certificate_issued": false,
+      "v2_certificate_issued": false,
+      "v1_bracket": null,
+      "v2_bracket": null,
+      "v1_covered": null,
+      "v2_covered": null,
+      "v2_reference_prediction": null
+    },
+    {
+      "seed": 21,
+      "threshold": 0.6,
+      "anchor": 17000,
+      "raw_trigger_prediction": 68,
+      "actual_crossing": 17066,
+      "actual_lead": 66,
+      "v1_reached_horizon": 21,
+      "v2_reached_horizon": 136,
+      "v1_certificate_issued": false,
+      "v2_certificate_issued": true,
+      "v1_bracket": null,
+      "v2_bracket": [
+        64,
+        70
+      ],
+      "v1_covered": null,
+      "v2_covered": true,
+      "v2_reference_prediction": 66
+    },
+    {
+      "seed": 21,
+      "threshold": 0.7,
+      "anchor": null,
+      "raw_trigger_prediction": null,
+      "actual_crossing": 18215,
+      "actual_lead": null,
+      "v1_reached_horizon": null,
+      "v2_reached_horizon": null,
+      "v1_certificate_issued": false,
+      "v2_certificate_issued": false,
+      "v1_bracket": null,
+      "v2_bracket": null,
+      "v1_covered": null,
+      "v2_covered": null,
+      "v2_reference_prediction": null
+    },
+    {
+      "seed": 21,
+      "threshold": 0.8,
+      "anchor": null,
+      "raw_trigger_prediction": null,
+      "actual_crossing": 19272,
+      "actual_lead": null,
+      "v1_reached_horizon": null,
+      "v2_reached_horizon": null,
+      "v1_certificate_issued": false,
+      "v2_certificate_issued": false,
+      "v1_bracket": null,
+      "v2_bracket": null,
+      "v1_covered": null,
+      "v2_covered": null,
+      "v2_reference_prediction": null
+    },
+    {
+      "seed": 21,
+      "threshold": 0.9,
+      "anchor": 21250,
+      "raw_trigger_prediction": 243,
+      "actual_crossing": 21487,
+      "actual_lead": 237,
+      "v1_reached_horizon": 180,
+      "v2_reached_horizon": 250,
+      "v1_certificate_issued": false,
+      "v2_certificate_issued": true,
+      "v1_bracket": null,
+      "v2_bracket": [
+        237,
+        237
+      ],
+      "v1_covered": null,
+      "v2_covered": true,
+      "v2_reference_prediction": 237
+    },
+    {
+      "seed": 21,
+      "threshold": 0.95,
+      "anchor": 25000,
+      "raw_trigger_prediction": 158,
+      "actual_crossing": 25158,
+      "actual_lead": 158,
+      "v1_reached_horizon": 224,
+      "v2_reached_horizon": 250,
+      "v1_certificate_issued": false,
+      "v2_certificate_issued": true,
+      "v1_bracket": null,
+      "v2_bracket": [
+        158,
+        158
+      ],
+      "v1_covered": null,
+      "v2_covered": true,
+      "v2_reference_prediction": 158
+    },
+    {
+      "seed": 22,
+      "threshold": 0.6,
+      "anchor": null,
+      "raw_trigger_prediction": null,
+      "actual_crossing": 60751,
+      "actual_lead": null,
+      "v1_reached_horizon": null,
+      "v2_reached_horizon": null,
+      "v1_certificate_issued": false,
+      "v2_certificate_issued": false,
+      "v1_bracket": null,
+      "v2_bracket": null,
+      "v1_covered": null,
+      "v2_covered": null,
+      "v2_reference_prediction": null
+    },
+    {
+      "seed": 22,
+      "threshold": 0.7,
+      "anchor": 100000,
+      "raw_trigger_prediction": 188,
+      "actual_crossing": 100264,
+      "actual_lead": 264,
+      "v1_reached_horizon": 25,
+      "v2_reached_horizon": 166,
+      "v1_certificate_issued": false,
+      "v2_certificate_issued": false,
+      "v1_bracket": null,
+      "v2_bracket": null,
+      "v1_covered": null,
+      "v2_covered": null,
+      "v2_reference_prediction": null
+    },
+    {
+      "seed": 22,
+      "threshold": 0.8,
+      "anchor": 107000,
+      "raw_trigger_prediction": 167,
+      "actual_crossing": 107213,
+      "actual_lead": 213,
+      "v1_reached_horizon": 26,
+      "v2_reached_horizon": 174,
+      "v1_certificate_issued": false,
+      "v2_certificate_issued": false,
+      "v1_bracket": null,
+      "v2_bracket": null,
+      "v1_covered": null,
+      "v2_covered": null,
+      "v2_reference_prediction": null
+    },
+    {
+      "seed": 22,
+      "threshold": 0.9,
+      "anchor": null,
+      "raw_trigger_prediction": null,
+      "actual_crossing": null,
+      "actual_lead": null,
+      "v1_reached_horizon": null,
+      "v2_reached_horizon": null,
+      "v1_certificate_issued": false,
+      "v2_certificate_issued": false,
+      "v1_bracket": null,
+      "v2_bracket": null,
+      "v1_covered": null,
+      "v2_covered": null,
+      "v2_reference_prediction": null
+    },
+    {
+      "seed": 22,
+      "threshold": 0.95,
+      "anchor": null,
+      "raw_trigger_prediction": null,
+      "actual_crossing": null,
+      "actual_lead": null,
+      "v1_reached_horizon": null,
+      "v2_reached_horizon": null,
+      "v1_certificate_issued": false,
+      "v2_certificate_issued": false,
+      "v1_bracket": null,
+      "v2_bracket": null,
+      "v1_covered": null,
+      "v2_covered": null,
+      "v2_reference_prediction": null
+    },
+    {
+      "seed": 23,
+      "threshold": 0.6,
+      "anchor": 21500,
+      "raw_trigger_prediction": 36,
+      "actual_crossing": 21536,
+      "actual_lead": 36,
+      "v1_reached_horizon": 175,
+      "v2_reached_horizon": 250,
+      "v1_certificate_issued": true,
+      "v2_certificate_issued": true,
+      "v1_bracket": [
+        36,
+        36
+      ],
+      "v2_bracket": [
+        36,
+        36
+      ],
+      "v1_covered": true,
+      "v2_covered": true,
+      "v2_reference_prediction": 36
+    },
+    {
+      "seed": 23,
+      "threshold": 0.7,
+      "anchor": 22750,
+      "raw_trigger_prediction": 189,
+      "actual_crossing": 22939,
+      "actual_lead": 189,
+      "v1_reached_horizon": 172,
+      "v2_reached_horizon": 250,
+      "v1_certificate_issued": false,
+      "v2_certificate_issued": true,
+      "v1_bracket": null,
+      "v2_bracket": [
+        189,
+        189
+      ],
+      "v1_covered": null,
+      "v2_covered": true,
+      "v2_reference_prediction": 189
+    },
+    {
+      "seed": 23,
+      "threshold": 0.8,
+      "anchor": 24500,
+      "raw_trigger_prediction": 244,
+      "actual_crossing": 24682,
+      "actual_lead": 182,
+      "v1_reached_horizon": 170,
+      "v2_reached_horizon": 250,
+      "v1_certificate_issued": false,
+      "v2_certificate_issued": true,
+      "v1_bracket": null,
+      "v2_bracket": [
+        182,
+        182
+      ],
+      "v1_covered": null,
+      "v2_covered": true,
+      "v2_reference_prediction": 182
+    },
+    {
+      "seed": 23,
+      "threshold": 0.9,
+      "anchor": 26000,
+      "raw_trigger_prediction": 108,
+      "actual_crossing": 26104,
+      "actual_lead": 104,
+      "v1_reached_horizon": 130,
+      "v2_reached_horizon": 250,
+      "v1_certificate_issued": false,
+      "v2_certificate_issued": true,
+      "v1_bracket": null,
+      "v2_bracket": [
+        104,
+        104
+      ],
+      "v1_covered": null,
+      "v2_covered": true,
+      "v2_reference_prediction": 104
+    },
+    {
+      "seed": 23,
+      "threshold": 0.95,
+      "anchor": 29250,
+      "raw_trigger_prediction": 224,
+      "actual_crossing": 29540,
+      "actual_lead": 290,
+      "v1_reached_horizon": 22,
+      "v2_reached_horizon": 156,
+      "v1_certificate_issued": false,
+      "v2_certificate_issued": false,
+      "v1_bracket": null,
+      "v2_bracket": null,
+      "v1_covered": null,
+      "v2_covered": null,
+      "v2_reference_prediction": null
+    },
+    {
+      "seed": 24,
+      "threshold": 0.6,
+      "anchor": 23500,
+      "raw_trigger_prediction": 198,
+      "actual_crossing": 23699,
+      "actual_lead": 199,
+      "v1_reached_horizon": 178,
+      "v2_reached_horizon": 250,
+      "v1_certificate_issued": false,
+      "v2_certificate_issued": true,
+      "v1_bracket": null,
+      "v2_bracket": [
+        199,
+        199
+      ],
+      "v1_covered": null,
+      "v2_covered": true,
+      "v2_reference_prediction": 199
+    },
+    {
+      "seed": 24,
+      "threshold": 0.7,
+      "anchor": null,
+      "raw_trigger_prediction": null,
+      "actual_crossing": 24288,
+      "actual_lead": null,
+      "v1_reached_horizon": null,
+      "v2_reached_horizon": null,
+      "v1_certificate_issued": false,
+      "v2_certificate_issued": false,
+      "v1_bracket": null,
+      "v2_bracket": null,
+      "v1_covered": null,
+      "v2_covered": null,
+      "v2_reference_prediction": null
+    },
+    {
+      "seed": 24,
+      "threshold": 0.8,
+      "anchor": 27250,
+      "raw_trigger_prediction": 44,
+      "actual_crossing": 27294,
+      "actual_lead": 44,
+      "v1_reached_horizon": 229,
+      "v2_reached_horizon": 250,
+      "v1_certificate_issued": true,
+      "v2_certificate_issued": true,
+      "v1_bracket": [
+        44,
+        44
+      ],
+      "v2_bracket": [
+        44,
+        44
+      ],
+      "v1_covered": true,
+      "v2_covered": true,
+      "v2_reference_prediction": 44
+    },
+    {
+      "seed": 24,
+      "threshold": 0.9,
+      "anchor": 36750,
+      "raw_trigger_prediction": 111,
+      "actual_crossing": 36863,
+      "actual_lead": 113,
+      "v1_reached_horizon": 205,
+      "v2_reached_horizon": 250,
+      "v1_certificate_issued": true,
+      "v2_certificate_issued": true,
+      "v1_bracket": [
+        108,
+        125
+      ],
+      "v2_bracket": [
+        113,
+        113
+      ],
+      "v1_covered": true,
+      "v2_covered": true,
+      "v2_reference_prediction": 113
+    },
+    {
+      "seed": 24,
+      "threshold": 0.95,
+      "anchor": 52500,
+      "raw_trigger_prediction": 192,
+      "actual_crossing": 52698,
+      "actual_lead": 198,
+      "v1_reached_horizon": 250,
+      "v2_reached_horizon": 250,
+      "v1_certificate_issued": false,
+      "v2_certificate_issued": true,
+      "v1_bracket": null,
+      "v2_bracket": [
+        198,
+        198
+      ],
+      "v1_covered": null,
+      "v2_covered": true,
+      "v2_reference_prediction": 198
+    }
+  ],
+  "seed_training_rows": [
+    {
+      "seed": 17,
+      "fit_step_first_logged": 6800,
+      "exact_95_crossing": 123690,
+      "exact_95_to_logged_fit_ratio": 18.189705882352943,
+      "natural_grokking_ratio_gt_10": true
+    },
+    {
+      "seed": 18,
+      "fit_step_first_logged": 7400,
+      "exact_95_crossing": null,
+      "exact_95_to_logged_fit_ratio": null,
+      "natural_grokking_ratio_gt_10": false
+    },
+    {
+      "seed": 19,
+      "fit_step_first_logged": 8025,
+      "exact_95_crossing": 17018,
+      "exact_95_to_logged_fit_ratio": 2.1206230529595014,
+      "natural_grokking_ratio_gt_10": false
+    },
+    {
+      "seed": 20,
+      "fit_step_first_logged": 5950,
+      "exact_95_crossing": 59669,
+      "exact_95_to_logged_fit_ratio": 10.028403361344537,
+      "natural_grokking_ratio_gt_10": true
+    },
+    {
+      "seed": 21,
+      "fit_step_first_logged": 7275,
+      "exact_95_crossing": 25158,
+      "exact_95_to_logged_fit_ratio": 3.458144329896907,
+      "natural_grokking_ratio_gt_10": false
+    },
+    {
+      "seed": 22,
+      "fit_step_first_logged": 7600,
+      "exact_95_crossing": null,
+      "exact_95_to_logged_fit_ratio": null,
+      "natural_grokking_ratio_gt_10": false
+    },
+    {
+      "seed": 23,
+      "fit_step_first_logged": 8100,
+      "exact_95_crossing": 29540,
+      "exact_95_to_logged_fit_ratio": 3.6469135802469137,
+      "natural_grokking_ratio_gt_10": false
+    },
+    {
+      "seed": 24,
+      "fit_step_first_logged": 6525,
+      "exact_95_crossing": 52698,
+      "exact_95_to_logged_fit_ratio": 8.07632183908046,
+      "natural_grokking_ratio_gt_10": false
+    }
+  ],
+  "anchor_audits": [
+    {
+      "seed": 17,
+      "anchor": 47000,
+      "checked_steps": 251,
+      "violations": 0,
+      "maximum_error_to_bound_ratio": 0.9999842744693157,
+      "maximum_observed_error": 9.647693198288424e-06
+    },
+    {
+      "seed": 17,
+      "anchor": 115250,
+      "checked_steps": 251,
+      "violations": 0,
+      "maximum_error_to_bound_ratio": 0.8112897865300371,
+      "maximum_observed_error": 1.003063169818621e-08
+    },
+    {
+      "seed": 17,
+      "anchor": 123500,
+      "checked_steps": 251,
+      "violations": 0,
+      "maximum_error_to_bound_ratio": 0.802467305587272,
+      "maximum_observed_error": 5.1124679820429685e-09
+    },
+    {
+      "seed": 18,
+      "anchor": 24000,
+      "checked_steps": 155,
+      "violations": 0,
+      "maximum_error_to_bound_ratio": 0.9999998650582306,
+      "maximum_observed_error": 0.0001064353136873085
+    },
+    {
+      "seed": 18,
+      "anchor": 56000,
+      "checked_steps": 130,
+      "violations": 0,
+      "maximum_error_to_bound_ratio": 0.9999999435501715,
+      "maximum_observed_error": 0.00032277537110974604
+    },
+    {
+      "seed": 19,
+      "anchor": 12250,
+      "checked_steps": 67,
+      "violations": 0,
+      "maximum_error_to_bound_ratio": 0.9999999877929436,
+      "maximum_observed_error": 0.0016444551352205491
+    },
+    {
+      "seed": 19,
+      "anchor": 13000,
+      "checked_steps": 102,
+      "violations": 0,
+      "maximum_error_to_bound_ratio": 0.9999999876273358,
+      "maximum_observed_error": 0.0005622908921965296
+    },
+    {
+      "seed": 19,
+      "anchor": 16000,
+      "checked_steps": 72,
+      "violations": 0,
+      "maximum_error_to_bound_ratio": 0.9999999913239245,
+      "maximum_observed_error": 0.0011998734483211584
+    },
+    {
+      "seed": 19,
+      "anchor": 17000,
+      "checked_steps": 57,
+      "violations": 0,
+      "maximum_error_to_bound_ratio": 0.9999999970132211,
+      "maximum_observed_error": 0.0023421202098128815
+    },
+    {
+      "seed": 20,
+      "anchor": 40750,
+      "checked_steps": 87,
+      "violations": 0,
+      "maximum_error_to_bound_ratio": 0.9999999865302803,
+      "maximum_observed_error": 0.0006316538520098093
+    },
+    {
+      "seed": 20,
+      "anchor": 47250,
+      "checked_steps": 91,
+      "violations": 0,
+      "maximum_error_to_bound_ratio": 0.9999999713129663,
+      "maximum_observed_error": 0.0010352592991818524
+    },
+    {
+      "seed": 20,
+      "anchor": 55250,
+      "checked_steps": 101,
+      "violations": 0,
+      "maximum_error_to_bound_ratio": 0.9999999590542054,
+      "maximum_observed_error": 0.00021654748716583787
+    },
+    {
+      "seed": 20,
+      "anchor": 59500,
+      "checked_steps": 125,
+      "violations": 0,
+      "maximum_error_to_bound_ratio": 0.9999999434788576,
+      "maximum_observed_error": 0.0001628380082073672
+    },
+    {
+      "seed": 21,
+      "anchor": 17000,
+      "checked_steps": 137,
+      "violations": 0,
+      "maximum_error_to_bound_ratio": 0.9999999511057526,
+      "maximum_observed_error": 0.0002058250144912238
+    },
+    {
+      "seed": 21,
+      "anchor": 21250,
+      "checked_steps": 251,
+      "violations": 0,
+      "maximum_error_to_bound_ratio": 0.8911935759011439,
+      "maximum_observed_error": 6.363197685065172e-07
+    },
+    {
+      "seed": 21,
+      "anchor": 25000,
+      "checked_steps": 251,
+      "violations": 0,
+      "maximum_error_to_bound_ratio": 0.8977757343242427,
+      "maximum_observed_error": 1.165846244883324e-07
+    },
+    {
+      "seed": 22,
+      "anchor": 100000,
+      "checked_steps": 167,
+      "violations": 0,
+      "maximum_error_to_bound_ratio": 0.9999997793892651,
+      "maximum_observed_error": 3.727142144746529e-05
+    },
+    {
+      "seed": 22,
+      "anchor": 107000,
+      "checked_steps": 175,
+      "violations": 0,
+      "maximum_error_to_bound_ratio": 0.9999998658316891,
+      "maximum_observed_error": 8.026489370524841e-05
+    },
+    {
+      "seed": 23,
+      "anchor": 21500,
+      "checked_steps": 251,
+      "violations": 0,
+      "maximum_error_to_bound_ratio": 0.9111717054946761,
+      "maximum_observed_error": 4.976164718156824e-07
+    },
+    {
+      "seed": 23,
+      "anchor": 22750,
+      "checked_steps": 251,
+      "violations": 0,
+      "maximum_error_to_bound_ratio": 0.9178441692756852,
+      "maximum_observed_error": 6.775926288677268e-07
+    },
+    {
+      "seed": 23,
+      "anchor": 24500,
+      "checked_steps": 251,
+      "violations": 0,
+      "maximum_error_to_bound_ratio": 0.8794845358388214,
+      "maximum_observed_error": 6.253439730943222e-07
+    },
+    {
+      "seed": 23,
+      "anchor": 26000,
+      "checked_steps": 251,
+      "violations": 0,
+      "maximum_error_to_bound_ratio": 0.9996716977894118,
+      "maximum_observed_error": 5.480276553377164e-06
+    },
+    {
+      "seed": 23,
+      "anchor": 29250,
+      "checked_steps": 157,
+      "violations": 0,
+      "maximum_error_to_bound_ratio": 0.9999998174176981,
+      "maximum_observed_error": 0.00042492988251749826
+    },
+    {
+      "seed": 24,
+      "anchor": 23500,
+      "checked_steps": 251,
+      "violations": 0,
+      "maximum_error_to_bound_ratio": 0.8659995574975548,
+      "maximum_observed_error": 4.641150631211395e-07
+    },
+    {
+      "seed": 24,
+      "anchor": 27250,
+      "checked_steps": 251,
+      "violations": 0,
+      "maximum_error_to_bound_ratio": 0.8491189106384426,
+      "maximum_observed_error": 1.0265196065291506e-07
+    },
+    {
+      "seed": 24,
+      "anchor": 36750,
+      "checked_steps": 251,
+      "violations": 0,
+      "maximum_error_to_bound_ratio": 0.852325727470269,
+      "maximum_observed_error": 1.7485593726239728e-07
+    },
+    {
+      "seed": 24,
+      "anchor": 52500,
+      "checked_steps": 251,
+      "violations": 0,
+      "maximum_error_to_bound_ratio": 0.8523532576246827,
+      "maximum_observed_error": 6.875168165930404e-09
+    }
+  ]
+}

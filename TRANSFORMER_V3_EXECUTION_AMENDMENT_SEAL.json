@@ -1,0 +1,26 @@
+{
+  "status": "SEALED OUTCOME-BLIND V3 EXECUTION AMENDMENT",
+  "timestamp_utc": "2026-08-26T07:42:38.861427+00:00",
+  "method_seal_sha256": "2CB9738FD630392CCA088C3E23C8CCE7142FAB046C9AFB6AEDC36906D51B7866",
+  "candidate_seal_sha256": "43A016761DEB48CB4923BEDDBA82B005AFD18479622E6D587248AC127A910543",
+  "candidate_manifest_sha256": "0AB04F552C9DC2A06D974E7E973E48C3BC6E829B2222D5E81AC19ECB5FFD4843",
+  "candidate": {
+    "seed": 365,
+    "threshold": 0.7,
+    "anchor": 1480
+  },
+  "candidate_count_unchanged": 19,
+  "future_outcome_opened": false,
+  "randomized_operators_queried": 0,
+  "code_manifest": {
+    "TRANSFORMER_V3_EXECUTION_AMENDMENT.md": "8BD9C383E856715A3DA388550FC668E5EA383FC698F93011B94B2C61B1B80167",
+    "scripts/transformer_v3_execution_amendment.py": "D82A436C3F105B46875885EAC7FE6305006F09929925A07578B4876D1EDF821A"
+  },
+  "failed_log": "results\\transformer_v3_certificate_seed_365_gate_0_anchor_1480.process.log",
+  "failed_log_sha256": "D9C9688EA5C787CA034EA9C64760C1948BC15A8E6C1FA0FB70E8844F65EA23F7",
+  "blind_forecast": "results\\transformer_modal_prospective_blind_seed_365_anchor_1480.json",
+  "blind_forecast_sha256": "B140D7B17CC8A55577D813A9B38EA30F27723A1DD86FA02A372E4F30BCA7C9D9",
+  "abstention_certificate": "results\\transformer_v3_certificate_seed_365_gate_0_anchor_1480.json",
+  "abstention_certificate_sha256": "6CB21193FA4947E35867CF2EC69053BCF3A8391171247C25AC73198EA8988A22",
+  "disposition": "deterministic construction failure -> abstain; no retry"
+}

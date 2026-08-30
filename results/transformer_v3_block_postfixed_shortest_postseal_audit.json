@@ -1,0 +1,41 @@
+{
+  "status": "post-seal numerical audit; no prospective count changed",
+  "summary": {
+    "issued_records": 1,
+    "states_recomputed": 26,
+    "exact_binary64_postfixed_failures": 338,
+    "maximum_absolute_postfixed_deficit": 1.9025154088719637e-23,
+    "maximum_relative_postfixed_deficit": 5.14947831376319e-14,
+    "maximum_stored_jet_relative_error": 0.0,
+    "frozen_check_relative_tolerance": 1e-09,
+    "strict_binary64_postfixed_failures": 0,
+    "maximum_strict_jet_relative_increase": 0.0,
+    "all_strict_brackets_reproduce_frozen": true
+  },
+  "interpretation": "An exact binary64 post-fixed comparison is stronger than the frozen 1e-9-relative acceptance check but is still not outward real arithmetic.",
+  "records": [
+    {
+      "record": "results\\transformer_v3_certificate_seed_366_gate_1_anchor_1120.json",
+      "candidate": {
+        "seed": 366,
+        "threshold": 0.8,
+        "anchor": 1120
+      },
+      "states": 26,
+      "exact_postfixed_failures": 338,
+      "maximum_absolute_postfixed_deficit": 1.9025154088719637e-23,
+      "maximum_relative_postfixed_deficit": 5.14947831376319e-14,
+      "maximum_stored_jet_relative_error": 0.0,
+      "strict_binary64_postfixed_failures": 0,
+      "maximum_strict_jet_relative_increase": 0.0,
+      "strict_closure_passed": true,
+      "strict_total_pointwise_radius": 2.3628147902686187e-15,
+      "strict_bracket": [
+        2,
+        2
+      ],
+      "strict_logic_slack": 0.0018713446794124701,
+      "frozen_bracket_reproduced": true
+    }
+  ]
+}

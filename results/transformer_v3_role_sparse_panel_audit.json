@@ -1,0 +1,147 @@
+{
+  "status": "independent four-horizon role-fused timing panel passed",
+  "scope": "Post-seal implementation audit on four immutable issued singleton certificates chosen to span H=26,52,94,142; not a prospective issuance study. Centerline and sealed Green response are shared; output-phase speedups exclude both, while the secondary replay metric includes centerline time.",
+  "cases": [
+    {
+      "candidate": {
+        "seed": 366,
+        "threshold": 0.8,
+        "anchor": 1120
+      },
+      "horizon": 26,
+      "bracket": [
+        2,
+        2
+      ],
+      "independent_audit_sha256": "767B6496AEE4E4A6E5DBF7D20EF5D7D8BA44C7F0C02FF30B167A1914E33BF4CB",
+      "benchmark_sha256": "DA730D8A1A4EAD5B916EFAA26B728BBD18AB254F0DD2EA1D3F0AA98C2CF072FC",
+      "baseline_pair_work": 7514,
+      "fused_pair_work": 5833,
+      "dense_event_queries": 26,
+      "preplanned_event_queries": 26,
+      "fallback_event_queries": 0,
+      "centerline_seconds": 75.55727940000361,
+      "baseline_operator_seconds": 6.435648099984974,
+      "naive_separate_operator_seconds": 7.047132400010014,
+      "fused_operator_seconds": 5.376012400025502,
+      "baseline_output_wall_seconds": 6.887833899978432,
+      "fused_output_wall_seconds": 5.809774599969387,
+      "operator_speedup": 1.1971044002715554,
+      "output_wall_speedup": 1.1855595740348903,
+      "centerline_plus_output_speedup": 1.0132493343068485
+    },
+    {
+      "candidate": {
+        "seed": 366,
+        "threshold": 0.7,
+        "anchor": 1040
+      },
+      "horizon": 52,
+      "bracket": [
+        28,
+        28
+      ],
+      "independent_audit_sha256": "40E23DDBE86ACB57DEE6466C28266548714844C57948A3EE77B14C44F1381EF6",
+      "benchmark_sha256": "DE00A5CE171A2758A2E654F6D09CCEB8AC5DD306D2E69FE6ACBD2A8BB0536496",
+      "baseline_pair_work": 15028,
+      "fused_pair_work": 10389,
+      "dense_event_queries": 52,
+      "preplanned_event_queries": 27,
+      "fallback_event_queries": 0,
+      "centerline_seconds": 78.37426470000355,
+      "baseline_operator_seconds": 28.27847529994324,
+      "naive_separate_operator_seconds": 22.608795899912366,
+      "fused_operator_seconds": 19.77105409989599,
+      "baseline_output_wall_seconds": 29.10322410002118,
+      "fused_output_wall_seconds": 20.832177199947182,
+      "operator_speedup": 1.430296794347045,
+      "output_wall_speedup": 1.3970322842729548,
+      "centerline_plus_output_speedup": 1.0833720748539224
+    },
+    {
+      "candidate": {
+        "seed": 366,
+        "threshold": 0.9,
+        "anchor": 1360
+      },
+      "horizon": 94,
+      "bracket": [
+        70,
+        70
+      ],
+      "independent_audit_sha256": "DC70A69126F2246C9A35E0B9274660C412E85927D12595E5AA588DF3DA6B5799",
+      "benchmark_sha256": "0282DB26A0427B3C48CEBF5EA5EA7F84B6E789AEB8D0FA57DE41EBB643A3CDAD",
+      "baseline_pair_work": 27166,
+      "fused_pair_work": 17713,
+      "dense_event_queries": 94,
+      "preplanned_event_queries": 28,
+      "fallback_event_queries": 0,
+      "centerline_seconds": 84.79112149999128,
+      "baseline_operator_seconds": 60.487010400145664,
+      "naive_separate_operator_seconds": 45.00297970008978,
+      "fused_operator_seconds": 43.178414099966176,
+      "baseline_output_wall_seconds": 62.410555600057705,
+      "fused_output_wall_seconds": 45.06778770001256,
+      "operator_speedup": 1.4008622516822138,
+      "output_wall_speedup": 1.3848151592326843,
+      "centerline_plus_output_speedup": 1.1335508515117316
+    },
+    {
+      "candidate": {
+        "seed": 369,
+        "threshold": 0.8,
+        "anchor": 4480
+      },
+      "horizon": 142,
+      "bracket": [
+        118,
+        118
+      ],
+      "independent_audit_sha256": "181E43308FDAF4C33E475EC0A5286081E4044556BE8CDBF7362F7D08F9CDC756",
+      "benchmark_sha256": "9F0F5E21F5F1F9AE7F75C6FA522C6BA972988FA56C36A7DE1F27BC5D73BCCE86",
+      "baseline_pair_work": 41038,
+      "fused_pair_work": 26191,
+      "dense_event_queries": 142,
+      "preplanned_event_queries": 31,
+      "fallback_event_queries": 0,
+      "centerline_seconds": 134.03160869999556,
+      "baseline_operator_seconds": 131.04565649991127,
+      "naive_separate_operator_seconds": 149.28076180002245,
+      "fused_operator_seconds": 97.3917169000124,
+      "baseline_output_wall_seconds": 134.842521999999,
+      "fused_output_wall_seconds": 101.30540029996337,
+      "operator_speedup": 1.3455523803369216,
+      "output_wall_speedup": 1.3310496933108489,
+      "centerline_plus_output_speedup": 1.1425067899118302
+    }
+  ],
+  "summary": {
+    "case_count": 4,
+    "same_brackets": 4,
+    "fallback_event_queries": 0,
+    "dense_event_queries": 314,
+    "preplanned_event_queries": 112,
+    "event_query_reduction_factor": 2.8035714285714284,
+    "baseline_pair_work": 90746,
+    "fused_pair_work": 60126,
+    "pair_work_reduction_fraction": 0.33742534106186495,
+    "aggregate_operator_speedup": 1.3652583661398303,
+    "median_operator_speedup": 1.3732073160095677,
+    "operator_speedup_range": [
+      1.1971044002715554,
+      1.430296794347045
+    ],
+    "aggregate_output_wall_speedup": 1.34811401978939,
+    "median_output_wall_speedup": 1.3579324262717667,
+    "output_wall_speedup_range": [
+      1.1855595740348903,
+      1.3970322842729548
+    ],
+    "aggregate_centerline_plus_output_speedup": 1.1103561215490554,
+    "median_centerline_plus_output_speedup": 1.108461463182827,
+    "centerline_plus_output_speedup_range": [
+      1.0132493343068485,
+      1.1425067899118302
+    ]
+  }
+}

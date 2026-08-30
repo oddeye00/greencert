@@ -1,0 +1,1009 @@
+{
+  "candidates": [
+    {
+      "anchor": 0,
+      "disposition": "candidate frozen",
+      "gate_index": 0,
+      "seed": 101,
+      "threshold": 0.9
+    },
+    {
+      "anchor": 0,
+      "disposition": "candidate frozen",
+      "gate_index": 1,
+      "seed": 101,
+      "threshold": 0.925
+    },
+    {
+      "anchor": 0,
+      "disposition": "candidate frozen",
+      "gate_index": 2,
+      "seed": 101,
+      "threshold": 0.95
+    },
+    {
+      "anchor": 10,
+      "disposition": "candidate frozen",
+      "gate_index": 0,
+      "seed": 102,
+      "threshold": 0.9
+    },
+    {
+      "anchor": 10,
+      "disposition": "candidate frozen",
+      "gate_index": 1,
+      "seed": 102,
+      "threshold": 0.925
+    },
+    {
+      "anchor": 10,
+      "disposition": "candidate frozen",
+      "gate_index": 2,
+      "seed": 102,
+      "threshold": 0.95
+    },
+    {
+      "anchor": 60,
+      "disposition": "candidate frozen",
+      "gate_index": 0,
+      "seed": 103,
+      "threshold": 0.9
+    },
+    {
+      "anchor": 90,
+      "disposition": "candidate frozen",
+      "gate_index": 1,
+      "seed": 103,
+      "threshold": 0.925
+    },
+    {
+      "anchor": 165,
+      "disposition": "candidate frozen",
+      "gate_index": 2,
+      "seed": 103,
+      "threshold": 0.95
+    },
+    {
+      "anchor": 10,
+      "disposition": "candidate frozen",
+      "gate_index": 0,
+      "seed": 104,
+      "threshold": 0.9
+    },
+    {
+      "anchor": 10,
+      "disposition": "candidate frozen",
+      "gate_index": 1,
+      "seed": 104,
+      "threshold": 0.925
+    },
+    {
+      "anchor": 20,
+      "disposition": "candidate frozen",
+      "gate_index": 2,
+      "seed": 104,
+      "threshold": 0.95
+    },
+    {
+      "anchor": 95,
+      "disposition": "candidate frozen",
+      "gate_index": 0,
+      "seed": 105,
+      "threshold": 0.9
+    },
+    {
+      "anchor": 95,
+      "disposition": "candidate frozen",
+      "gate_index": 1,
+      "seed": 105,
+      "threshold": 0.925
+    },
+    {
+      "anchor": 95,
+      "disposition": "candidate frozen",
+      "gate_index": 2,
+      "seed": 105,
+      "threshold": 0.95
+    },
+    {
+      "anchor": 30,
+      "disposition": "candidate frozen",
+      "gate_index": 0,
+      "seed": 106,
+      "threshold": 0.9
+    },
+    {
+      "anchor": 45,
+      "disposition": "candidate frozen",
+      "gate_index": 1,
+      "seed": 106,
+      "threshold": 0.925
+    },
+    {
+      "anchor": 50,
+      "disposition": "candidate frozen",
+      "gate_index": 2,
+      "seed": 106,
+      "threshold": 0.95
+    },
+    {
+      "anchor": 5,
+      "disposition": "candidate frozen",
+      "gate_index": 0,
+      "seed": 107,
+      "threshold": 0.9
+    },
+    {
+      "anchor": 10,
+      "disposition": "candidate frozen",
+      "gate_index": 1,
+      "seed": 107,
+      "threshold": 0.925
+    },
+    {
+      "anchor": 25,
+      "disposition": "candidate frozen",
+      "gate_index": 2,
+      "seed": 107,
+      "threshold": 0.95
+    },
+    {
+      "anchor": 15,
+      "disposition": "candidate frozen",
+      "gate_index": 0,
+      "seed": 108,
+      "threshold": 0.9
+    },
+    {
+      "anchor": 20,
+      "disposition": "candidate frozen",
+      "gate_index": 1,
+      "seed": 108,
+      "threshold": 0.925
+    },
+    {
+      "anchor": 30,
+      "disposition": "candidate frozen",
+      "gate_index": 2,
+      "seed": 108,
+      "threshold": 0.95
+    },
+    {
+      "anchor": 60,
+      "disposition": "candidate frozen",
+      "gate_index": 0,
+      "seed": 109,
+      "threshold": 0.9
+    },
+    {
+      "anchor": 65,
+      "disposition": "candidate frozen",
+      "gate_index": 1,
+      "seed": 109,
+      "threshold": 0.925
+    },
+    {
+      "anchor": 70,
+      "disposition": "candidate frozen",
+      "gate_index": 2,
+      "seed": 109,
+      "threshold": 0.95
+    },
+    {
+      "anchor": 40,
+      "disposition": "candidate frozen",
+      "gate_index": 0,
+      "seed": 110,
+      "threshold": 0.9
+    },
+    {
+      "anchor": 45,
+      "disposition": "candidate frozen",
+      "gate_index": 1,
+      "seed": 110,
+      "threshold": 0.925
+    },
+    {
+      "anchor": 50,
+      "disposition": "candidate frozen",
+      "gate_index": 2,
+      "seed": 110,
+      "threshold": 0.95
+    },
+    {
+      "anchor": 75,
+      "disposition": "candidate frozen",
+      "gate_index": 0,
+      "seed": 111,
+      "threshold": 0.9
+    },
+    {
+      "anchor": 75,
+      "disposition": "candidate frozen",
+      "gate_index": 1,
+      "seed": 111,
+      "threshold": 0.925
+    },
+    {
+      "anchor": 75,
+      "disposition": "candidate frozen",
+      "gate_index": 2,
+      "seed": 111,
+      "threshold": 0.95
+    },
+    {
+      "anchor": 55,
+      "disposition": "candidate frozen",
+      "gate_index": 0,
+      "seed": 112,
+      "threshold": 0.9
+    },
+    {
+      "anchor": 60,
+      "disposition": "candidate frozen",
+      "gate_index": 1,
+      "seed": 112,
+      "threshold": 0.925
+    },
+    {
+      "anchor": 70,
+      "disposition": "candidate frozen",
+      "gate_index": 2,
+      "seed": 112,
+      "threshold": 0.95
+    },
+    {
+      "anchor": 45,
+      "disposition": "candidate frozen",
+      "gate_index": 0,
+      "seed": 113,
+      "threshold": 0.9
+    },
+    {
+      "anchor": 45,
+      "disposition": "candidate frozen",
+      "gate_index": 1,
+      "seed": 113,
+      "threshold": 0.925
+    },
+    {
+      "anchor": 45,
+      "disposition": "candidate frozen",
+      "gate_index": 2,
+      "seed": 113,
+      "threshold": 0.95
+    },
+    {
+      "anchor": 40,
+      "disposition": "candidate frozen",
+      "gate_index": 0,
+      "seed": 114,
+      "threshold": 0.9
+    },
+    {
+      "anchor": 50,
+      "disposition": "candidate frozen",
+      "gate_index": 1,
+      "seed": 114,
+      "threshold": 0.925
+    },
+    {
+      "anchor": 60,
+      "disposition": "candidate frozen",
+      "gate_index": 2,
+      "seed": 114,
+      "threshold": 0.95
+    },
+    {
+      "anchor": 0,
+      "disposition": "candidate frozen",
+      "gate_index": 1,
+      "seed": 115,
+      "threshold": 0.925
+    },
+    {
+      "anchor": 0,
+      "disposition": "candidate frozen",
+      "gate_index": 2,
+      "seed": 115,
+      "threshold": 0.95
+    },
+    {
+      "anchor": 10,
+      "disposition": "candidate frozen",
+      "gate_index": 0,
+      "seed": 116,
+      "threshold": 0.9
+    },
+    {
+      "anchor": 10,
+      "disposition": "candidate frozen",
+      "gate_index": 1,
+      "seed": 116,
+      "threshold": 0.925
+    },
+    {
+      "anchor": 10,
+      "disposition": "candidate frozen",
+      "gate_index": 2,
+      "seed": 116,
+      "threshold": 0.95
+    },
+    {
+      "anchor": 25,
+      "disposition": "candidate frozen",
+      "gate_index": 0,
+      "seed": 117,
+      "threshold": 0.9
+    },
+    {
+      "anchor": 25,
+      "disposition": "candidate frozen",
+      "gate_index": 1,
+      "seed": 117,
+      "threshold": 0.925
+    },
+    {
+      "anchor": 30,
+      "disposition": "candidate frozen",
+      "gate_index": 2,
+      "seed": 117,
+      "threshold": 0.95
+    },
+    {
+      "anchor": 60,
+      "disposition": "candidate frozen",
+      "gate_index": 0,
+      "seed": 118,
+      "threshold": 0.9
+    },
+    {
+      "anchor": 70,
+      "disposition": "candidate frozen",
+      "gate_index": 1,
+      "seed": 118,
+      "threshold": 0.925
+    },
+    {
+      "anchor": 75,
+      "disposition": "candidate frozen",
+      "gate_index": 2,
+      "seed": 118,
+      "threshold": 0.95
+    },
+    {
+      "anchor": 55,
+      "disposition": "candidate frozen",
+      "gate_index": 0,
+      "seed": 119,
+      "threshold": 0.9
+    },
+    {
+      "anchor": 55,
+      "disposition": "candidate frozen",
+      "gate_index": 1,
+      "seed": 119,
+      "threshold": 0.925
+    },
+    {
+      "anchor": 60,
+      "disposition": "candidate frozen",
+      "gate_index": 2,
+      "seed": 119,
+      "threshold": 0.95
+    },
+    {
+      "anchor": 30,
+      "disposition": "candidate frozen",
+      "gate_index": 0,
+      "seed": 120,
+      "threshold": 0.9
+    },
+    {
+      "anchor": 30,
+      "disposition": "candidate frozen",
+      "gate_index": 1,
+      "seed": 120,
+      "threshold": 0.925
+    },
+    {
+      "anchor": 35,
+      "disposition": "candidate frozen",
+      "gate_index": 2,
+      "seed": 120,
+      "threshold": 0.95
+    },
+    {
+      "anchor": 0,
+      "disposition": "candidate frozen",
+      "gate_index": 0,
+      "seed": 121,
+      "threshold": 0.9
+    },
+    {
+      "anchor": 0,
+      "disposition": "candidate frozen",
+      "gate_index": 1,
+      "seed": 121,
+      "threshold": 0.925
+    },
+    {
+      "anchor": 0,
+      "disposition": "candidate frozen",
+      "gate_index": 2,
+      "seed": 121,
+      "threshold": 0.95
+    },
+    {
+      "anchor": 65,
+      "disposition": "candidate frozen",
+      "gate_index": 0,
+      "seed": 122,
+      "threshold": 0.9
+    },
+    {
+      "anchor": 65,
+      "disposition": "candidate frozen",
+      "gate_index": 1,
+      "seed": 122,
+      "threshold": 0.925
+    },
+    {
+      "anchor": 70,
+      "disposition": "candidate frozen",
+      "gate_index": 2,
+      "seed": 122,
+      "threshold": 0.95
+    },
+    {
+      "anchor": 40,
+      "disposition": "candidate frozen",
+      "gate_index": 0,
+      "seed": 123,
+      "threshold": 0.9
+    },
+    {
+      "anchor": 45,
+      "disposition": "candidate frozen",
+      "gate_index": 1,
+      "seed": 123,
+      "threshold": 0.925
+    },
+    {
+      "anchor": 55,
+      "disposition": "candidate frozen",
+      "gate_index": 2,
+      "seed": 123,
+      "threshold": 0.95
+    },
+    {
+      "anchor": 50,
+      "disposition": "candidate frozen",
+      "gate_index": 0,
+      "seed": 124,
+      "threshold": 0.9
+    },
+    {
+      "anchor": 50,
+      "disposition": "candidate frozen",
+      "gate_index": 1,
+      "seed": 124,
+      "threshold": 0.925
+    },
+    {
+      "anchor": 55,
+      "disposition": "candidate frozen",
+      "gate_index": 2,
+      "seed": 124,
+      "threshold": 0.95
+    }
+  ],
+  "method_seal_sha256": "3408AF37C03959264B3DC8888001F5BE4AA5702FEA4D7F90B694261AC2846F8C",
+  "rows": [
+    {
+      "anchor": 0,
+      "disposition": "candidate frozen",
+      "gate_index": 0,
+      "seed": 101,
+      "threshold": 0.9
+    },
+    {
+      "anchor": 0,
+      "disposition": "candidate frozen",
+      "gate_index": 1,
+      "seed": 101,
+      "threshold": 0.925
+    },
+    {
+      "anchor": 0,
+      "disposition": "candidate frozen",
+      "gate_index": 2,
+      "seed": 101,
+      "threshold": 0.95
+    },
+    {
+      "anchor": 10,
+      "disposition": "candidate frozen",
+      "gate_index": 0,
+      "seed": 102,
+      "threshold": 0.9
+    },
+    {
+      "anchor": 10,
+      "disposition": "candidate frozen",
+      "gate_index": 1,
+      "seed": 102,
+      "threshold": 0.925
+    },
+    {
+      "anchor": 10,
+      "disposition": "candidate frozen",
+      "gate_index": 2,
+      "seed": 102,
+      "threshold": 0.95
+    },
+    {
+      "anchor": 60,
+      "disposition": "candidate frozen",
+      "gate_index": 0,
+      "seed": 103,
+      "threshold": 0.9
+    },
+    {
+      "anchor": 90,
+      "disposition": "candidate frozen",
+      "gate_index": 1,
+      "seed": 103,
+      "threshold": 0.925
+    },
+    {
+      "anchor": 165,
+      "disposition": "candidate frozen",
+      "gate_index": 2,
+      "seed": 103,
+      "threshold": 0.95
+    },
+    {
+      "anchor": 10,
+      "disposition": "candidate frozen",
+      "gate_index": 0,
+      "seed": 104,
+      "threshold": 0.9
+    },
+    {
+      "anchor": 10,
+      "disposition": "candidate frozen",
+      "gate_index": 1,
+      "seed": 104,
+      "threshold": 0.925
+    },
+    {
+      "anchor": 20,
+      "disposition": "candidate frozen",
+      "gate_index": 2,
+      "seed": 104,
+      "threshold": 0.95
+    },
+    {
+      "anchor": 95,
+      "disposition": "candidate frozen",
+      "gate_index": 0,
+      "seed": 105,
+      "threshold": 0.9
+    },
+    {
+      "anchor": 95,
+      "disposition": "candidate frozen",
+      "gate_index": 1,
+      "seed": 105,
+      "threshold": 0.925
+    },
+    {
+      "anchor": 95,
+      "disposition": "candidate frozen",
+      "gate_index": 2,
+      "seed": 105,
+      "threshold": 0.95
+    },
+    {
+      "anchor": 30,
+      "disposition": "candidate frozen",
+      "gate_index": 0,
+      "seed": 106,
+      "threshold": 0.9
+    },
+    {
+      "anchor": 45,
+      "disposition": "candidate frozen",
+      "gate_index": 1,
+      "seed": 106,
+      "threshold": 0.925
+    },
+    {
+      "anchor": 50,
+      "disposition": "candidate frozen",
+      "gate_index": 2,
+      "seed": 106,
+      "threshold": 0.95
+    },
+    {
+      "anchor": 5,
+      "disposition": "candidate frozen",
+      "gate_index": 0,
+      "seed": 107,
+      "threshold": 0.9
+    },
+    {
+      "anchor": 10,
+      "disposition": "candidate frozen",
+      "gate_index": 1,
+      "seed": 107,
+      "threshold": 0.925
+    },
+    {
+      "anchor": 25,
+      "disposition": "candidate frozen",
+      "gate_index": 2,
+      "seed": 107,
+      "threshold": 0.95
+    },
+    {
+      "anchor": 15,
+      "disposition": "candidate frozen",
+      "gate_index": 0,
+      "seed": 108,
+      "threshold": 0.9
+    },
+    {
+      "anchor": 20,
+      "disposition": "candidate frozen",
+      "gate_index": 1,
+      "seed": 108,
+      "threshold": 0.925
+    },
+    {
+      "anchor": 30,
+      "disposition": "candidate frozen",
+      "gate_index": 2,
+      "seed": 108,
+      "threshold": 0.95
+    },
+    {
+      "anchor": 60,
+      "disposition": "candidate frozen",
+      "gate_index": 0,
+      "seed": 109,
+      "threshold": 0.9
+    },
+    {
+      "anchor": 65,
+      "disposition": "candidate frozen",
+      "gate_index": 1,
+      "seed": 109,
+      "threshold": 0.925
+    },
+    {
+      "anchor": 70,
+      "disposition": "candidate frozen",
+      "gate_index": 2,
+      "seed": 109,
+      "threshold": 0.95
+    },
+    {
+      "anchor": 40,
+      "disposition": "candidate frozen",
+      "gate_index": 0,
+      "seed": 110,
+      "threshold": 0.9
+    },
+    {
+      "anchor": 45,
+      "disposition": "candidate frozen",
+      "gate_index": 1,
+      "seed": 110,
+      "threshold": 0.925
+    },
+    {
+      "anchor": 50,
+      "disposition": "candidate frozen",
+      "gate_index": 2,
+      "seed": 110,
+      "threshold": 0.95
+    },
+    {
+      "anchor": 75,
+      "disposition": "candidate frozen",
+      "gate_index": 0,
+      "seed": 111,
+      "threshold": 0.9
+    },
+    {
+      "anchor": 75,
+      "disposition": "candidate frozen",
+      "gate_index": 1,
+      "seed": 111,
+      "threshold": 0.925
+    },
+    {
+      "anchor": 75,
+      "disposition": "candidate frozen",
+      "gate_index": 2,
+      "seed": 111,
+      "threshold": 0.95
+    },
+    {
+      "anchor": 55,
+      "disposition": "candidate frozen",
+      "gate_index": 0,
+      "seed": 112,
+      "threshold": 0.9
+    },
+    {
+      "anchor": 60,
+      "disposition": "candidate frozen",
+      "gate_index": 1,
+      "seed": 112,
+      "threshold": 0.925
+    },
+    {
+      "anchor": 70,
+      "disposition": "candidate frozen",
+      "gate_index": 2,
+      "seed": 112,
+      "threshold": 0.95
+    },
+    {
+      "anchor": 45,
+      "disposition": "candidate frozen",
+      "gate_index": 0,
+      "seed": 113,
+      "threshold": 0.9
+    },
+    {
+      "anchor": 45,
+      "disposition": "candidate frozen",
+      "gate_index": 1,
+      "seed": 113,
+      "threshold": 0.925
+    },
+    {
+      "anchor": 45,
+      "disposition": "candidate frozen",
+      "gate_index": 2,
+      "seed": 113,
+      "threshold": 0.95
+    },
+    {
+      "anchor": 40,
+      "disposition": "candidate frozen",
+      "gate_index": 0,
+      "seed": 114,
+      "threshold": 0.9
+    },
+    {
+      "anchor": 50,
+      "disposition": "candidate frozen",
+      "gate_index": 1,
+      "seed": 114,
+      "threshold": 0.925
+    },
+    {
+      "anchor": 60,
+      "disposition": "candidate frozen",
+      "gate_index": 2,
+      "seed": 114,
+      "threshold": 0.95
+    },
+    {
+      "anchor": null,
+      "disposition": "no trigger-only anchor",
+      "gate_index": 0,
+      "seed": 115,
+      "threshold": 0.9
+    },
+    {
+      "anchor": 0,
+      "disposition": "candidate frozen",
+      "gate_index": 1,
+      "seed": 115,
+      "threshold": 0.925
+    },
+    {
+      "anchor": 0,
+      "disposition": "candidate frozen",
+      "gate_index": 2,
+      "seed": 115,
+      "threshold": 0.95
+    },
+    {
+      "anchor": 10,
+      "disposition": "candidate frozen",
+      "gate_index": 0,
+      "seed": 116,
+      "threshold": 0.9
+    },
+    {
+      "anchor": 10,
+      "disposition": "candidate frozen",
+      "gate_index": 1,
+      "seed": 116,
+      "threshold": 0.925
+    },
+    {
+      "anchor": 10,
+      "disposition": "candidate frozen",
+      "gate_index": 2,
+      "seed": 116,
+      "threshold": 0.95
+    },
+    {
+      "anchor": 25,
+      "disposition": "candidate frozen",
+      "gate_index": 0,
+      "seed": 117,
+      "threshold": 0.9
+    },
+    {
+      "anchor": 25,
+      "disposition": "candidate frozen",
+      "gate_index": 1,
+      "seed": 117,
+      "threshold": 0.925
+    },
+    {
+      "anchor": 30,
+      "disposition": "candidate frozen",
+      "gate_index": 2,
+      "seed": 117,
+      "threshold": 0.95
+    },
+    {
+      "anchor": 60,
+      "disposition": "candidate frozen",
+      "gate_index": 0,
+      "seed": 118,
+      "threshold": 0.9
+    },
+    {
+      "anchor": 70,
+      "disposition": "candidate frozen",
+      "gate_index": 1,
+      "seed": 118,
+      "threshold": 0.925
+    },
+    {
+      "anchor": 75,
+      "disposition": "candidate frozen",
+      "gate_index": 2,
+      "seed": 118,
+      "threshold": 0.95
+    },
+    {
+      "anchor": 55,
+      "disposition": "candidate frozen",
+      "gate_index": 0,
+      "seed": 119,
+      "threshold": 0.9
+    },
+    {
+      "anchor": 55,
+      "disposition": "candidate frozen",
+      "gate_index": 1,
+      "seed": 119,
+      "threshold": 0.925
+    },
+    {
+      "anchor": 60,
+      "disposition": "candidate frozen",
+      "gate_index": 2,
+      "seed": 119,
+      "threshold": 0.95
+    },
+    {
+      "anchor": 30,
+      "disposition": "candidate frozen",
+      "gate_index": 0,
+      "seed": 120,
+      "threshold": 0.9
+    },
+    {
+      "anchor": 30,
+      "disposition": "candidate frozen",
+      "gate_index": 1,
+      "seed": 120,
+      "threshold": 0.925
+    },
+    {
+      "anchor": 35,
+      "disposition": "candidate frozen",
+      "gate_index": 2,
+      "seed": 120,
+      "threshold": 0.95
+    },
+    {
+      "anchor": 0,
+      "disposition": "candidate frozen",
+      "gate_index": 0,
+      "seed": 121,
+      "threshold": 0.9
+    },
+    {
+      "anchor": 0,
+      "disposition": "candidate frozen",
+      "gate_index": 1,
+      "seed": 121,
+      "threshold": 0.925
+    },
+    {
+      "anchor": 0,
+      "disposition": "candidate frozen",
+      "gate_index": 2,
+      "seed": 121,
+      "threshold": 0.95
+    },
+    {
+      "anchor": 65,
+      "disposition": "candidate frozen",
+      "gate_index": 0,
+      "seed": 122,
+      "threshold": 0.9
+    },
+    {
+      "anchor": 65,
+      "disposition": "candidate frozen",
+      "gate_index": 1,
+      "seed": 122,
+      "threshold": 0.925
+    },
+    {
+      "anchor": 70,
+      "disposition": "candidate frozen",
+      "gate_index": 2,
+      "seed": 122,
+      "threshold": 0.95
+    },
+    {
+      "anchor": 40,
+      "disposition": "candidate frozen",
+      "gate_index": 0,
+      "seed": 123,
+      "threshold": 0.9
+    },
+    {
+      "anchor": 45,
+      "disposition": "candidate frozen",
+      "gate_index": 1,
+      "seed": 123,
+      "threshold": 0.925
+    },
+    {
+      "anchor": 55,
+      "disposition": "candidate frozen",
+      "gate_index": 2,
+      "seed": 123,
+      "threshold": 0.95
+    },
+    {
+      "anchor": 50,
+      "disposition": "candidate frozen",
+      "gate_index": 0,
+      "seed": 124,
+      "threshold": 0.9
+    },
+    {
+      "anchor": 50,
+      "disposition": "candidate frozen",
+      "gate_index": 1,
+      "seed": 124,
+      "threshold": 0.925
+    },
+    {
+      "anchor": 55,
+      "disposition": "candidate frozen",
+      "gate_index": 2,
+      "seed": 124,
+      "threshold": 0.95
+    }
+  ],
+  "status": "CANDIDATES FROZEN BEFORE FULL-SPLIT LOADER OR CERTIFICATION EVALUATION"
+}

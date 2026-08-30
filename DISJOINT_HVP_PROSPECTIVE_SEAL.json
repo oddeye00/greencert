@@ -1,0 +1,15 @@
+{
+  "sealed_date": "2026-08-22",
+  "status": "sealed before prospective seeds 202-205",
+  "hash_algorithm": "SHA256",
+  "files": {
+    "DISJOINT_HVP_PROSPECTIVE_PROTOCOL.md": "ef1870c5774afe60c96e213267805c77b22efc30c004c7d9dc86b2c5c62113de",
+    "scripts/disjoint_large_mlp.py": "a2d9428c120bc92d9264c2456a0d209e8d6b9c6d7bdc1867edd05a79a568d580",
+    "scripts/matrix_free_mlp.py": "d4eb03510ea161a4b507d4bbc6cdd5738a9a880e13e9d507fbe86fc2ded32783",
+    "scripts/projected_variational_shadowing.py": "cf6f515ad04a0bf6af675cb1e0f43edc049a2c83411c33c46364d35207f16644",
+    "scripts/hvp_projected_mlp_certificate.py": "bedd7dbf7ad9472e80dabbedeea28ea15cf173a0e1f96c930f84bc7ea7d82431",
+    "scripts/run_disjoint_hvp_certificate.py": "204fdb0691fce06a99458b86a746b64aae667abec0d7c537ac3f00976c86035f",
+    "scripts/run_disjoint_hvp_prospective_audit.py": "5c57c899454515c5200c46696d9020e861b3fdc57f45e79b670cec7844fd774b",
+    "scripts/modular_accuracy_certificate.py": "f299d3f6ab90c2d1e6a681d22ad46a3e98643e3f72d9b53667bb3d542c4471af"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "status": "POST-CERTIFICATE-SEAL V3 OUTCOME AUDIT",
+  "candidate": {
+    "seed": 366,
+    "threshold": 0.8,
+    "anchor": 1120
+  },
+  "certificate_path": "results\\transformer_v3_certificate_seed_366_gate_1_anchor_1120.json",
+  "certificate_sha256": "9F773A441C44988A876BB4A707BA7F2C5B98C407A12F474C6D314F10862D639C",
+  "certificate_seal_sha256": "05D9FC835AEB58C81E658ED8B8F7423DEF4F49FAFF1FF7C076416E98ECCC79D7",
+  "predicted_persistent_event": 2,
+  "actual_persistent_event": 2,
+  "raw_timing_error": 0,
+  "certificate_issued": true,
+  "earliest_issuing_power": 1,
+  "certified_bracket": [
+    2,
+    2
+  ],
+  "bracket_contains_actual": true,
+  "baseline_certificate_issued": true,
+  "baseline_certified_bracket": [
+    2,
+    2
+  ],
+  "baseline_bracket_contains_actual": true,
+  "maximum_observed_state_error": 1.6060776004009945e-15,
+  "certified_total_pointwise_radius": 2.3628147902686187e-15,
+  "observed_state_tube_violation": false,
+  "observed_response_centered_sequence_error": 3.9592577150124806e-15,
+  "certified_remainder_sequence_radius": 7.151502223748807e-16,
+  "observed_response_centered_sequence_tube_violation": true,
+  "exact_count": [
+    46,
+    46,
+    48,
+    48,
+    48,
+    48,
+    48,
+    48,
+    48,
+    48,
+    48,
+    48,
+    48,
+    48,
+    48,
+    48,
+    48,
+    48,
+    48,
+    48,
+    48,
+    48,
+    48,
+    48,
+    48,
+    48,
+    48
+  ]
+}

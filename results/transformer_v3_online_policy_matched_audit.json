@@ -1,0 +1,46 @@
+{
+  "status": "POST-SEAL MATCHED ONLINE-STOPPING BENCHMARK",
+  "scope": "one sealed horizon-26 Transformer candidate; implementation evidence",
+  "prospective_issuance_changed": false,
+  "candidate": {
+    "seed": 366,
+    "threshold": 0.8,
+    "anchor": 1120
+  },
+  "certificate_sha256": "9F773A441C44988A876BB4A707BA7F2C5B98C407A12F474C6D314F10862D639C",
+  "certificate_seal_sha256": "05D9FC835AEB58C81E658ED8B8F7423DEF4F49FAFF1FF7C076416E98ECCC79D7",
+  "benchmark_script_sha256": "104189826A692DA35381D2CC54A6F1B6921C9C9BAE2274A39FC9F7B74469828C",
+  "online_record": "results\\transformer_v3_online_policy_seed_366_gate_1_anchor_1120_matched-online.json",
+  "online_record_sha256": "02EB3FB2672B09E37813AD279AB8096AF35F7ADBD01C891F3DC66E2201234DAB",
+  "full_q8_record": "results\\transformer_v3_online_policy_seed_366_gate_1_anchor_1120_matched-full-q8.json",
+  "full_q8_record_sha256": "817F4EEBE1A4F6C9061A55F28E7BD2020F5CDB66CE37F7FAB500CB363F1A2C6F",
+  "identical_decision": {
+    "q_output": 1,
+    "q_green": 1,
+    "certificate_issued": true,
+    "certified_bracket": [
+      2,
+      2
+    ],
+    "certificate_logic_slack": 0.0018713446794124701,
+    "total_pointwise_radius": 2.3628147902686187e-15
+  },
+  "maximum_relative_trace_deviation": 0.0,
+  "online_powers": [
+    1,
+    1
+  ],
+  "full_q8_powers": [
+    8,
+    8
+  ],
+  "logical_application_speedup": 8.0,
+  "measured_operator_time_speedup": 8.031826746602825,
+  "measured_end_to_end_speedup": 2.1925300951300017,
+  "online_operator_seconds": 25.860013600000457,
+  "full_q8_operator_seconds": 207.70314889999645,
+  "online_end_to_end_seconds": 149.86623250000002,
+  "full_q8_end_to_end_seconds": 328.586225,
+  "online_live_probe_gib": 0.12824249267578125,
+  "interpretation": "The same executable and probe streams reproduce the sealed bracket. The comparison establishes realized stopping speedup on this candidate, not a population-wide wall-time estimate."
+}

@@ -1,0 +1,27 @@
+{
+  "actual_absolute": 84,
+  "actual_relative": 49,
+  "anchor": 35,
+  "bracket": [
+    49,
+    49
+  ],
+  "closure_statistic": 4.852866783074011e-06,
+  "covered": true,
+  "directional_gain_ratio": 18.56085804490817,
+  "elapsed_seconds": 17.255092300008982,
+  "gate_index": 0,
+  "issued": true,
+  "minimum_output_slack": 0.00014698779087589942,
+  "predicted_event": 49,
+  "seed": 503,
+  "signed_only": false,
+  "threshold": 0.9,
+  "unsigned_bracket": [
+    49,
+    49
+  ],
+  "unsigned_closure_statistic": 9.007337147584233e-05,
+  "unsigned_covered": true,
+  "unsigned_issued": true
+}

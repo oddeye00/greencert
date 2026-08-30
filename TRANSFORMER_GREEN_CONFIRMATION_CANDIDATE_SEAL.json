@@ -1,0 +1,151 @@
+{
+  "status": "FROZEN BEFORE ANY CONFIRMATION PROBE",
+  "timestamp_utc": "2026-08-24T10:06:02.762678+00:00",
+  "method_seal_sha256": "14EABFDE3823E2289F53E1B5D39D89F103A4FB8D4B80C98E60CF8E5F879C57EA",
+  "protocol_sha256": "5F24D2A4D6F05E169D6ACA60F211F2556F14D6938EBAD353C7DF002AECB984F8",
+  "candidate_manifest": "results\\transformer_green_confirmation_candidates_blind.json",
+  "candidate_manifest_sha256": "D61FDFA72DAC8D70C189526B00D1F6905A1BFBD1161C64ED68CE09D44A7A4699",
+  "seed_threshold_cases": 72,
+  "candidates": [
+    {
+      "seed": 331,
+      "threshold": 0.7,
+      "anchor": 1160,
+      "horizon": 286
+    },
+    {
+      "seed": 331,
+      "threshold": 0.8,
+      "anchor": 1520,
+      "horizon": 295
+    },
+    {
+      "seed": 333,
+      "threshold": 0.7,
+      "anchor": 3000,
+      "horizon": 52
+    },
+    {
+      "seed": 333,
+      "threshold": 0.8,
+      "anchor": 3080,
+      "horizon": 216
+    },
+    {
+      "seed": 335,
+      "threshold": 0.7,
+      "anchor": 2440,
+      "horizon": 225
+    },
+    {
+      "seed": 335,
+      "threshold": 0.8,
+      "anchor": 2880,
+      "horizon": 134
+    },
+    {
+      "seed": 335,
+      "threshold": 0.9,
+      "anchor": 3240,
+      "horizon": 253
+    },
+    {
+      "seed": 337,
+      "threshold": 0.7,
+      "anchor": 1080,
+      "horizon": 266
+    },
+    {
+      "seed": 337,
+      "threshold": 0.8,
+      "anchor": 1720,
+      "horizon": 274
+    },
+    {
+      "seed": 342,
+      "threshold": 0.7,
+      "anchor": 1480,
+      "horizon": 93
+    },
+    {
+      "seed": 345,
+      "threshold": 0.7,
+      "anchor": 960,
+      "horizon": 260
+    },
+    {
+      "seed": 345,
+      "threshold": 0.8,
+      "anchor": 1320,
+      "horizon": 54
+    },
+    {
+      "seed": 345,
+      "threshold": 0.9,
+      "anchor": 2120,
+      "horizon": 285
+    },
+    {
+      "seed": 347,
+      "threshold": 0.7,
+      "anchor": 2000,
+      "horizon": 290
+    },
+    {
+      "seed": 348,
+      "threshold": 0.7,
+      "anchor": 2200,
+      "horizon": 80
+    },
+    {
+      "seed": 348,
+      "threshold": 0.8,
+      "anchor": 2840,
+      "horizon": 288
+    },
+    {
+      "seed": 348,
+      "threshold": 0.9,
+      "anchor": 3240,
+      "horizon": 200
+    },
+    {
+      "seed": 350,
+      "threshold": 0.7,
+      "anchor": 1440,
+      "horizon": 286
+    },
+    {
+      "seed": 350,
+      "threshold": 0.8,
+      "anchor": 2920,
+      "horizon": 298
+    },
+    {
+      "seed": 351,
+      "threshold": 0.7,
+      "anchor": 1600,
+      "horizon": 191
+    },
+    {
+      "seed": 351,
+      "threshold": 0.8,
+      "anchor": 2200,
+      "horizon": 264
+    },
+    {
+      "seed": 352,
+      "threshold": 0.8,
+      "anchor": 5320,
+      "horizon": 283
+    },
+    {
+      "seed": 354,
+      "threshold": 0.7,
+      "anchor": 2120,
+      "horizon": 295
+    }
+  ],
+  "distinct_candidate_seeds": 12,
+  "information_barrier": "outcome JSONs and sealed logs unopened"
+}

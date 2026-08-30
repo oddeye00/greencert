@@ -1,0 +1,194 @@
+{
+  "status": "complete independent four-sweep burned-candidate audit",
+  "summary": {
+    "candidates": 3,
+    "issued": 0,
+    "covered": 0,
+    "state_tube_violations": 0
+  },
+  "rows": [
+    {
+      "candidate": {
+        "seed": 321,
+        "threshold": 0.7,
+        "anchor": 1440
+      },
+      "delta_raw_0_through_4": [
+        0.4232034454401673,
+        0.032582167495233745,
+        0.0008494914733361396,
+        7.70993001418877e-07,
+        6.288494605864839e-13
+      ],
+      "delta_scaled_0_through_4": [
+        0.0059847012942608555,
+        0.0004607583942889195,
+        1.2013022990975619e-05,
+        1.0902942463312508e-08,
+        8.96286716892272e-15
+      ],
+      "actual_lead": 211,
+      "predicted_persistent_event": 211,
+      "raw_timing_error": 0,
+      "state_horizon": 26,
+      "maximum_certified_radius": 25388.67721709176,
+      "maximum_actual_scaled_state_error_full_window": 6.293551947915738e-14,
+      "maximum_actual_error_to_bound_ratio": 1.0,
+      "observed_state_tube_violations": 0,
+      "certified_bracket": null,
+      "certificate_issued": false,
+      "bracket_contains_actual": null,
+      "maximum_probe_jacobian_upper": 6068.644059255455,
+      "maximum_probe_jacobian_lower_estimate": 4173.784652506296,
+      "maximum_output_probe_upper_lower_ratio": 1.4553535010166472,
+      "maximum_optimizer_jacobian_upper": 2.1882052419269473,
+      "maximum_optimizer_probe_upper_lower_ratio": 1.4864794363903713,
+      "maximum_certified_objective_hessian_lipschitz": 3.491008604408174e+236,
+      "heuristic_allowed_l_for_full_window": 5296426184957.84,
+      "heuristic_l_headroom": 1.5171621686265468e-224,
+      "probability_budget": {
+        "queried_operators": 52,
+        "queried_union_bound": 3.6051026067665003e-09,
+        "maximum_family_union_bound": 1e-06,
+        "allowed_operator_count": 1803,
+        "collision_free_stream_count": 1803,
+        "queried_operator_count": 52,
+        "all_queries_predeclared": true
+      },
+      "operator_calls": {
+        "output_gram": 3328,
+        "output_jvp": 3328,
+        "output_vjp": 3328,
+        "optimizer_gram": 3328,
+        "optimizer_jvp": 3328,
+        "optimizer_vjp": 3328,
+        "objective_hvp_inside_optimizer_gram": 6656,
+        "recentring_hvp": 1200
+      },
+      "elapsed_seconds": 470.8030054999981,
+      "stop_reason": "state radius exceeded the fixed numerical audit cap"
+    },
+    {
+      "candidate": {
+        "seed": 322,
+        "threshold": 0.7,
+        "anchor": 2400
+      },
+      "delta_raw_0_through_4": [
+        0.6059438659290473,
+        0.15774748766527322,
+        0.04136198562758204,
+        0.0018256016714745641,
+        4.19713340122467e-06
+      ],
+      "delta_scaled_0_through_4": [
+        0.008568911897452163,
+        0.0022307748289120207,
+        0.0005849175652649118,
+        2.5816615634402345e-05,
+        5.935346222946936e-08
+      ],
+      "actual_lead": 34,
+      "predicted_persistent_event": 34,
+      "raw_timing_error": 0,
+      "state_horizon": 27,
+      "maximum_certified_radius": 2.7530942064957933,
+      "maximum_actual_scaled_state_error_full_window": 4.5816408024226974e-07,
+      "maximum_actual_error_to_bound_ratio": 1.0,
+      "observed_state_tube_violations": 0,
+      "certified_bracket": null,
+      "certificate_issued": false,
+      "bracket_contains_actual": null,
+      "maximum_probe_jacobian_upper": 4009.5521959196935,
+      "maximum_probe_jacobian_lower_estimate": 2757.9911575597944,
+      "maximum_output_probe_upper_lower_ratio": 1.4547450013282128,
+      "maximum_optimizer_jacobian_upper": 2.188724757396374,
+      "maximum_optimizer_probe_upper_lower_ratio": 1.4864967960820357,
+      "maximum_certified_objective_hessian_lipschitz": 1.9138921906453705e+45,
+      "heuristic_allowed_l_for_full_window": 727541.3933739023,
+      "heuristic_l_headroom": 3.801370823967744e-40,
+      "probability_budget": {
+        "queried_operators": 54,
+        "queried_union_bound": 3.743760399334442e-09,
+        "maximum_family_union_bound": 1e-06,
+        "allowed_operator_count": 1803,
+        "collision_free_stream_count": 1803,
+        "queried_operator_count": 54,
+        "all_queries_predeclared": true
+      },
+      "operator_calls": {
+        "output_gram": 3456,
+        "output_jvp": 3456,
+        "output_vjp": 3456,
+        "optimizer_gram": 3456,
+        "optimizer_jvp": 3456,
+        "optimizer_vjp": 3456,
+        "objective_hvp_inside_optimizer_gram": 6912,
+        "recentring_hvp": 1200
+      },
+      "elapsed_seconds": 83.31635390000883,
+      "stop_reason": "state radius exceeded the fixed numerical audit cap"
+    },
+    {
+      "candidate": {
+        "seed": 322,
+        "threshold": 0.8,
+        "anchor": 2640
+      },
+      "delta_raw_0_through_4": [
+        1.1591501445332912,
+        2.0107792336750125,
+        0.7856485626478321,
+        0.2974966099141753,
+        0.013343196917970873
+      ],
+      "delta_scaled_0_through_4": [
+        0.016392038970797607,
+        0.02843529090301102,
+        0.011110193029790494,
+        0.0042070270589120145,
+        0.0001886918661106333
+      ],
+      "actual_lead": 87,
+      "predicted_persistent_event": 87,
+      "raw_timing_error": 0,
+      "state_horizon": 27,
+      "maximum_certified_radius": 0.006540232266772504,
+      "maximum_actual_scaled_state_error_full_window": 0.0012468050553319564,
+      "maximum_actual_error_to_bound_ratio": 1.0,
+      "observed_state_tube_violations": 0,
+      "certified_bracket": null,
+      "certificate_issued": false,
+      "bracket_contains_actual": null,
+      "maximum_probe_jacobian_upper": 3958.6415266599997,
+      "maximum_probe_jacobian_lower_estimate": 2722.7498124297904,
+      "maximum_output_probe_upper_lower_ratio": 1.4544801553556583,
+      "maximum_optimizer_jacobian_upper": 2.188514329968347,
+      "maximum_optimizer_probe_upper_lower_ratio": 1.4864869126990998,
+      "maximum_certified_objective_hessian_lipschitz": 2.2297661387664966e+17,
+      "heuristic_allowed_l_for_full_window": 267.350001435938,
+      "heuristic_l_headroom": 1.1990046704352395e-15,
+      "probability_budget": {
+        "queried_operators": 54,
+        "queried_union_bound": 3.743760399334442e-09,
+        "maximum_family_union_bound": 1e-06,
+        "allowed_operator_count": 1803,
+        "collision_free_stream_count": 1803,
+        "queried_operator_count": 54,
+        "all_queries_predeclared": true
+      },
+      "operator_calls": {
+        "output_gram": 3456,
+        "output_jvp": 3456,
+        "output_vjp": 3456,
+        "optimizer_gram": 3456,
+        "optimizer_jvp": 3456,
+        "optimizer_vjp": 3456,
+        "objective_hvp_inside_optimizer_gram": 6912,
+        "recentring_hvp": 1200
+      },
+      "elapsed_seconds": 482.214357400022,
+      "stop_reason": "state radius exceeded the fixed numerical audit cap"
+    }
+  ]
+}

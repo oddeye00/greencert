@@ -1,0 +1,6 @@
+# Hash-chained evidence and PUBLIC_MANIFEST_SHA256.json refer to exact bytes.
+# Never rewrite line endings when committing or checking out this archive.
+* -text
+*.pdf binary
+*.png binary
+*.zip binary

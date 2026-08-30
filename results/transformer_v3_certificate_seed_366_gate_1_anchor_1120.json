@@ -1,0 +1,3311 @@
+{
+  "status": "FROZEN V3 OUTCOME-BLIND HIGH-CONFIDENCE FLOAT64",
+  "candidate": {
+    "seed": 366,
+    "threshold": 0.8,
+    "anchor": 1120
+  },
+  "method_seal_sha256": "2CB9738FD630392CCA088C3E23C8CCE7142FAB046C9AFB6AEDC36906D51B7866",
+  "candidate_seal_sha256": "43A016761DEB48CB4923BEDDBA82B005AFD18479622E6D587248AC127A910543",
+  "candidate_manifest_sha256": "0AB04F552C9DC2A06D974E7E973E48C3BC6E829B2222D5E81AC19ECB5FFD4843",
+  "protocol": {
+    "sweeps": 4,
+    "horizon": 26,
+    "persistence": 25,
+    "outer_domain_radius_rule": "rho = 2 ||K_H s||_X",
+    "primary_radius_rule": "p + smaller recentered remainder root",
+    "progressive_powers": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "same_probe_block_across_powers": true,
+    "probe_config": {
+      "probes": 16,
+      "power": 8,
+      "delta": 4.59896983075791e-11
+    },
+    "family_failure_probability": 1e-06,
+    "maximum_operator_accounting": {
+      "maximum_seeds": 24,
+      "gates_per_seed": 3,
+      "maximum_candidates_per_gate": 1,
+      "maximum_candidates": 72,
+      "probabilistic_screen_operators": 0,
+      "output_jacobian_states_per_candidate": 301,
+      "green_operators_per_candidate": 1,
+      "operators_per_candidate": 302,
+      "maximum_probabilistic_operators": 21744,
+      "power_levels_per_operator": 8,
+      "power_levels_share_one_simultaneous_event": true
+    },
+    "instantiated_operator_universe": 3823,
+    "master_nonce": "0df0e5fd4b57ff39a3d7f1dee21371039dfde0ed740899b21e1b48dc052220d9"
+  },
+  "centerline_sha256": "7920002F16C60B64CAEDCE8284CD6132C06F9460496F412FCED6CB90A8282C05",
+  "sweep_diagnostics": [
+    {
+      "sweep": 1,
+      "reached_horizon": 300,
+      "maximum_uncorrected_defect_norm": 0.5950532748434894,
+      "maximum_correction_norm": 0.30386198575236134,
+      "hvp_calls": 300
+    },
+    {
+      "sweep": 2,
+      "reached_horizon": 300,
+      "maximum_uncorrected_defect_norm": 0.05818182840823727,
+      "maximum_correction_norm": 0.12753705211200453,
+      "hvp_calls": 300
+    },
+    {
+      "sweep": 3,
+      "reached_horizon": 300,
+      "maximum_uncorrected_defect_norm": 0.005513177998796223,
+      "maximum_correction_norm": 0.004849512162484009,
+      "hvp_calls": 300
+    },
+    {
+      "sweep": 4,
+      "reached_horizon": 300,
+      "maximum_uncorrected_defect_norm": 1.5927991582697955e-05,
+      "maximum_correction_norm": 1.4870296577867555e-05,
+      "hvp_calls": 300
+    }
+  ],
+  "required_correct": 47,
+  "predicted_persistent_event": 2,
+  "defect_sequence_norm": 1.8182054227064264e-15,
+  "signed_response_sequence_norm": 4.957427740197084e-15,
+  "signed_response_max_state_norm": 1.647664567893738e-15,
+  "outer_domain_radius": 9.914855480394167e-15,
+  "directional_green_norm_lower_bound": 2.7265498597061035,
+  "optimistic_one_shot_closure": {
+    "kappa": 2.7265498597061035,
+    "derivative_drift": 9696051348.998123,
+    "response_sequence_norm": 4.957427740197084e-15,
+    "response_max_state_norm": 1.647664567893738e-15,
+    "linear_response_error_bound": 0.0,
+    "corrected_defect_response_bound": 1.0797011158711073e-19,
+    "linearized_remainder_coefficient": 4.3558925009290544e-05,
+    "discriminant": 0.9999128783385999,
+    "remainder_radius": 1.0797481500808788e-19,
+    "total_pointwise_radius": 1.647772542708746e-15,
+    "domain_radius": 9.914855480394167e-15,
+    "algebraic_closure_passed": true,
+    "domain_passed": true,
+    "closure_passed": true,
+    "closure_residual": 0.0
+  },
+  "early_abstention_before_green_probe": false,
+  "block_fixed_points_all_consistent": true,
+  "green_trace": {
+    "rng_seed": 2511400133665146283,
+    "delta": 4.59896983075791e-11,
+    "probes": 16,
+    "maximum_power": 8,
+    "single_event_simultaneous_over_all_powers": true,
+    "rows": [
+      {
+        "power": 1,
+        "Y": 1053369.638725416,
+        "c_delta": 0.28701612713630525,
+        "operator_norm_upper_bound": 1915.7430041085656,
+        "operator_norm_lower_estimate": 35.247217944831725,
+        "logical_gram_applications": 16,
+        "batched_gram_calls": 1,
+        "cumulative_operator_seconds": 27.798505500075407
+      },
+      {
+        "power": 2,
+        "Y": 9317190835.87803,
+        "c_delta": 0.28701612713630525,
+        "operator_norm_upper_bound": 424.46772409722337,
+        "operator_norm_lower_estimate": 57.57654511654469,
+        "logical_gram_applications": 32,
+        "batched_gram_calls": 2,
+        "cumulative_operator_seconds": 56.94241320004221
+      },
+      {
+        "power": 3,
+        "Y": 82595791306583.1,
+        "c_delta": 0.28701612713630525,
+        "operator_norm_upper_bound": 256.9460444784132,
+        "operator_norm_lower_estimate": 67.83355570240693,
+        "logical_gram_applications": 48,
+        "batched_gram_calls": 3,
+        "cumulative_operator_seconds": 86.45967990008648
+      },
+      {
+        "power": 4,
+        "Y": 7.323269622641842e+17,
+        "c_delta": 0.28701612713630525,
+        "operator_norm_upper_bound": 199.91705268562342,
+        "operator_norm_lower_estimate": 73.6293889051111,
+        "logical_gram_applications": 64,
+        "batched_gram_calls": 4,
+        "cumulative_operator_seconds": 124.52781560004223
+      },
+      {
+        "power": 5,
+        "Y": 6.493801010975546e+21,
+        "c_delta": 0.28701612713630525,
+        "operator_norm_upper_bound": 171.97260410695944,
+        "operator_norm_lower_estimate": 77.34262362447912,
+        "logical_gram_applications": 80,
+        "batched_gram_calls": 5,
+        "cumulative_operator_seconds": 155.61467880010605
+      },
+      {
+        "power": 6,
+        "Y": 5.758745425810672e+25,
+        "c_delta": 0.28701612713630525,
+        "operator_norm_upper_bound": 155.54944469243338,
+        "operator_norm_lower_estimate": 79.92203025951243,
+        "logical_gram_applications": 96,
+        "batched_gram_calls": 6,
+        "cumulative_operator_seconds": 183.65523540007416
+      },
+      {
+        "power": 7,
+        "Y": 5.107227093120781e+29,
+        "c_delta": 0.28701612713630525,
+        "operator_norm_upper_bound": 144.78854536542926,
+        "operator_norm_lower_estimate": 81.81730539048192,
+        "logical_gram_applications": 112,
+        "batched_gram_calls": 7,
+        "cumulative_operator_seconds": 211.46580170001835
+      },
+      {
+        "power": 8,
+        "Y": 4.5296731661547897e+33,
+        "c_delta": 0.28701612713630525,
+        "operator_norm_upper_bound": 137.20976971639016,
+        "operator_norm_lower_estimate": 83.26846665041886,
+        "logical_gram_applications": 128,
+        "batched_gram_calls": 8,
+        "cumulative_operator_seconds": 237.56553480005823
+      }
+    ],
+    "identity": [
+      4,
+      366,
+      1,
+      1120,
+      26,
+      4,
+      3
+    ]
+  },
+  "power_rows": [
+    {
+      "power": 1,
+      "kappa_upper": 1915.7430041085656,
+      "maximum_optimizer_derivative_drift_upper": 67649965746.59067,
+      "maximum_output_jacobian_upper": 12195.3078469592,
+      "one_shot_closure": {
+        "kappa": 1915.7430041085656,
+        "derivative_drift": 67649965746.59067,
+        "response_sequence_norm": 4.957427740197084e-15,
+        "response_max_state_norm": 1.647664567893738e-15,
+        "linear_response_error_bound": 0.0,
+        "corrected_defect_response_bound": 5.292977268022654e-16,
+        "linearized_remainder_coefficient": 0.21353724332095783,
+        "discriminant": 0.4813297512602195,
+        "remainder_radius": 7.151502223748807e-16,
+        "total_pointwise_radius": 2.3628147902686187e-15,
+        "domain_radius": 9.914855480394167e-15,
+        "algebraic_closure_passed": true,
+        "domain_passed": true,
+        "closure_passed": true,
+        "closure_residual": 0.0
+      },
+      "certified_bracket": [
+        2,
+        2
+      ],
+      "certificate_issued": true,
+      "certificate_logic_slack": 0.0018713446794124701,
+      "maximum_margin_radius": 4.075092266044497e-11,
+      "logical_output_gram_applications": 416,
+      "logical_green_gram_applications": 16
+    },
+    {
+      "power": 2,
+      "kappa_upper": 424.46772409722337,
+      "maximum_optimizer_derivative_drift_upper": 17614584098.385574,
+      "maximum_output_jacobian_upper": 6354.866248823448,
+      "one_shot_closure": {
+        "kappa": 424.46772409722337,
+        "derivative_drift": 17614584098.385574,
+        "response_sequence_norm": 4.957427740197084e-15,
+        "response_max_state_norm": 1.647664567893738e-15,
+        "linear_response_error_bound": 0.0,
+        "corrected_defect_response_bound": 3.053600834578517e-17,
+        "linearized_remainder_coefficient": 0.01231929538707556,
+        "discriminant": 0.9750565496408558,
+        "remainder_radius": 3.092050134586567e-17,
+        "total_pointwise_radius": 1.6785850692396038e-15,
+        "domain_radius": 9.914855480394167e-15,
+        "algebraic_closure_passed": true,
+        "domain_passed": true,
+        "closure_passed": true,
+        "closure_residual": 0.0
+      },
+      "certified_bracket": [
+        2,
+        2
+      ],
+      "certificate_issued": true,
+      "certificate_logic_slack": 0.001871344700563064,
+      "maximum_margin_radius": 1.5085675722778403e-11,
+      "logical_output_gram_applications": 832,
+      "logical_green_gram_applications": 32
+    },
+    {
+      "power": 3,
+      "kappa_upper": 256.9460444784132,
+      "maximum_optimizer_derivative_drift_upper": 12977803652.913744,
+      "maximum_output_jacobian_upper": 5148.495767888924,
+      "one_shot_closure": {
+        "kappa": 256.9460444784132,
+        "derivative_drift": 12977803652.913744,
+        "response_sequence_norm": 4.957427740197084e-15,
+        "response_max_state_norm": 1.647664567893738e-15,
+        "linear_response_error_bound": 0.0,
+        "corrected_defect_response_bound": 1.3618784102996429e-17,
+        "linearized_remainder_coefficient": 0.005494294548186399,
+        "discriminant": 0.9889507719088877,
+        "remainder_radius": 1.3694337503347612e-17,
+        "total_pointwise_radius": 1.6613589053970856e-15,
+        "domain_radius": 9.914855480394167e-15,
+        "algebraic_closure_passed": true,
+        "domain_passed": true,
+        "closure_passed": true,
+        "closure_residual": 0.0
+      },
+      "certified_bracket": [
+        2,
+        2
+      ],
+      "certificate_issued": true,
+      "certificate_logic_slack": 0.0018713447030706033,
+      "maximum_margin_radius": 1.2096474706543176e-11,
+      "logical_output_gram_applications": 1248,
+      "logical_green_gram_applications": 48
+    },
+    {
+      "power": 4,
+      "kappa_upper": 199.91705268562342,
+      "maximum_optimizer_derivative_drift_upper": 11416076636.26291,
+      "maximum_output_jacobian_upper": 4638.091954859664,
+      "one_shot_closure": {
+        "kappa": 199.91705268562342,
+        "derivative_drift": 11416076636.26291,
+        "response_sequence_norm": 4.957427740197084e-15,
+        "response_max_state_norm": 1.647664567893738e-15,
+        "linear_response_error_bound": 0.0,
+        "corrected_defect_response_bound": 9.320987284847157e-18,
+        "linearized_remainder_coefficient": 0.0037604127678022795,
+        "discriminant": 0.9924507691792109,
+        "remainder_radius": 9.356270619001137e-18,
+        "total_pointwise_radius": 1.6570208385127391e-15,
+        "domain_radius": 9.914855480394167e-15,
+        "algebraic_closure_passed": true,
+        "domain_passed": true,
+        "closure_passed": true,
+        "closure_residual": 0.0
+      },
+      "certified_bracket": [
+        2,
+        2
+      ],
+      "certificate_issued": true,
+      "certificate_logic_slack": 0.0018713447041126205,
+      "maximum_margin_radius": 1.0868818154042866e-11,
+      "logical_output_gram_applications": 1664,
+      "logical_green_gram_applications": 64
+    },
+    {
+      "power": 5,
+      "kappa_upper": 171.97260410695944,
+      "maximum_optimizer_derivative_drift_upper": 10646102990.423742,
+      "maximum_output_jacobian_upper": 4357.419210859728,
+      "one_shot_closure": {
+        "kappa": 171.97260410695944,
+        "derivative_drift": 10646102990.423742,
+        "response_sequence_norm": 4.957427740197084e-15,
+        "response_max_state_norm": 1.647664567893738e-15,
+        "linear_response_error_bound": 0.0,
+        "corrected_defect_response_bound": 7.477305593031577e-18,
+        "linearized_remainder_coefficient": 0.0030166069925345257,
+        "discriminant": 0.9939485064614235,
+        "remainder_radius": 7.499981581983056e-18,
+        "total_pointwise_radius": 1.655164549475721e-15,
+        "domain_radius": 9.914855480394167e-15,
+        "algebraic_closure_passed": true,
+        "domain_passed": true,
+        "closure_passed": true,
+        "closure_residual": 1.5407439555097887e-33
+      },
+      "certified_bracket": [
+        2,
+        2
+      ],
+      "certificate_issued": true,
+      "certificate_logic_slack": 0.0018713447046841663,
+      "maximum_margin_radius": 1.0199655832720741e-11,
+      "logical_output_gram_applications": 2080,
+      "logical_green_gram_applications": 80
+    },
+    {
+      "power": 6,
+      "kappa_upper": 155.54944469243338,
+      "maximum_optimizer_derivative_drift_upper": 10189871352.80508,
+      "maximum_output_jacobian_upper": 4180.078689068679,
+      "one_shot_closure": {
+        "kappa": 155.54944469243338,
+        "derivative_drift": 10189871352.80508,
+        "response_sequence_norm": 4.957427740197084e-15,
+        "response_max_state_norm": 1.647664567893738e-15,
+        "linear_response_error_bound": 0.0,
+        "corrected_defect_response_bound": 6.473398839053421e-18,
+        "linearized_remainder_coefficient": 0.002611595842966768,
+        "discriminant": 0.9947631076993322,
+        "remainder_radius": 6.490382479677654e-18,
+        "total_pointwise_radius": 1.6541549503734158e-15,
+        "domain_radius": 9.914855480394167e-15,
+        "algebraic_closure_passed": true,
+        "domain_passed": true,
+        "closure_passed": true,
+        "closure_residual": -7.703719777548943e-34
+      },
+      "certified_bracket": [
+        2,
+        2
+      ],
+      "certificate_issued": true,
+      "certificate_logic_slack": 0.0018713447050453097,
+      "maximum_margin_radius": 9.778576645717936e-12,
+      "logical_output_gram_applications": 2496,
+      "logical_green_gram_applications": 96
+    },
+    {
+      "power": 7,
+      "kappa_upper": 144.78854536542926,
+      "maximum_optimizer_derivative_drift_upper": 9896630147.689749,
+      "maximum_output_jacobian_upper": 4057.929358108133,
+      "one_shot_closure": {
+        "kappa": 144.78854536542926,
+        "derivative_drift": 9896630147.689749,
+        "response_sequence_norm": 4.957427740197084e-15,
+        "response_max_state_norm": 1.647664567893738e-15,
+        "linear_response_error_bound": 0.0,
+        "corrected_defect_response_bound": 5.85216745693242e-18,
+        "linearized_remainder_coefficient": 0.002360969342822843,
+        "discriminant": 0.9952668641304206,
+        "remainder_radius": 5.866041655128452e-18,
+        "total_pointwise_radius": 1.6535306095488666e-15,
+        "domain_radius": 9.914855480394167e-15,
+        "algebraic_closure_passed": true,
+        "domain_passed": true,
+        "closure_passed": true,
+        "closure_residual": 0.0
+      },
+      "certified_bracket": [
+        2,
+        2
+      ],
+      "certificate_issued": true,
+      "certificate_logic_slack": 0.001871344705294212,
+      "maximum_margin_radius": 9.489246297179436e-12,
+      "logical_output_gram_applications": 2912,
+      "logical_green_gram_applications": 112
+    },
+    {
+      "power": 8,
+      "kappa_upper": 137.20976971639016,
+      "maximum_optimizer_derivative_drift_upper": 9696051348.998123,
+      "maximum_output_jacobian_upper": 3968.694304852755,
+      "one_shot_closure": {
+        "kappa": 137.20976971639016,
+        "derivative_drift": 9696051348.998123,
+        "response_sequence_norm": 4.957427740197084e-15,
+        "response_max_state_norm": 1.647664567893738e-15,
+        "linear_response_error_bound": 0.0,
+        "corrected_defect_response_bound": 5.433443329262016e-18,
+        "linearized_remainder_coefficient": 0.0021920413625821232,
+        "discriminant": 0.9956062650905249,
+        "remainder_radius": 5.445399595067017e-18,
+        "total_pointwise_radius": 1.653109967488805e-15,
+        "domain_radius": 9.914855480394167e-15,
+        "algebraic_closure_passed": true,
+        "domain_passed": true,
+        "closure_passed": true,
+        "closure_residual": 0.0
+      },
+      "certified_bracket": [
+        2,
+        2
+      ],
+      "certificate_issued": true,
+      "certificate_logic_slack": 0.0018713447054761847,
+      "maximum_margin_radius": 9.278214108377242e-12,
+      "logical_output_gram_applications": 3328,
+      "logical_green_gram_applications": 128
+    }
+  ],
+  "earliest_issuing_power": 1,
+  "certified_total_pointwise_radius": 2.3628147902686187e-15,
+  "certified_remainder_sequence_radius": 7.151502223748807e-16,
+  "certified_bracket": [
+    2,
+    2
+  ],
+  "certificate_issued": true,
+  "certificate_logic_slack": 0.0018713446794124701,
+  "matched_fixed_radius_baseline": {
+    "method": "preceding fixed R=2Z q=8 rule",
+    "closure_statistic": 0.013190654056991123,
+    "closure_passed": true,
+    "certified_bracket": [
+      2,
+      2
+    ],
+    "certificate_issued": true,
+    "certificate_logic_slack": 0.0018713446607595567,
+    "maximum_margin_radius": 5.564793257225919e-11
+  },
+  "output_rows": [
+    {
+      "step": 1,
+      "identity": [
+        4,
+        366,
+        1,
+        1120,
+        1,
+        4,
+        1
+      ],
+      "trace": {
+        "rng_seed": 9117203342809961973,
+        "delta": 4.59896983075791e-11,
+        "probes": 16,
+        "maximum_power": 8,
+        "single_event_simultaneous_over_all_powers": true,
+        "rows": [
+          {
+            "power": 1,
+            "Y": 24078556.15503614,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 9159.295502274777,
+            "operator_norm_lower_estimate": 452.16366849438674,
+            "logical_gram_applications": 16,
+            "batched_gram_calls": 1,
+            "cumulative_operator_seconds": 0.5165045999456197
+          },
+          {
+            "power": 2,
+            "Y": 251279822453616.3,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 5439.548196678764,
+            "operator_norm_lower_estimate": 1208.5917507504328,
+            "logical_gram_applications": 32,
+            "batched_gram_calls": 2,
+            "cumulative_operator_seconds": 1.0245875999098644
+          },
+          {
+            "power": 3,
+            "Y": 2.7723113677387465e+21,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4614.832590054541,
+            "operator_norm_lower_estimate": 1692.9097853429244,
+            "logical_gram_applications": 48,
+            "batched_gram_calls": 3,
+            "cumulative_operator_seconds": 1.5216734998393804
+          },
+          {
+            "power": 4,
+            "Y": 3.0654064111222674e+28,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4251.798948324813,
+            "operator_norm_lower_estimate": 2004.1541319170597,
+            "logical_gram_applications": 64,
+            "batched_gram_calls": 4,
+            "cumulative_operator_seconds": 2.017755599808879
+          },
+          {
+            "power": 5,
+            "Y": 3.390076063523903e+35,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4047.9050255479087,
+            "operator_norm_lower_estimate": 2217.772698506513,
+            "logical_gram_applications": 80,
+            "batched_gram_calls": 5,
+            "cumulative_operator_seconds": 2.5353451997507364
+          },
+          {
+            "power": 6,
+            "Y": 3.749221396983806e+42,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 3917.444919890048,
+            "operator_norm_lower_estimate": 2372.694541129928,
+            "logical_gram_applications": 96,
+            "batched_gram_calls": 6,
+            "cumulative_operator_seconds": 3.0530681997770444
+          },
+          {
+            "power": 7,
+            "Y": 4.1464344244130554e+49,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 3826.842665296876,
+            "operator_norm_lower_estimate": 2489.936453089825,
+            "logical_gram_applications": 112,
+            "batched_gram_calls": 7,
+            "cumulative_operator_seconds": 3.619623699807562
+          },
+          {
+            "power": 8,
+            "Y": 4.585736002541375e+56,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 3760.269064660645,
+            "operator_norm_lower_estimate": 2581.6545016814975,
+            "logical_gram_applications": 128,
+            "batched_gram_calls": 8,
+            "cumulative_operator_seconds": 4.17778559983708
+          }
+        ]
+      },
+      "block_first": 36577.18755291935,
+      "block_second": 47639328.153029114,
+      "block_third": 188499095259.80786,
+      "block_fixed_point_consistent": true,
+      "block_fixed_point_iterations": 2,
+      "raw_guarantee_slack": -0.004704942042113913,
+      "raw_exclusion_slack": 0.004704942042113913
+    },
+    {
+      "step": 2,
+      "identity": [
+        4,
+        366,
+        1,
+        1120,
+        2,
+        4,
+        1
+      ],
+      "trace": {
+        "rng_seed": 951780879105556893,
+        "delta": 4.59896983075791e-11,
+        "probes": 16,
+        "maximum_power": 8,
+        "single_event_simultaneous_over_all_powers": true,
+        "rows": [
+          {
+            "power": 1,
+            "Y": 31508657.35238223,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 10477.59961901904,
+            "operator_norm_lower_estimate": 519.1727028155858,
+            "logical_gram_applications": 16,
+            "batched_gram_calls": 1,
+            "cumulative_operator_seconds": 0.49580570007674396
+          },
+          {
+            "power": 2,
+            "Y": 333577331836888.0,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 5838.7859951268365,
+            "operator_norm_lower_estimate": 1299.7133603608886,
+            "logical_gram_applications": 32,
+            "batched_gram_calls": 2,
+            "cumulative_operator_seconds": 0.9825375000946224
+          },
+          {
+            "power": 3,
+            "Y": 3.6534662904978546e+21,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4832.06907671191,
+            "operator_norm_lower_estimate": 1774.801625680755,
+            "logical_gram_applications": 48,
+            "batched_gram_calls": 3,
+            "cumulative_operator_seconds": 1.4907871001632884
+          },
+          {
+            "power": 4,
+            "Y": 4.032473299834124e+28,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4400.0554552118765,
+            "operator_norm_lower_estimate": 2075.968038605121,
+            "logical_gram_applications": 64,
+            "batched_gram_calls": 4,
+            "cumulative_operator_seconds": 2.0262549001490697
+          },
+          {
+            "power": 5,
+            "Y": 4.463692695277876e+35,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4160.81875898307,
+            "operator_norm_lower_estimate": 2281.3336636368645,
+            "logical_gram_applications": 80,
+            "batched_gram_calls": 5,
+            "cumulative_operator_seconds": 2.487106100190431
+          },
+          {
+            "power": 6,
+            "Y": 4.946658114207444e+42,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4008.9791689107105,
+            "operator_norm_lower_estimate": 2429.6411892693563,
+            "logical_gram_applications": 96,
+            "batched_gram_calls": 6,
+            "cumulative_operator_seconds": 3.024831300252117
+          },
+          {
+            "power": 7,
+            "Y": 5.484375989667581e+49,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 3904.0536760449013,
+            "operator_norm_lower_estimate": 2541.5248406161245,
+            "logical_gram_applications": 112,
+            "batched_gram_calls": 7,
+            "cumulative_operator_seconds": 3.591650200309232
+          },
+          {
+            "power": 8,
+            "Y": 6.081658885899388e+56,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 3827.209489825378,
+            "operator_norm_lower_estimate": 2628.8359864534627,
+            "logical_gram_applications": 128,
+            "batched_gram_calls": 8,
+            "cumulative_operator_seconds": 4.086525100283325
+          }
+        ]
+      },
+      "block_first": 36611.83474474914,
+      "block_second": 47692141.71828617,
+      "block_third": 188737872970.95584,
+      "block_fixed_point_consistent": true,
+      "block_fixed_point_iterations": 2,
+      "raw_guarantee_slack": 0.0018713447144236284,
+      "raw_exclusion_slack": -0.0018713447144236284
+    },
+    {
+      "step": 3,
+      "identity": [
+        4,
+        366,
+        1,
+        1120,
+        3,
+        4,
+        1
+      ],
+      "trace": {
+        "rng_seed": 8530408074061361008,
+        "delta": 4.59896983075791e-11,
+        "probes": 16,
+        "maximum_power": 8,
+        "single_event_simultaneous_over_all_powers": true,
+        "rows": [
+          {
+            "power": 1,
+            "Y": 35717962.84635821,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 11155.52954111385,
+            "operator_norm_lower_estimate": 549.9681784107983,
+            "logical_gram_applications": 16,
+            "batched_gram_calls": 1,
+            "cumulative_operator_seconds": 0.5606688999105245
+          },
+          {
+            "power": 2,
+            "Y": 384516950595345.06,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 6049.957131765179,
+            "operator_norm_lower_estimate": 1343.3091806360076,
+            "logical_gram_applications": 32,
+            "batched_gram_calls": 2,
+            "cumulative_operator_seconds": 1.1160429998999462
+          },
+          {
+            "power": 3,
+            "Y": 4.2509618940576835e+21,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4955.6065541617145,
+            "operator_norm_lower_estimate": 1817.101871417963,
+            "logical_gram_applications": 48,
+            "batched_gram_calls": 3,
+            "cumulative_operator_seconds": 1.5580834998982027
+          },
+          {
+            "power": 4,
+            "Y": 4.719116094516771e+28,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4487.394953397793,
+            "operator_norm_lower_estimate": 2114.492445843046,
+            "logical_gram_applications": 64,
+            "batched_gram_calls": 4,
+            "cumulative_operator_seconds": 2.055572099983692
+          },
+          {
+            "power": 5,
+            "Y": 5.245001075132571e+35,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4228.476566600894,
+            "operator_norm_lower_estimate": 2316.0791788529914,
+            "logical_gram_applications": 80,
+            "batched_gram_calls": 5,
+            "cumulative_operator_seconds": 2.5780390999279916
+          },
+          {
+            "power": 6,
+            "Y": 5.83177810147727e+42,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4064.3511626787063,
+            "operator_norm_lower_estimate": 2461.118090567645,
+            "logical_gram_applications": 96,
+            "batched_gram_calls": 6,
+            "cumulative_operator_seconds": 3.139090899960138
+          },
+          {
+            "power": 7,
+            "Y": 6.485112975899824e+49,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 3951.073320618989,
+            "operator_norm_lower_estimate": 2570.271491158461,
+            "logical_gram_applications": 112,
+            "batched_gram_calls": 7,
+            "cumulative_operator_seconds": 3.6880754999583587
+          },
+          {
+            "power": 8,
+            "Y": 7.212021210742379e+56,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 3868.2044344133683,
+            "operator_norm_lower_estimate": 2655.3106651695066,
+            "logical_gram_applications": 128,
+            "batched_gram_calls": 8,
+            "cumulative_operator_seconds": 4.18183090002276
+          }
+        ]
+      },
+      "block_first": 36646.033548507265,
+      "block_second": 47744020.05086827,
+      "block_third": 188971510452.1355,
+      "block_fixed_point_consistent": true,
+      "block_fixed_point_iterations": 2,
+      "raw_guarantee_slack": 0.009143926192191287,
+      "raw_exclusion_slack": -0.009143926192191287
+    },
+    {
+      "step": 4,
+      "identity": [
+        4,
+        366,
+        1,
+        1120,
+        4,
+        4,
+        1
+      ],
+      "trace": {
+        "rng_seed": 7397423877916582584,
+        "delta": 4.59896983075791e-11,
+        "probes": 16,
+        "maximum_power": 8,
+        "single_event_simultaneous_over_all_powers": true,
+        "rows": [
+          {
+            "power": 1,
+            "Y": 30018267.541493725,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 10226.79762724994,
+            "operator_norm_lower_estimate": 506.0022115048839,
+            "logical_gram_applications": 16,
+            "batched_gram_calls": 1,
+            "cumulative_operator_seconds": 0.5034720000112429
+          },
+          {
+            "power": 2,
+            "Y": 313500365249884.5,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 5748.875954112866,
+            "operator_norm_lower_estimate": 1278.7607988751265,
+            "logical_gram_applications": 32,
+            "batched_gram_calls": 2,
+            "cumulative_operator_seconds": 1.0639383000088856
+          },
+          {
+            "power": 3,
+            "Y": 3.460987298865459e+21,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4788.677805615334,
+            "operator_norm_lower_estimate": 1758.0040391808107,
+            "logical_gram_applications": 48,
+            "batched_gram_calls": 3,
+            "cumulative_operator_seconds": 1.5971222000662237
+          },
+          {
+            "power": 4,
+            "Y": 3.8494613175198106e+28,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4374.583469063872,
+            "operator_norm_lower_estimate": 2063.1931903165305,
+            "logical_gram_applications": 64,
+            "batched_gram_calls": 4,
+            "cumulative_operator_seconds": 2.305692700087093
+          },
+          {
+            "power": 5,
+            "Y": 4.28930147151615e+35,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4144.26985803383,
+            "operator_norm_lower_estimate": 2271.59329302221,
+            "logical_gram_applications": 80,
+            "batched_gram_calls": 5,
+            "cumulative_operator_seconds": 2.805255900020711
+          },
+          {
+            "power": 6,
+            "Y": 4.782013895229212e+42,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 3997.686293406956,
+            "operator_norm_lower_estimate": 2422.2046673407394,
+            "logical_gram_applications": 96,
+            "batched_gram_calls": 6,
+            "cumulative_operator_seconds": 3.385056500090286
+          },
+          {
+            "power": 7,
+            "Y": 5.33230633843421e+49,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 3896.2201235974603,
+            "operator_norm_lower_estimate": 2535.893562639259,
+            "logical_gram_applications": 112,
+            "batched_gram_calls": 7,
+            "cumulative_operator_seconds": 3.8950793001567945
+          },
+          {
+            "power": 8,
+            "Y": 5.946316609321443e+56,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 3821.8299377204544,
+            "operator_norm_lower_estimate": 2624.659393105985,
+            "logical_gram_applications": 128,
+            "batched_gram_calls": 8,
+            "cumulative_operator_seconds": 4.369110300089233
+          }
+        ]
+      },
+      "block_first": 36679.78699653917,
+      "block_second": 47794969.18391305,
+      "block_third": 189200038662.5479,
+      "block_fixed_point_consistent": true,
+      "block_fixed_point_iterations": 2,
+      "raw_guarantee_slack": 0.016719349744047207,
+      "raw_exclusion_slack": -0.016719349744047207
+    },
+    {
+      "step": 5,
+      "identity": [
+        4,
+        366,
+        1,
+        1120,
+        5,
+        4,
+        1
+      ],
+      "trace": {
+        "rng_seed": 7426615274086912657,
+        "delta": 4.59896983075791e-11,
+        "probes": 16,
+        "maximum_power": 8,
+        "single_event_simultaneous_over_all_powers": true,
+        "rows": [
+          {
+            "power": 1,
+            "Y": 25392426.392385352,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 9405.869547570388,
+            "operator_norm_lower_estimate": 465.464121908428,
+            "logical_gram_applications": 16,
+            "batched_gram_calls": 1,
+            "cumulative_operator_seconds": 0.4007391999475658
+          },
+          {
+            "power": 2,
+            "Y": 270612955394628.2,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 5541.286067450815,
+            "operator_norm_lower_estimate": 1232.6909315877622,
+            "logical_gram_applications": 32,
+            "batched_gram_calls": 2,
+            "cumulative_operator_seconds": 0.7475862000137568
+          },
+          {
+            "power": 3,
+            "Y": 3.0194321301246716e+21,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4680.976872083683,
+            "operator_norm_lower_estimate": 1718.5634932557227,
+            "logical_gram_applications": 48,
+            "batched_gram_calls": 3,
+            "cumulative_operator_seconds": 1.1116191999753937
+          },
+          {
+            "power": 4,
+            "Y": 3.3757829430082184e+28,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4303.368403316648,
+            "operator_norm_lower_estimate": 2029.6929433372852,
+            "logical_gram_applications": 64,
+            "batched_gram_calls": 4,
+            "cumulative_operator_seconds": 1.6386811999836937
+          },
+          {
+            "power": 5,
+            "Y": 3.7748337652863465e+35,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4091.6563694193637,
+            "operator_norm_lower_estimate": 2242.831283513941,
+            "logical_gram_applications": 80,
+            "batched_gram_calls": 5,
+            "cumulative_operator_seconds": 2.1521779999602586
+          },
+          {
+            "power": 6,
+            "Y": 4.221160829833476e+42,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 3956.341758406325,
+            "operator_norm_lower_estimate": 2397.222489037012,
+            "logical_gram_applications": 96,
+            "batched_gram_calls": 6,
+            "cumulative_operator_seconds": 2.7010786999017
+          },
+          {
+            "power": 7,
+            "Y": 4.720289213044331e+49,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 3862.438643070043,
+            "operator_norm_lower_estimate": 2513.968163112129,
+            "logical_gram_applications": 112,
+            "batched_gram_calls": 7,
+            "cumulative_operator_seconds": 3.3748522999230772
+          },
+          {
+            "power": 8,
+            "Y": 5.2784473995205725e+56,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 3793.477335152351,
+            "operator_norm_lower_estimate": 2605.2439805662802,
+            "logical_gram_applications": 128,
+            "batched_gram_calls": 8,
+            "cumulative_operator_seconds": 4.00432549987454
+          }
+        ]
+      },
+      "block_first": 36713.09813937596,
+      "block_second": 47844995.22186385,
+      "block_third": 189423489121.1223,
+      "block_fixed_point_consistent": true,
+      "block_fixed_point_iterations": 2,
+      "raw_guarantee_slack": 0.024275927531689945,
+      "raw_exclusion_slack": -0.024275927531689945
+    },
+    {
+      "step": 6,
+      "identity": [
+        4,
+        366,
+        1,
+        1120,
+        6,
+        4,
+        1
+      ],
+      "trace": {
+        "rng_seed": 364305137912822231,
+        "delta": 4.59896983075791e-11,
+        "probes": 16,
+        "maximum_power": 8,
+        "single_event_simultaneous_over_all_powers": true,
+        "rows": [
+          {
+            "power": 1,
+            "Y": 31510804.215428308,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 10477.95656200196,
+            "operator_norm_lower_estimate": 517.7398492015012,
+            "logical_gram_applications": 16,
+            "batched_gram_calls": 1,
+            "cumulative_operator_seconds": 0.5368246999569237
+          },
+          {
+            "power": 2,
+            "Y": 331127128627659.56,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 5828.034524300077,
+            "operator_norm_lower_estimate": 1295.5065568593814,
+            "logical_gram_applications": 32,
+            "batched_gram_calls": 2,
+            "cumulative_operator_seconds": 1.1096890999469906
+          },
+          {
+            "power": 3,
+            "Y": 3.650323609918603e+21,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4831.376077514437,
+            "operator_norm_lower_estimate": 1772.8929416209203,
+            "logical_gram_applications": 48,
+            "batched_gram_calls": 3,
+            "cumulative_operator_seconds": 1.5986306999111548
+          },
+          {
+            "power": 4,
+            "Y": 4.065472625666685e+28,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4404.540347299342,
+            "operator_norm_lower_estimate": 2076.6310457169348,
+            "logical_gram_applications": 64,
+            "batched_gram_calls": 4,
+            "cumulative_operator_seconds": 2.115773799829185
+          },
+          {
+            "power": 5,
+            "Y": 4.546009734673623e+35,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4168.428975939998,
+            "operator_norm_lower_estimate": 2284.2277642639538,
+            "logical_gram_applications": 80,
+            "batched_gram_calls": 5,
+            "cumulative_operator_seconds": 2.7464098997879773
+          },
+          {
+            "power": 6,
+            "Y": 5.091649665068182e+42,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4018.642298905892,
+            "operator_norm_lower_estimate": 2434.3621358507994,
+            "logical_gram_applications": 96,
+            "batched_gram_calls": 6,
+            "cumulative_operator_seconds": 3.29039439978078
+          },
+          {
+            "power": 7,
+            "Y": 5.706582221042359e+49,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 3915.1449123995135,
+            "operator_norm_lower_estimate": 2547.7267162233397,
+            "logical_gram_applications": 112,
+            "batched_gram_calls": 7,
+            "cumulative_operator_seconds": 3.7860983996652067
+          },
+          {
+            "power": 8,
+            "Y": 6.397521737142721e+56,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 3839.340161781131,
+            "operator_norm_lower_estimate": 2636.2462003092523,
+            "logical_gram_applications": 128,
+            "batched_gram_calls": 8,
+            "cumulative_operator_seconds": 4.284764599637128
+          }
+        ]
+      },
+      "block_first": 36745.97004457491,
+      "block_second": 47894104.33726209,
+      "block_third": 189641893885.38724,
+      "block_fixed_point_consistent": true,
+      "block_fixed_point_iterations": 2,
+      "raw_guarantee_slack": 0.03181359223818703,
+      "raw_exclusion_slack": -0.03181359223818703
+    },
+    {
+      "step": 7,
+      "identity": [
+        4,
+        366,
+        1,
+        1120,
+        7,
+        4,
+        1
+      ],
+      "trace": {
+        "rng_seed": 3717257341048004532,
+        "delta": 4.59896983075791e-11,
+        "probes": 16,
+        "maximum_power": 8,
+        "single_event_simultaneous_over_all_powers": true,
+        "rows": [
+          {
+            "power": 1,
+            "Y": 28942502.58403695,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 10041.876834837689,
+            "operator_norm_lower_estimate": 495.887467696608,
+            "logical_gram_applications": 16,
+            "batched_gram_calls": 1,
+            "cumulative_operator_seconds": 0.6539008999243379
+          },
+          {
+            "power": 2,
+            "Y": 286204277189997.75,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 5619.432449174127,
+            "operator_norm_lower_estimate": 1248.753090717248,
+            "logical_gram_applications": 32,
+            "batched_gram_calls": 2,
+            "cumulative_operator_seconds": 1.1323847000021487
+          },
+          {
+            "power": 3,
+            "Y": 3.0894369994565705e+21,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4698.892475918417,
+            "operator_norm_lower_estimate": 1723.9245511803888,
+            "logical_gram_applications": 48,
+            "batched_gram_calls": 3,
+            "cumulative_operator_seconds": 1.6437871999805793
+          },
+          {
+            "power": 4,
+            "Y": 3.419375042706751e+28,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4310.275746493143,
+            "operator_norm_lower_estimate": 2031.875600934631,
+            "logical_gram_applications": 64,
+            "batched_gram_calls": 4,
+            "cumulative_operator_seconds": 2.106997200055048
+          },
+          {
+            "power": 5,
+            "Y": 3.82037187463757e+35,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4096.565789877293,
+            "operator_norm_lower_estimate": 2244.5722139471604,
+            "logical_gram_applications": 80,
+            "batched_gram_calls": 5,
+            "cumulative_operator_seconds": 2.7309245000360534
+          },
+          {
+            "power": 6,
+            "Y": 4.284417182596875e+42,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 3961.2488036299937,
+            "operator_norm_lower_estimate": 2399.349394492105,
+            "logical_gram_applications": 96,
+            "batched_gram_calls": 6,
+            "cumulative_operator_seconds": 3.243432000046596
+          },
+          {
+            "power": 7,
+            "Y": 4.812081821313288e+49,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 3867.75583715033,
+            "operator_norm_lower_estimate": 2516.6680868869,
+            "logical_gram_applications": 112,
+            "batched_gram_calls": 7,
+            "cumulative_operator_seconds": 3.820143899996765
+          },
+          {
+            "power": 8,
+            "Y": 5.408031711998301e+56,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 3799.2319436238945,
+            "operator_norm_lower_estimate": 2608.505990301911,
+            "logical_gram_applications": 128,
+            "batched_gram_calls": 8,
+            "cumulative_operator_seconds": 4.336216800031252
+          }
+        ]
+      },
+      "block_first": 36778.40579557213,
+      "block_second": 47942302.76756116,
+      "block_third": 189855285530.42532,
+      "block_fixed_point_consistent": true,
+      "block_fixed_point_iterations": 2,
+      "raw_guarantee_slack": 0.039332285287059676,
+      "raw_exclusion_slack": -0.039332285287059676
+    },
+    {
+      "step": 8,
+      "identity": [
+        4,
+        366,
+        1,
+        1120,
+        8,
+        4,
+        1
+      ],
+      "trace": {
+        "rng_seed": 3944344669994626241,
+        "delta": 4.59896983075791e-11,
+        "probes": 16,
+        "maximum_power": 8,
+        "single_event_simultaneous_over_all_powers": true,
+        "rows": [
+          {
+            "power": 1,
+            "Y": 27913492.66252625,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 9861.748901821182,
+            "operator_norm_lower_estimate": 487.4209758658473,
+            "logical_gram_applications": 16,
+            "batched_gram_calls": 1,
+            "cumulative_operator_seconds": 0.48894369998015463
+          },
+          {
+            "power": 2,
+            "Y": 278479745495134.66,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 5581.12601350881,
+            "operator_norm_lower_estimate": 1240.786231299822,
+            "logical_gram_applications": 32,
+            "batched_gram_calls": 2,
+            "cumulative_operator_seconds": 1.1042702000122517
+          },
+          {
+            "power": 3,
+            "Y": 3.0592707648275234e+21,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4691.214267106745,
+            "operator_norm_lower_estimate": 1721.6123162669367,
+            "logical_gram_applications": 48,
+            "batched_gram_calls": 3,
+            "cumulative_operator_seconds": 1.8138523999368772
+          },
+          {
+            "power": 4,
+            "Y": 3.419420775582559e+28,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4310.282952493857,
+            "operator_norm_lower_estimate": 2032.3258883854257,
+            "logical_gram_applications": 64,
+            "batched_gram_calls": 4,
+            "cumulative_operator_seconds": 2.39262539986521
+          },
+          {
+            "power": 5,
+            "Y": 3.8423958671608245e+35,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4098.921307422462,
+            "operator_norm_lower_estimate": 2246.2579932380945,
+            "logical_gram_applications": 80,
+            "batched_gram_calls": 5,
+            "cumulative_operator_seconds": 3.1279684997862205
+          },
+          {
+            "power": 6,
+            "Y": 4.3261222384716567e+42,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 3964.4478307338036,
+            "operator_norm_lower_estimate": 2401.6391412318735,
+            "logical_gram_applications": 96,
+            "batched_gram_calls": 6,
+            "cumulative_operator_seconds": 3.829443899798207
+          },
+          {
+            "power": 7,
+            "Y": 4.874451186363903e+49,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 3871.315179216961,
+            "operator_norm_lower_estimate": 2519.3006468940516,
+            "logical_gram_applications": 112,
+            "batched_gram_calls": 7,
+            "cumulative_operator_seconds": 4.410004499834031
+          },
+          {
+            "power": 8,
+            "Y": 5.493951167914055e+56,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 3802.9766241905895,
+            "operator_norm_lower_estimate": 2611.3641657358817,
+            "logical_gram_applications": 128,
+            "batched_gram_calls": 8,
+            "cumulative_operator_seconds": 5.036816999781877
+          }
+        ]
+      },
+      "block_first": 36810.408490549366,
+      "block_second": 47989596.81196654,
+      "block_third": 190063697127.94037,
+      "block_fixed_point_consistent": true,
+      "block_fixed_point_iterations": 2,
+      "raw_guarantee_slack": 0.0468319565512374,
+      "raw_exclusion_slack": -0.0468319565512374
+    },
+    {
+      "step": 9,
+      "identity": [
+        4,
+        366,
+        1,
+        1120,
+        9,
+        4,
+        1
+      ],
+      "trace": {
+        "rng_seed": 8006392273270139615,
+        "delta": 4.59896983075791e-11,
+        "probes": 16,
+        "maximum_power": 8,
+        "single_event_simultaneous_over_all_powers": true,
+        "rows": [
+          {
+            "power": 1,
+            "Y": 31132888.39022783,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 10414.93484496846,
+            "operator_norm_lower_estimate": 515.3345247472971,
+            "logical_gram_applications": 16,
+            "batched_gram_calls": 1,
+            "cumulative_operator_seconds": 0.5619031999958679
+          },
+          {
+            "power": 2,
+            "Y": 311595117998514.94,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 5740.121513799169,
+            "operator_norm_lower_estimate": 1276.842785457909,
+            "logical_gram_applications": 32,
+            "batched_gram_calls": 2,
+            "cumulative_operator_seconds": 1.1207822000142187
+          },
+          {
+            "power": 3,
+            "Y": 3.407947601621154e+21,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4776.3678687446145,
+            "operator_norm_lower_estimate": 1753.5116757325313,
+            "logical_gram_applications": 48,
+            "batched_gram_calls": 3,
+            "cumulative_operator_seconds": 1.645225099986419
+          },
+          {
+            "power": 4,
+            "Y": 3.81213750953966e+28,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4369.258927095983,
+            "operator_norm_lower_estimate": 2060.7056062950414,
+            "logical_gram_applications": 64,
+            "batched_gram_calls": 4,
+            "cumulative_operator_seconds": 2.3912151000695303
+          },
+          {
+            "power": 5,
+            "Y": 4.2938292642433486e+35,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4144.707120080505,
+            "operator_norm_lower_estimate": 2271.853818654791,
+            "logical_gram_applications": 80,
+            "batched_gram_calls": 5,
+            "cumulative_operator_seconds": 2.921644699992612
+          },
+          {
+            "power": 6,
+            "Y": 4.8473454703274623e+42,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4002.2093854886307,
+            "operator_norm_lower_estimate": 2424.9637620030885,
+            "logical_gram_applications": 96,
+            "batched_gram_calls": 6,
+            "cumulative_operator_seconds": 3.4526976000051945
+          },
+          {
+            "power": 7,
+            "Y": 5.47651863117551e+49,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 3903.6538913692402,
+            "operator_norm_lower_estimate": 2540.7485596079546,
+            "logical_gram_applications": 112,
+            "batched_gram_calls": 7,
+            "cumulative_operator_seconds": 4.03187120007351
+          },
+          {
+            "power": 8,
+            "Y": 6.1891307200957e+56,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 3831.401895143373,
+            "operator_norm_lower_estimate": 2631.248071719696,
+            "logical_gram_applications": 128,
+            "batched_gram_calls": 8,
+            "cumulative_operator_seconds": 4.526049000094645
+          }
+        ]
+      },
+      "block_first": 36841.98124131508,
+      "block_second": 48035992.82830373,
+      "block_third": 190267162225.45224,
+      "block_fixed_point_consistent": true,
+      "block_fixed_point_iterations": 2,
+      "raw_guarantee_slack": 0.05431256406005858,
+      "raw_exclusion_slack": -0.05431256406005858
+    },
+    {
+      "step": 10,
+      "identity": [
+        4,
+        366,
+        1,
+        1120,
+        10,
+        4,
+        1
+      ],
+      "trace": {
+        "rng_seed": 851217094683247356,
+        "delta": 4.59896983075791e-11,
+        "probes": 16,
+        "maximum_power": 8,
+        "single_event_simultaneous_over_all_powers": true,
+        "rows": [
+          {
+            "power": 1,
+            "Y": 28453960.412307996,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 9956.7639562682,
+            "operator_norm_lower_estimate": 494.25716361355387,
+            "logical_gram_applications": 16,
+            "batched_gram_calls": 1,
+            "cumulative_operator_seconds": 0.516283500008285
+          },
+          {
+            "power": 2,
+            "Y": 282590269940538.44,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 5601.608160098551,
+            "operator_norm_lower_estimate": 1245.7791685494901,
+            "logical_gram_applications": 32,
+            "batched_gram_calls": 2,
+            "cumulative_operator_seconds": 0.9989720999728888
+          },
+          {
+            "power": 3,
+            "Y": 3.172728231314825e+21,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4719.772826069076,
+            "operator_norm_lower_estimate": 1730.986716498329,
+            "logical_gram_applications": 48,
+            "batched_gram_calls": 3,
+            "cumulative_operator_seconds": 1.4939682999392971
+          },
+          {
+            "power": 4,
+            "Y": 3.585870618527577e+28,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4335.967711278166,
+            "operator_norm_lower_estimate": 2043.457074396586,
+            "logical_gram_applications": 64,
+            "batched_gram_calls": 4,
+            "cumulative_operator_seconds": 2.138123399927281
+          },
+          {
+            "power": 5,
+            "Y": 4.060092868554692e+35,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4121.572719286145,
+            "operator_norm_lower_estimate": 2257.805624192704,
+            "logical_gram_applications": 80,
+            "batched_gram_calls": 5,
+            "cumulative_operator_seconds": 2.717674499959685
+          },
+          {
+            "power": 6,
+            "Y": 4.5997564594166846e+42,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 3984.761917387982,
+            "operator_norm_lower_estimate": 2413.174336069743,
+            "logical_gram_applications": 96,
+            "batched_gram_calls": 6,
+            "cumulative_operator_seconds": 3.393309299950488
+          },
+          {
+            "power": 7,
+            "Y": 5.212257077063364e+49,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 3889.8881082433654,
+            "operator_norm_lower_estimate": 2530.694195453949,
+            "logical_gram_applications": 112,
+            "batched_gram_calls": 7,
+            "cumulative_operator_seconds": 3.9495618999935687
+          },
+          {
+            "power": 8,
+            "Y": 5.906787046159209e+56,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 3820.2370601584494,
+            "operator_norm_lower_estimate": 2622.587900468492,
+            "logical_gram_applications": 128,
+            "batched_gram_calls": 8,
+            "cumulative_operator_seconds": 4.504532099934295
+          }
+        ]
+      },
+      "block_first": 36873.12717220005,
+      "block_second": 48081497.229915544,
+      "block_third": 190465714825.63202,
+      "block_fixed_point_consistent": true,
+      "block_fixed_point_iterations": 2,
+      "raw_guarantee_slack": 0.06177407370424959,
+      "raw_exclusion_slack": -0.06177407370424959
+    },
+    {
+      "step": 11,
+      "identity": [
+        4,
+        366,
+        1,
+        1120,
+        11,
+        4,
+        1
+      ],
+      "trace": {
+        "rng_seed": 6465488981263728193,
+        "delta": 4.59896983075791e-11,
+        "probes": 16,
+        "maximum_power": 8,
+        "single_event_simultaneous_over_all_powers": true,
+        "rows": [
+          {
+            "power": 1,
+            "Y": 28608499.740587857,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 9983.765961977828,
+            "operator_norm_lower_estimate": 492.05748476411645,
+            "logical_gram_applications": 16,
+            "batched_gram_calls": 1,
+            "cumulative_operator_seconds": 0.5827196999453008
+          },
+          {
+            "power": 2,
+            "Y": 288316925842235.56,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 5629.773982744793,
+            "operator_norm_lower_estimate": 1250.5868601190855,
+            "logical_gram_applications": 32,
+            "batched_gram_calls": 2,
+            "cumulative_operator_seconds": 1.2204792998963967
+          },
+          {
+            "power": 3,
+            "Y": 3.204472180118257e+21,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4727.61063487021,
+            "operator_norm_lower_estimate": 1735.7711084345958,
+            "logical_gram_applications": 48,
+            "batched_gram_calls": 3,
+            "cumulative_operator_seconds": 1.7744265999644995
+          },
+          {
+            "power": 4,
+            "Y": 3.619071419724808e+28,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4340.96572423386,
+            "operator_norm_lower_estimate": 2047.5024142722593,
+            "logical_gram_applications": 64,
+            "batched_gram_calls": 4,
+            "cumulative_operator_seconds": 2.3538054999662563
+          },
+          {
+            "power": 5,
+            "Y": 4.102424072614473e+35,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4125.849910150953,
+            "operator_norm_lower_estimate": 2261.6420894931707,
+            "logical_gram_applications": 80,
+            "batched_gram_calls": 5,
+            "cumulative_operator_seconds": 2.840528899920173
+          },
+          {
+            "power": 6,
+            "Y": 4.657032134458256e+42,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 3988.8733246012075,
+            "operator_norm_lower_estimate": 2416.9942752460092,
+            "logical_gram_applications": 96,
+            "batched_gram_calls": 6,
+            "cumulative_operator_seconds": 3.40507500001695
+          },
+          {
+            "power": 7,
+            "Y": 5.289638451824294e+49,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 3893.9849036283617,
+            "operator_norm_lower_estimate": 2534.555057155351,
+            "logical_gram_applications": 112,
+            "batched_gram_calls": 7,
+            "cumulative_operator_seconds": 4.027265100041404
+          },
+          {
+            "power": 8,
+            "Y": 6.009554410861017e+56,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 3824.3576319743343,
+            "operator_norm_lower_estimate": 2626.500761990753,
+            "logical_gram_applications": 128,
+            "batched_gram_calls": 8,
+            "cumulative_operator_seconds": 4.54566510010045
+          }
+        ]
+      },
+      "block_first": 36903.849418967955,
+      "block_second": 48126116.48259084,
+      "block_third": 190659389365.7958,
+      "block_fixed_point_consistent": true,
+      "block_fixed_point_iterations": 2,
+      "raw_guarantee_slack": 0.06921645894034967,
+      "raw_exclusion_slack": -0.06921645894034967
+    },
+    {
+      "step": 12,
+      "identity": [
+        4,
+        366,
+        1,
+        1120,
+        12,
+        4,
+        1
+      ],
+      "trace": {
+        "rng_seed": 3688019773029299937,
+        "delta": 4.59896983075791e-11,
+        "probes": 16,
+        "maximum_power": 8,
+        "single_event_simultaneous_over_all_powers": true,
+        "rows": [
+          {
+            "power": 1,
+            "Y": 24424674.775354795,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 9224.891032358024,
+            "operator_norm_lower_estimate": 457.6901818558338,
+            "logical_gram_applications": 16,
+            "batched_gram_calls": 1,
+            "cumulative_operator_seconds": 0.516725099994801
+          },
+          {
+            "power": 2,
+            "Y": 221017418524541.9,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 5267.809370898852,
+            "operator_norm_lower_estimate": 1173.3706646108922,
+            "logical_gram_applications": 32,
+            "batched_gram_calls": 2,
+            "cumulative_operator_seconds": 1.016987800016068
+          },
+          {
+            "power": 3,
+            "Y": 2.337227911303964e+21,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4485.3788134386805,
+            "operator_norm_lower_estimate": 1648.172174476569,
+            "logical_gram_applications": 48,
+            "batched_gram_calls": 3,
+            "cumulative_operator_seconds": 1.5454422000329942
+          },
+          {
+            "power": 4,
+            "Y": 2.586772548532111e+28,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4162.521530905617,
+            "operator_norm_lower_estimate": 1964.531879782155,
+            "logical_gram_applications": 64,
+            "batched_gram_calls": 4,
+            "cumulative_operator_seconds": 2.1047560001024976
+          },
+          {
+            "power": 5,
+            "Y": 2.9127999330494987e+35,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 3986.9467533967827,
+            "operator_norm_lower_estimate": 2186.5655726648724,
+            "logical_gram_applications": 80,
+            "batched_gram_calls": 5,
+            "cumulative_operator_seconds": 2.653962600044906
+          },
+          {
+            "power": 6,
+            "Y": 3.3026199423959346e+42,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 3876.258143003258,
+            "operator_norm_lower_estimate": 2349.7108204704627,
+            "logical_gram_applications": 96,
+            "batched_gram_calls": 6,
+            "cumulative_operator_seconds": 3.198513900046237
+          },
+          {
+            "power": 7,
+            "Y": 3.7551280634607147e+49,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 3799.842568938733,
+            "operator_norm_lower_estimate": 2474.1397420029225,
+            "logical_gram_applications": 112,
+            "batched_gram_calls": 7,
+            "cumulative_operator_seconds": 3.8029151000082493
+          },
+          {
+            "power": 8,
+            "Y": 4.274542661742473e+56,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 3743.7898261054,
+            "operator_norm_lower_estimate": 2571.951375368969,
+            "logical_gram_applications": 128,
+            "batched_gram_calls": 8,
+            "cumulative_operator_seconds": 4.40432009997312
+          }
+        ]
+      },
+      "block_first": 36934.15112774078,
+      "block_second": 48169857.101525314,
+      "block_third": 190848220697.5626,
+      "block_fixed_point_consistent": true,
+      "block_fixed_point_iterations": 2,
+      "raw_guarantee_slack": 0.07663970049440394,
+      "raw_exclusion_slack": -0.07663970049440394
+    },
+    {
+      "step": 13,
+      "identity": [
+        4,
+        366,
+        1,
+        1120,
+        13,
+        4,
+        1
+      ],
+      "trace": {
+        "rng_seed": 1424767607447365329,
+        "delta": 4.59896983075791e-11,
+        "probes": 16,
+        "maximum_power": 8,
+        "single_event_simultaneous_over_all_powers": true,
+        "rows": [
+          {
+            "power": 1,
+            "Y": 28574480.730088446,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 9977.828235952531,
+            "operator_norm_lower_estimate": 492.11878034474495,
+            "logical_gram_applications": 16,
+            "batched_gram_calls": 1,
+            "cumulative_operator_seconds": 0.6758735000621527
+          },
+          {
+            "power": 2,
+            "Y": 254103970282611.0,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 5454.768045560084,
+            "operator_norm_lower_estimate": 1211.4158328475257,
+            "logical_gram_applications": 32,
+            "batched_gram_calls": 2,
+            "cumulative_operator_seconds": 1.1960739000933245
+          },
+          {
+            "power": 3,
+            "Y": 2.7515333210817755e+21,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4609.049928673594,
+            "operator_norm_lower_estimate": 1692.4795230476993,
+            "logical_gram_applications": 48,
+            "batched_gram_calls": 3,
+            "cumulative_operator_seconds": 1.7171561002032831
+          },
+          {
+            "power": 4,
+            "Y": 3.1328883672972847e+28,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4263.387696173408,
+            "operator_norm_lower_estimate": 2011.1239371469114,
+            "logical_gram_applications": 64,
+            "batched_gram_calls": 4,
+            "cumulative_operator_seconds": 2.3527498001931235
+          },
+          {
+            "power": 5,
+            "Y": 3.574304916389347e+35,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4069.382656873705,
+            "operator_norm_lower_estimate": 2230.8775648929277,
+            "logical_gram_applications": 80,
+            "batched_gram_calls": 5,
+            "cumulative_operator_seconds": 2.8847015001811087
+          },
+          {
+            "power": 6,
+            "Y": 4.080743760889793e+42,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 3945.203582117879,
+            "operator_norm_lower_estimate": 2390.7018844661343,
+            "logical_gram_applications": 96,
+            "batched_gram_calls": 6,
+            "cumulative_operator_seconds": 3.3828268002253026
+          },
+          {
+            "power": 7,
+            "Y": 4.660147033215426e+49,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 3858.9025250141403,
+            "operator_norm_lower_estimate": 2511.872129223803,
+            "logical_gram_applications": 112,
+            "batched_gram_calls": 7,
+            "cumulative_operator_seconds": 3.875432300264947
+          },
+          {
+            "power": 8,
+            "Y": 5.32235099779858e+56,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 3795.441708129706,
+            "operator_norm_lower_estimate": 2606.779695535565,
+            "logical_gram_applications": 128,
+            "batched_gram_calls": 8,
+            "cumulative_operator_seconds": 4.477100600255653
+          }
+        ]
+      },
+      "block_first": 36964.03545394083,
+      "block_second": 48212725.64831936,
+      "block_third": 191032244066.7116,
+      "block_fixed_point_consistent": true,
+      "block_fixed_point_iterations": 2,
+      "raw_guarantee_slack": 0.08404378606302743,
+      "raw_exclusion_slack": -0.08404378606302743
+    },
+    {
+      "step": 14,
+      "identity": [
+        4,
+        366,
+        1,
+        1120,
+        14,
+        4,
+        1
+      ],
+      "trace": {
+        "rng_seed": 8273800647272878890,
+        "delta": 4.59896983075791e-11,
+        "probes": 16,
+        "maximum_power": 8,
+        "single_event_simultaneous_over_all_powers": true,
+        "rows": [
+          {
+            "power": 1,
+            "Y": 26204924.94124645,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 9555.16762131388,
+            "operator_norm_lower_estimate": 471.8367209488489,
+            "logical_gram_applications": 16,
+            "batched_gram_calls": 1,
+            "cumulative_operator_seconds": 0.5615492999786511
+          },
+          {
+            "power": 2,
+            "Y": 276045281991507.9,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 5568.888303276581,
+            "operator_norm_lower_estimate": 1237.5000373633097,
+            "logical_gram_applications": 32,
+            "batched_gram_calls": 2,
+            "cumulative_operator_seconds": 1.1884750999743119
+          },
+          {
+            "power": 3,
+            "Y": 3.082100194902551e+21,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4697.0308088775255,
+            "operator_norm_lower_estimate": 1723.221949601005,
+            "logical_gram_applications": 48,
+            "batched_gram_calls": 3,
+            "cumulative_operator_seconds": 1.7267723999684677
+          },
+          {
+            "power": 4,
+            "Y": 3.493023785239478e+28,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4321.772536527394,
+            "operator_norm_lower_estimate": 2037.2778439481933,
+            "logical_gram_applications": 64,
+            "batched_gram_calls": 4,
+            "cumulative_operator_seconds": 2.2305697998963296
+          },
+          {
+            "power": 5,
+            "Y": 3.982757757160298e+35,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4113.653989512421,
+            "operator_norm_lower_estimate": 2253.919726824161,
+            "logical_gram_applications": 80,
+            "batched_gram_calls": 5,
+            "cumulative_operator_seconds": 2.777521999902092
+          },
+          {
+            "power": 6,
+            "Y": 4.5525825249412867e+42,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 3981.3402448253555,
+            "operator_norm_lower_estimate": 2411.505176019639,
+            "logical_gram_applications": 96,
+            "batched_gram_calls": 6,
+            "cumulative_operator_seconds": 3.316935999901034
+          },
+          {
+            "power": 7,
+            "Y": 5.209358038569554e+49,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 3889.733529631482,
+            "operator_norm_lower_estimate": 2530.956178871582,
+            "logical_gram_applications": 112,
+            "batched_gram_calls": 7,
+            "cumulative_operator_seconds": 3.815404399880208
+          },
+          {
+            "power": 8,
+            "Y": 5.963450687918815e+56,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 3822.517288137005,
+            "operator_norm_lower_estimate": 2624.4822305178836,
+            "logical_gram_applications": 128,
+            "batched_gram_calls": 8,
+            "cumulative_operator_seconds": 4.382326499908231
+          }
+        ]
+      },
+      "block_first": 36993.50556124957,
+      "block_second": 48254728.72801322,
+      "block_third": 191211495093.24066,
+      "block_fixed_point_consistent": true,
+      "block_fixed_point_iterations": 2,
+      "raw_guarantee_slack": 0.09142871000913644,
+      "raw_exclusion_slack": -0.09142871000913644
+    },
+    {
+      "step": 15,
+      "identity": [
+        4,
+        366,
+        1,
+        1120,
+        15,
+        4,
+        1
+      ],
+      "trace": {
+        "rng_seed": 4191325008884608227,
+        "delta": 4.59896983075791e-11,
+        "probes": 16,
+        "maximum_power": 8,
+        "single_event_simultaneous_over_all_powers": true,
+        "rows": [
+          {
+            "power": 1,
+            "Y": 26637616.503149766,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 9633.731346840663,
+            "operator_norm_lower_estimate": 474.66427061671834,
+            "logical_gram_applications": 16,
+            "batched_gram_calls": 1,
+            "cumulative_operator_seconds": 0.5512447999790311
+          },
+          {
+            "power": 2,
+            "Y": 281233711899027.16,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 5594.873476417851,
+            "operator_norm_lower_estimate": 1241.89899422941,
+            "logical_gram_applications": 32,
+            "batched_gram_calls": 2,
+            "cumulative_operator_seconds": 1.1163886999711394
+          },
+          {
+            "power": 3,
+            "Y": 3.161611935025115e+21,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4717.012680427542,
+            "operator_norm_lower_estimate": 1729.2762656005302,
+            "logical_gram_applications": 48,
+            "batched_gram_calls": 3,
+            "cumulative_operator_seconds": 1.6516006998717785
+          },
+          {
+            "power": 4,
+            "Y": 3.6026602191875845e+28,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4338.500236991128,
+            "operator_norm_lower_estimate": 2044.0317071384645,
+            "logical_gram_applications": 64,
+            "batched_gram_calls": 4,
+            "cumulative_operator_seconds": 2.2889910999219865
+          },
+          {
+            "power": 5,
+            "Y": 4.123991050468026e+35,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4128.013808971154,
+            "operator_norm_lower_estimate": 2260.7864608704526,
+            "logical_gram_applications": 80,
+            "batched_gram_calls": 5,
+            "cumulative_operator_seconds": 2.842945099924691
+          },
+          {
+            "power": 6,
+            "Y": 4.7289229542614e+42,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 3993.96874110608,
+            "operator_norm_lower_estimate": 2418.2618805242187,
+            "logical_gram_applications": 96,
+            "batched_gram_calls": 6,
+            "cumulative_operator_seconds": 3.4137772999238223
+          },
+          {
+            "power": 7,
+            "Y": 5.426318681628508e+49,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 3901.0870604653232,
+            "operator_norm_lower_estimate": 2537.541027444689,
+            "logical_gram_applications": 112,
+            "batched_gram_calls": 7,
+            "cumulative_operator_seconds": 3.98480929993093
+          },
+          {
+            "power": 8,
+            "Y": 6.228302082042351e+56,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 3832.9129897128923,
+            "operator_norm_lower_estimate": 2630.89164606048,
+            "logical_gram_applications": 128,
+            "batched_gram_calls": 8,
+            "cumulative_operator_seconds": 4.66766319994349
+          }
+        ]
+      },
+      "block_first": 37022.564620584184,
+      "block_second": 48295872.98616363,
+      "block_third": 191386009751.65738,
+      "block_fixed_point_consistent": true,
+      "block_fixed_point_iterations": 2,
+      "raw_guarantee_slack": 0.09879447304938438,
+      "raw_exclusion_slack": -0.09879447304938438
+    },
+    {
+      "step": 16,
+      "identity": [
+        4,
+        366,
+        1,
+        1120,
+        16,
+        4,
+        1
+      ],
+      "trace": {
+        "rng_seed": 975612824807710079,
+        "delta": 4.59896983075791e-11,
+        "probes": 16,
+        "maximum_power": 8,
+        "single_event_simultaneous_over_all_powers": true,
+        "rows": [
+          {
+            "power": 1,
+            "Y": 20118567.9916106,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 8372.31158166854,
+            "operator_norm_lower_estimate": 415.01541779263334,
+            "logical_gram_applications": 16,
+            "batched_gram_calls": 1,
+            "cumulative_operator_seconds": 0.5577390999533236
+          },
+          {
+            "power": 2,
+            "Y": 204608103267817.56,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 5167.186446312628,
+            "operator_norm_lower_estimate": 1148.0919666432849,
+            "logical_gram_applications": 32,
+            "batched_gram_calls": 2,
+            "cumulative_operator_seconds": 1.086649699951522
+          },
+          {
+            "power": 3,
+            "Y": 2.316473022237685e+21,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4478.715658375726,
+            "operator_norm_lower_estimate": 1642.9910145714468,
+            "logical_gram_applications": 48,
+            "batched_gram_calls": 3,
+            "cumulative_operator_seconds": 1.6200588999781758
+          },
+          {
+            "power": 4,
+            "Y": 2.6532882260898074e+28,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4175.752658068121,
+            "operator_norm_lower_estimate": 1968.3215127461199,
+            "logical_gram_applications": 64,
+            "batched_gram_calls": 4,
+            "cumulative_operator_seconds": 2.1217203000560403
+          },
+          {
+            "power": 5,
+            "Y": 3.049009785039581e+35,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4005.2096310783836,
+            "operator_norm_lower_estimate": 2194.3922971633606,
+            "logical_gram_applications": 80,
+            "batched_gram_calls": 5,
+            "cumulative_operator_seconds": 2.678301100153476
+          },
+          {
+            "power": 6,
+            "Y": 3.5073274758585544e+42,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 3895.7328558496647,
+            "operator_norm_lower_estimate": 2359.55452045587,
+            "logical_gram_applications": 96,
+            "batched_gram_calls": 6,
+            "cumulative_operator_seconds": 3.3111897001508623
+          },
+          {
+            "power": 7,
+            "Y": 4.0358999089352795e+49,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 3819.46412149635,
+            "operator_norm_lower_estimate": 2485.1450007434914,
+            "logical_gram_applications": 112,
+            "batched_gram_calls": 7,
+            "cumulative_operator_seconds": 3.8455404001288116
+          },
+          {
+            "power": 8,
+            "Y": 4.644675913631225e+56,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 3763.2716583472366,
+            "operator_norm_lower_estimate": 2583.7245166671755,
+            "logical_gram_applications": 128,
+            "batched_gram_calls": 8,
+            "cumulative_operator_seconds": 4.497408900060691
+          }
+        ]
+      },
+      "block_first": 37051.215809093854,
+      "block_second": 48336165.10596544,
+      "block_third": 191555824351.52106,
+      "block_fixed_point_consistent": true,
+      "block_fixed_point_iterations": 2,
+      "raw_guarantee_slack": 0.10614108193352934,
+      "raw_exclusion_slack": -0.10614108193352934
+    },
+    {
+      "step": 17,
+      "identity": [
+        4,
+        366,
+        1,
+        1120,
+        17,
+        4,
+        1
+      ],
+      "trace": {
+        "rng_seed": 5433776773755555341,
+        "delta": 4.59896983075791e-11,
+        "probes": 16,
+        "maximum_power": 8,
+        "single_event_simultaneous_over_all_powers": true,
+        "rows": [
+          {
+            "power": 1,
+            "Y": 42686626.626314566,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 12195.3078469592,
+            "operator_norm_lower_estimate": 605.3014424056273,
+            "logical_gram_applications": 16,
+            "batched_gram_calls": 1,
+            "cumulative_operator_seconds": 0.541276500094682
+          },
+          {
+            "power": 2,
+            "Y": 468092796119975.25,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 6354.866248823448,
+            "operator_norm_lower_estimate": 1415.7803649252808,
+            "logical_gram_applications": 32,
+            "batched_gram_calls": 2,
+            "cumulative_operator_seconds": 1.032714300090447
+          },
+          {
+            "power": 3,
+            "Y": 5.345501558172823e+21,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 5148.495767888924,
+            "operator_norm_lower_estimate": 1892.0822307862802,
+            "logical_gram_applications": 48,
+            "batched_gram_calls": 3,
+            "cumulative_operator_seconds": 1.5514477000106126
+          },
+          {
+            "power": 4,
+            "Y": 6.146404493552633e+28,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4638.091954859664,
+            "operator_norm_lower_estimate": 2189.1931975264292,
+            "logical_gram_applications": 64,
+            "batched_gram_calls": 4,
+            "cumulative_operator_seconds": 2.0591619999613613
+          },
+          {
+            "power": 5,
+            "Y": 7.082714528761388e+35,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4357.419210859728,
+            "operator_norm_lower_estimate": 2389.929731234304,
+            "logical_gram_applications": 80,
+            "batched_gram_calls": 5,
+            "cumulative_operator_seconds": 2.540054799988866
+          },
+          {
+            "power": 6,
+            "Y": 8.16807634200482e+42,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4180.078689068679,
+            "operator_norm_lower_estimate": 2534.044754805006,
+            "logical_gram_applications": 96,
+            "batched_gram_calls": 6,
+            "cumulative_operator_seconds": 2.977261699968949
+          },
+          {
+            "power": 7,
+            "Y": 9.422563083256367e+49,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4057.929358108133,
+            "operator_norm_lower_estimate": 2642.3308072198915,
+            "logical_gram_applications": 112,
+            "batched_gram_calls": 7,
+            "cumulative_operator_seconds": 3.374275999958627
+          },
+          {
+            "power": 8,
+            "Y": 1.0870979261810737e+57,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 3968.694304852755,
+            "operator_norm_lower_estimate": 2726.5911176926206,
+            "logical_gram_applications": 128,
+            "batched_gram_calls": 8,
+            "cumulative_operator_seconds": 3.9046553999651223
+          }
+        ]
+      },
+      "block_first": 37079.46230917469,
+      "block_second": 48375611.80541715,
+      "block_third": 191720975518.23666,
+      "block_fixed_point_consistent": true,
+      "block_fixed_point_iterations": 2,
+      "raw_guarantee_slack": 0.11346854911833759,
+      "raw_exclusion_slack": -0.11346854911833759
+    },
+    {
+      "step": 18,
+      "identity": [
+        4,
+        366,
+        1,
+        1120,
+        18,
+        4,
+        1
+      ],
+      "trace": {
+        "rng_seed": 1740293173724323933,
+        "delta": 4.59896983075791e-11,
+        "probes": 16,
+        "maximum_power": 8,
+        "single_event_simultaneous_over_all_powers": true,
+        "rows": [
+          {
+            "power": 1,
+            "Y": 22373790.87082736,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 8829.104095662116,
+            "operator_norm_lower_estimate": 435.2862533349656,
+            "logical_gram_applications": 16,
+            "batched_gram_calls": 1,
+            "cumulative_operator_seconds": 0.47516789997462183
+          },
+          {
+            "power": 2,
+            "Y": 179034557391160.47,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4997.555682927004,
+            "operator_norm_lower_estimate": 1110.7946786767463,
+            "logical_gram_applications": 32,
+            "batched_gram_calls": 2,
+            "cumulative_operator_seconds": 2.9407994999783114
+          },
+          {
+            "power": 3,
+            "Y": 1.8532695551289322e+21,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4315.244243650836,
+            "operator_norm_lower_estimate": 1582.1058230049937,
+            "logical_gram_applications": 48,
+            "batched_gram_calls": 3,
+            "cumulative_operator_seconds": 3.5219238999998197
+          },
+          {
+            "power": 4,
+            "Y": 2.0647550817910004e+28,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4046.879569362172,
+            "operator_norm_lower_estimate": 1906.746205389247,
+            "logical_gram_applications": 64,
+            "batched_gram_calls": 4,
+            "cumulative_operator_seconds": 4.0486144999740645
+          },
+          {
+            "power": 5,
+            "Y": 2.3513212247219895e+35,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 3902.4789254010334,
+            "operator_norm_lower_estimate": 2137.3648093187076,
+            "logical_gram_applications": 80,
+            "batched_gram_calls": 5,
+            "cumulative_operator_seconds": 4.640226399991661
+          },
+          {
+            "power": 6,
+            "Y": 2.7023570300890328e+42,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 3812.0012603257205,
+            "operator_norm_lower_estimate": 2308.171684916789,
+            "logical_gram_applications": 96,
+            "batched_gram_calls": 6,
+            "cumulative_operator_seconds": 5.2848703999770805
+          },
+          {
+            "power": 7,
+            "Y": 3.1175580771867067e+49,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 3749.6734405687516,
+            "operator_norm_lower_estimate": 2439.129946122488,
+            "logical_gram_applications": 112,
+            "batched_gram_calls": 7,
+            "cumulative_operator_seconds": 5.935606999904849
+          },
+          {
+            "power": 8,
+            "Y": 3.6021259902664115e+56,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 3703.9557310066784,
+            "operator_norm_lower_estimate": 2542.4480785085025,
+            "logical_gram_applications": 128,
+            "batched_gram_calls": 8,
+            "cumulative_operator_seconds": 6.5014396999031305
+          }
+        ]
+      },
+      "block_first": 37107.30730750535,
+      "block_second": 48414219.83453574,
+      "block_third": 191881500174.1334,
+      "block_fixed_point_consistent": true,
+      "block_fixed_point_iterations": 2,
+      "raw_guarantee_slack": 0.12077689244155465,
+      "raw_exclusion_slack": -0.12077689244155465
+    },
+    {
+      "step": 19,
+      "identity": [
+        4,
+        366,
+        1,
+        1120,
+        19,
+        4,
+        1
+      ],
+      "trace": {
+        "rng_seed": 1872447096996577152,
+        "delta": 4.59896983075791e-11,
+        "probes": 16,
+        "maximum_power": 8,
+        "single_event_simultaneous_over_all_powers": true,
+        "rows": [
+          {
+            "power": 1,
+            "Y": 34029058.999637134,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 10888.59438146461,
+            "operator_norm_lower_estimate": 538.2987747395304,
+            "logical_gram_applications": 16,
+            "batched_gram_calls": 1,
+            "cumulative_operator_seconds": 0.6139670999255031
+          },
+          {
+            "power": 2,
+            "Y": 334776752057953.44,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 5844.02745962029,
+            "operator_norm_lower_estimate": 1298.112881032538,
+            "logical_gram_applications": 32,
+            "batched_gram_calls": 2,
+            "cumulative_operator_seconds": 1.2169627998955548
+          },
+          {
+            "power": 3,
+            "Y": 3.76863092141015e+21,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4857.128029110441,
+            "operator_norm_lower_estimate": 1781.4748361356706,
+            "logical_gram_applications": 48,
+            "batched_gram_calls": 3,
+            "cumulative_operator_seconds": 1.7687960998155177
+          },
+          {
+            "power": 4,
+            "Y": 4.325515733061022e+28,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4438.8089139093645,
+            "operator_norm_lower_estimate": 2092.0234832996507,
+            "logical_gram_applications": 64,
+            "batched_gram_calls": 4,
+            "cumulative_operator_seconds": 2.2769375998759642
+          },
+          {
+            "power": 5,
+            "Y": 4.996980930057064e+35,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4208.042711156387,
+            "operator_norm_lower_estimate": 2305.261641126187,
+            "logical_gram_applications": 80,
+            "batched_gram_calls": 5,
+            "cumulative_operator_seconds": 2.7700959998182952
+          },
+          {
+            "power": 6,
+            "Y": 5.786058189862281e+42,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4061.686268743103,
+            "operator_norm_lower_estimate": 2459.837654309106,
+            "logical_gram_applications": 96,
+            "batched_gram_calls": 6,
+            "cumulative_operator_seconds": 3.3645435998914763
+          },
+          {
+            "power": 7,
+            "Y": 6.705504128898906e+49,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 3960.5162113930846,
+            "operator_norm_lower_estimate": 2576.7135510816943,
+            "logical_gram_applications": 112,
+            "batched_gram_calls": 7,
+            "cumulative_operator_seconds": 3.8432603999972343
+          },
+          {
+            "power": 8,
+            "Y": 7.773620828931282e+56,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 3886.376002859164,
+            "operator_norm_lower_estimate": 2668.055557276859,
+            "logical_gram_applications": 128,
+            "batched_gram_calls": 8,
+            "cumulative_operator_seconds": 4.492671599960886
+          }
+        ]
+      },
+      "block_first": 37134.75399410239,
+      "block_second": 48451995.97261895,
+      "block_third": 192037435519.82007,
+      "block_fixed_point_consistent": true,
+      "block_fixed_point_iterations": 2,
+      "raw_guarantee_slack": 0.12806613480218587,
+      "raw_exclusion_slack": -0.12806613480218587
+    },
+    {
+      "step": 20,
+      "identity": [
+        4,
+        366,
+        1,
+        1120,
+        20,
+        4,
+        1
+      ],
+      "trace": {
+        "rng_seed": 760824535543086766,
+        "delta": 4.59896983075791e-11,
+        "probes": 16,
+        "maximum_power": 8,
+        "single_event_simultaneous_over_all_powers": true,
+        "rows": [
+          {
+            "power": 1,
+            "Y": 27643674.21143962,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 9813.970157474778,
+            "operator_norm_lower_estimate": 485.6139117170349,
+            "logical_gram_applications": 16,
+            "batched_gram_calls": 1,
+            "cumulative_operator_seconds": 0.5870908000506461
+          },
+          {
+            "power": 2,
+            "Y": 253131115475256.5,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 5449.539542765802,
+            "operator_norm_lower_estimate": 1211.0722199319464,
+            "logical_gram_applications": 32,
+            "batched_gram_calls": 2,
+            "cumulative_operator_seconds": 1.2093802000163123
+          },
+          {
+            "power": 3,
+            "Y": 2.896870981403746e+21,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4648.760178202401,
+            "operator_norm_lower_estimate": 1705.6004354198233,
+            "logical_gram_applications": 48,
+            "batched_gram_calls": 3,
+            "cumulative_operator_seconds": 1.73689739999827
+          },
+          {
+            "power": 4,
+            "Y": 3.3511433248845604e+28,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4299.42955774916,
+            "operator_norm_lower_estimate": 2026.8236107793361,
+            "logical_gram_applications": 64,
+            "batched_gram_calls": 4,
+            "cumulative_operator_seconds": 2.214140300056897
+          },
+          {
+            "power": 5,
+            "Y": 3.888301092245035e+35,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4103.792172133973,
+            "operator_norm_lower_estimate": 2248.585740950032,
+            "logical_gram_applications": 80,
+            "batched_gram_calls": 5,
+            "cumulative_operator_seconds": 2.645972300088033
+          },
+          {
+            "power": 6,
+            "Y": 4.5164957373009745e+42,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 3978.7007463919217,
+            "operator_norm_lower_estimate": 2409.9684295814814,
+            "logical_gram_applications": 96,
+            "batched_gram_calls": 6,
+            "cumulative_operator_seconds": 3.096773700090125
+          },
+          {
+            "power": 7,
+            "Y": 5.24841584241999e+49,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 3891.8094384127926,
+            "operator_norm_lower_estimate": 2532.3627671612894,
+            "logical_gram_applications": 112,
+            "batched_gram_calls": 7,
+            "cumulative_operator_seconds": 3.5755098001100123
+          },
+          {
+            "power": 8,
+            "Y": 6.099984434729325e+56,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 3827.9292445435876,
+            "operator_norm_lower_estimate": 2628.248711499854,
+            "logical_gram_applications": 128,
+            "batched_gram_calls": 8,
+            "cumulative_operator_seconds": 4.037628200137988
+          }
+        ]
+      },
+      "block_first": 37161.80556139552,
+      "block_second": 48488947.0255564,
+      "block_third": 192188819015.83084,
+      "block_fixed_point_consistent": true,
+      "block_fixed_point_iterations": 2,
+      "raw_guarantee_slack": 0.13533630385107287,
+      "raw_exclusion_slack": -0.13533630385107287
+    },
+    {
+      "step": 21,
+      "identity": [
+        4,
+        366,
+        1,
+        1120,
+        21,
+        4,
+        1
+      ],
+      "trace": {
+        "rng_seed": 2453891959409704957,
+        "delta": 4.59896983075791e-11,
+        "probes": 16,
+        "maximum_power": 8,
+        "single_event_simultaneous_over_all_powers": true,
+        "rows": [
+          {
+            "power": 1,
+            "Y": 32503633.203320287,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 10641.74392622735,
+            "operator_norm_lower_estimate": 526.9941921750134,
+            "logical_gram_applications": 16,
+            "batched_gram_calls": 1,
+            "cumulative_operator_seconds": 0.4960144000360742
+          },
+          {
+            "power": 2,
+            "Y": 345255007643117.44,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 5889.228723514638,
+            "operator_norm_lower_estimate": 1310.5540413550214,
+            "logical_gram_applications": 32,
+            "batched_gram_calls": 2,
+            "cumulative_operator_seconds": 1.340322200092487
+          },
+          {
+            "power": 3,
+            "Y": 3.932235064878574e+21,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4891.651724616754,
+            "operator_norm_lower_estimate": 1796.3317119215883,
+            "logical_gram_applications": 48,
+            "batched_gram_calls": 3,
+            "cumulative_operator_seconds": 1.940408700145781
+          },
+          {
+            "power": 4,
+            "Y": 4.544341995179753e+28,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4466.276319371382,
+            "operator_norm_lower_estimate": 2106.8996193715757,
+            "logical_gram_applications": 64,
+            "batched_gram_calls": 4,
+            "cumulative_operator_seconds": 2.4145789000904188
+          },
+          {
+            "power": 5,
+            "Y": 5.2780959022704716e+35,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4231.137098631765,
+            "operator_norm_lower_estimate": 2319.613900669777,
+            "logical_gram_applications": 80,
+            "batched_gram_calls": 5,
+            "cumulative_operator_seconds": 2.9098149001365528
+          },
+          {
+            "power": 6,
+            "Y": 6.14212970442307e+42,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4081.950403122632,
+            "operator_norm_lower_estimate": 2473.6213902197032,
+            "logical_gram_applications": 96,
+            "batched_gram_calls": 6,
+            "cumulative_operator_seconds": 3.4453738001175225
+          },
+          {
+            "power": 7,
+            "Y": 7.153114589652664e+49,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 3978.8388401843335,
+            "operator_norm_lower_estimate": 2589.9907285114086,
+            "logical_gram_applications": 112,
+            "batched_gram_calls": 7,
+            "cumulative_operator_seconds": 3.951392700197175
+          },
+          {
+            "power": 8,
+            "Y": 8.33312374141156e+56,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 3903.294734053661,
+            "operator_norm_lower_estimate": 2680.899130060307,
+            "logical_gram_applications": 128,
+            "batched_gram_calls": 8,
+            "cumulative_operator_seconds": 4.452412200160325
+          }
+        ]
+      },
+      "block_first": 37188.46520332361,
+      "block_second": 48525079.82319189,
+      "block_third": 192335688364.57584,
+      "block_fixed_point_consistent": true,
+      "block_fixed_point_iterations": 2,
+      "raw_guarantee_slack": 0.14258743169357047,
+      "raw_exclusion_slack": -0.14258743169357047
+    },
+    {
+      "step": 22,
+      "identity": [
+        4,
+        366,
+        1,
+        1120,
+        22,
+        4,
+        1
+      ],
+      "trace": {
+        "rng_seed": 7504325024229588120,
+        "delta": 4.59896983075791e-11,
+        "probes": 16,
+        "maximum_power": 8,
+        "single_event_simultaneous_over_all_powers": true,
+        "rows": [
+          {
+            "power": 1,
+            "Y": 29934412.816560756,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 10212.503580606675,
+            "operator_norm_lower_estimate": 504.48541527415364,
+            "logical_gram_applications": 16,
+            "batched_gram_calls": 1,
+            "cumulative_operator_seconds": 0.4919331999262795
+          },
+          {
+            "power": 2,
+            "Y": 324783209948216.06,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 5799.917518672454,
+            "operator_norm_lower_estimate": 1289.080426751135,
+            "logical_gram_applications": 32,
+            "batched_gram_calls": 2,
+            "cumulative_operator_seconds": 0.9820491998689249
+          },
+          {
+            "power": 3,
+            "Y": 3.750004779561169e+21,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4853.118773503236,
+            "operator_norm_lower_estimate": 1780.7094004319322,
+            "logical_gram_applications": 48,
+            "batched_gram_calls": 3,
+            "cumulative_operator_seconds": 1.3949189998675138
+          },
+          {
+            "power": 4,
+            "Y": 4.366122960562102e+28,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4443.996495565216,
+            "operator_norm_lower_estimate": 2095.0905895669703,
+            "logical_gram_applications": 64,
+            "batched_gram_calls": 4,
+            "cumulative_operator_seconds": 2.1258102998835966
+          },
+          {
+            "power": 5,
+            "Y": 5.094250478423493e+35,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4216.163066178737,
+            "operator_norm_lower_estimate": 2310.259039349102,
+            "logical_gram_applications": 80,
+            "batched_gram_calls": 5,
+            "cumulative_operator_seconds": 2.618791899876669
+          },
+          {
+            "power": 6,
+            "Y": 5.94789421426085e+42,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4071.034142177876,
+            "operator_norm_lower_estimate": 2465.9871558212944,
+            "logical_gram_applications": 96,
+            "batched_gram_calls": 6,
+            "cumulative_operator_seconds": 3.117176199797541
+          },
+          {
+            "power": 7,
+            "Y": 6.946304143973094e+49,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 3970.5095930204457,
+            "operator_norm_lower_estimate": 2583.653719531059,
+            "logical_gram_applications": 112,
+            "batched_gram_calls": 7,
+            "cumulative_operator_seconds": 3.82468779978808
+          },
+          {
+            "power": 8,
+            "Y": 8.113070306926085e+56,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 3896.7714413859526,
+            "operator_norm_lower_estimate": 2675.58949970196,
+            "logical_gram_applications": 128,
+            "batched_gram_calls": 8,
+            "cumulative_operator_seconds": 4.686370899784379
+          }
+        ]
+      },
+      "block_first": 37214.73611445123,
+      "block_second": 48560401.21673666,
+      "block_third": 192478081492.59805,
+      "block_fixed_point_consistent": true,
+      "block_fixed_point_iterations": 2,
+      "raw_guarantee_slack": 0.14981955460259044,
+      "raw_exclusion_slack": -0.14981955460259044
+    },
+    {
+      "step": 23,
+      "identity": [
+        4,
+        366,
+        1,
+        1120,
+        23,
+        4,
+        1
+      ],
+      "trace": {
+        "rng_seed": 4383239525094390719,
+        "delta": 4.59896983075791e-11,
+        "probes": 16,
+        "maximum_power": 8,
+        "single_event_simultaneous_over_all_powers": true,
+        "rows": [
+          {
+            "power": 1,
+            "Y": 37079856.91450626,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 11366.215210410417,
+            "operator_norm_lower_estimate": 560.7850774281745,
+            "logical_gram_applications": 16,
+            "batched_gram_calls": 1,
+            "cumulative_operator_seconds": 7.25961249996908
+          },
+          {
+            "power": 2,
+            "Y": 413291762318649.0,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 6160.097871387863,
+            "operator_norm_lower_estimate": 1368.289200139935,
+            "logical_gram_applications": 32,
+            "batched_gram_calls": 2,
+            "cumulative_operator_seconds": 7.732511400012299
+          },
+          {
+            "power": 3,
+            "Y": 4.817103699472715e+21,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 5059.954550527988,
+            "operator_norm_lower_estimate": 1855.8383309016428,
+            "logical_gram_applications": 48,
+            "batched_gram_calls": 3,
+            "cumulative_operator_seconds": 8.185325299971737
+          },
+          {
+            "power": 4,
+            "Y": 5.63589280362449e+28,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4588.091316127673,
+            "operator_norm_lower_estimate": 2162.3560037408874,
+            "logical_gram_applications": 64,
+            "batched_gram_calls": 4,
+            "cumulative_operator_seconds": 8.633022399968468
+          },
+          {
+            "power": 5,
+            "Y": 6.59746412421363e+35,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4326.603265532077,
+            "operator_norm_lower_estimate": 2370.1901473080297,
+            "logical_gram_applications": 80,
+            "batched_gram_calls": 5,
+            "cumulative_operator_seconds": 9.048538699978963
+          },
+          {
+            "power": 6,
+            "Y": 7.724089599221512e+42,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4160.655426340376,
+            "operator_norm_lower_estimate": 2519.756142228468,
+            "logical_gram_applications": 96,
+            "batched_gram_calls": 6,
+            "cumulative_operator_seconds": 9.465042700059712
+          },
+          {
+            "power": 7,
+            "Y": 9.043489819211765e+49,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4046.0448886152267,
+            "operator_norm_lower_estimate": 2632.3413580119973,
+            "logical_gram_applications": 112,
+            "batched_gram_calls": 7,
+            "cumulative_operator_seconds": 10.026023500133306
+          },
+          {
+            "power": 8,
+            "Y": 1.0588436962808652e+57,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 3962.1676450178193,
+            "operator_norm_lower_estimate": 2720.0721190707313,
+            "logical_gram_applications": 128,
+            "batched_gram_calls": 8,
+            "cumulative_operator_seconds": 10.507681800052524
+          }
+        ]
+      },
+      "block_first": 37240.62148910603,
+      "block_second": 48594918.07623519,
+      "block_third": 192616036533.15,
+      "block_fixed_point_consistent": true,
+      "block_fixed_point_iterations": 2,
+      "raw_guarantee_slack": 0.15703271273925168,
+      "raw_exclusion_slack": -0.15703271273925168
+    },
+    {
+      "step": 24,
+      "identity": [
+        4,
+        366,
+        1,
+        1120,
+        24,
+        4,
+        1
+      ],
+      "trace": {
+        "rng_seed": 2474702904142314607,
+        "delta": 4.59896983075791e-11,
+        "probes": 16,
+        "maximum_power": 8,
+        "single_event_simultaneous_over_all_powers": true,
+        "rows": [
+          {
+            "power": 1,
+            "Y": 32528625.857619014,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 10645.834458485904,
+            "operator_norm_lower_estimate": 524.6618392628556,
+            "logical_gram_applications": 16,
+            "batched_gram_calls": 1,
+            "cumulative_operator_seconds": 0.5525572000769898
+          },
+          {
+            "power": 2,
+            "Y": 340833586091424.8,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 5870.282762018451,
+            "operator_norm_lower_estimate": 1303.1935006673634,
+            "logical_gram_applications": 32,
+            "batched_gram_calls": 2,
+            "cumulative_operator_seconds": 1.0560841000406072
+          },
+          {
+            "power": 3,
+            "Y": 3.824343264715785e+21,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4869.022272078589,
+            "operator_norm_lower_estimate": 1785.1512459244004,
+            "logical_gram_applications": 48,
+            "batched_gram_calls": 3,
+            "cumulative_operator_seconds": 1.567811300046742
+          },
+          {
+            "power": 4,
+            "Y": 4.402915272749834e+28,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4448.660394981936,
+            "operator_norm_lower_estimate": 2096.0623431238187,
+            "logical_gram_applications": 64,
+            "batched_gram_calls": 4,
+            "cumulative_operator_seconds": 2.0608326999936253
+          },
+          {
+            "power": 5,
+            "Y": 5.12551376333534e+35,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4218.743396723362,
+            "operator_norm_lower_estimate": 2310.5909295960423,
+            "logical_gram_applications": 80,
+            "batched_gram_calls": 5,
+            "cumulative_operator_seconds": 2.5857341999653727
+          },
+          {
+            "power": 6,
+            "Y": 5.994943618099046e+42,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4073.708040669761,
+            "operator_norm_lower_estimate": 2466.6443077849053,
+            "logical_gram_applications": 96,
+            "batched_gram_calls": 6,
+            "cumulative_operator_seconds": 3.0762194000417367
+          },
+          {
+            "power": 7,
+            "Y": 7.025823216835168e+49,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 3973.7391149179984,
+            "operator_norm_lower_estimate": 2584.8906485506627,
+            "logical_gram_applications": 112,
+            "batched_gram_calls": 7,
+            "cumulative_operator_seconds": 3.501219700090587
+          },
+          {
+            "power": 8,
+            "Y": 8.240847879239714e+56,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 3900.5791937512595,
+            "operator_norm_lower_estimate": 2677.4204176166177,
+            "logical_gram_applications": 128,
+            "batched_gram_calls": 8,
+            "cumulative_operator_seconds": 3.9925511000910774
+          }
+        ]
+      },
+      "block_first": 37266.124520538666,
+      "block_second": 48628637.28808675,
+      "block_third": 192749591809.10748,
+      "block_fixed_point_consistent": true,
+      "block_fixed_point_iterations": 2,
+      "raw_guarantee_slack": 0.16422694987842945,
+      "raw_exclusion_slack": -0.16422694987842945
+    },
+    {
+      "step": 25,
+      "identity": [
+        4,
+        366,
+        1,
+        1120,
+        25,
+        4,
+        1
+      ],
+      "trace": {
+        "rng_seed": 2100789818887690475,
+        "delta": 4.59896983075791e-11,
+        "probes": 16,
+        "maximum_power": 8,
+        "single_event_simultaneous_over_all_powers": true,
+        "rows": [
+          {
+            "power": 1,
+            "Y": 26602791.603070155,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 9627.431919565619,
+            "operator_norm_lower_estimate": 473.270804490832,
+            "logical_gram_applications": 16,
+            "batched_gram_calls": 1,
+            "cumulative_operator_seconds": 0.45860620005987585
+          },
+          {
+            "power": 2,
+            "Y": 259450050567288.53,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 5483.235071826512,
+            "operator_norm_lower_estimate": 1221.5745601713447,
+            "logical_gram_applications": 32,
+            "batched_gram_calls": 2,
+            "cumulative_operator_seconds": 1.0014062001137063
+          },
+          {
+            "power": 3,
+            "Y": 3.0255422687350547e+21,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4682.554284118182,
+            "operator_norm_lower_estimate": 1720.8310380743706,
+            "logical_gram_applications": 48,
+            "batched_gram_calls": 3,
+            "cumulative_operator_seconds": 1.518586700083688
+          },
+          {
+            "power": 4,
+            "Y": 3.553839315956749e+28,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4331.107227872284,
+            "operator_norm_lower_estimate": 2044.2805347092035,
+            "logical_gram_applications": 64,
+            "batched_gram_calls": 4,
+            "cumulative_operator_seconds": 2.0812013000249863
+          },
+          {
+            "power": 5,
+            "Y": 4.179321815680997e+35,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4133.519125283351,
+            "operator_norm_lower_estimate": 2267.113156981344,
+            "logical_gram_applications": 80,
+            "batched_gram_calls": 5,
+            "cumulative_operator_seconds": 2.661294399993494
+          },
+          {
+            "power": 6,
+            "Y": 4.9161323811921254e+42,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4006.911703651014,
+            "operator_norm_lower_estimate": 2429.055721045409,
+            "logical_gram_applications": 96,
+            "batched_gram_calls": 6,
+            "cumulative_operator_seconds": 3.179834399954416
+          },
+          {
+            "power": 7,
+            "Y": 5.783236812633624e+49,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 3918.8781721448145,
+            "operator_norm_lower_estimate": 2551.7766114177603,
+            "logical_gram_applications": 112,
+            "batched_gram_calls": 7,
+            "cumulative_operator_seconds": 3.6858771999832243
+          },
+          {
+            "power": 8,
+            "Y": 6.8034318933746476e+56,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 3854.129995646115,
+            "operator_norm_lower_estimate": 2647.872916907861,
+            "logical_gram_applications": 128,
+            "batched_gram_calls": 8,
+            "cumulative_operator_seconds": 4.161449699895456
+          }
+        ]
+      },
+      "block_first": 37291.24840010457,
+      "block_second": 48661565.75262254,
+      "block_third": 192878785816.225,
+      "block_fixed_point_consistent": true,
+      "block_fixed_point_iterations": 2,
+      "raw_guarantee_slack": 0.17140231313917553,
+      "raw_exclusion_slack": -0.17140231313917553
+    },
+    {
+      "step": 26,
+      "identity": [
+        4,
+        366,
+        1,
+        1120,
+        26,
+        4,
+        1
+      ],
+      "trace": {
+        "rng_seed": 955177274322387405,
+        "delta": 4.59896983075791e-11,
+        "probes": 16,
+        "maximum_power": 8,
+        "single_event_simultaneous_over_all_powers": true,
+        "rows": [
+          {
+            "power": 1,
+            "Y": 24484935.31273759,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 9236.263843690253,
+            "operator_norm_lower_estimate": 458.60845149695314,
+            "logical_gram_applications": 16,
+            "batched_gram_calls": 1,
+            "cumulative_operator_seconds": 0.4908980999607593
+          },
+          {
+            "power": 2,
+            "Y": 235723109652237.3,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 5353.329378979459,
+            "operator_norm_lower_estimate": 1188.6965248695074,
+            "logical_gram_applications": 32,
+            "batched_gram_calls": 2,
+            "cumulative_operator_seconds": 0.9758178999181837
+          },
+          {
+            "power": 3,
+            "Y": 2.750305577714687e+21,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4608.70710268258,
+            "operator_norm_lower_estimate": 1689.9627291888528,
+            "logical_gram_applications": 48,
+            "batched_gram_calls": 3,
+            "cumulative_operator_seconds": 1.4671784999081865
+          },
+          {
+            "power": 4,
+            "Y": 3.235310125833257e+28,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4280.566044456612,
+            "operator_norm_lower_estimate": 2017.0873973528373,
+            "logical_gram_applications": 64,
+            "batched_gram_calls": 4,
+            "cumulative_operator_seconds": 2.0622456999262795
+          },
+          {
+            "power": 5,
+            "Y": 3.812211662713917e+35,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 4095.689932211091,
+            "operator_norm_lower_estimate": 2243.395692314899,
+            "logical_gram_applications": 80,
+            "batched_gram_calls": 5,
+            "cumulative_operator_seconds": 2.6048765999730676
+          },
+          {
+            "power": 6,
+            "Y": 4.494171021678081e+42,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 3977.0581522992557,
+            "operator_norm_lower_estimate": 2408.302022932633,
+            "logical_gram_applications": 96,
+            "batched_gram_calls": 6,
+            "cumulative_operator_seconds": 3.206986799952574
+          },
+          {
+            "power": 7,
+            "Y": 5.298981323287829e+49,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 3894.4757716365284,
+            "operator_norm_lower_estimate": 2533.4922824105233,
+            "logical_gram_applications": 112,
+            "batched_gram_calls": 7,
+            "cumulative_operator_seconds": 3.7525706999003887
+          },
+          {
+            "power": 8,
+            "Y": 6.248275674483332e+56,
+            "c_delta": 0.28701612713630525,
+            "operator_norm_upper_bound": 3833.680074738996,
+            "operator_norm_lower_estimate": 2631.6469422358978,
+            "logical_gram_applications": 128,
+            "batched_gram_calls": 8,
+            "cumulative_operator_seconds": 4.243957199971192
+          }
+        ]
+      },
+      "block_first": 37315.996316468496,
+      "block_second": 48693710.381740205,
+      "block_third": 193003657206.743,
+      "block_fixed_point_consistent": true,
+      "block_fixed_point_iterations": 2,
+      "raw_guarantee_slack": 0.1785588527213875,
+      "raw_exclusion_slack": -0.1785588527213875
+    }
+  ],
+  "probability_budget": {
+    "queried_operators": 27,
+    "queried_union_bound": 1.2417218543046356e-09,
+    "maximum_family_union_bound": 1e-06,
+    "no_union_over_power_levels": true,
+    "allowed_operator_count": 3823,
+    "collision_free_stream_count": 3823,
+    "queried_operator_count": 27,
+    "all_queries_predeclared": true
+  },
+  "timings_seconds": {
+    "centerline": 213.73111639998388,
+    "output_phase_this_process": 124.1930017999839,
+    "green_phase_this_process": 238.87938029994257,
+    "total_this_process": 583.8471970000537
+  },
+  "outcome_joined": false
+}

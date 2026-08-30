@@ -1,0 +1,191 @@
+{
+  "status": "independent post-seal hardening audit passed",
+  "digits_outward": {
+    "issued": 7,
+    "covered": 7,
+    "brackets_identical": 7,
+    "unique_tubes": 7,
+    "signed_only_issued_and_covered": 1,
+    "maximum_radius": 5.065763671726472e-09,
+    "minimum_logic_slack": 1.4565211626682558e-05,
+    "maximum_hessian_interval_row_radius": 2.1782535052757978e-11,
+    "maximum_eigen_numeric_error": 1.3929964766352733e-10,
+    "aggregate_outward_seconds": 6157.261417299858,
+    "rows": [
+      {
+        "seed": 503,
+        "gate_index": 0,
+        "anchor": 35,
+        "green_bracket": [
+          49,
+          49
+        ],
+        "outward_bracket": [
+          49,
+          49
+        ],
+        "actual_event": 49,
+        "identical": true,
+        "covered": true,
+        "signed_only": false
+      },
+      {
+        "seed": 504,
+        "gate_index": 0,
+        "anchor": 60,
+        "green_bracket": [
+          49,
+          49
+        ],
+        "outward_bracket": [
+          49,
+          49
+        ],
+        "actual_event": 49,
+        "identical": true,
+        "covered": true,
+        "signed_only": false
+      },
+      {
+        "seed": 506,
+        "gate_index": 0,
+        "anchor": 20,
+        "green_bracket": [
+          70,
+          70
+        ],
+        "outward_bracket": [
+          70,
+          70
+        ],
+        "actual_event": 70,
+        "identical": true,
+        "covered": true,
+        "signed_only": false
+      },
+      {
+        "seed": 507,
+        "gate_index": 0,
+        "anchor": 35,
+        "green_bracket": [
+          117,
+          117
+        ],
+        "outward_bracket": [
+          117,
+          117
+        ],
+        "actual_event": 117,
+        "identical": true,
+        "covered": true,
+        "signed_only": false
+      },
+      {
+        "seed": 509,
+        "gate_index": 0,
+        "anchor": 35,
+        "green_bracket": [
+          147,
+          147
+        ],
+        "outward_bracket": [
+          147,
+          147
+        ],
+        "actual_event": 147,
+        "identical": true,
+        "covered": true,
+        "signed_only": true
+      },
+      {
+        "seed": 512,
+        "gate_index": 0,
+        "anchor": 20,
+        "green_bracket": [
+          42,
+          42
+        ],
+        "outward_bracket": [
+          42,
+          42
+        ],
+        "actual_event": 42,
+        "identical": true,
+        "covered": true,
+        "signed_only": false
+      },
+      {
+        "seed": 512,
+        "gate_index": 1,
+        "anchor": 35,
+        "green_bracket": [
+          73,
+          73
+        ],
+        "outward_bracket": [
+          73,
+          73
+        ],
+        "actual_event": 73,
+        "identical": true,
+        "covered": true,
+        "signed_only": false
+      }
+    ]
+  },
+  "batched_transformer": {
+    "primitive_profiles": 3,
+    "maximum_primitive_relative_error": 3.238052331218576e-16,
+    "complete_replays": 2,
+    "exact_replay_matches": 2,
+    "median_end_to_end_speedup": 2.8017705526754826,
+    "minimum_end_to_end_speedup": 2.602651523277448,
+    "maximum_end_to_end_speedup": 3.0008895820735173,
+    "million_parameter_matched_serial_hours": 18.276952128460785,
+    "million_parameter_batched_hours": 11.372996739763508,
+    "million_parameter_matched_speedup": 1.6070480407823313,
+    "million_parameter_peak_rss_gib": 1.3870353698730469,
+    "replays": [
+      {
+        "seed": 333,
+        "gate_index": 0,
+        "anchor": 3000,
+        "horizon": 52,
+        "bracket": [
+          28,
+          28
+        ],
+        "maximum_relative_error": 0.0,
+        "end_to_end_speedup": 3.0008895820735173,
+        "batched_minutes": 5.939225273332947,
+        "serial_minutes": 17.822959248332577
+      },
+      {
+        "seed": 345,
+        "gate_index": 1,
+        "anchor": 1320,
+        "horizon": 54,
+        "bracket": [
+          30,
+          30
+        ],
+        "maximum_relative_error": 2.1428757778499808e-16,
+        "end_to_end_speedup": 2.602651523277448,
+        "batched_minutes": 6.661173403332941,
+        "serial_minutes": 17.336713104999703
+      }
+    ]
+  },
+  "modern_transformer_primitives": {
+    "parameters": 102400,
+    "optimizer_state_dimension": 307200,
+    "depth": 2,
+    "normalization": "layernorm",
+    "optimizer": "AdamW",
+    "green_horizon": 3,
+    "optimizer_adjoint_relative_error": 5.442891023731882e-15,
+    "green_adjoint_relative_error": 4.397267002200284e-15,
+    "peak_rss_gib": 0.3707275390625,
+    "scope": "This validates exact matrix-free optimizer/Green products on a two-block pre-LayerNorm AdamW Transformer. It is not a first-passage certificate; LayerNorm/AdamW global derivative envelopes remain unimplemented."
+  }
+}

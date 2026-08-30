@@ -1,0 +1,84 @@
+{
+  "status": "PAIRED AMPLIFIED-SECANT BENCHMARK PASSED",
+  "evidence_boundary": "Post-seal outcome-blind systems benchmark. All three branches include their incremental work after the shared centerline, first response, and first Gram power; it does not alter prospective evidence.",
+  "candidate": {
+    "seed": 366,
+    "threshold": 0.7,
+    "anchor": 1040
+  },
+  "horizon": 52,
+  "amplification": 4096.0,
+  "repeats": 3,
+  "warmup_seconds": {
+    "secant": 5.873660999990534,
+    "third": 7.397674800013192,
+    "power": 25.77265410000109
+  },
+  "median_secant_seconds": 6.558657099987613,
+  "median_third_product_seconds": 8.100442700000713,
+  "median_additional_gram_power_seconds": 26.007475799997337,
+  "median_paired_third_over_secant_speedup": 1.1923708890424844,
+  "median_paired_power_over_secant_speedup": 4.0413260665889394,
+  "minimum_power_over_secant_speedup": 3.8198985845418694,
+  "maximum_power_over_secant_speedup": 4.370522476848509,
+  "checksums": {
+    "secant": [
+      4.013845661895033e-23,
+      1.9704864047750598e-22,
+      2.568911437370008e-21
+    ],
+    "third": [
+      3.146091221026792e-31,
+      5.834270642686859e-30,
+      6.2732880026026835e-25
+    ],
+    "power": [
+      1470162276320.8174
+    ]
+  },
+  "certificate_sha256": "63DA40D4989669A1D1349B25323732C6800FD05E7EF793FBDE9C624E709CE24B",
+  "full_audit_sha256": "029E364FC6D773F9BD1BCFA7444F7879A1DACF918268B354A89F38B0791807FF",
+  "two_response_source_sha256": "2DAF416457E016F9D9A77F2E49B4B8B4FBAC8C69C98C9A3051D9105F11A3C287",
+  "outcome_files_read": 0,
+  "records": [
+    {
+      "repeat": 1,
+      "order": [
+        "secant",
+        "third",
+        "power"
+      ],
+      "secant_seconds": 6.79355959998793,
+      "third_product_seconds": 8.100442700000713,
+      "additional_gram_power_seconds": 25.95070869999472,
+      "third_over_secant_speedup": 1.1923708890424844,
+      "power_over_secant_speedup": 3.8198985845418694
+    },
+    {
+      "repeat": 2,
+      "order": [
+        "power",
+        "secant",
+        "third"
+      ],
+      "secant_seconds": 6.558657099987613,
+      "third_product_seconds": 7.638971100008348,
+      "additional_gram_power_seconds": 26.50567189999856,
+      "third_over_secant_speedup": 1.1647157312161929,
+      "power_over_secant_speedup": 4.0413260665889394
+    },
+    {
+      "repeat": 3,
+      "order": [
+        "third",
+        "power",
+        "secant"
+      ],
+      "secant_seconds": 5.95065600000089,
+      "third_product_seconds": 8.71994359997916,
+      "additional_gram_power_seconds": 26.007475799997337,
+      "third_over_secant_speedup": 1.4653751788000946,
+      "power_over_secant_speedup": 4.370522476848509
+    }
+  ]
+}

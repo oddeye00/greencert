@@ -1,0 +1,148 @@
+{
+  "version": 1,
+  "candidate": {
+    "seed": 372,
+    "threshold": 0.7,
+    "anchor": 3440
+  },
+  "horizon": 270,
+  "route": "gram_fallback",
+  "bracket": [
+    246,
+    246
+  ],
+  "panel_bracket": [
+    246,
+    246
+  ],
+  "prefix": 4,
+  "stage_rows": [
+    {
+      "prefix": 4,
+      "direct": {
+        "probes": 4,
+        "Y_direct": 178897.81175204576,
+        "c_delta": 0.015302900703286656,
+        "delta": 2.222222222222222e-08,
+        "operator_norm_upper_bound": 11690451.060276648,
+        "operator_norm_lower_estimate": 65.53422609630547,
+        "forward_green_applications": 4,
+        "transpose_green_applications": 0,
+        "forcing_response_upper": 1.522124650203219e-16,
+        "closure": {
+          "kappa": 11690451.060276648,
+          "derivative_drift": 41111453453.13092,
+          "corrected_defect_response_bound": 1.522124650203219e-16,
+          "correction_max_state_norm": 1.0868734881129252e-14,
+          "domain_radius": 1.93298704306736e-13,
+          "discriminant": -145.3101023580862,
+          "remainder_radius": null,
+          "total_radius_about_original_reference": null,
+          "algebraic_closure_passed": false,
+          "domain_passed": false,
+          "closure_passed": false,
+          "closure_residual": null
+        },
+        "bracket": null,
+        "output_power": null,
+        "logic_slack": null,
+        "maximum_margin_radius": null,
+        "issued": false
+      },
+      "gram": {
+        "probes": 4,
+        "power": 1,
+        "Y": 222261767.30275843,
+        "c_delta": 0.015302900703286656,
+        "delta": 2.222222222222222e-08,
+        "operator_norm_upper_bound": 120516.21999862751,
+        "operator_norm_lower_estimate": 285.34085289339004,
+        "gram_applications": 4,
+        "forcing_response_upper": 1.5691499691790683e-18,
+        "closure": {
+          "kappa": 120516.21999862751,
+          "derivative_drift": 41111453453.13092,
+          "corrected_defect_response_bound": 1.5691499691790683e-18,
+          "correction_max_state_norm": 1.0868734881129252e-14,
+          "domain_radius": 1.93298704306736e-13,
+          "discriminant": 0.98445098863816,
+          "remainder_radius": 1.5752975398001967e-18,
+          "total_radius_about_original_reference": 1.0870310178669053e-14,
+          "algebraic_closure_passed": true,
+          "domain_passed": true,
+          "closure_passed": true,
+          "closure_residual": 0.0
+        },
+        "bracket": [
+          246,
+          246
+        ],
+        "output_power": 1,
+        "logic_slack": 0.0008635961067302452,
+        "maximum_margin_radius": 2.2991462023382055e-14,
+        "issued": true
+      }
+    }
+  ],
+  "probe_hashes": [
+    "4EFF7D108D59791002FEEA91A5208294A84F51112B8086637BA1AE0051A60178",
+    "59F4E331A177424E5EB98A0125786BB57154ED6F0075AE67770C2A05D4DEB402",
+    "BA636D46D507BF8AAEEC2543BE684E45FB9D05F5FCEF5ADAA5746FC41F0BD4BF",
+    "A6C6B8AE527513190E8BC7FDE5824E694B5F7D91CE656D04EE8B90CFD1D2F821"
+  ],
+  "initial_probe_norms": [
+    2728.8062010161407,
+    2729.837863487507,
+    2729.014153910928,
+    2729.2890874467284
+  ],
+  "direct_image_norms": [
+    177840.4207040501,
+    178897.81175204576,
+    178343.4650167037,
+    177861.49737464378
+  ],
+  "gram_norms_computed": [
+    221020299.66227067,
+    222261767.30275843,
+    221652152.86232862,
+    221209172.24417993
+  ],
+  "logical_forward_green_applications": 4,
+  "logical_transpose_green_applications": 4,
+  "logical_total_green_sweeps": 8,
+  "panel_logical_green_sweeps": 8,
+  "probe_sweep_reduction": 1.0,
+  "transpose_sweeps_avoided": 0,
+  "timings_seconds": {
+    "streaming_centerline": 58.989679699996486,
+    "corrected_path": 14.163229900004808,
+    "operator_setup": 0.004541499947663397,
+    "direct_forward_queries": 22.133294100000057,
+    "transpose_fallback_queries": 20.363443600013852,
+    "staged_green_queries": 42.49673770001391,
+    "total": 119.21043769997777
+  },
+  "corrected_path_sha256": "356604C504DABB9C9099F4A3C759335F573FD3A84AE8AD26E399C356102C9D15",
+  "panel_result_sha256": "08E501B51FEAC3D96FFE02BE0B5D84E0E682C2E73CB906C083ED0FEF7E75E12B",
+  "certificate_sha256": "0E0323259DFD5A8C4A87870B42CF95D9EF991660C9DA0BA5905AB4D92DE54383",
+  "protocol_sha256": "11813379A4B388EB71C409BE4709EB366E6E5BE8BF53C27AA5334802226EC428",
+  "source_sha256": "A46FFE4F68AA15E75EA37755231227481233A8EFD9C35D2066CBB1141A095BB7",
+  "dependency_sha256": {
+    "scripts/audit_transformer_direct_image_green_panel.py": "A46FFE4F68AA15E75EA37755231227481233A8EFD9C35D2066CBB1141A095BB7",
+    "scripts/direct_image_green_bound.py": "EC8B9DECA1FE6E17B4C03AA145A8829BA141BE8A5D223CDA86F82305B360F778",
+    "scripts/streaming_variational_centerline.py": "CEA0ADE5FC1255969B7A93CB1D8525EBBEE9020709CEB5399DB9A090E450228A",
+    "scripts/batched_green_operator.py": "C30C1DAF0E8A8494B518CD12E6328146B1A20DD297033192C78408C2E46F54BF",
+    "scripts/audit_transformer_relinearized_prefix_panel.py": "BE35D0771CF49B53B2D0721AA4BF3035EE9A9BF2F2DFA1BABB2B9B37A47A2B58",
+    "scripts/relinearized_green_closure.py": "ACFB21152D0467E6DDAAB627138325B2079C4F75C1F8BD7FF708C427F67FE5E1",
+    "scripts/transformer_green_operator.py": "F529F42D8DC6B01C94D5F5496AC60BB8F63B4BC030FF85449F106362C8CE20B4",
+    "scripts/transformer_optimizer_probe.py": "3C7665274245731141F4E0F451652F486CB65D7A16B0DCF233BAA66E8BFD5C79",
+    "scripts/transformer_v3_certificate.py": "5050DA95BAE58B02CB15AFAAF4802F9968A70562A26934B9F5E13FD224E71CBF",
+    "DIRECT_IMAGE_GREEN_THEOREM.md": "EC5A854A67CCA47EF0A0F21ED08AD2E538D1F39BC74E70D18D86A941F6122159",
+    "CAUSAL_PREFIX_RECENTERING_THEOREM.md": "FC20EA02DB556C43E751A33161907DBC728EF7FEBB5BF65A58EBDC758C30319D",
+    "results/transformer_v3_relinearized_prefix_panel_audit.json": "08E501B51FEAC3D96FFE02BE0B5D84E0E682C2E73CB906C083ED0FEF7E75E12B",
+    "results/transformer_v3_two_response_postseal_audit.json": "2DAF416457E016F9D9A77F2E49B4B8B4FBAC8C69C98C9A3051D9105F11A3C287"
+  },
+  "combined_family_failure_upper": 2e-06,
+  "outcome_files_read": 0
+}

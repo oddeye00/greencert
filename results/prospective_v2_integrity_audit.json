@@ -1,0 +1,194 @@
+{
+  "status": "post-outcome integrity audit passed",
+  "protocol_sha256": "ef79c9e06170ba6bdafb39ee106b215c503b40873e4cb121276d3f23313e3092",
+  "manifest_sha256": "e365e2c64a46b6ffa900fd46bbd036c97bc20320d3d74ef6b60616c4e29418c4",
+  "blind_trigger_artifact_has_no_future_fields": true,
+  "blind_interval_artifact_has_no_future_fields": true,
+  "checkpoint_replays_exact": true,
+  "trigger_attempts": 27,
+  "unique_trigger_anchors": 27,
+  "float_candidates": 16,
+  "outward_candidates": 16,
+  "outward_brackets_identical_to_float_candidates": true,
+  "outward_coverage_count": [
+    16,
+    16
+  ],
+  "all_interval_tubes_reached_requested_horizon": true,
+  "observed_state_tube_violations": 0,
+  "maximum_observed_error_to_bound_ratio": 0.9999999970132211,
+  "maximum_absolute_outward_radius_inflation": 6.683409242958837e-11,
+  "maximum_relative_outward_radius_inflation_where_float_radius_exceeds_1e-10": 1.1004100793633813,
+  "maximum_hessian_evaluation_error": 7.392220374218488e-12,
+  "maximum_eigen_numeric_error": 1.853357299209149e-10,
+  "brackets": [
+    {
+      "seed": 17,
+      "threshold": 0.8,
+      "anchor": 47000,
+      "outward_bracket": [
+        39,
+        39
+      ],
+      "actual_lead": 39
+    },
+    {
+      "seed": 17,
+      "threshold": 0.9,
+      "anchor": 115250,
+      "outward_bracket": [
+        71,
+        71
+      ],
+      "actual_lead": 71
+    },
+    {
+      "seed": 17,
+      "threshold": 0.95,
+      "anchor": 123500,
+      "outward_bracket": [
+        190,
+        190
+      ],
+      "actual_lead": 190
+    },
+    {
+      "seed": 19,
+      "threshold": 0.7,
+      "anchor": 13000,
+      "outward_bracket": [
+        2,
+        2
+      ],
+      "actual_lead": 2
+    },
+    {
+      "seed": 19,
+      "threshold": 0.95,
+      "anchor": 17000,
+      "outward_bracket": [
+        18,
+        20
+      ],
+      "actual_lead": 18
+    },
+    {
+      "seed": 21,
+      "threshold": 0.6,
+      "anchor": 17000,
+      "outward_bracket": [
+        64,
+        70
+      ],
+      "actual_lead": 66
+    },
+    {
+      "seed": 21,
+      "threshold": 0.9,
+      "anchor": 21250,
+      "outward_bracket": [
+        237,
+        237
+      ],
+      "actual_lead": 237
+    },
+    {
+      "seed": 21,
+      "threshold": 0.95,
+      "anchor": 25000,
+      "outward_bracket": [
+        158,
+        158
+      ],
+      "actual_lead": 158
+    },
+    {
+      "seed": 23,
+      "threshold": 0.6,
+      "anchor": 21500,
+      "outward_bracket": [
+        36,
+        36
+      ],
+      "actual_lead": 36
+    },
+    {
+      "seed": 23,
+      "threshold": 0.7,
+      "anchor": 22750,
+      "outward_bracket": [
+        189,
+        189
+      ],
+      "actual_lead": 189
+    },
+    {
+      "seed": 23,
+      "threshold": 0.8,
+      "anchor": 24500,
+      "outward_bracket": [
+        182,
+        182
+      ],
+      "actual_lead": 182
+    },
+    {
+      "seed": 23,
+      "threshold": 0.9,
+      "anchor": 26000,
+      "outward_bracket": [
+        104,
+        104
+      ],
+      "actual_lead": 104
+    },
+    {
+      "seed": 24,
+      "threshold": 0.6,
+      "anchor": 23500,
+      "outward_bracket": [
+        199,
+        199
+      ],
+      "actual_lead": 199
+    },
+    {
+      "seed": 24,
+      "threshold": 0.8,
+      "anchor": 27250,
+      "outward_bracket": [
+        44,
+        44
+      ],
+      "actual_lead": 44
+    },
+    {
+      "seed": 24,
+      "threshold": 0.9,
+      "anchor": 36750,
+      "outward_bracket": [
+        113,
+        113
+      ],
+      "actual_lead": 113
+    },
+    {
+      "seed": 24,
+      "threshold": 0.95,
+      "anchor": 52500,
+      "outward_bracket": [
+        198,
+        198
+      ],
+      "actual_lead": 198
+    }
+  ],
+  "artifact_sha256": {
+    "PROSPECTIVE_V2_CODE_MANIFEST.json": "e365e2c64a46b6ffa900fd46bbd036c97bc20320d3d74ef6b60616c4e29418c4",
+    "results/prospective_v2_primary_triggers_blind.json": "074790811fd406348f46523cb92ddd488703aad76daae4a9c7b3944f1524123c",
+    "results/prospective_v2_primary_outcomes.json": "76deb6d54ed8439238df19224f7d99fdcdc690b65bb50e4439c8bf9496a4aede",
+    "results/prospective_v2_interval_blind.json": "754fbce5da4fd329166a47727ff1a5d2af0d9042f06d61a23468259c88406c16",
+    "results/prospective_v2_primary.json": "042f0fd7cde4131f4390b46cb5bbc89e8cb1afe97d9ca1d544daad08ed926b7a",
+    "results/prospective_v2_interval.json": "e28d2b96cafd30e62048975628f286ed0d0af18a305230408b9252768254abb2"
+  }
+}

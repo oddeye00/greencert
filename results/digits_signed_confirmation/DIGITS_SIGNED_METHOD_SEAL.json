@@ -1,0 +1,73 @@
+{
+  "code_sha256": {
+    "DIGITS_SIGNED_CONFIRMATION_PROTOCOL.md": "50538D2A974C807F4E10093E00490D78BEB4845C6FA3CF6439EAB1BEDAB0AC77",
+    "scripts/block_jet_bound.py": "1BE78A5069BBA9C26755A88D77F89242B87639840AB5CD3C0577F5D2AA396966",
+    "scripts/digits_parity_mlp.py": "77D036986813AB0FF7FF38DA981A0166A6579575EE34385C2BDD3562B635BBC0",
+    "scripts/matrix_free_mlp.py": "D4EB03510EA161A4B507D4BBC6CDD5738A9A880E13E9D507FBE86FC2DED32783",
+    "scripts/probe_jacobian_bound.py": "CAF1ACEC6941125FE0556ACF53DE65AEA77C8F298C5EEA5123D7F46CDE0B30DD",
+    "scripts/real_dataset_greencert.py": "517BA3BE3F5724E9E4A5121E23DC830B0B5B4347E6592BF1DA58F083C79907FB",
+    "scripts/real_dataset_jet_bound.py": "B5E9150E86A38A96E20B0F97339D01B05471E054A7EF53A508369224B08A2A5D",
+    "scripts/real_dataset_mlp.py": "03670EA3A10969EC52A38089CAC1DAFF28444EC165184513104FEDE1198EAAA9",
+    "scripts/run_digits_signed_confirmation.py": "E7E62D514287331FF3D6A71B2A49D929D1C2F04B2F020089EC5F237C7F09B058",
+    "scripts/test_digits_parity_mlp.py": "FADA02061A73260DBCC082AD56762A4A8B906CD42F34EB5FE21A952CC98F9F40",
+    "scripts/test_digits_signed_confirmation_protocol.py": "F5B0D94E286EC3B91CECD1F6208A353AE151229EDE1E0F38146D0F3223A5D1B0",
+    "scripts/transformer_green_operator.py": "F529F42D8DC6B01C94D5F5496AC60BB8F63B4BC030FF85449F106362C8CE20B4",
+    "scripts/transformer_modal_forecast.py": "1FE76CA893EC84E880EC6917274CBE51766C5A1857D96132F55D99532BC71E06"
+  },
+  "config": {
+    "checkpoint_every": 5,
+    "dtype": "float64",
+    "learning_rate": 0.03,
+    "seed": 0,
+    "steps": 600,
+    "threads": 1,
+    "weight_decay": 0.001,
+    "width": 8
+  },
+  "created_utc": "2026-08-25T04:27:41.020123+00:00",
+  "development_disclosure": "Seeds 0--2 were inspected; fresh seeds 501--512 were untouched.",
+  "external_timestamp": null,
+  "external_timestamp_note": "Local SHA-256 seal; no priority claim relies on timestamping.",
+  "family_failure_probability": 1e-06,
+  "fresh_seeds": [
+    501,
+    502,
+    503,
+    504,
+    505,
+    506,
+    507,
+    508,
+    509,
+    510,
+    511,
+    512
+  ],
+  "horizon": 400,
+  "master_nonce": "2fa5a6bc9c6cd2b469c3e237ca226f08d952f3fbb7a79678aa1bd11172f2a1d4",
+  "maximum_probabilistic_operators": 24,
+  "minimum_train_accuracy": 0.8,
+  "persistence": 10,
+  "probe": {
+    "delta": 4.166666666666666e-08,
+    "power": 4,
+    "probes": 8
+  },
+  "protocol_sha256": "50538D2A974C807F4E10093E00490D78BEB4845C6FA3CF6439EAB1BEDAB0AC77",
+  "raw_data_sha256": "F6D9E39F37DC45D327F6DB33428EE58970CCCEABB2535A5C179DE35886B70443",
+  "software_environment": {
+    "logical_cpu_count": 16,
+    "numpy": "2.5.2",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+    "sklearn": "1.9.0",
+    "torch": "2.13.0+cpu"
+  },
+  "status": "FROZEN BEFORE FRESH TRAINING",
+  "sweeps": 3,
+  "thresholds": [
+    0.9,
+    0.925
+  ],
+  "trigger_band": 0.1
+}

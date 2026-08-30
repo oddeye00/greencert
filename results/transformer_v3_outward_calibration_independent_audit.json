@@ -1,0 +1,9 @@
+{
+  "status": "independent outward-calibration integrity audit passed",
+  "source_sha256": "74B40EE5E10C19CE878C55E6E8AB4CE99F4346C6993B90249684B7535389D89E",
+  "issued_and_retained": 11,
+  "distinct_seeds": 7,
+  "stored_calibration_is_conservative": true,
+  "minimum_logic_slack": 0.00018040466854271495,
+  "scope_preserved": "conditional on stored binary64 Y; no HVP/VJP or neural-jet outward-enclosure claim"
+}

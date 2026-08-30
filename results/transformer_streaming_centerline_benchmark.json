@@ -1,0 +1,66 @@
+{
+  "status": "STREAMING PREFIX-LOCAL CENTERLINE BENCHMARK COMPLETED",
+  "evidence_boundary": "Post-seal deterministic implementation benchmark. It reads no revealed future trajectory and changes no certificate count.",
+  "cases": 3,
+  "all_bitwise_equal": true,
+  "rows": [
+    {
+      "candidate": {
+        "seed": 366,
+        "threshold": 0.8,
+        "anchor": 1120
+      },
+      "horizon": 26,
+      "order": "full_first",
+      "bitwise_center_prefix_equal": true,
+      "bitwise_scaled_prefix_equal": true,
+      "predicted_persistent_event": 2,
+      "full_300_seconds": 35.956632299988996,
+      "streamed_prefix_seconds": 3.6173966999631375,
+      "speedup": 9.939919583703775,
+      "full_intermediate_centerline_bytes_estimate": 332111360,
+      "streaming_live_plus_final_bytes_estimate": 8385536,
+      "estimated_centerline_memory_reduction": 39.60526315789474,
+      "outcome_files_read": 0
+    },
+    {
+      "candidate": {
+        "seed": 360,
+        "threshold": 0.7,
+        "anchor": 3480
+      },
+      "horizon": 131,
+      "order": "stream_first",
+      "bitwise_center_prefix_equal": true,
+      "bitwise_scaled_prefix_equal": true,
+      "predicted_persistent_event": 107,
+      "full_300_seconds": 37.394241700007115,
+      "streamed_prefix_seconds": 17.888070299988613,
+      "speedup": 2.0904569958018846,
+      "full_intermediate_centerline_bytes_estimate": 332111360,
+      "streaming_live_plus_final_bytes_estimate": 31556096,
+      "estimated_centerline_memory_reduction": 10.524475524475525,
+      "outcome_files_read": 0
+    },
+    {
+      "candidate": {
+        "seed": 370,
+        "threshold": 0.7,
+        "anchor": 2280
+      },
+      "horizon": 299,
+      "order": "full_first",
+      "bitwise_center_prefix_equal": true,
+      "bitwise_scaled_prefix_equal": true,
+      "predicted_persistent_event": 275,
+      "full_300_seconds": 39.123206999967806,
+      "streamed_prefix_seconds": 36.95169660000829,
+      "speedup": 1.0587661893705587,
+      "full_intermediate_centerline_bytes_estimate": 332111360,
+      "streaming_live_plus_final_bytes_estimate": 68628992,
+      "estimated_centerline_memory_reduction": 4.839228295819936,
+      "outcome_files_read": 0
+    }
+  ],
+  "outcome_files_read": 0
+}

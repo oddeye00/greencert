@@ -1,0 +1,21 @@
+{
+  "actual_event": 775,
+  "anchor": 25,
+  "bracket_contains_actual": null,
+  "certificate_issued": false,
+  "certificate_sha256": "33E8498DA2DC94898C4D897FA6EE02C1E44B0E6994F6A3BFABD73D6ABBD0B0A2",
+  "certificate_status": "centerline has no future certification-set event",
+  "certified_bracket": null,
+  "closure_slack": null,
+  "closure_statistic": null,
+  "directional_gain_ratio": null,
+  "gate_index": 2,
+  "minimum_output_slack": null,
+  "predicted_event": null,
+  "raw_timing_error": null,
+  "seed": 107,
+  "threshold": 0.95,
+  "unsigned_right_inverse_certificate_issued": null,
+  "unsigned_right_inverse_certified_bracket": null,
+  "unsigned_right_inverse_closure_statistic": null
+}

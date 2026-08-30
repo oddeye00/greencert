@@ -1,0 +1,58 @@
+{
+  "status_tier": "DEVELOPMENT ONLY; OUTCOMES PREVIOUSLY INSPECTED",
+  "dataset": "scikit-learn digits, binary parity target",
+  "config": {
+    "width": 8,
+    "learning_rate": 0.01,
+    "weight_decay": 0.001,
+    "steps": 600,
+    "checkpoint_every": 5,
+    "seed": 0,
+    "threads": 1,
+    "dtype": "float64"
+  },
+  "parameter_count": 538,
+  "anchor": 85,
+  "threshold": 0.9,
+  "horizon": 500,
+  "sweeps": 2,
+  "probe": {
+    "probes": 4,
+    "power": 2,
+    "delta": 1e-06
+  },
+  "certificate": {
+    "seed": 0,
+    "gate_index": 0,
+    "threshold": 0.9,
+    "anchor": 85,
+    "required_correct": 325,
+    "predicted_event": 394,
+    "centerline_sha256": "C53D3DAFA1670A49DFF78B27835B4A525FEF5F045D7EAC7DA27D7A88E64E7DA1",
+    "sweep_diagnostics": [
+      {
+        "sweep": 1,
+        "reached_horizon": 500,
+        "maximum_uncorrected_defect_norm": 0.004401769579292036,
+        "maximum_correction_norm": 0.6591495332423397,
+        "hvp_calls": 500
+      },
+      {
+        "sweep": 2,
+        "reached_horizon": 500,
+        "maximum_uncorrected_defect_norm": 0.002279003761154674,
+        "maximum_correction_norm": 0.16769023505358963,
+        "hvp_calls": 500
+      }
+    ],
+    "outcome_joined": false,
+    "certificate_horizon": 403,
+    "defect_sequence_norm": 8.359328242294226e-05,
+    "signed_response_sequence_norm": 0.0018882316901939749,
+    "maximum_optimizer_derivative_drift_upper": 13450.961351202684,
+    "minimum_closure_statistic_using_kappa_ge_1": 50.797062973830556,
+    "status": "safe early closure abstention",
+    "certificate_issued": false,
+    "elapsed_seconds": 7.724916400038637
+  }
+}

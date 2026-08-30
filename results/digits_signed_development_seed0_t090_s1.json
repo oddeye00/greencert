@@ -1,0 +1,51 @@
+{
+  "status_tier": "DEVELOPMENT ONLY; OUTCOMES PREVIOUSLY INSPECTED",
+  "dataset": "scikit-learn digits, binary parity target",
+  "config": {
+    "width": 8,
+    "learning_rate": 0.01,
+    "weight_decay": 0.001,
+    "steps": 600,
+    "checkpoint_every": 5,
+    "seed": 0,
+    "threads": 1,
+    "dtype": "float64"
+  },
+  "parameter_count": 538,
+  "anchor": 85,
+  "threshold": 0.9,
+  "horizon": 500,
+  "sweeps": 1,
+  "probe": {
+    "probes": 4,
+    "power": 2,
+    "delta": 1e-06
+  },
+  "certificate": {
+    "seed": 0,
+    "gate_index": 0,
+    "threshold": 0.9,
+    "anchor": 85,
+    "required_correct": 325,
+    "predicted_event": 361,
+    "centerline_sha256": "FC6CB7D7AC4FB111C166A4C95CBDEE62492BD74091F75F57C76ACF4ECBCD0E4B",
+    "sweep_diagnostics": [
+      {
+        "sweep": 1,
+        "reached_horizon": 500,
+        "maximum_uncorrected_defect_norm": 0.004401769579292036,
+        "maximum_correction_norm": 0.6591495332423397,
+        "hvp_calls": 500
+      }
+    ],
+    "outcome_joined": false,
+    "certificate_horizon": 370,
+    "defect_sequence_norm": 0.003072792285032123,
+    "signed_response_sequence_norm": 0.12821431081792728,
+    "maximum_optimizer_derivative_drift_upper": 18497.29673940469,
+    "minimum_closure_statistic_using_kappa_ge_1": 4743.236306874932,
+    "status": "safe early closure abstention",
+    "certificate_issued": false,
+    "elapsed_seconds": 5.266969199990854
+  }
+}

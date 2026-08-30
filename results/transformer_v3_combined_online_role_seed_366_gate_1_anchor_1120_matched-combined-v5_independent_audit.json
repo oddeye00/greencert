@@ -1,0 +1,22 @@
+{
+  "status": "independent combined online-role benchmark audit passed",
+  "source": "results\\transformer_v3_combined_online_role_seed_366_gate_1_anchor_1120_matched-combined-v5.json",
+  "source_sha256": "006CC711EDA43CC4B3C4531AC2ACC686D20A95B3E3AC17A43716CC313B2073B6",
+  "benchmark_script_sha256": "681FBF8FD9EBB2396730708DA56CC45BFEE2F84D652DA4450ACEAF8CA5FA244B",
+  "candidate": {
+    "seed": 366,
+    "threshold": 0.8,
+    "anchor": 1120
+  },
+  "same_bracket": true,
+  "green_stopping_power": 1,
+  "fallback_operators": 0,
+  "dense_pair_work": 7514,
+  "combined_pair_work": 5833,
+  "pair_work_reduction_fraction": 0.22371573063614592,
+  "same_process_output_operator_speedup": 1.2987664416083338,
+  "same_process_output_wall_speedup": 1.2874940943245798,
+  "matched_end_to_end_replay_speedup": 1.0183768029508034,
+  "combined_monolithic_end_to_end_seconds": 95.78951270000834,
+  "future_outcome_role": "No joined outcome is used in witness selection, stopping, or arithmetic; the replay keys to predicted_persistent_event."
+}

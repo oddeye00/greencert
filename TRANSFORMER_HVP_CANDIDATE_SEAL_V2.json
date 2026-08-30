@@ -1,0 +1,17 @@
+{
+  "status": "frozen before outcome join",
+  "protocol": "TRANSFORMER_HVP_PROSPECTIVE_PROTOCOL_V2.md",
+  "protocol_sha256": "C6F63C7BB07E756AD8BB2FC7BF60AB8844FB60F1708E766BB34F00B5DD2533F5",
+  "candidate_manifest": "results/transformer_hvp_prospective_candidates_blind.json",
+  "candidate_manifest_sha256": "310CD64671045C6A5D54550F67CE251009E10B3FC078F7935A382FB9D57B142F",
+  "fresh_seeds": [321, 322, 323, 324, 325, 326],
+  "seed_threshold_cases": 18,
+  "frozen_candidates": 3,
+  "distinct_candidate_seeds": 2,
+  "predictions": [
+    {"seed": 321, "threshold": 0.70, "anchor": 1440, "offset": 211},
+    {"seed": 322, "threshold": 0.70, "anchor": 2400, "offset": 34},
+    {"seed": 322, "threshold": 0.80, "anchor": 2640, "offset": 87}
+  ],
+  "information_barrier": "Training outcomes and sealed logs were not opened before this record was written."
+}

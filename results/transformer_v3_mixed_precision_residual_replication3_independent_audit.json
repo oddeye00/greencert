@@ -1,0 +1,19 @@
+{
+  "status": "independent mixed-precision residual audit passed",
+  "result": "results\\transformer_v3_mixed_precision_residual_postseal_audit.json",
+  "result_sha256": "70E12D4FFCB547ECB16E4E85A06A2DC8396242147D6BE458881F5F62D2008F91",
+  "runner_sha256": "8D993F5CD68DCC720334E3EEC7870E5C223E0D643F6D27FC2C879B8A05556CA5",
+  "source_sha256": "006CC711EDA43CC4B3C4531AC2ACC686D20A95B3E3AC17A43716CC313B2073B6",
+  "tolerance_source_sha256": "A203EBBCDCCAD88D1F2EFA52DEB460340F33CFC2F079E72C484D3B2F03128C00",
+  "same_bracket": true,
+  "maximum_measured_relative_residual": 3.3593789499600366e-07,
+  "admissible_relative_residual": 0.5999285448884594,
+  "admissible_to_measured_ratio": 1785831.7082554684,
+  "combined_q1_kernel_speedup": 1.8910091661306316,
+  "combined_q1_kernel_speedup_minimum": 1.698722216411437,
+  "combined_q1_kernel_speedup_maximum": 1.8942521832787633,
+  "timing_repetitions": 5,
+  "minimum_queried_logic_slack": 0.0018713446851058163,
+  "all_outward_scalar_supersolutions_rechecked": true,
+  "claim_boundary": "The theorem would make this path rigorous if the displayed residual uppers were independently verified. This audit establishes empirical headroom and a same-bracket mixed-precision path, not those verified bounds."
+}

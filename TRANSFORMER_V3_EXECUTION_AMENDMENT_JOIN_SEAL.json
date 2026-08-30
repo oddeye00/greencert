@@ -1,0 +1,13 @@
+{
+  "status": "TRANSFORMER V3 EXECUTION AMENDMENT JOIN COMPLETE",
+  "timestamp_utc": "2026-08-26T07:55:57.180789+00:00",
+  "execution_amendment_seal_sha256": "66C452C64FBBBA75F36CA8FA9DCB03FE033BACA5FFF4B8212CCF0815A5E760E0",
+  "certificate_seal_sha256": "05D9FC835AEB58C81E658ED8B8F7423DEF4F49FAFF1FF7C076416E98ECCC79D7",
+  "exceptional_audit": "results\\transformer_v3_audit_seed_365_gate_0_anchor_1480.json",
+  "exceptional_audit_sha256": "776DBD1B7E58FA6CE6F4F873C6B1E4D675EFE5D418C24AE9F939570DA7BB836C",
+  "aggregate": "results\\transformer_v3_confirmation_audit.json",
+  "aggregate_sha256": "E8BEEC6A28AC1AC3ADF5DCBBB1D960C5231D96F37CEFF2A6672F24FA4815FE21",
+  "candidate_count": 19,
+  "exceptional_actual_event": 127,
+  "exceptional_raw_timing_error": 0
+}

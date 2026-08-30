@@ -1,0 +1,248 @@
+{
+  "status": "POST-SEAL OUTWARD CALIBRATION AUDIT; PROSPECTIVE COUNTS UNCHANGED",
+  "scope": "Arb encloses the folded-normal quantile and every scalar probe-root evaluation, conditional on stored binary64 Y. HVP/VJP, norm accumulation, neural jets, and margins remain non-outward float64.",
+  "arb_version": "0.9.0",
+  "precision_bits": 256,
+  "calibrations": [
+    {
+      "delta_exact_binary64": "0x1.94879815a7fcbp-35",
+      "probes": 16,
+      "stored_c_delta": 0.28701612713630525,
+      "outward_lower": 0.2870161271363053,
+      "outward_upper": 0.2870161271363054,
+      "stored_is_no_larger_than_exact_quantile": true,
+      "stored_offset_from_outward_lower_ulps": -1.0,
+      "calibration_used_for_replay": 0.28701612713630525,
+      "relative_interval_width": 3.8681555482696154e-16
+    }
+  ],
+  "issued_certificates": 11,
+  "retained_same_bracket": 11,
+  "maximum_probe_bound_inflation_factor": 1.0000000000000009,
+  "maximum_absolute_stored_bound_deficit": 4.547473508864641e-12,
+  "maximum_absolute_stored_bound_surplus": 1.8189894035458565e-12,
+  "probe_rows_repaired_upward": 13052,
+  "minimum_replayed_logic_slack": 0.00018040466854271495,
+  "rows": [
+    {
+      "candidate": {
+        "seed": 360,
+        "threshold": 0.7,
+        "anchor": 3480
+      },
+      "certificate_sha256": "BF9A46F67BD8AD23DA7C77945B0203BB8B4CA4A99CEDF297E23ED4BF64B3CBBA",
+      "power": 3,
+      "sealed_bracket": [
+        107,
+        107
+      ],
+      "outward_calibration_bracket": [
+        107,
+        107
+      ],
+      "same_bracket": true,
+      "certificate_logic_slack": 0.0012607820877289652,
+      "total_pointwise_radius": 1.1066314141104121e-14
+    },
+    {
+      "candidate": {
+        "seed": 361,
+        "threshold": 0.8,
+        "anchor": 2800
+      },
+      "certificate_sha256": "896292CEF8EDB70B5B2ECFB8241F737154576E99B20CCAD7745BF7F8683624A2",
+      "power": 2,
+      "sealed_bracket": [
+        265,
+        265
+      ],
+      "outward_calibration_bracket": [
+        265,
+        265
+      ],
+      "same_bracket": true,
+      "certificate_logic_slack": 0.00018040466854271495,
+      "total_pointwise_radius": 1.0153896504981097e-14
+    },
+    {
+      "candidate": {
+        "seed": 366,
+        "threshold": 0.7,
+        "anchor": 1040
+      },
+      "certificate_sha256": "63DA40D4989669A1D1349B25323732C6800FD05E7EF793FBDE9C624E709CE24B",
+      "power": 2,
+      "sealed_bracket": [
+        28,
+        28
+      ],
+      "outward_calibration_bracket": [
+        28,
+        28
+      ],
+      "same_bracket": true,
+      "certificate_logic_slack": 0.00693722198607869,
+      "total_pointwise_radius": 2.994435075209916e-15
+    },
+    {
+      "candidate": {
+        "seed": 366,
+        "threshold": 0.8,
+        "anchor": 1120
+      },
+      "certificate_sha256": "9F773A441C44988A876BB4A707BA7F2C5B98C407A12F474C6D314F10862D639C",
+      "power": 1,
+      "sealed_bracket": [
+        2,
+        2
+      ],
+      "outward_calibration_bracket": [
+        2,
+        2
+      ],
+      "same_bracket": true,
+      "certificate_logic_slack": 0.0018713446794124701,
+      "total_pointwise_radius": 2.362814790268619e-15
+    },
+    {
+      "candidate": {
+        "seed": 366,
+        "threshold": 0.9,
+        "anchor": 1360
+      },
+      "certificate_sha256": "2AE37E3B9E914F9E38EA6EDF813887AB4C9CD41FA845DDC7E1958A2DEF947A95",
+      "power": 2,
+      "sealed_bracket": [
+        70,
+        70
+      ],
+      "outward_calibration_bracket": [
+        70,
+        70
+      ],
+      "same_bracket": true,
+      "certificate_logic_slack": 0.0013621531226683699,
+      "total_pointwise_radius": 6.5061298063946516e-15
+    },
+    {
+      "candidate": {
+        "seed": 369,
+        "threshold": 0.7,
+        "anchor": 4160
+      },
+      "certificate_sha256": "06EFAC13FA25E054C69EFDCCA4776124684999982C4EB88CF7ADC18BD4E723CF",
+      "power": 2,
+      "sealed_bracket": [
+        157,
+        157
+      ],
+      "outward_calibration_bracket": [
+        157,
+        157
+      ],
+      "same_bracket": true,
+      "certificate_logic_slack": 0.0022846993850114063,
+      "total_pointwise_radius": 8.122488233808475e-15
+    },
+    {
+      "candidate": {
+        "seed": 369,
+        "threshold": 0.8,
+        "anchor": 4480
+      },
+      "certificate_sha256": "557661FE278E39AEB1E066B539212A1A25C33F2DE5ADBBD972718DC76DE865BF",
+      "power": 2,
+      "sealed_bracket": [
+        118,
+        118
+      ],
+      "outward_calibration_bracket": [
+        118,
+        118
+      ],
+      "same_bracket": true,
+      "certificate_logic_slack": 0.0004586047628342139,
+      "total_pointwise_radius": 4.571023832842044e-15
+    },
+    {
+      "candidate": {
+        "seed": 369,
+        "threshold": 0.9,
+        "anchor": 5760
+      },
+      "certificate_sha256": "AD8D4896899E4B6C719634260347BE0BCD072C7552C229C3C5F65257E122F30D",
+      "power": 2,
+      "sealed_bracket": [
+        232,
+        232
+      ],
+      "outward_calibration_bracket": [
+        232,
+        232
+      ],
+      "same_bracket": true,
+      "certificate_logic_slack": 0.000686237513695941,
+      "total_pointwise_radius": 8.490171681128347e-15
+    },
+    {
+      "candidate": {
+        "seed": 370,
+        "threshold": 0.7,
+        "anchor": 2280
+      },
+      "certificate_sha256": "D1CE3675187805FCF94911432036A41792C43939918163F2AA9B6C243935594D",
+      "power": 2,
+      "sealed_bracket": [
+        275,
+        275
+      ],
+      "outward_calibration_bracket": [
+        275,
+        275
+      ],
+      "same_bracket": true,
+      "certificate_logic_slack": 0.0007507767080781868,
+      "total_pointwise_radius": 1.4055703665018142e-14
+    },
+    {
+      "candidate": {
+        "seed": 372,
+        "threshold": 0.7,
+        "anchor": 3440
+      },
+      "certificate_sha256": "0E0323259DFD5A8C4A87870B42CF95D9EF991660C9DA0BA5905AB4D92DE54383",
+      "power": 4,
+      "sealed_bracket": [
+        246,
+        246
+      ],
+      "outward_calibration_bracket": [
+        246,
+        246
+      ],
+      "same_bracket": true,
+      "certificate_logic_slack": 0.0008635959768065564,
+      "total_pointwise_radius": 2.731524053036462e-14
+    },
+    {
+      "candidate": {
+        "seed": 375,
+        "threshold": 0.8,
+        "anchor": 1800
+      },
+      "certificate_sha256": "43E6ADEF120EDEBE35063C83F12CD7CB2B94F07C945665DB1F42DD0B63BA3738",
+      "power": 3,
+      "sealed_bracket": [
+        118,
+        118
+      ],
+      "outward_calibration_bracket": [
+        118,
+        118
+      ],
+      "same_bracket": true,
+      "certificate_logic_slack": 0.0015589757138641744,
+      "total_pointwise_radius": 8.02479666138655e-15
+    }
+  ]
+}

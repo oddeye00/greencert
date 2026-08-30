@@ -1,0 +1,148 @@
+{
+  "version": 1,
+  "candidate": {
+    "seed": 361,
+    "threshold": 0.7,
+    "anchor": 1880
+  },
+  "horizon": 275,
+  "route": "gram_fallback",
+  "bracket": [
+    251,
+    251
+  ],
+  "panel_bracket": [
+    251,
+    251
+  ],
+  "prefix": 4,
+  "stage_rows": [
+    {
+      "prefix": 4,
+      "direct": {
+        "probes": 4,
+        "Y_direct": 181322.02807375067,
+        "c_delta": 0.015302900703286656,
+        "delta": 2.222222222222222e-08,
+        "operator_norm_upper_bound": 11848866.537754344,
+        "operator_norm_lower_estimate": 65.82922589692517,
+        "forward_green_applications": 4,
+        "transpose_green_applications": 0,
+        "forcing_response_upper": 8.226758904855495e-15,
+        "closure": {
+          "kappa": 11848866.537754344,
+          "derivative_drift": 14372994797.59369,
+          "corrected_defect_response_bound": 8.226758904855495e-15,
+          "correction_max_state_norm": 1.0278194138472175e-13,
+          "domain_radius": 4.8027699256124e-13,
+          "discriminant": -2801.0949133689305,
+          "remainder_radius": null,
+          "total_radius_about_original_reference": null,
+          "algebraic_closure_passed": false,
+          "domain_passed": false,
+          "closure_passed": false,
+          "closure_residual": null
+        },
+        "bracket": null,
+        "output_power": null,
+        "logic_slack": null,
+        "maximum_margin_radius": null,
+        "issued": false
+      },
+      "gram": {
+        "probes": 4,
+        "power": 1,
+        "Y": 229584811.44556302,
+        "c_delta": 0.015302900703286656,
+        "delta": 2.222222222222222e-08,
+        "operator_norm_upper_bound": 122485.5048293696,
+        "operator_norm_lower_estimate": 288.7059049693526,
+        "gram_applications": 4,
+        "forcing_response_upper": 8.504262533129296e-17,
+        "closure": {
+          "kappa": 122485.5048293696,
+          "derivative_drift": 14372994797.59369,
+          "corrected_defect_response_bound": 8.504262533129296e-17,
+          "correction_max_state_norm": 1.0278194138472175e-13,
+          "domain_radius": 4.8027699256124e-13,
+          "discriminant": 0.7005677185852952,
+          "remainder_radius": 9.258863447873261e-17,
+          "total_radius_about_original_reference": 1.0287453001920048e-13,
+          "algebraic_closure_passed": true,
+          "domain_passed": true,
+          "closure_passed": true,
+          "closure_residual": -1.232595164407831e-32
+        },
+        "bracket": [
+          251,
+          251
+        ],
+        "output_power": 1,
+        "logic_slack": 0.001125125134230423,
+        "maximum_margin_radius": 9.388253462512668e-13,
+        "issued": true
+      }
+    }
+  ],
+  "probe_hashes": [
+    "1B86A2B31C933BC87451DBF5766745D615D577B5FCD11ABB8FFC911A7806ECDF",
+    "1E56F837A4B55F822AF212595E737D2167F3FB78907F5ADBA77596F55A882EFF",
+    "1CC42BA94D104EE956863C7E57CC7C664695D93A3BDF8A4A5EA82BEE9FEF6626",
+    "183B5658C26E50FF70729EC23EE1CCA5E51BB2049B960ACDA106FA2AF1C8AA97"
+  ],
+  "initial_probe_norms": [
+    2754.3657486549664,
+    2753.3024669938927,
+    2755.057402393232,
+    2754.4305071680947
+  ],
+  "direct_image_norms": [
+    180372.79508132223,
+    179742.95820804697,
+    179982.83208618598,
+    181322.02807375067
+  ],
+  "gram_norms_computed": [
+    227960213.8099585,
+    226717421.9757354,
+    227043956.93043935,
+    229584811.44556302
+  ],
+  "logical_forward_green_applications": 4,
+  "logical_transpose_green_applications": 4,
+  "logical_total_green_sweeps": 8,
+  "panel_logical_green_sweeps": 8,
+  "probe_sweep_reduction": 1.0,
+  "transpose_sweeps_avoided": 0,
+  "timings_seconds": {
+    "streaming_centerline": 63.09949419996701,
+    "corrected_path": 13.557372899958864,
+    "operator_setup": 0.0034889000235125422,
+    "direct_forward_queries": 23.037998399988282,
+    "transpose_fallback_queries": 22.938529399980325,
+    "staged_green_queries": 45.97652779996861,
+    "total": 129.89427580003394
+  },
+  "corrected_path_sha256": "28B46190F07E9F6F1FFF5B8B778A760D97D54101989B9F18011EBF4F9241E44C",
+  "panel_result_sha256": "08E501B51FEAC3D96FFE02BE0B5D84E0E682C2E73CB906C083ED0FEF7E75E12B",
+  "certificate_sha256": "D26ECDAFA3568040C30790090B286CCF9925AEA2FC76ED3A1D1881C7149F6F30",
+  "protocol_sha256": "11813379A4B388EB71C409BE4709EB366E6E5BE8BF53C27AA5334802226EC428",
+  "source_sha256": "A46FFE4F68AA15E75EA37755231227481233A8EFD9C35D2066CBB1141A095BB7",
+  "dependency_sha256": {
+    "scripts/audit_transformer_direct_image_green_panel.py": "A46FFE4F68AA15E75EA37755231227481233A8EFD9C35D2066CBB1141A095BB7",
+    "scripts/direct_image_green_bound.py": "EC8B9DECA1FE6E17B4C03AA145A8829BA141BE8A5D223CDA86F82305B360F778",
+    "scripts/streaming_variational_centerline.py": "CEA0ADE5FC1255969B7A93CB1D8525EBBEE9020709CEB5399DB9A090E450228A",
+    "scripts/batched_green_operator.py": "C30C1DAF0E8A8494B518CD12E6328146B1A20DD297033192C78408C2E46F54BF",
+    "scripts/audit_transformer_relinearized_prefix_panel.py": "BE35D0771CF49B53B2D0721AA4BF3035EE9A9BF2F2DFA1BABB2B9B37A47A2B58",
+    "scripts/relinearized_green_closure.py": "ACFB21152D0467E6DDAAB627138325B2079C4F75C1F8BD7FF708C427F67FE5E1",
+    "scripts/transformer_green_operator.py": "F529F42D8DC6B01C94D5F5496AC60BB8F63B4BC030FF85449F106362C8CE20B4",
+    "scripts/transformer_optimizer_probe.py": "3C7665274245731141F4E0F451652F486CB65D7A16B0DCF233BAA66E8BFD5C79",
+    "scripts/transformer_v3_certificate.py": "5050DA95BAE58B02CB15AFAAF4802F9968A70562A26934B9F5E13FD224E71CBF",
+    "DIRECT_IMAGE_GREEN_THEOREM.md": "EC5A854A67CCA47EF0A0F21ED08AD2E538D1F39BC74E70D18D86A941F6122159",
+    "CAUSAL_PREFIX_RECENTERING_THEOREM.md": "FC20EA02DB556C43E751A33161907DBC728EF7FEBB5BF65A58EBDC758C30319D",
+    "results/transformer_v3_relinearized_prefix_panel_audit.json": "08E501B51FEAC3D96FFE02BE0B5D84E0E682C2E73CB906C083ED0FEF7E75E12B",
+    "results/transformer_v3_two_response_postseal_audit.json": "2DAF416457E016F9D9A77F2E49B4B8B4FBAC8C69C98C9A3051D9105F11A3C287"
+  },
+  "combined_family_failure_upper": 2e-06,
+  "outcome_files_read": 0
+}

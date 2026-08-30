@@ -1,0 +1,67 @@
+{
+  "status_tier": "DEVELOPMENT ONLY; OUTCOMES PREVIOUSLY INSPECTED",
+  "dataset": "scikit-learn digits, binary parity target",
+  "config": {
+    "width": 8,
+    "learning_rate": 0.03,
+    "weight_decay": 0.001,
+    "steps": 600,
+    "checkpoint_every": 5,
+    "seed": 0,
+    "threads": 1,
+    "dtype": "float64"
+  },
+  "parameter_count": 538,
+  "anchor": 35,
+  "threshold": 0.925,
+  "horizon": 500,
+  "sweeps": 4,
+  "probe": {
+    "probes": 4,
+    "power": 2,
+    "delta": 1e-06
+  },
+  "certificate": {
+    "seed": 0,
+    "gate_index": 0,
+    "threshold": 0.925,
+    "anchor": 35,
+    "required_correct": 334,
+    "predicted_event": null,
+    "centerline_sha256": "0FDEDF65A55811994A8EF6F76FC4937951F2D3C8A12244CD073732DC02539B3E",
+    "sweep_diagnostics": [
+      {
+        "sweep": 1,
+        "reached_horizon": 500,
+        "maximum_uncorrected_defect_norm": 0.0751186489035125,
+        "maximum_correction_norm": 16.33221218582598,
+        "hvp_calls": 500
+      },
+      {
+        "sweep": 2,
+        "reached_horizon": 500,
+        "maximum_uncorrected_defect_norm": 0.2413934335635548,
+        "maximum_correction_norm": 43.06362331577104,
+        "hvp_calls": 500
+      },
+      {
+        "sweep": 3,
+        "reached_horizon": 500,
+        "maximum_uncorrected_defect_norm": 1.8614890022042418,
+        "maximum_correction_norm": 53.161201208833084,
+        "hvp_calls": 500
+      },
+      {
+        "sweep": 4,
+        "reached_horizon": 500,
+        "maximum_uncorrected_defect_norm": 1.4731093879976307,
+        "maximum_correction_norm": 35.93515367944881,
+        "hvp_calls": 500
+      }
+    ],
+    "outcome_joined": false,
+    "status": "centerline has no future certification-set event",
+    "certificate_issued": false,
+    "elapsed_seconds": 9.478372600045986
+  }
+}

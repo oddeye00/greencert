@@ -1,0 +1,127 @@
+{
+  "status": "V3 CANDIDATES FROZEN BEFORE CERTIFICATION PROBES",
+  "timestamp_utc": "2026-08-26T01:47:03.286500+00:00",
+  "method_seal_sha256": "2CB9738FD630392CCA088C3E23C8CCE7142FAB046C9AFB6AEDC36906D51B7866",
+  "protocol_sha256": "4DF2F4EDBE341CDA637E6775316A234F5F5843D4A5D65EC1087A1BC58EDC11F9",
+  "candidate_manifest": "results\\transformer_v3_candidates_blind.json",
+  "candidate_manifest_sha256": "0AB04F552C9DC2A06D974E7E973E48C3BC6E829B2222D5E81AC19ECB5FFD4843",
+  "seed_threshold_cases": 72,
+  "candidates": [
+    {
+      "seed": 360,
+      "threshold": 0.7,
+      "anchor": 3480,
+      "horizon": 131
+    },
+    {
+      "seed": 361,
+      "threshold": 0.7,
+      "anchor": 1880,
+      "horizon": 275
+    },
+    {
+      "seed": 361,
+      "threshold": 0.8,
+      "anchor": 2800,
+      "horizon": 289
+    },
+    {
+      "seed": 365,
+      "threshold": 0.7,
+      "anchor": 1480,
+      "horizon": 151
+    },
+    {
+      "seed": 366,
+      "threshold": 0.7,
+      "anchor": 1040,
+      "horizon": 52
+    },
+    {
+      "seed": 366,
+      "threshold": 0.8,
+      "anchor": 1120,
+      "horizon": 26
+    },
+    {
+      "seed": 366,
+      "threshold": 0.9,
+      "anchor": 1360,
+      "horizon": 94
+    },
+    {
+      "seed": 368,
+      "threshold": 0.8,
+      "anchor": 2880,
+      "horizon": 280
+    },
+    {
+      "seed": 369,
+      "threshold": 0.7,
+      "anchor": 4160,
+      "horizon": 181
+    },
+    {
+      "seed": 369,
+      "threshold": 0.8,
+      "anchor": 4480,
+      "horizon": 142
+    },
+    {
+      "seed": 369,
+      "threshold": 0.9,
+      "anchor": 5760,
+      "horizon": 256
+    },
+    {
+      "seed": 370,
+      "threshold": 0.7,
+      "anchor": 2280,
+      "horizon": 299
+    },
+    {
+      "seed": 372,
+      "threshold": 0.7,
+      "anchor": 3440,
+      "horizon": 270
+    },
+    {
+      "seed": 373,
+      "threshold": 0.7,
+      "anchor": 1280,
+      "horizon": 271
+    },
+    {
+      "seed": 373,
+      "threshold": 0.8,
+      "anchor": 1760,
+      "horizon": 238
+    },
+    {
+      "seed": 375,
+      "threshold": 0.7,
+      "anchor": 920,
+      "horizon": 241
+    },
+    {
+      "seed": 375,
+      "threshold": 0.8,
+      "anchor": 1800,
+      "horizon": 142
+    },
+    {
+      "seed": 378,
+      "threshold": 0.7,
+      "anchor": 3640,
+      "horizon": 285
+    },
+    {
+      "seed": 378,
+      "threshold": 0.9,
+      "anchor": 4800,
+      "horizon": 162
+    }
+  ],
+  "distinct_candidate_seeds": 11,
+  "information_barrier": "outcome JSONs and training logs unopened"
+}

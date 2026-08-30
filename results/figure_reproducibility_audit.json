@@ -1,0 +1,71 @@
+{
+  "backend": "Matplotlib",
+  "byte_identical": true,
+  "generated_twice": true,
+  "generators": [
+    "scripts/make_transformer_v3_anytime_figure.py",
+    "scripts/paper_figure_new_evidence.py",
+    "scripts/paper_figure_prefix_scaling.py",
+    "scripts/paper_figure_transformer_green_confirmation.py",
+    "scripts/paper_figures_prospective.py"
+  ],
+  "outputs": {
+    "figures/paper_mechanism_scaling.pdf": {
+      "bytes": 28072,
+      "sha256": "A649BF7507CC86E968D67624627B0F2B83142C4A395FFF76AFE670318FE3085D"
+    },
+    "figures/paper_mechanism_scaling.png": {
+      "bytes": 187577,
+      "sha256": "C5CF4573279B4BEAF5A30F0A34895981B51E9212D4A9A8F70791990642E7E08A"
+    },
+    "figures/paper_prospective_brackets.pdf": {
+      "bytes": 18974,
+      "sha256": "97905A3513E7E19814F8751787F0A8D0295B30E6CCAF307102E41CD8B6C2AB4F"
+    },
+    "figures/paper_prospective_brackets.png": {
+      "bytes": 148564,
+      "sha256": "AC282191C2E957D2CB5BDC6F1EB61AF3C33CDC5C09083BCEBE1C6A98C5818251"
+    },
+    "figures/paper_prospective_horizons.pdf": {
+      "bytes": 21258,
+      "sha256": "89E078D8CD4BD53F953F64F5EFB05F417CAB94FA84208372DB0276E911C9BA1D"
+    },
+    "figures/paper_prospective_horizons.png": {
+      "bytes": 242081,
+      "sha256": "D95DCDFCE9F43B04B7D964174E54553E7DA7B9986A2528A1E5961BB16E05F6AC"
+    },
+    "figures/paper_real_data_confirmation.pdf": {
+      "bytes": 25777,
+      "sha256": "371A74B029EC1724FDF5FB54198A4E55A20C61757FB33694803C97559612CA1F"
+    },
+    "figures/paper_real_data_confirmation.png": {
+      "bytes": 157095,
+      "sha256": "77C20A8D4E26F41DA3DAE861870DB88F0172840E58868FEAD58879F1A632D963"
+    },
+    "figures/paper_relinearized_prefix_panel.pdf": {
+      "bytes": 30372,
+      "sha256": "EB4EBA883ABCAAE16D425B88971192B8EA8D673FFDA773FEA8D3C271545FA16C"
+    },
+    "figures/paper_relinearized_prefix_panel.png": {
+      "bytes": 180104,
+      "sha256": "3A75F51E46F87B1F3B138329362FB442947E2C921A706067DDBAC32E343D48AB"
+    },
+    "figures/paper_transformer_green_confirmation.pdf": {
+      "bytes": 29916,
+      "sha256": "5CE52436AD5D7F00523098DC0F70900A05DFD7576EFF628A7893577CE4823AB8"
+    },
+    "figures/paper_transformer_green_confirmation.png": {
+      "bytes": 187314,
+      "sha256": "6369B8D4ED365E5742172CB56188090BBA66A0807B2890F702D2CABF42CA2623"
+    },
+    "figures/paper_transformer_v3_anytime.pdf": {
+      "bytes": 28278,
+      "sha256": "3041C1B7C86FE4CFA6CD28642866A27900D3D8B151AA7EB877FF774BD929D706"
+    },
+    "figures/paper_transformer_v3_anytime.png": {
+      "bytes": 137706,
+      "sha256": "8F6FB7EDD4E307A01EAA028063DC1B9B10EFB04077E7ADB8E1407D5691AF7D3B"
+    }
+  },
+  "status": "paper figure reproduction passed"
+}

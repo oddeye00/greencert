@@ -1,0 +1,1493 @@
+{
+  "status": "complete post-seal matched unsigned finite-window right-inverse audit",
+  "baseline": {
+    "zero_order_term": "Z_u = kappa ||s||_2",
+    "operator": "same finite-window causal Green right inverse as the signed method",
+    "closure": "Z_u + (kappa M / 2) R^2 <= R",
+    "radius": "smallest radii-polynomial root using M valid on B(2 Z_u)",
+    "note": "strictly stronger than a product-of-one-step-norm baseline"
+  },
+  "monotonicity_argument": "The analytic block-jet envelope is coordinatewise nondecreasing in the ball radius. When Z_u > 2 Z_s, every admissible unsigned radius R >= Z_u contains the frozen signed ball B(2 Z_s). Hence favourable closure failure using M(2 Z_s) rules out the same unsigned radii-polynomial certificate at every admissible R.",
+  "source_hashes": {
+    "aggregate_audit": "A3D480FB92BFEC8981907C5F49687AE176D8C26FC1D633B3B2C653926D13A2BF",
+    "script": "6CB2370BDFE2FF95DD8A550A2222DFA5B8DBC1FB564DA7D231B3E6CFBA51F1DB"
+  },
+  "summary": {
+    "frozen_candidates": 23,
+    "matched_green_operator_cases": 18,
+    "signed_issued_in_matched_cases": 9,
+    "strong_unsigned_issued_in_matched_cases": 1,
+    "signed_certificates_lost_by_unsigned_norm_replacement": 8,
+    "signed_issued_retention_fraction_under_unsigned_baseline": 0.1111111111111111,
+    "unsigned_covered": 1,
+    "minimum_unsigned_to_signed_response_ratio": 83.01913811872308,
+    "median_unsigned_to_signed_response_ratio": 319.7012035266697,
+    "maximum_unsigned_to_signed_response_ratio": 411.5356730176326,
+    "cases_eliminated_without_reconstruction": 17,
+    "full_reconstructions": 1
+  },
+  "rows": [
+    {
+      "candidate": {
+        "seed": 331,
+        "threshold": 0.7,
+        "anchor": 1160
+      },
+      "certificate_file": "results\\transformer_green_confirmation_certificate_seed_331_gate_0_anchor_1160.json",
+      "certificate_sha256": "8E1CACDCF8F884A526F4ED3221D10D423C960C35B91D61D32BD5AA1166165AFB",
+      "signed_certificate_issued": false,
+      "signed_certified_bracket": null,
+      "actual_event": 262,
+      "green_operator_available": false,
+      "unsigned_certificate_issued": null,
+      "unsigned_certified_bracket": null,
+      "disposition": "outside matched operator comparison: frozen Green probe was not queried"
+    },
+    {
+      "candidate": {
+        "seed": 331,
+        "threshold": 0.8,
+        "anchor": 1520
+      },
+      "certificate_file": "results\\transformer_green_confirmation_certificate_seed_331_gate_1_anchor_1520.json",
+      "certificate_sha256": "C50E46A5C271BFDB7CB9C1BCA4686123E4676AEECDE321C3FE59923E0C402C37",
+      "signed_certificate_issued": false,
+      "signed_certified_bracket": null,
+      "actual_event": 271,
+      "green_operator_available": true,
+      "unsigned_certificate_issued": false,
+      "unsigned_certified_bracket": null,
+      "horizon": 295,
+      "green_operator_norm_upper_bound": 2471.3318030806768,
+      "defect_sequence_norm": 4.3186887916361756e-13,
+      "signed_response_sequence_norm": 3.113622515071273e-12,
+      "unsigned_response_upper": 1.067291295837854e-09,
+      "unsigned_to_signed_response_ratio": 342.78121084739877,
+      "signed_radius": 6.227245030142546e-12,
+      "signed_radius_derivative_drift_upper": 3328185235.4697447,
+      "favourable_unsigned_closure_using_signed_radius_drift": 17557.04858613382,
+      "disposition": "unsigned closure impossible under the same monotone analytic envelope",
+      "radii_polynomial_impossible": true
+    },
+    {
+      "candidate": {
+        "seed": 333,
+        "threshold": 0.7,
+        "anchor": 3000
+      },
+      "certificate_file": "results\\transformer_green_confirmation_certificate_seed_333_gate_0_anchor_3000.json",
+      "certificate_sha256": "DD6E0CDCB79BE87CA837985978C0D39734829082AFBC83181F622A0E2548FC6F",
+      "signed_certificate_issued": true,
+      "signed_certified_bracket": [
+        28,
+        28
+      ],
+      "actual_event": 28,
+      "green_operator_available": true,
+      "unsigned_certificate_issued": false,
+      "unsigned_certified_bracket": null,
+      "horizon": 52,
+      "green_operator_norm_upper_bound": 345.2281763681271,
+      "defect_sequence_norm": 1.546986972514141e-15,
+      "signed_response_sequence_norm": 6.4330165729082765e-15,
+      "unsigned_response_upper": 5.340634913863068e-13,
+      "unsigned_to_signed_response_ratio": 83.01913811872308,
+      "signed_radius": 1.2866033145816553e-14,
+      "signed_radius_derivative_drift_upper": 2862912354.157936,
+      "favourable_unsigned_closure_using_signed_radius_drift": 1.0556918603249992,
+      "disposition": "unsigned closure impossible under the same monotone analytic envelope",
+      "radii_polynomial_impossible": true
+    },
+    {
+      "candidate": {
+        "seed": 333,
+        "threshold": 0.8,
+        "anchor": 3080
+      },
+      "certificate_file": "results\\transformer_green_confirmation_certificate_seed_333_gate_1_anchor_3080.json",
+      "certificate_sha256": "BF0B0E64653CF338C71B281635F9BE609C21549572CBB6D8650DA9F279C52439",
+      "signed_certificate_issued": true,
+      "signed_certified_bracket": [
+        192,
+        192
+      ],
+      "actual_event": 192,
+      "green_operator_available": true,
+      "unsigned_certificate_issued": false,
+      "unsigned_certified_bracket": null,
+      "horizon": 216,
+      "green_operator_norm_upper_bound": 1640.9107638302266,
+      "defect_sequence_norm": 1.293610795156431e-14,
+      "signed_response_sequence_norm": 6.675060796582276e-14,
+      "unsigned_response_upper": 2.122699877979166e-11,
+      "unsigned_to_signed_response_ratio": 318.00457593824734,
+      "signed_radius": 1.3350121593164551e-13,
+      "signed_radius_derivative_drift_upper": 2770177996.8640723,
+      "favourable_unsigned_closure_using_signed_radius_drift": 192.979523564884,
+      "disposition": "unsigned closure impossible under the same monotone analytic envelope",
+      "radii_polynomial_impossible": true
+    },
+    {
+      "candidate": {
+        "seed": 335,
+        "threshold": 0.7,
+        "anchor": 2440
+      },
+      "certificate_file": "results\\transformer_green_confirmation_certificate_seed_335_gate_0_anchor_2440.json",
+      "certificate_sha256": "CBF5F2074D8574AB204BE428E0644313E4D4E28D1D2DD7E8E752FB5182666296",
+      "signed_certificate_issued": false,
+      "signed_certified_bracket": null,
+      "actual_event": 201,
+      "green_operator_available": false,
+      "unsigned_certificate_issued": null,
+      "unsigned_certified_bracket": null,
+      "disposition": "construction abstention before residual"
+    },
+    {
+      "candidate": {
+        "seed": 335,
+        "threshold": 0.8,
+        "anchor": 2880
+      },
+      "certificate_file": "results\\transformer_green_confirmation_certificate_seed_335_gate_1_anchor_2880.json",
+      "certificate_sha256": "BB606DE1E7478985947CBCCBB9D62337D24C034EA62C350556A1F74865337D22",
+      "signed_certificate_issued": true,
+      "signed_certified_bracket": [
+        110,
+        110
+      ],
+      "actual_event": 110,
+      "green_operator_available": true,
+      "unsigned_certificate_issued": false,
+      "unsigned_certified_bracket": null,
+      "horizon": 134,
+      "green_operator_norm_upper_bound": 1002.431463111953,
+      "defect_sequence_norm": 3.526054942502701e-15,
+      "signed_response_sequence_norm": 2.0953647877854044e-14,
+      "unsigned_response_upper": 3.534628415026116e-12,
+      "unsigned_to_signed_response_ratio": 168.6879743150534,
+      "signed_radius": 4.190729575570809e-14,
+      "signed_radius_derivative_drift_upper": 3677415858.7778745,
+      "favourable_unsigned_closure_using_signed_radius_drift": 26.059806943679106,
+      "disposition": "unsigned closure impossible under the same monotone analytic envelope",
+      "radii_polynomial_impossible": true
+    },
+    {
+      "candidate": {
+        "seed": 335,
+        "threshold": 0.9,
+        "anchor": 3240
+      },
+      "certificate_file": "results\\transformer_green_confirmation_certificate_seed_335_gate_2_anchor_3240.json",
+      "certificate_sha256": "AB7FBE60FB9B3B5068BC2510538DFAA266655C6D451FAB93E2347AF89D3C4FE3",
+      "signed_certificate_issued": true,
+      "signed_certified_bracket": [
+        229,
+        229
+      ],
+      "actual_event": 229,
+      "green_operator_available": true,
+      "unsigned_certificate_issued": false,
+      "unsigned_certified_bracket": null,
+      "horizon": 253,
+      "green_operator_norm_upper_bound": 1914.7043135335853,
+      "defect_sequence_norm": 1.3652259658728398e-14,
+      "signed_response_sequence_norm": 7.798468449755242e-14,
+      "unsigned_response_upper": 2.6140040458047817e-11,
+      "unsigned_to_signed_response_ratio": 335.19454013907347,
+      "signed_radius": 1.5596936899510484e-13,
+      "signed_radius_derivative_drift_upper": 2864535900.495562,
+      "favourable_unsigned_closure_using_signed_radius_drift": 286.7426115297061,
+      "disposition": "unsigned closure impossible under the same monotone analytic envelope",
+      "radii_polynomial_impossible": true
+    },
+    {
+      "candidate": {
+        "seed": 337,
+        "threshold": 0.7,
+        "anchor": 1080
+      },
+      "certificate_file": "results\\transformer_green_confirmation_certificate_seed_337_gate_0_anchor_1080.json",
+      "certificate_sha256": "C0945421589B02D21A3A5CC65D9844452767A898521FE3FD6AE34DDE49C33CD3",
+      "signed_certificate_issued": false,
+      "signed_certified_bracket": null,
+      "actual_event": 242,
+      "green_operator_available": true,
+      "unsigned_certificate_issued": false,
+      "unsigned_certified_bracket": null,
+      "horizon": 266,
+      "green_operator_norm_upper_bound": 2045.8740590799616,
+      "defect_sequence_norm": 4.18980571575167e-14,
+      "signed_response_sequence_norm": 7.138320972687965e-13,
+      "unsigned_response_upper": 8.571814826441293e-11,
+      "unsigned_to_signed_response_ratio": 120.08166709283653,
+      "signed_radius": 1.427664194537593e-12,
+      "signed_radius_derivative_drift_upper": 2945400784.1549067,
+      "favourable_unsigned_closure_using_signed_radius_drift": 1033.061246468213,
+      "disposition": "unsigned closure impossible under the same monotone analytic envelope",
+      "radii_polynomial_impossible": true
+    },
+    {
+      "candidate": {
+        "seed": 337,
+        "threshold": 0.8,
+        "anchor": 1720
+      },
+      "certificate_file": "results\\transformer_green_confirmation_certificate_seed_337_gate_1_anchor_1720.json",
+      "certificate_sha256": "4B9039F6763A419B6410AB4F7AC99BEA487817AE7B812DD2389C1BD7CBFA017D",
+      "signed_certificate_issued": true,
+      "signed_certified_bracket": [
+        250,
+        250
+      ],
+      "actual_event": 250,
+      "green_operator_available": true,
+      "unsigned_certificate_issued": false,
+      "unsigned_certified_bracket": null,
+      "horizon": 274,
+      "green_operator_norm_upper_bound": 2077.331272674816,
+      "defect_sequence_norm": 1.3130647006698704e-14,
+      "signed_response_sequence_norm": 7.35619253795746e-14,
+      "unsigned_response_upper": 2.727670365746918e-11,
+      "unsigned_to_signed_response_ratio": 370.79920783371585,
+      "signed_radius": 1.471238507591492e-13,
+      "signed_radius_derivative_drift_upper": 1898685577.803966,
+      "favourable_unsigned_closure_using_signed_radius_drift": 215.1694906366251,
+      "disposition": "unsigned closure impossible under the same monotone analytic envelope",
+      "radii_polynomial_impossible": true
+    },
+    {
+      "candidate": {
+        "seed": 342,
+        "threshold": 0.7,
+        "anchor": 1480
+      },
+      "certificate_file": "results\\transformer_green_confirmation_certificate_seed_342_gate_0_anchor_1480.json",
+      "certificate_sha256": "D3DFD8C614180FFF65D9E22752DA60EE0EB61143C3A6AB620AFA33F0E094FF51",
+      "signed_certificate_issued": false,
+      "signed_certified_bracket": null,
+      "actual_event": 69,
+      "green_operator_available": true,
+      "unsigned_certificate_issued": false,
+      "unsigned_certified_bracket": null,
+      "horizon": 93,
+      "green_operator_norm_upper_bound": 677.7380978194338,
+      "defect_sequence_norm": 8.46598656678727e-15,
+      "signed_response_sequence_norm": 3.2631519496952406e-14,
+      "unsigned_response_upper": 5.737721631939284e-12,
+      "unsigned_to_signed_response_ratio": 175.83372519551696,
+      "signed_radius": 6.526303899390481e-14,
+      "signed_radius_derivative_drift_upper": 45127726263.95491,
+      "favourable_unsigned_closure_using_signed_radius_drift": 350.9739002500591,
+      "disposition": "unsigned closure impossible under the same monotone analytic envelope",
+      "radii_polynomial_impossible": true
+    },
+    {
+      "candidate": {
+        "seed": 345,
+        "threshold": 0.7,
+        "anchor": 960
+      },
+      "certificate_file": "results\\transformer_green_confirmation_certificate_seed_345_gate_0_anchor_960.json",
+      "certificate_sha256": "C76FD7B93129E02043624332A0B8321BF0F6B87B367F10552FB9779DCB31B614",
+      "signed_certificate_issued": false,
+      "signed_certified_bracket": null,
+      "actual_event": 236,
+      "green_operator_available": false,
+      "unsigned_certificate_issued": null,
+      "unsigned_certified_bracket": null,
+      "disposition": "outside matched operator comparison: frozen Green probe was not queried"
+    },
+    {
+      "candidate": {
+        "seed": 345,
+        "threshold": 0.8,
+        "anchor": 1320
+      },
+      "certificate_file": "results\\transformer_green_confirmation_certificate_seed_345_gate_1_anchor_1320.json",
+      "certificate_sha256": "243ED8EE3633989AF1BA21C689C9F734DEF7999DE15DD2CDBB803DC5F263A893",
+      "signed_certificate_issued": true,
+      "signed_certified_bracket": [
+        30,
+        30
+      ],
+      "actual_event": 30,
+      "green_operator_available": true,
+      "unsigned_certificate_issued": true,
+      "unsigned_certified_bracket": [
+        30,
+        30
+      ],
+      "horizon": 54,
+      "green_operator_norm_upper_bound": 361.45516195615505,
+      "defect_sequence_norm": 1.7016876128787748e-15,
+      "signed_response_sequence_norm": 7.110388899822308e-15,
+      "unsigned_response_upper": 6.150837717118804e-13,
+      "unsigned_to_signed_response_ratio": 86.50494092204319,
+      "signed_radius": 1.4220777799644615e-14,
+      "signed_radius_derivative_drift_upper": 1836032636.0957923,
+      "favourable_unsigned_closure_using_signed_radius_drift": 0.8163926619190159,
+      "disposition": "survived favourable closure screen; full baseline evaluated",
+      "full_evaluation": true,
+      "outer_radius": 1.2301675434237608e-12,
+      "outer_derivative_drift_upper": 1836032650.4298592,
+      "outer_closure_statistic": 0.8163926682926647,
+      "outer_fixed_points_all_consistent": true,
+      "minimal_admissible_radius": 8.611637981416954e-13,
+      "minimal_radius_to_signed_radius_ratio": 60.556729756597164,
+      "output_fixed_points_all_consistent": true,
+      "unsigned_certificate_output_logic_slack": {
+        "lower_endpoint_exclusion_slack": 0.0010334170028113328,
+        "upper_endpoint_guarantee_slack": 0.004450305354963656,
+        "minimum_logic_slack": 0.0010334170028113328
+      },
+      "maximum_margin_radius": 2.674976539055967e-09,
+      "elapsed_seconds": 153.9350100000156,
+      "outer_geometry": [
+        {
+          "step": 1,
+          "fixed_point_consistent": true,
+          "fixed_point_iterations": 2,
+          "block_second": 15877434.769101411,
+          "block_third": 40341054255.76932,
+          "objective_hessian_lipschitz_upper": 125241615209.53807,
+          "optimizer_derivative_drift_upper": 1771183908.0284126
+        },
+        {
+          "step": 2,
+          "fixed_point_consistent": true,
+          "fixed_point_iterations": 2,
+          "block_second": 15873615.788323188,
+          "block_third": 40323826832.395256,
+          "objective_hessian_lipschitz_upper": 125504420912.05183,
+          "optimizer_derivative_drift_upper": 1774900541.916052
+        },
+        {
+          "step": 3,
+          "fixed_point_consistent": true,
+          "fixed_point_iterations": 2,
+          "block_second": 15869816.743950767,
+          "block_third": 40306684832.84482,
+          "objective_hessian_lipschitz_upper": 124993930489.74188,
+          "optimizer_derivative_drift_upper": 1767681117.1291292
+        },
+        {
+          "step": 4,
+          "fixed_point_consistent": true,
+          "fixed_point_iterations": 2,
+          "block_second": 15866037.535363877,
+          "block_third": 40289627821.46255,
+          "objective_hessian_lipschitz_upper": 126001975635.9288,
+          "optimizer_derivative_drift_upper": 1781937028.3013482
+        },
+        {
+          "step": 5,
+          "fixed_point_consistent": true,
+          "fixed_point_iterations": 2,
+          "block_second": 15862278.061913203,
+          "block_third": 40272655363.02764,
+          "objective_hessian_lipschitz_upper": 129134420034.0286,
+          "optimizer_derivative_drift_upper": 1826236481.8130717
+        },
+        {
+          "step": 6,
+          "fixed_point_consistent": true,
+          "fixed_point_iterations": 2,
+          "block_second": 15858710.058295261,
+          "block_third": 40256394611.27389,
+          "objective_hessian_lipschitz_upper": 126062024446.97113,
+          "optimizer_derivative_drift_upper": 1782786246.7311525
+        },
+        {
+          "step": 7,
+          "fixed_point_consistent": true,
+          "fixed_point_iterations": 2,
+          "block_second": 15855498.272524849,
+          "block_third": 40241446774.34676,
+          "objective_hessian_lipschitz_upper": 126463222498.8326,
+          "optimizer_derivative_drift_upper": 1788460043.9925542
+        },
+        {
+          "step": 8,
+          "fixed_point_consistent": true,
+          "fixed_point_iterations": 2,
+          "block_second": 15852304.564780597,
+          "block_third": 40226576602.33965,
+          "objective_hessian_lipschitz_upper": 129624126377.70592,
+          "optimizer_derivative_drift_upper": 1833161975.341158
+        },
+        {
+          "step": 9,
+          "fixed_point_consistent": true,
+          "fixed_point_iterations": 2,
+          "block_second": 15849128.832771378,
+          "block_third": 40211783662.89617,
+          "objective_hessian_lipschitz_upper": 127085783451.82639,
+          "optimizer_derivative_drift_upper": 1797264385.4238315
+        },
+        {
+          "step": 10,
+          "fixed_point_consistent": true,
+          "fixed_point_iterations": 2,
+          "block_second": 15845970.974260882,
+          "block_third": 40197067524.33221,
+          "objective_hessian_lipschitz_upper": 124238236438.28621,
+          "optimizer_derivative_drift_upper": 1756993989.3633962
+        },
+        {
+          "step": 11,
+          "fixed_point_consistent": true,
+          "fixed_point_iterations": 2,
+          "block_second": 15842830.887066016,
+          "block_third": 40182427755.625084,
+          "objective_hessian_lipschitz_upper": 126393752550.54507,
+          "optimizer_derivative_drift_upper": 1787477590.5620985
+        },
+        {
+          "step": 12,
+          "fixed_point_consistent": true,
+          "fixed_point_iterations": 2,
+          "block_second": 15839708.469055742,
+          "block_third": 40167863926.40428,
+          "objective_hessian_lipschitz_upper": 125074254639.4431,
+          "optimizer_derivative_drift_upper": 1768817072.1480646
+        },
+        {
+          "step": 13,
+          "fixed_point_consistent": true,
+          "fixed_point_iterations": 2,
+          "block_second": 15836603.618149955,
+          "block_third": 40153375606.94251,
+          "objective_hessian_lipschitz_upper": 125466652191.50034,
+          "optimizer_derivative_drift_upper": 1774366411.547678
+        },
+        {
+          "step": 14,
+          "fixed_point_consistent": true,
+          "fixed_point_iterations": 2,
+          "block_second": 15833516.232318934,
+          "block_third": 40138962368.14873,
+          "objective_hessian_lipschitz_upper": 127183630546.36313,
+          "optimizer_derivative_drift_upper": 1798648152.3051581
+        },
+        {
+          "step": 15,
+          "fixed_point_consistent": true,
+          "fixed_point_iterations": 2,
+          "block_second": 15830446.209582753,
+          "block_third": 40124623781.56122,
+          "objective_hessian_lipschitz_upper": 126816080155.45233,
+          "optimizer_derivative_drift_upper": 1793450204.8283422
+        },
+        {
+          "step": 16,
+          "fixed_point_consistent": true,
+          "fixed_point_iterations": 2,
+          "block_second": 15827393.448011102,
+          "block_third": 40110359419.34217,
+          "objective_hessian_lipschitz_upper": 129327988586.61035,
+          "optimizer_derivative_drift_upper": 1828973954.5361724
+        },
+        {
+          "step": 17,
+          "fixed_point_consistent": true,
+          "fixed_point_iterations": 2,
+          "block_second": 15824357.845723396,
+          "block_third": 40096168854.273346,
+          "objective_hessian_lipschitz_upper": 125008536098.39981,
+          "optimizer_derivative_drift_upper": 1767887671.6276367
+        },
+        {
+          "step": 18,
+          "fixed_point_consistent": true,
+          "fixed_point_iterations": 2,
+          "block_second": 15821339.30088891,
+          "block_third": 40082051659.751884,
+          "objective_hessian_lipschitz_upper": 124875302610.71262,
+          "optimizer_derivative_drift_upper": 1766003465.5751417
+        },
+        {
+          "step": 19,
+          "fixed_point_consistent": true,
+          "fixed_point_iterations": 2,
+          "block_second": 15818337.711727621,
+          "block_third": 40068007409.788734,
+          "objective_hessian_lipschitz_upper": 127279562293.83319,
+          "optimizer_derivative_drift_upper": 1800004832.0885012
+        },
+        {
+          "step": 20,
+          "fixed_point_consistent": true,
+          "fixed_point_iterations": 2,
+          "block_second": 15815352.976510806,
+          "block_third": 40054035679.006294,
+          "objective_hessian_lipschitz_upper": 125312635872.70532,
+          "optimizer_derivative_drift_upper": 1772188291.8790112
+        },
+        {
+          "step": 21,
+          "fixed_point_consistent": true,
+          "fixed_point_iterations": 2,
+          "block_second": 15812384.993562292,
+          "block_third": 40040136042.638435,
+          "objective_hessian_lipschitz_upper": 126183979073.78494,
+          "optimizer_derivative_drift_upper": 1784510945.6034951
+        },
+        {
+          "step": 22,
+          "fixed_point_consistent": true,
+          "fixed_point_iterations": 2,
+          "block_second": 15809433.661259662,
+          "block_third": 40026308076.53033,
+          "objective_hessian_lipschitz_upper": 127033063453.59436,
+          "optimizer_derivative_drift_upper": 1796518812.0587513
+        },
+        {
+          "step": 23,
+          "fixed_point_consistent": true,
+          "fixed_point_iterations": 2,
+          "block_second": 15806498.878036005,
+          "block_third": 40012551357.14056,
+          "objective_hessian_lipschitz_upper": 125908300355.64175,
+          "optimizer_derivative_drift_upper": 1780612259.7829378
+        },
+        {
+          "step": 24,
+          "fixed_point_consistent": true,
+          "fixed_point_iterations": 2,
+          "block_second": 15803580.542381631,
+          "block_third": 39998865461.54281,
+          "objective_hessian_lipschitz_upper": 129827113759.88632,
+          "optimizer_derivative_drift_upper": 1836032650.4298592
+        },
+        {
+          "step": 25,
+          "fixed_point_consistent": true,
+          "fixed_point_iterations": 2,
+          "block_second": 15800678.552846313,
+          "block_third": 39985249967.42981,
+          "objective_hessian_lipschitz_upper": 126601191334.83612,
+          "optimizer_derivative_drift_upper": 1790411217.9831643
+        },
+        {
+          "step": 26,
+          "fixed_point_consistent": true,
+          "fixed_point_iterations": 2,
+          "block_second": 15797792.808041506,
+          "block_third": 39971704453.11708,
+          "objective_hessian_lipschitz_upper": 124314235196.66167,
+          "optimizer_derivative_drift_upper": 1758068774.1115773
+        },
+        {
+          "step": 27,
+          "fixed_point_consistent": true,
+          "fixed_point_iterations": 2,
+          "block_second": 15794923.206643052,
+          "block_third": 39958228497.54852,
+          "objective_hessian_lipschitz_upper": 125364419985.05948,
+          "optimizer_derivative_drift_upper": 1772920629.8190782
+        },
+        {
+          "step": 28,
+          "fixed_point_consistent": true,
+          "fixed_point_iterations": 2,
+          "block_second": 15792069.64739399,
+          "block_third": 39944821680.30253,
+          "objective_hessian_lipschitz_upper": 125925967985.88876,
+          "optimizer_derivative_drift_upper": 1780862117.806041
+        },
+        {
+          "step": 29,
+          "fixed_point_consistent": true,
+          "fixed_point_iterations": 2,
+          "block_second": 15789232.02910756,
+          "block_third": 39931483581.598625,
+          "objective_hessian_lipschitz_upper": 126886251889.45853,
+          "optimizer_derivative_drift_upper": 1794442583.0076103
+        },
+        {
+          "step": 30,
+          "fixed_point_consistent": true,
+          "fixed_point_iterations": 2,
+          "block_second": 15786410.250670675,
+          "block_third": 39918213782.30618,
+          "objective_hessian_lipschitz_upper": 122696196999.19058,
+          "optimizer_derivative_drift_upper": 1735186258.478564
+        },
+        {
+          "step": 31,
+          "fixed_point_consistent": true,
+          "fixed_point_iterations": 2,
+          "block_second": 15783604.211047247,
+          "block_third": 39905011863.95225,
+          "objective_hessian_lipschitz_upper": 125841488589.83142,
+          "optimizer_derivative_drift_upper": 1779667398.729587
+        },
+        {
+          "step": 32,
+          "fixed_point_consistent": true,
+          "fixed_point_iterations": 2,
+          "block_second": 15780813.809282217,
+          "block_third": 39891877408.73244,
+          "objective_hessian_lipschitz_upper": 126177448236.2268,
+          "optimizer_derivative_drift_upper": 1784418585.6130114
+        },
+        {
+          "step": 33,
+          "fixed_point_consistent": true,
+          "fixed_point_iterations": 2,
+          "block_second": 15778038.94450527,
+          "block_third": 39878809999.52024,
+          "objective_hessian_lipschitz_upper": 125598154407.34842,
+          "optimizer_derivative_drift_upper": 1776226133.7190228
+        },
+        {
+          "step": 34,
+          "fixed_point_consistent": true,
+          "fixed_point_iterations": 2,
+          "block_second": 15775550.2387575,
+          "block_third": 39866793704.12396,
+          "objective_hessian_lipschitz_upper": 125710862599.4578,
+          "optimizer_derivative_drift_upper": 1777820068.257739
+        },
+        {
+          "step": 35,
+          "fixed_point_consistent": true,
+          "fixed_point_iterations": 2,
+          "block_second": 15773273.286025098,
+          "block_third": 39855557526.96031,
+          "objective_hessian_lipschitz_upper": 128148291071.60226,
+          "optimizer_derivative_drift_upper": 1812290512.2839496
+        },
+        {
+          "step": 36,
+          "fixed_point_consistent": true,
+          "fixed_point_iterations": 2,
+          "block_second": 15771010.232862646,
+          "block_third": 39844381830.236374,
+          "objective_hessian_lipschitz_upper": 125179150023.99976,
+          "optimizer_derivative_drift_upper": 1770300516.9027684
+        },
+        {
+          "step": 37,
+          "fixed_point_consistent": true,
+          "fixed_point_iterations": 2,
+          "block_second": 15768760.979995264,
+          "block_third": 39833266209.19058,
+          "objective_hessian_lipschitz_upper": 129319278515.81808,
+          "optimizer_derivative_drift_upper": 1828850775.5337358
+        },
+        {
+          "step": 38,
+          "fixed_point_consistent": true,
+          "fixed_point_iterations": 2,
+          "block_second": 15766525.428387964,
+          "block_third": 39822210260.24097,
+          "objective_hessian_lipschitz_upper": 125867834777.23277,
+          "optimizer_derivative_drift_upper": 1780039990.0849853
+        },
+        {
+          "step": 39,
+          "fixed_point_consistent": true,
+          "fixed_point_iterations": 2,
+          "block_second": 15764303.479249746,
+          "block_third": 39811213580.99609,
+          "objective_hessian_lipschitz_upper": 126392738825.48413,
+          "optimizer_derivative_drift_upper": 1787463254.3248014
+        },
+        {
+          "step": 40,
+          "fixed_point_consistent": true,
+          "fixed_point_iterations": 2,
+          "block_second": 15762095.034038318,
+          "block_third": 39800275770.26857,
+          "objective_hessian_lipschitz_upper": 126932183476.09305,
+          "optimizer_derivative_drift_upper": 1795092153.7352087
+        },
+        {
+          "step": 41,
+          "fixed_point_consistent": true,
+          "fixed_point_iterations": 2,
+          "block_second": 15759899.994464654,
+          "block_third": 39789396428.08793,
+          "objective_hessian_lipschitz_upper": 126791562469.76056,
+          "optimizer_derivative_drift_upper": 1793103472.3921092
+        },
+        {
+          "step": 42,
+          "fixed_point_consistent": true,
+          "fixed_point_iterations": 2,
+          "block_second": 15757718.262497673,
+          "block_third": 39778575155.71378,
+          "objective_hessian_lipschitz_upper": 126534439418.48279,
+          "optimizer_derivative_drift_upper": 1789467203.3289516
+        },
+        {
+          "step": 43,
+          "fixed_point_consistent": true,
+          "fixed_point_iterations": 2,
+          "block_second": 15755549.740368936,
+          "block_third": 39767811555.64947,
+          "objective_hessian_lipschitz_upper": 126218482469.10829,
+          "optimizer_derivative_drift_upper": 1784998897.299637
+        },
+        {
+          "step": 44,
+          "fixed_point_consistent": true,
+          "fixed_point_iterations": 2,
+          "block_second": 15753394.330577673,
+          "block_third": 39757105231.6566,
+          "objective_hessian_lipschitz_upper": 125907755985.9248,
+          "optimizer_derivative_drift_upper": 1780604561.2325714
+        },
+        {
+          "step": 45,
+          "fixed_point_consistent": true,
+          "fixed_point_iterations": 2,
+          "block_second": 15751251.93589569,
+          "block_third": 39746455788.76942,
+          "objective_hessian_lipschitz_upper": 127053940983.05759,
+          "optimizer_derivative_drift_upper": 1796814064.9119086
+        },
+        {
+          "step": 46,
+          "fixed_point_consistent": true,
+          "fixed_point_iterations": 2,
+          "block_second": 15749122.459372452,
+          "block_third": 39735862833.30974,
+          "objective_hessian_lipschitz_upper": 125280201492.08131,
+          "optimizer_derivative_drift_upper": 1771729600.4693549
+        },
+        {
+          "step": 47,
+          "fixed_point_consistent": true,
+          "fixed_point_iterations": 2,
+          "block_second": 15747005.804340208,
+          "block_third": 39725325972.90211,
+          "objective_hessian_lipschitz_upper": 126096696550.9768,
+          "optimizer_derivative_drift_upper": 1783276584.328361
+        },
+        {
+          "step": 48,
+          "fixed_point_consistent": true,
+          "fixed_point_iterations": 2,
+          "block_second": 15744901.874419123,
+          "block_third": 39714844816.48916,
+          "objective_hessian_lipschitz_upper": 128342950826.96698,
+          "optimizer_derivative_drift_upper": 1815043416.9447997
+        },
+        {
+          "step": 49,
+          "fixed_point_consistent": true,
+          "fixed_point_iterations": 2,
+          "block_second": 15742810.573522616,
+          "block_third": 39704418974.347435,
+          "objective_hessian_lipschitz_upper": 122508731729.01312,
+          "optimizer_derivative_drift_upper": 1732535099.202975
+        },
+        {
+          "step": 50,
+          "fixed_point_consistent": true,
+          "fixed_point_iterations": 2,
+          "block_second": 15740731.805862628,
+          "block_third": 39694048058.10343,
+          "objective_hessian_lipschitz_upper": 125004759375.99092,
+          "optimizer_derivative_drift_upper": 1767834260.707117
+        },
+        {
+          "step": 51,
+          "fixed_point_consistent": true,
+          "fixed_point_iterations": 2,
+          "block_second": 15738665.475954907,
+          "block_third": 39683731680.74935,
+          "objective_hessian_lipschitz_upper": 126467181092.83017,
+          "optimizer_derivative_drift_upper": 1788516026.965747
+        },
+        {
+          "step": 52,
+          "fixed_point_consistent": true,
+          "fixed_point_iterations": 2,
+          "block_second": 15736611.488624567,
+          "block_third": 39673469456.66013,
+          "objective_hessian_lipschitz_upper": 125464746743.41872,
+          "optimizer_derivative_drift_upper": 1774339464.442484
+        },
+        {
+          "step": 53,
+          "fixed_point_consistent": true,
+          "fixed_point_iterations": 2,
+          "block_second": 15734569.749011366,
+          "block_third": 39663261001.60947,
+          "objective_hessian_lipschitz_upper": 120775461923.7226,
+          "optimizer_derivative_drift_upper": 1708022962.5440385
+        },
+        {
+          "step": 54,
+          "fixed_point_consistent": true,
+          "fixed_point_iterations": 2,
+          "block_second": 15732540.162575215,
+          "block_third": 39653105932.786575,
+          "objective_hessian_lipschitz_upper": 124997018773.0136,
+          "optimizer_derivative_drift_upper": 1767724792.050002
+        }
+      ],
+      "output_geometry": [
+        {
+          "step": 1,
+          "fixed_point_consistent": true,
+          "margin_radius": 2.54915029238812e-09,
+          "guaranteed_correct": 45,
+          "possibly_correct": 45
+        },
+        {
+          "step": 2,
+          "fixed_point_consistent": true,
+          "margin_radius": 2.556412001966061e-09,
+          "guaranteed_correct": 45,
+          "possibly_correct": 45
+        },
+        {
+          "step": 3,
+          "fixed_point_consistent": true,
+          "margin_radius": 2.54488790415905e-09,
+          "guaranteed_correct": 46,
+          "possibly_correct": 46
+        },
+        {
+          "step": 4,
+          "fixed_point_consistent": true,
+          "margin_radius": 2.570186041420283e-09,
+          "guaranteed_correct": 46,
+          "possibly_correct": 46
+        },
+        {
+          "step": 5,
+          "fixed_point_consistent": true,
+          "margin_radius": 2.6453948634197572e-09,
+          "guaranteed_correct": 46,
+          "possibly_correct": 46
+        },
+        {
+          "step": 6,
+          "fixed_point_consistent": true,
+          "margin_radius": 2.5733243309680867e-09,
+          "guaranteed_correct": 46,
+          "possibly_correct": 46
+        },
+        {
+          "step": 7,
+          "fixed_point_consistent": true,
+          "margin_radius": 2.5837180686654414e-09,
+          "guaranteed_correct": 46,
+          "possibly_correct": 46
+        },
+        {
+          "step": 8,
+          "fixed_point_consistent": true,
+          "margin_radius": 2.6590895407766177e-09,
+          "guaranteed_correct": 46,
+          "possibly_correct": 46
+        },
+        {
+          "step": 9,
+          "fixed_point_consistent": true,
+          "margin_radius": 2.6000865654654104e-09,
+          "guaranteed_correct": 46,
+          "possibly_correct": 46
+        },
+        {
+          "step": 10,
+          "fixed_point_consistent": true,
+          "margin_radius": 2.532035497587948e-09,
+          "guaranteed_correct": 46,
+          "possibly_correct": 46
+        },
+        {
+          "step": 11,
+          "fixed_point_consistent": true,
+          "margin_radius": 2.5850204474845797e-09,
+          "guaranteed_correct": 46,
+          "possibly_correct": 46
+        },
+        {
+          "step": 12,
+          "fixed_point_consistent": true,
+          "margin_radius": 2.5539156139762166e-09,
+          "guaranteed_correct": 46,
+          "possibly_correct": 46
+        },
+        {
+          "step": 13,
+          "fixed_point_consistent": true,
+          "margin_radius": 2.5641599034923672e-09,
+          "guaranteed_correct": 46,
+          "possibly_correct": 46
+        },
+        {
+          "step": 14,
+          "fixed_point_consistent": true,
+          "margin_radius": 2.6060574735436005e-09,
+          "guaranteed_correct": 46,
+          "possibly_correct": 46
+        },
+        {
+          "step": 15,
+          "fixed_point_consistent": true,
+          "margin_radius": 2.5980212257969687e-09,
+          "guaranteed_correct": 46,
+          "possibly_correct": 46
+        },
+        {
+          "step": 16,
+          "fixed_point_consistent": true,
+          "margin_radius": 2.657921383010421e-09,
+          "guaranteed_correct": 46,
+          "possibly_correct": 46
+        },
+        {
+          "step": 17,
+          "fixed_point_consistent": true,
+          "margin_radius": 2.555954825342372e-09,
+          "guaranteed_correct": 46,
+          "possibly_correct": 46
+        },
+        {
+          "step": 18,
+          "fixed_point_consistent": true,
+          "margin_radius": 2.5534340799315305e-09,
+          "guaranteed_correct": 46,
+          "possibly_correct": 46
+        },
+        {
+          "step": 19,
+          "fixed_point_consistent": true,
+          "margin_radius": 2.6118779722559868e-09,
+          "guaranteed_correct": 46,
+          "possibly_correct": 46
+        },
+        {
+          "step": 20,
+          "fixed_point_consistent": true,
+          "margin_radius": 2.565456428310569e-09,
+          "guaranteed_correct": 46,
+          "possibly_correct": 46
+        },
+        {
+          "step": 21,
+          "fixed_point_consistent": true,
+          "margin_radius": 2.587140702154657e-09,
+          "guaranteed_correct": 46,
+          "possibly_correct": 46
+        },
+        {
+          "step": 22,
+          "fixed_point_consistent": true,
+          "margin_radius": 2.6081039188419163e-09,
+          "guaranteed_correct": 46,
+          "possibly_correct": 46
+        },
+        {
+          "step": 23,
+          "fixed_point_consistent": true,
+          "margin_radius": 2.5819094509688775e-09,
+          "guaranteed_correct": 46,
+          "possibly_correct": 46
+        },
+        {
+          "step": 24,
+          "fixed_point_consistent": true,
+          "margin_radius": 2.674976539055967e-09,
+          "guaranteed_correct": 46,
+          "possibly_correct": 46
+        },
+        {
+          "step": 25,
+          "fixed_point_consistent": true,
+          "margin_radius": 2.5998702470257196e-09,
+          "guaranteed_correct": 46,
+          "possibly_correct": 46
+        },
+        {
+          "step": 26,
+          "fixed_point_consistent": true,
+          "margin_radius": 2.545370963320809e-09,
+          "guaranteed_correct": 46,
+          "possibly_correct": 46
+        },
+        {
+          "step": 27,
+          "fixed_point_consistent": true,
+          "margin_radius": 2.5715440702406716e-09,
+          "guaranteed_correct": 46,
+          "possibly_correct": 46
+        },
+        {
+          "step": 28,
+          "fixed_point_consistent": true,
+          "margin_radius": 2.585737280611901e-09,
+          "guaranteed_correct": 46,
+          "possibly_correct": 46
+        },
+        {
+          "step": 29,
+          "fixed_point_consistent": true,
+          "margin_radius": 2.609344861646703e-09,
+          "guaranteed_correct": 46,
+          "possibly_correct": 46
+        },
+        {
+          "step": 30,
+          "fixed_point_consistent": true,
+          "margin_radius": 2.5083075080339665e-09,
+          "guaranteed_correct": 47,
+          "possibly_correct": 47
+        },
+        {
+          "step": 31,
+          "fixed_point_consistent": true,
+          "margin_radius": 2.585707998595681e-09,
+          "guaranteed_correct": 47,
+          "possibly_correct": 47
+        },
+        {
+          "step": 32,
+          "fixed_point_consistent": true,
+          "margin_radius": 2.5944190814236124e-09,
+          "guaranteed_correct": 47,
+          "possibly_correct": 47
+        },
+        {
+          "step": 33,
+          "fixed_point_consistent": true,
+          "margin_radius": 2.5811756549219586e-09,
+          "guaranteed_correct": 47,
+          "possibly_correct": 47
+        },
+        {
+          "step": 34,
+          "fixed_point_consistent": true,
+          "margin_radius": 2.5844845823370953e-09,
+          "guaranteed_correct": 47,
+          "possibly_correct": 47
+        },
+        {
+          "step": 35,
+          "fixed_point_consistent": true,
+          "margin_radius": 2.6429033059435655e-09,
+          "guaranteed_correct": 47,
+          "possibly_correct": 47
+        },
+        {
+          "step": 36,
+          "fixed_point_consistent": true,
+          "margin_radius": 2.5727873494491396e-09,
+          "guaranteed_correct": 47,
+          "possibly_correct": 47
+        },
+        {
+          "step": 37,
+          "fixed_point_consistent": true,
+          "margin_radius": 2.671294063952097e-09,
+          "guaranteed_correct": 47,
+          "possibly_correct": 47
+        },
+        {
+          "step": 38,
+          "fixed_point_consistent": true,
+          "margin_radius": 2.5904559514487433e-09,
+          "guaranteed_correct": 47,
+          "possibly_correct": 47
+        },
+        {
+          "step": 39,
+          "fixed_point_consistent": true,
+          "margin_radius": 2.6035492704650468e-09,
+          "guaranteed_correct": 47,
+          "possibly_correct": 47
+        },
+        {
+          "step": 40,
+          "fixed_point_consistent": true,
+          "margin_radius": 2.6169158533056615e-09,
+          "guaranteed_correct": 47,
+          "possibly_correct": 47
+        },
+        {
+          "step": 41,
+          "fixed_point_consistent": true,
+          "margin_radius": 2.6141114377695964e-09,
+          "guaranteed_correct": 47,
+          "possibly_correct": 47
+        },
+        {
+          "step": 42,
+          "fixed_point_consistent": true,
+          "margin_radius": 2.60852881723359e-09,
+          "guaranteed_correct": 47,
+          "possibly_correct": 47
+        },
+        {
+          "step": 43,
+          "fixed_point_consistent": true,
+          "margin_radius": 2.601525422496113e-09,
+          "guaranteed_correct": 47,
+          "possibly_correct": 47
+        },
+        {
+          "step": 44,
+          "fixed_point_consistent": true,
+          "margin_radius": 2.5946231330927567e-09,
+          "guaranteed_correct": 47,
+          "possibly_correct": 47
+        },
+        {
+          "step": 45,
+          "fixed_point_consistent": true,
+          "margin_radius": 2.6224335019760893e-09,
+          "guaranteed_correct": 47,
+          "possibly_correct": 47
+        },
+        {
+          "step": 46,
+          "fixed_point_consistent": true,
+          "margin_radius": 2.580600888768527e-09,
+          "guaranteed_correct": 47,
+          "possibly_correct": 47
+        },
+        {
+          "step": 47,
+          "fixed_point_consistent": true,
+          "margin_radius": 2.600705570609824e-09,
+          "guaranteed_correct": 47,
+          "possibly_correct": 47
+        },
+        {
+          "step": 48,
+          "fixed_point_consistent": true,
+          "margin_radius": 2.65428697879649e-09,
+          "guaranteed_correct": 47,
+          "possibly_correct": 47
+        },
+        {
+          "step": 49,
+          "fixed_point_consistent": true,
+          "margin_radius": 2.5144945284467767e-09,
+          "guaranteed_correct": 47,
+          "possibly_correct": 47
+        },
+        {
+          "step": 50,
+          "fixed_point_consistent": true,
+          "margin_radius": 2.5760278057754217e-09,
+          "guaranteed_correct": 47,
+          "possibly_correct": 47
+        },
+        {
+          "step": 51,
+          "fixed_point_consistent": true,
+          "margin_radius": 2.6115775045912555e-09,
+          "guaranteed_correct": 47,
+          "possibly_correct": 47
+        },
+        {
+          "step": 52,
+          "fixed_point_consistent": true,
+          "margin_radius": 2.5881200365314168e-09,
+          "guaranteed_correct": 47,
+          "possibly_correct": 47
+        },
+        {
+          "step": 53,
+          "fixed_point_consistent": true,
+          "margin_radius": 2.4732960584989124e-09,
+          "guaranteed_correct": 47,
+          "possibly_correct": 47
+        },
+        {
+          "step": 54,
+          "fixed_point_consistent": true,
+          "margin_radius": 2.577865648369378e-09,
+          "guaranteed_correct": 47,
+          "possibly_correct": 47
+        }
+      ],
+      "unsigned_bracket_contains_actual": true
+    },
+    {
+      "candidate": {
+        "seed": 345,
+        "threshold": 0.9,
+        "anchor": 2120
+      },
+      "certificate_file": "results\\transformer_green_confirmation_certificate_seed_345_gate_2_anchor_2120.json",
+      "certificate_sha256": "37D0898896A5AB545DB24A39E2AD58BD73715978704858723F66B951DEF5DB44",
+      "signed_certificate_issued": true,
+      "signed_certified_bracket": [
+        261,
+        261
+      ],
+      "actual_event": 261,
+      "green_operator_available": true,
+      "unsigned_certificate_issued": false,
+      "unsigned_certified_bracket": null,
+      "horizon": 285,
+      "green_operator_norm_upper_bound": 2150.2338202221104,
+      "defect_sequence_norm": 8.192369433474833e-15,
+      "signed_response_sequence_norm": 4.696366564914599e-14,
+      "unsigned_response_upper": 1.7615509823611437e-11,
+      "unsigned_to_signed_response_ratio": 375.08805115879545,
+      "signed_radius": 9.392733129829198e-14,
+      "signed_radius_derivative_drift_upper": 1913681794.0221558,
+      "favourable_unsigned_closure_using_signed_radius_drift": 144.9708302840624,
+      "disposition": "unsigned closure impossible under the same monotone analytic envelope",
+      "radii_polynomial_impossible": true
+    },
+    {
+      "candidate": {
+        "seed": 347,
+        "threshold": 0.7,
+        "anchor": 2000
+      },
+      "certificate_file": "results\\transformer_green_confirmation_certificate_seed_347_gate_0_anchor_2000.json",
+      "certificate_sha256": "79B854B628FF27FAABBBD3009C66F1DD580DB09D7552B5A811A330784D6AA29B",
+      "signed_certificate_issued": false,
+      "signed_certified_bracket": null,
+      "actual_event": 266,
+      "green_operator_available": false,
+      "unsigned_certificate_issued": null,
+      "unsigned_certified_bracket": null,
+      "disposition": "outside matched operator comparison: frozen Green probe was not queried"
+    },
+    {
+      "candidate": {
+        "seed": 348,
+        "threshold": 0.7,
+        "anchor": 2200
+      },
+      "certificate_file": "results\\transformer_green_confirmation_certificate_seed_348_gate_0_anchor_2200.json",
+      "certificate_sha256": "F422F4A09EDA66AF787D355EDC7BAC9D71B91FD5392C4074F5EF67A7E6FABC37",
+      "signed_certificate_issued": true,
+      "signed_certified_bracket": [
+        56,
+        56
+      ],
+      "actual_event": 56,
+      "green_operator_available": true,
+      "unsigned_certificate_issued": false,
+      "unsigned_certified_bracket": null,
+      "horizon": 80,
+      "green_operator_norm_upper_bound": 573.042412286998,
+      "defect_sequence_norm": 4.158215461025179e-15,
+      "signed_response_sequence_norm": 1.8642725443729398e-14,
+      "unsigned_response_upper": 2.38283381859496e-12,
+      "unsigned_to_signed_response_ratio": 127.81574377562062,
+      "signed_radius": 3.7285450887458797e-14,
+      "signed_radius_derivative_drift_upper": 14866768012.846983,
+      "favourable_unsigned_closure_using_signed_radius_drift": 40.60009799669607,
+      "disposition": "unsigned closure impossible under the same monotone analytic envelope",
+      "radii_polynomial_impossible": true
+    },
+    {
+      "candidate": {
+        "seed": 348,
+        "threshold": 0.8,
+        "anchor": 2840
+      },
+      "certificate_file": "results\\transformer_green_confirmation_certificate_seed_348_gate_1_anchor_2840.json",
+      "certificate_sha256": "313A98C216D219FAC4E81F325288B5B44D9FC7141F6E3CF506093C25A888532A",
+      "signed_certificate_issued": false,
+      "signed_certified_bracket": null,
+      "actual_event": 264,
+      "green_operator_available": true,
+      "unsigned_certificate_issued": false,
+      "unsigned_certified_bracket": null,
+      "horizon": 288,
+      "green_operator_norm_upper_bound": 2175.9852017479793,
+      "defect_sequence_norm": 1.2424633869783213e-14,
+      "signed_response_sequence_norm": 7.712889823478335e-14,
+      "unsigned_response_upper": 2.7035819437785e-11,
+      "unsigned_to_signed_response_ratio": 350.52775362467804,
+      "signed_radius": 1.542577964695667e-13,
+      "signed_radius_derivative_drift_upper": 15610218132.472628,
+      "favourable_unsigned_closure_using_signed_radius_drift": 1836.6839981566538,
+      "disposition": "unsigned closure impossible under the same monotone analytic envelope",
+      "radii_polynomial_impossible": true
+    },
+    {
+      "candidate": {
+        "seed": 348,
+        "threshold": 0.9,
+        "anchor": 3240
+      },
+      "certificate_file": "results\\transformer_green_confirmation_certificate_seed_348_gate_2_anchor_3240.json",
+      "certificate_sha256": "907F1F8FDE9C7640C5406CB3AC7FF845A0265091362CDAD0CED189269A6C1D56",
+      "signed_certificate_issued": false,
+      "signed_certified_bracket": null,
+      "actual_event": 176,
+      "green_operator_available": true,
+      "unsigned_certificate_issued": false,
+      "unsigned_certified_bracket": null,
+      "horizon": 200,
+      "green_operator_norm_upper_bound": 1507.4419595992522,
+      "defect_sequence_norm": 7.501493517930108e-15,
+      "signed_response_sequence_norm": 5.1501675896820537e-14,
+      "unsigned_response_upper": 1.130806608858965e-11,
+      "unsigned_to_signed_response_ratio": 219.5669537287379,
+      "signed_radius": 1.0300335179364107e-13,
+      "signed_radius_derivative_drift_upper": 15916214826.210648,
+      "favourable_unsigned_closure_using_signed_radius_drift": 542.6236591325231,
+      "disposition": "unsigned closure impossible under the same monotone analytic envelope",
+      "radii_polynomial_impossible": true
+    },
+    {
+      "candidate": {
+        "seed": 350,
+        "threshold": 0.7,
+        "anchor": 1440
+      },
+      "certificate_file": "results\\transformer_green_confirmation_certificate_seed_350_gate_0_anchor_1440.json",
+      "certificate_sha256": "747CF64D542267EA20BB4765A3F5EC37CF0333CE2325BA6D4DD0B4319C29C466",
+      "signed_certificate_issued": false,
+      "signed_certified_bracket": null,
+      "actual_event": 262,
+      "green_operator_available": false,
+      "unsigned_certificate_issued": null,
+      "unsigned_certified_bracket": null,
+      "disposition": "outside matched operator comparison: frozen Green probe was not queried"
+    },
+    {
+      "candidate": {
+        "seed": 350,
+        "threshold": 0.8,
+        "anchor": 2920
+      },
+      "certificate_file": "results\\transformer_green_confirmation_certificate_seed_350_gate_1_anchor_2920.json",
+      "certificate_sha256": "328F211EE347174E9E618A45767A2D771A43F6D2C2BE641EC78F4957E3B9DD48",
+      "signed_certificate_issued": true,
+      "signed_certified_bracket": [
+        274,
+        274
+      ],
+      "actual_event": 274,
+      "green_operator_available": true,
+      "unsigned_certificate_issued": false,
+      "unsigned_certified_bracket": null,
+      "horizon": 298,
+      "green_operator_norm_upper_bound": 2249.4165192786,
+      "defect_sequence_norm": 1.0638007682904486e-14,
+      "signed_response_sequence_norm": 5.814638142709136e-14,
+      "unsigned_response_upper": 2.3929310214138014e-11,
+      "unsigned_to_signed_response_ratio": 411.5356730176326,
+      "signed_radius": 1.1629276285418273e-13,
+      "signed_radius_derivative_drift_upper": 2857183180.9060006,
+      "favourable_unsigned_closure_using_signed_radius_drift": 307.58711638823877,
+      "disposition": "unsigned closure impossible under the same monotone analytic envelope",
+      "radii_polynomial_impossible": true
+    },
+    {
+      "candidate": {
+        "seed": 351,
+        "threshold": 0.7,
+        "anchor": 1600
+      },
+      "certificate_file": "results\\transformer_green_confirmation_certificate_seed_351_gate_0_anchor_1600.json",
+      "certificate_sha256": "6D8350C0434BB5079DE42ACD1115935693EEA2DFA8F23A4E2753848B83626794",
+      "signed_certificate_issued": false,
+      "signed_certified_bracket": null,
+      "actual_event": 167,
+      "green_operator_available": true,
+      "unsigned_certificate_issued": false,
+      "unsigned_certified_bracket": null,
+      "horizon": 191,
+      "green_operator_norm_upper_bound": 1440.8326300088763,
+      "defect_sequence_norm": 1.2912974414273603e-14,
+      "signed_response_sequence_norm": 7.07557657466376e-14,
+      "unsigned_response_upper": 1.8605434886555164e-11,
+      "unsigned_to_signed_response_ratio": 262.95291542992476,
+      "signed_radius": 1.415115314932752e-13,
+      "signed_radius_derivative_drift_upper": 54253802634.41388,
+      "favourable_unsigned_closure_using_signed_radius_drift": 2908.797845143386,
+      "disposition": "unsigned closure impossible under the same monotone analytic envelope",
+      "radii_polynomial_impossible": true
+    },
+    {
+      "candidate": {
+        "seed": 351,
+        "threshold": 0.8,
+        "anchor": 2200
+      },
+      "certificate_file": "results\\transformer_green_confirmation_certificate_seed_351_gate_1_anchor_2200.json",
+      "certificate_sha256": "59E149BCD845DC823CE1AE5F46D18BD754C4B9828F905EC526DE02EA7E71FFB5",
+      "signed_certificate_issued": false,
+      "signed_certified_bracket": null,
+      "actual_event": 240,
+      "green_operator_available": true,
+      "unsigned_certificate_issued": false,
+      "unsigned_certified_bracket": null,
+      "horizon": 264,
+      "green_operator_norm_upper_bound": 1987.5000620142453,
+      "defect_sequence_norm": 1.4241140236056217e-14,
+      "signed_response_sequence_norm": 8.80661422141943e-14,
+      "unsigned_response_upper": 2.8304267102315294e-11,
+      "unsigned_to_signed_response_ratio": 321.397831115092,
+      "signed_radius": 1.761322844283886e-13,
+      "signed_radius_derivative_drift_upper": 65430134440.33146,
+      "favourable_unsigned_closure_using_signed_radius_drift": 7361.5094366094845,
+      "disposition": "unsigned closure impossible under the same monotone analytic envelope",
+      "radii_polynomial_impossible": true
+    },
+    {
+      "candidate": {
+        "seed": 352,
+        "threshold": 0.8,
+        "anchor": 5320
+      },
+      "certificate_file": "results\\transformer_green_confirmation_certificate_seed_352_gate_1_anchor_5320.json",
+      "certificate_sha256": "99F86EE55B081E6ADD2A3A3B0ABDE9FA660D55CB747B00210CACA7C16C13BDA7",
+      "signed_certificate_issued": false,
+      "signed_certified_bracket": null,
+      "actual_event": 259,
+      "green_operator_available": true,
+      "unsigned_certificate_issued": false,
+      "unsigned_certified_bracket": null,
+      "horizon": 283,
+      "green_operator_norm_upper_bound": 2156.156226758531,
+      "defect_sequence_norm": 1.4243890311227918e-14,
+      "signed_response_sequence_norm": 8.481127063003147e-14,
+      "unsigned_response_upper": 3.0712052787819584e-11,
+      "unsigned_to_signed_response_ratio": 362.1223047322736,
+      "signed_radius": 1.6962254126006293e-13,
+      "signed_radius_derivative_drift_upper": 4113939210.763374,
+      "favourable_unsigned_closure_using_signed_radius_drift": 544.8499762343539,
+      "disposition": "unsigned closure impossible under the same monotone analytic envelope",
+      "radii_polynomial_impossible": true
+    },
+    {
+      "candidate": {
+        "seed": 354,
+        "threshold": 0.7,
+        "anchor": 2120
+      },
+      "certificate_file": "results\\transformer_green_confirmation_certificate_seed_354_gate_0_anchor_2120.json",
+      "certificate_sha256": "55C7315D92AFB51707BAC2837DC69CE6C9D6EBDDE4FA6C62CD7BFB5E7191BFF8",
+      "signed_certificate_issued": false,
+      "signed_certified_bracket": null,
+      "actual_event": 271,
+      "green_operator_available": true,
+      "unsigned_certificate_issued": false,
+      "unsigned_certified_bracket": null,
+      "horizon": 295,
+      "green_operator_norm_upper_bound": 2239.424674341332,
+      "defect_sequence_norm": 1.640229447809195e-14,
+      "signed_response_sequence_norm": 1.0248436119353273e-13,
+      "unsigned_response_upper": 3.6731702970051686e-11,
+      "unsigned_to_signed_response_ratio": 358.41276212559967,
+      "signed_radius": 2.0496872238706547e-13,
+      "signed_radius_derivative_drift_upper": 5110434229.579278,
+      "favourable_unsigned_closure_using_signed_radius_drift": 840.7469912596347,
+      "disposition": "unsigned closure impossible under the same monotone analytic envelope",
+      "radii_polynomial_impossible": true
+    }
+  ],
+  "elapsed_seconds": 154.36181989999022
+}

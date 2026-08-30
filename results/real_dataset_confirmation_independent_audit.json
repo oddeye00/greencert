@@ -1,0 +1,80 @@
+{
+  "candidate_dispositions": {
+    "candidate frozen": 71,
+    "no trigger-only anchor": 1
+  },
+  "certificate_dispositions": {
+    "centerline has no future certification-set event": 15,
+    "certificate issued": 56
+  },
+  "per_threshold": {
+    "0.900": {
+      "candidates": 23,
+      "cases": 24,
+      "covered": 21,
+      "distinct_issuing_seeds": 21,
+      "issued": 21,
+      "maximum_lead": 168,
+      "median_lead": 43.0
+    },
+    "0.925": {
+      "candidates": 24,
+      "cases": 24,
+      "covered": 21,
+      "distinct_issuing_seeds": 21,
+      "issued": 21,
+      "maximum_lead": 200,
+      "median_lead": 79.0
+    },
+    "0.950": {
+      "candidates": 24,
+      "cases": 24,
+      "covered": 14,
+      "distinct_issuing_seeds": 14,
+      "issued": 14,
+      "maximum_lead": 256,
+      "median_lead": 166.0
+    }
+  },
+  "seal_sha256": {
+    "candidate": "F552930042296C8954F794A560BF8FD79E92A94FA2852B2BA675DAEDE779B16A",
+    "certificate": "0444FE25E4C414B92CA867BEF592F8D3FCFB902904E629498EDA8FE220516783",
+    "method": "3408AF37C03959264B3DC8888001F5BE4AA5702FEA4D7F90B694261AC2846F8C"
+  },
+  "summary": {
+    "candidate_rate": 0.9861111111111112,
+    "conditional_coverage": 1.0,
+    "conditional_issuance_rate": 0.7887323943661971,
+    "covered": 56,
+    "distinct_issuing_seeds": 22,
+    "fresh_seeds": 24,
+    "hash_chain_verified": true,
+    "issued": 56,
+    "issuing_seed_level_all_covered": 22,
+    "maximum_absolute_float64_sequence_error": 1.2607039990592296e-14,
+    "maximum_bracket_width": 0,
+    "maximum_checkpoint_reconstruction_error": 0.0,
+    "maximum_float64_pointwise_state_error_to_radius": 0.5404132107873035,
+    "maximum_float64_sequence_error_to_radius": 1.3286927507280117,
+    "maximum_lead": 256,
+    "median_bracket_width": 0.0,
+    "median_lead": 79.0,
+    "minimum_closure_slack": 0.9999999907275747,
+    "minimum_output_slack": 2.3753121954839393e-05,
+    "overall_issuance_rate": 0.7777777777777778,
+    "queried_operators": 56,
+    "raw_exact_timing_matches": 59,
+    "raw_timing_comparable": 59,
+    "realized_union_failure_bound": 7.777777777777778e-07,
+    "sealed_source_files_verified": 16,
+    "seed_threshold_cases": 72,
+    "status": "PASS WITH EXPLICIT FLOAT64 ROUNDING DIAGNOSTIC",
+    "strict_float64_pointwise_state_ratio_exceedances": 0,
+    "strict_float64_sequence_ratio_exceedances": 23,
+    "tolerance_adjusted_sequence_tube_violations": 0,
+    "tolerance_adjusted_state_tube_violations": 0,
+    "trigger_only_candidates": 71,
+    "two_sided_95pct_exact_lower_if_issuing_seeds_were_independent": 0.8456274871844254,
+    "unsigned_right_inverse_issued": 56
+  }
+}

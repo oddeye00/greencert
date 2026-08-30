@@ -1,0 +1,148 @@
+{
+  "version": 1,
+  "candidate": {
+    "seed": 375,
+    "threshold": 0.8,
+    "anchor": 1800
+  },
+  "horizon": 142,
+  "route": "gram_fallback",
+  "bracket": [
+    118,
+    118
+  ],
+  "panel_bracket": [
+    118,
+    118
+  ],
+  "prefix": 4,
+  "stage_rows": [
+    {
+      "prefix": 4,
+      "direct": {
+        "probes": 4,
+        "Y_direct": 93093.04097621447,
+        "c_delta": 0.015302900703286656,
+        "delta": 2.222222222222222e-08,
+        "operator_norm_upper_bound": 6083359.1474733,
+        "operator_norm_lower_estimate": 47.04278120999397,
+        "forward_green_applications": 4,
+        "transpose_green_applications": 0,
+        "forcing_response_upper": 4.118741285867754e-17,
+        "closure": {
+          "kappa": 6083359.1474733,
+          "derivative_drift": 124523313439.47482,
+          "corrected_defect_response_bound": 4.118741285867754e-17,
+          "correction_max_state_norm": 4.380461571273445e-15,
+          "domain_radius": 6.959779015863744e-14,
+          "discriminant": -61.40058109823991,
+          "remainder_radius": null,
+          "total_radius_about_original_reference": null,
+          "algebraic_closure_passed": false,
+          "domain_passed": false,
+          "closure_passed": false,
+          "closure_residual": null
+        },
+        "bracket": null,
+        "output_power": null,
+        "logic_slack": null,
+        "maximum_margin_radius": null,
+        "issued": false
+      },
+      "gram": {
+        "probes": 4,
+        "power": 1,
+        "Y": 62680244.427527726,
+        "c_delta": 0.015302900703286656,
+        "delta": 2.222222222222222e-08,
+        "operator_norm_upper_bound": 63999.77697554696,
+        "operator_norm_lower_estimate": 177.972633539664,
+        "gram_applications": 4,
+        "forcing_response_upper": 4.3331080300428817e-19,
+        "closure": {
+          "kappa": 63999.77697554696,
+          "derivative_drift": 124523313439.47482,
+          "corrected_defect_response_bound": 4.3331080300428817e-19,
+          "correction_max_state_norm": 4.380461571273445e-15,
+          "domain_radius": 6.959779015863744e-14,
+          "discriminant": 0.993093490059374,
+          "remainder_radius": 4.340615641620338e-19,
+          "total_radius_about_original_reference": 4.380895632837607e-15,
+          "algebraic_closure_passed": true,
+          "domain_passed": true,
+          "closure_passed": true,
+          "closure_residual": 0.0
+        },
+        "bracket": [
+          118,
+          118
+        ],
+        "output_power": 1,
+        "logic_slack": 0.001558975782699109,
+        "maximum_margin_radius": 9.456593120038146e-15,
+        "issued": true
+      }
+    }
+  ],
+  "probe_hashes": [
+    "277C65020B8C34FF458DD99AF2EFD0129BABC2437C297C900D03DFDF95EEB71F",
+    "D3DCE9B7F47328800E975750A166BBA78B126DE3245FF168793964B1801A34CD",
+    "6C5DD95692FBF7904E1E006B4FD21EB9E041786152092D635E3F4A3BAFFC2B59",
+    "ADA153F50613364ACCD43FC55EDFAE2F2707155F44509FE4724CE8F002D46430"
+  ],
+  "initial_probe_norms": [
+    1978.0576872201625,
+    1978.8661403250028,
+    1978.9017269335552,
+    1979.684987424019
+  ],
+  "direct_image_norms": [
+    92239.80870100163,
+    92243.17842693439,
+    93093.04097621447,
+    91998.52055239839
+  ],
+  "gram_norms_computed": [
+    61864466.45024493,
+    61836748.13984063,
+    62680244.427527726,
+    61799355.22051388
+  ],
+  "logical_forward_green_applications": 4,
+  "logical_transpose_green_applications": 4,
+  "logical_total_green_sweeps": 8,
+  "panel_logical_green_sweeps": 8,
+  "probe_sweep_reduction": 1.0,
+  "transpose_sweeps_avoided": 0,
+  "timings_seconds": {
+    "streaming_centerline": 34.54100179998204,
+    "corrected_path": 6.08225079998374,
+    "operator_setup": 0.0008470999891869724,
+    "direct_forward_queries": 12.240836900018621,
+    "transpose_fallback_queries": 9.200918499962427,
+    "staged_green_queries": 21.441755399981048,
+    "total": 63.48137360002147
+  },
+  "corrected_path_sha256": "B427D48BD0165C1BC32CE017E64042F80BCC5B7280C3CFF2A559D82302B79D5B",
+  "panel_result_sha256": "08E501B51FEAC3D96FFE02BE0B5D84E0E682C2E73CB906C083ED0FEF7E75E12B",
+  "certificate_sha256": "43E6ADEF120EDEBE35063C83F12CD7CB2B94F07C945665DB1F42DD0B63BA3738",
+  "protocol_sha256": "11813379A4B388EB71C409BE4709EB366E6E5BE8BF53C27AA5334802226EC428",
+  "source_sha256": "A46FFE4F68AA15E75EA37755231227481233A8EFD9C35D2066CBB1141A095BB7",
+  "dependency_sha256": {
+    "scripts/audit_transformer_direct_image_green_panel.py": "A46FFE4F68AA15E75EA37755231227481233A8EFD9C35D2066CBB1141A095BB7",
+    "scripts/direct_image_green_bound.py": "EC8B9DECA1FE6E17B4C03AA145A8829BA141BE8A5D223CDA86F82305B360F778",
+    "scripts/streaming_variational_centerline.py": "CEA0ADE5FC1255969B7A93CB1D8525EBBEE9020709CEB5399DB9A090E450228A",
+    "scripts/batched_green_operator.py": "C30C1DAF0E8A8494B518CD12E6328146B1A20DD297033192C78408C2E46F54BF",
+    "scripts/audit_transformer_relinearized_prefix_panel.py": "BE35D0771CF49B53B2D0721AA4BF3035EE9A9BF2F2DFA1BABB2B9B37A47A2B58",
+    "scripts/relinearized_green_closure.py": "ACFB21152D0467E6DDAAB627138325B2079C4F75C1F8BD7FF708C427F67FE5E1",
+    "scripts/transformer_green_operator.py": "F529F42D8DC6B01C94D5F5496AC60BB8F63B4BC030FF85449F106362C8CE20B4",
+    "scripts/transformer_optimizer_probe.py": "3C7665274245731141F4E0F451652F486CB65D7A16B0DCF233BAA66E8BFD5C79",
+    "scripts/transformer_v3_certificate.py": "5050DA95BAE58B02CB15AFAAF4802F9968A70562A26934B9F5E13FD224E71CBF",
+    "DIRECT_IMAGE_GREEN_THEOREM.md": "EC5A854A67CCA47EF0A0F21ED08AD2E538D1F39BC74E70D18D86A941F6122159",
+    "CAUSAL_PREFIX_RECENTERING_THEOREM.md": "FC20EA02DB556C43E751A33161907DBC728EF7FEBB5BF65A58EBDC758C30319D",
+    "results/transformer_v3_relinearized_prefix_panel_audit.json": "08E501B51FEAC3D96FFE02BE0B5D84E0E682C2E73CB906C083ED0FEF7E75E12B",
+    "results/transformer_v3_two_response_postseal_audit.json": "2DAF416457E016F9D9A77F2E49B4B8B4FBAC8C69C98C9A3051D9105F11A3C287"
+  },
+  "combined_family_failure_upper": 2e-06,
+  "outcome_files_read": 0
+}

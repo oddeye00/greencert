@@ -1,0 +1,22 @@
+{
+  "status": "INDEPENDENT RESPONSE-FREE PROBE AUDIT PASSED",
+  "source_sha256": "3ADA39244684B7AAA8E832E126C0C57CF9AF1D6A7763168C4DD3686E994FEA6C",
+  "protocol_sha256": "2073DDB63C7CF94F918E3DA15E289C2FD46156212ECA465E06FA3B69B7C508FA",
+  "candidate": {
+    "seed": 366,
+    "threshold": 0.7,
+    "anchor": 1040
+  },
+  "probes": 16,
+  "calibration": 0.5558644877400047,
+  "projection_maximum": 1.0308586136086843e-22,
+  "secant_norm_upper": 1.8545142500465854e-22,
+  "observed_norm": 4.013845661895033e-23,
+  "bound_to_observed_ratio": 4.6202928718764555,
+  "forcing_headroom_ratio": 22.76982331522108,
+  "bracket": [
+    28,
+    28
+  ],
+  "outcome_files_read": 0
+}

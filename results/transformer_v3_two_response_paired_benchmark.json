@@ -1,0 +1,66 @@
+{
+  "status": "PAIRED TWO-RESPONSE INCREMENTAL BENCHMARK PASSED",
+  "evidence_boundary": "Post-seal outcome-blind systems benchmark. It compares incremental operator choices and does not alter prospective issuance or coverage.",
+  "candidate": {
+    "seed": 366,
+    "threshold": 0.7,
+    "anchor": 1040
+  },
+  "horizon": 52,
+  "repeats": 4,
+  "warmup_directional_seconds": 86.06234649999533,
+  "warmup_additional_gram_power_seconds": 227.76206330000423,
+  "median_directional_seconds": 78.58018739998806,
+  "median_additional_gram_power_seconds": 233.44951584999217,
+  "median_paired_speedup": 2.9129207123058674,
+  "minimum_paired_speedup": 2.773219603089279,
+  "maximum_paired_speedup": 3.2810227163066106,
+  "quadratic_forcing_norm": 3.146091221026792e-31,
+  "second_response_norm": 5.834270642686859e-30,
+  "additional_power_output_norm": 1470162276320.8174,
+  "certificate_sha256": "63DA40D4989669A1D1349B25323732C6800FD05E7EF793FBDE9C624E709CE24B",
+  "two_response_source_sha256": "2DAF416457E016F9D9A77F2E49B4B8B4FBAC8C69C98C9A3051D9105F11A3C287",
+  "outcome_files_read": 0,
+  "records": [
+    {
+      "repeat": 1,
+      "order": [
+        "directional",
+        "power"
+      ],
+      "directional_seconds": 77.7778888999892,
+      "additional_gram_power_seconds": 234.239623499976,
+      "paired_speedup": 3.011647999358447
+    },
+    {
+      "repeat": 2,
+      "order": [
+        "power",
+        "directional"
+      ],
+      "directional_seconds": 79.38248589998693,
+      "additional_gram_power_seconds": 223.39766990000498,
+      "paired_speedup": 2.814193425253287
+    },
+    {
+      "repeat": 3,
+      "order": [
+        "directional",
+        "power"
+      ],
+      "directional_seconds": 85.59462310001254,
+      "additional_gram_power_seconds": 237.3726866999932,
+      "paired_speedup": 2.773219603089279
+    },
+    {
+      "repeat": 4,
+      "order": [
+        "power",
+        "directional"
+      ],
+      "directional_seconds": 70.9106362000166,
+      "additional_gram_power_seconds": 232.65940820000833,
+      "paired_speedup": 3.2810227163066106
+    }
+  ]
+}

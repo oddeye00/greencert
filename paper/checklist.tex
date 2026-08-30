@@ -1,0 +1,86 @@
+\section*{NeurIPS Paper Checklist}
+
+\begin{enumerate}
+
+\item {\bf Claims}
+    \item[] Question: Do the main claims made in the abstract and introduction accurately reflect the paper's contributions and scope?
+    \item[] Answer: \answerYes{}
+    \item[] Justification: The abstract and Section~\ref{sec:results} distinguish deterministic direct-outward WDBC/digits continuation from the prospective high-confidence Green calculations and float64 Transformer certificates, report all denominators and abstentions, and state that the events are finite-set rather than population-generalization guarantees.
+
+\item {\bf Limitations}
+    \item[] Question: Does the paper discuss the limitations of the work performed by the authors?
+    \item[] Answer: \answerYes{}
+    \item[] Justification: The limitations section discusses architecture and dataset scale, overlapping WDBC/digits splits, the development-chosen digits stress budget, finite-set events, selective provability rather than forecast-error detection, conditional issuance, exact-real versus Green numerical scope, the remaining cost after block batching, the execution amendment, and missing stochastic/deep jet envelopes.
+
+\item {\bf Theory assumptions and proofs}
+    \item[] Question: For each theoretical result, does the paper provide the full set of assumptions and a complete (and correct) proof?
+    \item[] Answer: \answerYes{}
+    \item[] Justification: Section~\ref{sec:method} states the sequence-space, derivative-drift, computational-error, and random-probe assumptions. Appendix~\ref{app:proofs} proves the signed Green theorem, fixed-radius corollary, Gaussian Gram enclosure, defect contraction, persistent bracket, and momentum specialization.
+
+\item {\bf Experimental result reproducibility}
+    \item[] Question: Does the paper fully disclose all the information needed to reproduce the main experimental results of the paper to the extent that it affects the main claims and/or conclusions of the paper (regardless of whether the code and data are provided or not)?
+    \item[] Answer: \answerYes{}
+    \item[] Justification: Section~\ref{sec:protocol} specifies models, training-only feature standardization, development/fresh boundaries, splits, optimizers, gates, horizons, seeds, screening rules, and information barriers; the numerical appendix records protocol and candidate hashes.
+
+\item {\bf Open access to data and code}
+    \item[] Question: Does the paper provide open access to the data and code, with sufficient instructions to faithfully reproduce the main experimental results, as described in supplemental material?
+    \item[] Answer: \answerYes{}
+    \item[] Justification: An anonymized supplementary archive contains source, tests, protocol seals, generated modular data, the WDBC CSV/checksum, the hashed scikit-learn digits loader, blind manifests, outcomes, 192-bit outward caches, block-batched replay records, modern-map adjoint audits, and figure inputs. Both real datasets are credited to UCI through persistent DOIs.
+
+\item {\bf Experimental setting/details}
+    \item[] Question: Does the paper specify all the training and test details (e.g., data splits, hyperparameters, how they were chosen, type of optimizer) necessary to understand the results?
+    \item[] Answer: \answerYes{}
+    \item[] Justification: Section~\ref{sec:protocol} reports all claim-relevant settings, including frozen development/fresh boundaries and disjoint split sizes; implementation details are in the supplement.
+
+\item {\bf Experiment statistical significance}
+    \item[] Question: Does the paper report error bars suitably and correctly defined or other appropriate information about the statistical significance of the experiments?
+    \item[] Answer: \answerYes{}
+    \item[] Justification: The claims are deterministic audits of complete frozen batches rather than estimates of a mean effect. We report every disposition, distinct issuing seeds, threshold dependence, and explicitly avoid treating event-level containment as independent population coverage.
+
+\item {\bf Experiments compute resources}
+    \item[] Question: For each experiment, does the paper provide sufficient information on the computer resources (type of compute workers, memory, time of execution) needed to reproduce the experiments?
+    \item[] Answer: \answerYes{}
+    \item[] Justification: The limitations and numerical appendix give CPU hardware, arithmetic precision, aggregate and per-candidate certificate time, the 7.12-hour direct validated baseline, and complete randomized-operator counts; exact commands and environment versions are in the supplement.
+
+\item {\bf Code of ethics}
+    \item[] Question: Does the research conducted in the paper conform, in every respect, with the NeurIPS Code of Ethics \url{https://neurips.cc/public/EthicsGuidelines}?
+    \item[] Answer: \answerYes{}
+    \item[] Justification: The work uses synthetic arithmetic data and public UCI-derived WDBC and handwritten-digits benchmarks. It involves no participant interaction or private-data collection and reports inspected development runs rather than pooling them with confirmation.
+
+\item {\bf Broader impacts}
+    \item[] Question: Does the paper discuss both potential positive societal impacts and negative societal impacts of the work performed?
+    \item[] Answer: \answerYes{}
+    \item[] Justification: The limitations section discusses reliable training monitoring as a potential benefit and misplaced trust in local, probabilistic, or finite-set guarantees as the main foreseeable risk.
+
+\item {\bf Safeguards}
+    \item[] Question: Does the paper describe safeguards that have been put in place for responsible release of data or models that have a high risk for misuse (e.g., pre-trained language models, image generators, or scraped datasets)?
+    \item[] Answer: \answerNA{}
+    \item[] Justification: The released artifacts are small tabular, image-feature, and modular-arithmetic models, public UCI-derived datasets, and verification code, with no pretrained generative model, scraped data, or identified high-risk capability.
+
+\item {\bf Licenses for existing assets}
+    \item[] Question: Are the creators or original owners of assets (e.g., code, data, models), used in the paper, properly credited and are the license and terms of use explicitly mentioned and properly respected?
+    \item[] Answer: \answerYes{}
+    \item[] Justification: WDBC and Optical Recognition of Handwritten Digits are credited through UCI persistent DOIs; both UCI records state CC BY 4.0. The digits subset is loaded through scikit-learn, which is cited in the artifact record. No pretrained model or third-party research code is used; standard dependencies are listed in the supplement.
+
+\item {\bf New assets}
+    \item[] Question: Are new assets introduced in the paper well documented and is the documentation provided alongside the assets?
+    \item[] Answer: \answerYes{}
+    \item[] Justification: The supplementary archive documents the code, generated data, protocol manifests, result schemas, tests, and exact commands needed to reproduce each study.
+
+\item {\bf Crowdsourcing and research with human subjects}
+    \item[] Question: For crowdsourcing experiments and research with human subjects, does the paper include the full text of instructions given to participants and screenshots, if applicable, as well as details about compensation (if any)?
+    \item[] Answer: \answerNA{}
+    \item[] Justification: The research contains no crowdsourcing, participant interaction, or newly collected human-subject data; WDBC is a public secondary benchmark containing numeric IDs and derived features rather than direct identifiers.
+
+\item {\bf Institutional review board (IRB) approvals or equivalent for research with human subjects}
+    \item[] Question: Does the paper describe potential risks incurred by study participants, whether such risks were disclosed to the subjects, and whether Institutional Review Board (IRB) approvals (or an equivalent approval/review based on the requirements of your country or institution) were obtained?
+    \item[] Answer: \answerNA{}
+    \item[] Justification: The research contains no participant interaction or private records. The only medical data are a public UCI benchmark with numeric IDs and derived features used for secondary analysis, so no IRB review was required.
+
+\item {\bf Declaration of LLM usage}
+    \enlargethispage{2\baselineskip}
+    \item[] Question: Does the paper describe the usage of LLMs if it is an important, original, or non-standard component of the core methods in this research? Note that if the LLM is used only for writing, editing, or formatting purposes and does not impact the core methodology, scientific rigor, or originality of the research, declaration is not required.
+    \item[] Answer: \answerYes{}
+    \item[] Justification: An LLM assisted implementation and editing; deterministic audits and tests checked all claims and code paths.
+
+\end{enumerate}

@@ -1,0 +1,306 @@
+{
+  "status": "outward-enclosed candidates joined to sealed outcomes",
+  "scope_note": "The state and output inequalities enclose exact-real gradient descent from the binary anchor. The observed float64 optimizer path is a separate outcome audit.",
+  "protocol_sha256": "ef79c9e06170ba6bdafb39ee106b215c503b40873e4cb121276d3f23313e3092",
+  "manifest_sha256": "e365e2c64a46b6ffa900fd46bbd036c97bc20320d3d74ef6b60616c4e29418c4",
+  "interval_version": "arb-outward-v1-2026-08-21",
+  "summary": {
+    "float_candidates": 16,
+    "outward_certificates_issued": 16,
+    "all_float_candidates_retained": true,
+    "distinct_outward_issuing_seeds": [
+      17,
+      19,
+      21,
+      23,
+      24
+    ],
+    "outward_coverage_count": [
+      16,
+      16
+    ],
+    "outward_false_issued": 0,
+    "outward_coverage_exact_95_interval_iid_event_working_model": [
+      0.7940927857921773,
+      1.0
+    ],
+    "outward_all_covered_issuing_seeds": [
+      17,
+      19,
+      21,
+      23,
+      24
+    ],
+    "outward_seed_level_all_covered_count": [
+      5,
+      5
+    ],
+    "outward_seed_level_exact_95_interval_iid_seed_working_model": [
+      0.47817624989501856,
+      1.0
+    ],
+    "outward_median_bracket_span": 0.0,
+    "outward_maximum_bracket_span": 6,
+    "outward_median_lead": 108.5,
+    "outward_minimum_lead": 2,
+    "outward_maximum_lead": 237
+  },
+  "rows": [
+    {
+      "seed": 17,
+      "threshold": 0.8,
+      "anchor": 47000,
+      "float_candidate_bracket": [
+        39,
+        39
+      ],
+      "outward_bracket": [
+        39,
+        39
+      ],
+      "outward_issued": true,
+      "actual_lead": 39,
+      "outward_covered": true
+    },
+    {
+      "seed": 17,
+      "threshold": 0.9,
+      "anchor": 115250,
+      "float_candidate_bracket": [
+        71,
+        71
+      ],
+      "outward_bracket": [
+        71,
+        71
+      ],
+      "outward_issued": true,
+      "actual_lead": 71,
+      "outward_covered": true
+    },
+    {
+      "seed": 17,
+      "threshold": 0.95,
+      "anchor": 123500,
+      "float_candidate_bracket": [
+        190,
+        190
+      ],
+      "outward_bracket": [
+        190,
+        190
+      ],
+      "outward_issued": true,
+      "actual_lead": 190,
+      "outward_covered": true
+    },
+    {
+      "seed": 19,
+      "threshold": 0.7,
+      "anchor": 13000,
+      "float_candidate_bracket": [
+        2,
+        2
+      ],
+      "outward_bracket": [
+        2,
+        2
+      ],
+      "outward_issued": true,
+      "actual_lead": 2,
+      "outward_covered": true
+    },
+    {
+      "seed": 19,
+      "threshold": 0.95,
+      "anchor": 17000,
+      "float_candidate_bracket": [
+        18,
+        20
+      ],
+      "outward_bracket": [
+        18,
+        20
+      ],
+      "outward_issued": true,
+      "actual_lead": 18,
+      "outward_covered": true
+    },
+    {
+      "seed": 21,
+      "threshold": 0.6,
+      "anchor": 17000,
+      "float_candidate_bracket": [
+        64,
+        70
+      ],
+      "outward_bracket": [
+        64,
+        70
+      ],
+      "outward_issued": true,
+      "actual_lead": 66,
+      "outward_covered": true
+    },
+    {
+      "seed": 21,
+      "threshold": 0.9,
+      "anchor": 21250,
+      "float_candidate_bracket": [
+        237,
+        237
+      ],
+      "outward_bracket": [
+        237,
+        237
+      ],
+      "outward_issued": true,
+      "actual_lead": 237,
+      "outward_covered": true
+    },
+    {
+      "seed": 21,
+      "threshold": 0.95,
+      "anchor": 25000,
+      "float_candidate_bracket": [
+        158,
+        158
+      ],
+      "outward_bracket": [
+        158,
+        158
+      ],
+      "outward_issued": true,
+      "actual_lead": 158,
+      "outward_covered": true
+    },
+    {
+      "seed": 23,
+      "threshold": 0.6,
+      "anchor": 21500,
+      "float_candidate_bracket": [
+        36,
+        36
+      ],
+      "outward_bracket": [
+        36,
+        36
+      ],
+      "outward_issued": true,
+      "actual_lead": 36,
+      "outward_covered": true
+    },
+    {
+      "seed": 23,
+      "threshold": 0.7,
+      "anchor": 22750,
+      "float_candidate_bracket": [
+        189,
+        189
+      ],
+      "outward_bracket": [
+        189,
+        189
+      ],
+      "outward_issued": true,
+      "actual_lead": 189,
+      "outward_covered": true
+    },
+    {
+      "seed": 23,
+      "threshold": 0.8,
+      "anchor": 24500,
+      "float_candidate_bracket": [
+        182,
+        182
+      ],
+      "outward_bracket": [
+        182,
+        182
+      ],
+      "outward_issued": true,
+      "actual_lead": 182,
+      "outward_covered": true
+    },
+    {
+      "seed": 23,
+      "threshold": 0.9,
+      "anchor": 26000,
+      "float_candidate_bracket": [
+        104,
+        104
+      ],
+      "outward_bracket": [
+        104,
+        104
+      ],
+      "outward_issued": true,
+      "actual_lead": 104,
+      "outward_covered": true
+    },
+    {
+      "seed": 24,
+      "threshold": 0.6,
+      "anchor": 23500,
+      "float_candidate_bracket": [
+        199,
+        199
+      ],
+      "outward_bracket": [
+        199,
+        199
+      ],
+      "outward_issued": true,
+      "actual_lead": 199,
+      "outward_covered": true
+    },
+    {
+      "seed": 24,
+      "threshold": 0.8,
+      "anchor": 27250,
+      "float_candidate_bracket": [
+        44,
+        44
+      ],
+      "outward_bracket": [
+        44,
+        44
+      ],
+      "outward_issued": true,
+      "actual_lead": 44,
+      "outward_covered": true
+    },
+    {
+      "seed": 24,
+      "threshold": 0.9,
+      "anchor": 36750,
+      "float_candidate_bracket": [
+        113,
+        113
+      ],
+      "outward_bracket": [
+        113,
+        113
+      ],
+      "outward_issued": true,
+      "actual_lead": 113,
+      "outward_covered": true
+    },
+    {
+      "seed": 24,
+      "threshold": 0.95,
+      "anchor": 52500,
+      "float_candidate_bracket": [
+        198,
+        198
+      ],
+      "outward_bracket": [
+        198,
+        198
+      ],
+      "outward_issued": true,
+      "actual_lead": 198,
+      "outward_covered": true
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "status": "INDEPENDENT TWO-RESPONSE STRUCTURAL AUDIT PASSED",
+  "certificate_records": 19,
+  "green_evaluable_records": 15,
+  "surrogate_issued": 15,
+  "old_issued": 11,
+  "converted_old_abstentions": 4,
+  "earlier_power_cases": 5,
+  "adaptive_response_invocations": 9,
+  "unchanged_cases_without_added_response": 6,
+  "progressive_power_levels_saved": 22,
+  "gross_hvp_calls_saved": 169056,
+  "second_response_hvp_calls": 1806,
+  "net_hvp_calls_saved_excluding_third_products": 167250,
+  "directional_third_products": 1797,
+  "local_fourth_order_passes": 9,
+  "minimum_local_fourth_headroom_ratio": 55.30410964848143,
+  "median_local_fourth_headroom_ratio": 8985.432953190499,
+  "outcome_files_read": 0,
+  "source_sha256": "2DAF416457E016F9D9A77F2E49B4B8B4FBAC8C69C98C9A3051D9105F11A3C287",
+  "policy_sha256": "120CBAEAA0A8F3379BAEF8CC85BC81A4FF363198DC69C416E82E6D29051E0595",
+  "local_fourth_sha256": "5C23B1E18D952A661E1C808F69C34D7A902D76B428B29A8123E137A154168DCC"
+}

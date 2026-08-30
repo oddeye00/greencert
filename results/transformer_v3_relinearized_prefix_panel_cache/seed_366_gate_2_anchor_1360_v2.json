@@ -1,0 +1,202 @@
+{
+  "version": 2,
+  "candidate": {
+    "seed": 366,
+    "threshold": 0.9,
+    "anchor": 1360
+  },
+  "certificate_path": "results/transformer_v3_certificate_seed_366_gate_2_anchor_1360.json",
+  "certificate_sha256": "2AE37E3B9E914F9E38EA6EDF813887AB4C9CD41FA845DDC7E1958A2DEF947A95",
+  "horizon": 94,
+  "centerline_sha256": "4C79BE109BE0D97E9111D1F7CEE21C0359B92E0D7952DC83E7C3675FA314E3FF",
+  "corrected_path_sha256": "574F52E7EA23024D7797AD0AA3622CF0996875E2454242BD762B5CC661D64C37",
+  "quadratic_surrogate_sha256": "AE89918B9A190C158C79C360A4A5082D8BD8D37B2CB20689401A9F8C4FB2ABC8",
+  "operator_identity": [
+    94,
+    366,
+    2,
+    1360,
+    94,
+    4,
+    1
+  ],
+  "probe_seed": 4777434153428219745,
+  "probe_hashes": [
+    "F3279F790FAC7A4C2BEFF8C5F1080B7441AEE4E5456A5755A93CD299BBB26893",
+    "792252ADE6327F45EE2856E4D34B2489F65F8D04E9120077D6D5E97C87FE4890",
+    "18521A25EA1A8105AF3034342948B56588C168CAF81777E32927DE73D6EE6A2D",
+    "94859336D4FE71ACC6B1027ED6086189C32A2DE5A00ECC28B6C9636257C297B9"
+  ],
+  "initial_probe_norms": [
+    1610.5062885539855,
+    1611.033038433623,
+    1608.7034165901414,
+    1609.4675040774137
+  ],
+  "final_probe_norms": [
+    25823363.097467244,
+    25739903.948205393,
+    26272994.231928285,
+    25696963.350688342
+  ],
+  "prefixes_computed": 4,
+  "batched_gram_calls": 1,
+  "stage_delta": 2.222222222222222e-08,
+  "new_green_family_failure_upper": 1e-06,
+  "inherited_output_family_failure_upper": 1e-06,
+  "combined_family_failure_upper": 2e-06,
+  "correction_sequence_norm": 2.3678988804339286e-14,
+  "correction_max_state_norm": 3.704660539277377e-15,
+  "measured_response_recurrence_residual_norm": 0.0,
+  "quadratic_surrogate_injection_norm": 6.027139548020972e-31,
+  "directional_quadratic_taylor_error_upper": 3.295821429897966e-24,
+  "total_corrected_injection_upper": 3.295822032611921e-24,
+  "direct_forcing_response_used": false,
+  "direct_forcing_response_norm": null,
+  "direct_forcing_response_recurrence_residual_norm": null,
+  "direct_forcing_response_sha256": null,
+  "maximum_local_objective_fourth_derivative_upper": 6.359847985173693e+21,
+  "maximum_parameter_direction_norm": 3.676694895200628e-15,
+  "derivative_drift_upper": 103455159897.23424,
+  "domain_radius": 4.735797760867857e-14,
+  "stage_rows": [
+    {
+      "probes": 4,
+      "power": 1,
+      "Y": 26272994.231928285,
+      "c_delta": 0.015302900703286656,
+      "delta": 2.222222222222222e-08,
+      "operator_norm_upper_bound": 41435.05361362107,
+      "operator_norm_lower_estimate": 127.79586242709514,
+      "gram_applications": 4,
+      "cumulative_batched_gram_calls": 1,
+      "forcing_capacity": {
+        "radius": 2.332813063249393e-16,
+        "response_cap": 1.1664065316246965e-16,
+        "injection_cap": 2.8150235848645313e-21
+      },
+      "norm_only_injection_headroom_ratio": 854.1188076935211,
+      "selected_forcing_headroom_ratio": 854.1188076935211,
+      "forcing_release": {
+        "kappa": 41435.05361362107,
+        "surrogate_injection_norm": 6.027139548020972e-31,
+        "surrogate_error_norm": 3.295821429897966e-24,
+        "norm_only_response_upper": 1.3656256262222853e-19,
+        "direct_response_norm": null,
+        "direct_response_recurrence_residual_norm": null,
+        "response_aware_upper": null,
+        "selected_response_upper": 1.3656256262222853e-19,
+        "selected_method": "norm_only"
+      },
+      "norm_only_attempt": {
+        "corrected_defect_response_bound": 1.3656256262222853e-19,
+        "closure": {
+          "kappa": 41435.05361362107,
+          "derivative_drift": 103455159897.23424,
+          "corrected_defect_response_bound": 1.3656256262222853e-19,
+          "correction_max_state_norm": 3.704660539277377e-15,
+          "domain_radius": 4.735797760867857e-14,
+          "discriminant": 0.9988292026928896,
+          "remainder_radius": 1.3660255780892804e-19,
+          "total_radius_about_original_reference": 3.704797141835186e-15,
+          "algebraic_closure_passed": true,
+          "domain_passed": true,
+          "closure_passed": true,
+          "closure_residual": 0.0
+        },
+        "bracket": [
+          70,
+          70
+        ],
+        "output_power": 1,
+        "logic_slack": 0.0013621531813591448,
+        "maximum_margin_radius": 2.795673570052695e-15,
+        "issued": true
+      },
+      "response_aware_attempt": null,
+      "selected_method": "norm_only",
+      "corrected_defect_response_bound": 1.3656256262222853e-19,
+      "closure": {
+        "kappa": 41435.05361362107,
+        "derivative_drift": 103455159897.23424,
+        "corrected_defect_response_bound": 1.3656256262222853e-19,
+        "correction_max_state_norm": 3.704660539277377e-15,
+        "domain_radius": 4.735797760867857e-14,
+        "discriminant": 0.9988292026928896,
+        "remainder_radius": 1.3660255780892804e-19,
+        "total_radius_about_original_reference": 3.704797141835186e-15,
+        "algebraic_closure_passed": true,
+        "domain_passed": true,
+        "closure_passed": true,
+        "closure_residual": 0.0
+      },
+      "bracket": [
+        70,
+        70
+      ],
+      "output_power": 1,
+      "logic_slack": 0.0013621531813591448,
+      "maximum_margin_radius": 2.795673570052695e-15,
+      "issued": true
+    }
+  ],
+  "issued": true,
+  "bracket": [
+    70,
+    70
+  ],
+  "directional_baseline_bracket": [
+    70,
+    70
+  ],
+  "same_as_directional_bracket": true,
+  "directional_baseline_power": 2,
+  "directional_baseline_green_gram_applications": 32,
+  "relinearized_green_gram_applications": 4,
+  "green_gram_application_reduction": 8.0,
+  "green_gram_applications_saved": 28,
+  "directional_baseline_theoretical_linearized_sweeps": 66,
+  "relinearized_theoretical_linearized_sweeps": 9,
+  "theoretical_linearized_sweep_reduction": 7.333333333333333,
+  "recurrence_replay_sweeps_for_float64_audit": 1,
+  "second_causal_response_sweeps_avoided": 1,
+  "outcome_files_read": 0,
+  "timings_seconds": {
+    "centerline": 42.214481799979694,
+    "first_response": 2.742811200034339,
+    "recurrence_replay": 1.7662618999602273,
+    "directional_forcing": 5.306694200029597,
+    "corrected_operator_setup": 0.0012105000205338001,
+    "direct_forcing_response_and_replay": 0.0,
+    "prefix_green_query": 11.023540899972431
+  },
+  "elapsed_seconds": 63.17064590001246,
+  "protocol_sha256": "6740E5D32B5A5841E81AE0B25F17FDE316322CA4B279F9A2A1EB8F0C55BE1358",
+  "source_sha256": "BE35D0771CF49B53B2D0721AA4BF3035EE9A9BF2F2DFA1BABB2B9B37A47A2B58",
+  "two_response_source_sha256": "2DAF416457E016F9D9A77F2E49B4B8B4FBAC8C69C98C9A3051D9105F11A3C287",
+  "case_set_sha256": "A34AEBB6651B05C4FE18A5379D1778838B276C4709D530936285A600FE2030FB",
+  "dependency_sha256": {
+    "scripts/audit_transformer_relinearized_prefix_panel.py": "BE35D0771CF49B53B2D0721AA4BF3035EE9A9BF2F2DFA1BABB2B9B37A47A2B58",
+    "scripts/batched_green_operator.py": "C30C1DAF0E8A8494B518CD12E6328146B1A20DD297033192C78408C2E46F54BF",
+    "scripts/cost_aware_forcing.py": "89021849BBEA4BE641BE18D80CF69542D1A87D8F78F99D0C890CE1DCD38829F3",
+    "scripts/prefix_gram_enclosure.py": "758142A941D4039E72014C9352AFDE3CA01DD39EE5918D115017905E924B2D78",
+    "scripts/probe_jacobian_bound.py": "CAF1ACEC6941125FE0556ACF53DE65AEA77C8F298C5EEA5123D7F46CDE0B30DD",
+    "scripts/relinearized_green_closure.py": "ACFB21152D0467E6DDAAB627138325B2079C4F75C1F8BD7FF708C427F67FE5E1",
+    "scripts/transformer_four_sweep_development_audit.py": "B60EA89574E82116A753F0C9F166A70E388F7707694596943D82DD13E10DA5D1",
+    "scripts/transformer_fourth_jet_bound.py": "32859DC43BF78BC7569F1156D3FC732C74FF23A0346549B5171F85EB2F3F313F",
+    "scripts/transformer_green_development_audit.py": "F91FC0213CED87DED3AC0606E4F0B560A8760554F5C23B7F8936D4C24600620D",
+    "scripts/transformer_green_operator.py": "F529F42D8DC6B01C94D5F5496AC60BB8F63B4BC030FF85449F106362C8CE20B4",
+    "scripts/transformer_optimizer_probe.py": "3C7665274245731141F4E0F451652F486CB65D7A16B0DCF233BAA66E8BFD5C79",
+    "scripts/transformer_two_response.py": "097B8B736ED4695BDB81127A4832C2AB993DCF999E3435B49BA2CAE629FB8AAB",
+    "scripts/transformer_v3_certificate.py": "5050DA95BAE58B02CB15AFAAF4802F9968A70562A26934B9F5E13FD224E71CBF",
+    "NESTED_PREFIX_GRAM_THEOREM.md": "11F46E2D14AF9AB513F2F88AB3DB3FE216CAE11916D26941DA46AA54DB728D42",
+    "COST_AWARE_FORCING_THEOREM.md": "8BD44EDD9730E5B1F863BE2B14A1E002332A06243297A6FEB511FF3398EE6F3E"
+  },
+  "environment": {
+    "python": "3.12.10",
+    "torch": "2.13.0+cpu",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "torch_threads": 4,
+    "deterministic_algorithms": true
+  }
+}
