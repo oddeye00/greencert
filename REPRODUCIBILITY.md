@@ -125,6 +125,37 @@ Large Transformer checkpoints are regenerated rather than committed. Compact
 training summaries, candidate records, certificate records, outcomes, and
 independent audits are all tracked.
 
+For the seed-366 development audits, regenerate the omitted 31.9 MB archive
+directly from the committed blind trigger record:
+
+```bash
+python scripts/regenerate_transformer_checkpoint.py --seed 366
+```
+
+The command retrains the frozen configuration, compares every trigger-visible
+trajectory value and summary field with the committed blind artifact, and
+writes the checkpoint archive only after those checks pass. It does not read
+the separately stored certification-outcome file.
+
+CPU libraries can reproduce the blind trajectory within the frozen numerical
+tolerance without reproducing every parameter bit. The exact candidate anchor
+is therefore tracked separately as two hash-locked NumPy arrays (parameter and
+momentum velocity, 13,792 doubles each). To audit the cross-platform drift and
+replace the regenerated archive by the exact sealed anchor used by the
+diagnostic, run:
+
+```bash
+python scripts/materialize_transformer_anchor_checkpoint.py \
+  --seed 366 --anchor 1120 --force
+```
+
+This emits
+`results/transformer_seed_366_anchor_1120_regeneration_bridge.json`, recording
+bitwise equality, maximum and Euclidean regeneration differences, all relevant
+hashes, and an explicit zero outcome-read count. The subsequent causal audit
+therefore separates two reproducibility claims: tolerant regeneration of the
+frozen training trace and exact replay of the sealed certification anchor.
+
 ## Expected invariants
 
 The release-level audit requires:

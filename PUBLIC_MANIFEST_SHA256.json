@@ -5,12 +5,12 @@
       "sha256": "CC8E085BC397FF65663C23308C202DB1CE53CFCB053AF0A17B1A37AF8DEF5159"
     },
     ".github/workflows/causal-resolvent-diagnostic.yml": {
-      "bytes": 2004,
-      "sha256": "2D107035C4226CDAFC1809EA0E95E6FB8009E621A681B7650D708BE50C115E68"
+      "bytes": 2255,
+      "sha256": "E9206CCD1F6BB70C1994DC5A673588164FCD4D5C17448F5ACB3EF490D3679C94"
     },
     ".github/workflows/reproducibility.yml": {
-      "bytes": 1728,
-      "sha256": "4D7E22A658B91326A0585B503D146BD9B626B85CE3E5A72DA6B158B17EF5FD9B"
+      "bytes": 1872,
+      "sha256": "38C36AAA4851F9313DBA90F0DB9C6195EAC253F1CE4AECB3A971AB0656378ECA"
     },
     ".gitignore": {
       "bytes": 265,
@@ -225,8 +225,8 @@
       "sha256": "A4B94DB67A78758BF0DA3824816D25B8B00D4CA0FE8F384B8AA7B12BB257E47A"
     },
     "REPRODUCIBILITY.md": {
-      "bytes": 6360,
-      "sha256": "FBC85854AC642276F2B5658AFE93C0C1FB9999B296DF5CEBD643BD529BA59E3C"
+      "bytes": 7754,
+      "sha256": "0CF86CC4643324563FA9C45563E5FE8502052AEB71020486281E129B1A905FE4"
     },
     "RESPONSE_CENTERED_EVENT_TRANSPORT_THEOREM.md": {
       "bytes": 2446,
@@ -351,6 +351,18 @@
     "WEIGHTED_GREENCERT_THEOREM.md": {
       "bytes": 4611,
       "sha256": "FF713690710C9A732DE0C51AB73F0571CA46427774269B3C4461350224ED9317"
+    },
+    "data/transformer_seed_366_anchor_1120.json": {
+      "bytes": 589,
+      "sha256": "35E18CEF054A0CC6DED50ECCEDAABBA3DAECA0EF0C2876A2465311F1B12C202F"
+    },
+    "data/transformer_seed_366_anchor_1120_parameter.npy": {
+      "bytes": 110464,
+      "sha256": "076D3233E6BF1648FA728A250CBCEA09B624FD5D0D5F78042E9EF9B1652E4297"
+    },
+    "data/transformer_seed_366_anchor_1120_velocity.npy": {
+      "bytes": 110464,
+      "sha256": "1F59BDD827529D2A2DE912990E00586D9DE720C5C4390FDC6F01427E96E909A6"
     },
     "data/wdbc_breast_cancer.csv": {
       "bytes": 120483,
@@ -4256,6 +4268,10 @@
       "bytes": 8856,
       "sha256": "A2D9428C120BC92D9264C2456A0D209E8D6B9C6D7BDC1867EDD05A79A568D580"
     },
+    "scripts/export_transformer_anchor_state.py": {
+      "bytes": 2628,
+      "sha256": "D7BBFB684B98C24122C94C50073359C070DEA32F40FC77EB6813E04B6A3D767A"
+    },
     "scripts/generate_prospective_v2_seed.py": {
       "bytes": 1226,
       "sha256": "B2AA9B956BA6BC2EBC6EF10F14CB8CE30509BE9F1FEC83C12558FB84A0560B21"
@@ -4283,6 +4299,10 @@
     "scripts/make_transformer_v3_anytime_figure.py": {
       "bytes": 5351,
       "sha256": "6671704A9D28CF5F170E2CA1227D5E328520089E57AF6CA444396BD7C0E2E3C2"
+    },
+    "scripts/materialize_transformer_anchor_checkpoint.py": {
+      "bytes": 5026,
+      "sha256": "9B52073BF5554A2A215F407D50DB69F77F99DCFA466DC5A0FE74F0744156D097"
     },
     "scripts/matrix_free_mlp.py": {
       "bytes": 7426,

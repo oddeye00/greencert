@@ -1,0 +1,13 @@
+{
+  "status": "exact sealed Transformer anchor export",
+  "seed": 366,
+  "anchor": 1120,
+  "dtype": "float64",
+  "parameter_count": 13792,
+  "parameter_file": "data/transformer_seed_366_anchor_1120_parameter.npy",
+  "parameter_sha256": "076D3233E6BF1648FA728A250CBCEA09B624FD5D0D5F78042E9EF9B1652E4297",
+  "velocity_file": "data/transformer_seed_366_anchor_1120_velocity.npy",
+  "velocity_sha256": "1F59BDD827529D2A2DE912990E00586D9DE720C5C4390FDC6F01427E96E909A6",
+  "source_archive_sha256": "FC410E998CD9C7822EED3C6A5B47ECFD14AC2866BA0250A5E0FD87F4260DB39B",
+  "outcome_files_read": 0
+}
