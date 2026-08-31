@@ -135,7 +135,7 @@ def main() -> None:
                 metadata[key.strip()] = value.strip()
         if metadata.get("Author") != "Ian Rhee":
             raise AssertionError(f"unexpected PDF author: {metadata.get('Author')!r}")
-        if metadata.get("Pages") != "37":
+        if metadata.get("Pages") != "39":
             raise AssertionError(f"unexpected arXiv page count: {metadata.get('Pages')!r}")
 
         bbl = stage / f"{JOB}.bbl"
@@ -168,7 +168,7 @@ def main() -> None:
     release = {
         "title": "GreenCert: Signed Green Operators for Certified Neural Training Transitions",
         "author": "Ian Rhee",
-        "pages": 37,
+        "pages": 39,
         "pdf": {
             "path": OUT_PDF.relative_to(ROOT).as_posix(),
             "bytes": OUT_PDF.stat().st_size,

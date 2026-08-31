@@ -119,6 +119,18 @@ def main() -> None:
     analytic_jet_independent = load(
         "results/transformer_analytic_jet_release_independent_audit.json"
     )
+    structured_path = ROOT / "results/structured_parameter_green_transformer_audit.json"
+    structured = json.loads(structured_path.read_text(encoding="utf-8"))
+    structured_independent = load(
+        "results/structured_parameter_green_independent_audit.json"
+    )
+    anchor_fixed_path = (
+        ROOT / "results/anchor_fixed_structured_parameter_green_transformer_audit.json"
+    )
+    anchor_fixed = json.loads(anchor_fixed_path.read_text(encoding="utf-8"))
+    anchor_fixed_independent = load(
+        "results/anchor_fixed_structured_parameter_green_independent_audit.json"
+    )
 
     ts = transformer["summary"]
     studies = {
@@ -434,6 +446,122 @@ def main() -> None:
         and bool(analytic_jet_independent["same_brackets"]),
         "independent analytic-jet result changed",
     )
+    require(
+        structured["status"] == "structured parameter Green Transformer audit complete",
+        "structured-parameter Green status changed",
+    )
+    require(
+        (
+            int(structured["cases"]),
+            int(structured["issued"]),
+            int(structured["brackets_preserved"]),
+        )
+        == (15, 15, 15),
+        "structured-parameter Green issuance changed",
+    )
+    require(
+        structured["route_distribution"]
+        == {"gram_fallback": 9, "direct_image": 6},
+        "structured-parameter Green routes changed",
+    )
+    require(
+        (
+            int(structured["full_state_staged_green_sweeps"]),
+            int(structured["structured_parameter_green_sweeps"]),
+        )
+        == (112, 96),
+        "structured-parameter Green sweep accounting changed",
+    )
+    require(
+        close(structured["aggregate_sweep_reduction"], 1.1666666666666667),
+        "structured-parameter Green reduction changed",
+    )
+    require(
+        close(structured["combined_family_failure_upper"], 2.0e-6)
+        and int(structured["outcome_files_read"]) == 0,
+        "structured-parameter Green evidence boundary changed",
+    )
+    require(
+        structured_independent["status"]
+        == "INDEPENDENT STRUCTURED PARAMETER GREEN AUDIT PASSED",
+        "independent structured-parameter Green status changed",
+    )
+    require(
+        structured_independent["result_sha256"] == sha256(structured_path)
+        and int(structured_independent["sealed_dependency_hashes_verified"]) == 17
+        and int(structured_independent["case_caches_verified"]) == 15,
+        "independent structured-parameter Green replay changed",
+    )
+    require(
+        anchor_fixed["status"]
+        == "anchor-fixed structured parameter Green audit complete",
+        "anchor-fixed structured Green status changed",
+    )
+    require(
+        (
+            int(anchor_fixed["cases"]),
+            int(anchor_fixed["issued"]),
+            int(anchor_fixed["brackets_preserved"]),
+        )
+        == (15, 15, 15),
+        "anchor-fixed structured Green issuance changed",
+    )
+    require(
+        (
+            int(anchor_fixed["unrestricted_structured_green_sweeps"]),
+            int(anchor_fixed["anchor_fixed_structured_green_sweeps"]),
+        )
+        == (96, 96)
+        and not bool(anchor_fixed["promotion_gate_passed"]),
+        "anchor-fixed negative promotion result changed",
+    )
+    require(
+        close(anchor_fixed["combined_family_failure_upper"], 2.0e-6)
+        and int(anchor_fixed["outcome_files_read"]) == 0,
+        "anchor-fixed evidence boundary changed",
+    )
+    require(
+        anchor_fixed_independent["status"]
+        == "INDEPENDENT ANCHOR-FIXED STRUCTURED AUDIT PASSED",
+        "independent anchor-fixed structured status changed",
+    )
+    require(
+        anchor_fixed_independent["result_sha256"] == sha256(anchor_fixed_path)
+        and bool(anchor_fixed_independent["negative_promotion_result_reproduced"])
+        and int(anchor_fixed_independent["sealed_dependency_hashes_verified"]) == 23
+        and int(anchor_fixed_independent["case_caches_verified"]) == 15,
+        "independent anchor-fixed replay changed",
+    )
+
+    def candidate_key(row: dict) -> tuple[int, float, int]:
+        candidate = row["candidate"]
+        return (
+            int(candidate["seed"]),
+            float(candidate["threshold"]),
+            int(candidate["anchor"]),
+        )
+
+    def selected_gain(row: dict) -> float:
+        selected = next(
+            stage for stage in row["stages"] if int(stage["prefix"]) == int(row["prefix"])
+        )
+        route = "direct" if row["route"] == "direct_image" else "gram"
+        return float(selected[route]["structured_gain_upper"])
+
+    structured_by_candidate = {
+        candidate_key(row): row for row in structured["rows"]
+    }
+    anchor_gain_ratios = []
+    for row in anchor_fixed["rows"]:
+        baseline = structured_by_candidate.get(candidate_key(row))
+        require(baseline is not None, "anchor-fixed case is absent from its baseline")
+        anchor_gain_ratios.append(selected_gain(row) / selected_gain(baseline))
+    anchor_gain_ratios.sort()
+    require(len(anchor_gain_ratios) == 15, "anchor-fixed matched gain cohort changed")
+    require(
+        close(anchor_gain_ratios[7], 0.9939948944415526),
+        "anchor-fixed median selected gain ratio changed",
+    )
 
     required_phrases = (
         "56/72 WDBC, 7/24 digits, and 9/72 plus 11/72",
@@ -495,6 +623,11 @@ def main() -> None:
         "naughton2026certified",
         "surrogate verification",
         "admissible-residual sensitivities, not estimates of floating-point error",
+        "Scaled-momentum forcing subspace",
+        "preserves 15/15 brackets and reduces staged logical Green sweeps",
+        "$112\\to96$ ($1.167\\times$)",
+        "fails its prespecified promotion gate",
+        "selected randomized gain-bound ratio $0.994$",
     )
     for phrase in required_phrases:
         require(phrase in paper, f"manuscript lost required scoped phrase: {phrase}")
@@ -517,6 +650,7 @@ def main() -> None:
         "four-probe prospective certificate",
         "fully outward corrected-path certificate",
         "computer-assisted corrected-path Transformer certificate",
+        "anchor-zero speedup",
     )
     for phrase in forbidden_phrases:
         require(phrase not in paper, f"stale/attackable manuscript phrase remains: {phrase}")
@@ -612,6 +746,23 @@ def main() -> None:
                 row["estimated_centerline_memory_reduction"]
                 for row in streaming["rows"]
             ],
+            "structured_parameter_green_issued": structured["issued"],
+            "structured_parameter_green_routes": structured["route_distribution"],
+            "structured_parameter_green_sweeps": [
+                structured["full_state_staged_green_sweeps"],
+                structured["structured_parameter_green_sweeps"],
+            ],
+            "structured_parameter_green_reduction": structured[
+                "aggregate_sweep_reduction"
+            ],
+            "anchor_fixed_structured_green_sweeps": [
+                anchor_fixed["unrestricted_structured_green_sweeps"],
+                anchor_fixed["anchor_fixed_structured_green_sweeps"],
+            ],
+            "anchor_fixed_promotion_gate_passed": anchor_fixed[
+                "promotion_gate_passed"
+            ],
+            "anchor_fixed_median_selected_gain_ratio": anchor_gain_ratios[7],
         },
         "checked_required_phrases": list(required_phrases),
         "checked_forbidden_phrases": list(forbidden_phrases),

@@ -1,0 +1,28 @@
+{
+  "status": "INDEPENDENT STRUCTURED PARAMETER GREEN AUDIT PASSED",
+  "scope": "mechanical replay; no neural or random-operator recomputation",
+  "cases": 15,
+  "issued": 15,
+  "brackets_preserved": 15,
+  "route_distribution": {
+    "gram_fallback": 9,
+    "direct_image": 6
+  },
+  "full_state_staged_green_sweeps": 112,
+  "structured_parameter_green_sweeps": 96,
+  "aggregate_sweep_reduction": 1.1666666666666667,
+  "median_pairwise_sweep_reduction": 1.0,
+  "minimum_pairwise_sweep_reduction": 1.0,
+  "maximum_pairwise_sweep_reduction": 2.0,
+  "combined_family_failure_upper": 2e-06,
+  "outcome_files_read": 0,
+  "promotion_gate_passed": true,
+  "sealed_dependency_hashes_verified": 17,
+  "case_caches_verified": 15,
+  "stored_direct_and_gram_bounds_recomputed": true,
+  "stored_quadratic_closures_recomputed": true,
+  "audit_source_has_no_outcome_reader_symbol": true,
+  "protocol_sha256": "0C22DDA9CBD618A9066B6D1AFD94CB831FB3C40C53AB668F04420CE72DC19F8D",
+  "result_sha256": "78C3855CD5464414C92C23175D7B017A683D02FC4A1FD97AA47E9003F9412A3F",
+  "verifier_sha256": "BC839E9D6DC148C33558529D53F1BC2208CBE680612B4068DCAF394AAC365344"
+}

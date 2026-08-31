@@ -16,6 +16,13 @@ digits, and two Transformer cohorts. All 83 revealed crossings fall inside the
 issued brackets. The 63 WDBC/digits brackets also survive independent 192-bit
 outward continuation.
 
+The current theorem release also factors the scaled-momentum nonlinear
+remainder through its parameter forcing subspace. On the complete 15-case
+Green-evaluable Transformer cohort, the matched sealed audit preserves every
+bracket while reducing staged logical Green sweeps from 112 to 96. A stricter
+anchor-zero refinement again preserves all 15 brackets but remains at 96
+sweeps, an independently reproduced negative promotion result.
+
 ## Start here
 
 - The current preprint is [`paper/greencert_arxiv.pdf`](paper/greencert_arxiv.pdf).
@@ -28,6 +35,8 @@ outward continuation.
   generator and its input records.
 - [`SUPPLEMENT_README.md`](SUPPLEMENT_README.md) documents the full sealed
   artifact chain.
+- [`STRUCTURED_PARAMETER_GREEN_THEOREM_V2.md`](STRUCTURED_PARAMETER_GREEN_THEOREM_V2.md)
+  records the profiled forcing-subspace closure and explicit causal indexing.
 
 ## Quick verification
 

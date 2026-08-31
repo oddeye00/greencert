@@ -123,6 +123,9 @@ Our contributions are:
   implementation error.  A time-resolved corollary aligns checkpointwise drift
   with the signed response, while corrected-path relinearization removes the
   mixed state-response term entirely under the same bounded-Hessian envelope.
+  For scaled momentum, a forcing-subspace corollary closes the nonlinear
+  problem in parameter space and removes optimizer-state directions that
+  neither generate the nonlinear remainder nor affect the neural event.
   \item We give a matrix-free, anytime implementation.  HVP/VJP products apply
   $K_H$ and $K_H^\top$; one Gaussian block bounds every inspected Gram power,
   while predictable spending permits adaptive operator creation.  Verified
@@ -329,6 +332,21 @@ $Y+\bar\kappa ME^2/2\le E$, eliminating $\kappa MpE$.  Here
 $E=2Y/(1+\sqrt{1-2\bar\kappa MY})$ under the local domain condition and a
 pairwise $M$-Lipschitz Jacobian envelope, supplied by our bounded-Hessian
 bounds.  Appendix Corollary~\ref{cor:relinearized-green} states and proves the result.
+
+\paragraph{Scaled-momentum forcing subspace.}
+For $G(\theta,w)=(\theta-r,r)$ with
+$r=\mu w+\eta\nabla F(\theta)$, every nonlinear remainder is exactly
+$\mathcal Bq=(-\eta q,\eta q)$ and depends only on the parameter error.
+Writing $\Pi_\theta$ for parameter projection, the corrected closure may
+therefore query $\Pi_\theta\bar K_H\mathcal B$ instead of the full
+$\bar K_H$.  Appendix Corollary~\ref{cor:parameter-forcing} gives the closed
+parameter-sequence fixed point, including the one-step causal shift at the
+fixed anchor.  With exact quantities, its quadratic coefficient and response
+term are never larger than the full-state counterparts.  In a separately
+sealed post-release audit over all 15 Green-evaluable operators, the
+conservative implementation that retains the identically zero first forcing
+block preserves 15/15 brackets and reduces staged logical Green sweeps
+$112\to96$ ($1.167\times$).
 
 \paragraph{Prefix-local staged release.}
 For fixed $T$ and Gaussian probes $g_i$, the same projection event gives both
@@ -780,6 +798,14 @@ $9.94/2.09/1.06\times$ speedups at horizons 26/131/299; direct-image release
 skips $K^T$ in 4/15 cases.  These post-seal audits leave frozen prospective
 counts above unchanged.
 
+Scaled-momentum structure gives a second, orthogonal reduction.  Restricting
+the nonlinear gain to $\Pi_\theta K_H\mathcal B$ preserves all 15 brackets,
+converts two additional cases to direct-image release, and reduces the matched
+staged total from 112 to 96 logical Green sweeps.  A stricter anchor-zero
+restriction preserves every bracket but remains at 96 sweeps; it therefore
+fails its prespecified promotion gate and is retained as a negative systems
+audit rather than advertised as another speedup.
+
 The deterministic neural-jet release sharpens the practical picture further.
 Across the complete 15-case operator cohort it preserves eight brackets with
 no randomized output-Jacobian query, eliminating 1,432 output operators and
@@ -807,6 +833,13 @@ for an event claim.
 Classical shadowing, pseudo-orbit, and radii-polynomial methods certify
 trajectory proximity/existence, including in learning dynamics
 \citep{chow1989shadowing,chow1992numerical,chow1994global,hammel1987numerical,sauer1991rigorous,lessard2014rigorous,bielecki2004shadowing,orvieto2019shadowing}.
+Product-space radii bounds can preserve component structure
+\citep{vandenberg2018wright}, while goal-oriented a posteriori methods use
+adjoint residuals to control selected quantities of interest
+\citep{becker2001optimal}.  Our forcing-subspace result uses the exact
+scaled-momentum factorization to close the anchored nonlinear recurrence in
+parameter space before transporting it through persistent neural-output
+margins.
 Robust training/parameter balls \citep{sosnin2026agt,taheri2026barc,weng2020weight},
 descent/stability \citep{streeter2022autobound,shi2026ctbab}, and fixed-network
 or surrogate verification \citep{wicker2021iterative,mathiesen2026certified,naughton2026certified}
@@ -1412,6 +1445,104 @@ $\|\bar N(e)\|_U\le M\|e\|_X^2/2$.  Hence
 $Y+\bar\kappa ME^2/2\le E$ makes the exact finite-dimensional map self-mapping.
 Brouwer gives a fixed point, causal forward recurrence makes it unique, and the
 stable smaller quadratic root is Eq.~\eqref{eq:corrected-closure}.
+\end{proof}
+
+\begin{corollary}[Scaled-momentum parameter-forcing closure]
+\label{cor:parameter-forcing}
+In Corollary~\ref{cor:relinearized-green}, let
+\begin{equation}
+ G(\theta,w)=(\theta-r,r),\qquad
+ r=\mu w+\eta\nabla F(\theta),
+ \label{eq:scaled-momentum-factorization}
+\end{equation}
+and let $\Pi_\theta(\delta\theta,\delta w)=\delta\theta$.  Define the
+checkpointwise injection
+\begin{equation}
+ \mathcal Bq_j=(-\eta q_j,\eta q_j)
+\end{equation}
+and the anchor shift
+\begin{equation}
+ \mathcal S(p_1,\ldots,p_H)=(0,p_1,\ldots,p_{H-1}).
+ \label{eq:anchor-shift}
+\end{equation}
+Let $Q_0$ prepend a zero block to an $(H-1)$-block forcing sequence and put
+\begin{equation}
+ T_{\theta,0}=\Pi_\theta\bar K_H\mathcal BQ_0.
+ \label{eq:parameter-green}
+\end{equation}
+Suppose, on the declared parameter domains,
+\begin{equation}
+ R_j(u)=\nabla F(\theta_j+u)-\nabla F(\theta_j)-H_ju,
+ \qquad \|R_j(u)\|\le \tfrac12L\|u\|^2.
+ \label{eq:objective-gradient-remainder}
+\end{equation}
+If
+\begin{equation}
+ \kappa_\theta\ge\|T_{\theta,0}\|,\qquad
+ Y_\theta\ge\|\Pi_\theta\bar K_H\bar s\|_X,
+\end{equation}
+and
+\begin{equation}
+ D_\theta=1-2\kappa_\theta L Y_\theta\ge0,\qquad
+ E_\theta=\frac{2Y_\theta}{1+\sqrt{D_\theta}},
+ \label{eq:parameter-root}
+\end{equation}
+with every pointwise parameter ball of radius $E_\theta$ inside its declared
+domain, then
+\begin{equation}
+ \left(\sum_{j=1}^{H}
+ \|\Pi_\theta(x_{a+j}-b_j)\|^2\right)^{1/2}\le E_\theta.
+ \label{eq:parameter-tube}
+\end{equation}
+For exact operator quantities,
+\begin{equation}
+ \|T_{\theta,0}\|L
+ \le \sqrt2\,\eta\|\bar K_H\|L,\qquad
+ \|\Pi_\theta\bar K_H\bar s\|_X
+ \le\|\bar K_H\bar s\|_X.
+ \label{eq:parameter-dominance}
+\end{equation}
+Thus the parameter closure is never worse than the full-state corrected
+closure for a parameter-defined event.  Replacing $L$ by checkpointwise
+$L_j$ and querying
+$\Pi_\theta\bar K_H\mathcal B
+\operatorname{diag}(L_j)Q_0$ gives an equally valid, weakly sharper
+curvature-profiled coefficient.
+\end{corollary}
+
+\begin{proof}
+For $e_j=x_{a+j}-b_j$, write
+$p=(\Pi_\theta e_1,\ldots,\Pi_\theta e_H)$.  Equation
+\eqref{eq:scaled-momentum-factorization} gives the exact remainder
+factorization
+\begin{equation}
+ G(b_j+e_j)-G(b_j)-\bar J_je_j
+ =\mathcal B R_j(\Pi_\theta e_j),
+\end{equation}
+with $R_j$ from Eq.~\eqref{eq:objective-gradient-remainder}.  Because
+$e_0=0$, the first remainder block is zero.  Causal substitution therefore
+yields the closed parameter equation
+\begin{equation}
+ p=\Pi_\theta\bar K_H\bar s+
+ T_{\theta,0}R_+(\mathcal Sp).
+ \label{eq:parameter-fixedpoint}
+\end{equation}
+For $\|p\|_X\le E$,
+\begin{equation}
+ \|R_+(\mathcal Sp)\|_U
+ \le \frac L2
+ \left(\sum_{j=1}^{H-1}\|p_j\|^4\right)^{1/2}
+ \le \frac L2\|p\|_X^2.
+\end{equation}
+Hence the right side of Eq.~\eqref{eq:parameter-fixedpoint} maps the
+radius-$E_\theta$ parameter ball into itself.  Brouwer gives a fixed point;
+lifting it through $\bar K_H$ solves the full causal recurrence, whose forward
+trajectory from the realized anchor is unique.  Equation
+\eqref{eq:parameter-root} is the cancellation-safe smaller root.  Finally,
+$\|\Pi_\theta\|=\|Q_0\|=1$ and
+$\|\mathcal B\|=\sqrt2\eta$, proving
+Eq.~\eqref{eq:parameter-dominance}.  The checkpointwise statement follows by
+absorbing $\operatorname{diag}(L_j)$ into the input side of the same operator.
 \end{proof}
 
 \begin{corollary}[Deterministic neural-jet release]
@@ -2153,6 +2284,28 @@ transpose; Gram fallback issues the other 11.  It therefore avoids 16 of 128
 staged probe sweeps (128 to 112, $1.143\times$), a useful but deliberately
 separate gain from the larger corrected-prefix reduction.
 
+The scaled-momentum factorization in
+Corollary~\ref{cor:parameter-forcing} permits a smaller operator without
+changing the reference path or output rule.  A post-v1.0.1 protocol fixed
+$T_\theta=\Pi_\theta\bar K_H\mathcal B$, the same 4/8/16 direct/Gram policy,
+a fresh nonce, and a new $10^{-6}$ Green-family budget before drawing any
+probe.  It preserves all 15 inherited brackets, with six direct-image and nine
+Gram releases, and reduces the staged total from 112 to 96 logical sweeps
+($1.167\times$).  An independent mechanical verifier checks all 17 sealed
+dependency hashes and 15 caches and recomputes every stored Gaussian bound,
+quadratic root, bracket, and aggregate.
+
+An adversarial proof audit then made the causal indexing explicit:
+$\bar K_H$ returns $(e_1,\ldots,e_H)$ while update $j$ uses $e_j$.  The
+earlier scalar bound remains valid because the shift in
+Eq.~\eqref{eq:anchor-shift} has norm one.  A separately sealed follow-up
+removed the identically zero update-zero forcing block as prescribed by
+$Q_0$.  All 15 brackets again survive, but the total remains 96 sweeps (median
+selected randomized gain-bound ratio $0.994$), so the prespecified
+strict-improvement gate fails.  We report this negative result because it both
+validates the corrected indexing and locates the remaining bottleneck: coarse
+randomized release thresholds, not the zero anchor block.
+
 Finally, Proposition~\ref{prop:causal-prefix} is executable rather than only
 an accounting identity.  Three natural Transformer records reproduce the
 full-$H=300$ centerline bitwise at sealed horizons 26, 131, and 299, including
@@ -2194,6 +2347,8 @@ Pairwise Green reduction, median (range) & $8\times$ ($4$--$16\times$) \\
 Minimum forcing headroom & $2.293\times$ \\
 Direct-image / Gram-fallback routes & 4 / 11 \\
 Staged probe sweeps & $128\to112$ ($1.143\times$) \\
+Full-state / parameter-forcing staged sweeps & $112\to96$ ($1.167\times$) \\
+Anchor-zero refinement versus parameter forcing & $96\to96$ (gate failed) \\
 Deterministic-jet / output-probe routes & 8 / 7 \\
 Randomized output operators eliminated & 1,432 \\
 Output $q=1$ Gram applications eliminated & 22,912 \\
@@ -2281,6 +2436,15 @@ mechanism behind the prospectively fixed choice of four sweeps.
 \section{Matrix-free scaling accounting}
 \label{app:scaling}
 
+For $H=300$, four sweeps require 1,500 objective HVPs.  The frozen
+$m=16,q=8$ Green probe requires 76,800 objective HVPs, and the output-margin
+probe requires 38,528 output-Jacobian Gram products.  These are logical calls:
+the batched implementation evaluates the same 16 independent rows together,
+preserving their generation order, $Y$ maximum, calibration, and union budget.
+Tests compare HVP, optimizer JVP/VJP, causal Green, transpose, output-Gram, and
+the final probabilistic bound against scalar execution; maximum relative error
+is $3.24\times10^{-16}$.
+
 \begin{figure}[H]
   \centering
   \includegraphics[width=\linewidth]{../figures/paper_mechanism_scaling.pdf}
@@ -2312,15 +2476,6 @@ Params & Serial core & Batched core & Speedup & Peak GiB \\
 \bottomrule
 \end{tabular}
 \end{table}
-
-For $H=300$, four sweeps require 1,500 objective HVPs.  The frozen
-$m=16,q=8$ Green probe requires 76,800 objective HVPs, and the output-margin
-probe requires 38,528 output-Jacobian Gram products.  These are logical calls:
-the batched implementation evaluates the same 16 independent rows together,
-preserving their generation order, $Y$ maximum, calibration, and union budget.
-Tests compare HVP, optimizer JVP/VJP, causal Green, transpose, output-Gram, and
-the final probabilistic bound against scalar execution; maximum relative error
-is $3.24\times10^{-16}$.
 
 Table~\ref{tab:scale} uses serial and batched block timings from the same run.
 An earlier isolated-one-product multiplication yielded 6.16/18.98/65.88 hours;
@@ -2606,24 +2761,21 @@ supersolution checks, and recover the same bracket in every invocation; all 20
 paired kernel speedups exceed one, with pooled median $1.83\times$.
 
 \paragraph{Exact-real boundary.}
-The WDBC, digits, and dense-modular outward passes treat each binary64 center
-as an exact binary number.  At 192-bit precision they enclose tanh, network and
-Hessian arithmetic, eigensolver residuals, recurrences, and margins.  This
-proves exact-real continuation from stored binary inputs, not the complete
-PyTorch/BLAS process that produced them.  The WDBC and digits direct
-recurrences are independent of the Green/PRNG event; they verify the retained
-event bracket, not every prospective Green inequality.  Neither Transformer
-cohort yet has a complete outward neural-operator layer; the scalar
-calibration/root audit is conditional on stored $Y$.  The prospective
-digits/Transformer Green
-calculations remain exact-Gaussian propositions with deterministic-PRNG
-implementations as distinguished in Appendix~\ref{app:transformer-jet}.
+The 192-bit WDBC, digits, and dense-modular passes treat stored binary64
+checkpoints as exact inputs and outwardly enclose network, Hessian, eigensolver,
+recurrence, and margin arithmetic.  They certify continuation from those
+checkpoints, not the PyTorch/BLAS training process that produced them.  The
+WDBC/digits direct recurrences independently validate issued brackets rather
+than every randomized Green inequality.  The Transformer neural-operator layer
+remains float64/ideal-PRNG; its outward scalar calibration/root audit is
+conditional on stored $Y$.  Accordingly, those Green claims are exact-Gaussian
+propositions with deterministic-PRNG implementations, not end-to-end
+computer-assisted proofs (Appendix~\ref{app:transformer-jet}).
 
-Modular data are generated exhaustively; WDBC and the bundled digits arrays
-carry source checksums and persistent UCI identifiers.  No pretrained model is used.  The
-supplement contains source, tests, frozen protocols, seals, manifests, compact
-outcome records, independent audits, and exact reproduction commands.  Large
-checkpoint arrays are regenerated rather than archived.
+Modular data are exhaustive; WDBC and bundled digits carry source checksums and
+persistent UCI identifiers.  The supplement provides source, tests, frozen
+protocols and seals, manifests, compact outcomes, independent audits, and exact
+reproduction commands; large checkpoint arrays are regenerated.
 
 \ifdefined\arxivversion\else
 \input{checklist.tex}

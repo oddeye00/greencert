@@ -108,6 +108,16 @@ The paper makes five distinct empirical claims and audit layers.
     remains float64/high-confidence, so this is not promoted to a complete
     computer-assisted Transformer proof.
 
+    The scaled-momentum theorem then factors every nonlinear remainder as
+    `Bq=(-eta*q,+eta*q)` and closes the anchored recurrence directly in the
+    parameter sequence, with the one-step causal shift made explicit. A sealed
+    15-case audit preserves every inherited bracket and reduces staged logical
+    Green sweeps from 112 to 96; its independent verifier checks 17 dependency
+    hashes and all 15 caches. A second sealed audit removes the identically zero
+    anchor forcing block. It again preserves all 15 brackets but remains at 96
+    sweeps, so its prespecified strict-improvement gate fails. The negative
+    result and its 23-hash independent replay are retained in full.
+
 The WDBC matched unsigned baseline also issues 56/56. This is reported
 explicitly: WDBC establishes transfer, information separation, and numerical
 rigor; digits gives a protocol-primary non-modular signed-only result; the

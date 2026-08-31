@@ -64,3 +64,42 @@ ingredients are individually unprecedented would not.
   submission year) rather than by the year of its 2026 revision.
 - The ICML 2025 trajectory-sensitivity paper by Altıntaş et al. was added to
   support the realized-anchor motivation.
+
+## 2026-08-30 forcing-subspace follow-up
+
+The parameter-only Green theorem prompted a narrower search for projected
+Newton--Kantorovich arguments, product-space radii polynomials, componentwise
+validated bounds, and goal-oriented adjoint estimators. Added queries included:
+
+- "projected Newton Kantorovich nonlinear remainder Green operator"
+- "radii polynomial finite dimensional projection nonlinear fixed point"
+- "componentwise radii polynomials product space"
+- "goal-oriented a posteriori nonlinear dynamical system dual weighted residual"
+- "forcing subspace projected Green operator trajectory enclosure"
+
+Primary sources checked include Lessard and Reinhardt's radii-polynomial
+validation, van den Berg and Jaquette's componentwise product-space
+Newton--Kantorovich construction
+([publisher record](https://doi.org/10.1016/j.jde.2018.02.018)), and Becker and
+Rannacher's dual-weighted-residual framework for quantities of interest
+([publisher record](https://doi.org/10.1017/S0962492901000010)). These sources
+occupy any broad claim that quadratic self-map tests, anisotropic product-space
+enclosures, projection, or adjoint targeting are new.
+
+The surviving claim is optimizer-specific. For scaled momentum, the nonlinear
+Taylor remainder has the exact range $Bq=(-eta q,eta q)$, depends only on
+parameter error, and the neural event also depends only on parameters. This
+gives a closed, anchor-fixed parameter-sequence equation with causal operator
+$P_theta K_H B$, and it can absorb checkpointwise curvature on the input side.
+No searched source delivered that factorization as a finite-window certificate
+for the realized neural-optimizer orbit and then transported it to a persistent
+first-passage event.
+
+The proof audit also exposed a suppressed causal shift in the first theorem
+note: $K_H$ returns errors $e_1,...,e_H$, while update $j$ uses $e_j$. The norm
+bound and completed audit remain valid because the shift has operator norm one.
+The corrected theorem writes the shift explicitly and uses the stronger fact
+that update-zero nonlinear forcing vanishes at the fixed anchor. A separately
+sealed 15-case audit preserved every bracket but did not reduce the 96-sweep
+structured baseline, so that refinement is reported as a negative systems
+result rather than a speedup.

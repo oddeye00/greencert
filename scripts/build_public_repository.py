@@ -34,12 +34,14 @@ PUBLIC_FILES = (
     "requirements.txt",
     "results/figure_reproducibility_audit.json",
     "scripts/audit_public_release.py",
+    "scripts/build_anonymous_supplement.py",
     "scripts/build_arxiv_release.py",
     "scripts/build_public_repository.py",
     "scripts/check_reproduction_environment.py",
     "scripts/paper_plot_style.py",
     "scripts/reproduce_figures.py",
     "scripts/update_public_manifest.py",
+    "scripts/verify_anonymous_supplement.py",
     "scripts/make_transformer_v3_anytime_figure.py",
     "scripts/paper_figure_new_evidence.py",
     "scripts/paper_figure_prefix_scaling.py",
@@ -76,9 +78,20 @@ def main() -> None:
     if destination.parent != parent or destination.name != "greencert":
         raise RuntimeError(f"refusing unsafe public-repository target: {destination}")
     parent.mkdir(parents=True, exist_ok=True)
-    if DESTINATION.exists():
-        shutil.rmtree(DESTINATION, onexc=clear_readonly_and_retry)
-    DESTINATION.mkdir(parents=True)
+    preserved_git = parent / ".greencert-git-preserved"
+    git_metadata = DESTINATION / ".git"
+    if preserved_git.exists():
+        raise RuntimeError(f"refusing to overwrite preserved Git metadata: {preserved_git}")
+    if git_metadata.exists():
+        git_metadata.rename(preserved_git)
+    try:
+        if DESTINATION.exists():
+            shutil.rmtree(DESTINATION, onexc=clear_readonly_and_retry)
+        DESTINATION.mkdir(parents=True)
+    finally:
+        if preserved_git.exists():
+            DESTINATION.mkdir(parents=True, exist_ok=True)
+            preserved_git.rename(DESTINATION / ".git")
 
     with zipfile.ZipFile(ARCHIVE) as archive:
         archive.extractall(DESTINATION)

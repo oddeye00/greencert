@@ -15,6 +15,8 @@ ROOT = Path(__file__).resolve().parent
 TIERS = {
     "smoke": (
         "scripts/test_batched_green_operator.py",
+        "scripts/test_structured_parameter_green.py",
+        "scripts/test_structured_parameter_green_v2.py",
         "scripts/test_one_shot_signed_recenter.py",
         "scripts/test_online_progressive_gram.py",
         "scripts/test_predictable_failure_budget.py",
@@ -33,6 +35,8 @@ TIERS = {
         "scripts/audit_transformer_relinearized_prefix_panel_result.py",
         "scripts/audit_transformer_direct_image_green_panel_result.py",
         "scripts/audit_transformer_analytic_jet_release_compact.py",
+        "scripts/verify_structured_parameter_green_audit.py",
+        "scripts/verify_anchor_fixed_structured_parameter_green_audit.py",
         "scripts/audit_greencert_manuscript_claims.py",
     ),
     "outward": (

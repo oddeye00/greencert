@@ -1,7 +1,7 @@
 {
   "status": "GREENCERT manuscript claim audit passed",
   "paper": "paper\\certified_local_training_events_neurips2026.tex",
-  "paper_sha256": "20279EEB78673F3D07D1A5C2A355CFE48577B983B5ECA5A875887A3906789C54",
+  "paper_sha256": "9DDC0F3924810AAFB259D6ADC656C81118922A6E78177F7E24CF935FCEADFC32",
   "studies": {
     "wdbc": {
       "cases": 72,
@@ -131,7 +131,23 @@
       39.60526315789474,
       10.524475524475525,
       4.839228295819936
-    ]
+    ],
+    "structured_parameter_green_issued": 15,
+    "structured_parameter_green_routes": {
+      "gram_fallback": 9,
+      "direct_image": 6
+    },
+    "structured_parameter_green_sweeps": [
+      112,
+      96
+    ],
+    "structured_parameter_green_reduction": 1.1666666666666667,
+    "anchor_fixed_structured_green_sweeps": [
+      96,
+      96
+    ],
+    "anchor_fixed_promotion_gate_passed": false,
+    "anchor_fixed_median_selected_gain_ratio": 0.9939948944415526
   },
   "checked_required_phrases": [
     "56/72 WDBC, 7/24 digits, and 9/72 plus 11/72",
@@ -192,7 +208,12 @@
     "outcome-independent proof object",
     "naughton2026certified",
     "surrogate verification",
-    "admissible-residual sensitivities, not estimates of floating-point error"
+    "admissible-residual sensitivities, not estimates of floating-point error",
+    "Scaled-momentum forcing subspace",
+    "preserves 15/15 brackets and reduces staged logical Green sweeps",
+    "$112\\to96$ ($1.167\\times$)",
+    "fails its prespecified promotion gate",
+    "selected randomized gain-bound ratio $0.994$"
   ],
   "checked_forbidden_phrases": [
     "all 59 cases having a comparable future event",
@@ -212,6 +233,7 @@
     "fully outward Transformer certificate",
     "four-probe prospective certificate",
     "fully outward corrected-path certificate",
-    "computer-assisted corrected-path Transformer certificate"
+    "computer-assisted corrected-path Transformer certificate",
+    "anchor-zero speedup"
   ]
 }

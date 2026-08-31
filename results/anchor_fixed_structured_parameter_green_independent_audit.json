@@ -1,0 +1,32 @@
+{
+  "status": "INDEPENDENT ANCHOR-FIXED STRUCTURED AUDIT PASSED",
+  "scope": "mechanical replay; no neural or random-operator recomputation",
+  "cases": 15,
+  "issued": 15,
+  "brackets_preserved": 15,
+  "route_distribution": {
+    "gram_fallback": 9,
+    "direct_image": 6
+  },
+  "full_state_staged_green_sweeps": 112,
+  "unrestricted_structured_green_sweeps": 96,
+  "anchor_fixed_structured_green_sweeps": 96,
+  "reduction_vs_unrestricted_structured": 1.0,
+  "reduction_vs_full_state": 1.1666666666666667,
+  "sweeps_saved_vs_unrestricted_structured": 0,
+  "median_pairwise_reduction_vs_unrestricted": 1.0,
+  "minimum_pairwise_reduction_vs_unrestricted": 1.0,
+  "maximum_pairwise_reduction_vs_unrestricted": 1.0,
+  "combined_family_failure_upper": 2e-06,
+  "outcome_files_read": 0,
+  "promotion_gate_passed": false,
+  "sealed_dependency_hashes_verified": 23,
+  "case_caches_verified": 15,
+  "stored_direct_and_gram_bounds_recomputed": true,
+  "stored_quadratic_closures_recomputed": true,
+  "negative_promotion_result_reproduced": true,
+  "audit_source_has_no_outcome_reader_symbol": true,
+  "protocol_sha256": "E56F503348895845B65E1504AEF413AE8AC341ACE4E3ADE3549F0559C905805D",
+  "result_sha256": "80FBE9205FFEC32AFB639AA0A266CDE45510BD37580ADCF1F764E229F99FC297",
+  "verifier_sha256": "B561E0349FDA9EEAA50164173399B5ADFAF738CFFBCC70CA0A1962D83F1A662A"
+}

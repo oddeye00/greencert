@@ -40,9 +40,10 @@ python scripts/check_reproduction_environment.py
 python reproduce.py smoke
 ```
 
-This tier checks core Green recurrences, variational recentering, inexact
-operator interfaces, event transport, deterministic neural-jet release, and
-the manuscript claim ledger. Its first-passage check exhaustively enumerates
+This tier checks core Green recurrences, both structured parameter-forcing
+implementations, variational recentering, inexact operator interfaces, event
+transport, deterministic neural-jet release, and the manuscript claim ledger.
+Its first-passage check exhaustively enumerates
 109,152 valid lower/true/upper finite-window paths, including no-event cases,
 and compares both independent bracket implementations. It does not retrain the
 neural networks.
@@ -73,8 +74,9 @@ Expected time: tens of minutes, depending on CPU and thread count.
 python reproduce.py artifact-audit
 ```
 
-This tier recomputes the study summaries and the independent result-side
-audits. Candidate and certificate files are read before outcome joins where
+This tier recomputes the study summaries, both 15-case structured-Green
+mechanical replays, and the independent result-side audits. Candidate and
+certificate files are read before outcome joins where
 the original protocol required that order. The analytic-jet release uses a
 checkpoint-free consistency replay over its sealed rows; the full derivative
 replay is available after regenerating the large Transformer checkpoints.
@@ -133,6 +135,10 @@ The release-level audit requires:
 - 11/11 response-centered Transformer brackets covered;
 - both inaccurate finite digits forecasts rejected before a randomized query;
 - 63 WDBC/digits brackets retained by independent 192-bit continuation;
+- 15/15 structured parameter-forcing brackets preserved with staged logical
+  Green sweeps reduced from 112 to 96;
+- 15/15 anchor-zero brackets preserved, with the prespecified strict systems
+  promotion gate correctly failing at 96 to 96 sweeps;
 - deterministic figure regeneration;
 - no local absolute paths, credential-shaped strings, or files over GitHub's
   100 MB limit in the public repository.

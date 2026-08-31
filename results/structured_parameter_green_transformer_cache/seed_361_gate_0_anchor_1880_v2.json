@@ -1,0 +1,112 @@
+{
+  "version": 2,
+  "evidence_boundary": "post-v1.0.1 outcome-blind method audit",
+  "candidate": {
+    "seed": 361,
+    "threshold": 0.7,
+    "anchor": 1880
+  },
+  "horizon": 275,
+  "route": "gram_fallback",
+  "issued": true,
+  "bracket": [
+    251,
+    251
+  ],
+  "inherited_bracket": [
+    251,
+    251
+  ],
+  "bracket_preserved": true,
+  "prefix": 4,
+  "logical_forward_green_sweeps": 4,
+  "logical_transpose_green_sweeps": 4,
+  "logical_total_green_sweeps": 8,
+  "full_state_staged_green_sweeps": 8,
+  "sweep_reduction": 1.0,
+  "probe_seed": 7171993204243444263,
+  "probe_hashes": [
+    "DA3012704D6B8F659AEB7E46B7F7555ED995D3B2F0C4E4A713214BBD251786C2",
+    "390D6E0543930B92C20D6BAE8EB3188841FCBACF781DED4D6A39FF664C9A81E2",
+    "531375BB5138AA8EE8E4C63B80DAD875E18B00F3DF2C70D7D64DE97CE72D0219",
+    "5127684A64752835A484023F874C2D564C9867664ACF1703055003BE9AF1BAFB"
+  ],
+  "initial_probe_norms": [
+    1947.4957316466273,
+    1947.9858941179064,
+    1947.150501555523,
+    1945.9318359678043
+  ],
+  "direct_image_norms": [
+    2000.2674061096188,
+    1989.848562910131,
+    2004.986008071659,
+    1993.0513054458559
+  ],
+  "gram_norms": [
+    27976.280924221435,
+    27761.035124561742,
+    28060.31425918028,
+    27892.694014278386
+  ],
+  "stages": [
+    {
+      "prefix": 4,
+      "direct": {
+        "probes": 4,
+        "Y_direct": 2004.986008071659,
+        "c_delta": 0.015302900703286656,
+        "delta": 2.222222222222222e-08,
+        "operator_norm_upper_bound": 131019.99725065466,
+        "operator_norm_lower_estimate": 1.0297026380189578,
+        "forward_green_applications": 4,
+        "transpose_green_applications": 0,
+        "structured_gain_upper": 131019.99725065466,
+        "parameter_forcing_upper": 4.909496609042437e-20,
+        "parameter_response_upper": 6.432422322188385e-15,
+        "objective_hessian_lipschitz_upper": 1016324208733.7467,
+        "discriminant": -1712.06721114571,
+        "parameter_remainder_radius": null,
+        "correction_max_parameter_norm": 9.043536894506071e-14,
+        "domain_radius": 4.8027699256124e-13,
+        "domain_passed": false,
+        "bracket": null,
+        "output_power": null,
+        "logic_slack": null,
+        "maximum_margin_radius": null,
+        "issued": false
+      },
+      "gram": {
+        "probes": 4,
+        "power": 1,
+        "Y": 28060.31425918028,
+        "c_delta": 0.015302900703286656,
+        "delta": 2.222222222222222e-08,
+        "operator_norm_upper_bound": 1354.1269612542303,
+        "operator_norm_lower_estimate": 3.7961774482622728,
+        "gram_applications": 4,
+        "structured_gain_upper": 1354.1269612542303,
+        "parameter_forcing_upper": 4.909496609042437e-20,
+        "parameter_response_upper": 6.648081724490583e-17,
+        "objective_hessian_lipschitz_upper": 1016324208733.7467,
+        "discriminant": 0.8170139421912028,
+        "parameter_remainder_radius": 6.983689063982379e-17,
+        "correction_max_parameter_norm": 9.043536894506071e-14,
+        "domain_radius": 4.8027699256124e-13,
+        "domain_passed": true,
+        "bracket": [
+          251,
+          251
+        ],
+        "output_power": 1,
+        "logic_slack": 0.001125125134401024,
+        "maximum_margin_radius": 7.081284156005399e-13,
+        "issued": true
+      }
+    }
+  ],
+  "corrected_path_sha256": "28B46190F07E9F6F1FFF5B8B778A760D97D54101989B9F18011EBF4F9241E44C",
+  "certificate_sha256": "D26ECDAFA3568040C30790090B286CCF9925AEA2FC76ED3A1D1881C7149F6F30",
+  "outcome_files_read": 0,
+  "elapsed_seconds": 179.3321544000064
+}

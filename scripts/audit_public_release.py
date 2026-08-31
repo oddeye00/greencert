@@ -28,6 +28,18 @@ REQUIRED = {
     "requirements.txt",
     "PUBLIC_MANIFEST_SHA256.json",
     "paper/greencert_arxiv.pdf",
+    "paper/greencert_arxiv_release.json",
+    "STRUCTURED_PARAMETER_GREEN_THEOREM_V2.md",
+    "STRUCTURED_PARAMETER_GREEN_AUDIT_PROTOCOL_V2.md",
+    "ANCHOR_FIXED_STRUCTURED_PARAMETER_GREEN_AUDIT_PROTOCOL.md",
+    "scripts/test_structured_parameter_green.py",
+    "scripts/test_structured_parameter_green_v2.py",
+    "scripts/verify_structured_parameter_green_audit.py",
+    "scripts/verify_anchor_fixed_structured_parameter_green_audit.py",
+    "results/structured_parameter_green_transformer_audit.json",
+    "results/structured_parameter_green_independent_audit.json",
+    "results/anchor_fixed_structured_parameter_green_transformer_audit.json",
+    "results/anchor_fixed_structured_parameter_green_independent_audit.json",
     "scripts/reproduce_figures.py",
     "scripts/paper_plot_style.py",
     "scripts/update_public_manifest.py",
@@ -125,6 +137,30 @@ def main() -> None:
             "png_sha256": digest(png),
         }
 
+    paper_pdf = root / "paper" / "greencert_arxiv.pdf"
+    paper_reader = PdfReader(paper_pdf)
+    paper_metadata = paper_reader.metadata or {}
+    if len(paper_reader.pages) != 39:
+        raise AssertionError(f"unexpected public preprint length: {len(paper_reader.pages)}")
+    if str(paper_metadata.get("/Author", "")) != "Ian Rhee":
+        raise AssertionError("public preprint author metadata changed")
+    release = json.loads(
+        (root / "paper" / "greencert_arxiv_release.json").read_text(encoding="utf-8")
+    )
+    if int(release["pages"]) != 39 or release["pdf"]["sha256"] != digest(paper_pdf):
+        raise AssertionError("public preprint and arXiv release manifest differ")
+
+    expected_audits = {
+        "results/structured_parameter_green_independent_audit.json":
+            "INDEPENDENT STRUCTURED PARAMETER GREEN AUDIT PASSED",
+        "results/anchor_fixed_structured_parameter_green_independent_audit.json":
+            "INDEPENDENT ANCHOR-FIXED STRUCTURED AUDIT PASSED",
+    }
+    for relative, status in expected_audits.items():
+        record = json.loads((root / relative).read_text(encoding="utf-8"))
+        if record.get("status") != status:
+            raise AssertionError(f"public independent audit status changed: {relative}")
+
     manifest = json.loads((root / "PUBLIC_MANIFEST_SHA256.json").read_text(encoding="utf-8"))
     manifest_files = set(manifest["files"])
     actual_files = {
@@ -149,6 +185,8 @@ def main() -> None:
         "blocked_checkpoint_or_key_files": 0,
         "matplotlib_figures": figure_rows,
         "manifest_verified": True,
+        "preprint_pages": len(paper_reader.pages),
+        "structured_parameter_audits_verified": len(expected_audits),
     }
     print(json.dumps(report, indent=2, sort_keys=True))
 

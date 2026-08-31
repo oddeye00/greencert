@@ -1,0 +1,84 @@
+{
+  "version": 2,
+  "evidence_boundary": "post-v1.0.1 outcome-blind method audit",
+  "candidate": {
+    "seed": 366,
+    "threshold": 0.8,
+    "anchor": 1120
+  },
+  "horizon": 26,
+  "route": "direct_image",
+  "issued": true,
+  "bracket": [
+    2,
+    2
+  ],
+  "inherited_bracket": [
+    2,
+    2
+  ],
+  "bracket_preserved": true,
+  "prefix": 4,
+  "logical_forward_green_sweeps": 4,
+  "logical_transpose_green_sweeps": 0,
+  "logical_total_green_sweeps": 4,
+  "full_state_staged_green_sweeps": 4,
+  "sweep_reduction": 1.0,
+  "probe_seed": 7549414066752569233,
+  "probe_hashes": [
+    "612B490E8A6B086C57EDD3E57C93824849CC2F0F3ECFA8C259E84211DF30FC09",
+    "0899C71AFF764959DB3D5C7BBEB83D70F5523334526CA6F7D1FD01D23A1DA397",
+    "21E923DB2BD99ED471E345B9E3EA8350482151C5F6231EAFE77A955B03BFFF7D",
+    "8F6279837EBFDEF3B979A3E7EDF399A53C9AC96DA8008B64D13643278468CCC6"
+  ],
+  "initial_probe_norms": [
+    599.3035504486107,
+    598.2144144344832,
+    599.3254459258737,
+    597.3752513945461
+  ],
+  "direct_image_norms": [
+    131.16359641054004,
+    132.28679470901946,
+    131.2541702411778,
+    132.17808319139584
+  ],
+  "gram_norms": [],
+  "stages": [
+    {
+      "prefix": 4,
+      "direct": {
+        "probes": 4,
+        "Y_direct": 132.28679470901946,
+        "c_delta": 0.015302900703286656,
+        "delta": 2.222222222222222e-08,
+        "operator_norm_upper_bound": 8644.556824485424,
+        "operator_norm_lower_estimate": 0.22126474587427575,
+        "forward_green_applications": 4,
+        "transpose_green_applications": 0,
+        "structured_gain_upper": 8644.556824485424,
+        "parameter_forcing_upper": 7.017971303352818e-24,
+        "parameter_response_upper": 6.066725172444147e-20,
+        "objective_hessian_lipschitz_upper": 4783574952645.191,
+        "discriminant": 0.9949825895059001,
+        "parameter_remainder_radius": 6.074354135934769e-20,
+        "correction_max_parameter_norm": 1.563268888962759e-15,
+        "domain_radius": 9.914855480394167e-15,
+        "domain_passed": true,
+        "bracket": [
+          2,
+          2
+        ],
+        "output_power": 1,
+        "logic_slack": 0.0018713447144227283,
+        "maximum_margin_radius": 1.047629871901233e-15,
+        "issued": true
+      },
+      "gram": null
+    }
+  ],
+  "corrected_path_sha256": "B180CD4FD012E82961E64D64167D0BFB252C5306C1ADD6FFDA09B1E7E60C9520",
+  "certificate_sha256": "9F773A441C44988A876BB4A707BA7F2C5B98C407A12F474C6D314F10862D639C",
+  "outcome_files_read": 0,
+  "elapsed_seconds": 11.681416500010528
+}
