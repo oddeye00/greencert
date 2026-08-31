@@ -13,6 +13,7 @@ and its transpose without materializing ``K_H``, ``B``, or ``P_theta``.
 from __future__ import annotations
 
 from collections.abc import Callable, Sequence
+import math
 
 import torch
 from torch import Tensor
@@ -157,7 +158,9 @@ def structured_quadratic_root(
     coefficient = float(structured_gain) * float(hessian_lipschitz)
     if response < 0.0 or coefficient < 0.0:
         raise ValueError("bounds must be nonnegative")
-    if not all(torch.isfinite(torch.tensor(value)) for value in (response, coefficient)):
+    # Do not round the Python float through PyTorch's default float32 dtype:
+    # a valid binary64 bound above ~3e38 would otherwise be rejected as inf.
+    if not all(math.isfinite(value) for value in (response, coefficient)):
         raise ValueError("bounds must be finite")
     if coefficient == 0.0:
         return response
@@ -166,4 +169,3 @@ def structured_quadratic_root(
         return None
     # Cancellation-safe form of (1-sqrt(discriminant))/coefficient.
     return 2.0 * response / (1.0 + discriminant**0.5)
-

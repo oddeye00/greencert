@@ -204,9 +204,17 @@ def nonlinear_closure_tests() -> None:
     assert strict_improvements >= 490
 
 
+def binary64_bound_regression() -> None:
+    """Large finite binary64 inputs must not be rounded through float32."""
+
+    assert structured_quadratic_root(1.0e100, 1.0e100, 1.0) is None
+    assert structured_quadratic_root(1.0e100, 0.0, 1.0e100) == 1.0e100
+
+
 def main() -> None:
     linear_product_tests()
     nonlinear_closure_tests()
+    binary64_bound_regression()
     print(
         "PASS: structured parameter Green adjoints, batched products, exact "
         "dominance, and 500 nonlinear momentum closures"
@@ -215,4 +223,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

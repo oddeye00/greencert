@@ -5,8 +5,8 @@
       "sha256": "CC8E085BC397FF65663C23308C202DB1CE53CFCB053AF0A17B1A37AF8DEF5159"
     },
     ".github/workflows/reproducibility.yml": {
-      "bytes": 1129,
-      "sha256": "CD9B4CA08D9C87DC8F78D416F95AAC7523D09A0B0E831FC14CE6518F500533F3"
+      "bytes": 1394,
+      "sha256": "8385C97D451DB9050B80076D1AAF2F9C1632D2BB502BFBD1300EA4DE48B79B34"
     },
     ".gitignore": {
       "bytes": 265,
@@ -51,6 +51,10 @@
     "CAUSAL_PREFIX_RECENTERING_THEOREM.md": {
       "bytes": 2014,
       "sha256": "FC20EA02DB556C43E751A33161907DBC728EF7FEBB5BF65A58EBDC758C30319D"
+    },
+    "CAUSAL_STRUCTURED_RESOLVENT_THEOREM.md": {
+      "bytes": 6733,
+      "sha256": "D7ED2638D483153D9766392DC30289B3F9688878850A1C05813DFE52C664C04C"
     },
     "CITATION.cff": {
       "bytes": 631,
@@ -223,6 +227,10 @@
     "RESPONSE_CENTERED_EVENT_TRANSPORT_THEOREM.md": {
       "bytes": 2446,
       "sha256": "9DB292ADF309AB161CC5DBFB9E482931B66E76A741FD9953189BD2D7B0351B22"
+    },
+    "STRUCTURED_DIRECTIONAL_TWO_RESPONSE_THEOREM.md": {
+      "bytes": 6491,
+      "sha256": "B292D13C9F7C453B2FCE9D005412A53672B53933F77F4BD2DDF0ED5AA6139FDA"
     },
     "STRUCTURED_PARAMETER_GREEN_AUDIT_ABORTED_V1.md": {
       "bytes": 741,
@@ -4180,6 +4188,10 @@
       "bytes": 5045,
       "sha256": "43505F4D6395508775973D13BE7A53AF2B8F1157273FA4A6D13B3041892282E6"
     },
+    "scripts/causal_structured_resolvent.py": {
+      "bytes": 12677,
+      "sha256": "86C33BDE9E1353129802AFC039AE1DA9B1B5F5EB0EE2C04B8AF26C2A998C55F7"
+    },
     "scripts/check_reproduction_environment.py": {
       "bytes": 2469,
       "sha256": "DA0831ECA13D53988A9134FF6C79FABF1EEAC9878511EB790928C0EFB6DD0DFB"
@@ -4392,9 +4404,13 @@
       "bytes": 2974,
       "sha256": "75E25999B5EA753193EC064405AF7E1728FE31CFF717ACD64C101B24E225204C"
     },
+    "scripts/structured_directional_two_response.py": {
+      "bytes": 9370,
+      "sha256": "DFE3B5122920BA25253E42C4CE88EBC92F5CD2673C86664293FE6D93DCA13DA1"
+    },
     "scripts/structured_parameter_green.py": {
-      "bytes": 6305,
-      "sha256": "0E9561B61F4E76E368A272B28398C04156447B6D3318662F946BDA3164514D86"
+      "bytes": 6455,
+      "sha256": "69BA0C19E6A8A34CDAF293F0DE0D58959EEF7B09BC5E53C17B0E3E17DCDABA47"
     },
     "scripts/structured_parameter_green_v2.py": {
       "bytes": 7152,
@@ -4443,6 +4459,10 @@
     "scripts/test_causal_response_residual.py": {
       "bytes": 5980,
       "sha256": "041CBC56AC43D1724124EC11E3B9614679D645C581C2BCBBB4CADC3EEAE070C1"
+    },
+    "scripts/test_causal_structured_resolvent.py": {
+      "bytes": 14914,
+      "sha256": "5AA18D2FE695F50455F7BEAFAB349DCE76AAB1E029602F3F8151124B3F6573FA"
     },
     "scripts/test_chi_block_gram.py": {
       "bytes": 1981,
@@ -4580,9 +4600,13 @@
       "bytes": 1534,
       "sha256": "038FE5600366BA5E94910FD2A46C80C16C98F0C1A0A1DE24C0B0380FA452933D"
     },
+    "scripts/test_structured_directional_two_response.py": {
+      "bytes": 14367,
+      "sha256": "5F2B3FFFBBB99B27D84A55E9ED5EB3B434F45B9B625BFCC9C8BF40B76D72F292"
+    },
     "scripts/test_structured_parameter_green.py": {
-      "bytes": 8594,
-      "sha256": "8D53A19E247FDFD4E67FF74B87A9E8194C6601ED8D799058F09F230CCF5F1EB8"
+      "bytes": 8884,
+      "sha256": "7EB51F57E4EEBA531FC041C8CC01AAC19C1E628F3A343E12FEB5A93E2604C3C9"
     },
     "scripts/test_structured_parameter_green_v2.py": {
       "bytes": 11845,

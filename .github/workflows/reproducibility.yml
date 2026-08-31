@@ -32,8 +32,12 @@ jobs:
         run: python scripts/check_reproduction_environment.py
       - name: Run numerical smoke audit
         run: python reproduce.py smoke
+      - name: Verify structured causal resolvent development
+        run: |
+          python scripts/test_structured_parameter_green.py
+          python scripts/test_structured_directional_two_response.py
+          python scripts/test_causal_structured_resolvent.py
       - name: Regenerate Matplotlib figures twice
         run: python scripts/reproduce_figures.py --check-determinism
       - name: Audit public release boundaries
         run: python scripts/audit_public_release.py --root .
-
