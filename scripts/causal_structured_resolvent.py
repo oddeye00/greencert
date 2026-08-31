@@ -75,6 +75,81 @@ def scalar_hessian_structured_gain(
     return float(torch.linalg.matrix_norm(matrix, ord=2))
 
 
+def scaled_momentum_skeleton_matrices(
+    hessian_norm_bounds: Sequence[float],
+    identity_step_norm_bounds: Sequence[float],
+    *,
+    learning_rate: float,
+    momentum: float,
+    dtype: torch.dtype = torch.float64,
+) -> Tensor:
+    """Return 2-by-2 norm majorants for scaled-momentum Jacobians.
+
+    ``hessian_norm_bounds[j]`` bounds ``||H_tilde_j||`` and
+    ``identity_step_norm_bounds[j]`` bounds ``||I-eta H_tilde_j||``.
+    """
+
+    if not hessian_norm_bounds or len(hessian_norm_bounds) != len(
+        identity_step_norm_bounds
+    ):
+        raise ValueError("skeleton bound sequences must have equal positive length")
+    eta = float(learning_rate)
+    mu = float(momentum)
+    if not math.isfinite(eta) or eta <= 0.0:
+        raise ValueError("learning_rate must be finite and positive")
+    if not math.isfinite(mu):
+        raise ValueError("momentum must be finite")
+    rows = []
+    for index, (hessian, identity_step) in enumerate(
+        zip(hessian_norm_bounds, identity_step_norm_bounds)
+    ):
+        hessian = float(hessian)
+        identity_step = float(identity_step)
+        if not math.isfinite(hessian) or hessian < 0.0:
+            raise ValueError(
+                f"hessian_norm_bounds[{index}] must be finite and nonnegative"
+            )
+        if not math.isfinite(identity_step) or identity_step < 0.0:
+            raise ValueError(
+                "identity_step_norm_bounds"
+                f"[{index}] must be finite and nonnegative"
+            )
+        rows.append(
+            ((identity_step, abs(mu)), (eta * hessian, abs(mu)))
+        )
+    return torch.tensor(rows, dtype=dtype)
+
+
+def skeleton_parameter_green_block_majorant(
+    hessian_norm_bounds: Sequence[float],
+    identity_step_norm_bounds: Sequence[float],
+    *,
+    learning_rate: float,
+    momentum: float,
+    dtype: torch.dtype = torch.float64,
+) -> Tensor:
+    """Bound every block of ``P K_tilde B`` using only 2-by-2 recurrences."""
+
+    eta = float(learning_rate)
+    skeleton = scaled_momentum_skeleton_matrices(
+        hessian_norm_bounds,
+        identity_step_norm_bounds,
+        learning_rate=eta,
+        momentum=momentum,
+        dtype=dtype,
+    )
+    horizon = int(skeleton.shape[0])
+    bounds = torch.zeros(horizon, horizon, dtype=dtype)
+    injection = torch.tensor((eta, eta), dtype=dtype)
+    for forcing_step in range(horizon):
+        state_bounds = injection.clone()
+        bounds[forcing_step, forcing_step] = state_bounds[0]
+        for output_step in range(forcing_step + 1, horizon):
+            state_bounds = skeleton[output_step] @ state_bounds
+            bounds[output_step, forcing_step] = state_bounds[0]
+    return bounds
+
+
 def causal_block_majorant(
     approximate_block_bounds: Tensor,
     mismatch_block_bounds: Sequence[float],

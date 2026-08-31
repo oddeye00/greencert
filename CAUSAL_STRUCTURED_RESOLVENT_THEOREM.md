@@ -230,6 +230,88 @@ This cost statement includes neither the problem-dependent construction of a
 residual spectral certificate \(\varepsilon_s\) nor derivative-envelope work;
 both must be counted in an empirical benchmark.
 
+### Deterministic optimizer-skeleton majorant
+
+The approximate Green blocks need not be probed. Suppose
+
+\[
+h_j\ge\|\widehat H_j\|,
+\qquad
+a_j\ge\|I-\eta\widehat H_j\|.
+\]
+
+For the scaled-momentum state coordinates
+\((\|\delta\theta\|,\|\delta w\|)\), define
+
+\[
+A_j^{\rm skel}=
+\begin{bmatrix}
+a_j&|\mu|\\
+\eta h_j&|\mu|
+\end{bmatrix},
+\qquad
+b_{k,k}=(\eta,\eta)^\top,
+\qquad
+b_{i,k}=A_i^{\rm skel}b_{i-1,k}\quad(i>k).
+\]
+
+Then
+
+\[
+\boxed{N_{ik}:=(b_{i,k})_1\ge\|(T_0)_{ik}\|.}
+\]
+
+Indeed, the scaled-momentum Jacobian obeys
+
+\[
+\begin{bmatrix}
+\|\delta\theta^+\|\\
+\|\delta w^+\|
+\end{bmatrix}
+\le
+A_j^{\rm skel}
+\begin{bmatrix}
+\|\delta\theta\|\\
+\|\delta w\|
+\end{bmatrix},
+\]
+
+and a \(B\)-channel unit forcing injects the norm vector
+\((\eta,\eta)^\top\). Induction gives the block bound.
+
+For a symmetric rank-\(r\) approximation
+\(\widehat H_j=Q_j\Lambda_jQ_j^\top\), with orthonormal \(Q_j\), the two
+inputs reduce to
+
+\[
+h_j=\max_\ell|\lambda_{j,\ell}|,
+\qquad
+a_j=\max\{1,\max_\ell|1-\eta\lambda_{j,\ell}|\},
+\]
+
+plus explicit numerical-enclosure errors. Thus all \(H(H+1)/2\) approximate
+Green block bounds follow from \(O(H^2)\) arithmetic on \(2\times2\)
+matrices and the small sketch spectra.
+
+The residual bounds \(\delta_j\ge\|H_j-\widehat H_j\|\) may be supplied
+deterministically or by independent Gaussian direct-image probes. For a fixed
+residual operator and \(q\) probes \(g_\ell\), the ideal-Gaussian event
+
+\[
+\|H_j-\widehat H_j\|
+\le
+\frac{\max_{\ell\le q}\|(H_j-\widehat H_j)g_\ell\|}
+{\Phi^{-1}\!\left((1+\delta^{1/q})/2\right)}
+\]
+
+has failure probability at most \(\delta\). Random sketch construction and
+residual certification must use independent streams; conditioning on the
+sketch and union-bounding the predeclared residual operators then preserves
+the family guarantee. Unlike an exact Green probe, these checkpoint residual
+products have no causal dependency and may be batched across time. This
+changes sequential HVP depth, not the number of logical vector-HVPs, so both
+must be reported in any scaling claim.
+
 ## 6. Causal block-majorant closure
 
 The scalar norm \(\alpha\) discards where in time each mismatch occurs. A

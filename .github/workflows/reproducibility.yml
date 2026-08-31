@@ -40,6 +40,7 @@ jobs:
           python scripts/test_causal_structured_resolvent.py
           python scripts/audit_causal_forward_radius.py
           python scripts/verify_transformer_segmented_resolvent_diagnostic.py
+          python scripts/diagnose_transformer_low_rank_resolvent.py --help
       - name: Regenerate Matplotlib figures twice
         run: python scripts/reproduce_figures.py --check-determinism
       - name: Audit public release boundaries

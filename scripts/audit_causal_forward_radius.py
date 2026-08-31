@@ -61,6 +61,51 @@ def solve_case(
     return exact, radii
 
 
+def audit_scalar_optimizer_skeleton(generator: random.Random) -> tuple[int, float]:
+    eta = 0.019
+    momentum = 0.84
+    checked = 0
+    minimum_slack = math.inf
+    for _case in range(CASES):
+        horizon = generator.randint(1, 12)
+        hessians = [generator.uniform(-2.0, 2.0) for _ in range(horizon)]
+        for forcing_step in range(horizon):
+            parameter = -eta
+            velocity = eta
+            parameter_bound = eta
+            velocity_bound = eta
+            minimum_slack = min(
+                minimum_slack, parameter_bound - abs(parameter)
+            )
+            checked += 1
+            for output_step in range(forcing_step + 1, horizon):
+                hessian = hessians[output_step]
+                next_velocity = (
+                    eta * hessian * parameter + momentum * velocity
+                )
+                next_parameter = parameter - next_velocity
+                next_parameter_bound = (
+                    abs(1.0 - eta * hessian) * parameter_bound
+                    + abs(momentum) * velocity_bound
+                )
+                next_velocity_bound = (
+                    eta * abs(hessian) * parameter_bound
+                    + abs(momentum) * velocity_bound
+                )
+                parameter = next_parameter
+                velocity = next_velocity
+                parameter_bound = next_parameter_bound
+                velocity_bound = next_velocity_bound
+                slack = parameter_bound - abs(parameter)
+                if slack < -2.0e-15:
+                    raise AssertionError(
+                        f"optimizer skeleton violated by {-slack:.3e}"
+                    )
+                minimum_slack = min(minimum_slack, slack)
+                checked += 1
+    return checked, minimum_slack
+
+
 def main() -> None:
     generator = random.Random(SEED)
     minimum_slack = math.inf
@@ -97,6 +142,10 @@ def main() -> None:
                 maximum_ratio = max(maximum_ratio, abs(observed) / radius)
             checkpoints += 1
 
+    skeleton_blocks, skeleton_minimum_slack = (
+        audit_scalar_optimizer_skeleton(generator)
+    )
+
     witness_affine = [1.0e-2, 1.0e-2, 1.0e-8, 1.0e-2]
     witness_blocks = [
         [1.0 if row == column else 0.0 for column in range(4)]
@@ -129,6 +178,11 @@ def main() -> None:
         "checkpoints": checkpoints,
         "minimum_radius_slack": minimum_slack,
         "maximum_observed_to_radius_ratio": maximum_ratio,
+        "optimizer_skeleton_scalar_blocks": skeleton_blocks,
+        "optimizer_skeleton_minimum_raw_slack": skeleton_minimum_slack,
+        "optimizer_skeleton_maximum_tolerance_adjusted_violation": max(
+            0.0, -skeleton_minimum_slack - 2.0e-15
+        ),
         "scalar_root_separation_witness": {
             "affine_bounds": witness_affine,
             "curvature_profile": witness_curvature,

@@ -20,6 +20,8 @@ from causal_structured_resolvent import (
     preconditioned_structured_gain_bound,
     scalar_hessian_parameter_green_matrix,
     scalar_hessian_structured_gain,
+    scaled_momentum_skeleton_matrices,
+    skeleton_parameter_green_block_majorant,
     truncated_neumann_response,
     truncated_structured_response_error_bound,
 )
@@ -659,14 +661,111 @@ def forward_radius_tests() -> None:
     assert cases == 240
 
 
+def optimizer_skeleton_tests() -> None:
+    generator = torch.Generator().manual_seed(771_029)
+    cases = 0
+    eta = 0.019
+    momentum = 0.84
+    for horizon in (1, 2, 4, 7):
+        for dimension in (1, 2, 3):
+            identity = torch.eye(dimension, dtype=DTYPE)
+            projection, injection = explicit_projection_injection(
+                horizon, dimension, eta
+            )
+            for _trial in range(20):
+                hessians = []
+                jacobians = []
+                for _step in range(horizon):
+                    raw = torch.randn(
+                        dimension,
+                        dimension,
+                        generator=generator,
+                        dtype=DTYPE,
+                    )
+                    hessian = 0.5 * (raw + raw.T)
+                    hessian = 0.7 * hessian / max(
+                        float(torch.linalg.matrix_norm(hessian, ord=2)), 1.0
+                    )
+                    hessians.append(hessian)
+                    jacobians.append(
+                        torch.cat(
+                            (
+                                torch.cat(
+                                    (
+                                        identity - eta * hessian,
+                                        -momentum * identity,
+                                    ),
+                                    dim=1,
+                                ),
+                                torch.cat(
+                                    (
+                                        eta * hessian,
+                                        momentum * identity,
+                                    ),
+                                    dim=1,
+                                ),
+                            ),
+                            dim=0,
+                        )
+                    )
+                exact = (
+                    projection
+                    @ explicit_causal_green(jacobians)
+                    @ injection
+                )
+                hessian_bounds = [
+                    float(torch.linalg.matrix_norm(row, ord=2))
+                    for row in hessians
+                ]
+                identity_step_bounds = [
+                    float(
+                        torch.linalg.matrix_norm(identity - eta * row, ord=2)
+                    )
+                    for row in hessians
+                ]
+                skeletons = scaled_momentum_skeleton_matrices(
+                    hessian_bounds,
+                    identity_step_bounds,
+                    learning_rate=eta,
+                    momentum=momentum,
+                )
+                assert skeletons.shape == (horizon, 2, 2)
+                majorant = skeleton_parameter_green_block_majorant(
+                    hessian_bounds,
+                    identity_step_bounds,
+                    learning_rate=eta,
+                    momentum=momentum,
+                )
+                for output_step in range(horizon):
+                    for forcing_step in range(output_step + 1):
+                        block = exact[
+                            output_step
+                            * dimension : (output_step + 1)
+                            * dimension,
+                            forcing_step
+                            * dimension : (forcing_step + 1)
+                            * dimension,
+                        ]
+                        observed = float(
+                            torch.linalg.matrix_norm(block, ord=2)
+                        )
+                        assert observed <= float(
+                            majorant[output_step, forcing_step]
+                        ) * (1.0 + 3e-13) + 3e-15
+                cases += 1
+    assert cases == 240
+
+
 def main() -> None:
     scalar_and_edge_tests()
     identity_and_adjoint_tests()
     block_majorant_tests()
     forward_radius_tests()
+    optimizer_skeleton_tests()
     print(
         "PASS: 36 exact causal resolvent identities and 144 causal "
-        "block-majorant checks plus 240 forward nonlinear envelopes"
+        "block-majorant checks, 240 forward nonlinear envelopes, and 240 "
+        "optimizer-skeleton block bounds"
     )
 
 

@@ -6,6 +6,9 @@
   "checkpoints": 64705,
   "minimum_radius_slack": 0.0,
   "maximum_observed_to_radius_ratio": 1.0,
+  "optimizer_skeleton_scalar_blocks": 301344,
+  "optimizer_skeleton_minimum_raw_slack": -8.326672684688674e-17,
+  "optimizer_skeleton_maximum_tolerance_adjusted_violation": 0.0,
   "scalar_root_separation_witness": {
     "affine_bounds": [
       0.01,

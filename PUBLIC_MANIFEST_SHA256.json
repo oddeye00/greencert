@@ -5,8 +5,8 @@
       "sha256": "CC8E085BC397FF65663C23308C202DB1CE53CFCB053AF0A17B1A37AF8DEF5159"
     },
     ".github/workflows/reproducibility.yml": {
-      "bytes": 1584,
-      "sha256": "8ED6BC69172D2B792905B0142CFFDC3CAE3499DD6DE93A3DB200CB3750570235"
+      "bytes": 1659,
+      "sha256": "3E7BD1C6C40173FE3CDA7AE3352BDA04AE64CBE26692896C06B3CE3D3BFE0206"
     },
     ".gitignore": {
       "bytes": 265,
@@ -53,8 +53,8 @@
       "sha256": "FC20EA02DB556C43E751A33161907DBC728EF7FEBB5BF65A58EBDC758C30319D"
     },
     "CAUSAL_STRUCTURED_RESOLVENT_THEOREM.md": {
-      "bytes": 11859,
-      "sha256": "FC58A4AB521099970B92363A02A7A89B41CA70BCABBB51227B51F824225076D3"
+      "bytes": 13909,
+      "sha256": "F6AE5F96CE35E9385A444B5F5A8A811A0F0308D3596157DAE0475A51D8D2F1D7"
     },
     "CITATION.cff": {
       "bytes": 631,
@@ -533,8 +533,8 @@
       "sha256": "313B2383C3A55B1C474DE0F2C55A8A7749422E70F6FACA82ECC326A7EB41E607"
     },
     "results/causal_forward_radius_synthetic_audit.json": {
-      "bytes": 783,
-      "sha256": "4953755B44A877EAF4E9BBCB82FA22B435E6CA11E5D0E6919402B3764CB934EE"
+      "bytes": 961,
+      "sha256": "82385E78C554B244BFB6815892EB69656697729627700BC2EBB5C6D4541EBFD9"
     },
     "results/digits_outward_blind.json": {
       "bytes": 2319,
@@ -3913,8 +3913,8 @@
       "sha256": "1E559866153366A94B5999139B7B8DDC48ADAD18F7F6BCF51A632A5AF35580A6"
     },
     "scripts/audit_causal_forward_radius.py": {
-      "bytes": 4861,
-      "sha256": "E900A094944FAC76F999AA2F64045AF81EC7120E5D5BFBCD487930F4A3DE91C6"
+      "bytes": 7029,
+      "sha256": "203D250500D7EB6FF524748F713E4507D7F2C6DB9A087E0300425CB723F8B867"
     },
     "scripts/audit_digits_signed_confirmation.py": {
       "bytes": 8722,
@@ -4205,8 +4205,8 @@
       "sha256": "43505F4D6395508775973D13BE7A53AF2B8F1157273FA4A6D13B3041892282E6"
     },
     "scripts/causal_structured_resolvent.py": {
-      "bytes": 23476,
-      "sha256": "61D67359BE4793A5395EA0ACB021AC18CADA639C2867BF97DC8CA0D71A55CD03"
+      "bytes": 26158,
+      "sha256": "EFA191334E2549A9D36105C62E0DDC32EDAFFFF9A589069CE8735864AE9017E2"
     },
     "scripts/check_reproduction_environment.py": {
       "bytes": 2469,
@@ -4227,6 +4227,10 @@
     "scripts/develop_digits_signed_screen.py": {
       "bytes": 5355,
       "sha256": "F2E3E638C03F350F5D5A6043AC56B741E66E1673CA40DB66DCC8AF432B4A972A"
+    },
+    "scripts/diagnose_transformer_low_rank_resolvent.py": {
+      "bytes": 18332,
+      "sha256": "0182C24D6F08AB3823FA76023EA0FEA8FD7586BC2CFA07A557EDBF0B133A04ED"
     },
     "scripts/diagnose_transformer_segmented_resolvent.py": {
       "bytes": 15501,
@@ -4481,8 +4485,8 @@
       "sha256": "041CBC56AC43D1724124EC11E3B9614679D645C581C2BCBBB4CADC3EEAE070C1"
     },
     "scripts/test_causal_structured_resolvent.py": {
-      "bytes": 26983,
-      "sha256": "33E1CEA7AE7D7D9F409C944BDB17641EC857AE018F46736A75BFACA1754393CD"
+      "bytes": 30894,
+      "sha256": "6FE6424149A3E67A7615B4F1A183886D5E8A53050E83D6FEF39FDEA342AF3D03"
     },
     "scripts/test_chi_block_gram.py": {
       "bytes": 1981,
