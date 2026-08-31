@@ -1,0 +1,25 @@
+{
+  "status": "streaming-prefix identity bridge sealed",
+  "evidence_boundary": "Post-release deterministic implementation identity; no future trajectory or event outcome is read.",
+  "candidate": {
+    "seed": 366,
+    "threshold": 0.8,
+    "anchor": 1120
+  },
+  "horizon": 26,
+  "certificate": "results/transformer_v3_certificate_seed_366_gate_1_anchor_1120.json",
+  "certificate_sha256": "9F773A441C44988A876BB4A707BA7F2C5B98C407A12F474C6D314F10862D639C",
+  "full_centerline_sha256": "7920002F16C60B64CAEDCE8284CD6132C06F9460496F412FCED6CB90A8282C05",
+  "state_prefix_sha256": "80C1BE664D795695B26AA483C96ABD17A6506BF19945ECE7310BE8993D506549",
+  "scaled_prefix_sha256": "3B3A39E1F96FA989B575E2AB98805BDD19F5B2793C519F0872E64B9FE986EA3A",
+  "streamed_state_prefix_sha256": "80C1BE664D795695B26AA483C96ABD17A6506BF19945ECE7310BE8993D506549",
+  "streamed_scaled_prefix_sha256": "3B3A39E1F96FA989B575E2AB98805BDD19F5B2793C519F0872E64B9FE986EA3A",
+  "bitwise_state_prefix_equal": true,
+  "bitwise_scaled_prefix_equal": true,
+  "full_300_seconds": 63.93942819995573,
+  "streamed_prefix_seconds": 5.531224000034854,
+  "measured_speedup": 11.559724972185691,
+  "frozen_builder_sha256": "F91FC0213CED87DED3AC0606E4F0B560A8760554F5C23B7F8936D4C24600620D",
+  "streaming_builder_sha256": "CEA0ADE5FC1255969B7A93CB1D8525EBBEE9020709CEB5399DB9A090E450228A",
+  "outcome_files_read": 0
+}

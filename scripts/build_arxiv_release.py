@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import os
 import shutil
 import subprocess
 import tempfile
@@ -18,6 +19,12 @@ OUT_PDF = ROOT / "output" / "pdf" / "greencert_arxiv.pdf"
 OUT_ZIP = OUT_DIR / "greencert_arxiv_source.zip"
 OUT_MANIFEST = OUT_DIR / "greencert_arxiv_release.json"
 JOB = "certified_local_training_events_arxiv"
+EXPECTED_PAGES = 40
+SOURCE_DATE_EPOCH = "1787961600"  # 2026-08-29 00:00:00 UTC
+SUPPLEMENT_CANDIDATES = (
+    ROOT / "output" / "certified_local_training_events_supplement.zip",
+    PAPER / "greencert_supplement.zip",
+)
 
 SOURCE_MAP = {
     PAPER / f"{JOB}.tex": Path(f"{JOB}.tex"),
@@ -40,6 +47,9 @@ SOURCE_MAP = {
     ROOT / "figures" / "paper_relinearized_prefix_panel.pdf": Path(
         "figures/paper_relinearized_prefix_panel.pdf"
     ),
+    ROOT / "figures" / "paper_composed_runtime.pdf": Path(
+        "figures/paper_composed_runtime.pdf"
+    ),
     ROOT / "figures" / "paper_mechanism_scaling.pdf": Path(
         "figures/paper_mechanism_scaling.pdf"
     ),
@@ -54,9 +64,18 @@ def sha256(payload: bytes) -> str:
 
 
 def run(command: list[str], cwd: Path) -> str:
+    environment = os.environ.copy()
+    environment.update(
+        {
+            "SOURCE_DATE_EPOCH": SOURCE_DATE_EPOCH,
+            "FORCE_SOURCE_DATE": "1",
+            "TZ": "UTC",
+        }
+    )
     completed = subprocess.run(
         command,
         cwd=cwd,
+        env=environment,
         check=False,
         capture_output=True,
         text=True,
@@ -84,6 +103,12 @@ def main() -> None:
     missing = [str(source) for source in SOURCE_MAP if not source.is_file()]
     if missing:
         raise FileNotFoundError("missing arXiv source dependencies: " + ", ".join(missing))
+    supplement = next((path for path in SUPPLEMENT_CANDIDATES if path.is_file()), None)
+    if supplement is None:
+        raise FileNotFoundError(
+            "missing supplement archive; checked "
+            + ", ".join(str(path) for path in SUPPLEMENT_CANDIDATES)
+        )
 
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     OUT_PDF.parent.mkdir(parents=True, exist_ok=True)
@@ -135,7 +160,7 @@ def main() -> None:
                 metadata[key.strip()] = value.strip()
         if metadata.get("Author") != "Ian Rhee":
             raise AssertionError(f"unexpected PDF author: {metadata.get('Author')!r}")
-        if metadata.get("Pages") != "39":
+        if metadata.get("Pages") != str(EXPECTED_PAGES):
             raise AssertionError(f"unexpected arXiv page count: {metadata.get('Pages')!r}")
 
         bbl = stage / f"{JOB}.bbl"
@@ -163,12 +188,30 @@ def main() -> None:
         ).encode("utf-8")
 
         deterministic_zip(OUT_ZIP, payloads)
-        shutil.copyfile(pdf, OUT_PDF)
+        primary_pdf = pdf.read_bytes()
+        OUT_PDF.write_bytes(primary_pdf)
+
+    # A source release is only reproducible if a clean extraction rebuilds the
+    # same artifact.  The fixed TeX source date also removes clock-dependent
+    # CreationDate, ModDate, and trailer-ID changes.
+    with tempfile.TemporaryDirectory(prefix="greencert_arxiv_verify_", dir=ROOT / "tmp") as tmp:
+        verification = Path(tmp)
+        with zipfile.ZipFile(OUT_ZIP) as archive:
+            archive.extractall(verification)
+        run(latex, verification)
+        run(["bibtex", JOB], verification)
+        run(latex, verification)
+        run(latex, verification)
+        rebuilt_pdf = (verification / f"{JOB}.pdf").read_bytes()
+        if rebuilt_pdf != primary_pdf:
+            raise AssertionError(
+                "clean source-bundle rebuild is not byte-identical to the release PDF"
+            )
 
     release = {
         "title": "GreenCert: Signed Green Operators for Certified Neural Training Transitions",
         "author": "Ian Rhee",
-        "pages": 39,
+        "pages": EXPECTED_PAGES,
         "pdf": {
             "path": OUT_PDF.relative_to(ROOT).as_posix(),
             "bytes": OUT_PDF.stat().st_size,
@@ -181,11 +224,9 @@ def main() -> None:
             "files": len(payloads),
         },
         "supplement": {
-            "path": "output/certified_local_training_events_supplement.zip",
-            "bytes": (ROOT / "output" / "certified_local_training_events_supplement.zip").stat().st_size,
-            "sha256": sha256(
-                (ROOT / "output" / "certified_local_training_events_supplement.zip").read_bytes()
-            ),
+            "path": supplement.relative_to(ROOT).as_posix(),
+            "bytes": supplement.stat().st_size,
+            "sha256": sha256(supplement.read_bytes()),
         },
         "build_checks": {
             "author_metadata": True,
@@ -193,6 +234,8 @@ def main() -> None:
             "undefined_references": False,
             "overfull_boxes": False,
             "source_bundle_recompiled": True,
+            "source_bundle_pdf_byte_identical": True,
+            "source_date_epoch": SOURCE_DATE_EPOCH,
         },
     }
     OUT_MANIFEST.write_text(

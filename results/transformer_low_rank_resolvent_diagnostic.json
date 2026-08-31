@@ -52,19 +52,19 @@
     "status": "recomputed-to-sealed corrected-parameter bridge passed",
     "maximum_absolute_tolerance": 1e-12,
     "l2_tolerance": 1e-10,
-    "recomputed_unscaled_corrected_state_sha256": "BD3787BC368E85B17C8419F7CEFE6D79DD912210093967AF81A3DF8D3CDD067D",
+    "recomputed_unscaled_corrected_state_sha256": "D858270C90CBA4A88D62145F966A2A3889502438CF3FFF670B0BA742384D558A",
     "source_full_corrected_path_sha256": "B180CD4FD012E82961E64D64167D0BFB252C5306C1ADD6FFDA09B1E7E60C9520",
-    "corrected_parameter_maximum_absolute_difference": 3.3306690738754696e-16,
-    "correction_parameter_maximum_absolute_difference": 4.8076234296996765e-16,
-    "corrected_parameter_l2_difference": 5.721003734807177e-15,
-    "correction_parameter_l2_difference": 6.4256280880502275e-15,
+    "corrected_parameter_maximum_absolute_difference": 0.0,
+    "correction_parameter_maximum_absolute_difference": 0.0,
+    "corrected_parameter_l2_difference": 0.0,
+    "correction_parameter_l2_difference": 0.0,
     "effective_corrected_parameter_tensor_sha256": "1039320FF16C01F3AFC4AAFE9737EC5D75B7B3D1B6BAC701FACE68C2CD49F6A4",
     "effective_correction_parameter_tensor_sha256": "59455FE801DA244246FDF67A9B66166F921026B9A08B01F47FC1CA392C3A7C3B",
     "outcome_files_read": 0
   },
   "segmented_source": "results/transformer_segmented_resolvent_diagnostic.json",
   "segmented_source_sha256": "D9C8518F77C5124540F41046B82F58C7F311070A5689F836F32E116B76D73F4B",
-  "common_corrected_path_rebuild_seconds": 4.6000161999999705,
+  "common_corrected_path_rebuild_seconds": 8.269215200038161,
   "outcome_files_read": 0,
   "rows": [
     {
@@ -105,50 +105,50 @@
         598.7128813516698
       ],
       "mismatch_image_norms": [
-        155.63954670828997,
-        88.33736178672522,
-        175.12551117145088,
+        155.63954670829,
+        88.33736178672521,
+        175.12551117145082,
         186.39210950492324
       ],
       "mismatch_gram_rows": [
         {
           "probes": 4,
           "power": 1,
-          "Y": 8510.744632404627,
+          "Y": 8510.744632404623,
           "c_delta": 0.02802862554892483,
           "delta": 2.5e-07,
-          "operator_norm_upper_bound": 551.0396872902672,
-          "operator_norm_lower_estimate": 3.7699407041092554,
+          "operator_norm_upper_bound": 551.0396872902671,
+          "operator_norm_lower_estimate": 3.7699407041092545,
           "gram_applications": 4
         },
         {
           "probes": 4,
           "power": 2,
-          "Y": 27654949.358304784,
+          "Y": 27654949.358304765,
           "c_delta": 0.02802862554892483,
           "delta": 2.5e-07,
-          "operator_norm_upper_bound": 177.23225632748677,
-          "operator_norm_lower_estimate": 14.659480721714019,
+          "operator_norm_upper_bound": 177.23225632748674,
+          "operator_norm_lower_estimate": 14.659480721714017,
           "gram_applications": 8
         },
         {
           "probes": 4,
           "power": 4,
-          "Y": 358306454027800.4,
+          "Y": 358306454027799.75,
           "c_delta": 0.02802862554892483,
           "delta": 2.5e-07,
-          "operator_norm_upper_bound": 103.11731677458158,
-          "operator_norm_lower_estimate": 29.656473956944268,
+          "operator_norm_upper_bound": 103.11731677458155,
+          "operator_norm_lower_estimate": 29.65647395694426,
           "gram_applications": 16
         },
         {
           "probes": 4,
           "power": 8,
-          "Y": 7.480254647619138e+28,
+          "Y": 7.4802546476191095e+28,
           "c_delta": 0.02802862554892483,
           "delta": 2.5e-07,
-          "operator_norm_upper_bound": 79.73420369974647,
-          "operator_norm_lower_estimate": 42.760090565473824,
+          "operator_norm_upper_bound": 79.73420369974644,
+          "operator_norm_lower_estimate": 42.76009056547381,
           "gram_applications": 32
         }
       ],
@@ -158,13 +158,13 @@
         4,
         8
       ],
-      "mismatch_adjoint_relative_residual": 8.33640613963487e-16,
+      "mismatch_adjoint_relative_residual": 1.6672812279269773e-16,
       "mismatch_route": "gram_q8",
       "mismatch_direct_gain_upper": 6650.062422060977,
-      "minimum_mismatch_gram_gain_upper": 79.73420369974647,
-      "mismatch_gain_upper": 79.73420369974647,
-      "mismatch_gain_lower_estimate": 42.760090565473824,
-      "finite_resolvent_multiplier_upper": 3.5204465481630078e+47,
+      "minimum_mismatch_gram_gain_upper": 79.73420369974644,
+      "mismatch_gain_upper": 79.73420369974644,
+      "mismatch_gain_lower_estimate": 42.76009056547381,
+      "finite_resolvent_multiplier_upper": 3.5204465481629745e+47,
       "approximate_green_block_norm_maximum": 0.09353891821970849,
       "approximate_structured_gain_upper": 1.0893509792635232,
       "union_reduction": {
@@ -173,9 +173,9 @@
         "raw_approximate_structured_gain": 1.0893509791545881,
         "numerical_gain_inflation": 1.0893509791545882e-10
       },
-      "structured_gain_upper": 3.8350018946862626e+47,
+      "structured_gain_upper": 3.835001894686226e+47,
       "released_structured_gain_upper": 8644.556824485424,
-      "gain_ratio_to_released": 4.4363198398138184e+43,
+      "gain_ratio_to_released": 4.436319839813776e+43,
       "global_parameter_remainder_radius": null,
       "domain_passed": false,
       "bracket": null,
@@ -192,7 +192,7 @@
       "operator_logical_vector_hvp_calls": 1600,
       "released_direct_logical_vector_hvp_calls": 104,
       "outcome_files_read": 0,
-      "elapsed_seconds": 13.81345859999999
+      "elapsed_seconds": 11.953444499988109
     },
     {
       "rank": 4,
@@ -210,17 +210,17 @@
           "rank": 4,
           "anchor": 0,
           "eigenvalues": [
-            22.748416972152818,
-            30.883085930740926,
-            48.814582418120466,
-            53.14604328439232
+            22.74841697215285,
+            30.883085930740965,
+            48.8145824181205,
+            53.14604328439236
           ],
-          "hessian_norm_bound": 53.146043289706924,
+          "hessian_norm_bound": 53.14604328970697,
           "identity_step_norm_bound": 1.0000000000531462,
-          "numerical_spectral_inflation": 5.3146043284392325e-09,
+          "numerical_spectral_inflation": 5.314604328439237e-09,
           "probe_sha256": "37ACC473E6DEAE6CD1027489C1FEC87F8EBE131DAAD222A796637B1DCD511FF3",
-          "basis_sha256": "D951408D10415764A94A0BC0B8F20E96198192E13F967A421AC9B63D6FED13EB",
-          "core_sha256": "EC5B908F4B5E91C886A1EDD5CDF5426FAE6252D4D390DD9B37B74BEF2CB79CAD",
+          "basis_sha256": "5E61050D2B7BCDC9510161F5D2E8AF1F01150A3FA1765838106983CA1BB52AE9",
+          "core_sha256": "529636C21575468FCEE048C7100DB35D7D7F165A5EA8AE116E50F1C45C8D69A3",
           "batched_hvp_calls": 2,
           "logical_vector_hvp_calls": 8
         }
@@ -238,9 +238,9 @@
         597.8748383047007
       ],
       "mismatch_image_norms": [
-        89.06856675661,
-        98.01450232244619,
-        91.47073512718445,
+        89.06856675660994,
+        98.01450232244609,
+        91.47073512718447,
         100.52357680311637
       ],
       "mismatch_gram_rows": [
@@ -257,31 +257,31 @@
         {
           "probes": 4,
           "power": 2,
-          "Y": 5541572.002017943,
+          "Y": 5541572.002017935,
           "c_delta": 0.02802862554892483,
           "delta": 2.5e-07,
-          "operator_norm_upper_bound": 118.57900304999296,
-          "operator_norm_lower_estimate": 9.800032256511166,
+          "operator_norm_upper_bound": 118.57900304999292,
+          "operator_norm_lower_estimate": 9.800032256511162,
           "gram_applications": 8
         },
         {
           "probes": 4,
           "power": 4,
-          "Y": 30542318021188.438,
+          "Y": 30542318021188.387,
           "c_delta": 0.02802862554892483,
           "delta": 2.5e-07,
-          "operator_norm_upper_bound": 75.79883385262245,
-          "operator_norm_lower_estimate": 21.79076009638525,
+          "operator_norm_upper_bound": 75.79883385262244,
+          "operator_norm_lower_estimate": 21.790760096385245,
           "gram_applications": 16
         },
         {
           "probes": 4,
           "power": 8,
-          "Y": 1.0818003503768984e+27,
+          "Y": 1.0818003503768961e+27,
           "c_delta": 0.02802862554892483,
           "delta": 2.5e-07,
-          "operator_norm_upper_bound": 61.18698901206854,
-          "operator_norm_lower_estimate": 32.806810487553534,
+          "operator_norm_upper_bound": 61.18698901206852,
+          "operator_norm_lower_estimate": 32.80681048755353,
           "gram_applications": 32
         }
       ],
@@ -291,24 +291,24 @@
         4,
         8
       ],
-      "mismatch_adjoint_relative_residual": 1.8066977968722304e-15,
+      "mismatch_adjoint_relative_residual": 1.6059535972197676e-15,
       "mismatch_route": "gram_q8",
       "mismatch_direct_gain_upper": 3586.4611565647187,
-      "minimum_mismatch_gram_gain_upper": 61.18698901206854,
-      "mismatch_gain_upper": 61.18698901206854,
-      "mismatch_gain_lower_estimate": 32.806810487553534,
-      "finite_resolvent_multiplier_upper": 4.716648598003217e+44,
+      "minimum_mismatch_gram_gain_upper": 61.18698901206852,
+      "mismatch_gain_upper": 61.18698901206852,
+      "mismatch_gain_lower_estimate": 32.80681048755353,
+      "finite_resolvent_multiplier_upper": 4.71664859800319e+44,
       "approximate_green_block_norm_maximum": 0.09353891821970849,
       "approximate_structured_gain_upper": 1.0893509792635232,
       "union_reduction": {
         "union_dimension": 4,
-        "maximum_basis_projection_residual": 2.1399900695905795e-15,
+        "maximum_basis_projection_residual": 6.513058656742737e-16,
         "raw_approximate_structured_gain": 1.0893509791545881,
         "numerical_gain_inflation": 1.0893509791545882e-10
       },
-      "structured_gain_upper": 5.138085769076728e+44,
+      "structured_gain_upper": 5.138085769076699e+44,
       "released_structured_gain_upper": 8644.556824485424,
-      "gain_ratio_to_released": 5.9437237482473e+40,
+      "gain_ratio_to_released": 5.943723748247266e+40,
       "global_parameter_remainder_radius": null,
       "domain_passed": false,
       "bracket": null,
@@ -325,7 +325,7 @@
       "operator_logical_vector_hvp_calls": 1608,
       "released_direct_logical_vector_hvp_calls": 104,
       "outcome_files_read": 0,
-      "elapsed_seconds": 14.0802726
+      "elapsed_seconds": 13.58321650000289
     },
     {
       "rank": 8,
@@ -343,21 +343,21 @@
           "rank": 8,
           "anchor": 0,
           "eigenvalues": [
-            17.36501500743102,
-            22.453349795764023,
-            25.142479114887028,
-            27.874362034969245,
-            31.957175342285048,
-            36.123228875990854,
-            47.094768823169744,
-            56.052733394112764
+            17.365015007431033,
+            22.453349795764034,
+            25.142479114887056,
+            27.874362034969288,
+            31.957175342285105,
+            36.1232288759909,
+            47.09476882316979,
+            56.05273339411285
           ],
-          "hessian_norm_bound": 56.052733399718036,
+          "hessian_norm_bound": 56.05273339971812,
           "identity_step_norm_bound": 1.0000000000560527,
-          "numerical_spectral_inflation": 5.6052733394112765e-09,
+          "numerical_spectral_inflation": 5.605273339411285e-09,
           "probe_sha256": "67A04A7A748E7EBFFFDEA486247B960B4734DEFC20EB05579526D4FCD0FE80E5",
-          "basis_sha256": "01D8A6AD09B3B5160906103AA7B4149B5291BF1E6932D5C141B9912104A5C69A",
-          "core_sha256": "D95B357CC95F7E349864DB9CD9DB0944FA8F305A722FD7F298CBEE2921430C4F",
+          "basis_sha256": "55EC9CA0F8D5D5675CDCFF2388690DD5E1FB8D2820698E083D58819C7C5DABF6",
+          "core_sha256": "C95B2CB439CE321886F27EBF59CC58F9F9FFA3FE344F2F8D47A3C016EF2F6F31",
           "batched_hvp_calls": 2,
           "logical_vector_hvp_calls": 16
         }
@@ -375,36 +375,36 @@
         597.9017861322519
       ],
       "mismatch_image_norms": [
-        128.6834983315482,
-        70.95805236325337,
-        51.829242233474616,
+        128.68349833154824,
+        70.95805236325339,
+        51.82924223347459,
         96.30707320987966
       ],
       "mismatch_gram_rows": [
         {
           "probes": 4,
           "power": 1,
-          "Y": 2911.846262632292,
+          "Y": 2911.8462626322935,
           "c_delta": 0.02802862554892483,
           "delta": 2.5e-07,
-          "operator_norm_upper_bound": 322.3170800743779,
-          "operator_norm_lower_estimate": 2.2057324730912846,
+          "operator_norm_upper_bound": 322.317080074378,
+          "operator_norm_lower_estimate": 2.205732473091285,
           "gram_applications": 4
         },
         {
           "probes": 4,
           "power": 2,
-          "Y": 3139482.4750676453,
+          "Y": 3139482.475067647,
           "c_delta": 0.02802862554892483,
           "delta": 2.5e-07,
-          "operator_norm_upper_bound": 102.87599895872317,
-          "operator_norm_lower_estimate": 8.512498591852793,
+          "operator_norm_upper_bound": 102.87599895872319,
+          "operator_norm_lower_estimate": 8.512498591852795,
           "gram_applications": 8
         },
         {
           "probes": 4,
           "power": 4,
-          "Y": 5781459009330.789,
+          "Y": 5781459009330.791,
           "c_delta": 0.02802862554892483,
           "delta": 2.5e-07,
           "operator_norm_upper_bound": 61.56082851669995,
@@ -414,7 +414,7 @@
         {
           "probes": 4,
           "power": 8,
-          "Y": 2.0321588177526193e+25,
+          "Y": 2.032158817752619e+25,
           "c_delta": 0.02802862554892483,
           "delta": 2.5e-07,
           "operator_norm_upper_bound": 47.72789057028076,
@@ -428,9 +428,9 @@
         4,
         8
       ],
-      "mismatch_adjoint_relative_residual": 2.6651896899869628e-15,
+      "mismatch_adjoint_relative_residual": 1.6960298027189778e-15,
       "mismatch_route": "gram_q8",
-      "mismatch_direct_gain_upper": 4591.1455096835625,
+      "mismatch_direct_gain_upper": 4591.145509683563,
       "minimum_mismatch_gram_gain_upper": 47.72789057028076,
       "mismatch_gain_upper": 47.72789057028076,
       "mismatch_gain_lower_estimate": 25.59811508197637,
@@ -439,7 +439,7 @@
       "approximate_structured_gain_upper": 1.0893509792635232,
       "union_reduction": {
         "union_dimension": 8,
-        "maximum_basis_projection_residual": 2.877470583677576e-15,
+        "maximum_basis_projection_residual": 1.0137065853634206e-15,
         "raw_approximate_structured_gain": 1.0893509791545881,
         "numerical_gain_inflation": 1.0893509791545882e-10
       },
@@ -462,7 +462,7 @@
       "operator_logical_vector_hvp_calls": 1616,
       "released_direct_logical_vector_hvp_calls": 104,
       "outcome_files_read": 0,
-      "elapsed_seconds": 14.151299999999992
+      "elapsed_seconds": 13.02630309999222
     },
     {
       "rank": 4,
@@ -483,17 +483,17 @@
           "rank": 4,
           "anchor": 0,
           "eigenvalues": [
-            21.619105521123235,
-            28.013034213752267,
-            38.99551145023552,
-            50.672982676331756
+            21.6191055211232,
+            28.01303421375232,
+            38.995511450235576,
+            50.672982676331706
           ],
-          "hessian_norm_bound": 50.672982681399056,
+          "hessian_norm_bound": 50.672982681399006,
           "identity_step_norm_bound": 1.000000000050673,
-          "numerical_spectral_inflation": 5.067298267633176e-09,
+          "numerical_spectral_inflation": 5.067298267633171e-09,
           "probe_sha256": "1DCEB01A1411B9AE3209001D8D7DA179F7AD01054CCC76408C4B6BDB780D5659",
-          "basis_sha256": "69CA36C3B603BEA67078A43A9422AC1AB30B3345CDCF9930D65B42AFE2709241",
-          "core_sha256": "9CF5C499E569EB65820FB6F5697B32886A74F0514FAF32AA1AFFE7799010FFC3",
+          "basis_sha256": "A207423221B2CF8CE106E8A9F536738A66526F97EE3C1E79471B61920E60372F",
+          "core_sha256": "8162F58A67AF3526185631EA3DA633704ADB86DB9BC7429E001044B859F185F3",
           "batched_hvp_calls": 2,
           "logical_vector_hvp_calls": 8
         },
@@ -501,17 +501,17 @@
           "rank": 4,
           "anchor": 7,
           "eigenvalues": [
-            17.08936298935726,
+            17.08936298935721,
             27.202056002170448,
-            33.492727644398826,
-            47.534464630398496
+            33.4927276443988,
+            47.5344646303985
           ],
-          "hessian_norm_bound": 47.53446463515194,
+          "hessian_norm_bound": 47.53446463515195,
           "identity_step_norm_bound": 1.0000000000475344,
-          "numerical_spectral_inflation": 4.753446463039849e-09,
+          "numerical_spectral_inflation": 4.75344646303985e-09,
           "probe_sha256": "46D84A5C4C2D7101F3BCF4B64CC07EDF8288BDBDB2EB6B2A104C6685A03B25DA",
-          "basis_sha256": "E3D8D9A9F8AFEF38BDB9AB5A3BAB6601DA667DB139B1D639C78A237E29CA789E",
-          "core_sha256": "C1F370BD288C890A8A177FD093A8BC53EBE2DC9D4777CB6C2F85813341BC5265",
+          "basis_sha256": "29D04FB9EE81DC9D42664C50E4D793CE283F65A69AB9723583E98860DF9727B6",
+          "core_sha256": "47EFA13BD6A4C8882533FA829BC5C0980F2AE1D73B84B6A20C7EC28205A2EC29",
           "batched_hvp_calls": 2,
           "logical_vector_hvp_calls": 8
         },
@@ -519,17 +519,17 @@
           "rank": 4,
           "anchor": 14,
           "eigenvalues": [
-            21.05234014150163,
-            31.961991140041278,
-            47.7323448762963,
-            53.69254179194883
+            21.052340141501624,
+            31.961991140041324,
+            47.73234487629634,
+            53.69254179194884
           ],
-          "hessian_norm_bound": 53.69254179731808,
+          "hessian_norm_bound": 53.69254179731809,
           "identity_step_norm_bound": 1.0000000000536926,
-          "numerical_spectral_inflation": 5.369254179194883e-09,
+          "numerical_spectral_inflation": 5.369254179194885e-09,
           "probe_sha256": "2E5740103967180DA945AEC9080FB8AA5FB7A2E000A6A17E715128A880486520",
-          "basis_sha256": "1A6CFF1F723AAA1CDACF774ABD4A790C1C56A97A6E5C1D8043CCABDC3445B89A",
-          "core_sha256": "D265FF4479F7F4C73C3E8C7230B5205B75823C141858AD86DC6B8F8FC4523845",
+          "basis_sha256": "352F8B61CF1B865370084087F65632349DACFCC83B6684E08E237C5866F4E8AF",
+          "core_sha256": "744604D6F1559700DFF879A160FABC92EE535BD3C69EA273C58D6AFAAE18AE6E",
           "batched_hvp_calls": 2,
           "logical_vector_hvp_calls": 8
         },
@@ -537,17 +537,17 @@
           "rank": 4,
           "anchor": 21,
           "eigenvalues": [
-            23.286783833627133,
-            28.820433147091506,
-            40.43160797812774,
-            51.44349914545233
+            23.28678383362718,
+            28.820433147091407,
+            40.43160797812781,
+            51.44349914545224
           ],
-          "hessian_norm_bound": 51.44349915059668,
+          "hessian_norm_bound": 51.443499150596594,
           "identity_step_norm_bound": 1.0000000000514435,
-          "numerical_spectral_inflation": 5.144349914545233e-09,
+          "numerical_spectral_inflation": 5.1443499145452244e-09,
           "probe_sha256": "053BA7A7C2BAE19DDF1D05E7A6E1EE18D7DAD3529CF63EBC05BB831253C3C75F",
-          "basis_sha256": "BDF9E808D985B34628E3973FB379F5BE2920EEC720EE9731F6F12478788EC31F",
-          "core_sha256": "074CE788BF2FAF1AC28ADDBF75672C98B1019D2ABD45F9192B1053C17C95AB8E",
+          "basis_sha256": "1B0775C24C94AF94C226CEA02397D8CC3AEA318E9545C07E89D554AEB6451DAF",
+          "core_sha256": "13801EE5EA1B45BF29DF95F1166FCF4FBDD364DB23A38C9A7C34A80A38B3CB5A",
           "batched_hvp_calls": 2,
           "logical_vector_hvp_calls": 8
         }
@@ -565,16 +565,16 @@
         598.4663201503386
       ],
       "mismatch_image_norms": [
-        106.05700745054129,
+        106.0570074505412,
         102.71006150307583,
-        96.69025537927047,
-        79.48275686499872
+        96.69025537927057,
+        79.48275686499873
       ],
       "mismatch_gram_rows": [
         {
           "probes": 4,
           "power": 1,
-          "Y": 3007.4692709645456,
+          "Y": 3007.469270964545,
           "c_delta": 0.02802862554892483,
           "delta": 2.5e-07,
           "operator_norm_upper_bound": 327.56666452708924,
@@ -584,7 +584,7 @@
         {
           "probes": 4,
           "power": 2,
-          "Y": 3400500.5807290543,
+          "Y": 3400500.580729054,
           "c_delta": 0.02802862554892483,
           "delta": 2.5e-07,
           "operator_norm_upper_bound": 104.95068147712753,
@@ -594,7 +594,7 @@
         {
           "probes": 4,
           "power": 4,
-          "Y": 4917073304742.094,
+          "Y": 4917073304742.091,
           "c_delta": 0.02802862554892483,
           "delta": 2.5e-07,
           "operator_norm_upper_bound": 60.32719187777769,
@@ -604,7 +604,7 @@
         {
           "probes": 4,
           "power": 8,
-          "Y": 1.140335299613729e+25,
+          "Y": 1.1403352996137284e+25,
           "c_delta": 0.02802862554892483,
           "delta": 2.5e-07,
           "operator_norm_upper_bound": 46.03513519536024,
@@ -618,24 +618,24 @@
         4,
         8
       ],
-      "mismatch_adjoint_relative_residual": 1.8983638180060938e-15,
+      "mismatch_adjoint_relative_residual": 3.55943215876142e-15,
       "mismatch_route": "gram_q8",
-      "mismatch_direct_gain_upper": 3783.8818484129915,
+      "mismatch_direct_gain_upper": 3783.881848412989,
       "minimum_mismatch_gram_gain_upper": 46.03513519536024,
       "mismatch_gain_upper": 46.03513519536024,
       "mismatch_gain_lower_estimate": 24.687958979300802,
       "finite_resolvent_multiplier_upper": 3.861655477830149e+41,
-      "approximate_green_block_norm_maximum": 0.12691187598924106,
-      "approximate_structured_gain_upper": 1.1034127138117114,
+      "approximate_green_block_norm_maximum": 0.12691187598924103,
+      "approximate_structured_gain_upper": 1.1034127138117116,
       "union_reduction": {
         "union_dimension": 16,
-        "maximum_basis_projection_residual": 2.4972728150095594e-15,
-        "raw_approximate_structured_gain": 1.10341271370137,
-        "numerical_gain_inflation": 1.1034127137013702e-10
+        "maximum_basis_projection_residual": 1.0884103720176299e-15,
+        "raw_approximate_structured_gain": 1.1034127137013703,
+        "numerical_gain_inflation": 1.1034127137013703e-10
       },
-      "structured_gain_upper": 4.260999750598426e+41,
+      "structured_gain_upper": 4.2609997505984266e+41,
       "released_structured_gain_upper": 8644.556824485424,
-      "gain_ratio_to_released": 4.929113009621596e+37,
+      "gain_ratio_to_released": 4.929113009621597e+37,
       "global_parameter_remainder_radius": null,
       "domain_passed": false,
       "bracket": null,
@@ -652,7 +652,7 @@
       "operator_logical_vector_hvp_calls": 1632,
       "released_direct_logical_vector_hvp_calls": 104,
       "outcome_files_read": 0,
-      "elapsed_seconds": 14.283414300000004
+      "elapsed_seconds": 16.850043200014625
     }
   ]
 }

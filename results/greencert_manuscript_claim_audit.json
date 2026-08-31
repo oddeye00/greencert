@@ -1,7 +1,7 @@
 {
   "status": "GREENCERT manuscript claim audit passed",
   "paper": "paper\\certified_local_training_events_neurips2026.tex",
-  "paper_sha256": "9DDC0F3924810AAFB259D6ADC656C81118922A6E78177F7E24CF935FCEADFC32",
+  "paper_sha256": "D8BA97F7C128F4A73655BA2C8D64DE8DA64162148066C24FC161B9C5BB847E8B",
   "studies": {
     "wdbc": {
       "cases": 72,
@@ -147,7 +147,21 @@
       96
     ],
     "anchor_fixed_promotion_gate_passed": false,
-    "anchor_fixed_median_selected_gain_ratio": 0.9939948944415526
+    "anchor_fixed_median_selected_gain_ratio": 0.9939948944415526,
+    "composed_runtime_median_seconds": 9.205996099975891,
+    "composed_runtime_range_seconds": [
+      9.007354300003499,
+      11.711407999973744
+    ],
+    "composed_runtime_matched_continuation_seconds": [
+      0.2977840999956243,
+      3.7180924999993294
+    ],
+    "composed_runtime_matched_ratios": [
+      30.915002178125587,
+      2.4759997498657045
+    ],
+    "composed_runtime_historical_cross_batch_ratio": 378.12853883450225
   },
   "checked_required_phrases": [
     "56/72 WDBC, 7/24 digits, and 9/72 plus 11/72",
@@ -213,7 +227,12 @@
     "preserves 15/15 brackets and reduces staged logical Green sweeps",
     "$112\\to96$ ($1.167\\times$)",
     "fails its prespecified promotion gate",
-    "selected randomized gain-bound ratio $0.994$"
+    "selected randomized gain-bound ratio $0.994$",
+    "9.01--11.71 seconds (median 9.21)",
+    "four forward Green applications",
+    "$378\\times$ reduction",
+    "$30.9\\times$ and $2.48\\times$ slower",
+    "paper_composed_runtime.pdf"
   ],
   "checked_forbidden_phrases": [
     "all 59 cases having a comparable future event",

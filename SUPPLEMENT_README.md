@@ -69,8 +69,12 @@ The paper makes five distinct empirical claims and audit layers.
    maximum output-radius ratio to 0.091--0.602 (median 0.365), with deterministic
    forward evaluations and no additional randomized query. The historical
    fixed-q8 paper batch takes a median 58.02 minutes per candidate versus 5.31
-   seconds for 300-step continuation; this 655.8x disadvantage is reported as
-   the direct toy-scale wall-clock baseline rather than hidden.
+   seconds for 300-step continuation; this 655.8x disadvantage describes the
+   historical implementation. A complete composition on the sealed H=26
+   seed-366 case now reproduces `[2,2]` in 9.01--11.71 seconds (9.21-second
+   median) with four forward Green probes, zero transpose probes, and zero
+   randomized output operators. Matched continuation remains faster at 0.298
+   seconds for 26 updates and 3.718 seconds for 300.
    A cancellation-safe directional second response replaces the scalar
    quadratic forcing charge by a signed causal response plus explicit
    fourth-order and arithmetic residuals. In an outcome-blind post-seal audit,
@@ -352,6 +356,17 @@ Transformer records at horizons 26, 131, and 299. Measured centerline speedups
 are 9.94x, 2.09x, and 1.06x; estimated path-storage reductions are 39.6x,
 10.5x, and 4.84x.
 
+`scripts/benchmark_transformer_v3_streaming_direct_analytic.py` composes that
+streaming path with corrected-path direct-image release and the deterministic
+analytic-jet corollary. Three separately launched records preserve the sealed
+singleton bracket with end-to-end times 9.007, 11.711, and 9.206 seconds.
+`scripts/audit_transformer_v3_streaming_direct_analytic.py` independently
+reconstructs the closure and event logic, checks every source/result hash and
+timing ratio, and records zero outcome reads. The 9.206-second median is a
+378x reduction relative to the historical fixed-q8 cross-batch median; the
+matched 26- and 300-update ratios are reported separately to avoid presenting
+an unmatched timing comparison as an operational speedup.
+
 The complete execution history is retained in
 `RELINEARIZED_PREFIX_PANEL_EXECUTION_DEVIATIONS.md`. A first smoke run consumed
 two vectors and then failed before producing any statistic, output, or cache;
@@ -471,8 +486,10 @@ output-transport panel are measured results. Including shared centerline time
 reduces the latter gain to 1.11x; the shared Green solve is excluded. The first
 monolithic composition improves matched complete time only 1.018x, and the
 float32 q=1 kernel replay improves its paired operator phase by a pooled median
-1.83x across 20 pairs in four alternating-order invocations. Both are one-case post-seal engineering
-audits; a repeated full-cohort timing study
+1.83x across 20 pairs in four alternating-order invocations. The final
+streaming/direct-image/analytic composition takes a 9.206-second median over
+three separately launched runs of the same immutable case. These remain
+one-case post-seal engineering audits; a repeated full-cohort timing study
 remains open.
 The directional second response is a separate outcome-blind post-seal branch:
 it closes 15/15 Green-evaluable sealed records, but those closures are not

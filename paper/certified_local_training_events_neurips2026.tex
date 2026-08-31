@@ -74,7 +74,13 @@ audit, corrected-path relinearization preserves every bracket while reducing
 Green Gram applications $560\to64$ ($8.75\times$).  A deterministic
 neural-jet release removes every randomized output-Jacobian query in 8/15 cases,
 eliminating 1,432 operator instances and 22,912 $q=1$ Gram
-applications; staged fallback retains 15/15.  The resulting verifier is
+applications; staged fallback retains 15/15.  On an issued $H=26$ Transformer
+case, composing prefix streaming, four forward-only Green probes, and analytic
+jets reproduces the sealed bracket in 9.21\,s median over three separately
+launched runs, with no Green transpose or randomized output operator.  This is
+$378\times$ below the historical fixed-$q=8$ cross-batch median; matched direct
+continuation remains $30.9\times$ faster over 26 updates and $2.48\times$ faster
+over 300.  The resulting verifier is
 matrix-free, selective, and explicit about its numerical and probabilistic
 obligations.
 \end{abstract}
@@ -149,6 +155,9 @@ Our contributions are:
   matched seven-case fallback.  Prefix-local streaming, staged
   direct-image/Gram release, batching, and role-fused witnesses provide further
   measured gains, while matrix-free primitives run at 1,008,864 parameters.
+  Their complete composition reproduces a sealed $H=26$ bracket in 9.21\,s
+  median using four forward Green probes, no transpose, and no randomized
+  output operator.
 \end{enumerate}
 
 The operational distinction is straightforward.  A local clock proposes an
@@ -816,6 +825,30 @@ $10^{-6}$ Green event alone; the minimum strict event-logic slack is
 $1.80\times10^{-4}$.  An independent implementation reproduces every
 disposition and bracket without reading a future outcome.
 
+The same ingredients were finally composed in one outcome-blind execution on
+the sealed seed-366 80\% case ($H=26$).  Three separately launched runs retain
+$[2,2]$ in 9.01/11.71/9.21\,s (median 9.21\,s), using four applications of
+$K_H$, no application of $K_H^\top$, and no randomized output-Jacobian
+operator.  An independent audit reconstructs the analytic closure, event
+logic, hashes, and timing ratios from the committed records.  The historical
+fixed-$q=8$ cross-batch median was 58.02 minutes, a $378\times$ reduction in
+recorded construction time.  On the same seed, anchor, optimizer, and machine,
+ordinary continuation takes 0.298\,s for 26 updates and 3.718\,s for 300;
+certification is therefore still $30.9\times$ and $2.48\times$ slower,
+respectively.  These matched controls separate the practical gain from the
+different question of whether revealing the future is cheaper than proving it.
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\linewidth]{../figures/paper_composed_runtime.pdf}
+  \caption{Measured cost of the fully composed verifier on the sealed
+  seed-366, $H=26$ case.  (a) Median phase times over three separately launched
+  executions; all retain $[2,2]$.  (b) Same-machine direct-continuation
+  controls from the same seed, anchor, and optimizer.  The 58.02-minute
+  historical fixed-$q=8$ cross-batch median is excluded from the matched panel.}
+  \label{fig:composed-runtime}
+\end{figure}
+
 \section{Related Work}
 
 \paragraph{Forecasting and grokking.}
@@ -909,6 +942,9 @@ The complete certificates currently cover shallow tanh MLPs and a one-block,
 transports the required derivatives but does not close the event theorem;
 deep networks and stochastic optimization remain open.  At 1.01M parameters,
 the matrix-free core takes 11.37 hours before neural-jet construction.  The
+fully composed 13,792-parameter $H=26$ verifier now runs in 9.21\,s median,
+but matched direct continuation is still $30.9\times$ faster over the needed
+window, and this small-model result does not resolve modern-scale closure.  The
 events are defined on fixed evaluation sets and coverage is conditional on
 issuance, so these are not population guarantees.
 
@@ -929,7 +965,9 @@ can be verified, and abstains otherwise.  Across the frozen studies, 83/83
 issued brackets cover and both inaccurate finite clocks abstain.  The final
 implementation preserves all 15 audited Transformer brackets while cutting
 Green work $560\to64$; deterministic neural jets remove every output probe in
-eight of those cases.
+eight of those cases.  Their complete composition turns one sealed Transformer
+certificate from an hours-scale historical construction into a reproducible
+9.21-second proof object without changing its bracket.
 
 \ifdefined\arxivversion\else\clearpage\fi
 \bibliographystyle{plainnat}
@@ -2486,13 +2524,22 @@ effects.  At 1,008,864 parameters the batched 16-direction HVP and output-Gram
 blocks are $1.58\times$ and $1.79\times$ faster, with 1.39\,GiB process peak.
 
 For a direct wall-clock baseline, the historical frozen fixed-$q=8$ paper
-batch has 22 candidate constructions taking 19.44
-aggregate hours and a median of 58.02 minutes, whereas continuation of 300 actual
-updates estimated from all 24 training traces takes a median of 5.31 seconds
-($655.8\times$ less).  Thus the current verifier is not a wall-clock shortcut
-when future execution is this cheap.  Continuation computes the future outcome;
-\method{} constructs an outcome-independent proof object before that trajectory
-is opened.  On the small exact-real WDBC audit, where validated continuation is
+batch has 22 candidate constructions taking 19.44 aggregate hours and a median
+of 58.02 minutes, whereas continuation of 300 actual updates estimated from all
+24 training traces takes a median of 5.31 seconds ($655.8\times$ less).  Those
+numbers describe the original implementation, not the composed verifier.
+On the sealed seed-366 80\% case, three separately launched executions combine
+exact prefix streaming, one signed corrected-path sweep, deterministic neural
+jets, and a four-probe direct-image release.  All reproduce $[2,2]$ in
+9.01--11.71 seconds (median 9.21), with four forward Green applications, zero
+transpose applications, zero randomized output operators, and family failure
+upper $10^{-6}$.  Relative to the historical cross-batch median this is an
+$378\times$ reduction.  A same-machine three-repeat control measures direct
+continuation at 0.298 seconds for the required 26 updates and 3.718 seconds for
+300, leaving certification $30.9\times$ and $2.48\times$ slower.  Continuation
+computes the future outcome; \method{} constructs an outcome-independent proof object
+before that trajectory is opened.  On the small exact-real WDBC audit,
+where validated continuation is
 the matched proof baseline rather than an ordinary rollout, the direction
 reverses: 7.12 hours for direct continuation versus 33.88 minutes for the
 GreenCert records (Table~\ref{tab:wdbc-direct}).
@@ -2522,7 +2569,7 @@ $1.19$--$1.40\times$); including shared centerline time gives $1.11\times$.
 The independent panel audit has SHA-256 prefix
 \texttt{E35B1DD723371F86}.
 
-A monolithic replay composes online Green stopping with role-fused output
+A first monolithic replay composes online Green stopping with role-fused output
 transport on the sealed $H=26$ case.  It keys witnesses to the frozen
 centerline event, stops both operator families at $q=1$, uses no fallback, and
 retains $[2,2]$.  Pair work falls 22.37\% and the same-process output-operator
@@ -2531,6 +2578,16 @@ $1.018\times$ (95.79 seconds measured), because centerline construction and
 the Green solve dominate this short horizon.  This directly identifies the
 remaining systems bottleneck rather than extrapolating output-only speedups
 (record SHA-256 prefix \texttt{006CC711EDA43CC4}).
+
+The final composition removes those two bottlenecks rather than combining
+their isolated speedup factors.  Prefix streaming constructs only the required
+26 checkpoints; corrected-path direct-image release stops after four forward
+queries; and Corollary~\ref{cor:analytic-jet-release} replaces every randomized
+output query by the already required ball-valid jets.  Median phase times over
+the three fresh processes are 5.226\,s (centerline), 1.119\,s (signed correction),
+0.678\,s (jets), 2.007\,s (Green), and 0.082\,s (closure and event logic), with
+9.206\,s median end to end.  The independent audit record has SHA-256 prefix
+\texttt{664993E294AD6010}.
 
 Proposition~\ref{prop:inexact-probe} also yields an explicit numerical contract.
 On that same $q=1$ replay, simultaneous verified Gram residuals

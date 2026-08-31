@@ -4,3 +4,7 @@
 *.pdf binary
 *.png binary
 *.zip binary
+# These are immutable byte-for-byte source snapshots. Their historical hashes
+# include the original terminal blank line.
+scripts/structured_parameter_green_sealed_v1.py whitespace=-blank-at-eof
+scripts/test_structured_parameter_green_sealed_v1.py whitespace=-blank-at-eof

@@ -21,6 +21,23 @@
   "outcome_files_read": 0,
   "promotion_gate_passed": false,
   "sealed_dependency_hashes_verified": 23,
+  "sealed_dependency_snapshots_used": 2,
+  "source_supersession": {
+    "status": "structured-parameter source supersession verified",
+    "sealed_source_sha256": "0E9561B61F4E76E368A272B28398C04156447B6D3318662F946BDA3164514D86",
+    "current_source_sha256": "69BA0C19E6A8A34CDAF293F0DE0D58959EEF7B09BC5E53C17B0E3E17DCDABA47",
+    "sealed_test_sha256": "8D53A19E247FDFD4E67FF74B87A9E8194C6601ED8D799058F09F230CCF5F1EB8",
+    "current_test_sha256": "7EB51F57E4EEBA531FC041C8CC01AAC19C1E628F3A343E12FEB5A93E2604C3C9",
+    "stored_closure_attempts_compared": 48,
+    "stored_closure_results_bitwise_equal": true,
+    "large_finite_binary64_input": {
+      "response": 1e-50,
+      "gain": 1e+40,
+      "lipschitz": 1.0,
+      "sealed_float32_recheck_rejected": true,
+      "current_binary64_check_accepted": true
+    }
+  },
   "case_caches_verified": 15,
   "stored_direct_and_gram_bounds_recomputed": true,
   "stored_quadratic_closures_recomputed": true,
@@ -28,5 +45,5 @@
   "audit_source_has_no_outcome_reader_symbol": true,
   "protocol_sha256": "E56F503348895845B65E1504AEF413AE8AC341ACE4E3ADE3549F0559C905805D",
   "result_sha256": "80FBE9205FFEC32AFB639AA0A266CDE45510BD37580ADCF1F764E229F99FC297",
-  "verifier_sha256": "B561E0349FDA9EEAA50164173399B5ADFAF738CFFBCC70CA0A1962D83F1A662A"
+  "verifier_sha256": "CF7F89481A9C5B6E2230C8A1D2126CC9BF245FEB5C6BA26E208FB91024769948"
 }

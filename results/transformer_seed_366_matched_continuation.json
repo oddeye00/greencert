@@ -1,0 +1,94 @@
+{
+  "status": "matched direct-continuation benchmark complete",
+  "evidence_boundary": "Post-release deterministic timing control; no event outcome or certificate decision is used.",
+  "candidate": {
+    "seed": 366,
+    "threshold": 0.8,
+    "anchor": 1120
+  },
+  "replicates": 3,
+  "short_horizon": 26,
+  "full_horizon": 300,
+  "short_seconds": [
+    0.39225230005104095,
+    0.2977840999956243,
+    0.28619770001387224
+  ],
+  "full_seconds": [
+    3.8033089999808,
+    3.7180924999993294,
+    3.211905000032857
+  ],
+  "median_short_seconds": 0.2977840999956243,
+  "median_full_seconds": 3.7180924999993294,
+  "common_short_endpoint_sha256": "370B81D9DEB20DDC39D38B063A69357EE52C67E9B0C114DB17BF4D09F007DBBD",
+  "rows": [
+    {
+      "replicate": 1,
+      "order": [
+        26,
+        300
+      ],
+      "horizon": 26,
+      "elapsed_seconds": 0.39225230005104095,
+      "endpoint_sha256": "370B81D9DEB20DDC39D38B063A69357EE52C67E9B0C114DB17BF4D09F007DBBD",
+      "short_endpoint_sha256": "370B81D9DEB20DDC39D38B063A69357EE52C67E9B0C114DB17BF4D09F007DBBD"
+    },
+    {
+      "replicate": 1,
+      "order": [
+        26,
+        300
+      ],
+      "horizon": 300,
+      "elapsed_seconds": 3.8033089999808,
+      "endpoint_sha256": "9828075ACD1BA311A573F977D4587E518EF339D01AE0F79CA3C5A7A29F615A83",
+      "short_endpoint_sha256": "370B81D9DEB20DDC39D38B063A69357EE52C67E9B0C114DB17BF4D09F007DBBD"
+    },
+    {
+      "replicate": 2,
+      "order": [
+        300,
+        26
+      ],
+      "horizon": 300,
+      "elapsed_seconds": 3.7180924999993294,
+      "endpoint_sha256": "9828075ACD1BA311A573F977D4587E518EF339D01AE0F79CA3C5A7A29F615A83",
+      "short_endpoint_sha256": "370B81D9DEB20DDC39D38B063A69357EE52C67E9B0C114DB17BF4D09F007DBBD"
+    },
+    {
+      "replicate": 2,
+      "order": [
+        300,
+        26
+      ],
+      "horizon": 26,
+      "elapsed_seconds": 0.2977840999956243,
+      "endpoint_sha256": "370B81D9DEB20DDC39D38B063A69357EE52C67E9B0C114DB17BF4D09F007DBBD",
+      "short_endpoint_sha256": "370B81D9DEB20DDC39D38B063A69357EE52C67E9B0C114DB17BF4D09F007DBBD"
+    },
+    {
+      "replicate": 3,
+      "order": [
+        26,
+        300
+      ],
+      "horizon": 26,
+      "elapsed_seconds": 0.28619770001387224,
+      "endpoint_sha256": "370B81D9DEB20DDC39D38B063A69357EE52C67E9B0C114DB17BF4D09F007DBBD",
+      "short_endpoint_sha256": "370B81D9DEB20DDC39D38B063A69357EE52C67E9B0C114DB17BF4D09F007DBBD"
+    },
+    {
+      "replicate": 3,
+      "order": [
+        26,
+        300
+      ],
+      "horizon": 300,
+      "elapsed_seconds": 3.211905000032857,
+      "endpoint_sha256": "9828075ACD1BA311A573F977D4587E518EF339D01AE0F79CA3C5A7A29F615A83",
+      "short_endpoint_sha256": "370B81D9DEB20DDC39D38B063A69357EE52C67E9B0C114DB17BF4D09F007DBBD"
+    }
+  ],
+  "outcome_files_read": 0
+}

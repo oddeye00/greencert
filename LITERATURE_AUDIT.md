@@ -1,6 +1,6 @@
 # Primary-source novelty audit
 
-Last updated: 2026-08-30.
+Last updated: 2026-08-31.
 
 This record makes the paper's novelty search inspectable. It is not a proof
 that no related paper exists. It records the queries, primary sources, and
@@ -44,6 +44,10 @@ first-passage bracket or abstention.
 | Khanh et al. (2026), [arXiv record](https://arxiv.org/abs/2605.18845) | Calibrated grokking-delay forecast | Predictive timing law without a finite-window enclosure of the realized nonlinear trajectory |
 | Meterez et al. (2026), [arXiv record](https://arxiv.org/abs/2607.21716) | Empirical validity of local quadratic training models at LLM scale | Establishes predictive reach of a local model; does not convert it to a first-passage certificate |
 | Altıntaş et al. (ICML 2025), [primary record](https://proceedings.mlr.press/v267/altintas25a.html) | Sensitivity of neural-training trajectories to tiny perturbations | Motivates preserving the realized anchor; it does not provide a trajectory/event certificate |
+| Hadou et al. (CPAL 2026), [primary record](https://proceedings.mlr.press/v328/hadou26a.html) | Convergence and distribution-shift analysis for learned, fixed-depth stochastic unrolled optimizers | The optimizer itself is learned and analyzed for near-stationarity; it does not enclose a realized future training orbit or certify an event time |
+| Shi et al. (L4DC 2026), [primary record](https://proceedings.mlr.press/v331/shi26a.html) | Branch-and-bound certified training of Lyapunov-stable neural controllers | Certifies a controller's Lyapunov condition over an input region, not the optimizer trajectory that trains the network |
+| Kazanskii (2026), [arXiv record](https://arxiv.org/abs/2607.11666) | Representation-geometry intervention that changes grokking time | Empirical mechanism and control of delayed generalization, without a finite-window certificate for the realized crossing |
+| Manir and Rupa (2026), [arXiv record](https://arxiv.org/abs/2603.25009) | Controlled empirical comparison of grokking across depth, architecture, activation, and regularization | Characterizes when grokking occurs; it does not certify a future first passage from a checkpoint |
 
 ## Claim boundary used in the paper
 
@@ -103,3 +107,23 @@ that update-zero nonlinear forcing vanishes at the fixed anchor. A separately
 sealed 15-case audit preserved every bracket but did not reduce the 96-sweep
 structured baseline, so that refinement is reported as a negative systems
 result rather than a speedup.
+
+## 2026-08-31 freshness pass
+
+Immediately before the public preprint build, the search was repeated against
+arXiv, PMLR, and OpenReview with the following queries:
+
+- `neural network training trajectory certification shadowing optimizer orbit first passage`
+- `grokking certified verification training dynamics certificate`
+- `certified optimizer trajectory neural network training shadowing`
+- `radii polynomial neural training trajectory Green operator certification`
+
+The four 2026 records added above were opened at their primary PMLR or arXiv
+pages and compared by delivered guarantee rather than keyword overlap. Hadou et
+al. analyze a learned unrolled optimizer; Shi et al. certify Lyapunov stability
+of the trained controller; Kazanskii intervenes on representation geometry;
+and Manir and Rupa perform a controlled empirical grokking study. None encloses
+the unique optimizer orbit continuing from a realized checkpoint and transports
+that enclosure to a persistent first-passage bracket. The refresh therefore
+does not change the paper's claim boundary, but it expands the inspectable set
+of negative comparisons.

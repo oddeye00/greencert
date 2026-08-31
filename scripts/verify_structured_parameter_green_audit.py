@@ -20,7 +20,11 @@ import statistics
 
 from direct_image_green_bound import direct_image_rows
 from prefix_gram_enclosure import equal_family_stage_delta, prefix_gram_rows
-from structured_parameter_green import structured_quadratic_root
+from structured_parameter_green_sealed_v1 import structured_quadratic_root
+from structured_parameter_green_source_bridge import (
+    verify_dependency,
+    verify_source_bridge,
+)
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -224,10 +228,12 @@ def check_row(row: dict, manifest: dict[tuple[int, float, int], tuple]) -> None:
 def main() -> None:
     nonce, protocol_case_hash, dependencies = parse_protocol()
     require(len(nonce) == 64, "nonce length changed")
+    superseded_dependencies = 0
     for name, expected in dependencies.items():
-        path = ROOT / Path(name)
-        require(path.is_file(), f"sealed dependency missing: {name}")
+        path, superseded = verify_dependency(name, expected)
         require(sha256(path) == expected, f"sealed dependency hash mismatch: {name}")
+        superseded_dependencies += int(superseded)
+    source_bridge = verify_source_bridge()
 
     rows_literal = case_set()
     computed_case_hash = case_set_sha256(rows_literal)
@@ -282,6 +288,8 @@ def main() -> None:
             and structured_total < full_total
         ),
         "sealed_dependency_hashes_verified": len(dependencies),
+        "sealed_dependency_snapshots_used": superseded_dependencies,
+        "source_supersession": source_bridge,
         "case_caches_verified": len(cache_files),
         "stored_direct_and_gram_bounds_recomputed": True,
         "stored_quadratic_closures_recomputed": True,

@@ -1,0 +1,65 @@
+{
+  "status": "streamed direct-image analytic-jet certificate benchmark complete",
+  "evidence_boundary": "Post-release outcome-blind composition of previously audited exact streaming, direct-image Green, and deterministic analytic-jet routes.",
+  "candidate": {
+    "seed": 366,
+    "threshold": 0.8,
+    "anchor": 1120
+  },
+  "run_label": "replicate-2",
+  "horizon": 26,
+  "certified_bracket": [
+    2,
+    2
+  ],
+  "same_bracket": true,
+  "logic_slack": 0.0018713446291084832,
+  "state_radius_about_original_reference": 1.6477436350755263e-15,
+  "green_operator_norm_upper_bound": 760507.2855106383,
+  "green_forward_probes": 4,
+  "green_transpose_probes": 0,
+  "randomized_output_operators": 0,
+  "analytic_release": {
+    "maximum_optimizer_jacobian_drift": 1509134765740.1948,
+    "maximum_output_first_derivative": 37315.996316468496,
+    "closure": {
+      "kappa": 760507.2855106383,
+      "derivative_drift": 1509134765740.1948,
+      "corrected_defect_response_bound": 7.547966513273127e-20,
+      "correction_max_state_norm": 1.647664567893738e-15,
+      "domain_radius": 9.914855480394167e-15,
+      "discriminant": 0.8267427713704584,
+      "remainder_radius": 7.906718178824575e-20,
+      "total_radius_about_original_reference": 1.6477436350755263e-15,
+      "algebraic_closure_passed": true,
+      "domain_passed": true,
+      "closure_passed": true,
+      "closure_residual": 0.0
+    },
+    "state_radius_about_original_reference": 1.6477436350755263e-15,
+    "maximum_margin_radius": 8.695602567095355e-11
+  },
+  "timings_seconds": {
+    "streaming_centerline": 5.226122799969744,
+    "signed_correction_and_corrected_path": 1.0258744999882765,
+    "analytic_neural_jets": 1.2266552000073716,
+    "direct_image_green": 4.120821700023953,
+    "analytic_closure_and_event": 0.0818862000014633,
+    "end_to_end": 11.711407999973744
+  },
+  "matched_continuation": {
+    "source": "results/transformer_seed_366_matched_continuation.json",
+    "source_sha256": "A3451DC40C89E7FEE92BA327324A59D13682124599BDBC3C227E10888DCEF9A0",
+    "median_26_step_seconds": 0.2977840999956243,
+    "median_300_step_seconds": 3.7180924999993294,
+    "certificate_to_26_step_ratio": 39.328520227056565,
+    "certificate_to_300_step_ratio": 3.149843098302653
+  },
+  "identity_record_sha256": "A70B87CFBC189E28E972E132DC2E1F1D14ABEA8D4FD8210921DA0C262956E0E7",
+  "certificate_sha256": "9F773A441C44988A876BB4A707BA7F2C5B98C407A12F474C6D314F10862D639C",
+  "direct_panel_sha256": "931CBF5750510C49DEB92F16F77E8CCA355C7969A18BCF4EFA1A0701335ED705",
+  "corrected_prefix_panel_sha256": "08E501B51FEAC3D96FFE02BE0B5D84E0E682C2E73CB906C083ED0FEF7E75E12B",
+  "script_sha256": "869878DA83DFF185911B2F08ABBBFCF16F25C377EB7EDF9D45D5913B29FC9209",
+  "combined_family_failure_upper": 1e-06,
+  "outcome_files_read": 0
+}

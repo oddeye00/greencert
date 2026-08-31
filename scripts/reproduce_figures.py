@@ -17,6 +17,7 @@ GENERATORS = (
     "scripts/make_transformer_v3_anytime_figure.py",
     "scripts/paper_figure_new_evidence.py",
     "scripts/paper_figure_prefix_scaling.py",
+    "scripts/paper_figure_composed_runtime.py",
     "scripts/paper_figure_transformer_green_confirmation.py",
     "scripts/paper_figures_prospective.py",
 )
@@ -25,6 +26,7 @@ STEMS = (
     "paper_real_data_confirmation",
     "paper_mechanism_scaling",
     "paper_relinearized_prefix_panel",
+    "paper_composed_runtime",
     "paper_transformer_green_confirmation",
     "paper_prospective_horizons",
     "paper_prospective_brackets",
@@ -85,10 +87,13 @@ def main() -> None:
         "outputs": first,
     }
     output = ROOT / "results" / "figure_reproducibility_audit.json"
-    output.write_text(json.dumps(result, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    output.write_text(
+        json.dumps(result, indent=2, sort_keys=True) + "\n",
+        encoding="utf-8",
+        newline="\n",
+    )
     print(json.dumps(result, indent=2, sort_keys=True))
 
 
 if __name__ == "__main__":
     main()
-

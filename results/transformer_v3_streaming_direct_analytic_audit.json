@@ -1,0 +1,52 @@
+{
+  "status": "independent streamed direct-image analytic-jet audit passed",
+  "candidate": {
+    "seed": 366,
+    "threshold": 0.8,
+    "anchor": 1120
+  },
+  "replicates": 3,
+  "all_same_bracket": true,
+  "certified_bracket": [
+    2,
+    2
+  ],
+  "median_end_to_end_seconds": 9.205996099975891,
+  "minimum_end_to_end_seconds": 9.007354300003499,
+  "maximum_end_to_end_seconds": 11.711407999973744,
+  "matched_26_step_continuation_seconds": 0.2977840999956243,
+  "matched_300_step_continuation_seconds": 3.7180924999993294,
+  "median_certificate_to_26_step_ratio": 30.915002178125587,
+  "median_certificate_to_300_step_ratio": 2.4759997498657045,
+  "historical_fixed_q8_cross_batch_median_seconds": 3481.04985380001,
+  "historical_to_optimized_cross_batch_ratio": 378.12853883450225,
+  "green_forward_probes": 4,
+  "green_transpose_probes": 0,
+  "randomized_output_operators": 0,
+  "combined_family_failure_upper": 1e-06,
+  "identity_record_sha256": "A70B87CFBC189E28E972E132DC2E1F1D14ABEA8D4FD8210921DA0C262956E0E7",
+  "continuation_record_sha256": "A3451DC40C89E7FEE92BA327324A59D13682124599BDBC3C227E10888DCEF9A0",
+  "certificate_sha256": "9F773A441C44988A876BB4A707BA7F2C5B98C407A12F474C6D314F10862D639C",
+  "direct_panel_sha256": "931CBF5750510C49DEB92F16F77E8CCA355C7969A18BCF4EFA1A0701335ED705",
+  "corrected_prefix_panel_sha256": "08E501B51FEAC3D96FFE02BE0B5D84E0E682C2E73CB906C083ED0FEF7E75E12B",
+  "benchmark_script_sha256": "869878DA83DFF185911B2F08ABBBFCF16F25C377EB7EDF9D45D5913B29FC9209",
+  "audit_script_sha256": "4F0827187FDE14378F81E239F3D4A88FD7C5E10688F103C206D1182FF2713C17",
+  "replicate_rows": [
+    {
+      "source": "results/transformer_v3_streaming_direct_analytic_seed_366_gate_1_anchor_1120_replicate-1.json",
+      "source_sha256": "AB526D973D9B4074DC9CD706416EE77327670BA8D2CACAFCE1899FCB106A65B8",
+      "end_to_end_seconds": 9.007354300003499
+    },
+    {
+      "source": "results/transformer_v3_streaming_direct_analytic_seed_366_gate_1_anchor_1120_replicate-2.json",
+      "source_sha256": "7EEB668BD177D4FBDA32A93C5217627D2697E2BCC5EB68AFD3BD2E523EA6B847",
+      "end_to_end_seconds": 11.711407999973744
+    },
+    {
+      "source": "results/transformer_v3_streaming_direct_analytic_seed_366_gate_1_anchor_1120_replicate-3.json",
+      "source_sha256": "59D4C6744B7EE0A64C469C17B6496834113E6E3CE0AE2C9AE68189D28456FC55",
+      "end_to_end_seconds": 9.205996099975891
+    }
+  ],
+  "outcome_files_read": 0
+}

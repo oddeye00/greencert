@@ -23,6 +23,16 @@ bracket while reducing staged logical Green sweeps from 112 to 96. A stricter
 anchor-zero refinement again preserves all 15 brackets but remains at 96
 sweeps, an independently reproduced negative promotion result.
 
+The practical path is now composed rather than reported as isolated speedups.
+On the sealed seed-366, $H=26$ Transformer case, three separately launched
+executions reproduce the same `[2,2]` bracket in 9.01--11.71 seconds (median
+9.21). The verifier uses four forward Green probes, no transpose probe, and no
+randomized output-Jacobian operator. A matched control takes 0.298 seconds for
+26 ordinary updates and 3.718 seconds for 300, so the proof object remains
+30.9x and 2.48x slower, respectively. The historical fixed-q8 cross-batch
+median was 58.02 minutes; that implementation is no longer the practical
+baseline.
+
 ## Start here
 
 - The current preprint is [`paper/greencert_arxiv.pdf`](paper/greencert_arxiv.pdf).
@@ -54,6 +64,7 @@ python -m pip install -r requirements.txt
 python scripts/check_reproduction_environment.py
 python reproduce.py smoke
 python scripts/reproduce_figures.py --check-determinism
+python scripts/audit_transformer_v3_streaming_direct_analytic.py
 ```
 
 Windows activation:
@@ -83,7 +94,8 @@ The repository separates four tasks that are often conflated:
    records without retraining. This is the fastest and most portable audit.
 2. **Validated replay** reruns the independent 192-bit WDBC/digits checks.
 3. **Figure and manuscript build** regenerates all Matplotlib figures and the
-   arXiv PDF from tracked inputs.
+   arXiv PDF from tracked inputs; a clean source-bundle extraction must rebuild
+   the PDF byte for byte under the fixed source date.
 4. **Training regeneration** recreates checkpoints and candidate records. It
    is substantially more expensive and cannot retroactively recreate the
    prospective status of an already completed experiment.

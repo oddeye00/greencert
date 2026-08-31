@@ -13,9 +13,9 @@ each figure twice and requires matching SHA-256 hashes.
 | Signed mechanism and scaling | `scripts/paper_figure_new_evidence.py` | unsigned audit, sweep ablation, batched-scaling records |
 | Prospective fixed-radius Transformer | `scripts/paper_figure_transformer_green_confirmation.py` | sealed Transformer aggregate and certificate records |
 | Corrected-prefix and streaming costs | `scripts/paper_figure_prefix_scaling.py` | corrected-prefix, direct-image, and streaming audits |
+| Composed verifier runtime | `scripts/paper_figure_composed_runtime.py` | three optimized certificate replays, independent audit, and matched continuation control |
 | Prospective v1/v2 horizons | `scripts/paper_figures_prospective.py` | `results/prospective_v2_primary.json`; interval audit |
 
 The PDFs use embedded TrueType text (`pdf.fonttype=42`) and fixed creation
 metadata. Shape and line style accompany color wherever a category distinction
 is essential.
-

@@ -83,6 +83,31 @@ replay is available after regenerating the large Transformer checkpoints.
 Replaying either calculation verifies the committed computation; it does not
 alter or reissue a historical seal.
 
+The optimized end-to-end Transformer timing record has a separate, fast
+arithmetic/provenance audit:
+
+```bash
+python scripts/audit_transformer_v3_streaming_direct_analytic.py
+```
+
+It checks three separately launched records, the bitwise full-path-to-prefix
+identity bridge, the corrected-path/direct-image source panels, deterministic
+analytic-jet closure, event logic, result hashes, and matched continuation
+ratios. It reads no revealed outcome. Reproducing the measured execution itself
+requires the regenerated seed-366 checkpoint and then runs:
+
+```bash
+python scripts/seal_transformer_streaming_prefix_identity.py
+python scripts/benchmark_transformer_matched_continuation.py
+python scripts/benchmark_transformer_v3_streaming_direct_analytic.py \
+  --run-label local-replication
+```
+
+The committed reference median is 9.206 seconds for the certificate, versus
+0.298 seconds for 26 matched direct updates and 3.718 seconds for 300. Timing
+comparisons are platform-specific; bracket and hash checks are the scientific
+invariants.
+
 ## Tier 4: validated WDBC/digits replay
 
 Expected time: several CPU-hours.
@@ -106,8 +131,17 @@ python scripts/audit_greencert_manuscript_claims.py
 python scripts/build_arxiv_release.py
 ```
 
-The build fails on undefined references, overfull boxes, incorrect author
-metadata, an unexpected page count, or a missing vector figure.
+The builder fixes `SOURCE_DATE_EPOCH`, then recompiles a clean extraction of
+the generated source bundle and requires the second PDF to be byte-identical to
+the release PDF. It also fails on undefined references, overfull boxes,
+incorrect author metadata, an unexpected page count, or a missing vector
+figure.
+
+The structured-parameter audits also retain the exact two protocol-sealed
+source files. `scripts/structured_parameter_green_source_bridge.py` checks
+their hashes, replays all 48 stored closures through both sealed and maintained
+implementations, and verifies the documented post-seal binary64-only bug fix;
+see `STRUCTURED_PARAMETER_GREEN_SOURCE_SUPERSESSION.md`.
 
 ## Full training regeneration
 

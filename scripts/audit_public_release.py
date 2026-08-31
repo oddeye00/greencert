@@ -20,6 +20,7 @@ REQUIRED = {
     "REPRODUCIBILITY.md",
     "DATA.md",
     "FIGURES.md",
+    "GREENCERT_ADVERSARIAL_AUDIT.md",
     "LICENSE",
     "LICENSE-PAPER",
     "LITERATURE_AUDIT.md",
@@ -29,11 +30,17 @@ REQUIRED = {
     "PUBLIC_MANIFEST_SHA256.json",
     "paper/greencert_arxiv.pdf",
     "paper/greencert_arxiv_release.json",
+    "paper/greencert_arxiv_source.zip",
+    "paper/greencert_supplement.zip",
     "STRUCTURED_PARAMETER_GREEN_THEOREM_V2.md",
+    "STRUCTURED_PARAMETER_GREEN_SOURCE_SUPERSESSION.md",
     "STRUCTURED_PARAMETER_GREEN_AUDIT_PROTOCOL_V2.md",
     "ANCHOR_FIXED_STRUCTURED_PARAMETER_GREEN_AUDIT_PROTOCOL.md",
     "scripts/test_structured_parameter_green.py",
     "scripts/test_structured_parameter_green_v2.py",
+    "scripts/structured_parameter_green_sealed_v1.py",
+    "scripts/test_structured_parameter_green_sealed_v1.py",
+    "scripts/structured_parameter_green_source_bridge.py",
     "scripts/verify_structured_parameter_green_audit.py",
     "scripts/verify_anchor_fixed_structured_parameter_green_audit.py",
     "results/structured_parameter_green_transformer_audit.json",
@@ -41,13 +48,23 @@ REQUIRED = {
     "results/anchor_fixed_structured_parameter_green_transformer_audit.json",
     "results/anchor_fixed_structured_parameter_green_independent_audit.json",
     "scripts/reproduce_figures.py",
+    "scripts/audit_transformer_v3_streaming_direct_analytic.py",
+    "scripts/benchmark_transformer_v3_streaming_direct_analytic.py",
+    "scripts/paper_figure_composed_runtime.py",
     "scripts/paper_plot_style.py",
     "scripts/update_public_manifest.py",
+    "results/transformer_seed_366_matched_continuation.json",
+    "results/transformer_seed_366_streaming_prefix_identity.json",
+    "results/transformer_v3_streaming_direct_analytic_audit.json",
+    "results/transformer_v3_streaming_direct_analytic_seed_366_gate_1_anchor_1120_replicate-1.json",
+    "results/transformer_v3_streaming_direct_analytic_seed_366_gate_1_anchor_1120_replicate-2.json",
+    "results/transformer_v3_streaming_direct_analytic_seed_366_gate_1_anchor_1120_replicate-3.json",
 }
 FIGURES = (
     "paper_transformer_v3_anytime",
     "paper_real_data_confirmation",
     "paper_mechanism_scaling",
+    "paper_composed_runtime",
     "paper_relinearized_prefix_panel",
     "paper_transformer_green_confirmation",
     "paper_prospective_horizons",
@@ -140,14 +157,14 @@ def main() -> None:
     paper_pdf = root / "paper" / "greencert_arxiv.pdf"
     paper_reader = PdfReader(paper_pdf)
     paper_metadata = paper_reader.metadata or {}
-    if len(paper_reader.pages) != 39:
+    if len(paper_reader.pages) != 40:
         raise AssertionError(f"unexpected public preprint length: {len(paper_reader.pages)}")
     if str(paper_metadata.get("/Author", "")) != "Ian Rhee":
         raise AssertionError("public preprint author metadata changed")
     release = json.loads(
         (root / "paper" / "greencert_arxiv_release.json").read_text(encoding="utf-8")
     )
-    if int(release["pages"]) != 39 or release["pdf"]["sha256"] != digest(paper_pdf):
+    if int(release["pages"]) != 40 or release["pdf"]["sha256"] != digest(paper_pdf):
         raise AssertionError("public preprint and arXiv release manifest differ")
 
     expected_audits = {

@@ -119,6 +119,9 @@ def main() -> None:
     analytic_jet_independent = load(
         "results/transformer_analytic_jet_release_independent_audit.json"
     )
+    composed_runtime = load(
+        "results/transformer_v3_streaming_direct_analytic_audit.json"
+    )
     structured_path = ROOT / "results/structured_parameter_green_transformer_audit.json"
     structured = json.loads(structured_path.read_text(encoding="utf-8"))
     structured_independent = load(
@@ -447,6 +450,36 @@ def main() -> None:
         "independent analytic-jet result changed",
     )
     require(
+        composed_runtime["status"]
+        == "independent streamed direct-image analytic-jet audit passed",
+        "composed-runtime audit status changed",
+    )
+    require(
+        int(composed_runtime["replicates"]) == 3
+        and bool(composed_runtime["all_same_bracket"])
+        and composed_runtime["certified_bracket"] == [2, 2],
+        "composed-runtime replicate or bracket invariant changed",
+    )
+    require(
+        close(composed_runtime["median_end_to_end_seconds"], 9.205996099975891)
+        and close(composed_runtime["minimum_end_to_end_seconds"], 9.007354300003499)
+        and close(composed_runtime["maximum_end_to_end_seconds"], 11.711407999973744),
+        "composed-runtime timing distribution changed",
+    )
+    require(
+        close(composed_runtime["median_certificate_to_26_step_ratio"], 30.915002178125587)
+        and close(composed_runtime["median_certificate_to_300_step_ratio"], 2.4759997498657045)
+        and close(composed_runtime["historical_to_optimized_cross_batch_ratio"], 378.12853883450225),
+        "composed-runtime comparison ratio changed",
+    )
+    require(
+        int(composed_runtime["green_forward_probes"]) == 4
+        and int(composed_runtime["green_transpose_probes"]) == 0
+        and int(composed_runtime["randomized_output_operators"]) == 0
+        and int(composed_runtime["outcome_files_read"]) == 0,
+        "composed-runtime evidence boundary changed",
+    )
+    require(
         structured["status"] == "structured parameter Green Transformer audit complete",
         "structured-parameter Green status changed",
     )
@@ -628,6 +661,11 @@ def main() -> None:
         "$112\\to96$ ($1.167\\times$)",
         "fails its prespecified promotion gate",
         "selected randomized gain-bound ratio $0.994$",
+        "9.01--11.71 seconds (median 9.21)",
+        "four forward Green applications",
+        "$378\\times$ reduction",
+        "$30.9\\times$ and $2.48\\times$ slower",
+        "paper_composed_runtime.pdf",
     )
     for phrase in required_phrases:
         require(phrase in paper, f"manuscript lost required scoped phrase: {phrase}")
@@ -763,6 +801,24 @@ def main() -> None:
                 "promotion_gate_passed"
             ],
             "anchor_fixed_median_selected_gain_ratio": anchor_gain_ratios[7],
+            "composed_runtime_median_seconds": composed_runtime[
+                "median_end_to_end_seconds"
+            ],
+            "composed_runtime_range_seconds": [
+                composed_runtime["minimum_end_to_end_seconds"],
+                composed_runtime["maximum_end_to_end_seconds"],
+            ],
+            "composed_runtime_matched_continuation_seconds": [
+                composed_runtime["matched_26_step_continuation_seconds"],
+                composed_runtime["matched_300_step_continuation_seconds"],
+            ],
+            "composed_runtime_matched_ratios": [
+                composed_runtime["median_certificate_to_26_step_ratio"],
+                composed_runtime["median_certificate_to_300_step_ratio"],
+            ],
+            "composed_runtime_historical_cross_batch_ratio": composed_runtime[
+                "historical_to_optimized_cross_batch_ratio"
+            ],
         },
         "checked_required_phrases": list(required_phrases),
         "checked_forbidden_phrases": list(forbidden_phrases),
