@@ -1,0 +1,658 @@
+{
+  "status": "low-rank union-subspace causal-resolvent diagnostic complete",
+  "evidence_boundary": "Post-release outcome-blind development audit. Mismatch spectral bounds use progressive ideal-Gaussian Gram powers; neural HVPs, sketches, and margins remain float64.",
+  "candidate": {
+    "seed": 366,
+    "threshold": 0.8,
+    "anchor": 1120
+  },
+  "horizon": 26,
+  "parameter_count": 13792,
+  "configurations_predeclared": [
+    [
+      0,
+      26
+    ],
+    [
+      4,
+      26
+    ],
+    [
+      8,
+      26
+    ],
+    [
+      4,
+      7
+    ]
+  ],
+  "configurations_executed": [
+    [
+      0,
+      26
+    ],
+    [
+      4,
+      26
+    ],
+    [
+      8,
+      26
+    ],
+    [
+      4,
+      7
+    ]
+  ],
+  "family_failure_upper": 1e-06,
+  "source_sha256": "A7081569E0AB01D9D7510BCAC63DE86A1B22480D2FE54D6AD7CEB3594EA6B9DC",
+  "source_full_corrected_path_sha256": "B180CD4FD012E82961E64D64167D0BFB252C5306C1ADD6FFDA09B1E7E60C9520",
+  "effective_corrected_parameter_path_sha256": "1039320FF16C01F3AFC4AAFE9737EC5D75B7B3D1B6BAC701FACE68C2CD49F6A4",
+  "corrected_path_bridge": {
+    "status": "recomputed-to-sealed corrected-parameter bridge passed",
+    "maximum_absolute_tolerance": 1e-12,
+    "l2_tolerance": 1e-10,
+    "recomputed_unscaled_corrected_state_sha256": "BD3787BC368E85B17C8419F7CEFE6D79DD912210093967AF81A3DF8D3CDD067D",
+    "source_full_corrected_path_sha256": "B180CD4FD012E82961E64D64167D0BFB252C5306C1ADD6FFDA09B1E7E60C9520",
+    "corrected_parameter_maximum_absolute_difference": 3.3306690738754696e-16,
+    "correction_parameter_maximum_absolute_difference": 4.8076234296996765e-16,
+    "corrected_parameter_l2_difference": 5.721003734807177e-15,
+    "correction_parameter_l2_difference": 6.4256280880502275e-15,
+    "effective_corrected_parameter_tensor_sha256": "1039320FF16C01F3AFC4AAFE9737EC5D75B7B3D1B6BAC701FACE68C2CD49F6A4",
+    "effective_correction_parameter_tensor_sha256": "59455FE801DA244246FDF67A9B66166F921026B9A08B01F47FC1CA392C3A7C3B",
+    "outcome_files_read": 0
+  },
+  "segmented_source": "results/transformer_segmented_resolvent_diagnostic.json",
+  "segmented_source_sha256": "D9C8518F77C5124540F41046B82F58C7F311070A5689F836F32E116B76D73F4B",
+  "common_corrected_path_rebuild_seconds": 4.6000161999999705,
+  "outcome_files_read": 0,
+  "rows": [
+    {
+      "rank": 0,
+      "block_size": 26,
+      "segments": 1,
+      "anchors": [
+        0
+      ],
+      "sketch_seed": 3028282831238585941,
+      "residual_seed": 8714755477096000513,
+      "probes_per_residual": 4,
+      "mismatch_operator_stage_delta": 2.5e-07,
+      "sketches": [
+        {
+          "rank": 0,
+          "anchor": 0,
+          "eigenvalues": [],
+          "hessian_norm_bound": 0.0,
+          "identity_step_norm_bound": 1.0,
+          "probe_sha256": null,
+          "basis_sha256": null,
+          "core_sha256": null,
+          "batched_hvp_calls": 0,
+          "logical_vector_hvp_calls": 0
+        }
+      ],
+      "mismatch_probe_sha256": [
+        "F50CBFF579D44C2F9CDF3DCEFB6B043FD169529E12228E9339E5EC96B319EBD2",
+        "A67FA11982EA1F6C7DFDB5DFA39F91A4C85F4805989AAAC6882F85D35B29B270",
+        "5F0D12E6EADD1BB2AACA803ED545A96D90EF869FC4F3D54B9308D1254A11B429",
+        "E40A3EE84F0D4AA2D636602AA7657991B41F96BB770CD08DE631127C77DE9477"
+      ],
+      "initial_probe_norms": [
+        599.896390269567,
+        597.8618681747272,
+        598.8230662786904,
+        598.7128813516698
+      ],
+      "mismatch_image_norms": [
+        155.63954670828997,
+        88.33736178672522,
+        175.12551117145088,
+        186.39210950492324
+      ],
+      "mismatch_gram_rows": [
+        {
+          "probes": 4,
+          "power": 1,
+          "Y": 8510.744632404627,
+          "c_delta": 0.02802862554892483,
+          "delta": 2.5e-07,
+          "operator_norm_upper_bound": 551.0396872902672,
+          "operator_norm_lower_estimate": 3.7699407041092554,
+          "gram_applications": 4
+        },
+        {
+          "probes": 4,
+          "power": 2,
+          "Y": 27654949.358304784,
+          "c_delta": 0.02802862554892483,
+          "delta": 2.5e-07,
+          "operator_norm_upper_bound": 177.23225632748677,
+          "operator_norm_lower_estimate": 14.659480721714019,
+          "gram_applications": 8
+        },
+        {
+          "probes": 4,
+          "power": 4,
+          "Y": 358306454027800.4,
+          "c_delta": 0.02802862554892483,
+          "delta": 2.5e-07,
+          "operator_norm_upper_bound": 103.11731677458158,
+          "operator_norm_lower_estimate": 29.656473956944268,
+          "gram_applications": 16
+        },
+        {
+          "probes": 4,
+          "power": 8,
+          "Y": 7.480254647619138e+28,
+          "c_delta": 0.02802862554892483,
+          "delta": 2.5e-07,
+          "operator_norm_upper_bound": 79.73420369974647,
+          "operator_norm_lower_estimate": 42.760090565473824,
+          "gram_applications": 32
+        }
+      ],
+      "mismatch_gram_powers": [
+        1,
+        2,
+        4,
+        8
+      ],
+      "mismatch_adjoint_relative_residual": 8.33640613963487e-16,
+      "mismatch_route": "gram_q8",
+      "mismatch_direct_gain_upper": 6650.062422060977,
+      "minimum_mismatch_gram_gain_upper": 79.73420369974647,
+      "mismatch_gain_upper": 79.73420369974647,
+      "mismatch_gain_lower_estimate": 42.760090565473824,
+      "finite_resolvent_multiplier_upper": 3.5204465481630078e+47,
+      "approximate_green_block_norm_maximum": 0.09353891821970849,
+      "approximate_structured_gain_upper": 1.0893509792635232,
+      "union_reduction": {
+        "union_dimension": 0,
+        "maximum_basis_projection_residual": 0.0,
+        "raw_approximate_structured_gain": 1.0893509791545881,
+        "numerical_gain_inflation": 1.0893509791545882e-10
+      },
+      "structured_gain_upper": 3.8350018946862626e+47,
+      "released_structured_gain_upper": 8644.556824485424,
+      "gain_ratio_to_released": 4.4363198398138184e+43,
+      "global_parameter_remainder_radius": null,
+      "domain_passed": false,
+      "bracket": null,
+      "output_power": null,
+      "logic_slack": null,
+      "maximum_margin_radius": null,
+      "issued": false,
+      "sketch_batched_hvp_calls": 0,
+      "sketch_logical_vector_hvp_calls": 0,
+      "mismatch_batched_hvp_calls": 400,
+      "mismatch_logical_vector_hvp_calls": 1600,
+      "ideal_time_batched_mismatch_hvp_depth": 16,
+      "operator_batched_hvp_calls": 400,
+      "operator_logical_vector_hvp_calls": 1600,
+      "released_direct_logical_vector_hvp_calls": 104,
+      "outcome_files_read": 0,
+      "elapsed_seconds": 13.81345859999999
+    },
+    {
+      "rank": 4,
+      "block_size": 26,
+      "segments": 1,
+      "anchors": [
+        0
+      ],
+      "sketch_seed": 8933317762111896251,
+      "residual_seed": 7049985356773286317,
+      "probes_per_residual": 4,
+      "mismatch_operator_stage_delta": 2.5e-07,
+      "sketches": [
+        {
+          "rank": 4,
+          "anchor": 0,
+          "eigenvalues": [
+            22.748416972152818,
+            30.883085930740926,
+            48.814582418120466,
+            53.14604328439232
+          ],
+          "hessian_norm_bound": 53.146043289706924,
+          "identity_step_norm_bound": 1.0000000000531462,
+          "numerical_spectral_inflation": 5.3146043284392325e-09,
+          "probe_sha256": "37ACC473E6DEAE6CD1027489C1FEC87F8EBE131DAAD222A796637B1DCD511FF3",
+          "basis_sha256": "D951408D10415764A94A0BC0B8F20E96198192E13F967A421AC9B63D6FED13EB",
+          "core_sha256": "EC5B908F4B5E91C886A1EDD5CDF5426FAE6252D4D390DD9B37B74BEF2CB79CAD",
+          "batched_hvp_calls": 2,
+          "logical_vector_hvp_calls": 8
+        }
+      ],
+      "mismatch_probe_sha256": [
+        "8D35D5833E12111372F92A9BD53DAA52B38FDAED2BD464BB43B77314CD206DC5",
+        "704DEA2010591DB7A8E1207D15F201FD7BA5122A0CB37FADB3947F76F52AA9DD",
+        "8D2B7EBD0C16277A03E17949EE1144549630F39C3C7CFE744D9BF5EFA221D802",
+        "1BEDEFACC78C47584067C14CF36AC21E2E41E5271A85F34E675CC2A3EE38BB1E"
+      ],
+      "initial_probe_norms": [
+        599.0616304808703,
+        600.7903658240376,
+        598.6775946713796,
+        597.8748383047007
+      ],
+      "mismatch_image_norms": [
+        89.06856675661,
+        98.01450232244619,
+        91.47073512718445,
+        100.52357680311637
+      ],
+      "mismatch_gram_rows": [
+        {
+          "probes": 4,
+          "power": 1,
+          "Y": 2919.028346536341,
+          "c_delta": 0.02802862554892483,
+          "delta": 2.5e-07,
+          "operator_norm_upper_bound": 322.7143336428147,
+          "operator_norm_lower_estimate": 2.209601815136757,
+          "gram_applications": 4
+        },
+        {
+          "probes": 4,
+          "power": 2,
+          "Y": 5541572.002017943,
+          "c_delta": 0.02802862554892483,
+          "delta": 2.5e-07,
+          "operator_norm_upper_bound": 118.57900304999296,
+          "operator_norm_lower_estimate": 9.800032256511166,
+          "gram_applications": 8
+        },
+        {
+          "probes": 4,
+          "power": 4,
+          "Y": 30542318021188.438,
+          "c_delta": 0.02802862554892483,
+          "delta": 2.5e-07,
+          "operator_norm_upper_bound": 75.79883385262245,
+          "operator_norm_lower_estimate": 21.79076009638525,
+          "gram_applications": 16
+        },
+        {
+          "probes": 4,
+          "power": 8,
+          "Y": 1.0818003503768984e+27,
+          "c_delta": 0.02802862554892483,
+          "delta": 2.5e-07,
+          "operator_norm_upper_bound": 61.18698901206854,
+          "operator_norm_lower_estimate": 32.806810487553534,
+          "gram_applications": 32
+        }
+      ],
+      "mismatch_gram_powers": [
+        1,
+        2,
+        4,
+        8
+      ],
+      "mismatch_adjoint_relative_residual": 1.8066977968722304e-15,
+      "mismatch_route": "gram_q8",
+      "mismatch_direct_gain_upper": 3586.4611565647187,
+      "minimum_mismatch_gram_gain_upper": 61.18698901206854,
+      "mismatch_gain_upper": 61.18698901206854,
+      "mismatch_gain_lower_estimate": 32.806810487553534,
+      "finite_resolvent_multiplier_upper": 4.716648598003217e+44,
+      "approximate_green_block_norm_maximum": 0.09353891821970849,
+      "approximate_structured_gain_upper": 1.0893509792635232,
+      "union_reduction": {
+        "union_dimension": 4,
+        "maximum_basis_projection_residual": 2.1399900695905795e-15,
+        "raw_approximate_structured_gain": 1.0893509791545881,
+        "numerical_gain_inflation": 1.0893509791545882e-10
+      },
+      "structured_gain_upper": 5.138085769076728e+44,
+      "released_structured_gain_upper": 8644.556824485424,
+      "gain_ratio_to_released": 5.9437237482473e+40,
+      "global_parameter_remainder_radius": null,
+      "domain_passed": false,
+      "bracket": null,
+      "output_power": null,
+      "logic_slack": null,
+      "maximum_margin_radius": null,
+      "issued": false,
+      "sketch_batched_hvp_calls": 2,
+      "sketch_logical_vector_hvp_calls": 8,
+      "mismatch_batched_hvp_calls": 400,
+      "mismatch_logical_vector_hvp_calls": 1600,
+      "ideal_time_batched_mismatch_hvp_depth": 16,
+      "operator_batched_hvp_calls": 402,
+      "operator_logical_vector_hvp_calls": 1608,
+      "released_direct_logical_vector_hvp_calls": 104,
+      "outcome_files_read": 0,
+      "elapsed_seconds": 14.0802726
+    },
+    {
+      "rank": 8,
+      "block_size": 26,
+      "segments": 1,
+      "anchors": [
+        0
+      ],
+      "sketch_seed": 6717025221795703948,
+      "residual_seed": 7407335101704083502,
+      "probes_per_residual": 4,
+      "mismatch_operator_stage_delta": 2.5e-07,
+      "sketches": [
+        {
+          "rank": 8,
+          "anchor": 0,
+          "eigenvalues": [
+            17.36501500743102,
+            22.453349795764023,
+            25.142479114887028,
+            27.874362034969245,
+            31.957175342285048,
+            36.123228875990854,
+            47.094768823169744,
+            56.052733394112764
+          ],
+          "hessian_norm_bound": 56.052733399718036,
+          "identity_step_norm_bound": 1.0000000000560527,
+          "numerical_spectral_inflation": 5.6052733394112765e-09,
+          "probe_sha256": "67A04A7A748E7EBFFFDEA486247B960B4734DEFC20EB05579526D4FCD0FE80E5",
+          "basis_sha256": "01D8A6AD09B3B5160906103AA7B4149B5291BF1E6932D5C141B9912104A5C69A",
+          "core_sha256": "D95B357CC95F7E349864DB9CD9DB0944FA8F305A722FD7F298CBEE2921430C4F",
+          "batched_hvp_calls": 2,
+          "logical_vector_hvp_calls": 16
+        }
+      ],
+      "mismatch_probe_sha256": [
+        "F541B15433DB836407F3B3F6A7977D73DB5988DCF63DA656DE74F8B53496E3D6",
+        "03A6542E9E9AD6635422CBCD57940D07C2FFD4A6B582ECEAD66A9E588CD52A82",
+        "F8939E98D3CEE5647AE51F03648B37629F503DA7B74F62A0DE00465B7099886E",
+        "C51FEEB2CC3152D958A3A3C02ED52A596698736E9B3C95678A1E669FD7C00B91"
+      ],
+      "initial_probe_norms": [
+        598.498088597278,
+        599.2779344546593,
+        598.6570727643757,
+        597.9017861322519
+      ],
+      "mismatch_image_norms": [
+        128.6834983315482,
+        70.95805236325337,
+        51.829242233474616,
+        96.30707320987966
+      ],
+      "mismatch_gram_rows": [
+        {
+          "probes": 4,
+          "power": 1,
+          "Y": 2911.846262632292,
+          "c_delta": 0.02802862554892483,
+          "delta": 2.5e-07,
+          "operator_norm_upper_bound": 322.3170800743779,
+          "operator_norm_lower_estimate": 2.2057324730912846,
+          "gram_applications": 4
+        },
+        {
+          "probes": 4,
+          "power": 2,
+          "Y": 3139482.4750676453,
+          "c_delta": 0.02802862554892483,
+          "delta": 2.5e-07,
+          "operator_norm_upper_bound": 102.87599895872317,
+          "operator_norm_lower_estimate": 8.512498591852793,
+          "gram_applications": 8
+        },
+        {
+          "probes": 4,
+          "power": 4,
+          "Y": 5781459009330.789,
+          "c_delta": 0.02802862554892483,
+          "delta": 2.5e-07,
+          "operator_norm_upper_bound": 61.56082851669995,
+          "operator_norm_lower_estimate": 17.708262452953612,
+          "gram_applications": 16
+        },
+        {
+          "probes": 4,
+          "power": 8,
+          "Y": 2.0321588177526193e+25,
+          "c_delta": 0.02802862554892483,
+          "delta": 2.5e-07,
+          "operator_norm_upper_bound": 47.72789057028076,
+          "operator_norm_lower_estimate": 25.59811508197637,
+          "gram_applications": 32
+        }
+      ],
+      "mismatch_gram_powers": [
+        1,
+        2,
+        4,
+        8
+      ],
+      "mismatch_adjoint_relative_residual": 2.6651896899869628e-15,
+      "mismatch_route": "gram_q8",
+      "mismatch_direct_gain_upper": 4591.1455096835625,
+      "minimum_mismatch_gram_gain_upper": 47.72789057028076,
+      "mismatch_gain_upper": 47.72789057028076,
+      "mismatch_gain_lower_estimate": 25.59811508197637,
+      "finite_resolvent_multiplier_upper": 9.517043864366323e+41,
+      "approximate_green_block_norm_maximum": 0.09353891821970849,
+      "approximate_structured_gain_upper": 1.0893509792635232,
+      "union_reduction": {
+        "union_dimension": 8,
+        "maximum_basis_projection_residual": 2.877470583677576e-15,
+        "raw_approximate_structured_gain": 1.0893509791545881,
+        "numerical_gain_inflation": 1.0893509791545882e-10
+      },
+      "structured_gain_upper": 1.036740105334136e+42,
+      "released_structured_gain_upper": 8644.556824485424,
+      "gain_ratio_to_released": 1.1992981553404838e+38,
+      "global_parameter_remainder_radius": null,
+      "domain_passed": false,
+      "bracket": null,
+      "output_power": null,
+      "logic_slack": null,
+      "maximum_margin_radius": null,
+      "issued": false,
+      "sketch_batched_hvp_calls": 2,
+      "sketch_logical_vector_hvp_calls": 16,
+      "mismatch_batched_hvp_calls": 400,
+      "mismatch_logical_vector_hvp_calls": 1600,
+      "ideal_time_batched_mismatch_hvp_depth": 16,
+      "operator_batched_hvp_calls": 402,
+      "operator_logical_vector_hvp_calls": 1616,
+      "released_direct_logical_vector_hvp_calls": 104,
+      "outcome_files_read": 0,
+      "elapsed_seconds": 14.151299999999992
+    },
+    {
+      "rank": 4,
+      "block_size": 7,
+      "segments": 4,
+      "anchors": [
+        0,
+        7,
+        14,
+        21
+      ],
+      "sketch_seed": 4049034408134650103,
+      "residual_seed": 3948452516534133179,
+      "probes_per_residual": 4,
+      "mismatch_operator_stage_delta": 2.5e-07,
+      "sketches": [
+        {
+          "rank": 4,
+          "anchor": 0,
+          "eigenvalues": [
+            21.619105521123235,
+            28.013034213752267,
+            38.99551145023552,
+            50.672982676331756
+          ],
+          "hessian_norm_bound": 50.672982681399056,
+          "identity_step_norm_bound": 1.000000000050673,
+          "numerical_spectral_inflation": 5.067298267633176e-09,
+          "probe_sha256": "1DCEB01A1411B9AE3209001D8D7DA179F7AD01054CCC76408C4B6BDB780D5659",
+          "basis_sha256": "69CA36C3B603BEA67078A43A9422AC1AB30B3345CDCF9930D65B42AFE2709241",
+          "core_sha256": "9CF5C499E569EB65820FB6F5697B32886A74F0514FAF32AA1AFFE7799010FFC3",
+          "batched_hvp_calls": 2,
+          "logical_vector_hvp_calls": 8
+        },
+        {
+          "rank": 4,
+          "anchor": 7,
+          "eigenvalues": [
+            17.08936298935726,
+            27.202056002170448,
+            33.492727644398826,
+            47.534464630398496
+          ],
+          "hessian_norm_bound": 47.53446463515194,
+          "identity_step_norm_bound": 1.0000000000475344,
+          "numerical_spectral_inflation": 4.753446463039849e-09,
+          "probe_sha256": "46D84A5C4C2D7101F3BCF4B64CC07EDF8288BDBDB2EB6B2A104C6685A03B25DA",
+          "basis_sha256": "E3D8D9A9F8AFEF38BDB9AB5A3BAB6601DA667DB139B1D639C78A237E29CA789E",
+          "core_sha256": "C1F370BD288C890A8A177FD093A8BC53EBE2DC9D4777CB6C2F85813341BC5265",
+          "batched_hvp_calls": 2,
+          "logical_vector_hvp_calls": 8
+        },
+        {
+          "rank": 4,
+          "anchor": 14,
+          "eigenvalues": [
+            21.05234014150163,
+            31.961991140041278,
+            47.7323448762963,
+            53.69254179194883
+          ],
+          "hessian_norm_bound": 53.69254179731808,
+          "identity_step_norm_bound": 1.0000000000536926,
+          "numerical_spectral_inflation": 5.369254179194883e-09,
+          "probe_sha256": "2E5740103967180DA945AEC9080FB8AA5FB7A2E000A6A17E715128A880486520",
+          "basis_sha256": "1A6CFF1F723AAA1CDACF774ABD4A790C1C56A97A6E5C1D8043CCABDC3445B89A",
+          "core_sha256": "D265FF4479F7F4C73C3E8C7230B5205B75823C141858AD86DC6B8F8FC4523845",
+          "batched_hvp_calls": 2,
+          "logical_vector_hvp_calls": 8
+        },
+        {
+          "rank": 4,
+          "anchor": 21,
+          "eigenvalues": [
+            23.286783833627133,
+            28.820433147091506,
+            40.43160797812774,
+            51.44349914545233
+          ],
+          "hessian_norm_bound": 51.44349915059668,
+          "identity_step_norm_bound": 1.0000000000514435,
+          "numerical_spectral_inflation": 5.144349914545233e-09,
+          "probe_sha256": "053BA7A7C2BAE19DDF1D05E7A6E1EE18D7DAD3529CF63EBC05BB831253C3C75F",
+          "basis_sha256": "BDF9E808D985B34628E3973FB379F5BE2920EEC720EE9731F6F12478788EC31F",
+          "core_sha256": "074CE788BF2FAF1AC28ADDBF75672C98B1019D2ABD45F9192B1053C17C95AB8E",
+          "batched_hvp_calls": 2,
+          "logical_vector_hvp_calls": 8
+        }
+      ],
+      "mismatch_probe_sha256": [
+        "359FF12F6EF6A2AD7250DFA466F68B61901EAB3697E15E5844B4AAFE91837DFF",
+        "417F3F76F38AA7C9AE62071DD62A1BA603C8C7FF8BABCFDB9B653162853AFEBB",
+        "2248157B72D9FF19D7478B0267EC6E39A4BCD252F67191F4D6B9E3CF27F173C1",
+        "53E3D3601ACE803630C1871344E782EACC2D17666C5F56A5ECF30CE9DA25D9BD"
+      ],
+      "initial_probe_norms": [
+        599.4907552417679,
+        598.7831554256084,
+        598.0797339703455,
+        598.4663201503386
+      ],
+      "mismatch_image_norms": [
+        106.05700745054129,
+        102.71006150307583,
+        96.69025537927047,
+        79.48275686499872
+      ],
+      "mismatch_gram_rows": [
+        {
+          "probes": 4,
+          "power": 1,
+          "Y": 3007.4692709645456,
+          "c_delta": 0.02802862554892483,
+          "delta": 2.5e-07,
+          "operator_norm_upper_bound": 327.56666452708924,
+          "operator_norm_lower_estimate": 2.2411236159528203,
+          "gram_applications": 4
+        },
+        {
+          "probes": 4,
+          "power": 2,
+          "Y": 3400500.5807290543,
+          "c_delta": 0.02802862554892483,
+          "delta": 2.5e-07,
+          "operator_norm_upper_bound": 104.95068147712753,
+          "operator_norm_lower_estimate": 8.680971285770612,
+          "gram_applications": 8
+        },
+        {
+          "probes": 4,
+          "power": 4,
+          "Y": 4917073304742.094,
+          "c_delta": 0.02802862554892483,
+          "delta": 2.5e-07,
+          "operator_norm_upper_bound": 60.32719187777769,
+          "operator_norm_lower_estimate": 17.35020611908242,
+          "gram_applications": 16
+        },
+        {
+          "probes": 4,
+          "power": 8,
+          "Y": 1.140335299613729e+25,
+          "c_delta": 0.02802862554892483,
+          "delta": 2.5e-07,
+          "operator_norm_upper_bound": 46.03513519536024,
+          "operator_norm_lower_estimate": 24.687958979300802,
+          "gram_applications": 32
+        }
+      ],
+      "mismatch_gram_powers": [
+        1,
+        2,
+        4,
+        8
+      ],
+      "mismatch_adjoint_relative_residual": 1.8983638180060938e-15,
+      "mismatch_route": "gram_q8",
+      "mismatch_direct_gain_upper": 3783.8818484129915,
+      "minimum_mismatch_gram_gain_upper": 46.03513519536024,
+      "mismatch_gain_upper": 46.03513519536024,
+      "mismatch_gain_lower_estimate": 24.687958979300802,
+      "finite_resolvent_multiplier_upper": 3.861655477830149e+41,
+      "approximate_green_block_norm_maximum": 0.12691187598924106,
+      "approximate_structured_gain_upper": 1.1034127138117114,
+      "union_reduction": {
+        "union_dimension": 16,
+        "maximum_basis_projection_residual": 2.4972728150095594e-15,
+        "raw_approximate_structured_gain": 1.10341271370137,
+        "numerical_gain_inflation": 1.1034127137013702e-10
+      },
+      "structured_gain_upper": 4.260999750598426e+41,
+      "released_structured_gain_upper": 8644.556824485424,
+      "gain_ratio_to_released": 4.929113009621596e+37,
+      "global_parameter_remainder_radius": null,
+      "domain_passed": false,
+      "bracket": null,
+      "output_power": null,
+      "logic_slack": null,
+      "maximum_margin_radius": null,
+      "issued": false,
+      "sketch_batched_hvp_calls": 8,
+      "sketch_logical_vector_hvp_calls": 32,
+      "mismatch_batched_hvp_calls": 400,
+      "mismatch_logical_vector_hvp_calls": 1600,
+      "ideal_time_batched_mismatch_hvp_depth": 16,
+      "operator_batched_hvp_calls": 408,
+      "operator_logical_vector_hvp_calls": 1632,
+      "released_direct_logical_vector_hvp_calls": 104,
+      "outcome_files_read": 0,
+      "elapsed_seconds": 14.283414300000004
+    }
+  ]
+}

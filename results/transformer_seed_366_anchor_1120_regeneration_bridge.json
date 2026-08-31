@@ -1,0 +1,21 @@
+{
+  "status": "regenerated-to-exact anchor bridge audited",
+  "seed": 366,
+  "anchor": 1120,
+  "exact_parameter_array_sha256": "664E9FB94B07F4F49D5C406FA5572B10401517FB25F14A622DDBA462079F6544",
+  "exact_velocity_array_sha256": "40D92FE02F387B79E3565078EB3BEED27E882BB10C9C087184F392423D7EBE4C",
+  "exact_parameter_file_sha256": "076D3233E6BF1648FA728A250CBCEA09B624FD5D0D5F78042E9EF9B1652E4297",
+  "exact_velocity_file_sha256": "1F59BDD827529D2A2DE912990E00586D9DE720C5C4390FDC6F01427E96E909A6",
+  "regenerated_checkpoint_present": true,
+  "outcome_files_read": 0,
+  "regenerated_parameter_array_sha256": "CEE4A0999C9E32EFD641AB132B01686B503CF9F61FAC42011079BC0F9564615D",
+  "regenerated_velocity_array_sha256": "97281AB324BEEC2302F7E6E2ADD86E09A7B3B74C44E681812F1D19BBABF21507",
+  "parameter_bitwise_equal": false,
+  "velocity_bitwise_equal": false,
+  "parameter_maximum_absolute_difference": 5.551115123125783e-16,
+  "velocity_maximum_absolute_difference": 2.1649348980190553e-15,
+  "parameter_l2_difference": 6.3866817829004975e-15,
+  "velocity_l2_difference": 1.2916846898347633e-14,
+  "materialized_checkpoint_sha256": "54192BF71AD21C47D51E9A59F68E082E8A212288E055DA2A3281DC2C3C1FDEC9",
+  "materialized_checkpoint_bytes": 211947
+}

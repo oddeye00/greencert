@@ -3168,6 +3168,14 @@
       "bytes": 16521,
       "sha256": "ABB974DBCCC14A244B9DC0284CA6A9AEC564BF7619291F569FD340F3EE1BE64B"
     },
+    "results/transformer_low_rank_resolvent_diagnostic.json": {
+      "bytes": 23236,
+      "sha256": "204C801967C3AD7D01A0369CBAF0D5B8DB64F31DA85F51FED2164758188F1AF4"
+    },
+    "results/transformer_low_rank_resolvent_independent_audit.json": {
+      "bytes": 772,
+      "sha256": "204E398F8EBCF0D559311A6253A8931F93D3A21D6DD628C2D291427B68FBB4CC"
+    },
     "results/transformer_modal_prospective_blind_seed_331_anchor_1160.json": {
       "bytes": 15874,
       "sha256": "FA29B2116DECF93006B9F52E09FB522FCF841EFA57632173F70F86A471A166ED"
@@ -3355,6 +3363,10 @@
     "results/transformer_scaling_benchmark_paper.json": {
       "bytes": 1864,
       "sha256": "EFD6B89593ED3C76353348FB2219CCCCAEA6DEB64A49E3630A27279121C355DE"
+    },
+    "results/transformer_seed_366_anchor_1120_regeneration_bridge.json": {
+      "bytes": 1237,
+      "sha256": "6F37D5F5FD0FB63E2C1D35F63D3DF30E8268FED4B21D00BE64CD94FA59E5E0C5"
     },
     "results/transformer_segmented_resolvent_diagnostic.json": {
       "bytes": 6859,

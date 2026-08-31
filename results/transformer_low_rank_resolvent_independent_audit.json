@@ -1,0 +1,13 @@
+{
+  "status": "independent low-rank causal-resolvent arithmetic audit passed",
+  "source": "results/transformer_low_rank_resolvent_diagnostic.json",
+  "source_sha256": "204C801967C3AD7D01A0369CBAF0D5B8DB64F31DA85F51FED2164758188F1AF4",
+  "configurations_verified": 4,
+  "all_outcome_files_read": 0,
+  "all_configurations_abstained": true,
+  "minimum_sampled_mismatch_norm_lower_bound": 24.687958979300802,
+  "maximum_gain_ratio_to_released": 4.4363198398138184e+43,
+  "maximum_adjoint_relative_residual": 2.6651896899869628e-15,
+  "interpretation": "The exact union-subspace reduction removes optimizer-skeleton inflation, but ranks 0, 4, and 8 leave a mismatch operator whose norm already exceeds one by a deterministic sampled lower bound.",
+  "outcome_files_read": 0
+}
