@@ -5,8 +5,8 @@
       "sha256": "CC8E085BC397FF65663C23308C202DB1CE53CFCB053AF0A17B1A37AF8DEF5159"
     },
     ".github/workflows/reproducibility.yml": {
-      "bytes": 1450,
-      "sha256": "91E0C60D23F77A3F74E817F82876A0B7251B07955859D43F033694055D647EE3"
+      "bytes": 1584,
+      "sha256": "8ED6BC69172D2B792905B0142CFFDC3CAE3499DD6DE93A3DB200CB3750570235"
     },
     ".gitignore": {
       "bytes": 265,
@@ -53,8 +53,8 @@
       "sha256": "FC20EA02DB556C43E751A33161907DBC728EF7FEBB5BF65A58EBDC758C30319D"
     },
     "CAUSAL_STRUCTURED_RESOLVENT_THEOREM.md": {
-      "bytes": 9013,
-      "sha256": "37C250279199D7A8521FD241D41ECD33AFC0ADB0E4709176ADD9DAFC42992B73"
+      "bytes": 11859,
+      "sha256": "FC58A4AB521099970B92363A02A7A89B41CA70BCABBB51227B51F824225076D3"
     },
     "CITATION.cff": {
       "bytes": 631,
@@ -531,6 +531,10 @@
     "results/anchor_fixed_structured_parameter_green_transformer_cache/seed_378_gate_0_anchor_3640_v3.json": {
       "bytes": 3729,
       "sha256": "313B2383C3A55B1C474DE0F2C55A8A7749422E70F6FACA82ECC326A7EB41E607"
+    },
+    "results/causal_forward_radius_synthetic_audit.json": {
+      "bytes": 783,
+      "sha256": "4953755B44A877EAF4E9BBCB82FA22B435E6CA11E5D0E6919402B3764CB934EE"
     },
     "results/digits_outward_blind.json": {
       "bytes": 2319,
@@ -3324,6 +3328,14 @@
       "bytes": 1864,
       "sha256": "EFD6B89593ED3C76353348FB2219CCCCAEA6DEB64A49E3630A27279121C355DE"
     },
+    "results/transformer_segmented_resolvent_diagnostic.json": {
+      "bytes": 6859,
+      "sha256": "D9C8518F77C5124540F41046B82F58C7F311070A5689F836F32E116B76D73F4B"
+    },
+    "results/transformer_segmented_resolvent_independent_audit.json": {
+      "bytes": 746,
+      "sha256": "1B64736922CD6A2336A188A72804CDF564FE72098067977BA38245BF2C92B9C9"
+    },
     "results/transformer_streaming_centerline_benchmark.json": {
       "bytes": 2311,
       "sha256": "32EFC40FD071374E66CF4EC282E9871D3BC249F62FC65F954DA5F7F3C118876F"
@@ -3900,6 +3912,10 @@
       "bytes": 5701,
       "sha256": "1E559866153366A94B5999139B7B8DDC48ADAD18F7F6BCF51A632A5AF35580A6"
     },
+    "scripts/audit_causal_forward_radius.py": {
+      "bytes": 4861,
+      "sha256": "E900A094944FAC76F999AA2F64045AF81EC7120E5D5BFBCD487930F4A3DE91C6"
+    },
     "scripts/audit_digits_signed_confirmation.py": {
       "bytes": 8722,
       "sha256": "44467179B23D847FC79815F59E38DFCF02A10126C5C6D4C917C9DA6813AA96CB"
@@ -4189,8 +4205,8 @@
       "sha256": "43505F4D6395508775973D13BE7A53AF2B8F1157273FA4A6D13B3041892282E6"
     },
     "scripts/causal_structured_resolvent.py": {
-      "bytes": 17060,
-      "sha256": "E4EB05D64EC709634F087A57EFEA87B9F7ABDAE048F353EF7986CD15F956F7CF"
+      "bytes": 23476,
+      "sha256": "61D67359BE4793A5395EA0ACB021AC18CADA639C2867BF97DC8CA0D71A55CD03"
     },
     "scripts/check_reproduction_environment.py": {
       "bytes": 2469,
@@ -4211,6 +4227,10 @@
     "scripts/develop_digits_signed_screen.py": {
       "bytes": 5355,
       "sha256": "F2E3E638C03F350F5D5A6043AC56B741E66E1673CA40DB66DCC8AF432B4A972A"
+    },
+    "scripts/diagnose_transformer_segmented_resolvent.py": {
+      "bytes": 15501,
+      "sha256": "95C4CB7A687F82D00145ABC33068A59326472E6E8372760498DCA765E6E1221F"
     },
     "scripts/digits_parity_mlp.py": {
       "bytes": 4612,
@@ -4461,8 +4481,8 @@
       "sha256": "041CBC56AC43D1724124EC11E3B9614679D645C581C2BCBBB4CADC3EEAE070C1"
     },
     "scripts/test_causal_structured_resolvent.py": {
-      "bytes": 21331,
-      "sha256": "80322EBB66D02DD59D6A7DD2C08D39793BD5A594D7ACAC7E745FD4682EB8223F"
+      "bytes": 26983,
+      "sha256": "33E1CEA7AE7D7D9F409C944BDB17641EC857AE018F46736A75BFACA1754393CD"
     },
     "scripts/test_chi_block_gram.py": {
       "bytes": 1981,
@@ -4799,6 +4819,10 @@
     "scripts/verify_transformer_green_result.py": {
       "bytes": 4233,
       "sha256": "93369E8EFCCB312400760853C2A8CE4C04A575799E47238A9B21C7DB99D49B53"
+    },
+    "scripts/verify_transformer_segmented_resolvent_diagnostic.py": {
+      "bytes": 6025,
+      "sha256": "0809ECF8D2C16B15F20FA123AC8F747744E1E45502CC31264C44E6BCED6EF678"
     },
     "scripts/weighted_green_operator.py": {
       "bytes": 2403,

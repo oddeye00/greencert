@@ -307,7 +307,112 @@ probe. If deterministic residual bounds \(\delta_j\) are available, both the
 Green gain and the profiled nonlinear coefficient are therefore reduced to
 small dense linear algebra.
 
-## 7. Relation to established validation machinery
+## 7. Causal forward radius recursion
+
+The sequence-norm quadratic root still compresses the entire checkpoint
+window to one radius. Causality permits a stronger statement. Let
+
+\[
+T=\mathcal P K_J\mathcal B
+\]
+
+and suppose \(C_{ik}\ge\|T_{ik}\|\), for example using the matrix \(C\) from
+Theorem 2. Write the exact parameter error at checkpoint \(i\) as \(p_i\),
+with \(p_0=0\), and let the affine response have block bounds
+
+\[
+Y_i\ge\|(\mathcal P K_J\bar s)_{i-1}\|,
+\qquad 1\le i\le H.
+\]
+
+More generally, the directional two-response construction supplies these
+bounds checkpointwise:
+
+\[
+\begin{aligned}
+Y_i={}&\|P\widetilde y_i\|
++\sum_{k=0}^{i-1}C^{B}_{i-1,k}
+  \bigl(\sigma_{q,k}+\|\rho^B_k\|\bigr)\\
+&+\sum_{k=0}^{i-1}C^{C}_{i-1,k}
+  \bigl(\|h_k\|+\|\rho^C_k\|\bigr),
+\end{aligned}
+\]
+
+where \(\rho^B,\rho^C\) are the two components of the computed recurrence
+residual and \(C^B,C^C\) majorize the channel-specific Green blocks.
+
+### Theorem 3 (triangular nonlinear envelope)
+
+Assume
+
+\[
+\|R_k(u)\|\le\frac{L_k}{2}\|u\|^2
+\]
+
+on the declared parameter domain at update \(k\). Define \(r_0=0\) and
+compute, in chronological order,
+
+\[
+\boxed{
+r_{i+1}
+=Y_{i+1}
++\frac12\sum_{k=1}^{i}C_{ik}L_kr_k^2,
+\qquad 0\le i<H.
+}
+\]
+
+If every radius-\(r_k\) parameter ball used by this recursion remains inside
+its declared derivative domain, then
+
+\[
+\boxed{\|p_k\|\le r_k,\qquad 1\le k\le H.}
+\]
+
+The recursion needs neither a scalar discriminant nor a contraction
+condition. It may still abstain through a failed derivative domain or a
+non-finite numerical enclosure.
+
+### Proof
+
+The exact anchored recurrence has the causal Volterra representation
+
+\[
+p_{i+1}=a_{i+1}+\sum_{k=0}^{i}T_{ik}R_k(p_k),
+\qquad
+\|a_{i+1}\|\le Y_{i+1}.
+\]
+
+The update-zero nonlinear term vanishes because \(p_0=0\). Suppose
+\(\|p_k\|\le r_k\) for \(1\le k\le i\). The block majorant and the local
+Taylor bounds give
+
+\[
+\begin{aligned}
+\|p_{i+1}\|
+&\le Y_{i+1}
+ +\sum_{k=1}^{i}C_{ik}\|R_k(p_k)\|\\
+&\le Y_{i+1}
+ +\frac12\sum_{k=1}^{i}C_{ik}L_kr_k^2
+=r_{i+1}.
+\end{aligned}
+\]
+
+Induction proves the claim. \(\square\)
+
+For first-passage certification, the output Taylor transport at checkpoint
+\(i\) may use \(r_i\), rather than a single sequence radius shared by all
+checkpoints. Large curvature late in the window therefore cannot enlarge an
+earlier margin, and a large \(L_k\) is charged in proportion to the radius
+that actually reaches update \(k\). A persistent-event bracket is issued only
+when every checkpoint required by its persistence rule passes its own output
+margin.
+
+This forward majorization is a discrete nonlinear Volterra inequality, not a
+new general fixed-point principle. Its role here is to preserve the exact
+optimizer timing already exposed by the structured causal resolvent instead
+of discarding that timing in a final scalar quadratic root.
+
+## 8. Relation to established validation machinery
 
 Approximate inverses, inverse-defect bounds, and radii-polynomial validation
 are classical; see, for example, the \(Y_0,Z_0,Z_1,Z_2\) framework in

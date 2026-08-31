@@ -1,0 +1,37 @@
+{
+  "status": "causal forward radius synthetic audit passed",
+  "algorithm": "independent scalar Volterra solve versus chronological absolute block majorant",
+  "seed": 918442731,
+  "systems": 10000,
+  "checkpoints": 64705,
+  "minimum_radius_slack": 0.0,
+  "maximum_observed_to_radius_ratio": 1.0,
+  "scalar_root_separation_witness": {
+    "affine_bounds": [
+      0.01,
+      0.01,
+      1e-08,
+      0.01
+    ],
+    "curvature_profile": [
+      0.0,
+      0.0,
+      0.0,
+      100000000.0
+    ],
+    "global_sequence_discriminant": -3464100.615138332,
+    "causal_radii": [
+      0.01,
+      0.01,
+      1e-08,
+      0.010000005000000001
+    ],
+    "exact_parameter_errors": [
+      0.01,
+      0.01,
+      1e-08,
+      0.010000005000000001
+    ]
+  },
+  "outcome_files_read": 0
+}

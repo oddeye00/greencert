@@ -1,0 +1,21 @@
+{
+  "status": "independent segmented causal-resolvent arithmetic audit passed",
+  "source": "results/transformer_segmented_resolvent_diagnostic.json",
+  "source_sha256": "D9C8518F77C5124540F41046B82F58C7F311070A5689F836F32E116B76D73F4B",
+  "structured_source_sha256": "78C3855CD5464414C92C23175D7B017A683D02FC4A1FD97AA47E9003F9412A3F",
+  "arithmetic_rows_verified": 3,
+  "four_segment_issued": true,
+  "four_segment_bracket": [
+    2,
+    2
+  ],
+  "four_segment_mismatch_gain_upper": 0.9717840393704916,
+  "four_segment_resolvent_multiplier_upper": 18.60183045066945,
+  "thirteen_segment_issued": true,
+  "thirteen_segment_bracket": [
+    2,
+    2
+  ],
+  "thirteen_segment_gain_ratio_to_released": 0.7349481168415238,
+  "outcome_files_read": 0
+}

@@ -10,6 +10,8 @@ from causal_structured_resolvent import (
     causal_block_majorant,
     causal_block_majorant_gain,
     causal_block_majorant_response_bound,
+    causal_directional_affine_bounds,
+    causal_forward_quadratic_envelope,
     causal_profiled_block_majorant_gain,
     finite_geometric_sum,
     make_batched_causal_structured_resolvent_products,
@@ -524,13 +526,147 @@ def block_majorant_tests() -> None:
     assert cases == 144
 
 
+def forward_radius_tests() -> None:
+    generator = torch.Generator().manual_seed(492031)
+    cases = 0
+    for horizon in (1, 2, 4, 7):
+        for dimension in (1, 2, 3):
+            for _trial in range(20):
+                blocks: list[list[torch.Tensor | None]] = [
+                    [None for _ in range(horizon)] for _ in range(horizon)
+                ]
+                majorant = torch.zeros(horizon, horizon, dtype=DTYPE)
+                for output_step in range(horizon):
+                    for forcing_step in range(output_step + 1):
+                        raw = torch.randn(
+                            dimension,
+                            dimension,
+                            generator=generator,
+                            dtype=DTYPE,
+                        )
+                        block = 0.18 * raw / max(
+                            float(torch.linalg.matrix_norm(raw, ord=2)), 1.0
+                        )
+                        blocks[output_step][forcing_step] = block
+                        majorant[output_step, forcing_step] = (
+                            torch.linalg.matrix_norm(block, ord=2)
+                        )
+
+                affine_vectors = 0.015 * torch.randn(
+                    horizon,
+                    dimension,
+                    generator=generator,
+                    dtype=DTYPE,
+                )
+                affine_bounds = torch.linalg.vector_norm(
+                    affine_vectors, dim=1
+                )
+                curvature = [
+                    0.2
+                    + float(torch.rand((), generator=generator, dtype=DTYPE))
+                    for _ in range(horizon)
+                ]
+                nonlinear_directions = []
+                for _step in range(horizon):
+                    raw = torch.randn(
+                        dimension,
+                        dimension,
+                        generator=generator,
+                        dtype=DTYPE,
+                    )
+                    nonlinear_directions.append(
+                        raw
+                        / max(
+                            float(torch.linalg.matrix_norm(raw, ord=2)),
+                            1.0,
+                        )
+                    )
+
+                parameter_errors = [torch.zeros(dimension, dtype=DTYPE)]
+                nonlinear_forcing = [torch.zeros(dimension, dtype=DTYPE)]
+                for output_step in range(horizon):
+                    if output_step > 0:
+                        previous = parameter_errors[output_step]
+                        nonlinear_forcing.append(
+                            0.5
+                            * curvature[output_step]
+                            * torch.linalg.vector_norm(previous)
+                            * (nonlinear_directions[output_step] @ previous)
+                        )
+                    value = affine_vectors[output_step].clone()
+                    for forcing_step in range(output_step + 1):
+                        block = blocks[output_step][forcing_step]
+                        assert block is not None
+                        value = value + block @ nonlinear_forcing[forcing_step]
+                    parameter_errors.append(value)
+
+                radii = causal_forward_quadratic_envelope(
+                    affine_bounds, majorant, curvature
+                )
+                observed = torch.stack(
+                    [
+                        torch.linalg.vector_norm(parameter_errors[step])
+                        for step in range(1, horizon + 1)
+                    ]
+                )
+                assert bool(
+                    (
+                        observed
+                        <= radii * (1.0 + 5e-13) + 5e-15
+                    ).all()
+                )
+
+                structured_error = [
+                    1e-4 * (index + 1) for index in range(horizon)
+                ]
+                complement = 0.4 * majorant
+                complement_error = [
+                    2e-4 * (index + 1) for index in range(horizon)
+                ]
+                directional = causal_directional_affine_bounds(
+                    affine_bounds,
+                    majorant,
+                    structured_error,
+                    complement_green_block_majorant=complement,
+                    complement_forcing_error_bounds=complement_error,
+                )
+                expected = (
+                    affine_bounds
+                    + majorant
+                    @ torch.tensor(structured_error, dtype=DTYPE)
+                    + complement
+                    @ torch.tensor(complement_error, dtype=DTYPE)
+                )
+                assert torch.allclose(
+                    directional, expected, atol=2e-15, rtol=2e-15
+                )
+                cases += 1
+
+    # A late, very large curvature bound makes the scalar sequence-norm
+    # discriminant fail even though the state entering that update is tiny.
+    # The triangular recursion retains the time-local information.
+    witness_majorant = torch.eye(4, dtype=DTYPE)
+    witness_affine = torch.tensor((1e-2, 1e-2, 1e-8, 1e-2), dtype=DTYPE)
+    witness_curvature = (0.0, 0.0, 0.0, 1e8)
+    witness_radii = causal_forward_quadratic_envelope(
+        witness_affine, witness_majorant, witness_curvature
+    )
+    global_discriminant = 1.0 - 2.0 * 1e8 * float(
+        torch.linalg.vector_norm(witness_affine)
+    )
+    assert global_discriminant < 0.0
+    assert float(witness_radii.max()) < 0.010001
+    assert cases == 240
+
+
 def main() -> None:
     scalar_and_edge_tests()
     identity_and_adjoint_tests()
     block_majorant_tests()
+    forward_radius_tests()
     print(
         "PASS: 36 exact causal resolvent identities and 144 causal "
-        "block-majorant gain/profile/response checks"
+        "block-majorant checks plus 240 forward nonlinear envelopes"
     )
 
 

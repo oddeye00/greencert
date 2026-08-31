@@ -1,0 +1,237 @@
+{
+  "status": "segmented causal-resolvent diagnostic complete",
+  "evidence_boundary": "Outcome-blind post-release diagnostic; anchor Hessians are still autograd HVPs, not low-rank surrogates or a runtime claim.",
+  "candidate": {
+    "seed": 366,
+    "threshold": 0.8,
+    "anchor": 1120
+  },
+  "horizon": 26,
+  "parameter_count": 13792,
+  "probes": 4,
+  "family_failure_upper": 1e-06,
+  "stage_delta": 1.6666666666666665e-07,
+  "source": "results/structured_parameter_green_transformer_audit.json",
+  "source_sha256": "78C3855CD5464414C92C23175D7B017A683D02FC4A1FD97AA47E9003F9412A3F",
+  "certificate_sha256": "9F773A441C44988A876BB4A707BA7F2C5B98C407A12F474C6D314F10862D639C",
+  "corrected_path_sha256": "B180CD4FD012E82961E64D64167D0BFB252C5306C1ADD6FFDA09B1E7E60C9520",
+  "outcome_files_read": 0,
+  "rows": [
+    {
+      "block_size": 26,
+      "segments": 1,
+      "anchors": [
+        0
+      ],
+      "probe_seed": 1099335069953565892,
+      "probes": 4,
+      "stage_delta": 1.6666666666666665e-07,
+      "initial_probe_norms": [
+        598.5787852864167,
+        598.9148598757239,
+        599.3410870028009,
+        598.3579077371276
+      ],
+      "approximate_green_image_norms": [
+        132.66606634701895,
+        131.78846730065987,
+        131.95614902299494,
+        131.69075714545394
+      ],
+      "gram_image_norms": [
+        0.4645334428059026,
+        0.7134181330797523,
+        0.5976435929313725,
+        0.347036763697826
+      ],
+      "approximate_structured_gain_upper": 5238.311268154501,
+      "mismatch_gain_upper": 5.3074730352567405,
+      "mismatch_gain_lower_estimate": 0.034513541671829136,
+      "finite_resolvent_multiplier_upper": 1.632526121324542e+18,
+      "preconditioned_structured_gain_upper": 8.55167997689091e+21,
+      "released_structured_gain_upper": 8644.556824485424,
+      "preconditioned_to_released_gain_ratio": 9.892560313408498e+17,
+      "parameter_forcing_upper": 7.017971303352818e-24,
+      "objective_hessian_lipschitz_upper": 4783574952645.191,
+      "parameter_remainder_radius": null,
+      "domain_passed": false,
+      "bracket": null,
+      "output_power": null,
+      "logic_slack": null,
+      "maximum_margin_radius": null,
+      "issued": false,
+      "batched_hvp_calls": 178,
+      "logical_vector_hvp_calls": 712,
+      "active_delta_steps": 25,
+      "elapsed_seconds": 12.038923399988562,
+      "outcome_files_read": 0
+    },
+    {
+      "block_size": 7,
+      "segments": 4,
+      "anchors": [
+        0,
+        7,
+        14,
+        21
+      ],
+      "probe_seed": 1653380979287872810,
+      "probes": 4,
+      "stage_delta": 1.6666666666666665e-07,
+      "initial_probe_norms": [
+        598.7178542056523,
+        598.9021594579002,
+        597.4981607343096,
+        599.0052569735078
+      ],
+      "approximate_green_image_norms": [
+        132.53888638373525,
+        131.97800455669693,
+        131.84818585536775,
+        131.4983944791465
+      ],
+      "gram_image_norms": [
+        0.01502409897623862,
+        0.023917075512198547,
+        0.009870066913277737,
+        0.020744791240855806
+      ],
+      "approximate_structured_gain_upper": 5233.289575320027,
+      "mismatch_gain_upper": 0.9717840393704916,
+      "mismatch_gain_lower_estimate": 0.006319403666950471,
+      "finite_resolvent_multiplier_upper": 18.60183045066945,
+      "preconditioned_structured_gain_upper": 97348.76537935907,
+      "released_structured_gain_upper": 8644.556824485424,
+      "preconditioned_to_released_gain_ratio": 11.261278901380102,
+      "parameter_forcing_upper": 7.017971303352818e-24,
+      "objective_hessian_lipschitz_upper": 4783574952645.191,
+      "parameter_remainder_radius": 8.523457705628719e-19,
+      "domain_passed": true,
+      "bracket": [
+        2,
+        2
+      ],
+      "output_power": 1,
+      "logic_slack": 0.0018713447144109987,
+      "maximum_margin_radius": 1.4700211256170487e-14,
+      "issued": true,
+      "batched_hvp_calls": 166,
+      "logical_vector_hvp_calls": 664,
+      "active_delta_steps": 22,
+      "elapsed_seconds": 11.279100999992806,
+      "outcome_files_read": 0
+    },
+    {
+      "block_size": 2,
+      "segments": 13,
+      "anchors": [
+        0,
+        2,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        16,
+        18,
+        20,
+        22,
+        24
+      ],
+      "probe_seed": 6230319110821937670,
+      "probes": 4,
+      "stage_delta": 1.6666666666666665e-07,
+      "initial_probe_norms": [
+        597.8129142584984,
+        598.6800753543882,
+        599.1239509083939,
+        597.9572536699383
+      ],
+      "approximate_green_image_norms": [
+        131.1531849718439,
+        131.61684034654627,
+        131.61083213385598,
+        131.26201947169034
+      ],
+      "gram_image_norms": [
+        0.0004933824923395511,
+        0.0008390725088917352,
+        0.000634397571739319,
+        0.000588416439340944
+      ],
+      "approximate_structured_gain_upper": 5196.88264565551,
+      "mismatch_gain_upper": 0.18201847469222054,
+      "mismatch_gain_lower_estimate": 0.0011838654432490292,
+      "finite_resolvent_multiplier_upper": 1.2225214984210464,
+      "preconditioned_structured_gain_upper": 6353.300759085106,
+      "released_structured_gain_upper": 8644.556824485424,
+      "preconditioned_to_released_gain_ratio": 0.7349481168415238,
+      "parameter_forcing_upper": 7.017971303352818e-24,
+      "objective_hessian_lipschitz_upper": 4783574952645.191,
+      "parameter_remainder_radius": 4.461753294721701e-20,
+      "domain_passed": true,
+      "bracket": [
+        2,
+        2
+      ],
+      "output_power": 1,
+      "logic_slack": 0.0018713447144229672,
+      "maximum_margin_radius": 7.695083177571249e-16,
+      "issued": true,
+      "batched_hvp_calls": 130,
+      "logical_vector_hvp_calls": 520,
+      "active_delta_steps": 13,
+      "elapsed_seconds": 8.380756200000178,
+      "outcome_files_read": 0
+    },
+    {
+      "block_size": 1,
+      "segments": 26,
+      "anchors": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25
+      ],
+      "mismatch_identically_zero": true,
+      "mismatch_gain_upper": 0.0,
+      "mismatch_gain_lower_estimate": 0.0,
+      "finite_resolvent_multiplier_upper": 1.0,
+      "preconditioned_structured_gain_upper": 8644.556824485424,
+      "parameter_remainder_radius": 6.074354135934769e-20,
+      "bracket": [
+        2,
+        2
+      ],
+      "issued": true,
+      "inherited_exact_operator_bound": true,
+      "batched_hvp_calls": 0,
+      "logical_vector_hvp_calls": 0,
+      "elapsed_seconds": 3.260001540184021e-05
+    }
+  ],
+  "all_rows_finite": true
+}

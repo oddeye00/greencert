@@ -190,6 +190,157 @@ def causal_block_majorant_response_bound(
     return float(torch.linalg.vector_norm(exact_majorant @ vector))
 
 
+def causal_directional_affine_bounds(
+    known_parameter_response_norms: Sequence[float],
+    structured_green_block_majorant: Tensor,
+    structured_forcing_error_bounds: Sequence[float],
+    *,
+    complement_green_block_majorant: Tensor | None = None,
+    complement_forcing_error_bounds: Sequence[float] | None = None,
+) -> Tensor:
+    """Return checkpointwise affine-response bounds.
+
+    This is the blockwise counterpart of the two-response scalar bound.  The
+    known signed response is retained checkpoint by checkpoint; only its
+    unresolved B- and optional C-channel forcings pass through nonnegative
+    Green block majorants.
+    """
+
+    structured = structured_green_block_majorant
+    if structured.ndim != 2 or structured.shape[0] != structured.shape[1]:
+        raise ValueError("structured Green block majorant must be square")
+    horizon = int(structured.shape[0])
+    if not bool(torch.isfinite(structured).all()) or bool(
+        (structured < 0.0).any()
+    ):
+        raise ValueError(
+            "structured Green block majorant must be finite and nonnegative"
+        )
+    if bool((torch.triu(structured, diagonal=1) != 0.0).any()):
+        raise ValueError("structured Green block majorant must be lower triangular")
+
+    def nonnegative_vector(values: Sequence[float], name: str) -> Tensor:
+        if len(values) != horizon:
+            raise ValueError(f"{name} must match the horizon")
+        checked = []
+        for index, value in enumerate(values):
+            scalar = float(value)
+            if not math.isfinite(scalar) or scalar < 0.0:
+                raise ValueError(
+                    f"{name}[{index}] must be finite and nonnegative"
+                )
+            checked.append(scalar)
+        return torch.tensor(
+            checked, dtype=structured.dtype, device=structured.device
+        )
+
+    known = nonnegative_vector(
+        known_parameter_response_norms, "known_parameter_response_norms"
+    )
+    structured_error = nonnegative_vector(
+        structured_forcing_error_bounds, "structured_forcing_error_bounds"
+    )
+    output = known + structured @ structured_error
+
+    if (complement_green_block_majorant is None) != (
+        complement_forcing_error_bounds is None
+    ):
+        raise ValueError(
+            "complement majorant and forcing errors must be supplied together"
+        )
+    if complement_green_block_majorant is not None:
+        complement = complement_green_block_majorant
+        if complement.shape != structured.shape:
+            raise ValueError("complement Green majorant must match the horizon")
+        if not bool(torch.isfinite(complement).all()) or bool(
+            (complement < 0.0).any()
+        ):
+            raise ValueError(
+                "complement Green block majorant must be finite and nonnegative"
+            )
+        if bool((torch.triu(complement, diagonal=1) != 0.0).any()):
+            raise ValueError("complement Green majorant must be lower triangular")
+        complement_error = nonnegative_vector(
+            complement_forcing_error_bounds,
+            "complement_forcing_error_bounds",
+        )
+        output = output + complement @ complement_error
+    return output
+
+
+def causal_forward_quadratic_envelope(
+    affine_parameter_bounds: Sequence[float] | Tensor,
+    structured_green_block_majorant: Tensor,
+    curvature_profile: Sequence[float],
+) -> Tensor:
+    """Propagate a triangular checkpointwise nonlinear radius envelope.
+
+    If output row ``i`` bounds the parameter error at time ``i+1``, nonlinear
+    forcing block ``k`` depends on the already bounded error at time ``k``.
+    The update-zero forcing therefore vanishes exactly.  Causality makes this
+    an explicit forward recurrence, with no scalar discriminant or fixed-point
+    iteration.
+    """
+
+    majorant = structured_green_block_majorant
+    if majorant.ndim != 2 or majorant.shape[0] != majorant.shape[1]:
+        raise ValueError("structured Green block majorant must be square")
+    horizon = int(majorant.shape[0])
+    if horizon < 1:
+        raise ValueError("horizon must be positive")
+    if not bool(torch.isfinite(majorant).all()) or bool((majorant < 0.0).any()):
+        raise ValueError(
+            "structured Green block majorant must be finite and nonnegative"
+        )
+    if bool((torch.triu(majorant, diagonal=1) != 0.0).any()):
+        raise ValueError("structured Green block majorant must be lower triangular")
+
+    if isinstance(affine_parameter_bounds, Tensor):
+        affine = affine_parameter_bounds.to(
+            dtype=majorant.dtype, device=majorant.device
+        )
+        if affine.ndim != 1 or affine.numel() != horizon:
+            raise ValueError("affine parameter bounds must match the horizon")
+        if not bool(torch.isfinite(affine).all()) or bool((affine < 0.0).any()):
+            raise ValueError("affine parameter bounds must be finite and nonnegative")
+    else:
+        if len(affine_parameter_bounds) != horizon:
+            raise ValueError("affine parameter bounds must match the horizon")
+        values = [float(value) for value in affine_parameter_bounds]
+        if any(not math.isfinite(value) or value < 0.0 for value in values):
+            raise ValueError("affine parameter bounds must be finite and nonnegative")
+        affine = torch.tensor(
+            values, dtype=majorant.dtype, device=majorant.device
+        )
+
+    if len(curvature_profile) != horizon:
+        raise ValueError("curvature profile must match the horizon")
+    curvature_values = [float(value) for value in curvature_profile]
+    if any(
+        not math.isfinite(value) or value < 0.0 for value in curvature_values
+    ):
+        raise ValueError("curvature profile must be finite and nonnegative")
+    curvature = torch.tensor(
+        curvature_values, dtype=majorant.dtype, device=majorant.device
+    )
+
+    radii = torch.empty_like(affine)
+    nonlinear_forcing = torch.zeros_like(affine)
+    for output_step in range(horizon):
+        if output_step > 0:
+            nonlinear_forcing[output_step] = (
+                0.5
+                * curvature[output_step]
+                * radii[output_step - 1]
+                * radii[output_step - 1]
+            )
+        radii[output_step] = affine[output_step] + torch.dot(
+            majorant[output_step, : output_step + 1],
+            nonlinear_forcing[: output_step + 1],
+        )
+    return radii
+
+
 def make_batched_scalar_hessian_optimizer_products(
     *,
     parameter_dimension: int,

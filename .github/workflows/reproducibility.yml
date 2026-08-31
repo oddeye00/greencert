@@ -38,6 +38,8 @@ jobs:
           python scripts/test_structured_parameter_green.py
           python scripts/test_structured_directional_two_response.py
           python scripts/test_causal_structured_resolvent.py
+          python scripts/audit_causal_forward_radius.py
+          python scripts/verify_transformer_segmented_resolvent_diagnostic.py
       - name: Regenerate Matplotlib figures twice
         run: python scripts/reproduce_figures.py --check-determinism
       - name: Audit public release boundaries
