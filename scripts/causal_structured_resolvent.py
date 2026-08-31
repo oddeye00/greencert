@@ -81,6 +81,7 @@ def scaled_momentum_skeleton_matrices(
     *,
     learning_rate: float,
     momentum: float,
+    velocity_weight: float = 1.0,
     dtype: torch.dtype = torch.float64,
 ) -> Tensor:
     """Return 2-by-2 norm majorants for scaled-momentum Jacobians.
@@ -95,10 +96,13 @@ def scaled_momentum_skeleton_matrices(
         raise ValueError("skeleton bound sequences must have equal positive length")
     eta = float(learning_rate)
     mu = float(momentum)
+    weight = float(velocity_weight)
     if not math.isfinite(eta) or eta <= 0.0:
         raise ValueError("learning_rate must be finite and positive")
     if not math.isfinite(mu):
         raise ValueError("momentum must be finite")
+    if not math.isfinite(weight) or weight <= 0.0:
+        raise ValueError("velocity_weight must be finite and positive")
     rows = []
     for index, (hessian, identity_step) in enumerate(
         zip(hessian_norm_bounds, identity_step_norm_bounds)
@@ -115,7 +119,10 @@ def scaled_momentum_skeleton_matrices(
                 f"[{index}] must be finite and nonnegative"
             )
         rows.append(
-            ((identity_step, abs(mu)), (eta * hessian, abs(mu)))
+            (
+                (identity_step, abs(mu) / weight),
+                (weight * eta * hessian, abs(mu)),
+            )
         )
     return torch.tensor(rows, dtype=dtype)
 
@@ -126,21 +133,24 @@ def skeleton_parameter_green_block_majorant(
     *,
     learning_rate: float,
     momentum: float,
+    velocity_weight: float = 1.0,
     dtype: torch.dtype = torch.float64,
 ) -> Tensor:
     """Bound every block of ``P K_tilde B`` using only 2-by-2 recurrences."""
 
     eta = float(learning_rate)
+    weight = float(velocity_weight)
     skeleton = scaled_momentum_skeleton_matrices(
         hessian_norm_bounds,
         identity_step_norm_bounds,
         learning_rate=eta,
         momentum=momentum,
+        velocity_weight=weight,
         dtype=dtype,
     )
     horizon = int(skeleton.shape[0])
     bounds = torch.zeros(horizon, horizon, dtype=dtype)
-    injection = torch.tensor((eta, eta), dtype=dtype)
+    injection = torch.tensor((eta, weight * eta), dtype=dtype)
     for forcing_step in range(horizon):
         state_bounds = injection.clone()
         bounds[forcing_step, forcing_step] = state_bounds[0]
@@ -148,6 +158,33 @@ def skeleton_parameter_green_block_majorant(
             state_bounds = skeleton[output_step] @ state_bounds
             bounds[output_step, forcing_step] = state_bounds[0]
     return bounds
+
+
+def optimized_skeleton_parameter_green_block_majorant(
+    hessian_norm_bounds: Sequence[float],
+    identity_step_norm_bounds: Sequence[float],
+    *,
+    learning_rate: float,
+    momentum: float,
+    velocity_weights: Sequence[float],
+    dtype: torch.dtype = torch.float64,
+) -> Tensor:
+    """Take the valid pointwise minimum over weighted skeleton bounds."""
+
+    if not velocity_weights:
+        raise ValueError("velocity_weights must be nonempty")
+    candidates = [
+        skeleton_parameter_green_block_majorant(
+            hessian_norm_bounds,
+            identity_step_norm_bounds,
+            learning_rate=learning_rate,
+            momentum=momentum,
+            velocity_weight=float(weight),
+            dtype=dtype,
+        )
+        for weight in velocity_weights
+    ]
+    return torch.stack(candidates).min(dim=0).values
 
 
 def causal_block_majorant(

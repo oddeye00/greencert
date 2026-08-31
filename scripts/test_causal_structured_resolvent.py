@@ -17,6 +17,7 @@ from causal_structured_resolvent import (
     make_batched_causal_structured_resolvent_products,
     make_batched_scalar_hessian_optimizer_products,
     make_causal_structured_resolvent_products,
+    optimized_skeleton_parameter_green_block_majorant,
     preconditioned_structured_gain_bound,
     scalar_hessian_parameter_green_matrix,
     scalar_hessian_structured_gain,
@@ -730,11 +731,26 @@ def optimizer_skeleton_tests() -> None:
                     momentum=momentum,
                 )
                 assert skeletons.shape == (horizon, 2, 2)
-                majorant = skeleton_parameter_green_block_majorant(
+                weight_grid = (0.25, 0.5, 1.0, 2.0, 4.0)
+                weighted_majorants = [
+                    skeleton_parameter_green_block_majorant(
+                        hessian_bounds,
+                        identity_step_bounds,
+                        learning_rate=eta,
+                        momentum=momentum,
+                        velocity_weight=weight,
+                    )
+                    for weight in weight_grid
+                ]
+                majorant = optimized_skeleton_parameter_green_block_majorant(
                     hessian_bounds,
                     identity_step_bounds,
                     learning_rate=eta,
                     momentum=momentum,
+                    velocity_weights=weight_grid,
+                )
+                assert torch.allclose(
+                    majorant, torch.stack(weighted_majorants).min(dim=0).values
                 )
                 for output_step in range(horizon):
                     for forcing_step in range(output_step + 1):
@@ -752,6 +768,10 @@ def optimizer_skeleton_tests() -> None:
                         assert observed <= float(
                             majorant[output_step, forcing_step]
                         ) * (1.0 + 3e-13) + 3e-15
+                        for weighted in weighted_majorants:
+                            assert observed <= float(
+                                weighted[output_step, forcing_step]
+                            ) * (1.0 + 3e-13) + 3e-15
                 cases += 1
     assert cases == 240
 

@@ -27,6 +27,7 @@ from batched_green_operator import objective_hvp_batch
 from causal_structured_resolvent import (
     causal_block_majorant,
     causal_forward_quadratic_envelope,
+    optimized_skeleton_parameter_green_block_majorant,
     skeleton_parameter_green_block_majorant,
 )
 from diagnose_transformer_segmented_resolvent import (
@@ -46,6 +47,7 @@ CONFIGURATIONS = ((0, 26), (4, 26), (8, 26), (4, 7))
 PROBES = 4
 FAMILY_FAILURE = 1.0e-6
 NUMERICAL_SPECTRAL_INFLATION = 1.0e-10
+VELOCITY_WEIGHT_GRID = (0.125, 0.25, 0.5, 1.0, 2.0, 4.0, 8.0)
 
 
 def seed_for(label: str, rank: int, block_size: int) -> int:
@@ -264,11 +266,19 @@ def run_configuration(
         sketches[anchor_for_step[step]]["identity_step_norm_bound"]
         for step in range(horizon)
     ]
-    approximate_blocks = skeleton_parameter_green_block_majorant(
+    unweighted_approximate_blocks = skeleton_parameter_green_block_majorant(
         hessian_bounds,
         identity_bounds,
         learning_rate=float(config.learning_rate),
         momentum=float(config.momentum),
+        dtype=corrected.dtype,
+    )
+    approximate_blocks = optimized_skeleton_parameter_green_block_majorant(
+        hessian_bounds,
+        identity_bounds,
+        learning_rate=float(config.learning_rate),
+        momentum=float(config.momentum),
+        velocity_weights=VELOCITY_WEIGHT_GRID,
         dtype=corrected.dtype,
     )
 
@@ -416,6 +426,10 @@ def run_configuration(
         "approximate_block_majorant_maximum": float(
             approximate_blocks.max()
         ),
+        "unweighted_approximate_block_majorant_maximum": float(
+            unweighted_approximate_blocks.max()
+        ),
+        "velocity_weight_grid": list(VELOCITY_WEIGHT_GRID),
         "exact_block_majorant_finite": finite_majorant,
         "structured_gain_upper": global_gain if finite_global_gain else None,
         "released_structured_gain_upper": float(

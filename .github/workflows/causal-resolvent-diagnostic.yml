@@ -1,0 +1,50 @@
+name: causal-resolvent-diagnostic
+
+on:
+  push:
+    branches:
+      - codex/causal-resolvent-dev
+    paths:
+      - .github/workflows/causal-resolvent-diagnostic.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: causal-resolvent-diagnostic-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  low-rank-skeleton:
+    runs-on: windows-latest
+    timeout-minutes: 90
+    steps:
+      - name: Check out development branch
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+      - name: Set up Python 3.12
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.12.10'
+          cache: pip
+      - name: Install pinned dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt
+      - name: Run outcome-blind low-rank diagnostic
+        run: python scripts/diagnose_transformer_low_rank_resolvent.py --configurations all
+      - name: Refresh and audit public manifest
+        run: |
+          python scripts/update_public_manifest.py
+          python scripts/audit_public_release.py --root .
+      - name: Commit immutable diagnostic record
+        shell: pwsh
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add results/transformer_low_rank_resolvent_diagnostic.json PUBLIC_MANIFEST_SHA256.json
+          git diff --cached --quiet
+          if ($LASTEXITCODE -ne 0) {
+            git commit -m "Record low-rank causal resolvent diagnostic"
+            git push
+          }

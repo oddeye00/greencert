@@ -240,25 +240,27 @@ h_j\ge\|\widehat H_j\|,
 a_j\ge\|I-\eta\widehat H_j\|.
 \]
 
-For the scaled-momentum state coordinates
-\((\|\delta\theta\|,\|\delta w\|)\), define
+For any velocity weight \(\gamma>0\), use the state coordinates
+\((\|\delta\theta\|,\gamma\|\delta w\|)\) and define
 
 \[
-A_j^{\rm skel}=
+A_j^{\rm skel}(\gamma)=
 \begin{bmatrix}
-a_j&|\mu|\\
-\eta h_j&|\mu|
+a_j&|\mu|/\gamma\\
+\gamma\eta h_j&|\mu|
 \end{bmatrix},
 \qquad
-b_{k,k}=(\eta,\eta)^\top,
+b_{k,k}(\gamma)=(\eta,\gamma\eta)^\top,
 \qquad
-b_{i,k}=A_i^{\rm skel}b_{i-1,k}\quad(i>k).
+b_{i,k}(\gamma)
+=A_i^{\rm skel}(\gamma)b_{i-1,k}(\gamma)\quad(i>k).
 \]
 
 Then
 
 \[
-\boxed{N_{ik}:=(b_{i,k})_1\ge\|(T_0)_{ik}\|.}
+\boxed{N_{ik}(\gamma):=(b_{i,k}(\gamma))_1
+\ge\|(T_0)_{ik}\|.}
 \]
 
 Indeed, the scaled-momentum Jacobian obeys
@@ -276,8 +278,17 @@ A_j^{\rm skel}
 \end{bmatrix},
 \]
 
-and a \(B\)-channel unit forcing injects the norm vector
-\((\eta,\eta)^\top\). Induction gives the block bound.
+and a \(B\)-channel unit forcing injects the weighted norm vector
+\((\eta,\gamma\eta)^\top\). Induction gives the block bound. Because each
+\(\gamma\) gives a valid bound independently, a finite frozen grid
+\(\Gamma\subset(0,\infty)\) also gives the valid preconditioned majorant
+
+\[
+\boxed{N_{ik}=\min_{\gamma\in\Gamma}N_{ik}(\gamma).}
+\]
+
+This optimization is elementwise: different blocks may attain their smallest
+valid bound at different weights.
 
 For a symmetric rank-\(r\) approximation
 \(\widehat H_j=Q_j\Lambda_jQ_j^\top\), with orthonormal \(Q_j\), the two
