@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
-"""Outcome-blind low-rank/skeleton causal-resolvent diagnostic.
+"""Outcome-blind low-rank union-subspace causal-resolvent diagnostic.
 
-This development audit replaces the approximate Green query by deterministic
-2-by-2 optimizer-skeleton bounds.  Exact checkpoint Hessians are used only to
-construct low-rank segment sketches and to probe the residual operators.
+This development audit computes the approximate Green operator exactly in the
+union of the segment sketch spaces, retaining signed momentum cancellation.
+Exact checkpoint Hessians are used only to construct low-rank sketches and to
+probe the preconditioned mismatch with progressive Gaussian Gram powers.
 Revealed outcomes are never read.
 """
 from __future__ import annotations
@@ -15,6 +16,7 @@ import math
 import time
 from pathlib import Path
 
+import numpy as np
 import torch
 
 from audit_transformer_direct_image_green_panel import tensor_sha256
@@ -25,10 +27,8 @@ from audit_transformer_relinearized_prefix_panel import (
 )
 from batched_green_operator import objective_hvp_batch
 from causal_structured_resolvent import (
-    causal_block_majorant,
-    causal_forward_quadratic_envelope,
-    optimized_skeleton_parameter_green_block_majorant,
-    skeleton_parameter_green_block_majorant,
+    finite_geometric_sum,
+    invariant_subspace_parameter_green_block_norms,
 )
 from diagnose_transformer_segmented_resolvent import (
     CANDIDATE,
@@ -36,6 +36,7 @@ from diagnose_transformer_segmented_resolvent import (
     sha256,
 )
 from direct_image_green_bound import direct_image_rows
+from prefix_gram_enclosure import prefix_gram_rows
 from structured_parameter_green import structured_quadratic_root
 from transformer_hvp_grokking import logits
 
@@ -47,7 +48,87 @@ CONFIGURATIONS = ((0, 26), (4, 26), (8, 26), (4, 7))
 PROBES = 4
 FAMILY_FAILURE = 1.0e-6
 NUMERICAL_SPECTRAL_INFLATION = 1.0e-10
-VELOCITY_WEIGHT_GRID = (0.125, 0.25, 0.5, 1.0, 2.0, 4.0, 8.0)
+MISMATCH_GRAM_POWERS = (1, 2, 4, 8)
+PATH_BRIDGE_MAXIMUM_ABSOLUTE_TOLERANCE = 1.0e-12
+PATH_BRIDGE_L2_TOLERANCE = 1.0e-10
+
+
+def bridge_sealed_parameter_path(
+    *,
+    row: dict,
+    corrected: torch.Tensor,
+    correction: torch.Tensor,
+) -> tuple[torch.Tensor, torch.Tensor, dict]:
+    """Audit platform drift, then replay the exact sealed parameter path."""
+
+    prefix = ROOT / "data" / (
+        f"transformer_seed_{CANDIDATE.seed}_anchor_{CANDIDATE.anchor}"
+    )
+    metadata_path = prefix.with_name(prefix.name + "_corrected_path.json")
+    metadata = json.loads(metadata_path.read_text(encoding="utf-8"))
+    parameter_path = ROOT / metadata["corrected_parameter_file"]
+    correction_path = ROOT / metadata["correction_parameter_file"]
+    if sha256(parameter_path) != metadata["corrected_parameter_file_sha256"]:
+        raise RuntimeError("sealed corrected-parameter file hash mismatch")
+    if sha256(correction_path) != metadata["correction_parameter_file_sha256"]:
+        raise RuntimeError("sealed correction-parameter file hash mismatch")
+    if metadata["source_full_corrected_path_sha256"] != row["corrected_path_sha256"]:
+        raise RuntimeError("sealed corrected-path provenance hash mismatch")
+    if metadata["candidate"] != CANDIDATE.__dict__:
+        raise RuntimeError("sealed corrected-path candidate mismatch")
+
+    dimension = corrected.shape[1] // 2
+    exact_parameter = torch.from_numpy(
+        np.load(parameter_path, allow_pickle=False)
+    ).to(dtype=corrected.dtype, device=corrected.device)
+    exact_correction = torch.from_numpy(
+        np.load(correction_path, allow_pickle=False)
+    ).to(dtype=correction.dtype, device=correction.device)
+    if exact_parameter.shape != corrected[:, :dimension].shape:
+        raise RuntimeError("sealed corrected-parameter shape mismatch")
+    if exact_correction.shape != correction[:, :dimension].shape:
+        raise RuntimeError("sealed correction-parameter shape mismatch")
+    if tensor_sha256(exact_parameter) != metadata["corrected_parameter_tensor_sha256"]:
+        raise RuntimeError("sealed corrected-parameter tensor hash mismatch")
+    if tensor_sha256(exact_correction) != metadata["correction_parameter_tensor_sha256"]:
+        raise RuntimeError("sealed correction-parameter tensor hash mismatch")
+
+    parameter_difference = corrected[:, :dimension] - exact_parameter
+    correction_difference = correction[:, :dimension] - exact_correction
+    parameter_maximum = float(parameter_difference.abs().max())
+    correction_maximum = float(correction_difference.abs().max())
+    parameter_l2 = float(torch.linalg.vector_norm(parameter_difference))
+    correction_l2 = float(torch.linalg.vector_norm(correction_difference))
+    if max(parameter_maximum, correction_maximum) > PATH_BRIDGE_MAXIMUM_ABSOLUTE_TOLERANCE:
+        raise RuntimeError("recomputed corrected path exceeds the absolute bridge tolerance")
+    if max(parameter_l2, correction_l2) > PATH_BRIDGE_L2_TOLERANCE:
+        raise RuntimeError("recomputed corrected path exceeds the L2 bridge tolerance")
+
+    bridged_corrected = corrected.clone()
+    bridged_correction = correction.clone()
+    bridged_corrected[:, :dimension] = exact_parameter
+    bridged_correction[:, :dimension] = exact_correction
+    bridge = {
+        "status": "recomputed-to-sealed corrected-parameter bridge passed",
+        "maximum_absolute_tolerance": PATH_BRIDGE_MAXIMUM_ABSOLUTE_TOLERANCE,
+        "l2_tolerance": PATH_BRIDGE_L2_TOLERANCE,
+        "recomputed_unscaled_corrected_state_sha256": tensor_sha256(
+            corrected
+        ),
+        "source_full_corrected_path_sha256": row["corrected_path_sha256"],
+        "corrected_parameter_maximum_absolute_difference": parameter_maximum,
+        "correction_parameter_maximum_absolute_difference": correction_maximum,
+        "corrected_parameter_l2_difference": parameter_l2,
+        "correction_parameter_l2_difference": correction_l2,
+        "effective_corrected_parameter_tensor_sha256": tensor_sha256(
+            bridged_corrected[:, :dimension]
+        ),
+        "effective_correction_parameter_tensor_sha256": tensor_sha256(
+            bridged_correction[:, :dimension]
+        ),
+        "outcome_files_read": 0,
+    }
+    return bridged_corrected, bridged_correction, bridge
 
 
 def seed_for(label: str, rank: int, block_size: int) -> int:
@@ -66,6 +147,130 @@ def apply_low_rank(rows: torch.Tensor, sketch: dict) -> torch.Tensor:
     basis = sketch["basis"]
     core = sketch["core"]
     return ((rows @ basis) @ core) @ basis.T
+
+
+def union_reduced_green(
+    *,
+    sketches: dict,
+    anchors: tuple[int, ...],
+    anchor_for_step: tuple[int, ...],
+    dimension: int,
+    config,
+    dtype: torch.dtype,
+    device: torch.device,
+) -> tuple[torch.Tensor, float, dict]:
+    """Compute exact approximate-Green norms in the sketch union space."""
+
+    active_bases = [
+        sketches[anchor]["basis"]
+        for anchor in anchors
+        if sketches[anchor]["rank"] > 0
+    ]
+    if active_bases:
+        union_basis, _ = torch.linalg.qr(
+            torch.cat(active_bases, dim=1), mode="reduced"
+        )
+    else:
+        union_basis = torch.empty(
+            dimension, 0, dtype=dtype, device=device
+        )
+    reduced_hessians = []
+    projection_residuals = []
+    for anchor in anchor_for_step:
+        sketch = sketches[anchor]
+        if sketch["rank"] == 0:
+            reduced = torch.zeros(
+                union_basis.shape[1],
+                union_basis.shape[1],
+                dtype=dtype,
+                device=device,
+            )
+            projection_residuals.append(0.0)
+        else:
+            coordinates = union_basis.T @ sketch["basis"]
+            reduced = coordinates @ sketch["core"] @ coordinates.T
+            projection_residuals.append(
+                float(
+                    torch.linalg.matrix_norm(
+                        sketch["basis"] - union_basis @ coordinates,
+                        ord=2,
+                    )
+                )
+            )
+        reduced_hessians.append(reduced)
+    maximum_projection_residual = max(projection_residuals, default=0.0)
+    if maximum_projection_residual > 1.0e-10:
+        raise RuntimeError("sketch union space does not contain a sketch basis")
+    block_norms, raw_gain = invariant_subspace_parameter_green_block_norms(
+        reduced_hessians,
+        learning_rate=float(config.learning_rate),
+        momentum=float(config.momentum),
+    )
+    inflation = NUMERICAL_SPECTRAL_INFLATION * max(1.0, raw_gain)
+    return block_norms + inflation, raw_gain + inflation, {
+        "union_dimension": int(union_basis.shape[1]),
+        "maximum_basis_projection_residual": maximum_projection_residual,
+        "raw_approximate_structured_gain": raw_gain,
+        "numerical_gain_inflation": inflation,
+    }
+
+
+def apply_approximate_t0(
+    rows: torch.Tensor,
+    *,
+    sketches: dict,
+    anchor_for_step: tuple[int, ...],
+    dimension: int,
+    config,
+) -> torch.Tensor:
+    """Apply the low-rank approximate parameter Green operator."""
+
+    horizon = len(anchor_for_step)
+    forcing = rows.reshape(rows.shape[0], horizon, dimension)
+    parameter = torch.zeros_like(forcing[:, 0])
+    velocity = torch.zeros_like(parameter)
+    output = []
+    eta = float(config.learning_rate)
+    mu = float(config.momentum)
+    for step, anchor in enumerate(anchor_for_step):
+        hessian_parameter = apply_low_rank(parameter, sketches[anchor])
+        next_velocity = mu * velocity + eta * hessian_parameter
+        parameter = parameter - next_velocity - eta * forcing[:, step]
+        velocity = next_velocity + eta * forcing[:, step]
+        output.append(parameter)
+    return torch.stack(output, dim=1).reshape(rows.shape[0], -1)
+
+
+def apply_approximate_t0_transpose(
+    rows: torch.Tensor,
+    *,
+    sketches: dict,
+    anchor_for_step: tuple[int, ...],
+    dimension: int,
+    config,
+) -> torch.Tensor:
+    """Apply the transpose of the low-rank approximate Green operator."""
+
+    horizon = len(anchor_for_step)
+    outputs = rows.reshape(rows.shape[0], horizon, dimension)
+    adjoint_parameter = torch.zeros_like(outputs[:, 0])
+    adjoint_velocity = torch.zeros_like(adjoint_parameter)
+    forcing_adjoint = torch.empty_like(outputs)
+    eta = float(config.learning_rate)
+    mu = float(config.momentum)
+    for step in range(horizon - 1, -1, -1):
+        adjoint_parameter = adjoint_parameter + outputs[:, step]
+        forcing_adjoint[:, step] = eta * (
+            adjoint_velocity - adjoint_parameter
+        )
+        difference = adjoint_velocity - adjoint_parameter
+        previous_parameter = adjoint_parameter + eta * apply_low_rank(
+            difference, sketches[anchor_for_step[step]]
+        )
+        previous_velocity = mu * difference
+        adjoint_parameter = previous_parameter
+        adjoint_velocity = previous_velocity
+    return forcing_adjoint.reshape(rows.shape[0], -1)
 
 
 def build_sketch(
@@ -258,81 +463,140 @@ def run_configuration(
         for anchor in anchors
     }
 
-    hessian_bounds = [
-        sketches[anchor_for_step[step]]["hessian_norm_bound"]
-        for step in range(horizon)
-    ]
-    identity_bounds = [
-        sketches[anchor_for_step[step]]["identity_step_norm_bound"]
-        for step in range(horizon)
-    ]
-    unweighted_approximate_blocks = skeleton_parameter_green_block_majorant(
-        hessian_bounds,
-        identity_bounds,
-        learning_rate=float(config.learning_rate),
-        momentum=float(config.momentum),
+    approximate_blocks, approximate_gain, union_summary = union_reduced_green(
+        sketches=sketches,
+        anchors=anchors,
+        anchor_for_step=anchor_for_step,
+        dimension=dimension,
+        config=config,
         dtype=corrected.dtype,
-    )
-    approximate_blocks = optimized_skeleton_parameter_green_block_majorant(
-        hessian_bounds,
-        identity_bounds,
-        learning_rate=float(config.learning_rate),
-        momentum=float(config.momentum),
-        velocity_weights=VELOCITY_WEIGHT_GRID,
-        dtype=corrected.dtype,
+        device=corrected.device,
     )
 
     residual_generator = torch.Generator(device=corrected.device).manual_seed(
         seed_for("residual", rank, block_size)
     )
-    stage_delta = FAMILY_FAILURE / (
-        len(CONFIGURATIONS) * horizon
+    probes = torch.randn(
+        PROBES,
+        horizon * dimension,
+        generator=residual_generator,
+        dtype=corrected.dtype,
+        device=corrected.device,
     )
-    mismatch_bounds = []
-    mismatch_lower = []
-    residual_probe_hashes = []
-    residual_image_maxima = []
-    for step in range(horizon):
-        probes = torch.randn(
-            PROBES,
-            dimension,
-            generator=residual_generator,
-            dtype=corrected.dtype,
-            device=corrected.device,
-        )
-        exact_images = objective_hvp_batch(
-            corrected[step, :dimension],
-            probes,
-            train_pairs,
-            train_labels,
-            template,
-            spec,
-            config,
-        )
-        sketch = sketches[anchor_for_step[step]]
-        residual_images = exact_images - apply_low_rank(probes, sketch)
-        initial_norms = [
-            float(value) for value in torch.linalg.vector_norm(probes, dim=1)
-        ]
-        image_norms = [
-            float(value)
-            for value in torch.linalg.vector_norm(residual_images, dim=1)
-        ]
-        bound = direct_image_rows(
-            image_norms=image_norms,
-            initial_norms=initial_norms,
-            prefixes=(PROBES,),
-            stage_delta=stage_delta,
-        )[0]
-        mismatch_bounds.append(float(bound["operator_norm_upper_bound"]))
-        mismatch_lower.append(float(bound["operator_norm_lower_estimate"]))
-        residual_image_maxima.append(max(image_norms))
-        residual_probe_hashes.append(tensor_sha256(probes))
 
-    _, exact_majorant = causal_block_majorant(
-        approximate_blocks, mismatch_bounds
+    def apply_mismatch(rows: torch.Tensor) -> torch.Tensor:
+        response = apply_approximate_t0(
+            rows,
+            sketches=sketches,
+            anchor_for_step=anchor_for_step,
+            dimension=dimension,
+            config=config,
+        ).reshape(rows.shape[0], horizon, dimension)
+        shifted = torch.zeros_like(response)
+        shifted[:, 1:] = response[:, :-1]
+        images = torch.zeros_like(response)
+        for step in range(1, horizon):
+            exact = objective_hvp_batch(
+                corrected[step, :dimension],
+                shifted[:, step],
+                train_pairs,
+                train_labels,
+                template,
+                spec,
+                config,
+            )
+            images[:, step] = exact - apply_low_rank(
+                shifted[:, step], sketches[anchor_for_step[step]]
+            )
+        return images.reshape(rows.shape[0], -1)
+
+    def apply_mismatch_transpose(rows: torch.Tensor) -> torch.Tensor:
+        values = rows.reshape(rows.shape[0], horizon, dimension)
+        residual = torch.zeros_like(values)
+        for step in range(1, horizon):
+            exact = objective_hvp_batch(
+                corrected[step, :dimension],
+                values[:, step],
+                train_pairs,
+                train_labels,
+                template,
+                spec,
+                config,
+            )
+            residual[:, step] = exact - apply_low_rank(
+                values[:, step], sketches[anchor_for_step[step]]
+            )
+        shifted_transpose = torch.zeros_like(residual)
+        shifted_transpose[:, :-1] = residual[:, 1:]
+        return apply_approximate_t0_transpose(
+            shifted_transpose.reshape(rows.shape[0], -1),
+            sketches=sketches,
+            anchor_for_step=anchor_for_step,
+            dimension=dimension,
+            config=config,
+        )
+
+    initial_norms = [
+        float(value) for value in torch.linalg.vector_norm(probes, dim=1)
+    ]
+    mismatch_images = apply_mismatch(probes)
+    image_norms = [
+        float(value)
+        for value in torch.linalg.vector_norm(mismatch_images, dim=1)
+    ]
+    stage_delta = FAMILY_FAILURE / len(CONFIGURATIONS)
+    direct_bound = direct_image_rows(
+        image_norms=image_norms,
+        initial_norms=initial_norms,
+        prefixes=(PROBES,),
+        stage_delta=stage_delta,
+    )[0]
+    gram_rows = []
+    gram_iterate = apply_mismatch_transpose(mismatch_images)
+    adjoint_left = float(torch.dot(mismatch_images[0], mismatch_images[1]))
+    adjoint_right = float(torch.dot(probes[0], gram_iterate[1]))
+    adjoint_relative_residual = abs(adjoint_left - adjoint_right) / max(
+        1.0, abs(adjoint_left), abs(adjoint_right)
     )
-    finite_majorant = bool(torch.isfinite(exact_majorant).all())
+    if adjoint_relative_residual > 1.0e-9:
+        raise RuntimeError("low-rank mismatch adjoint check failed")
+    for power in range(1, max(MISMATCH_GRAM_POWERS) + 1):
+        if power in MISMATCH_GRAM_POWERS:
+            norms = [
+                float(value)
+                for value in torch.linalg.vector_norm(gram_iterate, dim=1)
+            ]
+            gram_rows.append(
+                prefix_gram_rows(
+                    final_norms=norms,
+                    initial_norms=initial_norms,
+                    prefixes=(PROBES,),
+                    power=power,
+                    stage_delta=stage_delta,
+                )[0]
+            )
+        if power < max(MISMATCH_GRAM_POWERS):
+            gram_iterate = apply_mismatch_transpose(
+                apply_mismatch(gram_iterate)
+            )
+    candidates = [
+        ("direct_image", float(direct_bound["operator_norm_upper_bound"]))
+    ] + [
+        (
+            f"gram_q{int(bound['power'])}",
+            float(bound["operator_norm_upper_bound"]),
+        )
+        for bound in gram_rows
+    ]
+    mismatch_route, mismatch_gain = min(candidates, key=lambda item: item[1])
+    mismatch_lower = max(
+        float(direct_bound["operator_norm_lower_estimate"]),
+        *(float(bound["operator_norm_lower_estimate"]) for bound in gram_rows),
+    )
+    resolvent_multiplier = finite_geometric_sum(
+        mismatch_gain, horizon=horizon
+    )
+    global_gain = approximate_gain * resolvent_multiplier
     selected = (
         row["stages"][-1]["direct"]
         if row["route"] == "direct_image"
@@ -346,50 +610,34 @@ def run_configuration(
         "logic_slack": None,
         "maximum_margin_radius": None,
     }
-    global_gain = math.inf
-    global_radius = None
-    causal_radii = None
-    domain_passed = False
-    if finite_majorant:
-        global_gain = float(torch.linalg.matrix_norm(exact_majorant, ord=2))
-        global_radius = structured_quadratic_root(
-            global_gain * forcing,
-            global_gain,
-            curvature,
+    global_radius = structured_quadratic_root(
+        global_gain * forcing,
+        global_gain,
+        curvature,
+    )
+    domain_passed = bool(
+        global_radius is not None
+        and float(selected["correction_max_parameter_norm"])
+        + float(global_radius)
+        <= float(selected["domain_radius"])
+    )
+    if domain_passed:
+        event = profiled_output_bracket(
+            certificate=certificate,
+            corrected=corrected,
+            correction=correction,
+            radii=torch.full(
+                (horizon,),
+                float(global_radius),
+                dtype=corrected.dtype,
+                device=corrected.device,
+            ),
+            dimension=dimension,
+            cert_pairs=cert_pairs,
+            cert_labels=cert_labels,
+            template=template,
+            spec=spec,
         )
-        affine_bounds = (
-            torch.linalg.vector_norm(exact_majorant, dim=1) * forcing
-        )
-        causal_radii = causal_forward_quadratic_envelope(
-            affine_bounds,
-            exact_majorant,
-            [curvature] * horizon,
-        )
-        correction_norms = torch.linalg.vector_norm(
-            correction[:horizon, :dimension], dim=1
-        )
-        derivative_domain_checks = correction_norms.clone()
-        if horizon > 1:
-            derivative_domain_checks[1:] += causal_radii[:-1]
-        domain_passed = bool(
-            torch.isfinite(causal_radii).all()
-            and (
-                derivative_domain_checks
-                <= float(selected["domain_radius"])
-            ).all()
-        )
-        if domain_passed:
-            event = profiled_output_bracket(
-                certificate=certificate,
-                corrected=corrected,
-                correction=correction,
-                radii=causal_radii,
-                dimension=dimension,
-                cert_pairs=cert_pairs,
-                cert_labels=cert_labels,
-                template=template,
-                spec=spec,
-            )
 
     serialized_sketches = []
     for anchor in anchors:
@@ -408,6 +656,10 @@ def run_configuration(
         item["logical_vector_hvp_calls"] for item in serialized_sketches
     )
     finite_global_gain = math.isfinite(global_gain)
+    mismatch_batched = (
+        2 * max(MISMATCH_GRAM_POWERS) * (horizon - 1)
+    )
+    mismatch_logical = mismatch_batched * PROBES
     return {
         "rank": rank,
         "block_size": block_size,
@@ -416,21 +668,32 @@ def run_configuration(
         "sketch_seed": seed_for("sketch", rank, block_size),
         "residual_seed": seed_for("residual", rank, block_size),
         "probes_per_residual": PROBES,
-        "residual_operator_stage_delta": stage_delta,
+        "mismatch_operator_stage_delta": stage_delta,
         "sketches": serialized_sketches,
-        "residual_probe_sha256": residual_probe_hashes,
-        "maximum_residual_image_norm": max(residual_image_maxima),
-        "maximum_mismatch_norm_lower_estimate": max(mismatch_lower),
-        "maximum_mismatch_norm_upper_bound": max(mismatch_bounds),
-        "minimum_mismatch_norm_upper_bound": min(mismatch_bounds),
-        "approximate_block_majorant_maximum": float(
+        "mismatch_probe_sha256": [
+            tensor_sha256(probe) for probe in probes
+        ],
+        "initial_probe_norms": initial_norms,
+        "mismatch_image_norms": image_norms,
+        "mismatch_gram_rows": gram_rows,
+        "mismatch_gram_powers": list(MISMATCH_GRAM_POWERS),
+        "mismatch_adjoint_relative_residual": adjoint_relative_residual,
+        "mismatch_route": mismatch_route,
+        "mismatch_direct_gain_upper": float(
+            direct_bound["operator_norm_upper_bound"]
+        ),
+        "minimum_mismatch_gram_gain_upper": min(
+            float(bound["operator_norm_upper_bound"])
+            for bound in gram_rows
+        ),
+        "mismatch_gain_upper": mismatch_gain,
+        "mismatch_gain_lower_estimate": mismatch_lower,
+        "finite_resolvent_multiplier_upper": resolvent_multiplier,
+        "approximate_green_block_norm_maximum": float(
             approximate_blocks.max()
         ),
-        "unweighted_approximate_block_majorant_maximum": float(
-            unweighted_approximate_blocks.max()
-        ),
-        "velocity_weight_grid": list(VELOCITY_WEIGHT_GRID),
-        "exact_block_majorant_finite": finite_majorant,
+        "approximate_structured_gain_upper": approximate_gain,
+        "union_reduction": union_summary,
         "structured_gain_upper": global_gain if finite_global_gain else None,
         "released_structured_gain_upper": float(
             selected["structured_gain_upper"]
@@ -441,25 +704,17 @@ def run_configuration(
             else None
         ),
         "global_parameter_remainder_radius": global_radius,
-        "causal_maximum_parameter_radius": (
-            None
-            if causal_radii is None
-            else float(torch.max(causal_radii))
-        ),
-        "causal_parameter_radii": (
-            None
-            if causal_radii is None
-            else [float(value) for value in causal_radii]
-        ),
         "domain_passed": domain_passed,
         **event,
         "issued": domain_passed and event["bracket"] is not None,
         "sketch_batched_hvp_calls": sketch_batched,
         "sketch_logical_vector_hvp_calls": sketch_logical,
-        "residual_batched_hvp_calls": horizon,
-        "residual_logical_vector_hvp_calls": horizon * PROBES,
-        "operator_batched_hvp_calls": sketch_batched + horizon,
-        "operator_logical_vector_hvp_calls": sketch_logical + horizon * PROBES,
+        "mismatch_batched_hvp_calls": mismatch_batched,
+        "mismatch_logical_vector_hvp_calls": mismatch_logical,
+        "ideal_time_batched_mismatch_hvp_depth": 2
+        * max(MISMATCH_GRAM_POWERS),
+        "operator_batched_hvp_calls": sketch_batched + mismatch_batched,
+        "operator_logical_vector_hvp_calls": sketch_logical + mismatch_logical,
         "released_direct_logical_vector_hvp_calls": horizon * PROBES,
         "outcome_files_read": 0,
         "elapsed_seconds": time.perf_counter() - started,
@@ -497,7 +752,12 @@ def main() -> None:
         correction,
         cert_pairs,
         cert_labels,
-    ) = rebuild_corrected_path()
+    ) = rebuild_corrected_path(require_corrected_path_hash=False)
+    corrected, correction, corrected_path_bridge = bridge_sealed_parameter_path(
+        row=row,
+        corrected=corrected,
+        correction=correction,
+    )
     rebuild_seconds = time.perf_counter() - rebuild_started
     rows = []
     for rank, block_size in requested:
@@ -518,11 +778,11 @@ def main() -> None:
         )
         rows.append(result)
         payload = {
-            "status": "low-rank skeleton causal-resolvent diagnostic in progress",
+            "status": "low-rank union-subspace causal-resolvent diagnostic in progress",
             "evidence_boundary": (
-                "Post-release outcome-blind development audit. Residual "
-                "spectral bounds use ideal-Gaussian direct images; neural "
-                "HVPs, sketches, and margins remain float64."
+                "Post-release outcome-blind development audit. Mismatch "
+                "spectral bounds use progressive ideal-Gaussian Gram powers; "
+                "neural HVPs, sketches, and margins remain float64."
             ),
             "candidate": CANDIDATE.__dict__,
             "horizon": int(row["horizon"]),
@@ -533,16 +793,13 @@ def main() -> None:
             "configurations_executed": [list(item) for item in requested],
             "family_failure_upper": FAMILY_FAILURE,
             "source_sha256": sha256(Path(__file__)),
-            "corrected_path_sha256": tensor_sha256(
-                torch.cat(
-                    (
-                        corrected[..., : corrected.shape[1] // 2],
-                        float(config.learning_rate)
-                        * corrected[..., corrected.shape[1] // 2 :],
-                    ),
-                    dim=-1,
-                )
+            "source_full_corrected_path_sha256": row[
+                "corrected_path_sha256"
+            ],
+            "effective_corrected_parameter_path_sha256": tensor_sha256(
+                corrected[..., : corrected.shape[1] // 2]
             ),
+            "corrected_path_bridge": corrected_path_bridge,
             "segmented_source": (
                 "results/transformer_segmented_resolvent_diagnostic.json"
             ),
@@ -561,7 +818,7 @@ def main() -> None:
             newline="\n",
         )
         print(json.dumps(result, indent=2), flush=True)
-    payload["status"] = "low-rank skeleton causal-resolvent diagnostic complete"
+    payload["status"] = "low-rank union-subspace causal-resolvent diagnostic complete"
     OUTPUT.write_text(
         json.dumps(payload, indent=2) + "\n",
         encoding="utf-8",

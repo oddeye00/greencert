@@ -1,0 +1,20 @@
+{
+  "status": "exact sealed Transformer corrected-parameter path export",
+  "candidate": {
+    "seed": 366,
+    "threshold": 0.8,
+    "anchor": 1120
+  },
+  "dtype": "float64",
+  "checkpoints": 27,
+  "parameter_count": 13792,
+  "corrected_parameter_file": "data/transformer_seed_366_anchor_1120_corrected_parameter.npy",
+  "corrected_parameter_file_sha256": "12197B0F1F9E59AFB0749F67423D4D5288D760183BBFBF9AEE3399A3F4A448D5",
+  "corrected_parameter_tensor_sha256": "1039320FF16C01F3AFC4AAFE9737EC5D75B7B3D1B6BAC701FACE68C2CD49F6A4",
+  "correction_parameter_file": "data/transformer_seed_366_anchor_1120_correction_parameter.npy",
+  "correction_parameter_file_sha256": "CEF9A67645FC77F41DEC41845A247E3ABF87D887C8E0172ECFA74E891DA6EC16",
+  "correction_parameter_tensor_sha256": "59455FE801DA244246FDF67A9B66166F921026B9A08B01F47FC1CA392C3A7C3B",
+  "source_full_corrected_path_sha256": "B180CD4FD012E82961E64D64167D0BFB252C5306C1ADD6FFDA09B1E7E60C9520",
+  "source_certificate_sha256": "9F773A441C44988A876BB4A707BA7F2C5B98C407A12F474C6D314F10862D639C",
+  "outcome_files_read": 0
+}

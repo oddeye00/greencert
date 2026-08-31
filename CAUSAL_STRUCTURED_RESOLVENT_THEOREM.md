@@ -222,9 +222,11 @@ gain obeys
 The operator on the right contains only the approximate causal solver and
 scalar weights. If each \(\widehat H_s\) is rank \(r\), its products require
 low-rank matrix-vector operations rather than objective HVPs. Building and
-certifying \(S\) segment sketches costs roughly \(O(Sr)\) expensive HVPs;
-subsequent Green probes cost \(O(Hrd)\) arithmetic and no exact checkpoint
-HVPs. The intended regime is \(S\ll H\).
+certifying \(S\) segment sketches costs roughly \(O(Sr)\) expensive HVPs.
+The union-subspace reduction below then uses small dense arithmetic in
+dimension at most \(HSr\), while direct low-rank Green applications cost
+\(O(Hrd)\) arithmetic and no exact checkpoint HVPs. The intended regime is
+\(S\ll H\).
 
 This cost statement includes neither the problem-dependent construction of a
 residual spectral certificate \(\varepsilon_s\) nor derivative-envelope work;
@@ -289,6 +291,64 @@ and a \(B\)-channel unit forcing injects the weighted norm vector
 
 This optimization is elementwise: different blocks may attain their smallest
 valid bound at different weights.
+
+### Exact union-subspace reduction
+
+The absolute-value skeleton is unnecessary when the approximate Hessians have
+a common low-dimensional invariant envelope. Let \(U:\mathbb R^R\to Q\) be
+an isometry and suppose
+
+\[
+\widehat H_j
+=U G_jU^\top+\lambda_j(I-UU^\top),
+\qquad G_j=G_j^\top.
+\]
+
+Let \(T_U\) be the parameter-channel Green operator obtained by running the
+same scaled-momentum recurrence on the \(R\)-dimensional Hessians \(G_j\), and
+let \(T_\lambda\) be its scalar counterpart for the sequence
+\((\lambda_j)\). Orthogonal invariance gives the exact decomposition
+
+\[
+\boxed{
+T_0
+=(I_H\otimes U)T_U(I_H\otimes U)^\top
++T_\lambda\otimes(I-UU^\top).
+}
+\]
+
+Consequently,
+
+\[
+\boxed{
+\|T_0\|_{2\to2}=\max\{\|T_U\|_{2\to2},\|T_\lambda\|_{2\to2}\},
+}
+\]
+
+and every temporal block satisfies
+
+\[
+\boxed{
+\|(T_0)_{ik}\|_2
+=\max\{\|(T_U)_{ik}\|_2, |(T_\lambda)_{ik}|\}.
+}
+\]
+
+To prove the identities, decompose every parameter and velocity vector into
+\(\operatorname{range}(U)\oplus\operatorname{range}(U)^\perp\). The
+Jacobian, parameter projection, and structured injection preserve this
+orthogonal sum. The two restricted causal recurrences are exactly the ones
+displayed above, and the norm of their orthogonal direct sum is the larger
+restricted norm.
+
+For piecewise rank-\(r\) sketches
+\(\widehat H_j=Q_{s(j)}C_{s(j)}Q_{s(j)}^\top\), choose \(U\) to span all
+segment bases. Then \(R\le Sr\) and \(\lambda_j=0\). All approximate Green
+blocks and the full approximate gain are obtained from a signed
+\(2R\)-dimensional momentum recurrence plus one scalar recurrence. No neural
+HVP is required after sketch construction. Unlike the optimizer skeleton,
+this reduction takes norms only after propagating the signed momentum
+dynamics, so it retains cancellation exactly.
 
 For a symmetric rank-\(r\) approximation
 \(\widehat H_j=Q_j\Lambda_jQ_j^\top\), with orthonormal \(Q_j\), the two

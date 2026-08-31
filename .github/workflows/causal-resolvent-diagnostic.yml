@@ -37,6 +37,8 @@ jobs:
         run: python scripts/materialize_transformer_anchor_checkpoint.py --seed 366 --anchor 1120 --force
       - name: Run outcome-blind low-rank diagnostic
         run: python scripts/diagnose_transformer_low_rank_resolvent.py --configurations all
+      - name: Independently verify low-rank diagnostic arithmetic
+        run: python scripts/verify_transformer_low_rank_resolvent_diagnostic.py
       - name: Remove regenerated large checkpoint archive
         shell: pwsh
         run: Remove-Item -LiteralPath results\transformer_hvp_prospective_seed_366.checkpoints.npz
@@ -49,7 +51,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add results/transformer_low_rank_resolvent_diagnostic.json results/transformer_seed_366_anchor_1120_regeneration_bridge.json PUBLIC_MANIFEST_SHA256.json
+          git add results/transformer_low_rank_resolvent_diagnostic.json results/transformer_low_rank_resolvent_independent_audit.json results/transformer_seed_366_anchor_1120_regeneration_bridge.json PUBLIC_MANIFEST_SHA256.json
           git diff --cached --quiet
           if ($LASTEXITCODE -ne 0) {
             git commit -m "Record low-rank causal resolvent diagnostic"

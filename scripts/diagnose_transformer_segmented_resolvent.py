@@ -79,7 +79,7 @@ def probe_seed(block_size: int) -> int:
     )
 
 
-def rebuild_corrected_path():
+def rebuild_corrected_path(*, require_corrected_path_hash: bool = True):
     row = source_row()
     certificate_path = output_path(CANDIDATE)
     if sha256(certificate_path) != row["certificate_sha256"]:
@@ -137,7 +137,10 @@ def rebuild_corrected_path():
         (torch.zeros_like(correction_rows[:1]), correction_rows), dim=0
     )
     corrected_scaled = scaled_center + correction
-    if tensor_sha256(corrected_scaled) != row["corrected_path_sha256"]:
+    if (
+        require_corrected_path_hash
+        and tensor_sha256(corrected_scaled) != row["corrected_path_sha256"]
+    ):
         raise RuntimeError("corrected path hash mismatch")
     corrected = from_scaled(corrected_scaled, dimension, config.learning_rate)
     return (

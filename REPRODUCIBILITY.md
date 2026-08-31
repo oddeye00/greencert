@@ -156,6 +156,21 @@ hashes, and an explicit zero outcome-read count. The subsequent causal audit
 therefore separates two reproducibility claims: tolerant regeneration of the
 frozen training trace and exact replay of the sealed certification anchor.
 
+The corrected parameter path and signed parameter correction used by the
+low-rank diagnostic are also stored as hash-locked arrays. The diagnostic
+recomputes both from the exact anchor, requires their maximum and Euclidean
+differences to stay below frozen bridge tolerances, and then evaluates neural
+HVPs and output margins on the exact stored arrays. This avoids treating
+cross-platform floating-point reduction order as scientific evidence while
+still auditing that the executable reconstruction reaches the sealed path.
+The export utility is retained for provenance but is not part of replay; it
+requires the original full checkpoint archive and refuses to overwrite the
+sealed arrays by default. Its interface is documented with:
+
+```bash
+python scripts/export_transformer_corrected_parameter_path.py --help
+```
+
 ## Expected invariants
 
 The release-level audit requires:

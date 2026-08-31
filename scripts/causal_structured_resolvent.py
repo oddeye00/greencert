@@ -75,6 +75,116 @@ def scalar_hessian_structured_gain(
     return float(torch.linalg.matrix_norm(matrix, ord=2))
 
 
+def invariant_subspace_parameter_green_block_norms(
+    reduced_hessians: Sequence[Tensor],
+    *,
+    learning_rate: float,
+    momentum: float,
+    complement_hessian_scalars: Sequence[float] | None = None,
+) -> tuple[Tensor, float]:
+    """Return exact approximate-Green block norms from a small invariant space.
+
+    Each symmetric approximate Hessian acts as ``U H_reduced[j] U.T`` on one
+    common invariant subspace and as a scalar multiple of the identity on its
+    orthogonal complement.  The scaled-momentum dynamics therefore split into
+    a ``2r``-dimensional recurrence and a scalar recurrence.  Signed momentum
+    cancellation is preserved before any norm is taken.
+    """
+
+    hessians = list(reduced_hessians)
+    if not hessians:
+        raise ValueError("reduced_hessians must be nonempty")
+    first = hessians[0]
+    if first.ndim != 2 or first.shape[0] != first.shape[1]:
+        raise ValueError("reduced Hessians must be square matrices")
+    rank = int(first.shape[0])
+    dtype = first.dtype
+    device = first.device
+    for hessian in hessians:
+        if hessian.shape != first.shape:
+            raise ValueError("reduced Hessians must have one common shape")
+        if hessian.dtype != dtype or hessian.device != device:
+            raise ValueError("reduced Hessians must share dtype and device")
+        if not bool(torch.isfinite(hessian).all()):
+            raise ValueError("reduced Hessians must be finite")
+    eta = float(learning_rate)
+    mu = float(momentum)
+    if not math.isfinite(eta) or eta <= 0.0:
+        raise ValueError("learning_rate must be finite and positive")
+    if not math.isfinite(mu):
+        raise ValueError("momentum must be finite")
+    horizon = len(hessians)
+    if complement_hessian_scalars is None:
+        complement = [0.0] * horizon
+    else:
+        complement = [float(value) for value in complement_hessian_scalars]
+        if len(complement) != horizon or any(
+            not math.isfinite(value) for value in complement
+        ):
+            raise ValueError("complement Hessian scalars must match the horizon")
+
+    reduced_block_norms = torch.zeros(
+        horizon, horizon, dtype=dtype, device=device
+    )
+    reduced_operator = torch.zeros(
+        horizon * rank,
+        horizon * rank,
+        dtype=dtype,
+        device=device,
+    )
+    if rank > 0:
+        identity = torch.eye(rank, dtype=dtype, device=device)
+        injection = torch.cat((-eta * identity, eta * identity), dim=0)
+        for source in range(horizon):
+            state = torch.zeros(
+                2 * rank, rank, dtype=dtype, device=device
+            )
+            for step, hessian in enumerate(hessians):
+                jacobian = torch.cat(
+                    (
+                        torch.cat(
+                            (identity - eta * hessian, -mu * identity),
+                            dim=1,
+                        ),
+                        torch.cat(
+                            (eta * hessian, mu * identity), dim=1
+                        ),
+                    ),
+                    dim=0,
+                )
+                state = jacobian @ state
+                if step == source:
+                    state = state + injection
+                if step >= source:
+                    parameter_block = state[:rank]
+                    reduced_block_norms[step, source] = (
+                        torch.linalg.matrix_norm(parameter_block, ord=2)
+                    )
+                    reduced_operator[
+                        step * rank : (step + 1) * rank,
+                        source * rank : (source + 1) * rank,
+                    ] = parameter_block
+
+    complement_operator = scalar_hessian_parameter_green_matrix(
+        complement,
+        learning_rate=eta,
+        momentum=mu,
+        dtype=dtype,
+    ).to(device=device)
+    block_norms = torch.maximum(
+        reduced_block_norms, complement_operator.abs()
+    )
+    reduced_gain = (
+        0.0
+        if rank == 0
+        else float(torch.linalg.matrix_norm(reduced_operator, ord=2))
+    )
+    complement_gain = float(
+        torch.linalg.matrix_norm(complement_operator, ord=2)
+    )
+    return block_norms, max(reduced_gain, complement_gain)
+
+
 def scaled_momentum_skeleton_matrices(
     hessian_norm_bounds: Sequence[float],
     identity_step_norm_bounds: Sequence[float],

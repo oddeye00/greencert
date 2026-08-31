@@ -14,6 +14,7 @@ from causal_structured_resolvent import (
     causal_forward_quadratic_envelope,
     causal_profiled_block_majorant_gain,
     finite_geometric_sum,
+    invariant_subspace_parameter_green_block_norms,
     make_batched_causal_structured_resolvent_products,
     make_batched_scalar_hessian_optimizer_products,
     make_causal_structured_resolvent_products,
@@ -787,16 +788,123 @@ def optimizer_skeleton_tests() -> None:
     assert cases == 240
 
 
+def invariant_subspace_green_tests() -> None:
+    generator = torch.Generator().manual_seed(441_806)
+    eta = 0.023
+    momentum = 0.81
+    cases = 0
+    for horizon in (1, 3, 5):
+        for dimension in (3, 5):
+            for rank in (0, 1, min(3, dimension - 1)):
+                for _trial in range(5):
+                    if rank == 0:
+                        basis = torch.empty(dimension, 0, dtype=DTYPE)
+                    else:
+                        raw = torch.randn(
+                            dimension,
+                            rank,
+                            generator=generator,
+                            dtype=DTYPE,
+                        )
+                        basis, _ = torch.linalg.qr(raw, mode="reduced")
+                    reduced_hessians = []
+                    complement = []
+                    full_hessians = []
+                    projector = basis @ basis.T
+                    orthogonal = torch.eye(dimension, dtype=DTYPE) - projector
+                    for _step in range(horizon):
+                        raw = torch.randn(
+                            rank,
+                            rank,
+                            generator=generator,
+                            dtype=DTYPE,
+                        )
+                        reduced = 0.5 * (raw + raw.T)
+                        scalar = 0.2 * float(
+                            torch.randn((), generator=generator, dtype=DTYPE)
+                        )
+                        reduced_hessians.append(reduced)
+                        complement.append(scalar)
+                        full_hessians.append(
+                            basis @ reduced @ basis.T + scalar * orthogonal
+                        )
+                    identity = torch.eye(dimension, dtype=DTYPE)
+                    jacobians = [
+                        torch.cat(
+                            (
+                                torch.cat(
+                                    (
+                                        identity - eta * hessian,
+                                        -momentum * identity,
+                                    ),
+                                    dim=1,
+                                ),
+                                torch.cat(
+                                    (
+                                        eta * hessian,
+                                        momentum * identity,
+                                    ),
+                                    dim=1,
+                                ),
+                            ),
+                            dim=0,
+                        )
+                        for hessian in full_hessians
+                    ]
+                    projection, injection = explicit_projection_injection(
+                        horizon, dimension, eta
+                    )
+                    exact = (
+                        projection
+                        @ explicit_causal_green(jacobians)
+                        @ injection
+                    )
+                    block_norms, gain = (
+                        invariant_subspace_parameter_green_block_norms(
+                            reduced_hessians,
+                            learning_rate=eta,
+                            momentum=momentum,
+                            complement_hessian_scalars=complement,
+                        )
+                    )
+                    assert math.isclose(
+                        gain,
+                        float(torch.linalg.matrix_norm(exact, ord=2)),
+                        rel_tol=3e-11,
+                        abs_tol=3e-13,
+                    )
+                    for output_step in range(horizon):
+                        for forcing_step in range(output_step + 1):
+                            block = exact[
+                                output_step
+                                * dimension : (output_step + 1)
+                                * dimension,
+                                forcing_step
+                                * dimension : (forcing_step + 1)
+                                * dimension,
+                            ]
+                            assert math.isclose(
+                                float(block_norms[output_step, forcing_step]),
+                                float(torch.linalg.matrix_norm(block, ord=2)),
+                                rel_tol=3e-11,
+                                abs_tol=3e-13,
+                            )
+                    cases += 1
+    assert cases == 90
+
+
 def main() -> None:
     scalar_and_edge_tests()
     identity_and_adjoint_tests()
     block_majorant_tests()
     forward_radius_tests()
     optimizer_skeleton_tests()
+    invariant_subspace_green_tests()
     print(
         "PASS: 36 exact causal resolvent identities and 144 causal "
         "block-majorant checks, 240 forward nonlinear envelopes, and 240 "
-        "optimizer-skeleton block bounds"
+        "optimizer-skeleton block bounds, and 90 exact invariant-subspace "
+        "Green reductions"
     )
 
 

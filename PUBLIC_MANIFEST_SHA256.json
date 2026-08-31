@@ -5,12 +5,12 @@
       "sha256": "CC8E085BC397FF65663C23308C202DB1CE53CFCB053AF0A17B1A37AF8DEF5159"
     },
     ".github/workflows/causal-resolvent-diagnostic.yml": {
-      "bytes": 2255,
-      "sha256": "E9206CCD1F6BB70C1994DC5A673588164FCD4D5C17448F5ACB3EF490D3679C94"
+      "bytes": 2463,
+      "sha256": "C1B770356A637F2C9062EF9CAA9049E185C39C3054BFF613F08BED154131EC55"
     },
     ".github/workflows/reproducibility.yml": {
-      "bytes": 1872,
-      "sha256": "38C36AAA4851F9313DBA90F0DB9C6195EAC253F1CE4AECB3A971AB0656378ECA"
+      "bytes": 1951,
+      "sha256": "1B31EC70632213AC52D46964AAE504982E0D475551603A70ACC2BBF92D0AF066"
     },
     ".gitignore": {
       "bytes": 265,
@@ -57,8 +57,8 @@
       "sha256": "FC20EA02DB556C43E751A33161907DBC728EF7FEBB5BF65A58EBDC758C30319D"
     },
     "CAUSAL_STRUCTURED_RESOLVENT_THEOREM.md": {
-      "bytes": 14650,
-      "sha256": "F54773EFBA267EA84BAE64B87CE48389F544AD466D97CFE7915C1E65FF400250"
+      "bytes": 16539,
+      "sha256": "7725575DB7F86B49E774A41FF5E9E6E3F26D00E39CE49BC7FCF346EE9915FFE6"
     },
     "CITATION.cff": {
       "bytes": 631,
@@ -225,8 +225,8 @@
       "sha256": "A4B94DB67A78758BF0DA3824816D25B8B00D4CA0FE8F384B8AA7B12BB257E47A"
     },
     "REPRODUCIBILITY.md": {
-      "bytes": 7754,
-      "sha256": "0CF86CC4643324563FA9C45563E5FE8502052AEB71020486281E129B1A905FE4"
+      "bytes": 8572,
+      "sha256": "3D16FCB427A2F0DFDB99A58DE825B53CC15E8DC39D3D8FB25D6CAE9FE8ECE65D"
     },
     "RESPONSE_CENTERED_EVENT_TRANSPORT_THEOREM.md": {
       "bytes": 2446,
@@ -355,6 +355,18 @@
     "data/transformer_seed_366_anchor_1120.json": {
       "bytes": 589,
       "sha256": "35E18CEF054A0CC6DED50ECCEDAABBA3DAECA0EF0C2876A2465311F1B12C202F"
+    },
+    "data/transformer_seed_366_anchor_1120_corrected_parameter.npy": {
+      "bytes": 2979200,
+      "sha256": "12197B0F1F9E59AFB0749F67423D4D5288D760183BBFBF9AEE3399A3F4A448D5"
+    },
+    "data/transformer_seed_366_anchor_1120_corrected_path.json": {
+      "bytes": 1077,
+      "sha256": "7FAB54DA751131137EF61D1E5F8D07964682A3DF982929378C45C5900D2CBE0B"
+    },
+    "data/transformer_seed_366_anchor_1120_correction_parameter.npy": {
+      "bytes": 2979200,
+      "sha256": "CEF9A67645FC77F41DEC41845A247E3ABF87D887C8E0172ECFA74E891DA6EC16"
     },
     "data/transformer_seed_366_anchor_1120_parameter.npy": {
       "bytes": 110464,
@@ -4221,8 +4233,8 @@
       "sha256": "43505F4D6395508775973D13BE7A53AF2B8F1157273FA4A6D13B3041892282E6"
     },
     "scripts/causal_structured_resolvent.py": {
-      "bytes": 27618,
-      "sha256": "C818B26B48B6252131565498738C467FC8CA88CE0E1D35559F58A56CA44121A1"
+      "bytes": 31840,
+      "sha256": "68C95951D7361E0327D27FB2602A3F6102E2F802923E126E26827195B23E7D2A"
     },
     "scripts/check_reproduction_environment.py": {
       "bytes": 2469,
@@ -4245,12 +4257,12 @@
       "sha256": "F2E3E638C03F350F5D5A6043AC56B741E66E1673CA40DB66DCC8AF432B4A972A"
     },
     "scripts/diagnose_transformer_low_rank_resolvent.py": {
-      "bytes": 18944,
-      "sha256": "60E5E6A6B18002280544245188C6BED3D3E8B2939A9B37437AF444DDE01EA98B"
+      "bytes": 29672,
+      "sha256": "A7081569E0AB01D9D7510BCAC63DE86A1B22480D2FE54D6AD7CEB3594EA6B9DC"
     },
     "scripts/diagnose_transformer_segmented_resolvent.py": {
-      "bytes": 15501,
-      "sha256": "95C4CB7A687F82D00145ABC33068A59326472E6E8372760498DCA765E6E1221F"
+      "bytes": 15600,
+      "sha256": "04B997A2846A05F6F53DE2B8FECAC92F6F4D859533DEAE186350AB3A2C247262"
     },
     "scripts/digits_parity_mlp.py": {
       "bytes": 4612,
@@ -4271,6 +4283,10 @@
     "scripts/export_transformer_anchor_state.py": {
       "bytes": 2628,
       "sha256": "D7BBFB684B98C24122C94C50073359C070DEA32F40FC77EB6813E04B6A3D767A"
+    },
+    "scripts/export_transformer_corrected_parameter_path.py": {
+      "bytes": 3129,
+      "sha256": "82FF151EA19C769F7F5F04A4B6BF345FC6FFD13CE78A65FE9C61C2F06824C6B9"
     },
     "scripts/generate_prospective_v2_seed.py": {
       "bytes": 1226,
@@ -4513,8 +4529,8 @@
       "sha256": "041CBC56AC43D1724124EC11E3B9614679D645C581C2BCBBB4CADC3EEAE070C1"
     },
     "scripts/test_causal_structured_resolvent.py": {
-      "bytes": 32282,
-      "sha256": "FCBE5A498B84F10D97F0C8651F817A106FE1266F0AC793F9ECA18A9FE93DF57C"
+      "bytes": 36955,
+      "sha256": "8800EEEF16D46445014DE323EEC9D561172DACED0D33D0B42916294ABC57503B"
     },
     "scripts/test_chi_block_gram.py": {
       "bytes": 1981,
@@ -4851,6 +4867,10 @@
     "scripts/verify_transformer_green_result.py": {
       "bytes": 4233,
       "sha256": "93369E8EFCCB312400760853C2A8CE4C04A575799E47238A9B21C7DB99D49B53"
+    },
+    "scripts/verify_transformer_low_rank_resolvent_diagnostic.py": {
+      "bytes": 6437,
+      "sha256": "EAF113FB174F8E1326669D9F8D7AF7BE9E95DB2654EFC606685681C89F6626C8"
     },
     "scripts/verify_transformer_segmented_resolvent_diagnostic.py": {
       "bytes": 6025,
