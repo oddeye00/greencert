@@ -31,8 +31,13 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           python -m pip install -r requirements.txt
+      - name: Regenerate and verify omitted seed-366 checkpoints
+        run: python scripts/regenerate_transformer_checkpoint.py --seed 366
       - name: Run outcome-blind low-rank diagnostic
         run: python scripts/diagnose_transformer_low_rank_resolvent.py --configurations all
+      - name: Remove regenerated large checkpoint archive
+        shell: pwsh
+        run: Remove-Item -LiteralPath results\transformer_hvp_prospective_seed_366.checkpoints.npz
       - name: Refresh and audit public manifest
         run: |
           python scripts/update_public_manifest.py

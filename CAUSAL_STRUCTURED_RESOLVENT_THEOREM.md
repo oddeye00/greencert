@@ -372,6 +372,11 @@ vector bounded componentwise by \(Cv\), and hence
 \|\mathcal P K_J\mathcal Bq\|_2\le\|Cv\|_2.
 \]
 
+The inverse majorant need not be formed by multiplying \(H\) powers. Because
+\(M\) is strictly lower triangular, the rows of \(R=(I-M)^{-1}\) satisfy
+\(R_{i,:}=e_i^\top+\sum_{k<i}M_{ik}R_{k,:}\). Forward substitution therefore
+constructs \(C=NR\) in \(O(H^3)\) nonnegative scalar arithmetic.
+
 ### Proof
 
 For every block vector \(q\), the block-norm vector of \(\mathcal Aq\) is at

@@ -458,6 +458,17 @@ def block_majorant_tests() -> None:
                 assert torch.allclose(
                     torch.triu(majorant), torch.zeros_like(majorant)
                 )
+                power = torch.eye(horizon, dtype=DTYPE)
+                inverse = power.clone()
+                for _power in range(1, horizon):
+                    power = power @ majorant
+                    inverse = inverse + power
+                assert torch.allclose(
+                    exact_majorant,
+                    block_bounds @ inverse,
+                    atol=3e-14,
+                    rtol=3e-14,
+                )
                 for output_step in range(horizon):
                     for forcing_step in range(output_step + 1):
                         block = exact_operator[

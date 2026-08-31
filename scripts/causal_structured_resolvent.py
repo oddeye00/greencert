@@ -223,10 +223,15 @@ def causal_block_majorant(
     inverse_majorant = torch.eye(
         horizon, dtype=bounds.dtype, device=bounds.device
     )
-    power = torch.eye(horizon, dtype=bounds.dtype, device=bounds.device)
-    for _ in range(1, horizon):
-        power = power @ majorant
-        inverse_majorant = inverse_majorant + power
+    # Forward substitution for R=I+M R exploits strict causality.  It is
+    # O(H^3), versus O(H^4) for explicitly multiplying all H nilpotent
+    # powers, and uses only nonnegative products and sums.
+    for output_step in range(1, horizon):
+        inverse_majorant[output_step] = (
+            inverse_majorant[output_step]
+            + majorant[output_step, :output_step]
+            @ inverse_majorant[:output_step]
+        )
     exact_majorant = bounds @ inverse_majorant
     return majorant, exact_majorant
 
