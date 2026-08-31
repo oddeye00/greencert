@@ -75,6 +75,121 @@ def scalar_hessian_structured_gain(
     return float(torch.linalg.matrix_norm(matrix, ord=2))
 
 
+def causal_block_majorant(
+    approximate_block_bounds: Tensor,
+    mismatch_block_bounds: Sequence[float],
+) -> tuple[Tensor, Tensor]:
+    """Return the strict mismatch majorant M and exact-Green majorant C.
+
+    approximate_block_bounds[i,k] bounds the norm of block (i,k) of
+    T0=P K_tilde B. The mismatch sequence bounds norm(Delta_j).
+    """
+
+    bounds = approximate_block_bounds
+    if bounds.ndim != 2 or bounds.shape[0] != bounds.shape[1]:
+        raise ValueError("approximate_block_bounds must be square")
+    horizon = int(bounds.shape[0])
+    if horizon < 1 or len(mismatch_block_bounds) != horizon:
+        raise ValueError("mismatch bounds must match a positive horizon")
+    if not bool(torch.isfinite(bounds).all()) or bool((bounds < 0.0).any()):
+        raise ValueError("approximate block bounds must be finite and nonnegative")
+    # Row i may depend only on forcing blocks k<=i.
+    if bool((torch.triu(bounds, diagonal=1) != 0.0).any()):
+        raise ValueError("approximate block bounds must be lower triangular")
+    mismatch = []
+    for index, value in enumerate(mismatch_block_bounds):
+        scalar = float(value)
+        if not math.isfinite(scalar) or scalar < 0.0:
+            raise ValueError(
+                f"mismatch_block_bounds[{index}] must be finite and nonnegative"
+            )
+        mismatch.append(scalar)
+
+    majorant = torch.zeros_like(bounds)
+    for step in range(1, horizon):
+        majorant[step] = mismatch[step] * bounds[step - 1]
+    inverse_majorant = torch.eye(
+        horizon, dtype=bounds.dtype, device=bounds.device
+    )
+    power = torch.eye(horizon, dtype=bounds.dtype, device=bounds.device)
+    for _ in range(1, horizon):
+        power = power @ majorant
+        inverse_majorant = inverse_majorant + power
+    exact_majorant = bounds @ inverse_majorant
+    return majorant, exact_majorant
+
+
+def causal_block_majorant_gain(
+    approximate_block_bounds: Tensor,
+    mismatch_block_bounds: Sequence[float],
+) -> float:
+    """Return the spectral norm of N times inverse(I-M)."""
+
+    _, exact_majorant = causal_block_majorant(
+        approximate_block_bounds, mismatch_block_bounds
+    )
+    return float(torch.linalg.matrix_norm(exact_majorant, ord=2))
+
+
+def causal_profiled_block_majorant_gain(
+    approximate_block_bounds: Tensor,
+    mismatch_block_bounds: Sequence[float],
+    curvature_profile: Sequence[float],
+) -> float:
+    """Return the profiled nonlinear coefficient norm(C D_(L,0))."""
+
+    _, exact_majorant = causal_block_majorant(
+        approximate_block_bounds, mismatch_block_bounds
+    )
+    horizon = int(exact_majorant.shape[0])
+    if len(curvature_profile) != horizon:
+        raise ValueError("curvature profile must match the horizon")
+    curvature = []
+    for index, value in enumerate(curvature_profile):
+        scalar = float(value)
+        if not math.isfinite(scalar) or scalar < 0.0:
+            raise ValueError(
+                f"curvature_profile[{index}] must be finite and nonnegative"
+            )
+        curvature.append(scalar)
+    if horizon == 1:
+        return 0.0
+    injection = torch.zeros(
+        horizon,
+        horizon - 1,
+        dtype=exact_majorant.dtype,
+        device=exact_majorant.device,
+    )
+    for step in range(1, horizon):
+        injection[step, step - 1] = curvature[step]
+    return float(torch.linalg.matrix_norm(exact_majorant @ injection, ord=2))
+
+
+def causal_block_majorant_response_bound(
+    exact_majorant: Tensor,
+    forcing_block_norms: Sequence[float],
+) -> float:
+    """Bound a specific response by the Euclidean norm of C v."""
+
+    if exact_majorant.ndim != 2 or exact_majorant.shape[0] != exact_majorant.shape[1]:
+        raise ValueError("exact_majorant must be square")
+    horizon = int(exact_majorant.shape[0])
+    if len(forcing_block_norms) != horizon:
+        raise ValueError("forcing block norms must match the horizon")
+    values = []
+    for index, value in enumerate(forcing_block_norms):
+        scalar = float(value)
+        if not math.isfinite(scalar) or scalar < 0.0:
+            raise ValueError(
+                f"forcing_block_norms[{index}] must be finite and nonnegative"
+            )
+        values.append(scalar)
+    vector = torch.tensor(
+        values, dtype=exact_majorant.dtype, device=exact_majorant.device
+    )
+    return float(torch.linalg.vector_norm(exact_majorant @ vector))
+
+
 def make_batched_scalar_hessian_optimizer_products(
     *,
     parameter_dimension: int,

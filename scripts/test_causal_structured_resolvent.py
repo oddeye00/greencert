@@ -7,6 +7,10 @@ import math
 import torch
 
 from causal_structured_resolvent import (
+    causal_block_majorant,
+    causal_block_majorant_gain,
+    causal_block_majorant_response_bound,
+    causal_profiled_block_majorant_gain,
     finite_geometric_sum,
     make_batched_causal_structured_resolvent_products,
     make_batched_scalar_hessian_optimizer_products,
@@ -370,12 +374,163 @@ def scalar_and_edge_tests() -> None:
     assert torch.allclose(vjp(rows), rows @ scalar_jacobian)
 
 
+def block_majorant_tests() -> None:
+    generator = torch.Generator().manual_seed(733901)
+    cases = 0
+    for horizon in (1, 2, 4, 6):
+        for dimension in (1, 2, 3):
+            for _trial in range(12):
+                eta = 0.023
+                state_dimension = 2 * dimension
+                parameter_projection = torch.cat(
+                    (
+                        torch.eye(dimension, dtype=DTYPE),
+                        torch.zeros(dimension, dimension, dtype=DTYPE),
+                    ),
+                    dim=1,
+                )
+                injection = torch.cat(
+                    (
+                        -eta * torch.eye(dimension, dtype=DTYPE),
+                        eta * torch.eye(dimension, dtype=DTYPE),
+                    ),
+                    dim=0,
+                )
+                approximate = []
+                deltas = []
+                exact = []
+                for _step in range(horizon):
+                    raw = torch.randn(
+                        state_dimension,
+                        state_dimension,
+                        generator=generator,
+                        dtype=DTYPE,
+                    )
+                    row = raw / (3.0 + float(torch.linalg.matrix_norm(raw)))
+                    raw_delta = torch.randn(
+                        dimension,
+                        dimension,
+                        generator=generator,
+                        dtype=DTYPE,
+                    )
+                    delta = 0.08 * raw_delta / max(
+                        float(torch.linalg.matrix_norm(raw_delta)), 1.0
+                    )
+                    approximate.append(row)
+                    deltas.append(delta)
+                    exact.append(row + injection @ delta @ parameter_projection)
+
+                projection, structured_injection = explicit_projection_injection(
+                    horizon, dimension, eta
+                )
+                t0 = (
+                    projection
+                    @ explicit_causal_green(approximate)
+                    @ structured_injection
+                )
+                exact_operator = (
+                    projection
+                    @ explicit_causal_green(exact)
+                    @ structured_injection
+                )
+                block_bounds = torch.zeros(horizon, horizon, dtype=DTYPE)
+                for output_step in range(horizon):
+                    for forcing_step in range(output_step + 1):
+                        block = t0[
+                            output_step * dimension : (output_step + 1) * dimension,
+                            forcing_step * dimension : (forcing_step + 1) * dimension,
+                        ]
+                        block_bounds[output_step, forcing_step] = (
+                            torch.linalg.matrix_norm(block, ord=2)
+                        )
+                mismatch_bounds = [
+                    float(torch.linalg.matrix_norm(delta, ord=2))
+                    for delta in deltas
+                ]
+                majorant, exact_majorant = causal_block_majorant(
+                    block_bounds, mismatch_bounds
+                )
+                assert torch.allclose(
+                    torch.triu(majorant), torch.zeros_like(majorant)
+                )
+                for output_step in range(horizon):
+                    for forcing_step in range(output_step + 1):
+                        block = exact_operator[
+                            output_step * dimension : (output_step + 1) * dimension,
+                            forcing_step * dimension : (forcing_step + 1) * dimension,
+                        ]
+                        observed = float(torch.linalg.matrix_norm(block, ord=2))
+                        assert observed <= float(
+                            exact_majorant[output_step, forcing_step]
+                        ) * (1.0 + 4e-12) + 4e-14
+                exact_gain = float(
+                    torch.linalg.matrix_norm(exact_operator, ord=2)
+                )
+                majorant_gain = causal_block_majorant_gain(
+                    block_bounds, mismatch_bounds
+                )
+                assert exact_gain <= majorant_gain * (1.0 + 4e-12) + 4e-14
+
+                forcing = torch.randn(
+                    horizon, dimension, generator=generator, dtype=DTYPE
+                )
+                forcing_norms = [
+                    float(torch.linalg.vector_norm(row)) for row in forcing
+                ]
+                response = exact_operator @ forcing.reshape(-1)
+                response_bound = causal_block_majorant_response_bound(
+                    exact_majorant, forcing_norms
+                )
+                assert float(torch.linalg.vector_norm(response)) <= (
+                    response_bound * (1.0 + 4e-12) + 4e-14
+                )
+
+                curvature = [
+                    0.0,
+                    *[
+                        0.2
+                        + float(
+                            torch.rand((), generator=generator, dtype=DTYPE)
+                        )
+                        for _ in range(horizon - 1)
+                    ],
+                ]
+                profile = torch.zeros(
+                    horizon * dimension,
+                    max(0, horizon - 1) * dimension,
+                    dtype=DTYPE,
+                )
+                for step in range(1, horizon):
+                    profile[
+                        step * dimension : (step + 1) * dimension,
+                        (step - 1) * dimension : step * dimension,
+                    ] = curvature[step] * torch.eye(dimension, dtype=DTYPE)
+                profiled_gain = causal_profiled_block_majorant_gain(
+                    block_bounds, mismatch_bounds, curvature
+                )
+                observed_profiled = (
+                    0.0
+                    if horizon == 1
+                    else float(
+                        torch.linalg.matrix_norm(
+                            exact_operator @ profile, ord=2
+                        )
+                    )
+                )
+                assert observed_profiled <= profiled_gain * (
+                    1.0 + 4e-12
+                ) + 4e-14
+                cases += 1
+    assert cases == 144
+
+
 def main() -> None:
     scalar_and_edge_tests()
     identity_and_adjoint_tests()
+    block_majorant_tests()
     print(
-        "PASS: 36 exact causal resolvent identities, adjoints, finite tails, "
-        "batched products, and weighted mismatch bounds"
+        "PASS: 36 exact causal resolvent identities and 144 causal "
+        "block-majorant gain/profile/response checks"
     )
 
 
