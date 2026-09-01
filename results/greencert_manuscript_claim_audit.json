@@ -1,7 +1,7 @@
 {
   "status": "GREENCERT manuscript claim audit passed",
   "paper": "paper\\certified_local_training_events_neurips2026.tex",
-  "paper_sha256": "D8BA97F7C128F4A73655BA2C8D64DE8DA64162148066C24FC161B9C5BB847E8B",
+  "paper_sha256": "D2503A7A4B9C43DACB1525803CA491FB56C997F97BDE96918F8B7B2695169A5D",
   "studies": {
     "wdbc": {
       "cases": 72,
@@ -161,12 +161,22 @@
       30.915002178125587,
       2.4759997498657045
     ],
-    "composed_runtime_historical_cross_batch_ratio": 378.12853883450225
+    "composed_runtime_historical_cross_batch_ratio": 378.12853883450225,
+    "directional_block_new_holdout_closures": 3,
+    "directional_block_median_ratio": 0.0003449712929298119,
+    "directional_event_issued": 4,
+    "mixed_directional_maximum_relative_error": 4.190858883233474e-15,
+    "mixed_directional_median_runtime_speedup": 1.3311220163039459,
+    "mixed_directional_speed_gate_passed": false
   },
   "checked_required_phrases": [
-    "56/72 WDBC, 7/24 digits, and 9/72 plus 11/72",
-    "all 83 subsequently revealed crossings lie in their",
-    "three of these gates are already present at the anchor",
+    "Across four frozen or outcome-sealed studies, all 83",
+    "issued brackets contain their subsequently revealed crossings",
+    "WDBC        & 72 & 71 & 56 & 56/56",
+    "Digits      & 24 & 24 & 7  & 7/7",
+    "Transformer fixed-$R$ & 72 & 23 & 9  & 9/9",
+    "Transformer response & 72 & 19 & 11 & 11/11",
+    "56 strictly future crossings plus three gates",
     "no strictly future centerline",
     "Coverage is conditional on",
     "not a population-generalization bound",
@@ -208,7 +218,7 @@
     "image screening under the same Gaussian event issues four cases",
     "Prefix streaming reduces centerline",
     "Deterministic neural-jet release",
-    "8/15 cases",
+    "complete 15-case operator cohort it preserves eight brackets",
     "1,432",
     "22,912",
     "$1.80\\times10^{-4}$",
@@ -232,7 +242,16 @@
     "four forward Green applications",
     "$378\\times$ reduction",
     "$30.9\\times$ and $2.48\\times$ slower",
-    "paper_composed_runtime.pdf"
+    "paper_composed_runtime.pdf",
+    "Directional block remainder",
+    "nonnegative symmetric four-linear polarized block majorant",
+    "average any valid nonnegative four-linear\nmajorant over all $4!$ slot permutations",
+    "$2{,}899\\times$ tighter",
+    "$[28,28]$, $[70,70]$, and $[118,118]$",
+    "$4.19\\times10^{-15}$",
+    "$154.31\\to115.92$ seconds ($1.33\\times$)",
+    "misses the prespecified\n$2\\times$ speed gate",
+    "paper_directional_block_remainder.pdf"
   ],
   "checked_forbidden_phrases": [
     "all 59 cases having a comparable future event",

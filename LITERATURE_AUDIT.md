@@ -48,6 +48,11 @@ first-passage bracket or abstention.
 | Shi et al. (L4DC 2026), [primary record](https://proceedings.mlr.press/v331/shi26a.html) | Branch-and-bound certified training of Lyapunov-stable neural controllers | Certifies a controller's Lyapunov condition over an input region, not the optimizer trajectory that trains the network |
 | Kazanskii (2026), [arXiv record](https://arxiv.org/abs/2607.11666) | Representation-geometry intervention that changes grokking time | Empirical mechanism and control of delayed generalization, without a finite-window certificate for the realized crossing |
 | Manir and Rupa (2026), [arXiv record](https://arxiv.org/abs/2603.25009) | Controlled empirical comparison of grokking across depth, architecture, activation, and regularization | Characterizes when grokking occurs; it does not certify a future first passage from a checkpoint |
+| Thomas (2014), [primary record](https://arxiv.org/abs/1309.1275) | Polarization identity for symmetric multilinear maps | Supplies classical multilinear algebra; it does not construct blockwise neural derivative majorants or optimizer-event certificates |
+| Berz and Hoffstatter (1998), [publisher record](https://doi.org/10.1023/A:1009958918582) | Taylor polynomials with interval remainder bounds | Establishes validated Taylor-model arithmetic for factorable maps; the paper does not study neural training trajectories |
+| Schilling, Forets, and Guadalupe (AAAI 2022), [primary record](https://ojs.aaai.org/index.php/AAAI/article/view/20790) | Taylor-model/zonotope reachability for neural-network control systems | Preserves dependencies for exogenous plant/controller reachability, not a realized optimizer correction or training-event first passage |
+| Sharifi and Fazlyab (2024), [arXiv record](https://arxiv.org/abs/2406.04476) | Derivative-preserving Hessian bounds for smooth neural networks | Bounds local input reachability through first- and second-order information, not an endogenous fourth-order optimizer remainder |
+| Entesari and Fazlyab (L4DC 2026), [primary record](https://proceedings.mlr.press/v331/entesari26a.html) | Hierarchical Taylor bounds using Hessian Lipschitz constants | Closest neural derivative-transport antecedent; its object is input-set output reachability rather than an anchor-fixed optimizer orbit and persistent event |
 
 ## Claim boundary used in the paper
 
@@ -127,3 +132,23 @@ the unique optimizer orbit continuing from a realized checkpoint and transports
 that enclosure to a persistent first-passage bracket. The refresh therefore
 does not change the paper's claim boundary, but it expands the inspectable set
 of negative comparisons.
+
+## 2026-08-31 directional-remainder follow-up
+
+The polarized block theorem prompted a narrower search using:
+
+- `neural network verification fourth derivative blockwise Taylor bound`
+- `mixed directional derivative neural verification Taylor remainder`
+- `polarization symmetric multilinear neural network verification`
+- `Taylor model optimizer trajectory first passage certificate`
+
+The search recovered the classical polarization identity, validated Taylor
+models, neural-controller Taylor-model reachability, derivative-preserving
+Hessian bounds, and the recent HiTaB hierarchy. These sources occupy broad
+claims that polarization, Taylor remainders, dependency-preserving polynomial
+arithmetic, or compositional neural derivative bounds are new. No opened
+primary source kept three realized optimizer-correction directions while
+maximizing only one free dual direction, inserted that bound into an
+anchor-fixed nonlinear training tube, and transported it to a persistent event
+bracket. The manuscript therefore claims the optimizer/event construction and
+its measured sweep reduction, not new polarization or Taylor-model theory.

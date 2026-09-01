@@ -64,25 +64,19 @@ realized signed defect through a finite-window Green operator, recenters on
 that directional response, and bounds only the remaining second-order error.
 The response-centered theorem therefore certifies the realized nonlinear
 trajectory over a finite window and transports its state tube to a persistent
-first-passage bracket.  Frozen studies issue 56/72 WDBC, 7/24 digits, and 9/72 plus 11/72
-Transformer certificates; all 83 subsequently revealed crossings lie in their
-issued brackets.  Independent 192-bit continuation re-certifies
-all 63 WDBC/digits brackets.  Signed propagation uniquely retains a 147-step
-digits event and 8/9 Transformer certificates, while both inaccurate finite
-digits forecasts abstain before randomized probing.  In a frozen 15-case
-audit, corrected-path relinearization preserves every bracket while reducing
-Green Gram applications $560\to64$ ($8.75\times$).  A deterministic
-neural-jet release removes every randomized output-Jacobian query in 8/15 cases,
-eliminating 1,432 operator instances and 22,912 $q=1$ Gram
-applications; staged fallback retains 15/15.  On an issued $H=26$ Transformer
-case, composing prefix streaming, four forward-only Green probes, and analytic
-jets reproduces the sealed bracket in 9.21\,s median over three separately
-launched runs, with no Green transpose or randomized output operator.  This is
-$378\times$ below the historical fixed-$q=8$ cross-batch median; matched direct
-continuation remains $30.9\times$ faster over 26 updates and $2.48\times$ faster
-over 300.  The resulting verifier is
-matrix-free, selective, and explicit about its numerical and probabilistic
-obligations.
+first-passage bracket.  Across four frozen or outcome-sealed studies, all 83
+issued brackets contain their subsequently revealed crossings.  Independent
+192-bit outward continuation re-certifies all 63 WDBC and digits brackets.
+Retaining direction matters: signed propagation preserves a 147-step digits
+certificate and eight of nine fixed-radius Transformer certificates that the
+matched unsigned construction loses, while both inaccurate finite digits
+forecasts abstain before randomized probing.  A frozen directional-block
+remainder audit further shrinks the scalar fourth-order term by
+$2{,}899\times$ at the holdout median and recovers three sealed holdout
+certificates one variational sweep earlier.  Matrix-free computational
+refinements substantially reduce Green and output-operator work without
+changing the issued brackets.  The resulting verifier is selective and
+explicit about its numerical and probabilistic obligations.
 \end{abstract}
 
 \section{Introduction}
@@ -100,6 +94,9 @@ certificate}.  For a fixed optimizer trajectory and an evaluation gate, the
 method returns an interval containing the first future persistent crossing or
 explicitly abstains.  This is a deterministic event statement on a fixed
 evaluation set, not a population-generalization bound.
+A local clock proposes an event time.  \method{} additionally checks the
+realized finite-window dynamics and either returns a persistent first-passage
+bracket or declines to certify the proposal.
 The main result is a finite-window shadowing and event-transport theorem.  The
 experiments test three separate questions: when the theorem issues, whether an
 issued bracket covers, and what the certificate costs to construct.
@@ -129,6 +126,9 @@ Our contributions are:
   implementation error.  A time-resolved corollary aligns checkpointwise drift
   with the signed response, while corrected-path relinearization removes the
   mixed state-response term entirely under the same bounded-Hessian envelope.
+  A polarized block-majorant corollary retains the three realized directions
+  in the fourth-order gradient remainder and maximizes only over the remaining
+  dual direction.
   For scaled momentum, a forcing-subspace corollary closes the nonlinear
   problem in parameter space and removes optimizer-state directions that
   neither generate the nonlinear remainder nor affect the neural event.
@@ -144,26 +144,15 @@ Our contributions are:
   both inaccurate finite digits clocks are rejected before randomized probing.
   \item We isolate the roles of direction and computation.  A matched unsigned construction retains
   only one of nine Transformer certificates and loses the sealed 147-step
-  digits event.  A cancellation-safe second response converts four post-seal
-  abstentions and removes 22 Gram levels; its amplified secant removes
-  third-order AD and is $4.04\times$ faster than the replaced power.
-  Across all 15 Green-evaluable records, relinearization retains every bracket,
-  with 14 stopping at four probes and one at eight; Green applications fall
-  $560\to64$ ($8.75\times$).  A deterministic neural-jet screen preserves
-  eight of these brackets without any randomized output-Jacobian query,
-  eliminating 1,432 operators and 22,912 $q=1$ Gram applications before a
-  matched seven-case fallback.  Prefix-local streaming, staged
-  direct-image/Gram release, batching, and role-fused witnesses provide further
-  measured gains, while matrix-free primitives run at 1,008,864 parameters.
-  Their complete composition reproduces a sealed $H=26$ bracket in 9.21\,s
-  median using four forward Green probes, no transpose, and no randomized
-  output operator.
+  digits event.  We develop corrected-path relinearization, deterministic
+  neural-jet release, prefix streaming, and batched operator products to reduce
+  certificate cost without changing issued brackets.  In a frozen 15-case
+  audit, these refinements retain all 15 brackets while reducing Green
+  applications from 560 to 64 ($8.75\times$).  In a separate frozen
+  sweep-minimization audit, the directional remainder recovers three holdout
+  certificates under a three-sweep reference that the scalar remainder cannot
+  close.
 \end{enumerate}
-
-The operational distinction is straightforward.  A local clock proposes an
-event time.  \method{} additionally checks the realized finite-window dynamics
-and either returns a persistent first-passage bracket or declines to certify
-the proposal.
 
 \section{Problem and local clock}
 \label{sec:problem}
@@ -261,6 +250,15 @@ gives the exact identity
  \label{eq:fixedpoint}
 \end{equation}
 
+This identity separates the part of the trajectory error that is known from
+the part that remains to be certified.  The term $K_Hs$ is the signed
+first-order displacement caused by the realized reference-path defects, while
+$K_HN(h)$ is the unknown nonlinear remainder.  Rather than bounding the whole
+error in a tube centered at zero, \method{} centers the tube at a computed
+approximation to $K_Hs$.  The theorem asks whether the remaining nonlinear
+response fits inside a radius $E$ while the full tube stays within the domain
+where the derivative bound is valid.
+
 \begin{theorem}[Response-centered finite-window certificate]
 \label{thm:green}
 Assume that, for $1\le j<H$ and $\norm{u}\le\rho$,
@@ -314,7 +312,10 @@ interface, so neither causal response requires exact arithmetic.  Directly
 subtracting optimizer maps can be ill-conditioned when $q$ is quadratically
 small.  Appendix Corollary~\ref{cor:directional-two-response} instead forms
 $D^2G(c_j)[\widetilde z_j,\widetilde z_j]/2$ directionally and encloses its
-explicit cubic remainder.
+explicit cubic remainder.  That scalar enclosure still forgets how the known
+parameter correction is distributed across the network.  Appendix
+Corollary~\ref{cor:block-directional-remainder} carries a nonnegative
+fourth-order block majorant and leaves only one dual direction worst-case.
 
 \begin{corollary}[Zero-extra-operator response radius]
 \label{cor:radius}
@@ -555,6 +556,17 @@ use the matched specialization $\varrho=R=2Z$.
 \section{Frozen studies}
 \label{sec:protocol}
 
+\paragraph{Protocol terminology.}
+An \emph{eligible} checkpoint satisfies the prespecified trigger condition,
+and a \emph{trigger-only anchor} is chosen using trigger data without reading
+its future certification trajectory.  A \emph{candidate} is the resulting
+checkpoint--event pair.  \emph{Freezing} fixes a methodological choice before
+the relevant future outcome is inspected; \emph{sealing} records the method,
+candidate, or certificate before the outcome join.  An \emph{issued} candidate
+satisfies every closure and event-margin condition; otherwise \method{}
+abstains.  Post-seal analyses are labeled separately and never alter
+prospective issuance.
+
 We run four outcome-sealed cohorts on three task families; complete splits,
 hyperparameters, selectors, and seal provenance appear in
 Appendix~\ref{app:protocols}.  WDBC uses 24 fresh seeds, disjoint
@@ -593,10 +605,11 @@ one case has no trigger-only anchor.  Without inspecting a future
 certification trajectory, \method{} issues 56 singleton brackets across 22 of
 24 seeds.  After the sealed join, all 56 contain the first persistent crossing.
 Median lead is 79 optimizer updates and maximum lead is 256.  The four-sweep
-clock is exactly timed in all 59 cases with comparable certification-set
-timing; three of these gates are already present at the anchor.  The 15
-candidate abstentions are exactly the cases with no strictly future centerline
-event, including those three step-zero events.
+clock is exactly timed in all 59 candidates with a comparable finite
+certification-set event: the 56 strictly future crossings plus three gates
+already present at the anchor.  \method{} issues on the 56 strictly future
+cases.  The 15 candidate abstentions comprise those three step-zero events and
+12 cases with no strictly future centerline event.
 
 \begin{table}[H]
 \caption{Headline prospective/frozen studies.  Coverage is conditional on
@@ -616,6 +629,10 @@ Transformer response & 72 & 19 & 11 & 11/11 & fixed-$R$ baseline issues 10 \\
 \bottomrule
 \end{tabular}
 \end{table}
+
+The 63 WDBC and digits brackets additionally receive independent exact-real
+continuation audits.  The 20 Transformer certificates remain high-confidence
+numerical claims under the stated float64 and ideal-PRNG assumptions.
 
 Thresholds within a seed are correlated, so we do not attach event-level
 binomial confidence intervals to conditional coverage.  At the seed level,
@@ -782,6 +799,36 @@ defect from $8.57\times10^{-3}$ to $5.94\times10^{-8}$ ($1.44\times10^5$) and
 make timing errors $(-9,-1,-3)$ exact.  Each costs $H$ HVPs: the path is an
 a-posteriori pseudo-orbit solve, not a single-Hessian clock.
 
+\subsection{A directional fourth-order remainder removes one sweep}
+\label{sec:block-directional-result}
+
+The cancellation-safe second response contains three known copies of the
+parameter correction and one unknown dual direction.  Replacing all four by a
+single Euclidean operator norm was the dominant obstruction in a frozen
+three-sweep audit.  Corollary~\ref{cor:block-directional-remainder} instead
+propagates a polarized block majorant and maximizes only over the free slot.
+Across 14 nondevelopment cases, the resulting Taylor-sequence bound is smaller
+at every checkpoint; its ratio to the scalar bound ranges from
+$9.09\times10^{-5}$ to $1.02\times10^{-3}$, with median
+$3.45\times10^{-4}$ ($2{,}899\times$ tighter).
+
+Under the unchanged recorded Green bounds, three holdout closures that
+previously abstained now issue $[28,28]$, $[70,70]$, and $[118,118]$; the
+development row retains $[2,2]$.  All four brackets exactly match their sealed
+four-sweep comparators, and all strict event slacks exceed
+$1.36\times10^{-3}$.  Thus an adaptive rule can stop after three predeclared
+centerline sweeps on four of 15 records, saving four of 60 centerline sweeps in
+the fixed panel without changing its prospective coverage count.
+
+An independent bivariate mixed jet propagates only the coefficient of
+$t^3\varepsilon$ rather than materializing the degree-four polynomial.  It
+reproduces every checkpoint bound and closure decision with maximum relative
+error $4.19\times10^{-15}$.  Its median whole-case runtime improves
+$154.31\to115.92$ seconds ($1.33\times$); this misses the prespecified
+$2\times$ speed gate because centerline replay dominates, so we claim the
+equivalence and sweep saving, not a twofold end-to-end acceleration.  The
+audit is post-release, outcome-blind, and makes no new randomized query.
+
 \subsection{Computational scaling with batched operator products}
 
 Post-seal batching accelerates complete replay by $3.00/2.60\times$.  Anytime
@@ -880,6 +927,15 @@ deliver different guarantees.  \method{} propagates signed endogenous defect
 on the anchored optimizer orbit to a persistent event bracket.  Matrix-free tools
 \citep{pearlmutter1994hvp,kuczynski1992random} and inexact-Newton residual
 interfaces \citep{dembo1982inexact} make that causal certificate executable.
+The directional fourth-order construction also draws on classical
+polarization of symmetric multilinear forms \citep{thomas2014polarization}
+and multivariate Taylor-model arithmetic \citep{berz1998taylor}.  Taylor
+models have also been integrated with neural-controller reachability
+\citep{schilling2022taylor}, while recent neural verification preserves
+derivative information inside local reachability bounds
+\citep{sharifi2024hessian,entesari2026taylor}.  Here the
+polynomial is evaluated on an endogenous optimizer correction and feeds a
+finite-window first-passage closure rather than an exogenous input set.
 
 \ifdefined\arxivversion
 \begin{table}[t]
@@ -948,6 +1004,12 @@ window, and this small-model result does not resolve modern-scale closure.  The
 events are defined on fixed evaluation sets and coverage is conditional on
 issuance, so these are not population guarantees.
 
+The directional-block remainder is presently specialized to the same
+normalization-free Transformer and uses analytic block majorants rather than
+outward-rounded coefficient arithmetic.  Its post-release audit establishes
+theorem tightness and sweep reduction on a frozen panel; it is not counted as
+an additional prospective coverage experiment.
+
 The 63 direct 192-bit proofs begin at stored checkpoints.  The 204
 amplified-secant jets are outward at 192 bits conditional on stored dyadic
 inputs, whereas the upstream Transformer Green products, derivative envelopes,
@@ -965,7 +1027,9 @@ can be verified, and abstains otherwise.  Across the frozen studies, 83/83
 issued brackets cover and both inaccurate finite clocks abstain.  The final
 implementation preserves all 15 audited Transformer brackets while cutting
 Green work $560\to64$; deterministic neural jets remove every output probe in
-eight of those cases.  Their complete composition turns one sealed Transformer
+eight of those cases.  A directional block remainder additionally recovers
+three holdout certificates under a three-sweep reference while an independent
+mixed jet reproduces every local bound.  Their complete composition turns one sealed Transformer
 certificate from an hours-scale historical construction into a reproducible
 9.21-second proof object without changing its bracket.
 
@@ -1314,6 +1378,57 @@ For scaled momentum, only the gradient term is nonlinear; differentiating it
 twice and three times gives Eqs.~\eqref{eq:momentum-q2} and the stated
 fourth-objective bound.
 \end{proof}
+
+\begin{corollary}[Directional block remainder]
+\label{cor:block-directional-remainder}
+In Corollary~\ref{cor:directional-two-response}, decompose parameter space as
+the orthogonal sum $\Theta=\bigoplus_{b=1}^B\Theta_b$, with projections
+$\pi_b$.  For checkpoint $j$, let $a_j$ be the parameter component of
+$\widetilde z_j$ and $r_{j,b}=\|\pi_ba_j\|_2$.  Suppose that on
+$\theta_j+ta_j$, $0\le t\le1$, the symmetric fourth derivative of $F$ admits
+a nonnegative symmetric four-linear polarized block majorant
+$\mathcal P_{j,4}$:
+\begin{equation}
+ |D^4F(\theta_j+ta_j)[h_1,h_2,h_3,h_4]|
+ \le \mathcal P_{j,4}(s(h_1),s(h_2),s(h_3),s(h_4)),
+ \quad s(h)_b=\|\pi_bh\|_2.
+ \label{eq:polarized-block-majorant}
+\end{equation}
+This symmetry entails no loss: average any valid nonnegative four-linear
+majorant over all $4!$ slot permutations.  Symmetry of $D^4F$ preserves the
+inequality, and diagonal evaluation is unchanged.
+Write $P_{j,4}(s)=\mathcal P_{j,4}(s,s,s,s)$.  Then the scalar Taylor term in
+Eq.~\eqref{eq:directional-q2} may be replaced by
+\begin{equation}
+ \sigma_{\rm blk}=
+ \left\{\sum_{j=0}^{H-1}
+ \left(\frac{\sqrt2\,\eta}{24}
+ \|\nabla P_{j,4}(r_j)\|_2\right)^2\right\}^{1/2}.
+ \label{eq:block-directional-sigma}
+\end{equation}
+Consequently Eq.~\eqref{eq:directional-two-response} remains valid with
+$\sigma_2$ replaced by $\sigma_{\rm blk}$.
+\end{corollary}
+
+\begin{proof}
+For a unit dual direction $u$, put $t_b=\|\pi_bu\|_2$; orthogonality gives
+$\|t\|_2=1$.  Symmetry and homogeneity imply
+\begin{equation}
+ \mathcal P_{j,4}(r_j,r_j,r_j,t)
+ =\tfrac14\nabla P_{j,4}(r_j)^\top t
+ \le\tfrac14\|\nabla P_{j,4}(r_j)\|_2.
+\end{equation}
+Taylor's integral remainder for the objective gradient contributes another
+factor $1/6$.  The scaled-momentum map places the same parameter remainder in
+two state blocks with opposite signs, contributing $\sqrt2\eta$.  Taking the
+Euclidean sequence norm gives Eq.~\eqref{eq:block-directional-sigma}.
+\end{proof}
+
+The implementation obtains $P_{j,4}$ coefficientwise through nonnegative
+sum, product, affine-map, and smooth-composition rules.  A linear-cost
+alternative propagates only $D_t^k$ and $D_t^kD_\varepsilon$ for $k\le3$;
+the terminal $D_t^3D_\varepsilon$ coefficient is exactly the vector
+$\nabla P_{j,4}(r_j)/4$ and avoids materializing degree-four monomials.
 
 \begin{corollary}[Amplified-secant second response]
 \label{cor:amplified-secant}
@@ -2419,6 +2534,77 @@ was reused.  This was conservative: the stored bound exceeds the latent
 direct-aware bound by $1.11\times10^{-8}$ relatively, and no disposition,
 prefix, or bracket changes.  Both events and their hashes remain in the
 supplement rather than being silently repaired.
+
+\section{Directional block remainder and mixed-jet audit}
+\label{app:block-directional-audit}
+
+The post-release audit froze the 15-case corrected-path cohort, disclosed
+seed 366 at the 80\% gate as the development row, and reserved the other 14
+cases for the promotion decision.  It changed only the fourth-order Taylor
+term: centerlines, three-sweep corrections, domain radii, recorded
+family-calibrated Green bounds, drift constants, and event logic were inherited
+unchanged.  No future-outcome file was read and no new Gaussian vector was
+drawn.
+
+For the one-block Transformer, the analytic partition has 14 orthogonal blocks:
+joint token/position embedding; separate query, key, and value weight/bias
+blocks; attention output weight/bias; two feed-forward weight/bias pairs; and
+the readout.  Nonnegative derivative polynomials are propagated through
+attention, GELU, softmax, and cross entropy.  Segment values are inflated by a
+monotone first-order fixed point before the fourth-order majorant is evaluated.
+Product/chain-rule scalarization, exact partition, Euler homogeneity, and 12
+direct mixed-fourth autodiff tests all pass.
+
+\begin{table}[H]
+\caption{Frozen directional-block audit.  ``New'' means closure under the
+three-sweep rule where the scalar fourth-order comparator abstains; all event
+brackets already belong to the sealed four-sweep cohort and are not counted as
+new prospective coverage.}
+\label{tab:block-directional-audit}
+\centering
+\small
+\setlength{\tabcolsep}{8pt}
+\begin{tabular}{lr}
+\toprule
+Quantity & Result \\
+\midrule
+Cases / nondevelopment cases & 15 / 14 \\
+Directional/scalar ratio, holdout median & $3.45\times10^{-4}$ \\
+Holdout tightening, median (range) & $2{,}899\times$ ($977$--$10{,}997\times$) \\
+Three-sweep closures, scalar / directional & 1 / 4 \\
+New nondevelopment closures & 3 \\
+Issued / sealed bracket retained & 4/4 / 4/4 \\
+Issued offsets & 2, 28, 70, 118 \\
+Minimum strict event slack & $1.36\times10^{-3}$ \\
+Every checkpoint no weaker than scalar & yes \\
+Independent mixed-jet maximum relative error & $4.19\times10^{-15}$ \\
+Polynomial / mixed-jet median runtime & 154.31 / 115.92 s \\
+Whole-case runtime ratio / frozen gate & $1.33\times$ / $2\times$ (failed) \\
+Outcome files / new randomized queries & 0 / 0 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\linewidth]{../figures/paper_directional_block_remainder.pdf}
+  \caption{Directional fourth-order geometry in the complete frozen panel.
+  (a) Scalar-to-directional Taylor tightening; green bars are new holdout
+  closures, ochre is the disclosed development row, and gray cases still
+  abstain.  (b) The scalar rule closes one case, whereas the directional rule
+  closes four and returns the labeled sealed offsets.}
+  \label{fig:block-directional-audit}
+\end{figure}
+
+The independent implementation does not differentiate the stored polynomial.
+It propagates a bivariate jet in a known variable $t$ and a free block variable
+$\varepsilon$, retaining $D_t^k$ and $D_t^kD_\varepsilon$ for $k\le3$.
+Across all 15 cases it reproduces every local Taylor bound and closure decision.
+Its prespecified $2\times$ whole-case speed gate fails at $1.33\times$ because
+centerline replay remains dominant.  This negative timing gate is part of the
+result: the practical saving established here is one fewer predeclared
+centerline sweep on four records, not a twofold acceleration of the complete
+verifier.
 
 \section{Matched unsigned baseline and sweep audit}
 \label{app:mechanism}

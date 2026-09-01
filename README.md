@@ -16,6 +16,15 @@ digits, and two Transformer cohorts. All 83 revealed crossings fall inside the
 issued brackets. The 63 WDBC/digits brackets also survive independent 192-bit
 outward continuation.
 
+The v1.3 theorem release preserves the block geometry of the known correction
+inside the fourth-order Taylor remainder. On a frozen 15-case Transformer
+panel, the polarized directional bound is tighter than the scalar comparator
+at every checkpoint and by 2,899x at the holdout median (range 977--10,997x).
+It recovers three sealed holdout certificates one variational sweep earlier.
+An independently implemented mixed jet reproduces every bound and closure to
+maximum relative error 4.19e-15; its 1.33x whole-case speedup is reported
+without redefining the prespecified 2x gate, which it does not pass.
+
 The current theorem release also factors the scaled-momentum nonlinear
 remainder through its parameter forcing subspace. On the complete 15-case
 Green-evaluable Transformer cohort, the matched sealed audit preserves every
@@ -47,6 +56,14 @@ baseline.
   artifact chain.
 - [`STRUCTURED_PARAMETER_GREEN_THEOREM_V2.md`](STRUCTURED_PARAMETER_GREEN_THEOREM_V2.md)
   records the profiled forcing-subspace closure and explicit causal indexing.
+- [`DIRECTIONAL_BLOCK_REMAINDER_THEOREM_V2.md`](DIRECTIONAL_BLOCK_REMAINDER_THEOREM_V2.md)
+  states the maintained polarized three-known/one-free remainder theorem;
+  [`DIRECTIONAL_BLOCK_REMAINDER_SOURCE_SUPERSESSION.md`](DIRECTIONAL_BLOCK_REMAINDER_SOURCE_SUPERSESSION.md)
+  preserves the exact v1 source used by the frozen audit and proves the v2
+  statement is a symmetry clarification rather than a changed result.
+- [`DIRECTIONAL_BLOCK_REMAINDER_PROTOCOL.md`](DIRECTIONAL_BLOCK_REMAINDER_PROTOCOL.md)
+  and [`MIXED_DIRECTIONAL_JET_AUDIT_PROTOCOL.md`](MIXED_DIRECTIONAL_JET_AUDIT_PROTOCOL.md)
+  freeze the cohort and independent implementation audits.
 
 ## Quick verification
 

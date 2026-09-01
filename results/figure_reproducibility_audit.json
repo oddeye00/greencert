@@ -6,6 +6,7 @@
     "scripts/make_transformer_v3_anytime_figure.py",
     "scripts/paper_figure_new_evidence.py",
     "scripts/paper_figure_prefix_scaling.py",
+    "scripts/paper_figure_directional_block_remainder.py",
     "scripts/paper_figure_composed_runtime.py",
     "scripts/paper_figure_transformer_green_confirmation.py",
     "scripts/paper_figures_prospective.py"
@@ -18,6 +19,14 @@
     "figures/paper_composed_runtime.png": {
       "bytes": 97287,
       "sha256": "A130294FDB7820D14313A7BA27729E2DC20779C7CBBB0078A1F5818ECA293325"
+    },
+    "figures/paper_directional_block_remainder.pdf": {
+      "bytes": 22297,
+      "sha256": "04361807E1444BC4382D37FC2A1BDB6CA9E0626DEC5E512319B233799EE8ECE6"
+    },
+    "figures/paper_directional_block_remainder.png": {
+      "bytes": 145872,
+      "sha256": "9F91DBD89B34FD9327ECB8E3EDBB2B4112423C3329401CEA079974D9AF54887F"
     },
     "figures/paper_mechanism_scaling.pdf": {
       "bytes": 28072,

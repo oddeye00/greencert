@@ -1,0 +1,198 @@
+{
+  "status": "directional three-sweep event audit complete",
+  "evidence_boundary": "Outcome-blind deterministic audit of the four directional closures; no new Green query.",
+  "closure_parent_sha256": "C629B361DB1FAC4AC0F5AAACCF92EE14AED696FD05D539B9B207953A28778F04",
+  "event_parent_sha256": "C1A3203060C04A9D09AA4DA26AD5D0AEB62C20B04DD8AE972F606FA802FC913A",
+  "protocol_sha256": "AE0EDCDBAD54B63EC67761A99A61AB56E109A68459E2DC1B7491B7B075614E3A",
+  "script_sha256": "A3BAFCCB5ED773086D2C9D9AF47757491B4BF1E0542E214FC6A07C182C7BFB30",
+  "evaluated_closures": 4,
+  "issued": 4,
+  "retained_sealed_bracket": 4,
+  "new_nondevelopment_rows": 3,
+  "new_nondevelopment_issued": 3,
+  "new_nondevelopment_retained": 3,
+  "prespecified_practical_promotion_gate_passed": true,
+  "rows": [
+    {
+      "candidate": {
+        "seed": 366,
+        "threshold": 0.7,
+        "anchor": 1040
+      },
+      "development_row": false,
+      "horizon": 52,
+      "pipeline_diagnostics": [
+        {
+          "sweeps": 1,
+          "maximum_uncorrected_defect_norm": 0.06101217341784728,
+          "maximum_correction_norm": 0.05428641194637655,
+          "centerline_hvp_calls": 52
+        },
+        {
+          "sweeps": 2,
+          "maximum_uncorrected_defect_norm": 0.0007183443617287794,
+          "maximum_correction_norm": 0.0010274888819373103,
+          "centerline_hvp_calls": 104
+        },
+        {
+          "sweeps": 3,
+          "maximum_uncorrected_defect_norm": 1.3413841813580417e-07,
+          "maximum_correction_norm": 1.9818869901209335e-07,
+          "centerline_hvp_calls": 156
+        }
+      ],
+      "corrected_path_sha256": "15006DF27B4E5E8F586EEF774FF556639E86E08228D8B843CA9FB92214D8AA52",
+      "directional_remainder_radius": 1.4433289257886475e-21,
+      "neural_stage_value_domain_passed": true,
+      "issued": true,
+      "bracket": [
+        28,
+        28
+      ],
+      "logic_slack": 0.006937222006893437,
+      "sealed_four_sweep_bracket": [
+        28,
+        28
+      ],
+      "retains_sealed_four_sweep_bracket": true,
+      "maximum_output_margin_radius": 7.218765841398409e-17,
+      "outcome_files_read": 0
+    },
+    {
+      "candidate": {
+        "seed": 366,
+        "threshold": 0.8,
+        "anchor": 1120
+      },
+      "development_row": true,
+      "horizon": 26,
+      "pipeline_diagnostics": [
+        {
+          "sweeps": 1,
+          "maximum_uncorrected_defect_norm": 0.007492535291406142,
+          "maximum_correction_norm": 0.006609992567381372,
+          "centerline_hvp_calls": 26
+        },
+        {
+          "sweeps": 2,
+          "maximum_uncorrected_defect_norm": 8.89200066069525e-06,
+          "maximum_correction_norm": 1.3665823366025563e-05,
+          "centerline_hvp_calls": 52
+        },
+        {
+          "sweeps": 3,
+          "maximum_uncorrected_defect_norm": 2.4938350317582083e-11,
+          "maximum_correction_norm": 3.4507063316680336e-11,
+          "centerline_hvp_calls": 78
+        }
+      ],
+      "corrected_path_sha256": "3F2554407404FC13BE504A8EF79D706D875CB3EC97AD2A9A3610333E5CA17D6B",
+      "directional_remainder_radius": 4.408832010471472e-23,
+      "neural_stage_value_domain_passed": true,
+      "issued": true,
+      "bracket": [
+        2,
+        2
+      ],
+      "logic_slack": 0.001871344714423626,
+      "sealed_four_sweep_bracket": [
+        2,
+        2
+      ],
+      "retains_sealed_four_sweep_bracket": true,
+      "maximum_output_margin_radius": 2.32666357387511e-18,
+      "outcome_files_read": 0
+    },
+    {
+      "candidate": {
+        "seed": 366,
+        "threshold": 0.9,
+        "anchor": 1360
+      },
+      "development_row": false,
+      "horizon": 94,
+      "pipeline_diagnostics": [
+        {
+          "sweeps": 1,
+          "maximum_uncorrected_defect_norm": 0.02835202653045289,
+          "maximum_correction_norm": 0.010062218337428494,
+          "centerline_hvp_calls": 94
+        },
+        {
+          "sweeps": 2,
+          "maximum_uncorrected_defect_norm": 0.00017106752782783003,
+          "maximum_correction_norm": 0.00022731408431551618,
+          "centerline_hvp_calls": 188
+        },
+        {
+          "sweeps": 3,
+          "maximum_uncorrected_defect_norm": 2.3803723651078013e-08,
+          "maximum_correction_norm": 2.1538373440596506e-08,
+          "centerline_hvp_calls": 282
+        }
+      ],
+      "corrected_path_sha256": "FA7CB21B5837EA64991DE92E22A22D01361DF22B70C1ACE24C239EC0F524D6E3",
+      "directional_remainder_radius": 9.050696414768659e-21,
+      "neural_stage_value_domain_passed": true,
+      "issued": true,
+      "bracket": [
+        70,
+        70
+      ],
+      "logic_slack": 0.001362153181353641,
+      "sealed_four_sweep_bracket": [
+        70,
+        70
+      ],
+      "retains_sealed_four_sweep_bracket": true,
+      "maximum_output_margin_radius": 4.916533691029116e-16,
+      "outcome_files_read": 0
+    },
+    {
+      "candidate": {
+        "seed": 375,
+        "threshold": 0.8,
+        "anchor": 1800
+      },
+      "development_row": false,
+      "horizon": 142,
+      "pipeline_diagnostics": [
+        {
+          "sweeps": 1,
+          "maximum_uncorrected_defect_norm": 0.032177998180638635,
+          "maximum_correction_norm": 0.015050471532173034,
+          "centerline_hvp_calls": 142
+        },
+        {
+          "sweeps": 2,
+          "maximum_uncorrected_defect_norm": 0.00036217073534769635,
+          "maximum_correction_norm": 0.00046203898196780444,
+          "centerline_hvp_calls": 284
+        },
+        {
+          "sweeps": 3,
+          "maximum_uncorrected_defect_norm": 1.8838764723210958e-07,
+          "maximum_correction_norm": 1.8593654627143867e-07,
+          "centerline_hvp_calls": 426
+        }
+      ],
+      "corrected_path_sha256": "ECB8386B955E4508A24F09679A3DE7548063C8A48A6E48F234000039A9FCBFBA",
+      "directional_remainder_radius": 5.897963639235009e-20,
+      "neural_stage_value_domain_passed": true,
+      "issued": true,
+      "bracket": [
+        118,
+        118
+      ],
+      "logic_slack": 0.001558975782689732,
+      "sealed_four_sweep_bracket": [
+        118,
+        118
+      ],
+      "retains_sealed_four_sweep_bracket": true,
+      "maximum_output_margin_radius": 3.36112135943661e-15,
+      "outcome_files_read": 0
+    }
+  ],
+  "outcome_files_read": 0
+}

@@ -134,6 +134,15 @@ def main() -> None:
     anchor_fixed_independent = load(
         "results/anchor_fixed_structured_parameter_green_independent_audit.json"
     )
+    directional_block = load(
+        "results/transformer_directional_block_remainder_diagnostic.json"
+    )
+    directional_events = load(
+        "results/transformer_directional_three_sweep_event_audit.json"
+    )
+    mixed_directional = load(
+        "results/transformer_mixed_directional_cohort_audit.json"
+    )
 
     ts = transformer["summary"]
     studies = {
@@ -596,10 +605,59 @@ def main() -> None:
         "anchor-fixed median selected gain ratio changed",
     )
 
+    directional_holdout = directional_block["nondevelopment_cases"]
+    require(int(directional_holdout["cases"]) == 14, "directional holdout count changed")
+    require(
+        int(directional_holdout["newly_closed"]) == 3
+        and int(directional_holdout["closure_passed"]) == 3,
+        "directional holdout closure count changed",
+    )
+    require(
+        bool(directional_holdout["every_step_directional_no_larger"]),
+        "directional bound is no longer pointwise no weaker",
+    )
+    require(
+        close(
+            directional_holdout["median_directional_to_scalar_sequence_ratio"],
+            0.0003449712929298119,
+        ),
+        "directional holdout median tightening changed",
+    )
+    require(
+        bool(directional_block["prespecified_promotion_gate"]["passed"])
+        and int(directional_block["outcome_files_read"]) == 0,
+        "directional closure promotion boundary changed",
+    )
+    require(
+        (int(directional_events["issued"]), int(directional_events["retained_sealed_bracket"]))
+        == (4, 4),
+        "directional event issuance changed",
+    )
+    require(
+        int(directional_events["new_nondevelopment_issued"]) == 3
+        and bool(directional_events["prespecified_practical_promotion_gate_passed"])
+        and int(directional_events["outcome_files_read"]) == 0,
+        "directional event promotion boundary changed",
+    )
+    require(
+        bool(mixed_directional["all_local_and_closure_results_reproduced"])
+        and not bool(mixed_directional["prespecified_audit_passed"]),
+        "mixed directional equivalence/speed disposition changed",
+    )
+    require(
+        close(mixed_directional["maximum_local_relative_error"], 4.190858883233474e-15)
+        and close(mixed_directional["median_runtime_speedup"], 1.3311220163039459),
+        "mixed directional numerical audit changed",
+    )
+
     required_phrases = (
-        "56/72 WDBC, 7/24 digits, and 9/72 plus 11/72",
-        "all 83 subsequently revealed crossings lie in their",
-        "three of these gates are already present at the anchor",
+        "Across four frozen or outcome-sealed studies, all 83",
+        "issued brackets contain their subsequently revealed crossings",
+        "WDBC        & 72 & 71 & 56 & 56/56",
+        "Digits      & 24 & 24 & 7  & 7/7",
+        "Transformer fixed-$R$ & 72 & 23 & 9  & 9/9",
+        "Transformer response & 72 & 19 & 11 & 11/11",
+        "56 strictly future crossings plus three gates",
         "no strictly future centerline",
         "Coverage is conditional on",
         "not a population-generalization bound",
@@ -641,7 +699,7 @@ def main() -> None:
         "image screening under the same Gaussian event issues four cases",
         "Prefix streaming reduces centerline",
         "Deterministic neural-jet release",
-        "8/15 cases",
+        "complete 15-case operator cohort it preserves eight brackets",
         "1,432",
         "22,912",
         "$1.80\\times10^{-4}$",
@@ -666,6 +724,15 @@ def main() -> None:
         "$378\\times$ reduction",
         "$30.9\\times$ and $2.48\\times$ slower",
         "paper_composed_runtime.pdf",
+        "Directional block remainder",
+        "nonnegative symmetric four-linear polarized block majorant",
+        "average any valid nonnegative four-linear\nmajorant over all $4!$ slot permutations",
+        "$2{,}899\\times$ tighter",
+        "$[28,28]$, $[70,70]$, and $[118,118]$",
+        "$4.19\\times10^{-15}$",
+        "$154.31\\to115.92$ seconds ($1.33\\times$)",
+        "misses the prespecified\n$2\\times$ speed gate",
+        "paper_directional_block_remainder.pdf",
     )
     for phrase in required_phrases:
         require(phrase in paper, f"manuscript lost required scoped phrase: {phrase}")
@@ -818,6 +885,22 @@ def main() -> None:
             ],
             "composed_runtime_historical_cross_batch_ratio": composed_runtime[
                 "historical_to_optimized_cross_batch_ratio"
+            ],
+            "directional_block_new_holdout_closures": directional_holdout[
+                "newly_closed"
+            ],
+            "directional_block_median_ratio": directional_holdout[
+                "median_directional_to_scalar_sequence_ratio"
+            ],
+            "directional_event_issued": directional_events["issued"],
+            "mixed_directional_maximum_relative_error": mixed_directional[
+                "maximum_local_relative_error"
+            ],
+            "mixed_directional_median_runtime_speedup": mixed_directional[
+                "median_runtime_speedup"
+            ],
+            "mixed_directional_speed_gate_passed": mixed_directional[
+                "prespecified_audit_passed"
             ],
         },
         "checked_required_phrases": list(required_phrases),

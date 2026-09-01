@@ -36,6 +36,12 @@ REQUIRED = {
     "STRUCTURED_PARAMETER_GREEN_SOURCE_SUPERSESSION.md",
     "STRUCTURED_PARAMETER_GREEN_AUDIT_PROTOCOL_V2.md",
     "ANCHOR_FIXED_STRUCTURED_PARAMETER_GREEN_AUDIT_PROTOCOL.md",
+    "DIRECTIONAL_BLOCK_REMAINDER_THEOREM.md",
+    "DIRECTIONAL_BLOCK_REMAINDER_THEOREM_V2.md",
+    "DIRECTIONAL_BLOCK_REMAINDER_SOURCE_SUPERSESSION.md",
+    "DIRECTIONAL_BLOCK_REMAINDER_PROTOCOL.md",
+    "DIRECTIONAL_THREE_SWEEP_EVENT_PROTOCOL.md",
+    "MIXED_DIRECTIONAL_JET_AUDIT_PROTOCOL.md",
     "scripts/test_structured_parameter_green.py",
     "scripts/test_structured_parameter_green_v2.py",
     "scripts/structured_parameter_green_sealed_v1.py",
@@ -47,6 +53,19 @@ REQUIRED = {
     "results/structured_parameter_green_independent_audit.json",
     "results/anchor_fixed_structured_parameter_green_transformer_audit.json",
     "results/anchor_fixed_structured_parameter_green_independent_audit.json",
+    "scripts/transformer_directional_fourth_bound.py",
+    "scripts/test_transformer_directional_fourth_bound.py",
+    "scripts/test_directional_block_symmetrization.py",
+    "scripts/verify_directional_block_theorem_supersession.py",
+    "scripts/diagnose_transformer_directional_block_remainder.py",
+    "scripts/audit_transformer_directional_three_sweep_events.py",
+    "scripts/transformer_mixed_directional_jet.py",
+    "scripts/test_transformer_mixed_directional_jet.py",
+    "scripts/audit_transformer_mixed_directional_cohort.py",
+    "scripts/paper_figure_directional_block_remainder.py",
+    "results/transformer_directional_block_remainder_diagnostic.json",
+    "results/transformer_directional_three_sweep_event_audit.json",
+    "results/transformer_mixed_directional_cohort_audit.json",
     "scripts/reproduce_figures.py",
     "scripts/audit_transformer_v3_streaming_direct_analytic.py",
     "scripts/benchmark_transformer_v3_streaming_direct_analytic.py",
@@ -69,6 +88,7 @@ FIGURES = (
     "paper_transformer_green_confirmation",
     "paper_prospective_horizons",
     "paper_prospective_brackets",
+    "paper_directional_block_remainder",
 )
 
 
@@ -157,26 +177,70 @@ def main() -> None:
     paper_pdf = root / "paper" / "greencert_arxiv.pdf"
     paper_reader = PdfReader(paper_pdf)
     paper_metadata = paper_reader.metadata or {}
-    if len(paper_reader.pages) != 40:
+    if len(paper_reader.pages) != 43:
         raise AssertionError(f"unexpected public preprint length: {len(paper_reader.pages)}")
     if str(paper_metadata.get("/Author", "")) != "Ian Rhee":
         raise AssertionError("public preprint author metadata changed")
     release = json.loads(
         (root / "paper" / "greencert_arxiv_release.json").read_text(encoding="utf-8")
     )
-    if int(release["pages"]) != 40 or release["pdf"]["sha256"] != digest(paper_pdf):
+    if int(release["pages"]) != 43 or release["pdf"]["sha256"] != digest(paper_pdf):
         raise AssertionError("public preprint and arXiv release manifest differ")
+    release_payloads = {
+        "source_bundle": root / "paper" / "greencert_arxiv_source.zip",
+        "supplement": root / "paper" / "greencert_supplement.zip",
+    }
+    for key, path in release_payloads.items():
+        if (
+            release[key]["sha256"] != digest(path)
+            or int(release[key]["bytes"]) != path.stat().st_size
+        ):
+            raise AssertionError(f"public {key} and arXiv release manifest differ")
 
     expected_audits = {
         "results/structured_parameter_green_independent_audit.json":
             "INDEPENDENT STRUCTURED PARAMETER GREEN AUDIT PASSED",
         "results/anchor_fixed_structured_parameter_green_independent_audit.json":
             "INDEPENDENT ANCHOR-FIXED STRUCTURED AUDIT PASSED",
+        "results/transformer_directional_block_remainder_diagnostic.json":
+            "directional block remainder cohort diagnostic complete",
+        "results/transformer_directional_three_sweep_event_audit.json":
+            "directional three-sweep event audit complete",
+        "results/transformer_mixed_directional_cohort_audit.json":
+            "mixed directional cohort audit complete",
     }
     for relative, status in expected_audits.items():
         record = json.loads((root / relative).read_text(encoding="utf-8"))
         if record.get("status") != status:
             raise AssertionError(f"public independent audit status changed: {relative}")
+
+    directional = json.loads(
+        (root / "results/transformer_directional_block_remainder_diagnostic.json")
+        .read_text(encoding="utf-8")
+    )
+    holdout = directional["nondevelopment_cases"]
+    if (
+        not holdout["every_step_directional_no_larger"]
+        or int(holdout["newly_closed"]) != 3
+    ):
+        raise AssertionError("directional block promotion invariants changed")
+    event = json.loads(
+        (root / "results/transformer_directional_three_sweep_event_audit.json")
+        .read_text(encoding="utf-8")
+    )
+    if int(event["issued"]) != 4 or int(event["retained_sealed_bracket"]) != 4:
+        raise AssertionError("directional event-retention invariants changed")
+    mixed = json.loads(
+        (root / "results/transformer_mixed_directional_cohort_audit.json")
+        .read_text(encoding="utf-8")
+    )
+    if (
+        not mixed["all_local_and_closure_results_reproduced"]
+        or float(mixed["maximum_local_relative_error"]) > 3.0e-12
+    ):
+        raise AssertionError("mixed directional equivalence invariants changed")
+    if mixed["prespecified_audit_passed"]:
+        raise AssertionError("failed mixed-jet speed gate was silently reclassified")
 
     manifest = json.loads((root / "PUBLIC_MANIFEST_SHA256.json").read_text(encoding="utf-8"))
     manifest_files = set(manifest["files"])
@@ -203,7 +267,7 @@ def main() -> None:
         "matplotlib_figures": figure_rows,
         "manifest_verified": True,
         "preprint_pages": len(paper_reader.pages),
-        "structured_parameter_audits_verified": len(expected_audits),
+        "claim_audits_verified": len(expected_audits),
     }
     print(json.dumps(report, indent=2, sort_keys=True))
 

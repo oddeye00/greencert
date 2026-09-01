@@ -19,7 +19,7 @@ OUT_PDF = ROOT / "output" / "pdf" / "greencert_arxiv.pdf"
 OUT_ZIP = OUT_DIR / "greencert_arxiv_source.zip"
 OUT_MANIFEST = OUT_DIR / "greencert_arxiv_release.json"
 JOB = "certified_local_training_events_arxiv"
-EXPECTED_PAGES = 40
+EXPECTED_PAGES = 43
 SOURCE_DATE_EPOCH = "1787961600"  # 2026-08-29 00:00:00 UTC
 SUPPLEMENT_CANDIDATES = (
     ROOT / "output" / "certified_local_training_events_supplement.zip",
@@ -46,6 +46,9 @@ SOURCE_MAP = {
     ),
     ROOT / "figures" / "paper_relinearized_prefix_panel.pdf": Path(
         "figures/paper_relinearized_prefix_panel.pdf"
+    ),
+    ROOT / "figures" / "paper_directional_block_remainder.pdf": Path(
+        "figures/paper_directional_block_remainder.pdf"
     ),
     ROOT / "figures" / "paper_composed_runtime.pdf": Path(
         "figures/paper_composed_runtime.pdf"

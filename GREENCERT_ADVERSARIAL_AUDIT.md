@@ -1,6 +1,6 @@
 # GREENCERT adversarial submission audit
 
-Date: 2026-08-29
+Date: 2026-08-31
 
 Recommended NeurIPS 2026 contribution type: **Theory**. The paper's primary
 contribution is the response-centered finite-window theorem and executable
@@ -43,6 +43,7 @@ with large-model predictive baselines.
 | Signed propagation is cosmetic. | It retains the 147-step digits event and 8/9 fixed-radius Transformer certificates that the matched unsigned construction loses; median zero-order inflation is about 320x. | Closed for the matched scalar-Euclidean comparator. Do not generalize to every unsigned validator. |
 | Classical shadowing makes the work unoriginal. | The paper differentiates the delivered object: an anchor-preserved realized optimizer orbit, endogenous signed defect, neural derivative transport, and persistent first-passage bracket/abstention. The current sweep also covers certified learned dynamics, Certified Grokking, 2026 barrier robustness for poisoned training trajectories, and time-uniform stopping for strongly convex SGD. No “first known” claim is used. | Mitigated; synthesis novelty remains judge-dependent. |
 | The theorem is too conservative to issue. | Response centering previously increased median rigorous horizon about 5.6x. The cancellation-safe corollary closes all 15 Green-evaluable sealed records rather than 11, converts four abstentions, and advances five closures. Corrected-path relinearization removes the mixed term. A frozen cohort-wide 4/8/16 release then preserves all 15 directional brackets: 14 stop at four probes and one at eight, reducing Green Gram applications 560 to 64 (8.75x) with minimum forcing headroom 2.293x. Frozen prospective counts remain unchanged. | Strongly mitigated mathematically and across the full evaluable cohort; fresh prospective use of the sharpened branch remains open. |
+| The scalar fourth-order remainder discards the very directionality the method claims to exploit. | A polarized block-majorant corollary keeps the three realized correction slots and maximizes only the remaining dual slot. On all 14 holdout cases it is no weaker at every checkpoint and is 2,899x tighter at the median (977--10,997x), converting three three-sweep abstentions into the already sealed brackets. An independent mixed jet reproduces every bound and closure to 4.19e-15 relative error. | Closed mathematically and on the frozen panel; the result is a post-release sweep reduction, not new prospective coverage. |
 | Corrected-path relinearization silently assumes more than the original drift condition. | The corollary explicitly assumes pairwise Jacobian Lipschitzness on the local ball, which follows from the bounded-Hessian envelopes used in the implementation. Its proof no longer attempts to infer a pairwise bound from center-relative drift. | Closed in the theorem statement and proof. |
 | Literal corrected-path defects are numerically meaningless at the relevant scale. | The first frozen audit is retained as a failed interface: direct float64 subtraction yields norm `3.10e-15` and a negative discriminant. The replacement uses the exact identity `bar_s=N(v)-r^v` and an amplified secant, never subtracting nearly equal optimizer maps. | Closed at the scalar-forcing layer; outward response recurrence remains open. |
 | HVP accounting hides the cost of 1,797 directional third products. | A four-repeat alternating-order benchmark on immutable seed 366, gate 70%, H=52 first gives 2.91x versus an extra Gram power. The stronger matched three-way audit includes every branch-specific fourth-order envelope: the amplified secant takes 6.56 s median, third-order AD takes 8.10 s, and the next 16-probe power takes 26.01 s. The secant is 1.19x faster than third-order AD and 4.04x faster than the replaced power; every power/secant pair is 3.82--4.37x. Independent hash/arithmetic auditors read no outcomes. | Closed for the demonstrated incremental choice; absolute latency and full-cohort timing remain machine/load dependent. |
@@ -116,7 +117,8 @@ object, a sharpened theorem that materially changes issuance, four frozen
 cohorts, independent exact-real audits where feasible, selective rejection,
 directional ablations, local residual interfaces across every expensive linear
 stage, a cancellation-safe theorem that converts four abstentions, a
-corrected-path theorem that removes the mixed term, a full-sequence 192-bit
+corrected-path theorem that removes the mixed term, a directional fourth-order
+theorem that recovers three sealed holdout certificates one sweep earlier, a full-sequence 192-bit
 scalar Transformer primitive, and a cohort-wide same-bracket 8.75x Green-work
 reduction with exact prefix streaming. A 6/6 claim
 would still require either end-to-end closure at materially larger/modern scale

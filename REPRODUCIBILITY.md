@@ -43,6 +43,11 @@ python reproduce.py smoke
 This tier checks core Green recurrences, both structured parameter-forcing
 implementations, variational recentering, inexact operator interfaces, event
 transport, deterministic neural-jet release, and the manuscript claim ledger.
+It also checks the polarized directional fourth-order algebra, exact block
+partition, mixed-derivative autodiff majorization, and the independent
+linear-cost mixed-jet implementation. The immutable-v1/maintained-v2 source
+bridge additionally verifies the explicit slot-symmetrization lemma and all
+three source hashes.
 Its first-passage check exhaustively enumerates
 109,152 valid lower/true/upper finite-window paths, including no-event cases,
 and compares both independent bracket implementations. It does not retrain the
@@ -107,6 +112,22 @@ The committed reference median is 9.206 seconds for the certificate, versus
 0.298 seconds for 26 matched direct updates and 3.718 seconds for 300. Timing
 comparisons are platform-specific; bracket and hash checks are the scientific
 invariants.
+
+The v1.3 directional-remainder chain can be recomputed separately:
+
+```bash
+python scripts/diagnose_transformer_directional_block_remainder.py --workers 3
+python scripts/audit_transformer_directional_three_sweep_events.py
+python scripts/audit_transformer_mixed_directional_cohort.py --workers 3
+```
+
+These commands read no revealed outcomes and draw no new randomized Green
+query. They intentionally refresh tracked diagnostic JSON, including
+machine-dependent timing fields, so run them in a disposable clone when an
+unchanged working tree is desired. The invariant outputs are: directional no
+weaker than scalar at every checkpoint, three new nondevelopment closures,
+four retained sealed brackets, and maximum mixed-jet relative discrepancy at
+most 3e-12. The original whole-case 2x speed gate remains failed.
 
 ## Tier 4: validated WDBC/digits replay
 
@@ -219,6 +240,11 @@ The release-level audit requires:
   Green sweeps reduced from 112 to 96;
 - 15/15 anchor-zero brackets preserved, with the prespecified strict systems
   promotion gate correctly failing at 96 to 96 sweeps;
+- the directional fourth-order bound no larger at every frozen checkpoint,
+  with three nondevelopment three-sweep closures and four sealed brackets
+  retained;
+- the independent mixed jet reproducing all 15 closure decisions and every
+  local bound to maximum relative error at most 3e-12;
 - deterministic figure regeneration;
 - no local absolute paths, credential-shaped strings, or files over GitHub's
   100 MB limit in the public repository.

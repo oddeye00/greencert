@@ -27,6 +27,10 @@ TIERS = {
         "scripts/test_prefix_gram_enclosure.py",
         "scripts/test_direct_image_green_bound.py",
         "scripts/test_analytic_jet_release.py",
+        "scripts/verify_directional_block_theorem_supersession.py",
+        "scripts/test_directional_block_symmetrization.py",
+        "scripts/test_transformer_directional_fourth_bound.py",
+        "scripts/test_transformer_mixed_directional_jet.py",
         "scripts/audit_greencert_manuscript_claims.py",
     ),
     "artifact-audit": (
