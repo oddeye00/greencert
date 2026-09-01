@@ -604,3 +604,4 @@ def directional_objective_fourth_bound(
         "fixed_point_consistent": True,
         "maximum_stage_inflation": max(inflation.values(), default=0.0),
     }
+

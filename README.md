@@ -84,6 +84,20 @@ python scripts/reproduce_figures.py --check-determinism
 python scripts/audit_transformer_v3_streaming_direct_analytic.py
 ```
 
+The complete v1.3 directional replay is also fresh-clone executable. Nine
+compact, hash-locked sparse checkpoint archives contain the 15 exact
+parameter/velocity anchors actually used by the study, avoiding regeneration
+of 287 MB of full trajectories. A single aggregate archive duplicates the same
+arrays for independent integrity checks:
+
+```bash
+python scripts/transformer_directional_anchor_bundle.py
+python scripts/audit_directional_replay_dependency_closure.py
+python scripts/diagnose_transformer_directional_block_remainder.py --workers 3
+python scripts/audit_transformer_directional_three_sweep_events.py
+python scripts/audit_transformer_mixed_directional_cohort.py --workers 3
+```
+
 Windows activation:
 
 ```powershell

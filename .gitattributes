@@ -8,3 +8,12 @@
 # include the original terminal blank line.
 scripts/structured_parameter_green_sealed_v1.py whitespace=-blank-at-eof
 scripts/test_structured_parameter_green_sealed_v1.py whitespace=-blank-at-eof
+DIRECTIONAL_BLOCK_REMAINDER_PROTOCOL.md whitespace=-blank-at-eof
+DIRECTIONAL_BLOCK_REMAINDER_THEOREM.md whitespace=-blank-at-eof
+DIRECTIONAL_THREE_SWEEP_EVENT_PROTOCOL.md whitespace=-blank-at-eof
+MIXED_DIRECTIONAL_JET_AUDIT_PROTOCOL.md whitespace=-blank-at-eof
+scripts/audit_transformer_mixed_directional_cohort.py whitespace=-blank-at-eof
+scripts/diagnose_transformer_directional_block_remainder.py whitespace=-blank-at-eof
+scripts/paper_figure_directional_block_remainder.py whitespace=-blank-at-eof
+scripts/test_transformer_mixed_directional_jet.py whitespace=-blank-at-eof
+scripts/transformer_directional_fourth_bound.py whitespace=-blank-at-eof

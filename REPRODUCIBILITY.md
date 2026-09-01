@@ -47,7 +47,9 @@ It also checks the polarized directional fourth-order algebra, exact block
 partition, mixed-derivative autodiff majorization, and the independent
 linear-cost mixed-jet implementation. The immutable-v1/maintained-v2 source
 bridge additionally verifies the explicit slot-symmetrization lemma and all
-three source hashes.
+three source hashes. It also verifies the transitive Python/data dependency
+closure of all three directional replay entry points and all 15 exact anchor
+states in the compact deterministic anchor bundle.
 Its first-passage check exhaustively enumerates
 109,152 valid lower/true/upper finite-window paths, including no-event cases,
 and compares both independent bracket implementations. It does not retrain the
@@ -116,11 +118,19 @@ invariants.
 The v1.3 directional-remainder chain can be recomputed separately:
 
 ```bash
+python scripts/transformer_directional_anchor_bundle.py
+python scripts/audit_directional_replay_dependency_closure.py
 python scripts/diagnose_transformer_directional_block_remainder.py --workers 3
 python scripts/audit_transformer_directional_three_sweep_events.py
 python scripts/audit_transformer_mixed_directional_cohort.py --workers 3
 ```
 
+The 15 exact parameter/velocity anchors required by these commands are shipped
+in nine timestamp-fixed sparse NumPy archives totaling 3.18 MB. A separate
+aggregate archive contains the same 30 arrays. Every array is linked to its
+blind training record and original full checkpoint archive by SHA-256, so this
+replay does not require retraining or downloading the nine 31.9 MB trajectory
+files.
 These commands read no revealed outcomes and draw no new randomized Green
 query. They intentionally refresh tracked diagnostic JSON, including
 machine-dependent timing fields, so run them in a disposable clone when an
@@ -176,15 +186,26 @@ protocols provide the authoritative command lines and seeds:
 - `TRANSFORMER_GREEN_CONFIRMATION_PROTOCOL.md`;
 - `TRANSFORMER_V3_CONFIRMATION_PROTOCOL.md`.
 
-Large Transformer checkpoints are regenerated rather than committed. Compact
+Complete Transformer trajectories are regenerated rather than committed. Compact
 training summaries, candidate records, certificate records, outcomes, and
-independent audits are all tracked.
-
-For the seed-366 development audits, regenerate the omitted 31.9 MB archive
-directly from the committed blind trigger record:
+independent audits are all tracked. The directional study additionally ships
+its 15 exact anchor states because those are sufficient for the complete v1.3
+derivative replay. Given regenerated full archives, rebuild that deterministic
+bundle with:
 
 ```bash
-python scripts/regenerate_transformer_checkpoint.py --seed 366
+python scripts/transformer_directional_anchor_bundle.py \
+  --build-from-checkpoints /path/to/full-checkpoint-run \
+  --output-root /path/to/greencert-checkout
+```
+
+For the seed-366 development audits, regenerate the complete 31.9 MB archive
+directly from the committed blind trigger record. Run this in a disposable
+checkout because `--force` replaces the shipped sparse archive at the same
+path:
+
+```bash
+python scripts/regenerate_transformer_checkpoint.py --seed 366 --force
 ```
 
 The command retrains the frozen configuration, compares every trigger-visible

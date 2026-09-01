@@ -10,6 +10,9 @@ from pathlib import Path
 
 from pypdf import PdfReader
 
+from audit_directional_replay_dependency_closure import build_record as build_directional_dependency_record
+from transformer_directional_anchor_bundle import verify as verify_directional_anchor_bundle
+
 
 TEXT_SUFFIXES = {
     ".bib", ".cff", ".csv", ".in", ".json", ".md", ".py", ".sty",
@@ -42,7 +45,10 @@ REQUIRED = {
     "DIRECTIONAL_BLOCK_REMAINDER_PROTOCOL.md",
     "DIRECTIONAL_THREE_SWEEP_EVENT_PROTOCOL.md",
     "MIXED_DIRECTIONAL_JET_AUDIT_PROTOCOL.md",
+    "ADAPTIVE_SWEEP_COHORT_PROTOCOL.md",
+    "TRANSFORMER_V3_METHOD_SEAL.json",
     "scripts/test_structured_parameter_green.py",
+    "scripts/test_progressive_gram_bound.py",
     "scripts/test_structured_parameter_green_v2.py",
     "scripts/structured_parameter_green_sealed_v1.py",
     "scripts/test_structured_parameter_green_sealed_v1.py",
@@ -62,10 +68,19 @@ REQUIRED = {
     "scripts/transformer_mixed_directional_jet.py",
     "scripts/test_transformer_mixed_directional_jet.py",
     "scripts/audit_transformer_mixed_directional_cohort.py",
+    "scripts/audit_transformer_adaptive_sweep_cohort.py",
+    "scripts/corrected_path_closure.py",
+    "scripts/audit_directional_replay_dependency_closure.py",
+    "scripts/transformer_directional_anchor_bundle.py",
+    "scripts/test_transformer_directional_sparse_checkpoint_loader.py",
     "scripts/paper_figure_directional_block_remainder.py",
     "results/transformer_directional_block_remainder_diagnostic.json",
     "results/transformer_directional_three_sweep_event_audit.json",
     "results/transformer_mixed_directional_cohort_audit.json",
+    "results/transformer_fully_recentered_three_sweep_audit.json",
+    "results/directional_replay_dependency_closure.json",
+    "results/transformer_directional_anchor_states.npz",
+    "results/transformer_directional_anchor_states_manifest.json",
     "scripts/reproduce_figures.py",
     "scripts/audit_transformer_v3_streaming_direct_analytic.py",
     "scripts/benchmark_transformer_v3_streaming_direct_analytic.py",
@@ -78,6 +93,9 @@ REQUIRED = {
     "results/transformer_v3_streaming_direct_analytic_seed_366_gate_1_anchor_1120_replicate-1.json",
     "results/transformer_v3_streaming_direct_analytic_seed_366_gate_1_anchor_1120_replicate-2.json",
     "results/transformer_v3_streaming_direct_analytic_seed_366_gate_1_anchor_1120_replicate-3.json",
+} | {
+    f"results/transformer_hvp_prospective_seed_{seed}.checkpoints.npz"
+    for seed in (360, 361, 366, 369, 370, 372, 373, 375, 378)
 }
 FIGURES = (
     "paper_transformer_v3_anytime",
@@ -197,6 +215,14 @@ def main() -> None:
         ):
             raise AssertionError(f"public {key} and arXiv release manifest differ")
 
+    v3_method_seal = json.loads(
+        (root / "TRANSFORMER_V3_METHOD_SEAL.json").read_text(encoding="utf-8")
+    )
+    for relative, expected in v3_method_seal["code_manifest"].items():
+        path = root / relative
+        if not path.is_file() or digest(path) != expected:
+            raise AssertionError(f"v3 method-seal source mismatch: {relative}")
+
     expected_audits = {
         "results/structured_parameter_green_independent_audit.json":
             "INDEPENDENT STRUCTURED PARAMETER GREEN AUDIT PASSED",
@@ -242,6 +268,19 @@ def main() -> None:
     if mixed["prespecified_audit_passed"]:
         raise AssertionError("failed mixed-jet speed gate was silently reclassified")
 
+    directional_dependency_path = (
+        root / "results/directional_replay_dependency_closure.json"
+    )
+    committed_directional_dependency = json.loads(
+        directional_dependency_path.read_text(encoding="utf-8")
+    )
+    rebuilt_directional_dependency = build_directional_dependency_record()
+    if committed_directional_dependency != rebuilt_directional_dependency:
+        raise AssertionError("directional replay dependency lock is stale")
+    directional_anchor_audit = verify_directional_anchor_bundle(root)
+    if int(directional_anchor_audit["anchors"]) != 15:
+        raise AssertionError("directional anchor bundle cardinality changed")
+
     manifest = json.loads((root / "PUBLIC_MANIFEST_SHA256.json").read_text(encoding="utf-8"))
     manifest_files = set(manifest["files"])
     actual_files = {
@@ -267,7 +306,9 @@ def main() -> None:
         "matplotlib_figures": figure_rows,
         "manifest_verified": True,
         "preprint_pages": len(paper_reader.pages),
-        "claim_audits_verified": len(expected_audits),
+        "claim_audits_verified": len(expected_audits) + 1,
+        "directional_anchors_verified": int(directional_anchor_audit["anchors"]),
+        "v3_method_seal_files_verified": len(v3_method_seal["code_manifest"]),
     }
     print(json.dumps(report, indent=2, sort_keys=True))
 

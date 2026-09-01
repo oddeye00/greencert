@@ -123,3 +123,4 @@ event logic, or future-outcome firewall.  It is currently implemented for the
 one-block normalization-free Transformer covered by the existing analytic
 jets.  A cohort result is not claimed until the frozen diagnostic in
 `DIRECTIONAL_BLOCK_REMAINDER_PROTOCOL.md` passes.
+

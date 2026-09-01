@@ -20,6 +20,7 @@ TIERS = {
         "scripts/structured_parameter_green_source_bridge.py",
         "scripts/test_one_shot_signed_recenter.py",
         "scripts/test_online_progressive_gram.py",
+        "scripts/test_progressive_gram_bound.py",
         "scripts/test_predictable_failure_budget.py",
         "scripts/test_inexact_anytime_gram.py",
         "scripts/test_response_centered_event_transport.py",
@@ -31,6 +32,9 @@ TIERS = {
         "scripts/test_directional_block_symmetrization.py",
         "scripts/test_transformer_directional_fourth_bound.py",
         "scripts/test_transformer_mixed_directional_jet.py",
+        "scripts/transformer_directional_anchor_bundle.py",
+        "scripts/test_transformer_directional_sparse_checkpoint_loader.py",
+        "scripts/audit_directional_replay_dependency_closure.py",
         "scripts/audit_greencert_manuscript_claims.py",
     ),
     "artifact-audit": (
