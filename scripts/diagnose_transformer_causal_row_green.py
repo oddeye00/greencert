@@ -20,14 +20,18 @@ import torch
 
 from analytic_jet_release import logit_margin_radius, scaled_momentum_jacobian_drift
 from audit_transformer_adaptive_sweep_cohort import first_persistent, raw_slacks, scaled, unscaled
-from batched_green_operator import make_batched_transformer_green_products
+from batched_green_operator import (
+    make_batched_causal_green_products,
+    make_batched_scaled_optimizer_products,
+    make_batched_transformer_green_products,
+)
 from causal_row_green import (
     causal_row_quadratic_envelope,
     rowwise_signed_affine_bounds,
     simultaneous_row_direct_image_bounds,
 )
 from corrected_path_closure import exact_corrected_path_closure
-from transformer_block_envelope import ball_valid_envelope
+from transformer_block_envelope import ball_valid_envelope, objective_hessian_lipschitz
 from transformer_certificate_protocol import Candidate
 from transformer_hvp_grokking import logits
 from transformer_mixed_directional_jet_v2 import mixed_directional_objective_bounds
@@ -105,9 +109,22 @@ def run(
     defect_route: str,
     *,
     family_delta: float = FAMILY_DELTA,
+    closure_channel: str = "full_state",
+    probe_chunk_size: int | None = None,
+    probe_stream_size: int | None = None,
+    probe_offset: int = 0,
 ) -> dict:
     if defect_route not in {"quadratic", "response_free"}:
         raise ValueError("unknown defect route")
+    if closure_channel not in {"full_state", "structured_parameter"}:
+        raise ValueError("unknown closure channel")
+    if closure_channel == "structured_parameter" and defect_route != "quadratic":
+        raise ValueError("structured parameter closure requires the quadratic route")
+    if probe_chunk_size is not None and probe_chunk_size < 1:
+        raise ValueError("probe_chunk_size must be positive")
+    stream_size = probes if probe_stream_size is None else int(probe_stream_size)
+    if stream_size < probes or probe_offset < 0 or probe_offset + probes > stream_size:
+        raise ValueError("probe block lies outside the declared probe stream")
     started = time.perf_counter()
     timing: dict[str, float] = {}
     source = parent_row(candidate)
@@ -185,6 +202,7 @@ def run(
     phase = time.perf_counter()
     quadratic_rows = [torch.zeros_like(correction_rows[0])]
     forcing_errors = [float(torch.linalg.vector_norm(recurrence_rows[0]))]
+    gradient_forcing_errors = [0.0]
     mixed_rows = []
     quadratic_seconds = 0.0
     mixed_seconds = 0.0
@@ -217,6 +235,7 @@ def run(
         directional_error = math.sqrt(2.0) * eta * local_error
         recurrence = float(torch.linalg.vector_norm(recurrence_rows[step]))
         forcing_errors.append(directional_error + recurrence)
+        gradient_forcing_errors.append(local_error)
         mixed_rows.append(
             {
                 "step": step,
@@ -259,42 +278,137 @@ def run(
         )
         for step in range(1, horizon)
     ]
+    parameter_curvature = [0.0] + [
+        objective_hessian_lipschitz(
+            first=float(blocks[step - 1]["first"]),
+            second=float(blocks[step - 1]["second"]),
+            third=float(blocks[step - 1]["third"]),
+        )
+        for step in range(1, horizon)
+    ]
     timing["corrected_path_neural_jets"] = time.perf_counter() - phase
 
     phase = time.perf_counter()
-    batch_apply, _ = make_batched_transformer_green_products(
-        corrected[:horizon, :dimension],
-        train_pairs,
-        train_labels,
-        template,
-        spec,
-        config,
-    )
     generator = torch.Generator(device=center.device).manual_seed(
-        probe_seed(candidate, sweeps, probes)
+        probe_seed(candidate, sweeps, stream_size)
     )
-    gaussian = torch.randn(
-        probes,
-        horizon * 2 * dimension,
-        generator=generator,
-        dtype=center.dtype,
-        device=center.device,
-    )
-    if defect_route == "quadratic":
-        combined = torch.cat((gaussian, quadratic.reshape(1, -1)), dim=0)
+    chunk_size = probes if probe_chunk_size is None else min(probes, probe_chunk_size)
+    green_batches = 0
+
+    def evaluate_probe_chunks(
+        apply,
+        probe_rows: torch.Tensor,
+        known_row: torch.Tensor | None,
+    ) -> tuple[torch.Tensor, torch.Tensor | None]:
+        nonlocal green_batches
+        image_blocks = []
+        known_image = None
+        for start in range(0, probes, chunk_size):
+            stop = min(probes, start + chunk_size)
+            rows = probe_rows[start:stop]
+            append_known = start == 0 and known_row is not None
+            if append_known:
+                rows = torch.cat((rows, known_row), dim=0)
+            images = apply(rows).reshape(rows.shape[0], horizon, 2 * dimension)
+            image_blocks.append(images[: stop - start])
+            if append_known:
+                known_image = images[-1]
+            green_batches += 1
+        return torch.cat(image_blocks, dim=0), known_image
+
+    if closure_channel == "full_state":
+        batch_apply, _ = make_batched_transformer_green_products(
+            corrected[:horizon, :dimension],
+            train_pairs,
+            train_labels,
+            template,
+            spec,
+            config,
+        )
+        if probe_offset:
+            torch.randn(
+                probe_offset,
+                horizon * 2 * dimension,
+                generator=generator,
+                dtype=center.dtype,
+                device=center.device,
+            )
+        gaussian = torch.randn(
+            probes,
+            horizon * 2 * dimension,
+            generator=generator,
+            dtype=center.dtype,
+            device=center.device,
+        )
+        combined_images, known_image = evaluate_probe_chunks(
+            batch_apply,
+            gaussian,
+            quadratic.reshape(1, -1) if defect_route == "quadratic" else None,
+        )
+        probe_images = combined_images
+        signed_second_response = (
+            known_image
+            if defect_route == "quadratic"
+            else torch.zeros_like(probe_images[0])
+        )
+        active_forcing_errors = forcing_errors
+        active_curvature = curvature
+        quadratic_norm = float(torch.linalg.vector_norm(quadratic))
     else:
-        combined = gaussian
-    combined_images = batch_apply(combined).reshape(
-        probes + (1 if defect_route == "quadratic" else 0),
-        horizon,
-        2 * dimension,
-    )
-    probe_images = combined_images[:probes]
-    signed_second_response = (
-        combined_images[probes]
-        if defect_route == "quadratic"
-        else torch.zeros_like(combined_images[0])
-    )
+        channel_products = [
+            make_batched_scaled_optimizer_products(
+                corrected[step, :dimension],
+                train_pairs,
+                train_labels,
+                template,
+                spec,
+                config,
+            )
+            for step in range(horizon)
+        ]
+        channel_apply, _ = make_batched_causal_green_products(
+            [row[0] for row in channel_products],
+            [row[1] for row in channel_products],
+            2 * dimension,
+        )
+        if probe_offset:
+            torch.randn(
+                probe_offset,
+                horizon,
+                dimension,
+                generator=generator,
+                dtype=center.dtype,
+                device=center.device,
+            )
+        gaussian_parameter = torch.randn(
+            probes,
+            horizon,
+            dimension,
+            generator=generator,
+            dtype=center.dtype,
+            device=center.device,
+        )
+        gaussian_state = torch.cat(
+            (-eta * gaussian_parameter, eta * gaussian_parameter), dim=2
+        ).reshape(probes, -1)
+        # The corrected-path defect is N(z)-d.  Retain both the directional
+        # quadratic term and the signed recurrence residual; only the mixed
+        # fourth-order remainder is scalarized.
+        known_forcing = quadratic - recurrence_rows
+        state_images, known_image = evaluate_probe_chunks(
+            channel_apply,
+            gaussian_state,
+            known_forcing.reshape(1, -1),
+        )
+        if known_image is None:
+            raise RuntimeError("structured signed forcing response was not evaluated")
+        probe_images = state_images[:, :, :dimension]
+        signed_second_response = known_image[:, :dimension]
+        active_forcing_errors = gradient_forcing_errors
+        active_curvature = parameter_curvature
+        quadratic_norm = float(
+            torch.linalg.vector_norm(quadratic[:, dimension:] / eta)
+        )
     row_gains, row_audit = simultaneous_row_direct_image_bounds(
         probe_images, family_delta=family_delta
     )
@@ -309,18 +423,19 @@ def run(
 
     phase = time.perf_counter()
     affine = rowwise_signed_affine_bounds(
-        signed_second_response, row_gains, forcing_errors
+        signed_second_response, row_gains, active_forcing_errors
     )
-    radii = causal_row_quadratic_envelope(affine, row_gains, curvature)
+    radii = causal_row_quadratic_envelope(affine, row_gains, active_curvature)
     row_domain_passed = domain_geometry and bool((radii <= domain).all())
 
-    quadratic_norm = float(torch.linalg.vector_norm(quadratic))
-    forcing_error_norm = math.sqrt(math.fsum(value * value for value in forcing_errors))
+    forcing_error_norm = math.sqrt(
+        math.fsum(value * value for value in active_forcing_errors)
+    )
     old_global_response = global_gain * (quadratic_norm + forcing_error_norm)
     signed_global_response = float(
         torch.linalg.vector_norm(signed_second_response)
     ) + global_gain * forcing_error_norm
-    maximum_curvature = max(curvature, default=0.0)
+    maximum_curvature = max(active_curvature, default=0.0)
     old_global_closure = exact_corrected_path_closure(
         kappa=global_gain,
         derivative_drift=maximum_curvature,
@@ -337,19 +452,22 @@ def run(
     bracket = None
     logic_slack = None
     margins = [0.0]
+    required = int(certificate["required_correct"])
+    raw = [
+        raw_slacks(
+            logits(corrected[step, :dimension], cert_pairs, template, spec),
+            cert_labels,
+            required,
+        )
+        for step in range(horizon + 1)
+    ]
+    output_first_bounds = [0.0] + [
+        float(blocks[step - 1]["first"]) for step in range(1, horizon + 1)
+    ]
     if row_domain_passed:
-        required = int(certificate["required_correct"])
-        raw = [
-            raw_slacks(
-                logits(corrected[step, :dimension], cert_pairs, template, spec),
-                cert_labels,
-                required,
-            )
-            for step in range(horizon + 1)
-        ]
         margins.extend(
             logit_margin_radius(
-                first=float(blocks[step - 1]["first"]),
+                first=output_first_bounds[step],
                 state_radius=float(radii[step - 1]),
             )
             for step in range(1, horizon + 1)
@@ -371,9 +489,14 @@ def run(
         "candidate": candidate.__dict__,
         "sweeps": sweeps,
         "defect_route": defect_route,
+        "closure_channel": closure_channel,
         "horizon": horizon,
         "probes": probes,
-        "probe_seed": probe_seed(candidate, sweeps, probes),
+        "probe_stream_size": stream_size,
+        "probe_offset": probe_offset,
+        "probe_chunk_size": chunk_size,
+        "sequential_green_batches": green_batches,
+        "probe_seed": probe_seed(candidate, sweeps, stream_size),
         "family_delta": family_delta,
         "parameter_count": dimension,
         "centerline_sha256": tensor_sha256(scaled_center),
@@ -398,6 +521,10 @@ def run(
         "row_gain_minimum": float(row_gains.min()),
         "row_gain_median": float(row_gains.median()),
         "row_gain_maximum": float(row_gains.max()),
+        "row_gain_bounds": row_gains.tolist(),
+        "row_image_maxima": torch.linalg.vector_norm(
+            probe_images, dim=2
+        ).max(dim=0).values.tolist(),
         "row_calibration": row_audit,
         "old_global_response_upper": old_global_response,
         "signed_global_response_upper": signed_global_response,
@@ -405,6 +532,11 @@ def run(
         "signed_global_closure": signed_global_closure.as_dict(),
         "row_affine_bounds": affine.tolist(),
         "row_radii": radii.tolist(),
+        "active_curvature_bounds": list(active_curvature),
+        "active_forcing_error_bounds": list(active_forcing_errors),
+        "signed_response_row_norms": torch.linalg.vector_norm(
+            signed_second_response, dim=1
+        ).tolist(),
         "maximum_row_radius": float(radii.max()),
         "domain_radius": domain,
         "row_domain_passed": row_domain_passed,
@@ -414,6 +546,8 @@ def run(
         "sealed_four_sweep_bracket": source["sealed_four_sweep_bracket"],
         "retains_sealed_bracket": issued and bracket == source["sealed_four_sweep_bracket"],
         "maximum_margin_radius": max(margins),
+        "raw_event_slacks": [[float(left), float(right)] for left, right in raw],
+        "output_first_derivative_bounds": output_first_bounds,
         "mixed_forcing_rows": mixed_rows,
         "timings_seconds": timing,
         "additional_green_jvp_passes_vs_direct_image": 0,
@@ -434,23 +568,42 @@ def main() -> None:
     parser.add_argument("--anchor", type=int, default=DEVELOPMENT_CANDIDATE.anchor)
     parser.add_argument("--sweeps", type=int, choices=(2, 3, 4), default=3)
     parser.add_argument("--probes", type=int, default=4)
+    parser.add_argument("--probe-chunk-size", type=int)
+    parser.add_argument("--probe-stream-size", type=int)
+    parser.add_argument("--probe-offset", type=int, default=0)
+    parser.add_argument("--family-delta", type=float, default=FAMILY_DELTA)
     parser.add_argument(
         "--defect-route",
         choices=("quadratic", "response_free"),
         default="quadratic",
+    )
+    parser.add_argument(
+        "--closure-channel",
+        choices=("full_state", "structured_parameter"),
+        default="full_state",
     )
     parser.add_argument("--output", type=Path)
     args = parser.parse_args()
     if args.probes < 1:
         raise ValueError("probes must be positive")
     candidate = Candidate(args.seed, args.threshold, args.anchor)
-    result = run(candidate, args.sweeps, args.probes, args.defect_route)
+    result = run(
+        candidate,
+        args.sweeps,
+        args.probes,
+        args.defect_route,
+        family_delta=args.family_delta,
+        closure_channel=args.closure_channel,
+        probe_chunk_size=args.probe_chunk_size,
+        probe_stream_size=args.probe_stream_size,
+        probe_offset=args.probe_offset,
+    )
     destination = args.output or RESULTS / (
         f"transformer_causal_row_green_seed_{candidate.seed}_"
         f"gate_{candidate.gate_index}_anchor_{candidate.anchor}_"
-        f"{args.defect_route}_"
+        f"{args.defect_route}_{args.closure_channel}_"
         f"s{args.sweeps}_"
-        f"m{args.probes}.json"
+        f"m{args.probes}_offset{args.probe_offset}.json"
     )
     destination.write_text(
         json.dumps(result, indent=2) + "\n", encoding="utf-8", newline="\n"
@@ -462,6 +615,7 @@ def main() -> None:
             "candidate",
             "sweeps",
             "defect_route",
+            "closure_channel",
             "probes",
             "old_global_closure",
             "signed_global_closure",

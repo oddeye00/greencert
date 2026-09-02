@@ -166,3 +166,95 @@ especially useful when curvature or gain is concentrated late in the window:
 late constants cannot invalidate earlier event margins. It is not guaranteed
 to be numerically tighter after finite-probe calibration; the relevant test is
 certificate issuance and measured runtime under a frozen protocol.
+
+## 5. Scaled-momentum forcing-subspace specialization
+
+For the scaled momentum map
+
+\[
+G(\theta,w)=(\theta-r,r),\qquad
+r=\mu w+\eta\nabla F(\theta),
+\]
+
+let `P(theta,w)=theta` and `Bv=(-eta*v,eta*v)`. At a reference state
+`b_k=(theta_k,w_k)`, the nonlinear Taylor remainder factors exactly as
+
+\[
+G_k(b_k+e)-G_k(b_k)-J_ke=B R_k(Pe),
+\]
+
+where
+
+\[
+R_k(v)=\nabla F_k(\theta_k+v)-\nabla F_k(\theta_k)
+-\nabla^2F_k(\theta_k)v.
+\]
+
+If the objective Hessian is `L_k`-Lipschitz on the parameter ball, then
+`||R_k(v)|| <= L_k ||v||^2/2` there.
+
+For an output time `i`, let `mathcal B_i` apply `B` separately to every
+parameter-forcing block through time `i`, and define
+
+\[
+T_i=P K_i\mathcal B_i,
+\qquad \kappa_i^B\ge\|T_i\|_{2\to2}.
+\]
+
+### Corollary 3 (forcing-subspace causal envelope)
+
+Suppose the reference defect decomposes as a known signed state forcing `q`
+plus a structured unresolved forcing `mathcal B xi`, with
+`||xi_k|| <= epsilon_k`. Let
+
+\[
+y_{i+1}=P(Kq)_{i+1},
+\qquad
+Y_{i+1}=\|y_{i+1}\|+\kappa_i^B
+\left(\sum_{k=0}^i\epsilon_k^2\right)^{1/2}.
+\]
+
+Define `r_0=0` and
+
+\[
+\boxed{
+r_{i+1}=Y_{i+1}+\kappa_i^B
+\left\{\sum_{k=1}^i
+\left(\frac{L_k r_k^2}{2}\right)^2\right\}^{1/2}.
+}
+\]
+
+If the parameter balls remain in their declared derivative domains, then
+
+\[
+\boxed{\|P(x_{a+k}-b_k)\|\le r_k\quad(1\le k\le H).}
+\]
+
+### Proof
+
+Write `p_k=P(x_{a+k}-b_k)`. The exact factorization above and causality give
+
+\[
+p_{i+1}=y_{i+1}+T_i\{\xi_0+R_0(p_0),\ldots,
+\xi_i+R_i(p_i)\}.
+\]
+
+The known `xi` contribution is bounded in `Y`; `p_0=0`, so the first nonlinear
+remainder vanishes. If `||p_k|| <= r_k` through time `i`, the Euclidean norm of
+the remaining forcing sequence is at most
+
+\[
+\left\{\sum_{k=1}^i
+\left(\frac{L_k r_k^2}{2}\right)^2\right\}^{1/2}.
+\]
+
+Multiplication by `||T_i||`, followed by chronological induction, proves the
+claim. ∎
+
+Proposition 2 applies unchanged to the maps `T_i`: draw standard Gaussian
+vectors in parameter-forcing sequence space, inject them blockwise through
+`B`, retain the parameter output rows, and divide the candidate failure budget
+over time. A known signed full-state forcing is appended as a deterministic
+response row and does not enter the random norm estimator. Optimizer-state
+directions that neither generate the nonlinear remainder nor affect the neural
+event are absent from both the random input space and the certified radius.
