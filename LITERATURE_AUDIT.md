@@ -1,6 +1,6 @@
 # Primary-source novelty audit
 
-Last updated: 2026-08-31.
+Last updated: 2026-09-02.
 
 This record makes the paper's novelty search inspectable. It is not a proof
 that no related paper exists. It records the queries, primary sources, and
@@ -33,7 +33,11 @@ first-passage bracket or abstention.
 
 | Source | Object certified or predicted | Difference from GREENCERT |
 | --- | --- | --- |
-| Chow, Lin, and Palmer (1989–1994); Hammel et al. (1987); Sauer and Yorke (1991) | Shadowing or existence near pseudo-orbits | Classical dynamical-systems foundation; not neural-output first-passage transport from a realized training checkpoint |
+| Chow, Lin, and Palmer (1989-1994); Hammel et al. (1987); Sauer and Yorke (1991) | Shadowing or existence near pseudo-orbits | Classical dynamical-systems foundation; not neural-output first-passage transport from a realized training checkpoint |
+| Van Vleck (2000), [primary record](https://doi.org/10.1137/S1064827599353452) | Componentwise shadowing after rotation into finite-time growth/decay directions | A close antecedent for nonuniform tubes; it controls ODE shadowing distance rather than chronological optimizer-output rows from a fixed realized anchor |
+| Hayes and Jackson (2003), [primary record](https://doi.org/10.1137/S0036142901399100) | Rigorous finite-time ODE shadows by inductive containment boxes | A close antecedent for local chronological closure; the shadow may perturb the initial condition and is not transported to a neural persistent-event margin |
+| Chaudhry et al. (2021), [primary record](https://doi.org/10.1007/s10543-020-00825-0) | Adjoint a posteriori estimate of error in the first time a differential-equation functional crosses a threshold | Direct first-event antecedent; it estimates event-time error through a local linearization rather than enclosing the realized discrete path and returning a strict persistent bracket or abstention |
+| Zou, Lie, and Marzouk (2026), [primary record](https://arxiv.org/abs/2603.20467) | Goal-oriented learning with error bounds for path-space observables, including mean first-hitting times | Learns a surrogate for external stochastic dynamics and bounds expected observables; it does not verify the optimizer trajectory that trains a neural network |
 | Orvieto and Lucchi (2019) | Shadowing viewpoint for optimization dynamics | Optimization interpretation rather than an executable event certificate |
 | Wicker et al. (UAI 2021), [primary record](https://proceedings.mlr.press/v161/wicker21a.html) | Reach/avoid probabilities for iterative Bayesian-network predictions | Certifies model rollout under predictive uncertainty, not the optimizer training orbit |
 | Mathiesen et al. (SAIV 2026), [publisher record](https://link.springer.com/chapter/10.1007/978-3-032-32357-6_4) | Error of a neural approximation to nonlinear dynamics | The network is a surrogate for external dynamics; the endogenous optimizer trajectory is not the certified object |
@@ -152,3 +156,41 @@ maximizing only one free dual direction, inserted that bound into an
 anchor-fixed nonlinear training tube, and transported it to a persistent event
 bracket. The manuscript therefore claims the optimizer/event construction and
 its measured sweep reduction, not new polarization or Taylor-model theory.
+
+## 2026-09-02 chronological-row and first-event follow-up
+
+The causal-row theorem prompted a targeted search for prior work that could
+subsume either its nonuniform tube or its event output. Queries included:
+
+- `causal Green operator rowwise shadowing finite time trajectory error`
+- `componentwise shadowing finite time fixed point`
+- `goal-oriented shadowing adjoint trajectory error dynamical systems`
+- `a posteriori ODE trajectory quantity of interest first threshold time`
+- `validated ODE event detection first crossing interval arithmetic`
+- `row-wise Green operator trajectory error bound`
+
+This pass found two closer lines than the earlier audit recorded. Van Vleck's
+componentwise shadowing theorem rotates an ODE into finite-time Lyapunov
+directions and uses direction-dependent local tolerances inside a sharper fixed
+point result. Hayes and Jackson's containment method builds rigorous local boxes
+inductively along a finite-time ODE shadow. These papers occupy any broad claim
+that nonuniform, componentwise, or chronological trajectory enclosures are new.
+
+Chaudhry, Estep, Stevens, and Tavener directly analyze error in the first time a
+differential-equation functional reaches a threshold. Their adjoint estimator is
+therefore a direct event-time antecedent, not merely generic goal-oriented error
+analysis. Zou, Lie, and Marzouk additionally train stochastic dynamical-system
+surrogates against error bounds for path-space observables, including mean
+first-hitting times. Related validated hybrid simulation also localizes guard crossings
+from interval trajectory enclosures. These results occupy any broad claim that
+certified or a posteriori event timing is itself new.
+
+The surviving distinction is narrower and more concrete. GREENCERT fixes the
+initial state to the realized discrete optimizer checkpoint; propagates the
+signed endogenous defect; uses the exact scaled-momentum forcing range to close
+checkpoint-specific parameter rows; transports the resulting nonlinear tube
+through every fixed-evaluation neural margin; and returns a persistent
+first-passage bracket or abstention. No primary source opened in this pass
+delivered that complete object. The manuscript now cites the closer antecedents
+and states the difference by delivered guarantee rather than by a categorical
+priority claim.

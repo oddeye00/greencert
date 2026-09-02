@@ -27,6 +27,9 @@ REQUIRED = {
     "STRUCTURED_PARAMETER_GREEN_THEOREM.md",
     "STRUCTURED_PARAMETER_GREEN_THEOREM_V1_INDEXING_NOTE.md",
     "STRUCTURED_PARAMETER_GREEN_THEOREM_V2.md",
+    "CAUSAL_ROW_GREEN_THEOREM.md",
+    "CAUSAL_STRUCTURED_ROW_PANEL_PROTOCOL.md",
+    "CAUSAL_STRUCTURED_ROW_PANEL_RESULT.md",
     "STRUCTURED_PARAMETER_GREEN_AUDIT_PROTOCOL_V2.md",
     "ANCHOR_FIXED_STRUCTURED_PARAMETER_GREEN_AUDIT_PROTOCOL.md",
     "AMPLIFIED_SECANT_PROBE_PROTOCOL.md",
@@ -62,6 +65,17 @@ REQUIRED = {
     "results/structured_parameter_green_independent_audit.json",
     "results/anchor_fixed_structured_parameter_green_transformer_audit.json",
     "results/anchor_fixed_structured_parameter_green_independent_audit.json",
+    "scripts/causal_row_green.py",
+    "scripts/diagnose_transformer_causal_row_green.py",
+    "scripts/combine_causal_row_probe_blocks.py",
+    "scripts/audit_transformer_causal_structured_row_panel.py",
+    "scripts/verify_transformer_causal_structured_row_panel.py",
+    "scripts/test_causal_row_green.py",
+    "scripts/test_causal_structured_row_green.py",
+    "scripts/test_combine_causal_row_probe_blocks.py",
+    "scripts/test_causal_row_green_transformer_batch.py",
+    "results/transformer_causal_structured_row_panel_audit.json",
+    "results/transformer_causal_structured_row_panel_verification.json",
     "results/transformer_arb_multijet_randomized_test_audit.json",
     "figures/paper_transformer_v3_anytime.pdf",
     "scripts/paper_plot_style.py",
@@ -88,14 +102,15 @@ def main() -> None:
         if set(manifest) != names - {"MANIFEST_SHA256.json", "ANONYMIZATION_README.md"}:
             raise AssertionError("manifest and archive payload sets differ")
 
-        for cache_prefix in (
-            "results/structured_parameter_green_transformer_cache/",
-            "results/anchor_fixed_structured_parameter_green_transformer_cache/",
+        for cache_prefix, expected_rows in (
+            ("results/structured_parameter_green_transformer_cache/", 15),
+            ("results/anchor_fixed_structured_parameter_green_transformer_cache/", 15),
+            ("results/transformer_causal_structured_row_panel_cache/", 17),
         ):
             cache_rows = [name for name in names if name.startswith(cache_prefix)]
-            if len(cache_rows) != 15:
+            if len(cache_rows) != expected_rows:
                 raise AssertionError(
-                    f"expected 15 independently replayable cache rows under {cache_prefix}"
+                    f"expected {expected_rows} independently replayable cache rows under {cache_prefix}"
                 )
 
         sanitized = 0
@@ -113,9 +128,40 @@ def main() -> None:
                 if leaked:
                     raise AssertionError(f"identity/path leak in {name}: {leaked}")
 
-        method_source = manifest["TRANSFORMER_V3_METHOD_SEAL.json"]["source_sha256"]
-        if not method_source.startswith("2CB9738FD630392C"):
-            raise AssertionError("v3 method source hash no longer matches the paper")
+        method_name = "TRANSFORMER_V3_METHOD_SEAL.json"
+        method_source = manifest[method_name]["source_sha256"]
+        method_seal = json.loads(archive.read(method_name))
+        if method_seal["status"] != "FROZEN BEFORE V3 FRESH TRAINING":
+            raise AssertionError("v3 method-seal status changed")
+        protocol_name = method_seal["protocol"].replace("\\", "/")
+        if method_seal["protocol_sha256"] != manifest[protocol_name]["source_sha256"]:
+            raise AssertionError("v3 protocol hash no longer matches its method seal")
+        for relative, expected in method_seal["code_manifest"].items():
+            relative = relative.replace("\\", "/")
+            if relative not in manifest or manifest[relative]["source_sha256"] != expected:
+                raise AssertionError(f"v3 method-seal dependency changed: {relative}")
+
+        causal_audit_name = "results/transformer_causal_structured_row_panel_audit.json"
+        causal_verification_name = (
+            "results/transformer_causal_structured_row_panel_verification.json"
+        )
+        causal_audit = json.loads(archive.read(causal_audit_name))
+        causal_verification = json.loads(archive.read(causal_verification_name))
+        if (
+            int(causal_audit["cases"]) != 15
+            or int(causal_audit["holdout_issued"]) != 14
+            or int(causal_audit["brackets_retained"]) != 15
+            or not causal_audit["promotion_passed"]
+        ):
+            raise AssertionError("causal-row panel invariants changed")
+        if (
+            causal_verification["status"]
+            != "structured causal-row panel independently verified"
+            or causal_verification["audit_sha256"]
+            != manifest[causal_audit_name]["source_sha256"]
+            or int(causal_verification["issued_recomputed"]) != 15
+        ):
+            raise AssertionError("causal-row independent verification changed")
 
     print(
         json.dumps(

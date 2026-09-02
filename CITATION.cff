@@ -5,8 +5,8 @@ type: software
 authors:
   - family-names: Rhee
     given-names: Ian
-version: 1.2.0
-date-released: 2026-08-31
+version: 1.4.0
+date-released: 2026-09-02
 url: "https://github.com/oddeye00/greencert"
 license: MIT
 preferred-citation:

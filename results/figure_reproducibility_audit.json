@@ -13,12 +13,12 @@
   ],
   "outputs": {
     "figures/paper_composed_runtime.pdf": {
-      "bytes": 24386,
-      "sha256": "0131A34319AEDFFD7F3AB99B419693636F91A62C257F4E62A5F6E1B2C6539B06"
+      "bytes": 25996,
+      "sha256": "D798F41428C81F9B3CDE8FE4E9F63BDE5EB7EEDF25354F96FC3953C5A0C10BCE"
     },
     "figures/paper_composed_runtime.png": {
-      "bytes": 97287,
-      "sha256": "A130294FDB7820D14313A7BA27729E2DC20779C7CBBB0078A1F5818ECA293325"
+      "bytes": 133872,
+      "sha256": "F47E2F56283B9B67BDFF7BD22334CC89EE25BD21BE352D015FB04892E33183C5"
     },
     "figures/paper_directional_block_remainder.pdf": {
       "bytes": 22297,

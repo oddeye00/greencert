@@ -43,6 +43,9 @@ python reproduce.py smoke
 This tier checks core Green recurrences, both structured parameter-forcing
 implementations, variational recentering, inexact operator interfaces, event
 transport, deterministic neural-jet release, and the manuscript claim ledger.
+It also checks the chronological row recursion, its scaled-momentum forcing
+specialization, staged disjoint-probe composition, and the deterministic
+forcing-row identity used by the Transformer panel.
 It also checks the polarized directional fourth-order algebra, exact block
 partition, mixed-derivative autodiff majorization, and the independent
 linear-cost mixed-jet implementation. The immutable-v1/maintained-v2 source
@@ -89,6 +92,24 @@ checkpoint-free consistency replay over its sealed rows; the full derivative
 replay is available after regenerating the large Transformer checkpoints.
 Replaying either calculation verifies the committed computation; it does not
 alter or reissue a historical seal.
+
+The frozen chronological row panel has a fast scalar/hash verifier over the 17
+shipped probe-block caches:
+
+```bash
+python scripts/verify_transformer_causal_structured_row_panel.py
+```
+
+It recomputes every Gaussian calibration, causal radius, event margin, bracket,
+cache identity, and matched cost total. A complete operator replay (roughly 18
+minutes on the reference machine) is available from a clean checkout with:
+
+```bash
+python scripts/audit_transformer_causal_structured_row_panel.py --workers 3
+```
+
+That replay is frozen to commit `5aff03c2515e92569be81c06f0ec7aa3d2a24b42`
+and intentionally refuses a dirty claim-bearing worktree.
 
 The optimized end-to-end Transformer timing record has a separate, fast
 arithmetic/provenance audit:
@@ -261,6 +282,9 @@ The release-level audit requires:
   Green sweeps reduced from 112 to 96;
 - 15/15 anchor-zero brackets preserved, with the prespecified strict systems
   promotion gate correctly failing at 96 to 96 sweeps;
+- 15/15 chronological row brackets retained, including 14/14 holdouts, with
+  prefix counts 13 at four probes and two at eight, matched full
+  post-reference work reduced from 144 to 98, and zero transpose sweeps;
 - the directional fourth-order bound no larger at every frozen checkpoint,
   with three nondevelopment three-sweep closures and four sealed brackets
   retained;

@@ -134,6 +134,13 @@ def main() -> None:
     anchor_fixed_independent = load(
         "results/anchor_fixed_structured_parameter_green_independent_audit.json"
     )
+    causal_row_path = (
+        ROOT / "results/transformer_causal_structured_row_panel_audit.json"
+    )
+    causal_row = json.loads(causal_row_path.read_text(encoding="utf-8"))
+    causal_row_verification = load(
+        "results/transformer_causal_structured_row_panel_verification.json"
+    )
     directional_block = load(
         "results/transformer_directional_block_remainder_diagnostic.json"
     )
@@ -575,6 +582,78 @@ def main() -> None:
         "independent anchor-fixed replay changed",
     )
 
+    require(
+        causal_row["status"]
+        == "frozen structured causal-row Transformer panel audit complete",
+        "causal-row panel status changed",
+    )
+    require(
+        (
+            int(causal_row["cases"]),
+            int(causal_row["holdout_cases"]),
+            int(causal_row["issued"]),
+            int(causal_row["holdout_issued"]),
+            int(causal_row["brackets_retained"]),
+        )
+        == (15, 14, 15, 14, 15),
+        "causal-row panel issuance changed",
+    )
+    require(
+        causal_row["prefix_distribution"] == {"4": 13, "8": 2}
+        and bool(causal_row["promotion_passed"]),
+        "causal-row staged stopping or promotion changed",
+    )
+    require(
+        (
+            int(causal_row["logical_forward_probe_applications"]),
+            int(causal_row["logical_signed_response_applications"]),
+            int(causal_row["logical_transpose_applications"]),
+        )
+        == (68, 15, 0)
+        and int(causal_row["outcome_files_read"]) == 0,
+        "causal-row operator or evidence accounting changed",
+    )
+    require(
+        causal_row_verification["status"]
+        == "structured causal-row panel independently verified"
+        and causal_row_verification["audit_sha256"] == sha256(causal_row_path)
+        and (
+            int(causal_row_verification["cases_recomputed"]),
+            int(causal_row_verification["issued_recomputed"]),
+            int(causal_row_verification["brackets_retained_recomputed"]),
+        )
+        == (15, 15, 15)
+        and int(causal_row_verification["outcome_files_read"]) == 0,
+        "independent causal-row verification changed",
+    )
+    causal_cost = causal_row_verification["matched_cost_accounting"]
+    require(
+        (
+            int(causal_cost["baseline_random_forward_plus_transpose_sweeps"]),
+            int(causal_cost["row_random_forward_sweeps"]),
+            int(causal_cost["baseline_closure_sweeps"]),
+            int(causal_cost["row_closure_sweeps"]),
+            int(causal_cost["baseline_full_post_reference_sweeps"]),
+            int(causal_cost["row_full_post_reference_sweeps"]),
+            int(causal_cost["baseline_transpose_sweeps"]),
+            int(causal_cost["row_transpose_sweeps"]),
+        )
+        == (128, 68, 129, 83, 144, 98, 64, 0),
+        "causal-row matched cost accounting changed",
+    )
+    require(
+        close(causal_cost["full_post_reference_sweep_reduction"], 1.469387755102041)
+        and close(
+            causal_row_verification["minimum_logic_slack"],
+            1.4466087846244381e-6,
+        )
+        and close(
+            causal_row_verification["maximum_radius_to_domain_ratio"],
+            1.2836427679961793e-6,
+        ),
+        "causal-row numerical margins changed",
+    )
+
     def candidate_key(row: dict) -> tuple[int, float, int]:
         candidate = row["candidate"]
         return (
@@ -715,9 +794,14 @@ def main() -> None:
         "surrogate verification",
         "admissible-residual sensitivities, not estimates of floating-point error",
         "Scaled-momentum forcing subspace",
-        "preserves 15/15 brackets and reduces staged logical Green sweeps",
+        "Chronological parameter-forcing envelope",
+        "including 14/14 holdouts",
+        "$144\\to98$ ($1.47\\times$)",
+        "All 64 transpose sweeps disappear",
+        "has not yet become an end-to-end speedup",
+        "global forcing-subspace audit restricts nonlinear gain",
         "$112\\to96$ ($1.167\\times$)",
-        "fails its prespecified promotion gate",
+        "prespecified\nstrict-improvement gate fails",
         "selected randomized gain-bound ratio $0.994$",
         "9.01--11.71 seconds (median 9.21)",
         "four forward Green applications",
@@ -756,6 +840,7 @@ def main() -> None:
         "fully outward corrected-path certificate",
         "computer-assisted corrected-path Transformer certificate",
         "anchor-zero speedup",
+        "$144\\to83$",
     )
     for phrase in forbidden_phrases:
         require(phrase not in paper, f"stale/attackable manuscript phrase remains: {phrase}")
@@ -868,6 +953,23 @@ def main() -> None:
                 "promotion_gate_passed"
             ],
             "anchor_fixed_median_selected_gain_ratio": anchor_gain_ratios[7],
+            "causal_row_cases": causal_row["cases"],
+            "causal_row_holdout_cases": causal_row["holdout_cases"],
+            "causal_row_issued": causal_row["issued"],
+            "causal_row_brackets_retained": causal_row["brackets_retained"],
+            "causal_row_prefix_distribution": causal_row["prefix_distribution"],
+            "causal_row_operator_counts": {
+                "random_forward": causal_row["logical_forward_probe_applications"],
+                "signed_response": causal_row["logical_signed_response_applications"],
+                "transpose": causal_row["logical_transpose_applications"],
+            },
+            "causal_row_matched_cost_accounting": causal_cost,
+            "causal_row_minimum_logic_slack": causal_row_verification[
+                "minimum_logic_slack"
+            ],
+            "causal_row_maximum_radius_to_domain_ratio": causal_row_verification[
+                "maximum_radius_to_domain_ratio"
+            ],
             "composed_runtime_median_seconds": composed_runtime[
                 "median_end_to_end_seconds"
             ],

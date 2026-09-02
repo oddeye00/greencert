@@ -67,16 +67,14 @@ trajectory over a finite window and transports its state tube to a persistent
 first-passage bracket.  Across four frozen or outcome-sealed studies, all 83
 issued brackets contain their subsequently revealed crossings.  Independent
 192-bit outward continuation re-certifies all 63 WDBC and digits brackets.
-Retaining direction matters: signed propagation preserves a 147-step digits
-certificate and eight of nine fixed-radius Transformer certificates that the
-matched unsigned construction loses, while both inaccurate finite digits
-forecasts abstain before randomized probing.  A frozen directional-block
-remainder audit further shrinks the scalar fourth-order term by
-$2{,}899\times$ at the holdout median and recovers three sealed holdout
-certificates one variational sweep earlier.  Matrix-free computational
-refinements substantially reduce Green and output-operator work without
-changing the issued brackets.  The resulting verifier is selective and
-explicit about its numerical and probabilistic obligations.
+  Retaining direction matters: signed propagation preserves a 147-step digits
+  certificate and eight of nine fixed-radius Transformer certificates that the
+  matched unsigned construction loses, while both inaccurate finite digits
+  forecasts abstain before randomized probing.  Frozen computational
+  refinements further reduce Green-operator work and recover certificates at
+  shorter reference paths without changing the issued brackets.  The resulting
+  verifier is selective and explicit about its numerical and probabilistic
+  obligations.
 \end{abstract}
 
 \section{Introduction}
@@ -129,9 +127,11 @@ Our contributions are:
   A polarized block-majorant corollary retains the three realized directions
   in the fourth-order gradient remainder and maximizes only over the remaining
   dual direction.
-  For scaled momentum, a forcing-subspace corollary closes the nonlinear
-  problem in parameter space and removes optimizer-state directions that
-  neither generate the nonlinear remainder nor affect the neural event.
+  For scaled momentum, a chronological forcing-subspace corollary closes each
+  parameter checkpoint through row operators
+  $\Pi_\theta K_i\mathcal B$.  It removes optimizer-state directions that
+  neither generate the nonlinear remainder nor affect the neural event, and it
+  replaces a global quadratic discriminant by an explicit causal recursion.
   \item We give a matrix-free, anytime implementation.  HVP/VJP products apply
   $K_H$ and $K_H^\top$; one Gaussian block bounds every inspected Gram power,
   while predictable spending permits adaptive operator creation.  Verified
@@ -142,16 +142,12 @@ Our contributions are:
   sealed Transformer cohorts.  All 83 issued brackets cover; every one of the
   63 non-modular brackets survives independent 192-bit continuation, and
   both inaccurate finite digits clocks are rejected before randomized probing.
-  \item We isolate the roles of direction and computation.  A matched unsigned construction retains
-  only one of nine Transformer certificates and loses the sealed 147-step
-  digits event.  We develop corrected-path relinearization, deterministic
-  neural-jet release, prefix streaming, and batched operator products to reduce
-  certificate cost without changing issued brackets.  In a frozen 15-case
-  audit, these refinements retain all 15 brackets while reducing Green
-  applications from 560 to 64 ($8.75\times$).  In a separate frozen
-  sweep-minimization audit, the directional remainder recovers three holdout
-  certificates under a three-sweep reference that the scalar remainder cannot
-  close.
+  \item We isolate why direction and computation matter.  A matched unsigned
+  construction retains only one of nine Transformer certificates and loses the
+  sealed 147-step digits event.  Computational refinements reduce Green and
+  output-operator cost without changing the issued brackets; for example, a
+  frozen 15-case audit reduces Green applications from 560 to 64
+  ($8.75\times$) while retaining all 15 brackets.
 \end{enumerate}
 
 \section{Problem and local clock}
@@ -343,20 +339,29 @@ $E=2Y/(1+\sqrt{1-2\bar\kappa MY})$ under the local domain condition and a
 pairwise $M$-Lipschitz Jacobian envelope, supplied by our bounded-Hessian
 bounds.  Appendix Corollary~\ref{cor:relinearized-green} states and proves the result.
 
-\paragraph{Scaled-momentum forcing subspace.}
+\paragraph{Scaled-momentum forcing subspace: chronological closure.}
 For $G(\theta,w)=(\theta-r,r)$ with
 $r=\mu w+\eta\nabla F(\theta)$, every nonlinear remainder is exactly
 $\mathcal Bq=(-\eta q,\eta q)$ and depends only on the parameter error.
-Writing $\Pi_\theta$ for parameter projection, the corrected closure may
+Writing $\Pi_\theta$ for parameter projection, the global corrected closure may
 therefore query $\Pi_\theta\bar K_H\mathcal B$ instead of the full
-$\bar K_H$.  Appendix Corollary~\ref{cor:parameter-forcing} gives the closed
-parameter-sequence fixed point, including the one-step causal shift at the
-fixed anchor.  With exact quantities, its quadratic coefficient and response
-term are never larger than the full-state counterparts.  In a separately
-sealed post-release audit over all 15 Green-evaluable operators, the
-conservative implementation that retains the identically zero first forcing
-block preserves 15/15 brackets and reduces staged logical Green sweeps
-$112\to96$ ($1.167\times$).
+$\bar K_H$ (Appendix Corollary~\ref{cor:parameter-forcing}).  More sharply,
+let $\bar K_i$ be the causal row ending at checkpoint $i+1$ and
+$\kappa_i^\theta\ge\|\Pi_\theta\bar K_i\mathcal B_i\|$.  If $Y_{i+1}$ bounds
+the known signed response and unresolved forcing through time $i$, the
+parameter radii satisfy the explicit recursion
+\begin{equation}
+ r_0=0,\qquad
+ r_{i+1}=Y_{i+1}+\kappa_i^\theta
+ \left\{\sum_{k=1}^{i}
+ \left(\frac{L_kr_k^2}{2}\right)^2\right\}^{1/2}.
+ \label{eq:causal-row-main}
+\end{equation}
+Appendix Corollary~\ref{cor:causal-parameter-row} proves chronological closure.
+It has no global discriminant: later gain or curvature cannot invalidate an
+already enclosed earlier checkpoint.  Proposition~\ref{prop:row-probe} obtains
+all row norms from the checkpoint outputs of one direct Gaussian pass, without
+a transpose product.
 
 \paragraph{Prefix-local staged release.}
 For fixed $T$ and Gaussian probes $g_i$, the same projection event gives both
@@ -439,6 +444,29 @@ Then, in exact arithmetic, with probability at least $1-\delta$,
 
 One top-eigenvector projection event implies Eq.~\eqref{eq:probe} for every
 $q$, so inspecting powers adaptively incurs no union penalty.
+
+\begin{proposition}[Simultaneous causal-row direct-image enclosure]
+\label{prop:row-probe}
+Let $T_0,\ldots,T_{H-1}$ be fixed row operators on a common Euclidean input
+space.  Draw independent standard Gaussian vectors $g_1,\ldots,g_m$ and choose
+$\delta_i>0$ with $\sum_i\delta_i\le\delta$.  Define
+\begin{equation}
+ c_i=\Phi^{-1}\!\left(\frac{1+\delta_i^{1/m}}2\right),\qquad
+ \widehat\kappa_i=\frac{\max_{\ell\le m}\|T_i g_\ell\|}{c_i}.
+ \label{eq:causal-row-probe}
+\end{equation}
+Then, in exact arithmetic, with probability at least $1-\delta$,
+$\|T_i\|\le\widehat\kappa_i$ simultaneously for every $i$.
+For causal Green rows, all $T_i g_\ell$ are checkpoint outputs of the same
+forward sweep.
+\end{proposition}
+
+\begin{proof}
+Fix a top right singular vector $v_i$ of $T_i$.  Since
+$\|T_i g_\ell\|\ge\|T_i\||v_i^\top g_\ell|$, failure for row $i$ requires all
+$m$ absolute standard-normal projections to be below $c_i$, an event of
+probability $\delta_i$.  A union bound over rows proves the claim.
+\end{proof}
 
 \begin{proposition}[Predictable operator-family spending]
 \label{prop:predictable}
@@ -854,13 +882,30 @@ $9.94/2.09/1.06\times$ speedups at horizons 26/131/299; direct-image release
 skips $K^T$ in 4/15 cases.  These post-seal audits leave frozen prospective
 counts above unchanged.
 
-Scaled-momentum structure gives a second, orthogonal reduction.  Restricting
-the nonlinear gain to $\Pi_\theta K_H\mathcal B$ preserves all 15 brackets,
-converts two additional cases to direct-image release, and reduces the matched
-staged total from 112 to 96 logical Green sweeps.  A stricter anchor-zero
-restriction preserves every bracket but remains at 96 sweeps; it therefore
-fails its prespecified promotion gate and is retained as a negative systems
-audit rather than advertised as another speedup.
+Scaled-momentum structure gives a second, orthogonal reduction.  The initial
+global forcing-subspace audit restricts nonlinear gain to
+$\Pi_\theta K_H\mathcal B$, preserves all 15 brackets, and reduces the staged
+direct/Gram total from 112 to 96 sweeps.  The chronological row theorem then
+removes the remaining global-in-time compression.  Its protocol was frozen
+after one disclosed development row and before structured-row probes were
+drawn for the other 14 rows.  All 15 cases issue, including 14/14 holdouts; 13
+stop after four probes and two after eight, and every bracket equals its sealed
+comparator.  Relative to the released Gram panel, random norm-estimation work
+falls from 128 forward/transpose sweeps to 68 forward sweeps
+($1.88\times$).  Including deterministic closure responses gives
+$129\to83$ ($1.55\times$), and matched full post-reference accounting gives
+$144\to98$ ($1.47\times$).  All 64 transpose sweeps disappear.  An independent
+scalar implementation recomputes every calibration, radius, margin, bracket,
+cache identity, and source hash; the minimum strict event slack is
+$1.45\times10^{-6}$ and the largest radius uses only
+$1.28\times10^{-6}$ of its derivative domain.
+
+This operator reduction has not yet become an end-to-end speedup.  The
+process-isolated row audit takes 1085.63 wall seconds versus 927.82 seconds for
+the released panel because it evaluates sharper local jets and repeats common
+setup for the two eight-probe extensions.  The result moves the measured
+bottleneck away from Green transposes and into deterministic jet construction
+and orchestration; it does not relabel lower operator count as lower wall time.
 
 The deterministic neural-jet release sharpens the practical picture further.
 Across the complete 15-case operator cohort it preserves eight brackets with
@@ -892,7 +937,9 @@ different question of whether revealing the future is cheaper than proving it.
   seed-366, $H=26$ case.  (a) Median phase times over three separately launched
   executions; all retain $[2,2]$.  (b) Same-machine direct-continuation
   controls from the same seed, anchor, and optimizer.  The 58.02-minute
-  historical fixed-$q=8$ cross-batch median is excluded from the matched panel.}
+  historical fixed-$q=8$ cross-batch median is excluded from the matched panel.
+  (c) Matched post-reference linearized-sweep accounting for the released Gram
+  panel and the frozen causal-row audit.}
   \label{fig:composed-runtime}
 \end{figure}
 
@@ -913,10 +960,22 @@ for an event claim.
 Classical shadowing, pseudo-orbit, and radii-polynomial methods certify
 trajectory proximity/existence, including in learning dynamics
 \citep{chow1989shadowing,chow1992numerical,chow1994global,hammel1987numerical,sauer1991rigorous,lessard2014rigorous,bielecki2004shadowing,orvieto2019shadowing}.
+Componentwise shadowing rotates local errors into finite-time growth directions,
+and inductive containment builds step-local boxes
+\citep{vanvleck2000componentwise,hayes2003containment}.  These constructions
+sharpen orbit enclosures but do not fix the initial state to a realized neural
+optimizer checkpoint and transport the resulting tube through neural margins.
 Product-space radii bounds can preserve component structure
 \citep{vandenberg2018wright}, while goal-oriented a posteriori methods use
 adjoint residuals to control selected quantities of interest
-\citep{becker2001optimal}.  Our forcing-subspace result uses the exact
+\citep{becker2001optimal}.  Adjoint analysis has also produced computable error
+estimates for the first time a differential-equation functional reaches a
+threshold \citep{chaudhry2021threshold}; goal-oriented surrogate learning now
+controls path-space observables including mean first-hitting times
+\citep{zou2026goaloriented}.  \method{} instead encloses the
+realized discrete trajectory and returns a strict persistent-event bracket or
+abstention, without assuming that the local event-time linearization is
+accurate or replacing the optimizer by a learned dynamical surrogate.  Our forcing-subspace result uses the exact
 scaled-momentum factorization to close the anchored nonlinear recurrence in
 parameter space before transporting it through persistent neural-output
 margins.
@@ -948,10 +1007,10 @@ finite-window first-passage closure rather than an exogenous input set.
 \toprule
 Approach & State/object & Uncertainty or correction & Delivered claim \\
 \midrule
-Chow--Lin--Palmer;\newline Chow--Palmer
-\citep{chow1989shadowing,chow1992numerical}
+Chow--Lin--Palmer; Chow--Palmer;\newline Van Vleck; Hayes--Jackson
+\citep{chow1989shadowing,chow1992numerical,vanvleck2000componentwise,hayes2003containment}
 & numerical pseudo-orbit & right-inverse/Newton correction
-& shadowing orbit and proximity bound \\
+& shadowing orbit and componentwise/containment bound \\
 Lessard--Reinhardt \citep{lessard2014rigorous}
 & IVP coefficient sequence & residual and radii polynomial
 & rigorous solution enclosure \\
@@ -970,6 +1029,9 @@ Barrier robustness \citep{taheri2026barc}
 Adaptive SGD stopping \citep{aolaritei2026stopping}
 & strongly convex stochastic trajectory & time-uniform confidence sequence
 & distance/suboptimality stopping certificate \\
+First-threshold error analysis \citep{chaudhry2021threshold}
+& differential-equation trajectory & adjoint residual and event-time linearization
+& a posteriori first-threshold timing error estimate \\
 CT-BaB \citep{shi2026ctbab}
 & neural controller and input region & verification-aware branch and bound
 & post-training Lyapunov stability \\
@@ -1014,9 +1076,13 @@ The 63 direct 192-bit proofs begin at stored checkpoints.  The 204
 amplified-secant jets are outward at 192 bits conditional on stored dyadic
 inputs, whereas the upstream Transformer Green products, derivative envelopes,
 and output margins remain float64/ideal-PRNG calculations.  The post-seal
-$8.75\times$ Green reduction and eight deterministic output releases reuse
-frozen analytic envelopes.  They reduce the present cost substantially, but
-they do not settle neural-jet construction at modern scale.
+$8.75\times$ Green reduction, transpose-free causal-row audit, and eight
+deterministic output releases reuse frozen analytic envelopes.  The causal-row
+theorem reduces matched post-reference sweeps $144\to98$, but its current
+process-isolated implementation is 1.17$\times$ slower in wall time than the
+released panel because deterministic jets and repeated setup dominate.  The
+result isolates the next scaling target; it does not settle neural-jet
+construction at modern scale.
 
 \section{Conclusion}
 
@@ -1029,9 +1095,12 @@ implementation preserves all 15 audited Transformer brackets while cutting
 Green work $560\to64$; deterministic neural jets remove every output probe in
 eight of those cases.  A directional block remainder additionally recovers
 three holdout certificates under a three-sweep reference while an independent
-mixed jet reproduces every local bound.  Their complete composition turns one sealed Transformer
-certificate from an hours-scale historical construction into a reproducible
-9.21-second proof object without changing its bracket.
+mixed jet reproduces every local bound.  Chronological forcing-subspace closure
+then retains all 15 brackets across 14 holdouts, removes all 64 transpose
+sweeps, and reduces matched post-reference work $144\to98$.  Their complete
+composition turns one sealed Transformer certificate from an hours-scale
+historical construction into a reproducible 9.21-second proof object without
+changing its bracket.
 
 \ifdefined\arxivversion\else\clearpage\fi
 \bibliographystyle{plainnat}
@@ -1696,6 +1765,61 @@ $\|\Pi_\theta\|=\|Q_0\|=1$ and
 $\|\mathcal B\|=\sqrt2\eta$, proving
 Eq.~\eqref{eq:parameter-dominance}.  The checkpointwise statement follows by
 absorbing $\operatorname{diag}(L_j)$ into the input side of the same operator.
+\end{proof}
+
+\begin{corollary}[Chronological parameter-forcing envelope]
+\label{cor:causal-parameter-row}
+Under the scaled-momentum factorization of
+Corollary~\ref{cor:parameter-forcing}, let $\bar K_i$ map transition forcings
+through time $i$ to the state error at checkpoint $i+1$, and let
+$\mathcal B_i$ apply $\mathcal B$ blockwise to a parameter-forcing prefix.
+Define
+\begin{equation}
+ T_i=\Pi_\theta\bar K_i\mathcal B_i,\qquad
+ \kappa_i^\theta\ge\|T_i\|.
+ \label{eq:causal-parameter-row}
+\end{equation}
+Suppose the corrected defect is a known signed state forcing $q$ plus
+$\mathcal B\xi$, where $\|\xi_k\|\le\epsilon_k$, and put
+\begin{equation}
+ y_{i+1}=\Pi_\theta(\bar K_Hq)_{i+1},\qquad
+ Y_{i+1}=\|y_{i+1}\|+\kappa_i^\theta
+ \left(\sum_{k=0}^{i}\epsilon_k^2\right)^{1/2}.
+ \label{eq:causal-row-affine}
+\end{equation}
+If the objective Hessian at transition $k$ is $L_k$-Lipschitz on its declared
+parameter ball, define $r_0=0$ and evaluate
+Eq.~\eqref{eq:causal-row-main} chronologically.  Whenever every resulting ball
+lies inside its declared domain,
+\begin{equation}
+ \|\Pi_\theta(x_{a+k}-b_k)\|\le r_k,
+ \qquad 1\le k\le H.
+ \label{eq:causal-row-tube}
+\end{equation}
+Computed-response and arithmetic residual bounds enter additively in
+$Y_{i+1}$; they do not alter the recursion.
+\end{corollary}
+
+\begin{proof}
+Write $p_k=\Pi_\theta(x_{a+k}-b_k)$.  Exact scaled-momentum factorization and
+causality give
+\begin{equation}
+ p_{i+1}=y_{i+1}+T_i\bigl(
+ \xi_0+R_0(p_0),\ldots,\xi_i+R_i(p_i)\bigr),
+ \label{eq:causal-row-identity}
+\end{equation}
+where $R_k$ is defined in
+Eq.~\eqref{eq:objective-gradient-remainder}.  The unresolved known forcing is
+bounded by the second term of Eq.~\eqref{eq:causal-row-affine}.  Since $p_0=0$,
+the first nonlinear remainder vanishes.  If $\|p_k\|\le r_k$ through time $i$,
+the norm of the remaining nonlinear forcing prefix is at most
+\begin{equation}
+ \left\{\sum_{k=1}^{i}
+ \left(\frac{L_kr_k^2}{2}\right)^2\right\}^{1/2}.
+\end{equation}
+Multiplication by $\|T_i\|$ yields Eq.~\eqref{eq:causal-row-main}; chronological
+induction proves Eq.~\eqref{eq:causal-row-tube}.  Adding certified numerical
+residuals follows by the same triangle inequality.
 \end{proof}
 
 \begin{corollary}[Deterministic neural-jet release]
@@ -2459,7 +2583,20 @@ strict-improvement gate fails.  We report this negative result because it both
 validates the corrected indexing and locates the remaining bottleneck: coarse
 randomized release thresholds, not the zero anchor block.
 
-Finally, Proposition~\ref{prop:causal-prefix} is executable rather than only
+The chronological row protocol was then frozen at commit
+\texttt{5aff03c2515e9256} after development on seed 373's 70\% case and before
+any structured-row query on the other 14 panel rows.  It fixes four variational
+sweeps, the signed directional quadratic and recurrence forcing, mixed
+fourth-order residuals, one eight-probe stream per candidate, and a 4/8
+forward-only stopping rule.  Every row issues its sealed bracket: 13 at four
+probes and two at eight.  The second eight-probe row is the held-out seed-373
+80\% case, which retains $[214,214]$.  The aggregate SHA-256 begins
+\texttt{72956D00921CEF63}; a separate verifier bound to the frozen source and
+all 17 raw blocks recomputes 15/15 decisions and the fair 128/68, 129/83, and
+144/98 cost decompositions.  Its maximum radius/domain ratio is
+$1.284\times10^{-6}$ and it reads no future outcome.
+
+Separately, Proposition~\ref{prop:causal-prefix} is executable rather than only
 an accounting identity.  Three natural Transformer records reproduce the
 full-$H=300$ centerline bitwise at sealed horizons 26, 131, and 299, including
 the same persistent-event prediction.  Prefix streaming reduces centerline
@@ -2988,6 +3125,11 @@ bind each sealed certificate, centerline, benchmark, and complete cache; they
 reproduce four brackets with zero trace discrepancy and no fallback.  The
 panel aggregator recomputes query counts, pair work, partial-phase timings,
 and the naive-versus-fused comparison without importing the benchmark runner.
+The causal-row audit is bound to frozen commit
+\texttt{5aff03c2515e9256}; its runner refuses a dirty tracked tree, runs five
+preaudit tests, and hashes every claim-bearing source.  From 17 raw blocks, an
+independent scalar verifier reconstructs all 15 calibrations, chronological
+radii, persistent brackets, cache identities, and costs with zero outcome reads.
 The 256-bit Arb audit encloses calibration and scalar roots conditional on
 stored $Y$; an independent script rechecks its exact interval, certificate
 hashes, and 11 retained brackets.  A strict post-fixed Transformer wrapper has
@@ -3015,10 +3157,9 @@ conditional on stored $Y$.  Accordingly, those Green claims are exact-Gaussian
 propositions with deterministic-PRNG implementations, not end-to-end
 computer-assisted proofs (Appendix~\ref{app:transformer-jet}).
 
-Modular data are exhaustive; WDBC and bundled digits carry source checksums and
-persistent UCI identifiers.  The supplement provides source, tests, frozen
-protocols and seals, manifests, compact outcomes, independent audits, and exact
-reproduction commands; large checkpoint arrays are regenerated.
+Modular data are exhaustive; WDBC and digits carry checksums and persistent UCI
+identifiers.  The supplement provides source, tests, seals, manifests, audits,
+and exact commands; large checkpoint arrays are regenerated.
 
 \ifdefined\arxivversion\else
 \input{checklist.tex}

@@ -32,6 +32,9 @@ FILES = [
     "STRUCTURED_PARAMETER_GREEN_THEOREM_V1_INDEXING_NOTE.md",
     "STRUCTURED_PARAMETER_GREEN_THEOREM_V2.md",
     "STRUCTURED_PARAMETER_GREEN_SOURCE_SUPERSESSION.md",
+    "CAUSAL_ROW_GREEN_THEOREM.md",
+    "CAUSAL_STRUCTURED_ROW_PANEL_PROTOCOL.md",
+    "CAUSAL_STRUCTURED_ROW_PANEL_RESULT.md",
     "DIRECTIONAL_BLOCK_REMAINDER_THEOREM.md",
     "DIRECTIONAL_BLOCK_REMAINDER_THEOREM_V2.md",
     "DIRECTIONAL_BLOCK_REMAINDER_SOURCE_SUPERSESSION.md",
@@ -501,6 +504,19 @@ FILES.extend([
     "results/structured_parameter_green_independent_audit.json",
     "results/anchor_fixed_structured_parameter_green_transformer_audit.json",
     "results/anchor_fixed_structured_parameter_green_independent_audit.json",
+    "scripts/causal_row_green.py",
+    "scripts/diagnose_transformer_causal_row_green.py",
+    "scripts/combine_causal_row_probe_blocks.py",
+    "scripts/audit_transformer_causal_structured_row_panel.py",
+    "scripts/verify_transformer_causal_structured_row_panel.py",
+    "scripts/test_causal_row_green.py",
+    "scripts/test_causal_structured_row_green.py",
+    "scripts/test_combine_causal_row_probe_blocks.py",
+    "scripts/test_causal_row_green_transformer_batch.py",
+    "scripts/transformer_mixed_directional_jet_v2.py",
+    "scripts/test_transformer_mixed_directional_jet_v2.py",
+    "results/transformer_causal_structured_row_panel_audit.json",
+    "results/transformer_causal_structured_row_panel_verification.json",
     "results/transformer_fully_recentered_three_sweep_audit.json",
     "results/transformer_directional_block_remainder_diagnostic.json",
     "results/transformer_directional_three_sweep_event_audit.json",
@@ -544,6 +560,16 @@ v3_certificate_seal = json.loads(
 )
 for entry in v3_certificate_seal["certificate_files"]:
     FILES.append(entry["path"].replace("\\", "/"))
+
+# A frozen method seal is only independently useful when every source it hashes
+# is shipped with the archive.  Derive this closure from the seal rather than
+# maintaining a second hand-written list that can silently drift.
+v3_method_seal = json.loads(
+    (ROOT / "TRANSFORMER_V3_METHOD_SEAL.json").read_text(encoding="utf-8")
+)
+FILES.append(v3_method_seal["protocol"].replace("\\", "/"))
+FILES.extend(path.replace("\\", "/") for path in v3_method_seal["code_manifest"])
+
 for path in (ROOT / "results").glob("transformer_v3_audit_seed_*_gate_*_anchor_*.json"):
     FILES.append(path.relative_to(ROOT).as_posix())
 
@@ -569,6 +595,7 @@ for directory in (
     ROOT / "results" / "transformer_direct_image_green_panel_cache",
     ROOT / "results" / "structured_parameter_green_transformer_cache",
     ROOT / "results" / "anchor_fixed_structured_parameter_green_transformer_cache",
+    ROOT / "results" / "transformer_causal_structured_row_panel_cache",
 ):
     for path in directory.glob("*.json"):
         FILES.append(path.relative_to(ROOT).as_posix())

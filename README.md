@@ -25,12 +25,21 @@ An independently implemented mixed jet reproduces every bound and closure to
 maximum relative error 4.19e-15; its 1.33x whole-case speedup is reported
 without redefining the prespecified 2x gate, which it does not pass.
 
-The current theorem release also factors the scaled-momentum nonlinear
+The v1.4 theorem release also factors the scaled-momentum nonlinear
 remainder through its parameter forcing subspace. On the complete 15-case
 Green-evaluable Transformer cohort, the matched sealed audit preserves every
 bracket while reducing staged logical Green sweeps from 112 to 96. A stricter
 anchor-zero refinement again preserves all 15 brackets but remains at 96
 sweeps, an independently reproduced negative promotion result.
+
+The chronological refinement closes each parameter checkpoint with its own
+causal row operator instead of compressing the whole window into one global
+gain. In the frozen panel it retains 15/15 brackets, including all 14 holdouts;
+13 cases stop at four probes and two at eight. Fair post-reference accounting
+falls from 144 to 98 linearized sweeps, and all 64 transpose sweeps disappear.
+The released implementation is not yet faster end to end because sharper jet
+construction and repeated process setup dominate; both the operator reduction
+and that timing result are independently audited.
 
 The practical path is now composed rather than reported as isolated speedups.
 On the sealed seed-366, $H=26$ Transformer case, three separately launched
@@ -56,6 +65,10 @@ baseline.
   artifact chain.
 - [`STRUCTURED_PARAMETER_GREEN_THEOREM_V2.md`](STRUCTURED_PARAMETER_GREEN_THEOREM_V2.md)
   records the profiled forcing-subspace closure and explicit causal indexing.
+- [`CAUSAL_ROW_GREEN_THEOREM.md`](CAUSAL_ROW_GREEN_THEOREM.md),
+  [`CAUSAL_STRUCTURED_ROW_PANEL_PROTOCOL.md`](CAUSAL_STRUCTURED_ROW_PANEL_PROTOCOL.md),
+  and [`CAUSAL_STRUCTURED_ROW_PANEL_RESULT.md`](CAUSAL_STRUCTURED_ROW_PANEL_RESULT.md)
+  give the chronological row theorem, frozen panel, and fair cost accounting.
 - [`DIRECTIONAL_BLOCK_REMAINDER_THEOREM_V2.md`](DIRECTIONAL_BLOCK_REMAINDER_THEOREM_V2.md)
   states the maintained polarized three-known/one-free remainder theorem;
   [`DIRECTIONAL_BLOCK_REMAINDER_SOURCE_SUPERSESSION.md`](DIRECTIONAL_BLOCK_REMAINDER_SOURCE_SUPERSESSION.md)
@@ -82,6 +95,7 @@ python scripts/check_reproduction_environment.py
 python reproduce.py smoke
 python scripts/reproduce_figures.py --check-determinism
 python scripts/audit_transformer_v3_streaming_direct_analytic.py
+python scripts/verify_transformer_causal_structured_row_panel.py
 ```
 
 The complete v1.3 directional replay is also fresh-clone executable. Nine

@@ -9,22 +9,22 @@
     "source_date_epoch": "1787961600",
     "undefined_references": false
   },
-  "pages": 43,
+  "pages": 44,
   "pdf": {
-    "bytes": 820460,
+    "bytes": 838236,
     "path": "output/pdf/greencert_arxiv.pdf",
-    "sha256": "A537BF564D7759CCE83C8AD7A2F45B5C5D9D6E0396DD0238C4F3F57567EB0705"
+    "sha256": "D2A64E37F8E6CDD12ADF4E3D94369C5AC230BDE9459538E33E9F1F17C49DF156"
   },
   "source_bundle": {
-    "bytes": 264292,
+    "bytes": 269236,
     "files": 17,
     "path": "output/arxiv/greencert_arxiv_source.zip",
-    "sha256": "D8645D702AD6AF2D280A129648F9EABD5D334A6736FB4CB948259E8DB3996BB9"
+    "sha256": "77530224287520961C10491EC5A3F4241AAA822678B688E90F0A18293CB4F6E0"
   },
   "supplement": {
-    "bytes": 24697717,
+    "bytes": 25707015,
     "path": "output/certified_local_training_events_supplement.zip",
-    "sha256": "702AD18C61DDC0ACF9C745139BF1147F960CA9CF6A070FBCBB7CD6DF9FD8998E"
+    "sha256": "AD0949FB85DB4AF0D569E9D522A2BB768398868A11C76079635A77FA8BBC380D"
   },
   "title": "GreenCert: Signed Green Operators for Certified Neural Training Transitions"
 }

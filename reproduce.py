@@ -17,6 +17,10 @@ TIERS = {
         "scripts/test_batched_green_operator.py",
         "scripts/test_structured_parameter_green.py",
         "scripts/test_structured_parameter_green_v2.py",
+        "scripts/test_causal_row_green.py",
+        "scripts/test_causal_structured_row_green.py",
+        "scripts/test_combine_causal_row_probe_blocks.py",
+        "scripts/test_causal_row_green_transformer_batch.py",
         "scripts/structured_parameter_green_source_bridge.py",
         "scripts/test_one_shot_signed_recenter.py",
         "scripts/test_online_progressive_gram.py",
@@ -47,6 +51,7 @@ TIERS = {
         "scripts/audit_transformer_v3_streaming_direct_analytic.py",
         "scripts/verify_structured_parameter_green_audit.py",
         "scripts/verify_anchor_fixed_structured_parameter_green_audit.py",
+        "scripts/verify_transformer_causal_structured_row_panel.py",
         "scripts/audit_greencert_manuscript_claims.py",
     ),
     "outward": (

@@ -4,7 +4,9 @@ from __future__ import annotations
 
 import hashlib
 import json
+import os
 from pathlib import Path
+import subprocess
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -15,15 +17,46 @@ def digest(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest().upper()
 
 
-def main() -> None:
-    files = sorted(
-        path
-        for path in ROOT.rglob("*")
-        if path.is_file()
-        and path.relative_to(ROOT).parts[0] not in IGNORED_ROOTS
-        and "__pycache__" not in path.parts
-        and path.name != "PUBLIC_MANIFEST_SHA256.json"
+def tracked_files() -> list[Path]:
+    """Return only files already tracked by Git.
+
+    Release manifests must not depend on a maintainer's untracked caches,
+    scratch outputs, or local editor files.  ``git ls-files -z`` gives the
+    repository's versioned publication boundary without making assumptions
+    about filename whitespace or quoting.
+    """
+
+    completed = subprocess.run(
+        ["git", "-c", "core.quotepath=false", "ls-files", "-z", "--cached"],
+        cwd=ROOT,
+        check=True,
+        capture_output=True,
     )
+    root_resolved = ROOT.resolve()
+    files: list[Path] = []
+    for raw_relative in completed.stdout.split(b"\0"):
+        if not raw_relative:
+            continue
+        relative = Path(os.fsdecode(raw_relative))
+        if relative.parts[0] in IGNORED_ROOTS:
+            continue
+        if "__pycache__" in relative.parts:
+            continue
+        if relative.name == "PUBLIC_MANIFEST_SHA256.json":
+            continue
+        path = (ROOT / relative).resolve()
+        try:
+            path.relative_to(root_resolved)
+        except ValueError as exc:
+            raise RuntimeError(f"tracked path escapes repository: {relative}") from exc
+        if not path.is_file():
+            raise RuntimeError(f"tracked release file is missing: {relative}")
+        files.append(path)
+    return sorted(files, key=lambda path: path.relative_to(ROOT).as_posix())
+
+
+def main() -> None:
+    files = tracked_files()
     manifest = {
         "format": 1,
         "repository": "https://github.com/oddeye00/greencert",

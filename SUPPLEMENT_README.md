@@ -122,6 +122,17 @@ The paper makes five distinct empirical claims and audit layers.
     sweeps, so its prespecified strict-improvement gate fails. The negative
     result and its 23-hash independent replay are retained in full.
 
+    `CAUSAL_ROW_GREEN_THEOREM.md` then replaces the global window gain by one
+    chronological forcing-to-parameter row for each checkpoint. The frozen
+    structured-row protocol discloses one development row and reserves 14
+    holdouts. All 15 brackets are retained; 13 cases stop at four probes and
+    two at eight. Random norm-estimation work falls from 128 forward/transpose
+    sweeps to 68 forward sweeps, closure work falls 129 to 83, and fair full
+    post-reference accounting falls 144 to 98 with no transpose sweep. The 17
+    probe-block caches and an independent scalar verifier are included. The
+    process-isolated implementation remains 1.17x slower in wall time, so the
+    record claims an operator reduction rather than an end-to-end speedup.
+
 The WDBC matched unsigned baseline also issues 56/56. This is reported
 explicitly: WDBC establishes transfer, information separation, and numerical
 rigor; digits gives a protocol-primary non-modular signed-only result; the

@@ -39,6 +39,9 @@ REQUIRED = {
     "STRUCTURED_PARAMETER_GREEN_SOURCE_SUPERSESSION.md",
     "STRUCTURED_PARAMETER_GREEN_AUDIT_PROTOCOL_V2.md",
     "ANCHOR_FIXED_STRUCTURED_PARAMETER_GREEN_AUDIT_PROTOCOL.md",
+    "CAUSAL_ROW_GREEN_THEOREM.md",
+    "CAUSAL_STRUCTURED_ROW_PANEL_PROTOCOL.md",
+    "CAUSAL_STRUCTURED_ROW_PANEL_RESULT.md",
     "DIRECTIONAL_BLOCK_REMAINDER_THEOREM.md",
     "DIRECTIONAL_BLOCK_REMAINDER_THEOREM_V2.md",
     "DIRECTIONAL_BLOCK_REMAINDER_SOURCE_SUPERSESSION.md",
@@ -59,6 +62,17 @@ REQUIRED = {
     "results/structured_parameter_green_independent_audit.json",
     "results/anchor_fixed_structured_parameter_green_transformer_audit.json",
     "results/anchor_fixed_structured_parameter_green_independent_audit.json",
+    "scripts/causal_row_green.py",
+    "scripts/diagnose_transformer_causal_row_green.py",
+    "scripts/combine_causal_row_probe_blocks.py",
+    "scripts/audit_transformer_causal_structured_row_panel.py",
+    "scripts/verify_transformer_causal_structured_row_panel.py",
+    "scripts/test_causal_row_green.py",
+    "scripts/test_causal_structured_row_green.py",
+    "scripts/test_combine_causal_row_probe_blocks.py",
+    "scripts/test_causal_row_green_transformer_batch.py",
+    "results/transformer_causal_structured_row_panel_audit.json",
+    "results/transformer_causal_structured_row_panel_verification.json",
     "scripts/transformer_directional_fourth_bound.py",
     "scripts/test_transformer_directional_fourth_bound.py",
     "scripts/test_directional_block_symmetrization.py",
@@ -195,14 +209,14 @@ def main() -> None:
     paper_pdf = root / "paper" / "greencert_arxiv.pdf"
     paper_reader = PdfReader(paper_pdf)
     paper_metadata = paper_reader.metadata or {}
-    if len(paper_reader.pages) != 43:
+    if len(paper_reader.pages) != 44:
         raise AssertionError(f"unexpected public preprint length: {len(paper_reader.pages)}")
     if str(paper_metadata.get("/Author", "")) != "Ian Rhee":
         raise AssertionError("public preprint author metadata changed")
     release = json.loads(
         (root / "paper" / "greencert_arxiv_release.json").read_text(encoding="utf-8")
     )
-    if int(release["pages"]) != 43 or release["pdf"]["sha256"] != digest(paper_pdf):
+    if int(release["pages"]) != 44 or release["pdf"]["sha256"] != digest(paper_pdf):
         raise AssertionError("public preprint and arXiv release manifest differ")
     release_payloads = {
         "source_bundle": root / "paper" / "greencert_arxiv_source.zip",
@@ -234,6 +248,10 @@ def main() -> None:
             "directional three-sweep event audit complete",
         "results/transformer_mixed_directional_cohort_audit.json":
             "mixed directional cohort audit complete",
+        "results/transformer_causal_structured_row_panel_audit.json":
+            "frozen structured causal-row Transformer panel audit complete",
+        "results/transformer_causal_structured_row_panel_verification.json":
+            "structured causal-row panel independently verified",
     }
     for relative, status in expected_audits.items():
         record = json.loads((root / relative).read_text(encoding="utf-8"))
@@ -267,6 +285,29 @@ def main() -> None:
         raise AssertionError("mixed directional equivalence invariants changed")
     if mixed["prespecified_audit_passed"]:
         raise AssertionError("failed mixed-jet speed gate was silently reclassified")
+
+    causal_row = json.loads(
+        (root / "results/transformer_causal_structured_row_panel_audit.json")
+        .read_text(encoding="utf-8")
+    )
+    causal_verification = json.loads(
+        (root / "results/transformer_causal_structured_row_panel_verification.json")
+        .read_text(encoding="utf-8")
+    )
+    if (
+        (int(causal_row["cases"]), int(causal_row["holdout_issued"]),
+         int(causal_row["brackets_retained"])) != (15, 14, 15)
+        or not causal_row["promotion_passed"]
+        or int(causal_row["outcome_files_read"]) != 0
+    ):
+        raise AssertionError("causal-row public panel invariants changed")
+    if (
+        causal_verification["audit_sha256"]
+        != digest(root / "results/transformer_causal_structured_row_panel_audit.json")
+        or int(causal_verification["issued_recomputed"]) != 15
+        or int(causal_verification["outcome_files_read"]) != 0
+    ):
+        raise AssertionError("causal-row public verification invariants changed")
 
     directional_dependency_path = (
         root / "results/directional_replay_dependency_closure.json"
