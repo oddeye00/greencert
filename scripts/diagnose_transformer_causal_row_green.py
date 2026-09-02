@@ -41,6 +41,9 @@ from transformer_v3_certificate import load_candidate, output_path, safe_json
 ROOT = Path(__file__).resolve().parents[1]
 RESULTS = ROOT / "results"
 PARENT = RESULTS / "transformer_fully_recentered_three_sweep_audit.json"
+RELEASED_STRUCTURED = (
+    RESULTS / "anchor_fixed_structured_parameter_green_transformer_audit.json"
+)
 DEVELOPMENT_CANDIDATE = Candidate(366, 0.8, 1120)
 PERSISTENCE = 25
 FAMILY_DELTA = 1.0e-6 / 15.0
@@ -72,6 +75,14 @@ def parent_row(candidate: Candidate) -> dict:
         ):
             return row
     raise RuntimeError(f"candidate is absent from the parent: {candidate}")
+
+
+def released_structured_row(candidate: Candidate) -> dict:
+    payload = safe_json(RELEASED_STRUCTURED)
+    for row in payload["rows"]:
+        if row["candidate"] == candidate.__dict__:
+            return row
+    raise RuntimeError(f"candidate is absent from the structured audit: {candidate}")
 
 
 def persistent_bracket(
@@ -350,6 +361,7 @@ def run(
     timing["closures_and_event"] = time.perf_counter() - phase
     timing["end_to_end"] = time.perf_counter() - started
 
+    released_row = released_structured_row(candidate) if sweeps == 4 else None
     return {
         "status": "outcome-blind causal row-Green candidate audit complete",
         "evidence_boundary": (
@@ -369,6 +381,11 @@ def run(
         "parent_corrected_path_match": (
             tensor_sha256(corrected_scaled) == source["corrected_path_sha256"]
             if sweeps == 3
+            else None
+        ),
+        "released_corrected_path_match": (
+            tensor_sha256(corrected_scaled) == released_row["corrected_path_sha256"]
+            if released_row is not None
             else None
         ),
         "pipeline_diagnostics": pipeline,
@@ -415,7 +432,7 @@ def main() -> None:
         "--threshold", type=float, default=DEVELOPMENT_CANDIDATE.threshold
     )
     parser.add_argument("--anchor", type=int, default=DEVELOPMENT_CANDIDATE.anchor)
-    parser.add_argument("--sweeps", type=int, choices=(2, 3), default=3)
+    parser.add_argument("--sweeps", type=int, choices=(2, 3, 4), default=3)
     parser.add_argument("--probes", type=int, default=4)
     parser.add_argument(
         "--defect-route",
