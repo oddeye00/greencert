@@ -150,6 +150,9 @@ def main() -> None:
     mixed_directional = load(
         "results/transformer_mixed_directional_cohort_audit.json"
     )
+    transported_envelope = load(
+        "results/transformer_directional_envelope_transport_audit.json"
+    )
 
     ts = transformer["summary"]
     studies = {
@@ -728,6 +731,63 @@ def main() -> None:
         and close(mixed_directional["median_runtime_speedup"], 1.3311220163039459),
         "mixed directional numerical audit changed",
     )
+    transported_rows = transported_envelope["rows"]
+    require(
+        transported_envelope["status"]
+        == "DIRECTIONAL ENVELOPE TRANSPORT AUDIT PASSED"
+        and bool(transported_envelope["protocol_gates_passed"])
+        and bool(transported_envelope["source_isolated_replay"])
+        and int(transported_envelope["outcome_files_read"]) == 0,
+        "directional-envelope transport audit boundary changed",
+    )
+    require(
+        (len(transported_rows), sum(int(row["issued"]) for row in transported_rows))
+        == (4, 4)
+        and sum(int(not row["development_row"]) for row in transported_rows) == 3
+        and all(bool(row["same_centerline"]) for row in transported_rows)
+        and all(bool(row["same_corrected_path"]) for row in transported_rows),
+        "directional-envelope transport cohort changed",
+    )
+    require(
+        sum(int(row["transport_checks"]) for row in transported_rows) == 9420
+        and close(
+            transported_envelope["all_cases"]["maximum_stage_majorant_ratio"],
+            1.0000000000007316,
+        )
+        and close(
+            transported_envelope["all_cases"]["maximum_derivative_envelope_ratio"],
+            1.0000000000000553,
+        ),
+        "directional-envelope transport numerical audit changed",
+    )
+    require(
+        sorted(tuple(row["bracket"]) for row in transported_rows)
+        == [(2, 2), (28, 28), (70, 70), (118, 118)],
+        "directional-envelope transport brackets changed",
+    )
+    transported_dependencies = {
+        "closure_parent": "results/transformer_directional_block_remainder_diagnostic.json",
+        "full_parent": "results/transformer_fully_recentered_three_sweep_audit.json",
+        "event_parent": "results/transformer_directional_three_sweep_event_audit.json",
+        "protocol": "DIRECTIONAL_ENVELOPE_TRANSPORT_AUDIT_PROTOCOL.md",
+        "theorem": "DIRECTIONAL_ENVELOPE_TRANSPORT_THEOREM.md",
+        "source_isolation_amendment": "DIRECTIONAL_ENVELOPE_TRANSPORT_SOURCE_ISOLATION_AMENDMENT.md",
+        "block_envelope_v15": "scripts/transformer_block_envelope_v15.py",
+        "hvp_v15": "scripts/transformer_hvp_grokking_v15.py",
+        "modal_v15": "scripts/transformer_modal_forecast_v15.py",
+        "mixed_jet_v15": "scripts/transformer_mixed_directional_jet_v15.py",
+        "streaming_centerline_v15": "scripts/streaming_variational_centerline_v15.py",
+        "historical_mixed_jet": "scripts/transformer_mixed_directional_jet.py",
+        "historical_streaming_centerline": "scripts/streaming_variational_centerline.py",
+        "optimizer_probe_v15": "scripts/transformer_optimizer_probe_v15.py",
+        "v3_method_seal": "TRANSFORMER_V3_METHOD_SEAL.json",
+        "script": "scripts/audit_transformer_directional_envelope_transport.py",
+    }
+    for key, relative in transported_dependencies.items():
+        require(
+            transported_envelope["source_hashes"][key] == sha256(ROOT / relative),
+            f"directional-envelope source lock changed: {relative}",
+        )
 
     required_phrases = (
         "Across four frozen or outcome-sealed studies, all 83",
@@ -817,6 +877,11 @@ def main() -> None:
         "$154.31\\to115.92$ seconds ($1.33\\times$)",
         "misses the prespecified\n$2\\times$ speed gate",
         "paper_directional_block_remainder.pdf",
+        "Directionally transported neural envelope",
+        "all 9,420 checked stage, geometry, and derivative",
+        "$1+7.32\\times10^{-13}$",
+        "$1+5.53\\times10^{-14}$",
+        "duplicate full stage/geometry audit",
     )
     for phrase in required_phrases:
         require(phrase in paper, f"manuscript lost required scoped phrase: {phrase}")
@@ -1004,6 +1069,16 @@ def main() -> None:
             "mixed_directional_speed_gate_passed": mixed_directional[
                 "prespecified_audit_passed"
             ],
+            "directional_envelope_transport_cases": len(transported_rows),
+            "directional_envelope_transport_checks": sum(
+                int(row["transport_checks"]) for row in transported_rows
+            ),
+            "directional_envelope_transport_stage_ratio": transported_envelope[
+                "all_cases"
+            ]["maximum_stage_majorant_ratio"],
+            "directional_envelope_transport_derivative_ratio": transported_envelope[
+                "all_cases"
+            ]["maximum_derivative_envelope_ratio"],
         },
         "checked_required_phrases": list(required_phrases),
         "checked_forbidden_phrases": list(forbidden_phrases),

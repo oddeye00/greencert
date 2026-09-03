@@ -52,7 +52,9 @@ linear-cost mixed-jet implementation. The immutable-v1/maintained-v2 source
 bridge additionally verifies the explicit slot-symmetrization lemma and all
 three source hashes. It also verifies the transitive Python/data dependency
 closure of all three directional replay entry points and all 15 exact anchor
-states in the compact deterministic anchor bundle.
+states in the compact deterministic anchor bundle. The v1.5 tests additionally
+check directional transport of stage values and parameter geometry into the
+corrected-path neural envelope, including shared-geometry cache equivalence.
 Its first-passage check exhaustively enumerates
 109,152 valid lower/true/upper finite-window paths, including no-event cases,
 and compares both independent bracket implementations. It does not retrain the
@@ -144,6 +146,9 @@ python scripts/audit_directional_replay_dependency_closure.py
 python scripts/diagnose_transformer_directional_block_remainder.py --workers 3
 python scripts/audit_transformer_directional_three_sweep_events.py
 python scripts/audit_transformer_mixed_directional_cohort.py --workers 3
+python scripts/test_transformer_directional_envelope_transport.py
+python scripts/test_transformer_envelope_geometry_cache.py
+python scripts/audit_transformer_directional_envelope_transport.py
 ```
 
 The 15 exact parameter/velocity anchors required by these commands are shipped
@@ -158,7 +163,16 @@ machine-dependent timing fields, so run them in a disposable clone when an
 unchanged working tree is desired. The invariant outputs are: directional no
 weaker than scalar at every checkpoint, three new nondevelopment closures,
 four retained sealed brackets, and maximum mixed-jet relative discrepancy at
-most 3e-12. The original whole-case 2x speed gate remains failed.
+most 3e-12. The transported-envelope audit then performs 9,420 one-sided
+dominance checks and retains those same four brackets, including all three
+nondevelopment cases, without reading an outcome. The original whole-case 2x
+speed gate remains failed.
+
+The v1.5 implementation is deliberately separated from the historical v3
+filenames. `DIRECTIONAL_ENVELOPE_TRANSPORT_SOURCE_ISOLATION_AMENDMENT.md`
+records the release-audit finding, the four restored method-seal hashes, and
+the source-isolated replay. The definitive audit calls the original
+`verify_method_seal()` before doing any v1.5 work.
 
 ## Tier 4: validated WDBC/digits replay
 
@@ -290,6 +304,9 @@ The release-level audit requires:
   retained;
 - the independent mixed jet reproducing all 15 closure decisions and every
   local bound to maximum relative error at most 3e-12;
+- the directionally transported neural envelope dominating fresh
+  corrected-center evaluations in all 9,420 audit checks and retaining all
+  four three-sweep brackets with zero outcome reads;
 - deterministic figure regeneration;
 - no local absolute paths, credential-shaped strings, or files over GitHub's
   100 MB limit in the public repository.

@@ -133,6 +133,21 @@ The paper makes five distinct empirical claims and audit layers.
     process-isolated implementation remains 1.17x slower in wall time, so the
     record claims an operator reduction rather than an end-to-end speedup.
 
+    The v1.5 directional-envelope theorem reuses the mixed jet's certified
+    segment inflation and block radii to initialize the derivative envelope at
+    the signed corrected center. Its protocol was frozen before a four-case
+    outcome-blind audit. All four closures and sealed brackets are retained,
+    including all three nondevelopment cases; 9,420 stage, geometry, and
+    derivative comparisons satisfy the required one-sided dominance tests,
+    and no outcome file or new randomized query is used. The theorem removes a
+    duplicate full stage/geometry audit from the construction. Cohort timings
+    are recorded for traceability but are not used as a speed claim. A
+    pre-release smoke audit found that the first implementation had modified
+    four historical v3 filenames; the source-isolation amendment retains that
+    first record, restores every old hash, moves additions to explicit v1.5
+    modules, and requires the definitive replay to verify the old method seal
+    before execution.
+
 The WDBC matched unsigned baseline also issues 56/56. This is reported
 explicitly: WDBC establishes transfer, information separation, and numerical
 rigor; digits gives a protocol-primary non-modular signed-only result; the
@@ -444,6 +459,9 @@ python scripts/test_transformer_two_response.py
 python scripts/test_directional_two_response.py
 python scripts/test_directional_two_response_theorem.py
 python scripts/test_transformer_fourth_jet_bound.py
+python scripts/test_transformer_directional_envelope_transport.py
+python scripts/test_transformer_envelope_geometry_cache.py
+python scripts/audit_transformer_directional_envelope_transport.py
 python scripts/audit_transformer_v3_two_response_result.py
 python scripts/audit_transformer_v3_two_response_benchmark.py
 python scripts/test_amplified_secant_response.py

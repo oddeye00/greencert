@@ -62,19 +62,17 @@ anchor-preserving verifier that either brackets a future persistent event or
 abstains.  Starting from a checkpoint-local reference path, it propagates the
 realized signed defect through a finite-window Green operator, recenters on
 that directional response, and bounds only the remaining second-order error.
-The response-centered theorem therefore certifies the realized nonlinear
-trajectory over a finite window and transports its state tube to a persistent
-first-passage bracket.  Across four frozen or outcome-sealed studies, all 83
-issued brackets contain their subsequently revealed crossings.  Independent
-192-bit outward continuation re-certifies all 63 WDBC and digits brackets.
-  Retaining direction matters: signed propagation preserves a 147-step digits
-  certificate and eight of nine fixed-radius Transformer certificates that the
-  matched unsigned construction loses, while both inaccurate finite digits
-  forecasts abstain before randomized probing.  Frozen computational
-  refinements further reduce Green-operator work and recover certificates at
-  shorter reference paths without changing the issued brackets.  The resulting
-  verifier is selective and explicit about its numerical and probabilistic
-  obligations.
+The resulting theorem encloses the realized nonlinear trajectory over a finite
+window and transports that enclosure to a persistent first-passage bracket.
+Across four frozen or outcome-sealed studies, all 83 issued brackets contain their subsequently revealed crossings;
+independent 192-bit outward
+continuation re-certifies all 63 WDBC and digits brackets.  Direction is
+essential in the difficult cases: signed propagation preserves a 147-step
+digits certificate and eight of nine fixed-radius Transformer certificates
+lost by a matched unsigned construction.  Both inaccurate finite digits
+forecasts abstain before randomized probing.  The result is a selective
+verifier that distinguishes an accurate local clock from one whose future
+trajectory has actually been certified.
 \end{abstract}
 
 \section{Introduction}
@@ -121,23 +119,14 @@ Our contributions are:
 \begin{enumerate}
   \item We formulate training-event certification as an anchor-fixed causal
   sequence problem and derive a response-centered Green theorem with explicit
-  implementation error.  A time-resolved corollary aligns checkpointwise drift
-  with the signed response, while corrected-path relinearization removes the
-  mixed state-response term entirely under the same bounded-Hessian envelope.
-  A polarized block-majorant corollary retains the three realized directions
-  in the fourth-order gradient remainder and maximizes only over the remaining
-  dual direction.
-  For scaled momentum, a chronological forcing-subspace corollary closes each
-  parameter checkpoint through row operators
-  $\Pi_\theta K_i\mathcal B$.  It removes optimizer-state directions that
-  neither generate the nonlinear remainder nor affect the neural event, and it
-  replaces a global quadratic discriminant by an explicit causal recursion.
-  \item We give a matrix-free, anytime implementation.  HVP/VJP products apply
-  $K_H$ and $K_H^\top$; one Gaussian block bounds every inspected Gram power,
-  while predictable spending permits adaptive operator creation.  Verified
-  residual identities and operator-cap budgets control inexact products and
-  recentering; fresh probes can bypass a second response or certify its Green
-  image using outward scalar directional jets.
+  implementation error.  The theorem preserves the known signed response and
+  certifies only the nonlinear remainder; time-resolved, relinearized,
+  transported-envelope, and scaled-momentum corollaries sharpen
+  this closure without changing the event being certified.
+  \item We give a matrix-free, anytime implementation based on HVP/VJP
+  products.  Shared Gaussian blocks, predictable probability spending, and
+  verified residual identities support adaptive stopping while retaining an
+  explicit family-wise guarantee.
   \item We run frozen confirmations on three task families and two separately
   sealed Transformer cohorts.  All 83 issued brackets cover; every one of the
   63 non-modular brackets survives independent 192-bit continuation, and
@@ -149,6 +138,13 @@ Our contributions are:
   frozen 15-case audit reduces Green applications from 560 to 64
   ($8.75\times$) while retaining all 15 brackets.
 \end{enumerate}
+
+At a high level, the verifier has four stages: build a checkpoint-local clock,
+propagate its realized signed defect, certify the remaining nonlinear
+trajectory error, and transport the resulting tube through neural-output
+margins to a persistent event bracket.  The next two sections develop these
+stages in that order; the implementation refinements are introduced only when
+they affect the guarantee or its cost.
 
 \section{Problem and local clock}
 \label{sec:problem}
@@ -857,6 +853,18 @@ $2\times$ speed gate because centerline replay dominates, so we claim the
 equivalence and sweep saving, not a twofold end-to-end acceleration.  The
 audit is post-release, outcome-blind, and makes no new randomized query.
 
+The same directional jet supplies a second reuse opportunity.
+Proposition~\ref{prop:transported-neural-envelope} transports stage values and
+parameter geometry from the three-sweep center along its known signed
+correction, then expands only the unknown shadowing radius.  In a separately
+frozen equivalence audit, the transported envelope dominates a fresh
+corrected-center envelope at all 9,420 checked stage, geometry, and derivative
+entries and preserves all four brackets above, including all three
+nondevelopment cases.  The largest stage and derivative dominance ratios are
+$1+7.32\times10^{-13}$ and $1+5.53\times10^{-14}$, respectively.  This removes
+a duplicate full stage/geometry audit from the mathematical construction; we
+make no wall-time claim from the non-isolated cohort run.
+
 \subsection{Computational scaling with batched operator products}
 
 Post-seal batching accelerates complete replay by $3.00/2.60\times$.  Anytime
@@ -1055,34 +1063,31 @@ Weight-space robustness \citep{weng2020weight}
 
 \section{Limitations and broader impact}
 
-The complete certificates currently cover shallow tanh MLPs and a one-block,
+The present complete certificates cover shallow tanh MLPs and a one-block,
 13,792-parameter Transformer.  A 102,400-parameter LayerNorm/AdamW audit
-transports the required derivatives but does not close the event theorem;
-deep networks and stochastic optimization remain open.  At 1.01M parameters,
-the matrix-free core takes 11.37 hours before neural-jet construction.  The
-fully composed 13,792-parameter $H=26$ verifier now runs in 9.21\,s median,
-but matched direct continuation is still $30.9\times$ faster over the needed
-window, and this small-model result does not resolve modern-scale closure.  The
-events are defined on fixed evaluation sets and coverage is conditional on
-issuance, so these are not population guarantees.
+already transports the required derivatives; extending complete closure to
+deep networks and stochastic optimization is the main technical next step.
+At 1.01M parameters, the matrix-free core takes 11.37 hours before neural-jet
+construction.  At the fully composed scale, however, the 13,792-parameter
+$H=26$ verifier runs in 9.21\,s median, turning an hours-scale historical
+construction into a seconds-scale proof object.  Matched direct continuation
+is still $30.9\times$ faster over that short window.  The events are defined on
+fixed evaluation sets and coverage is conditional on issuance, so these are
+finite-set event guarantees rather than population guarantees.
 
-The directional-block remainder is presently specialized to the same
-normalization-free Transformer and uses analytic block majorants rather than
-outward-rounded coefficient arithmetic.  Its post-release audit establishes
-theorem tightness and sweep reduction on a frozen panel; it is not counted as
-an additional prospective coverage experiment.
-
-The 63 direct 192-bit proofs begin at stored checkpoints.  The 204
-amplified-secant jets are outward at 192 bits conditional on stored dyadic
-inputs, whereas the upstream Transformer Green products, derivative envelopes,
-and output margins remain float64/ideal-PRNG calculations.  The post-seal
-$8.75\times$ Green reduction, transpose-free causal-row audit, and eight
-deterministic output releases reuse frozen analytic envelopes.  The causal-row
-theorem reduces matched post-reference sweeps $144\to98$, but its current
-process-isolated implementation is 1.17$\times$ slower in wall time than the
-released panel because deterministic jets and repeated setup dominate.  The
-result isolates the next scaling target; it does not settle neural-jet
-construction at modern scale.
+The numerical guarantees have two levels.  All 63 WDBC and digits certificates
+survive direct 192-bit outward continuation from stored checkpoints, and the
+204 amplified-secant jets are outward at 192 bits conditional on stored dyadic
+inputs.  The upstream Transformer Green products, derivative envelopes, and
+output margins remain float64/ideal-PRNG calculations.  The directional-block
+remainder is specialized to the normalization-free Transformer and uses
+analytic block majorants rather than outward-rounded coefficient arithmetic;
+its frozen post-release audit is evidence about the method, not an additional
+prospective coverage cohort.  Finally, the causal-row theorem reduces matched
+post-reference sweeps $144\to98$, while its current process-isolated
+implementation is 1.17$\times$ slower because deterministic jets and repeated
+setup dominate.  These measurements locate the remaining systems bottleneck
+in neural-jet construction rather than dense Green storage.
 
 \section{Conclusion}
 
@@ -1498,6 +1503,60 @@ sum, product, affine-map, and smooth-composition rules.  A linear-cost
 alternative propagates only $D_t^k$ and $D_t^kD_\varepsilon$ for $k\le3$;
 the terminal $D_t^3D_\varepsilon$ coefficient is exactly the vector
 $\nabla P_{j,4}(r_j)/4$ and avoids materializing degree-four monomials.
+
+\begin{proposition}[Directionally transported neural envelope]
+\label{prop:transported-neural-envelope}
+Let the corrected reference at checkpoint $j$ be
+$b_j=c_j+v_j$, write $a_j=\Pi_\theta v_j$, and suppose the unknown parameter
+error is at most $E\le\rho$.  For every intermediate neural stage $h_\ell$,
+assume a directional jet on $\theta_j+ta_j$, $0\le t\le1$, gives
+\begin{equation}
+ A_{\ell,j}\ge
+ \sup_{0\le t\le1}\left\|\frac{d}{dt}
+ h_\ell(\theta_j+ta_j)\right\|.
+ \label{eq:stage-transport}
+\end{equation}
+For each disjoint parameter block, let $W_{r,j}$ and $V_{r,j}$ be its values
+in $c_j$ and $v_j$.  Define transported inputs
+\begin{equation}
+ \widehat H_{\ell,j}=\|h_\ell(\theta_j)\|+A_{\ell,j},
+ \qquad
+ \widehat G_{r,j}=\|W_{r,j}\|_2+\|V_{r,j}\|_F,
+ \label{eq:transported-envelope-inputs}
+\end{equation}
+with Euclidean norms for vector blocks.  If the ordinary ball-valid neural
+envelope is coordinatewise nondecreasing in its stage inputs, parameter
+geometry, and ball radius, then evaluating it at
+$(\widehat H_j,\widehat G_j,\rho)$ bounds the same derivatives throughout
+$B(\Pi_\theta b_j,\rho)$ as a fresh corrected-center construction.
+
+In particular, if it returns bounds $(L_{1,j},L_{2,j},L_{3,j})$, then the
+corrected-path closure may use
+\begin{equation}
+ M_j=\sqrt2\eta\left(2L_{1,j}^3+	frac32L_{1,j}L_{2,j}
+ +\sqrt2L_{3,j}\right),
+ \label{eq:transported-envelope-drift}
+\end{equation}
+and a true-versus-competitor logit margin pays uncertainty
+$\sqrt2L_{1,j}E$.  The known correction $a_j$ is absorbed into the center and
+is not charged again in the event radius.
+\end{proposition}
+
+\begin{proof}
+The fundamental theorem of calculus and Eq.~\eqref{eq:stage-transport} give
+$\|h_\ell(\theta_j+a_j)\|\le\widehat H_{\ell,j}$.  For every matrix block,
+$\|W_{r,j}+V_{r,j}\|_2\le\|W_{r,j}\|_2+\|V_{r,j}\|_2
+\le\widehat G_{r,j}$; the vector-block argument is identical.  These inputs
+therefore dominate the exact stage values and geometry at the corrected
+center.  Coordinatewise monotonicity of each nonnegative sum, product,
+composition, and fixed-point majorant preserves domination while the radius
+$\rho$ is added, proving validity on the stated ball.  Equation
+\eqref{eq:transported-envelope-drift} is the usual cross-entropy
+scaled-momentum bound.  Finally
+$x_j=b_j+e_j$ with $\|\Pi_\theta e_j\|\le E$, so the logit difference changes
+by at most $\sqrt2L_{1,j}E$; $a_j$ belongs to $b_j$ and is known rather than
+uncertain.
+\end{proof}
 
 \begin{corollary}[Amplified-secant second response]
 \label{cor:amplified-secant}
@@ -2742,6 +2801,30 @@ centerline replay remains dominant.  This negative timing gate is part of the
 result: the practical saving established here is one fewer predeclared
 centerline sweep on four records, not a twofold acceleration of the complete
 verifier.
+
+\begin{table}[H]
+\caption{Outcome-blind audit of Proposition~\ref{prop:transported-neural-envelope}.
+The dominance ratios compare the transported majorant with direct float64
+evaluation at the corrected center; theorem validity follows from monotonicity,
+not from these numerical comparisons.}
+\label{tab:transported-envelope-audit}
+\centering
+\small
+\setlength{\tabcolsep}{8pt}
+\begin{tabular}{lr}
+\toprule
+Quantity & Result \\
+\midrule
+Cases / nondevelopment cases & 4 / 3 \\
+Stage, geometry, and derivative checks & 9,420 \\
+Issued / sealed brackets retained & 4/4 / 4/4 \\
+Issued offsets & 2, 28, 70, 118 \\
+Maximum stage-majorant ratio & $1+7.32\times10^{-13}$ \\
+Maximum derivative-envelope ratio & $1+5.53\times10^{-14}$ \\
+Outcome files / new randomized queries & 0 / 0 \\
+\bottomrule
+\end{tabular}
+\end{table}
 
 \section{Matched unsigned baseline and sweep audit}
 \label{app:mechanism}

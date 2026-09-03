@@ -36,6 +36,8 @@ TIERS = {
         "scripts/test_directional_block_symmetrization.py",
         "scripts/test_transformer_directional_fourth_bound.py",
         "scripts/test_transformer_mixed_directional_jet.py",
+        "scripts/test_transformer_directional_envelope_transport.py",
+        "scripts/test_transformer_envelope_geometry_cache.py",
         "scripts/transformer_directional_anchor_bundle.py",
         "scripts/test_transformer_directional_sparse_checkpoint_loader.py",
         "scripts/audit_directional_replay_dependency_closure.py",
@@ -52,6 +54,7 @@ TIERS = {
         "scripts/verify_structured_parameter_green_audit.py",
         "scripts/verify_anchor_fixed_structured_parameter_green_audit.py",
         "scripts/verify_transformer_causal_structured_row_panel.py",
+        "scripts/audit_transformer_directional_envelope_transport.py",
         "scripts/audit_greencert_manuscript_claims.py",
     ),
     "outward": (

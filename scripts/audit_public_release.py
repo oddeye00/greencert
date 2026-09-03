@@ -48,6 +48,9 @@ REQUIRED = {
     "DIRECTIONAL_BLOCK_REMAINDER_PROTOCOL.md",
     "DIRECTIONAL_THREE_SWEEP_EVENT_PROTOCOL.md",
     "MIXED_DIRECTIONAL_JET_AUDIT_PROTOCOL.md",
+    "DIRECTIONAL_ENVELOPE_TRANSPORT_THEOREM.md",
+    "DIRECTIONAL_ENVELOPE_TRANSPORT_AUDIT_PROTOCOL.md",
+    "DIRECTIONAL_ENVELOPE_TRANSPORT_SOURCE_ISOLATION_AMENDMENT.md",
     "ADAPTIVE_SWEEP_COHORT_PROTOCOL.md",
     "TRANSFORMER_V3_METHOD_SEAL.json",
     "scripts/test_structured_parameter_green.py",
@@ -82,6 +85,15 @@ REQUIRED = {
     "scripts/transformer_mixed_directional_jet.py",
     "scripts/test_transformer_mixed_directional_jet.py",
     "scripts/audit_transformer_mixed_directional_cohort.py",
+    "scripts/test_transformer_directional_envelope_transport.py",
+    "scripts/test_transformer_envelope_geometry_cache.py",
+    "scripts/audit_transformer_directional_envelope_transport.py",
+    "scripts/transformer_block_envelope_v15.py",
+    "scripts/transformer_hvp_grokking_v15.py",
+    "scripts/transformer_modal_forecast_v15.py",
+    "scripts/transformer_optimizer_probe_v15.py",
+    "scripts/transformer_mixed_directional_jet_v15.py",
+    "scripts/streaming_variational_centerline_v15.py",
     "scripts/audit_transformer_adaptive_sweep_cohort.py",
     "scripts/corrected_path_closure.py",
     "scripts/audit_directional_replay_dependency_closure.py",
@@ -91,6 +103,8 @@ REQUIRED = {
     "results/transformer_directional_block_remainder_diagnostic.json",
     "results/transformer_directional_three_sweep_event_audit.json",
     "results/transformer_mixed_directional_cohort_audit.json",
+    "results/transformer_directional_envelope_transport_audit.json",
+    "results/transformer_directional_envelope_transport_audit_preisolation_v1.json",
     "results/transformer_fully_recentered_three_sweep_audit.json",
     "results/directional_replay_dependency_closure.json",
     "results/transformer_directional_anchor_states.npz",
@@ -209,14 +223,14 @@ def main() -> None:
     paper_pdf = root / "paper" / "greencert_arxiv.pdf"
     paper_reader = PdfReader(paper_pdf)
     paper_metadata = paper_reader.metadata or {}
-    if len(paper_reader.pages) != 44:
+    if len(paper_reader.pages) != 45:
         raise AssertionError(f"unexpected public preprint length: {len(paper_reader.pages)}")
     if str(paper_metadata.get("/Author", "")) != "Ian Rhee":
         raise AssertionError("public preprint author metadata changed")
     release = json.loads(
         (root / "paper" / "greencert_arxiv_release.json").read_text(encoding="utf-8")
     )
-    if int(release["pages"]) != 44 or release["pdf"]["sha256"] != digest(paper_pdf):
+    if int(release["pages"]) != 45 or release["pdf"]["sha256"] != digest(paper_pdf):
         raise AssertionError("public preprint and arXiv release manifest differ")
     release_payloads = {
         "source_bundle": root / "paper" / "greencert_arxiv_source.zip",
@@ -248,6 +262,8 @@ def main() -> None:
             "directional three-sweep event audit complete",
         "results/transformer_mixed_directional_cohort_audit.json":
             "mixed directional cohort audit complete",
+        "results/transformer_directional_envelope_transport_audit.json":
+            "DIRECTIONAL ENVELOPE TRANSPORT AUDIT PASSED",
         "results/transformer_causal_structured_row_panel_audit.json":
             "frozen structured causal-row Transformer panel audit complete",
         "results/transformer_causal_structured_row_panel_verification.json":
@@ -285,6 +301,46 @@ def main() -> None:
         raise AssertionError("mixed directional equivalence invariants changed")
     if mixed["prespecified_audit_passed"]:
         raise AssertionError("failed mixed-jet speed gate was silently reclassified")
+
+    transported = json.loads(
+        (root / "results/transformer_directional_envelope_transport_audit.json")
+        .read_text(encoding="utf-8")
+    )
+    transported_rows = transported["rows"]
+    if (
+        not transported["protocol_gates_passed"]
+        or not transported["source_isolated_replay"]
+        or int(transported["outcome_files_read"]) != 0
+        or (len(transported_rows), sum(int(row["issued"]) for row in transported_rows))
+        != (4, 4)
+        or sum(int(row["transport_checks"]) for row in transported_rows) != 9420
+        or not all(bool(row["same_centerline"]) for row in transported_rows)
+        or not all(bool(row["same_corrected_path"]) for row in transported_rows)
+    ):
+        raise AssertionError("directional-envelope transport invariants changed")
+    transported_dependencies = {
+        "closure_parent": "results/transformer_directional_block_remainder_diagnostic.json",
+        "full_parent": "results/transformer_fully_recentered_three_sweep_audit.json",
+        "event_parent": "results/transformer_directional_three_sweep_event_audit.json",
+        "protocol": "DIRECTIONAL_ENVELOPE_TRANSPORT_AUDIT_PROTOCOL.md",
+        "theorem": "DIRECTIONAL_ENVELOPE_TRANSPORT_THEOREM.md",
+        "source_isolation_amendment": "DIRECTIONAL_ENVELOPE_TRANSPORT_SOURCE_ISOLATION_AMENDMENT.md",
+        "block_envelope_v15": "scripts/transformer_block_envelope_v15.py",
+        "hvp_v15": "scripts/transformer_hvp_grokking_v15.py",
+        "modal_v15": "scripts/transformer_modal_forecast_v15.py",
+        "mixed_jet_v15": "scripts/transformer_mixed_directional_jet_v15.py",
+        "streaming_centerline_v15": "scripts/streaming_variational_centerline_v15.py",
+        "historical_mixed_jet": "scripts/transformer_mixed_directional_jet.py",
+        "historical_streaming_centerline": "scripts/streaming_variational_centerline.py",
+        "optimizer_probe_v15": "scripts/transformer_optimizer_probe_v15.py",
+        "v3_method_seal": "TRANSFORMER_V3_METHOD_SEAL.json",
+        "script": "scripts/audit_transformer_directional_envelope_transport.py",
+    }
+    for key, relative in transported_dependencies.items():
+        if transported["source_hashes"][key] != digest(root / relative):
+            raise AssertionError(
+                f"directional-envelope source lock changed: {relative}"
+            )
 
     causal_row = json.loads(
         (root / "results/transformer_causal_structured_row_panel_audit.json")

@@ -30,6 +30,9 @@ REQUIRED = {
     "CAUSAL_ROW_GREEN_THEOREM.md",
     "CAUSAL_STRUCTURED_ROW_PANEL_PROTOCOL.md",
     "CAUSAL_STRUCTURED_ROW_PANEL_RESULT.md",
+    "DIRECTIONAL_ENVELOPE_TRANSPORT_THEOREM.md",
+    "DIRECTIONAL_ENVELOPE_TRANSPORT_AUDIT_PROTOCOL.md",
+    "DIRECTIONAL_ENVELOPE_TRANSPORT_SOURCE_ISOLATION_AMENDMENT.md",
     "STRUCTURED_PARAMETER_GREEN_AUDIT_PROTOCOL_V2.md",
     "ANCHOR_FIXED_STRUCTURED_PARAMETER_GREEN_AUDIT_PROTOCOL.md",
     "AMPLIFIED_SECANT_PROBE_PROTOCOL.md",
@@ -76,6 +79,17 @@ REQUIRED = {
     "scripts/test_causal_row_green_transformer_batch.py",
     "results/transformer_causal_structured_row_panel_audit.json",
     "results/transformer_causal_structured_row_panel_verification.json",
+    "scripts/test_transformer_directional_envelope_transport.py",
+    "scripts/test_transformer_envelope_geometry_cache.py",
+    "scripts/audit_transformer_directional_envelope_transport.py",
+    "scripts/transformer_block_envelope_v15.py",
+    "scripts/transformer_hvp_grokking_v15.py",
+    "scripts/transformer_modal_forecast_v15.py",
+    "scripts/transformer_optimizer_probe_v15.py",
+    "scripts/transformer_mixed_directional_jet_v15.py",
+    "scripts/streaming_variational_centerline_v15.py",
+    "results/transformer_directional_envelope_transport_audit.json",
+    "results/transformer_directional_envelope_transport_audit_preisolation_v1.json",
     "results/transformer_arb_multijet_randomized_test_audit.json",
     "figures/paper_transformer_v3_anytime.pdf",
     "scripts/paper_plot_style.py",
@@ -162,6 +176,20 @@ def main() -> None:
             or int(causal_verification["issued_recomputed"]) != 15
         ):
             raise AssertionError("causal-row independent verification changed")
+
+        transported = json.loads(
+            archive.read("results/transformer_directional_envelope_transport_audit.json")
+        )
+        transported_rows = transported["rows"]
+        if (
+            transported["status"] != "DIRECTIONAL ENVELOPE TRANSPORT AUDIT PASSED"
+            or not transported["protocol_gates_passed"]
+            or int(transported["outcome_files_read"]) != 0
+            or len(transported_rows) != 4
+            or sum(int(row["issued"]) for row in transported_rows) != 4
+            or sum(int(row["transport_checks"]) for row in transported_rows) != 9420
+        ):
+            raise AssertionError("directional-envelope transport invariants changed")
 
     print(
         json.dumps(

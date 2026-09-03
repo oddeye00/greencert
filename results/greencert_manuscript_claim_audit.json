@@ -1,7 +1,7 @@
 {
   "status": "GREENCERT manuscript claim audit passed",
   "paper": "paper\\certified_local_training_events_neurips2026.tex",
-  "paper_sha256": "899A11BB635A581066C15ECA7F51472CFC150B2FBA3F3630C7F4EB9948A5F479",
+  "paper_sha256": "5816F3F047E6439BCB19F1F94F20774017D93C0898B2F8FB3581B36ADE645E6A",
   "studies": {
     "wdbc": {
       "cases": 72,
@@ -195,7 +195,11 @@
     "directional_event_issued": 4,
     "mixed_directional_maximum_relative_error": 4.190858883233474e-15,
     "mixed_directional_median_runtime_speedup": 1.3311220163039459,
-    "mixed_directional_speed_gate_passed": false
+    "mixed_directional_speed_gate_passed": false,
+    "directional_envelope_transport_cases": 4,
+    "directional_envelope_transport_checks": 9420,
+    "directional_envelope_transport_stage_ratio": 1.0000000000007316,
+    "directional_envelope_transport_derivative_ratio": 1.0000000000000553
   },
   "checked_required_phrases": [
     "Across four frozen or outcome-sealed studies, all 83",
@@ -284,7 +288,12 @@
     "$4.19\\times10^{-15}$",
     "$154.31\\to115.92$ seconds ($1.33\\times$)",
     "misses the prespecified\n$2\\times$ speed gate",
-    "paper_directional_block_remainder.pdf"
+    "paper_directional_block_remainder.pdf",
+    "Directionally transported neural envelope",
+    "all 9,420 checked stage, geometry, and derivative",
+    "$1+7.32\\times10^{-13}$",
+    "$1+5.53\\times10^{-14}$",
+    "duplicate full stage/geometry audit"
   ],
   "checked_forbidden_phrases": [
     "all 59 cases having a comparable future event",

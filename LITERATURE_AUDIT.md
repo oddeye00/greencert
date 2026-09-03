@@ -1,6 +1,6 @@
 # Primary-source novelty audit
 
-Last updated: 2026-09-02.
+Last updated: 2026-09-03.
 
 This record makes the paper's novelty search inspectable. It is not a proof
 that no related paper exists. It records the queries, primary sources, and
@@ -194,3 +194,28 @@ first-passage bracket or abstention. No primary source opened in this pass
 delivered that complete object. The manuscript now cites the closer antecedents
 and states the difference by delivered guarantee rather than by a categorical
 priority claim.
+
+## 2026-09-03 preprint-release freshness pass
+
+The final release audit repeated the search after adding directional transport
+of checkpoint-local neural envelopes. Queries included:
+
+- `optimizer trajectory certificate neural network training`
+- `training trajectory shadowing neural network optimizer certificate`
+- `first-passage neural network training certificate grokking`
+- `validated numerics neural network training trajectory`
+- `directional derivative neural network verification Taylor remainder`
+- `Hessian Lipschitz neural network verification Taylor bounds`
+
+Searches were run across arXiv, PMLR, SIAM, and Springer records and followed to
+primary papers when a result was technically close. The closest returned
+objects were the already-audited calibrated grokking-delay predictor, HiTaB's
+hierarchical Taylor bounds, Taylor-model reachability for neural controllers,
+and classical finite-time shadowing/error analysis. They respectively predict
+an event without enclosing the realized orbit, verify an input-domain image,
+propagate exogenous closed-loop reachable sets, or bound numerical trajectories
+without neural persistent-event transport. No result found in this pass
+subsumed the anchor-fixed signed optimizer tube plus persistent first-passage
+certificate. The pass therefore changes neither the bibliography nor the
+paper's object-level claim boundary; it records the release-date search rather
+than upgrading that boundary to a categorical priority claim.

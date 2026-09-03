@@ -25,6 +25,16 @@ An independently implemented mixed jet reproduces every bound and closure to
 maximum relative error 4.19e-15; its 1.33x whole-case speedup is reported
 without redefining the prespecified 2x gate, which it does not pass.
 
+The v1.5 theorem release reuses that signed geometry a second time. A
+directional transport proposition moves the inputs of the ball-valid neural
+derivative envelope from the audited center to the corrected path, so the
+known correction is absorbed into the center and only the unknown shadowing
+radius is expanded. A frozen, outcome-blind four-case audit performs 9,420
+stage, geometry, and derivative dominance checks, retains all four brackets
+(including all three nondevelopment cases), and reads no future outcome. This
+is a proof-level elimination of a duplicate stage/geometry audit; no runtime
+speedup is inferred from the non-isolated cohort execution.
+
 The v1.4 theorem release also factors the scaled-momentum nonlinear
 remainder through its parameter forcing subspace. On the complete 15-case
 Green-evaluable Transformer cohort, the matched sealed audit preserves every
@@ -77,6 +87,11 @@ baseline.
 - [`DIRECTIONAL_BLOCK_REMAINDER_PROTOCOL.md`](DIRECTIONAL_BLOCK_REMAINDER_PROTOCOL.md)
   and [`MIXED_DIRECTIONAL_JET_AUDIT_PROTOCOL.md`](MIXED_DIRECTIONAL_JET_AUDIT_PROTOCOL.md)
   freeze the cohort and independent implementation audits.
+- [`DIRECTIONAL_ENVELOPE_TRANSPORT_THEOREM.md`](DIRECTIONAL_ENVELOPE_TRANSPORT_THEOREM.md)
+  and [`DIRECTIONAL_ENVELOPE_TRANSPORT_AUDIT_PROTOCOL.md`](DIRECTIONAL_ENVELOPE_TRANSPORT_AUDIT_PROTOCOL.md)
+  state and audit the corrected-path envelope reuse theorem;
+  [`DIRECTIONAL_ENVELOPE_TRANSPORT_SOURCE_ISOLATION_AMENDMENT.md`](DIRECTIONAL_ENVELOPE_TRANSPORT_SOURCE_ISOLATION_AMENDMENT.md)
+  records the pre-release restoration of every historical v3 source hash.
 
 ## Quick verification
 
@@ -110,6 +125,9 @@ python scripts/audit_directional_replay_dependency_closure.py
 python scripts/diagnose_transformer_directional_block_remainder.py --workers 3
 python scripts/audit_transformer_directional_three_sweep_events.py
 python scripts/audit_transformer_mixed_directional_cohort.py --workers 3
+python scripts/test_transformer_directional_envelope_transport.py
+python scripts/test_transformer_envelope_geometry_cache.py
+python scripts/audit_transformer_directional_envelope_transport.py
 ```
 
 Windows activation:
