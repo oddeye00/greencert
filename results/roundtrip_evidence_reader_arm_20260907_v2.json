@@ -1,0 +1,27 @@
+{
+  "archived_sources_modified": false,
+  "authentication_precedes_numeric_parse": true,
+  "caller_selected_semantics": true,
+  "event_certificate_issued": false,
+  "finite_binary64_roundtrips": 9996,
+  "future_outcome_access": false,
+  "inherited_reader_refusals": 31,
+  "integer_precision_preserved": true,
+  "legacy_reader_underflow_counterexample_reproduced": true,
+  "lexeme_refusals": [
+    "1e-400",
+    "-1e-400",
+    "1e-1000000000",
+    "-1e-1000000000",
+    "1.00000000000000001",
+    "-1.00000000000000001",
+    "9007199254740993.0",
+    "0.100000000000000001",
+    "2.4703282292062327e-324",
+    "1e309",
+    "-1e309"
+  ],
+  "numeric_contract": "shortest_roundtrip_binary64_json_v1",
+  "schema": "roundtrip_evidence_reader_tests_v1",
+  "status": "PASS"
+}

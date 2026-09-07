@@ -41,6 +41,7 @@ jobs:
           $PSNativeCommandUseErrorActionPreference = $true
           python scripts/test_exact_input_scalar_closure.py
           python scripts/test_exact_input_window_event_assembly.py
+          python scripts/test_roundtrip_evidence_reader.py
       - name: Record environment
         run: python scripts/check_reproduction_environment.py
       - name: Run numerical smoke audit

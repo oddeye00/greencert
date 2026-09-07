@@ -1,0 +1,22 @@
+{
+  "archived_records_rewritten": false,
+  "binary64_visits": 2904077,
+  "elapsed_seconds": 6.867359746000147,
+  "event_certificate_issued": false,
+  "future_outcome_access": false,
+  "integer_visits": 152740,
+  "json_files": 16109,
+  "lexical_number_conversions_checked": true,
+  "manifest_sha256": "bc6e54b5421ffcf71cd9e905142cadcfbd3dc0856f478fd001c221cd5072b425",
+  "non_json_files_not_parsed": 1604,
+  "non_json_neural_arrays_replayed": false,
+  "numeric_contract": "shortest_roundtrip_binary64_json_v1",
+  "rejection_count": 0,
+  "schema": "recorded_json_numeric_contract_audit_v1",
+  "scope": "Every recorded .json dependency checked under the caller-selected round-trip binary64 contract; not a neural proof or future observation.",
+  "sources": {
+    "audit_recorded_json_contract.py": "f0970376de40f948a2a40fe1eba055f78aeb0c9e22ebb1a2a5a0037ff858c55a",
+    "roundtrip_evidence_reader.py": "7eaabbcca512b58a3380d9215093a1d27f2710d83448ded79cf86a4670d09543"
+  },
+  "status": "PASS"
+}

@@ -13,6 +13,16 @@ import subprocess
 
 ROOT = Path(__file__).resolve().parents[1]
 EXTRA = (
+    "scripts/roundtrip_evidence_reader.py",
+    "scripts/test_roundtrip_evidence_reader.py",
+    "scripts/audit_recorded_json_contract.py",
+    "scripts/verified_artifact_io.py",
+    "scripts/recorded_evidence_replay.py",
+    "scripts/test_recorded_evidence_replay.py",
+    "results/roundtrip_evidence_reader_windows_20260907_v2.json",
+    "results/roundtrip_evidence_reader_arm_20260907_v2.json",
+    "results/recorded_json_numeric_contract_arm_20260907_v1.json",
+    "results/recorded_exact_input_assembly_arm_20260907_v3.json",
     "EXACT_INPUT_EVENT_INTERFACE.md",
     "scripts/exact_input_scalar_closure.py",
     "scripts/test_exact_input_scalar_closure.py",

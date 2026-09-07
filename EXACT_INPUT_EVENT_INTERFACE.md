@@ -17,6 +17,7 @@ In the repository's pinned Python environment:
 ```text
 python scripts/test_exact_input_scalar_closure.py
 python scripts/test_exact_input_window_event_assembly.py
+python scripts/test_roundtrip_evidence_reader.py
 ```
 
 Both suites pass on Windows/AMD64 and Linux/aarch64. The event test reports
@@ -91,3 +92,38 @@ assertion-disabling `-O` option; the driver rejects that mode.
 The full graph is not included in the public repository. This check is
 separate from the self-contained tests above, and cannot establish the
 realized future crossing while that outcome remains sealed.
+
+## Authenticate the serialized numbers, too
+
+An exact assembler cannot recover a number already changed by a JSON parser.
+For example, the legacy reader decodes `1e-400` as zero. The separate
+`RoundtripEvidenceReader` authenticates the byte string before parsing and
+requires a caller-selected `shortest_roundtrip_binary64_json_v1` contract.
+Integer tokens remain exact integers. Fractional/exponent tokens must have
+the same decimal value as a spelling of Python's shortest round-trip
+representation of the decoded finite float. Equivalent formatting such as
+`0.1000` is accepted; hidden precision such as `1.00000000000000001` is not.
+
+This declares binary64 semantics, not exact-decimal semantics. Rational
+inputs remain supported by the in-memory exact assembler; this reader is
+for the binary64-producing archived protocols. It cannot establish that a
+producer computed its original bounds correctly.
+
+The reader tests pass on Windows and ARM: 9,996 finite random binary64
+round-trips, 11 invalid numeric spellings, and all 31 inherited path/hash/
+malformed-record refusals. The two host reports are byte-identical:
+`results/roundtrip_evidence_reader_{windows,arm}_20260907_v2.json`.
+
+The complete recorded graph also passes the stricter numeric audit:
+16,109 JSON files, 2,904,077 floating-point visits and 152,740 integer visits,
+with no rejected numeric spelling. The 1,604 non-JSON files are outside this
+parsing audit. See `scripts/audit_recorded_json_contract.py` and
+`results/recorded_json_numeric_contract_arm_20260907_v1.json`.
+
+The reassembly driver now requires
+`--numeric-contract shortest_roundtrip_binary64_json_v1`. It reparses the
+context under that contract, guards legacy numeric conversions, and then
+uses the exact-input assembler. The integrated ARM check retains the same
+`[44,44]` bracket, radius and count paths, with source hashes in
+`results/recorded_exact_input_assembly_arm_20260907_v3.json`.
+The prior report and all frozen producers remain unchanged.

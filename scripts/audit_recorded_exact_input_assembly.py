@@ -16,6 +16,7 @@ import exact_input_window_event_assembly as exact
 from bound_row_evidence import authenticate_bound_row
 from portable_reference_margin_evidence import authenticate_reference_window, intersect_with_derivative_row
 from replay_recorded_window import load_context
+from roundtrip_evidence_reader import RoundtripEvidenceReader, NUMERIC_CONTRACT
 from test_exact_input_scalar_closure import verify_exact_supersolution
 from verified_artifact_io import unique_object, invalid_constant, finite_json_float
 
@@ -76,6 +77,17 @@ def audit(args):
     reader, request, terminal, saved, _, _, _, barrier = load_context(
         args.root, args.manifest, args.manifest_sha256)
     assert replay["assembly"] == saved["result"]["assembly"]
+    strict_reader = RoundtripEvidenceReader(args.root, reader.recorded,
+                                            numeric_contract=args.numeric_contract)
+    # The original context loader is frozen. Before using its derived
+    # values, reparse every JSON record it consumed under the explicit
+    # new contract, from the same hash-pinned bytes.
+    for name, digest in reader.observed.items():
+        if Path(name).suffix.lower() == ".json":
+            strict_reader.read_json(name, digest)
+        else:
+            strict_reader.check_blob(name, digest)
+    reader = strict_reader
     guard = ExactConversionGuard(reader)
     guard.check(asdict(request))
     guard.check(saved)
@@ -119,7 +131,8 @@ def audit(args):
         response_residual=response.residual_upper, first_injection_error=response.first_injection_error_upper,
         domain=request.domain), result["state_closure"])
     barrier()
-    return dict(schema="recorded_exact_input_assembly_audit_v1", status="PASS",
+    return dict(schema="recorded_exact_input_assembly_audit_v2", status="PASS",
+        numeric_contract=args.numeric_contract,
         manifest_sha256=args.manifest_sha256, reference_replay_sha256=args.replay_sha256,
         assembly=result, bracket_unchanged=True, both_count_paths_unchanged=True,
         radius_unchanged=True, probability_scope_unchanged=True,
@@ -128,6 +141,10 @@ def audit(args):
         all_legacy_numeric_conversions_exact_on_consumed_records=True,
         supersolution_independently_verified=True, event_certificate_issued=False,
         future_outcome_access=False, frozen_producers_modified=False,
+        adapter_sources={name: hashlib.sha256((Path(__file__).resolve().parent/name).read_bytes()).hexdigest()
+            for name in ("audit_recorded_exact_input_assembly.py", "roundtrip_evidence_reader.py",
+                         "exact_input_scalar_closure.py", "exact_input_window_event_assembly.py",
+                         "test_exact_input_scalar_closure.py")},
         elapsed_seconds=time.perf_counter()-started,
         scope="Recorded-bound reassembly, conditional on the hash-pinned completed replay and original neural/Green premises; not a new end-to-end certificate.")
 
@@ -140,6 +157,7 @@ if __name__ == "__main__":
     parser.add_argument("--replay-report", type=Path, required=True)
     parser.add_argument("--replay-sha256", required=True)
     parser.add_argument("--report", type=Path, required=True)
+    parser.add_argument("--numeric-contract", choices=(NUMERIC_CONTRACT,), required=True)
     args = parser.parse_args()
     if args.report.exists():
         parser.error("fresh report required")
