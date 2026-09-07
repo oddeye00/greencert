@@ -26,6 +26,7 @@ EXTRA = (
     "scripts/stage_repaired_public_release.py",
     "scripts/scan_public_snapshot.py",
     "scripts/test_public_snapshot_scan.py",
+    "scripts/test_reproducibility_fail_fast.py",
     "scripts/replay_corrected_continuation.py",
     "results/public_repair_validation_20260907.json",
     "results/public_repair_statistics_audit_20260907.json",

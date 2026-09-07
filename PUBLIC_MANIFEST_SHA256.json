@@ -9,8 +9,8 @@
       "sha256": "C1B770356A637F2C9062EF9CAA9049E185C39C3054BFF613F08BED154131EC55"
     },
     ".github/workflows/reproducibility.yml": {
-      "bytes": 3435,
-      "sha256": "D640454A66E56DB3F72EC9514257095DA7A1C6BE5E7663019BFFCF0F70CA2AB7"
+      "bytes": 4001,
+      "sha256": "C15B5E00F9BC0AFC0F401ECCC69507ED4EBE14CB20D722EA518DC973D78C5B78"
     },
     ".gitignore": {
       "bytes": 291,
@@ -4937,8 +4937,8 @@
       "sha256": "74439AA5B4B5F8CAF11E94EC5D9B8D6BD838BD4FFE6E8711C373B02144EF77A4"
     },
     "scripts/stage_repaired_public_release.py": {
-      "bytes": 4744,
-      "sha256": "C60BE9907A34A11FCAFDEDC77F733FC1E4AE3D9E3008140A58A6B89434670A43"
+      "bytes": 4793,
+      "sha256": "88D93992A0BE0ED8A04748575DC70FBC510350BA15DDEF866308FB7DBFCFE832"
     },
     "scripts/streaming_variational_centerline.py": {
       "bytes": 5818,
@@ -5183,6 +5183,10 @@
     "scripts/test_relinearized_green_closure.py": {
       "bytes": 5445,
       "sha256": "E49D6DC40F551EA28FF4FB17B2425620513DF7E82D4733CBAAE2960ADBDCFD78"
+    },
+    "scripts/test_reproducibility_fail_fast.py": {
+      "bytes": 2077,
+      "sha256": "FE9631AEDE4B7A004168F0BAE0659631EA3C6C1B29D906586792BCE5D27CF8B2"
     },
     "scripts/test_response_centered_event_transport.py": {
       "bytes": 3075,
