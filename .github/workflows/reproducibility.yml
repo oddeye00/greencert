@@ -32,6 +32,22 @@ jobs:
         run: python scripts/check_reproduction_environment.py
       - name: Run numerical smoke audit
         run: python reproduce.py smoke
+      - name: Verify corrected continuation artifact
+        env:
+          OMP_NUM_THREADS: '1'
+          OPENBLAS_NUM_THREADS: '1'
+          MKL_NUM_THREADS: '1'
+          CUDA_VISIBLE_DEVICES: ''
+        run: |
+          python scripts/summarize_public_repair_validation.py
+          python scripts/audit_public_repair_statistics.py
+          python scripts/test_public_repair_archive.py
+          python scripts/test_public_repair_roundoff.py
+          python scripts/read_public_repair_archive.py --extract output/repaired_continuation_ci
+          python output/repaired_continuation_ci/scripts/test_public_repair_replay.py
+          python output/repaired_continuation_ci/scripts/replay_public_repair.py --manifest-sha256 2ea5e687f173a7f7f0f6c31bdc9b435c628b8f74ca2172d771ef33a77c3109cd --mode ledger --report output/repaired_continuation_ci/ci_ledger.json
+          python output/repaired_continuation_ci/scripts/replay_public_repair.py --manifest-sha256 2ea5e687f173a7f7f0f6c31bdc9b435c628b8f74ca2172d771ef33a77c3109cd --mode outputs --report output/repaired_continuation_ci/ci_outputs.json
+          python output/repaired_continuation_ci/scripts/replay_public_repair.py --manifest-sha256 2ea5e687f173a7f7f0f6c31bdc9b435c628b8f74ca2172d771ef33a77c3109cd --mode neural --job 0 --job 40 --job 47 --report output/repaired_continuation_ci/ci_neural.json
       - name: Verify structured causal resolvent development
         run: |
           python scripts/test_theorem_text_integrity.py
@@ -48,4 +64,7 @@ jobs:
       - name: Regenerate Matplotlib figures twice
         run: python scripts/reproduce_figures.py --check-determinism
       - name: Audit public release boundaries
-        run: python scripts/audit_public_release.py --root .
+        run: |
+          python scripts/test_public_snapshot_scan.py
+          python scripts/scan_public_snapshot.py --root .
+          python scripts/audit_public_release.py --root .

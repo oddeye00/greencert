@@ -1,0 +1,161 @@
+{
+  "status": "PASS",
+  "schema": "greencert_public_repair_v1",
+  "mode": "neural",
+  "manifest_sha256": "2ea5e687f173a7f7f0f6c31bdc9b435c628b8f74ca2172d771ef33a77c3109cd",
+  "selected_jobs": 3,
+  "all_63_jobs_selected": false,
+  "partial_smoke_test": false,
+  "retained_claims": 4,
+  "scalar_transitions": 126,
+  "output_margins": 39149,
+  "rows": [
+    {
+      "job": "wdbc_seed_101_anchor_0",
+      "ordinal": 0,
+      "study": "wdbc",
+      "mode": "neural",
+      "partial_smoke_test": false,
+      "checked_horizon": 29,
+      "scalar": {
+        "transitions": 29,
+        "optimizer_norm_inequalities": 29,
+        "minimum_exact_recurrence_slack": {
+          "exact_numerator": "1",
+          "exact_denominator": "2535301200456458802993406410752",
+          "strictly_positive": true,
+          "approximate_binary64": 3.944304526105059e-31
+        },
+        "minimum_exact_squared_spectral_slack": {
+          "exact_numerator": "198252939790367246231082489447422728473423857633902002966768542909820828113",
+          "exact_denominator": "127314748520905380391777855525586135065716774604121015664758778084648831235208544136462336",
+          "strictly_positive": true,
+          "approximate_binary64": 1.5571875379215288e-15
+        },
+        "unstored_terminal_diagnostic_rows": 0
+      },
+      "output_margins": 3450,
+      "events": [
+        {
+          "key": "binary:results/real_dataset_confirmation/certificates/candidate_000_seed_101_gate_0.json",
+          "original_bracket": [
+            14,
+            14
+          ],
+          "replayed_bracket": [
+            14,
+            14
+          ],
+          "retained": true
+        },
+        {
+          "key": "binary:results/real_dataset_confirmation/certificates/candidate_001_seed_101_gate_1.json",
+          "original_bracket": [
+            20,
+            20
+          ],
+          "replayed_bracket": [
+            20,
+            20
+          ],
+          "retained": true
+        }
+      ],
+      "retained_claims": 2,
+      "neural_derivatives_recomputed": true,
+      "output_margins_recomputed": true
+    },
+    {
+      "job": "digits_seed_503_anchor_35",
+      "ordinal": 40,
+      "study": "digits",
+      "mode": "neural",
+      "partial_smoke_test": false,
+      "checked_horizon": 58,
+      "scalar": {
+        "transitions": 58,
+        "optimizer_norm_inequalities": 58,
+        "minimum_exact_recurrence_slack": {
+          "exact_numerator": "1",
+          "exact_denominator": "158456325028528675187087900672",
+          "strictly_positive": true,
+          "approximate_binary64": 6.310887241768095e-30
+        },
+        "minimum_exact_squared_spectral_slack": {
+          "exact_numerator": "10571460968346107094495131436400410239261798945142607964514845252887161",
+          "exact_denominator": "7770675568902916283677847627294075626569627356208558085007249638955617140820833992704",
+          "strictly_positive": true,
+          "approximate_binary64": 1.360430103484376e-15
+        },
+        "unstored_terminal_diagnostic_rows": 0
+      },
+      "output_margins": 21299,
+      "events": [
+        {
+          "key": "binary:results/digits_signed_confirmation/certificates/candidate_004_seed_503_gate_0.json",
+          "original_bracket": [
+            49,
+            49
+          ],
+          "replayed_bracket": [
+            49,
+            49
+          ],
+          "retained": true
+        }
+      ],
+      "retained_claims": 1,
+      "neural_derivatives_recomputed": true,
+      "output_margins_recomputed": true
+    },
+    {
+      "job": "seed_17_anchor_47000",
+      "ordinal": 47,
+      "study": "modular_mse",
+      "mode": "neural",
+      "partial_smoke_test": false,
+      "checked_horizon": 39,
+      "scalar": {
+        "transitions": 39,
+        "optimizer_norm_inequalities": 39,
+        "minimum_exact_recurrence_slack": {
+          "exact_numerator": "1",
+          "exact_denominator": "19807040628566084398385987584",
+          "strictly_positive": true,
+          "approximate_binary64": 5.048709793414476e-29
+        },
+        "minimum_exact_squared_spectral_slack": {
+          "exact_numerator": "33126163417841208826825949112682540989092640801",
+          "exact_denominator": "25711008708143844408671393477458601640355247900524685364822016",
+          "strictly_positive": true,
+          "approximate_binary64": 1.288403881538442e-15
+        },
+        "unstored_terminal_diagnostic_rows": 0
+      },
+      "output_margins": 14400,
+      "events": [
+        {
+          "key": "mse:seed_17_anchor_47000:29",
+          "original_bracket": [
+            39,
+            39
+          ],
+          "replayed_bracket": [
+            39,
+            39
+          ],
+          "retained": true
+        }
+      ],
+      "retained_claims": 1,
+      "neural_derivatives_recomputed": true,
+      "output_margins_recomputed": true
+    }
+  ],
+  "neural_derivatives_recomputed": true,
+  "output_margins_recomputed": true,
+  "elapsed_seconds": 46.43070168200211,
+  "future_read": false,
+  "new_prospective_events": 0,
+  "scope": "Exact-real checkpoint continuation under the stated Arb/binary64 arithmetic assumptions; ledger/output modes are conditional on saved neural premises."
+}

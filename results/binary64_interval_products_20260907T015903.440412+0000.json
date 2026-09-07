@@ -1,0 +1,20 @@
+{
+  "event_certificate_issued": false,
+  "exact_interval_entry_checks": 386,
+  "exact_nonnegative_entry_checks": 386,
+  "interval_box_cases": 80,
+  "invalid_or_overflow_refusals": 16,
+  "legacy_subnormal_cases_retained": 8,
+  "numpy_version": "2.5.2",
+  "performance_claim": false,
+  "runtime_conditions_checked": true,
+  "scope": "primitive under the documented ordinary-binary64-dot contract; not a complete BLAS binary or neural certificate audit",
+  "source_of_reference": "exact rational interval-box endpoints, not samples",
+  "sources": {
+    "binary64_interval_products.py": "92eaddad6ac61b5af07a47ded039112c593408d878775c6ea87cbdc0c3e08f5c",
+    "test_binary64_interval_products.py": "af27e769f161f868ea4abbdcddc22763e0fce2c1f20e5479ad3a93c9df34a6c1"
+  },
+  "status": "passed",
+  "torch_imported": false,
+  "utc": "2026-09-07T01:59:03.440412+00:00"
+}

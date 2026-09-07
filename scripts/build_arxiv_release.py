@@ -19,8 +19,9 @@ OUT_PDF = ROOT / "output" / "pdf" / "greencert_arxiv.pdf"
 OUT_ZIP = OUT_DIR / "greencert_arxiv_source.zip"
 OUT_MANIFEST = OUT_DIR / "greencert_arxiv_release.json"
 JOB = "certified_local_training_events_arxiv"
-EXPECTED_PAGES = 45
+EXPECTED_PAGES = 46
 SOURCE_DATE_EPOCH = "1787961600"  # 2026-08-29 00:00:00 UTC
+NUMERICAL_RELEASE_HOLD = ROOT / "NUMERICAL_RELEASE_HOLD.json"
 SUPPLEMENT_CANDIDATES = (
     ROOT / "output" / "certified_local_training_events_supplement.zip",
     PAPER / "greencert_supplement.zip",
@@ -102,7 +103,23 @@ def deterministic_zip(path: Path, payloads: dict[str, bytes]) -> None:
             archive.writestr(info, payloads[name])
 
 
+def assert_numerical_release_ready() -> None:
+    if NUMERICAL_RELEASE_HOLD.exists():
+        raise RuntimeError(
+            "Numerical release hold is active. Read NUMERICAL_RELEASE_HOLD.md; "
+            "resolve and archive the documented arithmetic audit before building a new release."
+        )
+
+
 def main() -> None:
+    assert_numerical_release_ready()
+    from summarize_public_repair_validation import check as check_repaired_replay
+    repair_record = check_repaired_replay()
+    repair_archive = ROOT / "artifacts/greencert_repaired_continuation_20260907.zip"
+    repair_resolution = ROOT / "audit_history/numerical_repair_resolution_20260907.json"
+    resolution = json.loads(repair_resolution.read_text(encoding="utf-8"))
+    if resolution["status"] != "arithmetic_issue_resolved" or resolution["affected_historical_brackets"] != 79:
+        raise RuntimeError("corrected arithmetic release resolution missing")
     missing = [str(source) for source in SOURCE_MAP if not source.is_file()]
     if missing:
         raise FileNotFoundError("missing arXiv source dependencies: " + ", ".join(missing))
@@ -230,6 +247,16 @@ def main() -> None:
             "path": supplement.relative_to(ROOT).as_posix(),
             "bytes": supplement.stat().st_size,
             "sha256": sha256(supplement.read_bytes()),
+        },
+        "numerical_repair": {
+            "path": repair_archive.relative_to(ROOT).as_posix(),
+            "bytes": repair_archive.stat().st_size,
+            "sha256": sha256(repair_archive.read_bytes()),
+            "historical_brackets": repair_record["historical_brackets"],
+            "new_prospective_events": 0,
+            "resolution": repair_resolution.relative_to(ROOT).as_posix(),
+            "resolution_sha256": sha256(repair_resolution.read_bytes()),
+            "legacy_supplement_preserved": True,
         },
         "build_checks": {
             "author_metadata": True,

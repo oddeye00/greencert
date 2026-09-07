@@ -9,17 +9,27 @@
     "source_date_epoch": "1787961600",
     "undefined_references": false
   },
-  "pages": 45,
+  "numerical_repair": {
+    "bytes": 28866197,
+    "historical_brackets": 79,
+    "legacy_supplement_preserved": true,
+    "new_prospective_events": 0,
+    "path": "artifacts/greencert_repaired_continuation_20260907.zip",
+    "resolution": "audit_history/numerical_repair_resolution_20260907.json",
+    "resolution_sha256": "D1737F61591BE645A6142F9DAC5E917F76FDEEBF275A71BF5111F10618EDAC2D",
+    "sha256": "77F3C2B7CFE694588DE33E01F4BD949729AA2676696300846CCA85EEF3105CBC"
+  },
+  "pages": 46,
   "pdf": {
-    "bytes": 845019,
+    "bytes": 851760,
     "path": "output/pdf/greencert_arxiv.pdf",
-    "sha256": "254526E0A98435E8C5363925B5857E9089FB6328EF8C690EB0CF1A1FEDEFF14F"
+    "sha256": "728E413399973A9016A36351EB57FDBED353A6519F746845F154392FF9D4FD79"
   },
   "source_bundle": {
-    "bytes": 270249,
+    "bytes": 271938,
     "files": 17,
     "path": "output/arxiv/greencert_arxiv_source.zip",
-    "sha256": "DB0B0C1007FF5630DBC517B7000B1EBF4C44BC7B733AA7D9F237A34984033D10"
+    "sha256": "A0558DADB324138BA50E9B74934633A01226553896D9E13896927101B13DF2AD"
   },
   "supplement": {
     "bytes": 25755026,

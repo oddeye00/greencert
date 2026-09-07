@@ -9,7 +9,7 @@ each figure twice and requires matching SHA-256 hashes.
 | Paper figure | Generator | Principal tracked inputs |
 |---|---|---|
 | Response-centered Transformer and anytime replay | `scripts/make_transformer_v3_anytime_figure.py` | `results/transformer_v3_confirmation_audit.json`; `results/transformer_v3_online_policy_matched_audit.json` |
-| WDBC confirmation | `scripts/paper_figure_new_evidence.py` | `results/real_dataset_confirmation/final_audit.json`; `results/real_dataset_outward_joined.json` |
+| WDBC confirmation | `scripts/paper_figure_new_evidence.py` | `results/real_dataset_confirmation/final_audit.json`; `results/real_dataset_outward_joined.json` for frozen outcomes; authenticated `artifacts/greencert_repaired_continuation_20260907.zip` and original certificates for corrected bracket coordinates |
 | Signed mechanism and scaling | `scripts/paper_figure_new_evidence.py` | unsigned audit, sweep ablation, batched-scaling records |
 | Prospective fixed-radius Transformer | `scripts/paper_figure_transformer_green_confirmation.py` | sealed Transformer aggregate and certificate records |
 | Corrected-prefix and streaming costs | `scripts/paper_figure_prefix_scaling.py` | corrected-prefix, direct-image, and streaming audits |

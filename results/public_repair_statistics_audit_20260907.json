@@ -1,0 +1,81 @@
+{
+  "status": "PASS",
+  "all_study_statistics_equal": true,
+  "studies": {
+    "digits": {
+      "unique_jobs": 7,
+      "historical_events_retained": 7,
+      "unique_transitions": 610,
+      "independent_output_margins": 222737,
+      "maximum_radius": 5.065841878569542e-09,
+      "minimum_logic_slack": 1.4565211613082326e-05,
+      "maximum_optimizer_norm_upper": 1.0207071309704816,
+      "maximum_basis_orthogonality_upper": 2.889605961545274e-11,
+      "maximum_hessian_basis_residual_upper": 1.2150104771724333e-10,
+      "maximum_optimizer_norm_inflation_descriptive_float64": 3.260880454547532e-11,
+      "minimum_exact_recurrence_slack": "1/158456325028528675187087900672",
+      "minimum_recurrence_slack_descriptive_float64": 6.310887241768095e-30,
+      "recorded_job_cost_by_platform_not_a_controlled_comparison": {
+        "Linux-6.17.0-1032-nvidia-aarch64-with-glibc2.39": {
+          "jobs": 7,
+          "summed_seconds": 226.77537912000116
+        }
+      }
+    },
+    "modular_mse": {
+      "unique_jobs": 16,
+      "historical_events_retained": 16,
+      "unique_transitions": 1852,
+      "independent_output_margins": 672480,
+      "maximum_radius": 6.672411748748992e-05,
+      "minimum_logic_slack": null,
+      "maximum_optimizer_norm_upper": 1.0151494022678604,
+      "maximum_basis_orthogonality_upper": 8.381645495223881e-11,
+      "maximum_hessian_basis_residual_upper": 1.3525646846620951e-11,
+      "maximum_optimizer_norm_inflation_descriptive_float64": 1.1113421294339787e-10,
+      "minimum_exact_recurrence_slack": "1/19807040628566084398385987584",
+      "minimum_recurrence_slack_descriptive_float64": 5.048709793414476e-29,
+      "recorded_job_cost_by_platform_not_a_controlled_comparison": {
+        "Windows-11-10.0.26200-SP0": {
+          "jobs": 7,
+          "summed_seconds": 28568.809818799957
+        },
+        "Linux-6.17.0-1032-nvidia-aarch64-with-glibc2.39": {
+          "jobs": 9,
+          "summed_seconds": 740.4053374759969
+        }
+      }
+    },
+    "wdbc": {
+      "unique_jobs": 40,
+      "historical_events_retained": 56,
+      "unique_transitions": 5089,
+      "independent_output_margins": 589835,
+      "maximum_radius": 4.466766654096039e-13,
+      "minimum_logic_slack": 2.3753121208612555e-05,
+      "maximum_optimizer_norm_upper": 1.00743105696698,
+      "maximum_basis_orthogonality_upper": 7.526906885000427e-12,
+      "maximum_hessian_basis_residual_upper": 1.678537496557444e-11,
+      "maximum_optimizer_norm_inflation_descriptive_float64": 7.612355190644848e-12,
+      "minimum_exact_recurrence_slack": "1/2535301200456458802993406410752",
+      "minimum_recurrence_slack_descriptive_float64": 3.944304526105059e-31,
+      "recorded_job_cost_by_platform_not_a_controlled_comparison": {
+        "Windows-11-10.0.26200-SP0": {
+          "jobs": 25,
+          "summed_seconds": 33948.37557969976
+        },
+        "Linux-6.17.0-1032-nvidia-aarch64-with-glibc2.39": {
+          "jobs": 15,
+          "summed_seconds": 135.1118852959844
+        }
+      }
+    }
+  },
+  "manifest_sha256": "2ea5e687f173a7f7f0f6c31bdc9b435c628b8f74ca2172d771ef33a77c3109cd",
+  "descriptor_sha256": "5215b2046123e348b81b4a7d6a34561ca81963a165fb7f9639497417dab6cbb1",
+  "original_summary_sha256": "697f36ad8503486d8f349c98c7d3d7b51e7e129029b74c5e4ab4bbe07f4a5395",
+  "source_sha256": "221a2dd69133bfb754eccebeb5620d490b4d155414fc000714f6e67d6dd6eaee",
+  "new_prospective_events": 0,
+  "neural_kernels_recomputed": false,
+  "scope": "Public-array/scalar reconstruction of manuscript statistics; original per-job timings and strict-output-slack descriptors are authenticated inputs, not new timing or output experiments."
+}

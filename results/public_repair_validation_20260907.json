@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "archive_sha256": "77f3c2b7cfe694588de33e01f4bd949729aa2676696300846cca85eef3105cbc",
+  "manifest_sha256": "2ea5e687f173a7f7f0f6c31bdc9b435c628b8f74ca2172d771ef33a77c3109cd",
+  "fixed_jobs": 63,
+  "historical_brackets": 79,
+  "new_prospective_events": 0,
+  "win_arm_ledger_job_results_equal": true,
+  "win_arm_output_job_results_equal": true,
+  "scalar_transitions_per_full_replay": 7551,
+  "output_margins_per_full_replay": 1485052,
+  "full_output_replay_platforms": [
+    "Windows/x86_64",
+    "Linux/aarch64"
+  ],
+  "neural_recomputation": {
+    "platform": "Linux/aarch64",
+    "fixed_job_ordinals": [
+      0,
+      40,
+      47
+    ],
+    "full_windows": 3,
+    "retained_brackets": 4,
+    "transitions": 126,
+    "output_margins": 39149
+  },
+  "private_read_guard_passed": true,
+  "evidence": {
+    "results/public_repair_ledger_windows_20260907.replay.json": "8fd30f5ec0859b5431facd7f32e995c784a1e437aa2921df9e5b96274b57f08b",
+    "results/public_repair_ledger_windows_20260907.isolation.json": "68533581bda3f7db8e78d8a32a2b7366ee0096658dc00f5f554c40dac69e3866",
+    "results/public_repair_outputs_windows_20260907.replay.json": "893d6a58fb571ca1d6f76a6bf139f52edab6693067702494602efdd5011a0526",
+    "results/public_repair_outputs_windows_20260907.isolation.json": "d8bd0df2e155daff04f8be8638d0f75ef4a22f7288b3ec04d7b5db48c9e63323",
+    "results/public_repair_dgx_20260907/ledger.json": "f6cdbb17d50849743425bfc32e78f067588f98cf8dd169db41bac674da81dcbc",
+    "results/public_repair_dgx_20260907/ledger.isolation.json": "88da457f7f8969d3753ccc334263d8417bfe0b45b9267fed41c2961d56f58bc7",
+    "results/public_repair_dgx_20260907/outputs.json": "5f4b5dc3a2f994f42ab94c32a1274874e701fb09510412d1dc1792ec4c69d874",
+    "results/public_repair_dgx_20260907/outputs.isolation.json": "e090164e14b73a9154534938c1e7ed1c2ab6fea6850237d80879425f6759259e",
+    "results/public_repair_dgx_20260907/neural.json": "96dc7af9a89400780b30a5109413f9f15b42e0dd28352c5598318d5f6b3816bb",
+    "results/public_repair_dgx_20260907/neural.isolation.json": "0b92eeb8f3637160ae9ab3cc240f7150ab64a9345ef5001d15adca21a9bf8035"
+  },
+  "source_sha256": "e355df2315ca5b718f88d4ff17e87bc5fb6d4d70436b64e3a71be92bc14529f6",
+  "scope": "Clean-package replay of the completed repair. Full 63-job derivative recomputation belongs to the original repair record; this portability check repeats full neural kernels for three fixed representative jobs."
+}

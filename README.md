@@ -1,5 +1,12 @@
 # GREENCERT
 
+Numerical update (2026-09-07): all 79 affected historical continuation
+brackets survive the corrected arithmetic audit. The clean public package
+passes isolated Windows/ARM scalar and output recomputation, and the original
+release hold is archived with its resolution. See
+[`PUBLIC_NUMERICAL_REPLAY.md`](PUBLIC_NUMERICAL_REPLAY.md) for replay commands
+and [`NUMERICAL_REPAIR_RESOLUTION.md`](NUMERICAL_REPAIR_RESOLUTION.md) for scope.
+
 [![reproducibility](https://github.com/oddeye00/greencert/actions/workflows/reproducibility.yml/badge.svg)](https://github.com/oddeye00/greencert/actions/workflows/reproducibility.yml)
 
 This repository contains the paper, theorem records, sealed experimental
@@ -13,8 +20,11 @@ error. The output is a persistent first-passage bracket or an abstention.
 
 The archived studies contain 83 issued event brackets across WDBC, handwritten
 digits, and two Transformer cohorts. All 83 revealed crossings fall inside the
-issued brackets. The 63 WDBC/digits brackets also survive independent 192-bit
-outward continuation.
+issued brackets. The 63 WDBC/digits brackets also survive independent outward
+continuation using 192-bit Arb endpoints and explicit binary64 error bounds
+under the documented ordinary-dot/gradual-underflow assumptions. Independent
+384-bit scalar-Arb output checks retain those brackets and the 16 separate
+dense-modular appendix events.
 
 The v1.3 theorem release preserves the block geometry of the known correction
 inside the fourth-order Taylor remainder. On a frozen 15-case Transformer

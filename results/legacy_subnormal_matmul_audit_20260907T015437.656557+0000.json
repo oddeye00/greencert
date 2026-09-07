@@ -1,0 +1,112 @@
+{
+  "auditor_sha256": "7a25d282bbf0141f779df4f2bc1cf5fb1f8fbfa639d268397afab569e9bf667f",
+  "cases": [
+    {
+      "exact_product_in_min_subnormal_units": "1/2",
+      "inner_dimension": 1,
+      "interval_contains_exact": true,
+      "interval_lower_in_min_subnormal_units": "-6",
+      "interval_upper_in_min_subnormal_units": "6",
+      "left_entry_hex": "0x1.0000000000000p-537",
+      "nonnegative_upper_contains_exact": true,
+      "nonnegative_upper_in_min_subnormal_units": "1",
+      "raw_blas_in_min_subnormal_units": "0",
+      "right_entry_hex": "0x1.0000000000000p-538"
+    },
+    {
+      "exact_product_in_min_subnormal_units": "1",
+      "inner_dimension": 2,
+      "interval_contains_exact": true,
+      "interval_lower_in_min_subnormal_units": "-6",
+      "interval_upper_in_min_subnormal_units": "6",
+      "left_entry_hex": "0x1.0000000000000p-537",
+      "nonnegative_upper_contains_exact": true,
+      "nonnegative_upper_in_min_subnormal_units": "1",
+      "raw_blas_in_min_subnormal_units": "0",
+      "right_entry_hex": "0x1.0000000000000p-538"
+    },
+    {
+      "exact_product_in_min_subnormal_units": "2",
+      "inner_dimension": 4,
+      "interval_contains_exact": true,
+      "interval_lower_in_min_subnormal_units": "-6",
+      "interval_upper_in_min_subnormal_units": "6",
+      "left_entry_hex": "0x1.0000000000000p-537",
+      "nonnegative_upper_contains_exact": false,
+      "nonnegative_upper_in_min_subnormal_units": "1",
+      "raw_blas_in_min_subnormal_units": "0",
+      "right_entry_hex": "0x1.0000000000000p-538"
+    },
+    {
+      "exact_product_in_min_subnormal_units": "4",
+      "inner_dimension": 8,
+      "interval_contains_exact": true,
+      "interval_lower_in_min_subnormal_units": "-6",
+      "interval_upper_in_min_subnormal_units": "6",
+      "left_entry_hex": "0x1.0000000000000p-537",
+      "nonnegative_upper_contains_exact": false,
+      "nonnegative_upper_in_min_subnormal_units": "1",
+      "raw_blas_in_min_subnormal_units": "0",
+      "right_entry_hex": "0x1.0000000000000p-538"
+    },
+    {
+      "exact_product_in_min_subnormal_units": "8",
+      "inner_dimension": 16,
+      "interval_contains_exact": false,
+      "interval_lower_in_min_subnormal_units": "-6",
+      "interval_upper_in_min_subnormal_units": "6",
+      "left_entry_hex": "0x1.0000000000000p-537",
+      "nonnegative_upper_contains_exact": false,
+      "nonnegative_upper_in_min_subnormal_units": "1",
+      "raw_blas_in_min_subnormal_units": "0",
+      "right_entry_hex": "0x1.0000000000000p-538"
+    },
+    {
+      "exact_product_in_min_subnormal_units": "16",
+      "inner_dimension": 32,
+      "interval_contains_exact": false,
+      "interval_lower_in_min_subnormal_units": "-6",
+      "interval_upper_in_min_subnormal_units": "6",
+      "left_entry_hex": "0x1.0000000000000p-537",
+      "nonnegative_upper_contains_exact": false,
+      "nonnegative_upper_in_min_subnormal_units": "1",
+      "raw_blas_in_min_subnormal_units": "0",
+      "right_entry_hex": "0x1.0000000000000p-538"
+    },
+    {
+      "exact_product_in_min_subnormal_units": "32",
+      "inner_dimension": 64,
+      "interval_contains_exact": false,
+      "interval_lower_in_min_subnormal_units": "-6",
+      "interval_upper_in_min_subnormal_units": "6",
+      "left_entry_hex": "0x1.0000000000000p-537",
+      "nonnegative_upper_contains_exact": false,
+      "nonnegative_upper_in_min_subnormal_units": "1",
+      "raw_blas_in_min_subnormal_units": "0",
+      "right_entry_hex": "0x1.0000000000000p-538"
+    },
+    {
+      "exact_product_in_min_subnormal_units": "64",
+      "inner_dimension": 128,
+      "interval_contains_exact": false,
+      "interval_lower_in_min_subnormal_units": "-6",
+      "interval_upper_in_min_subnormal_units": "6",
+      "left_entry_hex": "0x1.0000000000000p-537",
+      "nonnegative_upper_contains_exact": false,
+      "nonnegative_upper_in_min_subnormal_units": "1",
+      "raw_blas_in_min_subnormal_units": "0",
+      "right_entry_hex": "0x1.0000000000000p-538"
+    }
+  ],
+  "event_certificate_issued": false,
+  "exact_reference": "Python Fraction, exact stored binary64 endpoints and dot product",
+  "future_outcome_access": false,
+  "invalid_interval_products": 4,
+  "invalid_nonnegative_upper_bounds": 6,
+  "legacy_source_sha256": "c85e2543d710619e47a57403351328e275c6c64e914c1b51753011aa9da10f18",
+  "numpy_version": "2.5.2",
+  "scope": "legacy primitive underflow audit only; no inference that recorded normal-range neural brackets fail",
+  "status": "completed",
+  "torch_imported": false,
+  "utc": "2026-09-07T01:54:37.656557+00:00"
+}

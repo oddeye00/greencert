@@ -1,0 +1,33 @@
+{
+  "status": "arithmetic_issue_resolved",
+  "affected_historical_brackets": 79,
+  "new_prospective_events": 0,
+  "full_ledger_sha256": "6e0ee195eae512980d6da8954f661317f3e14cc6ec409c42188216fd9f001ad2",
+  "public_replay_summary_sha256": "e57a9077b855eaae4426b05cadaff585753ceb9fd4b3282d2e51ada59c53deef",
+  "original_hold_sha256": "b11529c76312cf322f7e1788d9c1e19520d113bc3bf40af283738a768612dcb8",
+  "manuscript_sources": {
+    "paper/certified_local_training_events_neurips2026.tex": "041af33ec3f8f6465effacacc74f008fb8a698d4103f143265c3a54da3762090",
+    "paper/transformer_jet_appendix.tex": "615132d6c1ba270d9dcd374a90d8b30a9b3f8296fbef62bc95f3e2d98d8aea5e",
+    "figures/paper_real_data_confirmation.pdf": "22041e9e247ba36f50dd9d1dca71658a3b04a7f8e777573cb8b892d85d084f4f"
+  },
+  "release_checks_still_required": true,
+  "large_transformer_result_inferred": false,
+  "future_outcome_access": false,
+  "utc": "2026-09-07T14:35:39.955864+00:00",
+  "archived_hold": "audit_history/numerical_release_hold_20260907.json",
+  "public_replay_summary": "results/public_repair_validation_20260907.json",
+  "source_sha256": "d1dcaec4e1deca69748f93cd2e0342739fa4cf3622b6abc45b52e2f7c3a7f4d6",
+  "legacy_counterexample": {
+    "path": "results/legacy_subnormal_matmul_audit_20260907T015437.656557+0000.json",
+    "sha256": "9aaa41e7ba76b0aee1b792f44eb49d8e5b16550c7acc44437d069d570d1d3738"
+  },
+  "corrected_primitive_regression": {
+    "path": "results/binary64_interval_products_20260907T015903.440412+0000.json",
+    "sha256": "9223959322a2c77b08f248348421c1533caaf2c27949c2299fe3f917cf7cf784"
+  },
+  "claim_scope": "Stored dyadic checkpoint continuations under explicit Arb/ordinary-binary64 assumptions; all 79 affected historical brackets retained. No population-generalization, unconditional BLAS, or Transformer numerical upgrade is claimed.",
+  "historical_experiment_records_modified": false,
+  "numerical_kernels_modified_by_resolution": false,
+  "github_push_authorized_by_this_record": false,
+  "arxiv_submission_authorized_by_this_record": false
+}

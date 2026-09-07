@@ -58,6 +58,10 @@ TIERS = {
         "scripts/audit_greencert_manuscript_claims.py",
     ),
     "outward": (
+        "scripts/test_public_repair_roundoff.py",
+        "scripts/replay_corrected_continuation.py",
+    ),
+    "legacy-outward-audit": (
         "scripts/test_outward_real_dataset_confirmation.py",
         "scripts/audit_real_dataset_outward.py",
         "scripts/test_digits_signed_confirmation_audit.py",

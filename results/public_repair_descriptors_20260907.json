@@ -1,0 +1,640 @@
+{
+  "schema": "public_repair_descriptors_v1",
+  "manifest_sha256": "2ea5e687f173a7f7f0f6c31bdc9b435c628b8f74ca2172d771ef33a77c3109cd",
+  "original_ledger_sha256": "6e0ee195eae512980d6da8954f661317f3e14cc6ec409c42188216fd9f001ad2",
+  "rows": [
+    {
+      "ordinal": 0,
+      "job_id": "wdbc_seed_101_anchor_0",
+      "study": "wdbc",
+      "original_summary_sha256": "8c3909f15cc2b5f0164b21bf95ca3d36a1c098a32db16e8470aead26882818a7",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "elapsed_seconds": 315.5890251999954,
+      "minimum_logic_slack": 0.0003531318681128921,
+      "maximum_radius": 4.338811259737705e-14
+    },
+    {
+      "ordinal": 1,
+      "job_id": "wdbc_seed_102_anchor_10",
+      "study": "wdbc",
+      "original_summary_sha256": "9e12c8e2258a076e9d1a518a5912393bf41ee1e3627a6d41ba218d6cd609f5f0",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "elapsed_seconds": 2395.0099974999903,
+      "minimum_logic_slack": 2.3753121208612555e-05,
+      "maximum_radius": 3.604801248652496e-13
+    },
+    {
+      "ordinal": 2,
+      "job_id": "wdbc_seed_103_anchor_60",
+      "study": "wdbc",
+      "original_summary_sha256": "ebc33e96dfcebe71a52018080bba7aea0565a06ecff368c6687c9f790b0ab172",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "elapsed_seconds": 1811.997442999971,
+      "minimum_logic_slack": 9.764925104982473e-05,
+      "maximum_radius": 2.7724423232781927e-13
+    },
+    {
+      "ordinal": 3,
+      "job_id": "wdbc_seed_104_anchor_10",
+      "study": "wdbc",
+      "original_summary_sha256": "5ef69b7ca95755c9006cb4ee604ae2406ea82b66a38fbee372a107703d0b8c4c",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "elapsed_seconds": 772.0978318999987,
+      "minimum_logic_slack": 0.0003130389464619244,
+      "maximum_radius": 1.43736578269325e-13
+    },
+    {
+      "ordinal": 4,
+      "job_id": "wdbc_seed_104_anchor_20",
+      "study": "wdbc",
+      "original_summary_sha256": "346d23e724e2a5ffbd9f22abd640f233210ef00ce8a00aa4cdc79755da359d25",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "elapsed_seconds": 2156.3953993999166,
+      "minimum_logic_slack": 0.0002668554983673772,
+      "maximum_radius": 3.4568126267570673e-13
+    },
+    {
+      "ordinal": 5,
+      "job_id": "wdbc_seed_105_anchor_95",
+      "study": "wdbc",
+      "original_summary_sha256": "bac5224f91507fcc084597084be874cda51cdff9ee37042a95f818d1386cc2d6",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "elapsed_seconds": 1329.184211499989,
+      "minimum_logic_slack": 9.694598339134354e-05,
+      "maximum_radius": 2.147477796333564e-13
+    },
+    {
+      "ordinal": 6,
+      "job_id": "wdbc_seed_106_anchor_30",
+      "study": "wdbc",
+      "original_summary_sha256": "b5457c2842591d01f21953113363cd4240ab039231994b6152e98be41513577d",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "elapsed_seconds": 1699.2909294000128,
+      "minimum_logic_slack": 7.958526573377834e-05,
+      "maximum_radius": 2.8924303128560236e-13
+    },
+    {
+      "ordinal": 7,
+      "job_id": "wdbc_seed_106_anchor_45",
+      "study": "wdbc",
+      "original_summary_sha256": "5fd6b1f977b392691e8be25cdd19e51a9dbde13f0e847a07775ff8241ee05c68",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "elapsed_seconds": 2103.8811316000065,
+      "minimum_logic_slack": 0.00023708689204538432,
+      "maximum_radius": 3.369470101543597e-13
+    },
+    {
+      "ordinal": 8,
+      "job_id": "wdbc_seed_107_anchor_5",
+      "study": "wdbc",
+      "original_summary_sha256": "b5c747d6eea26c8821bbeb39f6b50cd1f6a80ac38fa8bd8243ec6d2f92518908",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "elapsed_seconds": 890.289278299897,
+      "minimum_logic_slack": 0.0007604985375734824,
+      "maximum_radius": 1.5324750571374733e-13
+    },
+    {
+      "ordinal": 9,
+      "job_id": "wdbc_seed_107_anchor_10",
+      "study": "wdbc",
+      "original_summary_sha256": "9a5830b67bb4e53c386c0b65b0b5315ee9282a87d12982e73909ea829da01008",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "elapsed_seconds": 2074.1719751000637,
+      "minimum_logic_slack": 0.00012699422489893304,
+      "maximum_radius": 3.264920775351145e-13
+    },
+    {
+      "ordinal": 10,
+      "job_id": "wdbc_seed_108_anchor_15",
+      "study": "wdbc",
+      "original_summary_sha256": "c06099567ebd69810d243bdcca441860371155c7cbeefc9f51f721009c1ed4b4",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "elapsed_seconds": 1296.355030799983,
+      "minimum_logic_slack": 0.00015244266486003335,
+      "maximum_radius": 2.9973407706178444e-13
+    },
+    {
+      "ordinal": 11,
+      "job_id": "wdbc_seed_108_anchor_20",
+      "study": "wdbc",
+      "original_summary_sha256": "a778cf3b9f01b570f575eafded9969f8b5978f8533732b30ccf2eda6ebc26a0f",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "elapsed_seconds": 1630.3087333999574,
+      "minimum_logic_slack": 0.00011536534582371272,
+      "maximum_radius": 3.41770062380575e-13
+    },
+    {
+      "ordinal": 12,
+      "job_id": "wdbc_seed_108_anchor_30",
+      "study": "wdbc",
+      "original_summary_sha256": "547fef11b10edbe86ddf02c938b5f5f2fb56a464c965fd0e2bd2931d92c27577",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "elapsed_seconds": 2309.4609091000166,
+      "minimum_logic_slack": 0.00011536534599344325,
+      "maximum_radius": 3.853351239628763e-13
+    },
+    {
+      "ordinal": 13,
+      "job_id": "wdbc_seed_109_anchor_60",
+      "study": "wdbc",
+      "original_summary_sha256": "c7b4ae9f587675d21a9a5f3aedbf91bc225314c360677627ba9e8f1ca6171fb7",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "elapsed_seconds": 338.72882730001584,
+      "minimum_logic_slack": 0.00023057405951938648,
+      "maximum_radius": 4.984357972344179e-14
+    },
+    {
+      "ordinal": 14,
+      "job_id": "wdbc_seed_109_anchor_65",
+      "study": "wdbc",
+      "original_summary_sha256": "14d5ef8b9ec71640e314f6d6586ea4b637ddf918f9a9e277e6ab4054e28a4850",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "elapsed_seconds": 388.51176420005504,
+      "minimum_logic_slack": 0.0002305740595946084,
+      "maximum_radius": 5.398145225144264e-14
+    },
+    {
+      "ordinal": 15,
+      "job_id": "wdbc_seed_109_anchor_70",
+      "study": "wdbc",
+      "original_summary_sha256": "fd4e994581cc00064701bda36924385be5e23e47622a8902f801ac710e42ec99",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "elapsed_seconds": 1315.287789999973,
+      "minimum_logic_slack": 0.0003672377062791876,
+      "maximum_radius": 1.7737319376598354e-13
+    },
+    {
+      "ordinal": 16,
+      "job_id": "wdbc_seed_110_anchor_40",
+      "study": "wdbc",
+      "original_summary_sha256": "45d822672eec336cb82403ce1e906c3a065d3ba1d43ddc195b82917c8c37eb06",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "elapsed_seconds": 442.05607519997284,
+      "minimum_logic_slack": 0.00011662125749231525,
+      "maximum_radius": 6.771614150378028e-14
+    },
+    {
+      "ordinal": 17,
+      "job_id": "wdbc_seed_110_anchor_45",
+      "study": "wdbc",
+      "original_summary_sha256": "375fd3c9393939eda1f392fff3b6b9700b5999fa42561edfcdf088b465958a29",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "elapsed_seconds": 516.9150326000527,
+      "minimum_logic_slack": 0.00011662125755413494,
+      "maximum_radius": 7.701307005034148e-14
+    },
+    {
+      "ordinal": 18,
+      "job_id": "wdbc_seed_110_anchor_50",
+      "study": "wdbc",
+      "original_summary_sha256": "5a94dd41d33127ea45e6b6b0df17d53f33b9452246141312abed9fd8a20bae20",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "elapsed_seconds": 1191.8478217000375,
+      "minimum_logic_slack": 0.00011662125761302504,
+      "maximum_radius": 1.6846874519991733e-13
+    },
+    {
+      "ordinal": 19,
+      "job_id": "wdbc_seed_111_anchor_75",
+      "study": "wdbc",
+      "original_summary_sha256": "6514bd9491f57423efa438f99d463d054179f4a73a83999f2a3f732f5e2df50b",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "elapsed_seconds": 1199.2701752999565,
+      "minimum_logic_slack": 3.9021761340293006e-05,
+      "maximum_radius": 1.9364065735996894e-13
+    },
+    {
+      "ordinal": 20,
+      "job_id": "wdbc_seed_113_anchor_45",
+      "study": "wdbc",
+      "original_summary_sha256": "5ed670263512f8dfa5691f6b9ec3b63fd7465230ad391148b137e2fc30e92b1c",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "elapsed_seconds": 2134.8608794000465,
+      "minimum_logic_slack": 9.366911843222224e-05,
+      "maximum_radius": 3.804409272199539e-13
+    },
+    {
+      "ordinal": 21,
+      "job_id": "wdbc_seed_114_anchor_40",
+      "study": "wdbc",
+      "original_summary_sha256": "ac16b6e6908622b09073ee79293d2e65f4349f07aaeddb97dee503bcaeef8e47",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "elapsed_seconds": 1026.157794199884,
+      "minimum_logic_slack": 4.213959750310622e-05,
+      "maximum_radius": 1.6732350990255528e-13
+    },
+    {
+      "ordinal": 22,
+      "job_id": "wdbc_seed_114_anchor_50",
+      "study": "wdbc",
+      "original_summary_sha256": "57adc47c86533fbc684ad00696a0ec9506fa917e443c8b14591888eafa17e688",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "elapsed_seconds": 1263.4633621000685,
+      "minimum_logic_slack": 4.213959766642557e-05,
+      "maximum_radius": 1.9925189325828557e-13
+    },
+    {
+      "ordinal": 23,
+      "job_id": "wdbc_seed_115_anchor_0",
+      "study": "wdbc",
+      "original_summary_sha256": "fcc82b9fcc86e9c2352cf9cd4171d1d73d8b3b6209b0faaff118209b5e3338b5",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "elapsed_seconds": 1926.5939670000225,
+      "minimum_logic_slack": 5.588034023692268e-05,
+      "maximum_radius": 3.4642282709750624e-13
+    },
+    {
+      "ordinal": 24,
+      "job_id": "wdbc_seed_116_anchor_10",
+      "study": "wdbc",
+      "original_summary_sha256": "711570432dffe15e51ae4d294180c0c8532f531640aa2f9194f14a48ff6f2833",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "elapsed_seconds": 1420.6501944998745,
+      "minimum_logic_slack": 0.0001642586623864491,
+      "maximum_radius": 2.2640154219370462e-13
+    },
+    {
+      "ordinal": 25,
+      "job_id": "wdbc_seed_117_anchor_25",
+      "study": "wdbc",
+      "original_summary_sha256": "fd079f6adccaa676e4be51beefd5a722b5c187caa5570f440cde5603cc5ff5ae",
+      "platform": "Linux-6.17.0-1032-nvidia-aarch64-with-glibc2.39",
+      "elapsed_seconds": 14.72631707900291,
+      "minimum_logic_slack": 0.00031277702216315486,
+      "maximum_radius": 3.0877509943348197e-13
+    },
+    {
+      "ordinal": 26,
+      "job_id": "wdbc_seed_117_anchor_30",
+      "study": "wdbc",
+      "original_summary_sha256": "7df9523c0500a1926ca2c0c4e61f91394341aadfc634c5d8fb8a65a0f6d0be32",
+      "platform": "Linux-6.17.0-1032-nvidia-aarch64-with-glibc2.39",
+      "elapsed_seconds": 20.560316912000417,
+      "minimum_logic_slack": 7.907898957544403e-05,
+      "maximum_radius": 4.466766654096039e-13
+    },
+    {
+      "ordinal": 27,
+      "job_id": "wdbc_seed_118_anchor_60",
+      "study": "wdbc",
+      "original_summary_sha256": "732d15e8a3087f1e9291c1c190c5557b6006cac1da31e8932a5e2d60b86a42c8",
+      "platform": "Linux-6.17.0-1032-nvidia-aarch64-with-glibc2.39",
+      "elapsed_seconds": 1.3885335739978473,
+      "minimum_logic_slack": 4.2189709902369615e-05,
+      "maximum_radius": 2.63802802935337e-14
+    },
+    {
+      "ordinal": 28,
+      "job_id": "wdbc_seed_118_anchor_70",
+      "study": "wdbc",
+      "original_summary_sha256": "9d44f75bc7b199ff570b152d5a41749f5402e77e9c212344572c90ec8404b339",
+      "platform": "Linux-6.17.0-1032-nvidia-aarch64-with-glibc2.39",
+      "elapsed_seconds": 3.212756665998313,
+      "minimum_logic_slack": 0.0005090070886151992,
+      "maximum_radius": 6.05956633728213e-14
+    },
+    {
+      "ordinal": 29,
+      "job_id": "wdbc_seed_118_anchor_75",
+      "study": "wdbc",
+      "original_summary_sha256": "1ff55ceb9e6d2ca9a120d226f01fefa460c9af96e04c37933f0c5bcdec6fa5a0",
+      "platform": "Linux-6.17.0-1032-nvidia-aarch64-with-glibc2.39",
+      "elapsed_seconds": 5.6824795979991904,
+      "minimum_logic_slack": 0.00029136883220853805,
+      "maximum_radius": 1.0923490413625841e-13
+    },
+    {
+      "ordinal": 30,
+      "job_id": "wdbc_seed_119_anchor_55",
+      "study": "wdbc",
+      "original_summary_sha256": "50e6d5771aff82abb5f28a466158d334a95c19de090405aa68b8def1063ca132",
+      "platform": "Linux-6.17.0-1032-nvidia-aarch64-with-glibc2.39",
+      "elapsed_seconds": 12.6802766289984,
+      "minimum_logic_slack": 0.00016862541590531094,
+      "maximum_radius": 2.78242727761667e-13
+    },
+    {
+      "ordinal": 31,
+      "job_id": "wdbc_seed_119_anchor_60",
+      "study": "wdbc",
+      "original_summary_sha256": "c2bd7aedc50a4394be34194aa28db215115946a9f74b252859dd9e9b5db59a47",
+      "platform": "Linux-6.17.0-1032-nvidia-aarch64-with-glibc2.39",
+      "elapsed_seconds": 18.237864809998428,
+      "minimum_logic_slack": 0.0001686254159709677,
+      "maximum_radius": 4.0146661410482366e-13
+    },
+    {
+      "ordinal": 32,
+      "job_id": "wdbc_seed_120_anchor_30",
+      "study": "wdbc",
+      "original_summary_sha256": "d912c79394461b49df963da7418a3a72aaae21e3f351775521d2cb3f28b481d7",
+      "platform": "Linux-6.17.0-1032-nvidia-aarch64-with-glibc2.39",
+      "elapsed_seconds": 3.2516608430014458,
+      "minimum_logic_slack": 0.0009281147869551332,
+      "maximum_radius": 6.949124323712651e-14
+    },
+    {
+      "ordinal": 33,
+      "job_id": "wdbc_seed_120_anchor_35",
+      "study": "wdbc",
+      "original_summary_sha256": "f4ae4313e926676bea60bcb127a5a2c02d918309d9df363a9c79496c67d4575b",
+      "platform": "Linux-6.17.0-1032-nvidia-aarch64-with-glibc2.39",
+      "elapsed_seconds": 16.858159119998163,
+      "minimum_logic_slack": 9.232782332736711e-05,
+      "maximum_radius": 3.5774635563946203e-13
+    },
+    {
+      "ordinal": 34,
+      "job_id": "wdbc_seed_122_anchor_65",
+      "study": "wdbc",
+      "original_summary_sha256": "c5811a359cd70f16e0a9726184ae51a1bf7047b47e68afe441718225344b5496",
+      "platform": "Linux-6.17.0-1032-nvidia-aarch64-with-glibc2.39",
+      "elapsed_seconds": 4.564255839999532,
+      "minimum_logic_slack": 8.532785454187235e-05,
+      "maximum_radius": 8.455670097550653e-14
+    },
+    {
+      "ordinal": 35,
+      "job_id": "wdbc_seed_122_anchor_70",
+      "study": "wdbc",
+      "original_summary_sha256": "aec047329f4ed1dab35745647af0f2d4bba00de4234fa4b5272448e5b108b3af",
+      "platform": "Linux-6.17.0-1032-nvidia-aarch64-with-glibc2.39",
+      "elapsed_seconds": 11.368430707996595,
+      "minimum_logic_slack": 2.620869337117801e-05,
+      "maximum_radius": 2.4136454209219575e-13
+    },
+    {
+      "ordinal": 36,
+      "job_id": "wdbc_seed_123_anchor_40",
+      "study": "wdbc",
+      "original_summary_sha256": "6587d6176c8b4fbd1520e9c339d11e4c5456105ac09e3779269383bcb91d080c",
+      "platform": "Linux-6.17.0-1032-nvidia-aarch64-with-glibc2.39",
+      "elapsed_seconds": 1.9672630869972636,
+      "minimum_logic_slack": 0.00038860623724850404,
+      "maximum_radius": 3.7360171397386723e-14
+    },
+    {
+      "ordinal": 37,
+      "job_id": "wdbc_seed_123_anchor_45",
+      "study": "wdbc",
+      "original_summary_sha256": "8f8ef62b2d1e9d48c7087d2772e91e5faa4d328ace5aca32314d81a10d0ef785",
+      "platform": "Linux-6.17.0-1032-nvidia-aarch64-with-glibc2.39",
+      "elapsed_seconds": 2.5310433889972046,
+      "minimum_logic_slack": 0.0003886062373640308,
+      "maximum_radius": 4.9482074548772805e-14
+    },
+    {
+      "ordinal": 38,
+      "job_id": "wdbc_seed_123_anchor_55",
+      "study": "wdbc",
+      "original_summary_sha256": "a48b68d95065a246ade367364cf754ecf9bf5b6cfebafd9a058d980b2329f9b4",
+      "platform": "Linux-6.17.0-1032-nvidia-aarch64-with-glibc2.39",
+      "elapsed_seconds": 4.769887340997229,
+      "minimum_logic_slack": 0.00024067408006152267,
+      "maximum_radius": 9.158284410547308e-14
+    },
+    {
+      "ordinal": 39,
+      "job_id": "wdbc_seed_124_anchor_50",
+      "study": "wdbc",
+      "original_summary_sha256": "8732a32d6abb5254d2049ff726a98f222a304b8934173067a351bc3c86d504bd",
+      "platform": "Linux-6.17.0-1032-nvidia-aarch64-with-glibc2.39",
+      "elapsed_seconds": 13.312639700001455,
+      "minimum_logic_slack": 8.705670811453709e-05,
+      "maximum_radius": 2.7946020485122377e-13
+    },
+    {
+      "ordinal": 40,
+      "job_id": "digits_seed_503_anchor_35",
+      "study": "digits",
+      "original_summary_sha256": "916e7f8fe3e43e70db7a08ad07059f935d9ded3f50d54a3e96398b4b6155a238",
+      "platform": "Linux-6.17.0-1032-nvidia-aarch64-with-glibc2.39",
+      "elapsed_seconds": 21.665873887999624,
+      "minimum_logic_slack": 0.00014698785150008993,
+      "maximum_radius": 2.507065706758836e-12
+    },
+    {
+      "ordinal": 41,
+      "job_id": "digits_seed_504_anchor_60",
+      "study": "digits",
+      "original_summary_sha256": "9b52f1a8f00a7e21c850cf9d1da40b88f52baccc2aaa567954c67ac7d92be09b",
+      "platform": "Linux-6.17.0-1032-nvidia-aarch64-with-glibc2.39",
+      "elapsed_seconds": 21.693161319002684,
+      "minimum_logic_slack": 3.3429102988238104e-05,
+      "maximum_radius": 1.4784525438865233e-12
+    },
+    {
+      "ordinal": 42,
+      "job_id": "digits_seed_506_anchor_20",
+      "study": "digits",
+      "original_summary_sha256": "d9e17f73ee3f3987adb403af16d791ea4efa78d4d350d7da0124e3d82965c38e",
+      "platform": "Linux-6.17.0-1032-nvidia-aarch64-with-glibc2.39",
+      "elapsed_seconds": 29.410034284002904,
+      "minimum_logic_slack": 0.00020160177359930157,
+      "maximum_radius": 4.230137494882862e-12
+    },
+    {
+      "ordinal": 43,
+      "job_id": "digits_seed_507_anchor_35",
+      "study": "digits",
+      "original_summary_sha256": "72b4c79aed8dc77e96036655d227e84bcac0f227d9594c7ebe2b9d1f498f0c20",
+      "platform": "Linux-6.17.0-1032-nvidia-aarch64-with-glibc2.39",
+      "elapsed_seconds": 46.67701455600036,
+      "minimum_logic_slack": 6.353112042867792e-05,
+      "maximum_radius": 4.0550310275049465e-10
+    },
+    {
+      "ordinal": 44,
+      "job_id": "digits_seed_509_anchor_35",
+      "study": "digits",
+      "original_summary_sha256": "1fa8ddf2113eff9c000c7e230646245d11dd0fe71ed4da679aa2753eee4fbe11",
+      "platform": "Linux-6.17.0-1032-nvidia-aarch64-with-glibc2.39",
+      "elapsed_seconds": 57.6938968100003,
+      "minimum_logic_slack": 1.4565211613082326e-05,
+      "maximum_radius": 5.065841878569542e-09
+    },
+    {
+      "ordinal": 45,
+      "job_id": "digits_seed_512_anchor_20",
+      "study": "digits",
+      "original_summary_sha256": "594f9f373630cdbfbea715c59cdfa8d4dd4b3555d2de1eb2a78ed450f3681fe0",
+      "platform": "Linux-6.17.0-1032-nvidia-aarch64-with-glibc2.39",
+      "elapsed_seconds": 19.076597667997703,
+      "minimum_logic_slack": 0.0002679679716551414,
+      "maximum_radius": 1.6951492311647372e-12
+    },
+    {
+      "ordinal": 46,
+      "job_id": "digits_seed_512_anchor_35",
+      "study": "digits",
+      "original_summary_sha256": "89bf73156e5e66133e5e6e829329d8e2696d997de0af15a8a5078af20dc4a625",
+      "platform": "Linux-6.17.0-1032-nvidia-aarch64-with-glibc2.39",
+      "elapsed_seconds": 30.558800594997592,
+      "minimum_logic_slack": 0.00019592687979133058,
+      "maximum_radius": 1.8091087694410644e-11
+    },
+    {
+      "ordinal": 47,
+      "job_id": "seed_17_anchor_47000",
+      "study": "modular_mse",
+      "original_summary_sha256": "2ef74bb98157987742113c1e495f334f80aa0108603ea1befe186befd615ac7e",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "elapsed_seconds": 1993.8769965999527,
+      "minimum_logic_slack": null,
+      "maximum_radius": 5.715597364466212e-08
+    },
+    {
+      "ordinal": 48,
+      "job_id": "seed_17_anchor_115250",
+      "study": "modular_mse",
+      "original_summary_sha256": "ce9d1cc462a4a4993a8e0f01f4742964900104dd208134e295cd947d88528928",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "elapsed_seconds": 3602.6470011000056,
+      "minimum_logic_slack": null,
+      "maximum_radius": 2.5206500391900766e-11
+    },
+    {
+      "ordinal": 49,
+      "job_id": "seed_17_anchor_123500",
+      "study": "modular_mse",
+      "original_summary_sha256": "64ef7a11fe06c395b1ee58a1c280d352ee5b804a189b77541a2a2029fb3dc527",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "elapsed_seconds": 8071.762589299935,
+      "minimum_logic_slack": null,
+      "maximum_radius": 1.6945803642729281e-09
+    },
+    {
+      "ordinal": 50,
+      "job_id": "seed_19_anchor_13000",
+      "study": "modular_mse",
+      "original_summary_sha256": "2b3cc14a8f902e8ec518a53af822400c3587256f636eb4522c4090b7becf6afb",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "elapsed_seconds": 104.78803880000487,
+      "minimum_logic_slack": null,
+      "maximum_radius": 2.562893347729482e-13
+    },
+    {
+      "ordinal": 51,
+      "job_id": "seed_19_anchor_17000",
+      "study": "modular_mse",
+      "original_summary_sha256": "0ca0bd68df9300e1d3820842c277623527e8d25a773e0aa9305250a276ad9e23",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "elapsed_seconds": 1076.9796312000835,
+      "minimum_logic_slack": null,
+      "maximum_radius": 4.239872957326455e-05
+    },
+    {
+      "ordinal": 52,
+      "job_id": "seed_21_anchor_17000",
+      "study": "modular_mse",
+      "original_summary_sha256": "6871f314713b34c17b76b2983e620a93b8854a471a14472aaee21cc6a7add4ed",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "elapsed_seconds": 3649.641941900016,
+      "minimum_logic_slack": null,
+      "maximum_radius": 6.672411748748992e-05
+    },
+    {
+      "ordinal": 53,
+      "job_id": "seed_21_anchor_21250",
+      "study": "modular_mse",
+      "original_summary_sha256": "a925a1783c9c9f90e06f63a024768a939448cc5a4ddb0be960aa6e532580afff",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "elapsed_seconds": 10069.11361989996,
+      "minimum_logic_slack": null,
+      "maximum_radius": 6.106775988954946e-07
+    },
+    {
+      "ordinal": 54,
+      "job_id": "seed_21_anchor_25000",
+      "study": "modular_mse",
+      "original_summary_sha256": "384d69b2572c2102a48cd90a40953cd4d8554df768a9283f898565a12b654eda",
+      "platform": "Linux-6.17.0-1032-nvidia-aarch64-with-glibc2.39",
+      "elapsed_seconds": 95.98870588899445,
+      "minimum_logic_slack": null,
+      "maximum_radius": 1.268084327348845e-08
+    },
+    {
+      "ordinal": 55,
+      "job_id": "seed_23_anchor_21500",
+      "study": "modular_mse",
+      "original_summary_sha256": "f9fcb4d563e473df1e2d2b4f4acb2919ef7d5254ad0a1a17fd160f995978167c",
+      "platform": "Linux-6.17.0-1032-nvidia-aarch64-with-glibc2.39",
+      "elapsed_seconds": 21.990306384002906,
+      "minimum_logic_slack": null,
+      "maximum_radius": 1.5298796871728083e-11
+    },
+    {
+      "ordinal": 56,
+      "job_id": "seed_23_anchor_22750",
+      "study": "modular_mse",
+      "original_summary_sha256": "1cc1893fa9121b3c9d196a846b4dd2304a7c8f3382096a06dc3aa95b113421fd",
+      "platform": "Linux-6.17.0-1032-nvidia-aarch64-with-glibc2.39",
+      "elapsed_seconds": 114.45195542700094,
+      "minimum_logic_slack": null,
+      "maximum_radius": 1.896215194206139e-07
+    },
+    {
+      "ordinal": 57,
+      "job_id": "seed_23_anchor_24500",
+      "study": "modular_mse",
+      "original_summary_sha256": "ad93574ba2924e930b1977c37f2027d94aaa3ebb56718e70377848c8b810e84d",
+      "platform": "Linux-6.17.0-1032-nvidia-aarch64-with-glibc2.39",
+      "elapsed_seconds": 109.93258168100147,
+      "minimum_logic_slack": null,
+      "maximum_radius": 2.3487168086630704e-07
+    },
+    {
+      "ordinal": 58,
+      "job_id": "seed_23_anchor_26000",
+      "study": "modular_mse",
+      "original_summary_sha256": "65e63627d10b7ef7aee5f5afd1a74703971f1d6caaa831a02f20925d22cdefcb",
+      "platform": "Linux-6.17.0-1032-nvidia-aarch64-with-glibc2.39",
+      "elapsed_seconds": 62.73399178600084,
+      "minimum_logic_slack": null,
+      "maximum_radius": 5.305789749755667e-07
+    },
+    {
+      "ordinal": 59,
+      "job_id": "seed_24_anchor_23500",
+      "study": "modular_mse",
+      "original_summary_sha256": "f84301ea57e812194ee2772eabd8077be2aac0ac3d1ad533eae6422faeaac7f3",
+      "platform": "Linux-6.17.0-1032-nvidia-aarch64-with-glibc2.39",
+      "elapsed_seconds": 120.43981749499653,
+      "minimum_logic_slack": null,
+      "maximum_radius": 2.404489248245168e-07
+    },
+    {
+      "ordinal": 60,
+      "job_id": "seed_24_anchor_27250",
+      "study": "modular_mse",
+      "original_summary_sha256": "426b0fa8545ea0fcfbd0e5b76cacb047d27e7ed1a6a8480b17baa23f15202c4b",
+      "platform": "Linux-6.17.0-1032-nvidia-aarch64-with-glibc2.39",
+      "elapsed_seconds": 26.703501698000764,
+      "minimum_logic_slack": null,
+      "maximum_radius": 1.7809189139696257e-11
+    },
+    {
+      "ordinal": 61,
+      "job_id": "seed_24_anchor_36750",
+      "study": "modular_mse",
+      "original_summary_sha256": "91448de4932f3ee23db9fce1cf626ef416e4ff2fbb397f501add67c683c6e174",
+      "platform": "Linux-6.17.0-1032-nvidia-aarch64-with-glibc2.39",
+      "elapsed_seconds": 68.31362096599332,
+      "minimum_logic_slack": null,
+      "maximum_radius": 2.8205679691188725e-09
+    },
+    {
+      "ordinal": 62,
+      "job_id": "seed_24_anchor_52500",
+      "study": "modular_mse",
+      "original_summary_sha256": "4f7dc2fafe0bf8fb16e9bc79cca93e1a466ea706c5c2c89332bb1dc761e1fe59",
+      "platform": "Linux-6.17.0-1032-nvidia-aarch64-with-glibc2.39",
+      "elapsed_seconds": 119.85085615000571,
+      "minimum_logic_slack": null,
+      "maximum_radius": 2.9046829508011716e-09
+    }
+  ],
+  "source_sha256": "0b6192155b448fb7572a8825483f26efadb250644cef8c6f17e0a5b425eaa1d2",
+  "new_prospective_events": 0,
+  "scope": "Original per-job descriptive timing/platform and strict-output-slack fields. Timings are not a controlled platform comparison; execution provenance paths are omitted."
+}

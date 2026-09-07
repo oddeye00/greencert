@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import re
 import tempfile
 import zipfile
 from pathlib import Path
@@ -648,13 +649,12 @@ def sanitize(text: str) -> str:
     replacements = (
         (root.replace("\\", "\\\\"), "<ROOT>"),
         (root, "<ROOT>"),
-        ("C:\\\\Users\\\\oddey", "<USER_HOME>"),
-        ("C:\\Users\\oddey", "<USER_HOME>"),
         ("Ian Rhee", "Anonymous Author"),
         ("oddey", "anonymous"),
     )
     for old, new in replacements:
         text = text.replace(old, new)
+    text = re.sub(r"[A-Za-z]:[\\/]+Users[\\/]+[A-Za-z0-9_.@-]+", "<USER_HOME>", text)
     return text
 
 

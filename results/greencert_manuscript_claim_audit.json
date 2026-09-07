@@ -1,7 +1,7 @@
 {
   "status": "GREENCERT manuscript claim audit passed",
   "paper": "paper\\certified_local_training_events_neurips2026.tex",
-  "paper_sha256": "5816F3F047E6439BCB19F1F94F20774017D93C0898B2F8FB3581B36ADE645E6A",
+  "paper_sha256": "041AF33EC3F8F6465EFFACACC74F008FB8A698D4103F143265C3A54DA3762090",
   "studies": {
     "wdbc": {
       "cases": 72,

@@ -62,14 +62,13 @@ anchor-preserving verifier that either brackets a future persistent event or
 abstains.  Starting from a checkpoint-local reference path, it propagates the
 realized signed defect through a finite-window Green operator, recenters on
 that directional response, and bounds only the remaining second-order error.
-The resulting theorem encloses the realized nonlinear trajectory over a finite
-window and transports that enclosure to a persistent first-passage bracket.
+The theorem encloses the realized nonlinear trajectory over a finite window
+and transports that enclosure to a persistent event on a fixed evaluation set.
 Across four frozen or outcome-sealed studies, all 83 issued brackets contain their subsequently revealed crossings;
-independent 192-bit outward
-continuation re-certifies all 63 WDBC and digits brackets.  Direction is
-essential in the difficult cases: signed propagation preserves a 147-step
-digits certificate and eight of nine fixed-radius Transformer certificates
-lost by a matched unsigned construction.  Both inaccurate finite digits
+independent outward continuation retains all 63 WDBC and digits brackets
+under the stated arithmetic assumptions.  In matched
+comparisons, unsigned propagation loses the 147-step digits bracket and eight
+of the nine fixed-radius Transformer certificates.  Both inaccurate finite digits
 forecasts abstain before randomized probing.  The result is a selective
 verifier that distinguishes an accurate local clock from one whose future
 trajectory has actually been certified.
@@ -129,9 +128,9 @@ Our contributions are:
   explicit family-wise guarantee.
   \item We run frozen confirmations on three task families and two separately
   sealed Transformer cohorts.  All 83 issued brackets cover; every one of the
-  63 non-modular brackets survives independent 192-bit continuation, and
+  63 non-modular brackets survives independent outward continuation, and
   both inaccurate finite digits clocks are rejected before randomized probing.
-  \item We isolate why direction and computation matter.  A matched unsigned
+  \item We measure how defect direction affects certificate issuance.  A matched unsigned
   construction retains only one of nine Transformer certificates and loses the
   sealed 147-step digits event.  Computational refinements reduce Green and
   output-operator cost without changing the issued brackets; for example, a
@@ -586,10 +585,14 @@ and a \emph{trigger-only anchor} is chosen using trigger data without reading
 its future certification trajectory.  A \emph{candidate} is the resulting
 checkpoint--event pair.  \emph{Freezing} fixes a methodological choice before
 the relevant future outcome is inspected; \emph{sealing} records the method,
-candidate, or certificate before the outcome join.  An \emph{issued} candidate
-satisfies every closure and event-margin condition; otherwise \method{}
-abstains.  Post-seal analyses are labeled separately and never alter
-prospective issuance.
+candidate, or certificate.  In a \emph{prospective}, \emph{outcome-sealed}
+study, the certificate record is sealed before the future trajectory is
+opened; the \emph{outcome join} then compares that record with the revealed
+crossing.  An \emph{issued} candidate satisfies every closure and event-margin
+condition; otherwise \method{} abstains.  A \emph{construction abstention}
+occurs when construction cannot be completed under the frozen protocol.
+Post-seal comparisons and development audits of methodological refinements
+are reported separately and never alter prospective issuance.
 
 We run four outcome-sealed cohorts on three task families; complete splits,
 hyperparameters, selectors, and seal provenance appear in
@@ -654,8 +657,9 @@ Transformer response & 72 & 19 & 11 & 11/11 & fixed-$R$ baseline issues 10 \\
 \end{tabular}
 \end{table}
 
-The 63 WDBC and digits brackets additionally receive independent exact-real
-continuation audits.  The 20 Transformer certificates remain high-confidence
+The 63 WDBC and digits brackets additionally receive independent outward
+continuation audits under the arithmetic assumptions in
+Appendix~\ref{app:repaired-arithmetic}.  The 20 Transformer certificates remain high-confidence
 numerical claims under the stated float64 and ideal-PRNG assumptions.
 
 Thresholds within a seed are correlated, so we do not attach event-level
@@ -665,26 +669,25 @@ fixed-radius Transformer seeds, and 7/7 response-centered Transformer seeds.
 These are implementation audits of a certificate, not estimates of a universal
 forecast-accuracy rate.
 
-The result survives an independent 192-bit outward replay of 40 unique
+The result survives an independent outward replay of 40 unique
 seed-anchor tubes and 5,089 optimizer transitions.  All requested horizons are
 reached and all 56 brackets are retained unchanged.  The maximum outward
-radius is $4.37\times10^{-13}$, minimum strict output slack is
+radius is $4.47\times10^{-13}$, minimum strict output slack is
 $2.38\times10^{-5}$, and the smallest recorded recurrence-rounding slack is
 $3.94\times10^{-31}$.  This is a direct validated continuation, not a replay
 of the Green inequality: it begins with zero anchor radius and encloses each
 optimizer step, with no $\kappa$, Gaussian event, or PRNG dependence.  Hence
-the retained brackets are deterministic exact-real statements for continuation
-from the stored dyadic checkpoint; the preceding PyTorch/BLAS training program
-and population accuracy are not certified.
+the retained brackets describe exact-real continuation from the stored dyadic
+checkpoint under the stated arithmetic assumptions.  The preceding
+PyTorch/BLAS training program and population accuracy are not certified.
 
-The same direct pass takes 7.12 aggregate hours versus 33.88 minutes for
-matched GreenCert event records ($12.61\times$).  Direct outward continuation
-provides an independent validation baseline on the small tanh networks, but it
+Direct outward continuation provides an independent validation baseline on
+the small tanh networks, but it
 does not provide the matrix-free signed-Green construction used for the
 Transformer setting.  \method{} separates the realized first-order response
 from the nonlinear remainder and accesses the finite-window gain through
 JVP/VJP products, avoiding explicit propagator or Hessian construction.  The
-direct 192-bit runs therefore audit the issued small-model brackets rather
+direct outward runs therefore audit the issued small-model brackets rather
 than replace the matrix-free certification mechanism.
 
 On this locally near-affine tanh regime the matched unsigned finite-window
@@ -714,13 +717,13 @@ case consumes a randomized Green query.  Thus the prospective study includes
 both sides of selective validity: every issued bracket covers, while every
 inaccurate finite centerline is rejected.
 
-A Green-independent 192-bit replay then encloses seven exact-real
+A Green-independent outward replay then encloses seven exact-real
 seed--anchor tubes from zero radius.  All seven horizons are reached and all
 seven singleton brackets are retained unchanged, including $[147,147]$; the
 maximum outward radius is $5.07\times10^{-9}$ and minimum strict logic slack
-is $1.46\times10^{-5}$.  This validates continuation from stored dyadic
-checkpoints, not the preceding training execution or the randomized Green
-inequality.
+is $1.46\times10^{-5}$.  Under the same arithmetic assumptions, this validates
+continuation from stored dyadic checkpoints, not the preceding training
+execution or the randomized Green inequality.
 
 This is a prospective, non-modular instance in which direction changes the
 verifier's decision, not merely its radius.  Appendix
@@ -1076,7 +1079,10 @@ fixed evaluation sets and coverage is conditional on issuance, so these are
 finite-set event guarantees rather than population guarantees.
 
 The numerical guarantees have two levels.  All 63 WDBC and digits certificates
-survive direct 192-bit outward continuation from stored checkpoints, and the
+survive direct outward continuation from stored checkpoints using 192-bit Arb
+endpoints and explicit binary64 error bounds.  The latter assume ordinary
+round-to-nearest dot products with gradual underflow, rather than certify an
+arbitrary BLAS implementation (Appendix~\ref{app:repaired-arithmetic}).  The
 204 amplified-secant jets are outward at 192 bits conditional on stored dyadic
 inputs.  The upstream Transformer Green products, derivative envelopes, and
 output margins remain float64/ideal-PRNG calculations.  The directional-block
@@ -2078,7 +2084,7 @@ $[\tau-10\%,\tau)$.  Its API cannot materialize certification rows; candidates
 and certificates are sealed before future trajectories are joined.  The method
 fixes $H=300$, four sweeps, $m=8,q=4$, a $10^{-6}$ family budget, and the
 smallest closure root.  Inspected development seeds 0--7 fixed every choice
-before the method seal.  The separate 192-bit verifier begins at zero radius on
+before the method seal.  The separate outward verifier begins at zero radius on
 each exact dyadic anchor and propagates a direct one-step tube without a Green
 norm or randomized probe.
 
@@ -2092,8 +2098,9 @@ the WDBC anchor rule, $H=400$, three sweeps, $m=8,q=4$, and a $10^{-6}$
 family budget.  Inspected development seeds 0--2 fix the sweep budget; signed
 and unsigned methods receive the same centerline.  Code, fresh seeds, and the
 primary signed-only endpoint are sealed before training, under the WDBC
-selection/outcome barrier.  The post-outcome 192-bit verifier directly encloses
-the exact-real optimizer map without a Green norm or probe.
+selection/outcome barrier.  The post-outcome outward verifier directly encloses
+the exact-real optimizer map under the arithmetic assumptions in
+Appendix~\ref{app:repaired-arithmetic}, without a Green norm or probe.
 
 \paragraph{Fixed-radius Transformer cohort.}
 Fresh seeds 331--354 train one-block causal Transformers on addition modulo 17:
@@ -2131,9 +2138,9 @@ right inverse, outer-ball envelope, and smallest closure root; it is a matched
 scalar Euclidean comparator, not a claim about componentwise or Taylor-model
 validators.  Other post-seal diagnostics batch the same 16 committed probes and
 test exact products for a two-block LayerNorm/AdamW map.  Dense mod-11 MLPs
-(827 parameters) provide 192-bit outward evaluation of every issued inequality,
+(827 parameters) provide independent outward checks of 16 issued brackets,
 and a disjoint mod-13 study (1,933 parameters) supplies HVP-only
-active/complement uncertainty.  Direct 192-bit continuations independently
+active/complement uncertainty.  Direct outward continuations independently
 retain every issued WDBC and digits bracket.
 
 \section{Complete WDBC confirmation and outward audit}
@@ -2173,8 +2180,10 @@ from the radius by at most $1.27\times10^{-14}$ in absolute terms; the outward
 pass resolves this binary64 diagnostic rather than treating a strict
 floating-point comparison as proof.
 
-The 192-bit verifier is a separately hashed direct validated-continuation
-program.  It treats every stored
+The corrected verifier is a separately hashed direct validated-continuation
+program combining 192-bit Arb endpoints and outward binary64 error bounds.
+Under the arithmetic assumptions in Appendix~\ref{app:repaired-arithmetic},
+it treats every stored
 binary64 datum as an exact dyadic input and outward-encloses tanh network
 evaluation, exact-Hessian construction, eigenpair residuals, optimizer
 Jacobians, one-step defect recurrences, nonlinear drift, and event margins.
@@ -2182,9 +2191,9 @@ Its anchor radius is zero and its recurrence contains no Green norm, probe, or
 PRNG call; therefore the Gaussian event above is not a condition of an
 outward-retained bracket.
 Across 40 unique seed-anchor tubes it verifies 5,089 state transitions.  The
-largest optimizer-Jacobian norm is 1.00744, the largest Hessian-evaluation
-enclosure error is $3.74\times10^{-12}$, and the largest eigen-numerical error
-is $5.87\times10^{-11}$.  All 56 singleton brackets remain identical and all
+largest optimizer-Jacobian norm bound is 1.00744, the largest basis
+orthogonality bound is $7.53\times10^{-12}$, and the largest
+Hessian--basis residual bound is $1.68\times10^{-11}$.  All 56 singleton brackets remain identical and all
 56 cover.
 
 \begin{table}[H]
@@ -2208,9 +2217,10 @@ All     & 71/72 & 56 & 56/56 & 79  & 256 \\
 \end{table}
 
 \begin{table}[H]
-\caption{Post-seal matched WDBC validated-numerics comparison on the 56
-Green-issued coordinates.  Direct timing excludes construction of the shared
-four-sweep centerline, biasing the runtime ratio in its favor.}
+\caption{Historical WDBC timing on the 56 Green-issued coordinates.
+The direct row predates the arithmetic repair; repaired replay costs are
+reported separately in Appendix~\ref{app:repaired-arithmetic}.  Direct timing
+excludes construction of the shared four-sweep centerline.}
 \label{tab:wdbc-direct}
 \centering
 \small
@@ -2220,17 +2230,16 @@ four-sweep centerline, biasing the runtime ratio in its favor.}
 Validator & Events & Covered & Random condition & Aggregate time \\
 \midrule
 \method{} event records & 56 & 56/56 & Gaussian Green bound & 33.88 min \\
-Direct 192-bit continuation & 56 & 56/56 & none & 7.12 h \\
+Historical direct implementation & 56 & 56/56 & none & 7.12 h \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-The direct/GreenCert aggregate ratio is $12.61\times$.  The direct comparator
-was not run on the 15 Green abstentions, so Table~\ref{tab:wdbc-direct} compares
-matched rigor and cost rather than unconditional availability.  Both methods
-use the same four-sweep reference; only the direct one-step tube dispenses with
-the Green closure.  Exact-real scope begins at the stored checkpoint and does
-not retroactively verify the PyTorch/BLAS training execution.
+The historical direct/GreenCert aggregate ratio is $12.61\times$; it is not a
+timing ratio for the corrected verifier.  The direct comparator was not run on
+the 15 Green abstentions.  Both methods use the same four-sweep reference;
+only the direct one-step tube dispenses with the Green closure.  Exact-real
+scope begins at the stored checkpoint, under the stated arithmetic assumptions.
 
 \section{Complete prospective digits audit}
 \label{app:digits-audit}
@@ -2253,14 +2262,16 @@ all 17 abstentions.  The primary signed-only event has ample separation:
 $0.2369<1$ signed versus $13.018>1$ unsigned, with strict output slack
 $1.43\times10^{-5}$.
 
-A post-seal verifier independently rebuilds each three-sweep path and propagates
-a zero-radius 192-bit Arb tube under the exact-real full-batch map.  It imports
+A post-seal verifier propagates a zero-radius outward tube around each sealed
+three-sweep path under the exact-real full-batch map and stated arithmetic
+assumptions.  Portable replay uses byte-authenticated reference and dataset
+arrays rather than assuming cross-platform bitwise reconstruction.  It imports
 neither the Green radius nor its Gaussian probe.  All seven distinct
 seed--anchor tubes reach their horizons; all seven outward brackets are
 identical to Table~\ref{tab:digits-issued} and cover.  Maximum radius is
 $5.07\times10^{-9}$, minimum strict logic slack is $1.46\times10^{-5}$,
-maximum Hessian interval-row radius is $2.18\times10^{-11}$, and maximum
-eigensolver numerical error is $1.39\times10^{-10}$.  This includes the
+maximum Hessian--basis residual bound is $1.22\times10^{-10}$, and maximum
+basis orthogonality bound is $2.89\times10^{-11}$.  This includes the
 signed-only $[147,147]$ event.
 
 \begin{table}[H]
@@ -2944,11 +2955,9 @@ $378\times$ reduction.  A same-machine three-repeat control measures direct
 continuation at 0.298 seconds for the required 26 updates and 3.718 seconds for
 300, leaving certification $30.9\times$ and $2.48\times$ slower.  Continuation
 computes the future outcome; \method{} constructs an outcome-independent proof object
-before that trajectory is opened.  On the small exact-real WDBC audit,
-where validated continuation is
-the matched proof baseline rather than an ordinary rollout, the direction
-reverses: 7.12 hours for direct continuation versus 33.88 minutes for the
-GreenCert records (Table~\ref{tab:wdbc-direct}).
+before that trajectory is opened.  The small-model outward continuations
+provide an independent check of the event brackets; their arithmetic and
+execution costs are reported separately in Appendix~\ref{app:repaired-arithmetic}.
 
 Two end-to-end replays rebuild all four sweeps, analytic envelopes, output
 logic, and the Green probe from the sealed checkpoint and committed streams.
@@ -3106,7 +3115,8 @@ The uncorrected \vone{} tube issues 6/27 certificates; one-sweep recentered
 Median capped state horizon moves from 26 to 174 updates; 13/27 recentered tubes
 reach the full 250-step window.  Fourteen brackets are singletons; the other two
 are $[18,20]$ and $[64,70]$, containing leads 18 and 66.  All issued brackets
-survive a separate 192-bit outward pass unchanged.
+survive a separate outward pass unchanged under the arithmetic assumptions
+in Appendix~\ref{app:repaired-arithmetic}.
 
 The mod-13 HVP study uses widths 48, seeds 202--205, and disjoint
 train/trigger/certification sets of 101/34/34.  Of 20 seed-threshold cases, 19
@@ -3169,8 +3179,9 @@ Candidate and certificate seals are verified before the independent outcome
 join.  A second auditor that does not import the runner's aggregation code
 reconstructs all 72 dispositions and all 56 brackets.  The direct-baseline
 audit additionally checks that the outward recurrence contains no Green,
-$\kappa$, probe, or random variable and verifies all 40 cached zero-radius
-anchor tubes.
+$\kappa$, probe, or random variable.  The corrected replay and independent
+scalar/output checks in Appendix~\ref{app:repaired-arithmetic} retain all
+40 zero-radius anchor tubes.
 
 \paragraph{Digits chain.}
 The raw scikit-learn arrays, protocol code, fresh seed list, and all constants
@@ -3181,7 +3192,7 @@ that training/selection cannot return certification tensors.  Candidate seal
 before outcome reconstruction.  A separate auditor that does not import the
 runner recomputes all 24 anchors, checks every seal and event, and confirms
 7/7 coverage; checkpoint reconstruction error is zero.  A second independent
-audit verifies all seven 192-bit direct tubes, cache hashes, positive logic
+audit verifies all seven corrected direct tubes, cache hashes, positive logic
 slacks, exact bracket identity, and the signed-only $[147,147]$ event.  A
 post-seal selectivity auditor independently identifies the two inaccurate
 finite centerlines and verifies that both records are deterministic early
@@ -3228,11 +3239,52 @@ replays bind the immutable combined benchmark, rerun all outward scalar
 supersolution checks, and recover the same bracket in every invocation; all 20
 paired kernel speedups exceed one, with pooled median $1.83\times$.
 
+\subsection{Corrected arithmetic and independent continuation replay}
+\label{app:repaired-arithmetic}
+
+The continuation verifier combines 192-bit Arb transcendental endpoints with
+outward binary64 elementary, sum, and matrix-product bounds.  A numerical
+dependency audit found that the earlier matrix-product bound used a relative
+rounding term alone and omitted accumulated subnormal error.  We retained the
+counterexample and original records, replaced the primitive in a separately
+identified verifier, and replayed all 79 affected historical claims: 56 WDBC,
+seven digits, and 16 dense modular-MLP appendix events.  Every original bracket
+is retained.  This repair changes neither prospective issuance nor the 83-event
+headline population; the 16 appendix events remain a separate study.
+
+For an ordinary length-$n$ binary64 dot product, the corrected bound includes
+both $\gamma_D\sum_i|a_i b_i|$ and an additive underflow allowance
+$D\eta/(1-Du)$, with $D=2n+8$, $u=2^{-53}$, and $\eta=2^{-1074}$.
+It assumes round-to-nearest, gradual underflow, no internal overflow, and at
+most $D$ rounded operations; nonfinite enclosures cause refusal.  Runtime
+checks test necessary arithmetic conditions, not the implementation of an
+arbitrary BLAS binary.  These assumptions delimit the exact-real continuation
+claim even though the Arb portions use arbitrary precision.
+
+A second audit replays all 7,551 state-radius and optimizer-norm inequalities
+with exact rational arithmetic.  An independent scalar-Arb implementation,
+using no BLAS products, rechecks 1,485,052 output margins at 384 bits and
+reconstructs each persistent bracket from integer count bounds.  The output
+audit is conditional on the authenticated state tubes; it does not independently
+rederive their neural derivative bounds.  The fixed-ownership ledger excludes
+duplicate portability pilots and retains execution identities across machines.
+Its SHA-256 prefix is \texttt{6E0EE195EAE512980}; the descriptive summary is
+\texttt{697F36AD8503486D}.  Both full hashes and replay commands are supplied
+with the code.
+
+The repaired runs cover 40 WDBC tubes/5,089 transitions, seven digits
+tubes/610 transitions, and 16 modular tubes/1,852 transitions.  Their maximum
+state radii are $4.47\times10^{-13}$, $5.07\times10^{-9}$, and
+$6.68\times10^{-5}$, respectively.  Runs used Windows/x86 and Linux/ARM;
+the released per-job timings retain this distinction and are not pooled into
+a controlled speedup comparison.  Byte-authenticated reference paths and
+dataset tensors make replay independent of cross-platform bitwise training
+reconstruction.
+
 \paragraph{Exact-real boundary.}
-The 192-bit WDBC, digits, and dense-modular passes treat stored binary64
-checkpoints as exact inputs and outwardly enclose network, Hessian, eigensolver,
-recurrence, and margin arithmetic.  They certify continuation from those
-checkpoints, not the PyTorch/BLAS training process that produced them.  The
+Under the arithmetic assumptions above, the WDBC, digits, and dense-modular
+passes certify continuation from exact stored dyadic checkpoints, not the
+PyTorch/BLAS training process that produced them.  The
 WDBC/digits direct recurrences independently validate issued brackets rather
 than every randomized Green inequality.  The Transformer neural-operator layer
 remains float64/ideal-PRNG; its outward scalar calibration/root audit is

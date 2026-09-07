@@ -6,6 +6,8 @@ import argparse
 import hashlib
 import json
 import re
+import subprocess
+import sys
 from pathlib import Path
 
 from pypdf import PdfReader
@@ -31,6 +33,19 @@ REQUIRED = {
     "requirements.in",
     "requirements.txt",
     "PUBLIC_MANIFEST_SHA256.json",
+    "PUBLIC_NUMERICAL_REPLAY.md",
+    "NUMERICAL_REPAIR_RESOLUTION.md",
+    "audit_history/numerical_release_hold_20260907.json",
+    "audit_history/numerical_repair_resolution_20260907.json",
+    "artifacts/greencert_repaired_continuation_20260907.zip",
+    "scripts/read_public_repair_archive.py",
+    "scripts/summarize_public_repair_validation.py",
+    "scripts/test_public_repair_archive.py",
+    "scripts/test_public_repair_roundoff.py",
+    "scripts/audit_public_repair_statistics.py",
+    "scripts/replay_corrected_continuation.py",
+    "results/public_repair_descriptors_20260907.json",
+    "results/repaired_numerics_manuscript_summary_20260907.json",
     "paper/greencert_arxiv.pdf",
     "paper/greencert_arxiv_release.json",
     "paper/greencert_arxiv_source.zip",
@@ -223,14 +238,14 @@ def main() -> None:
     paper_pdf = root / "paper" / "greencert_arxiv.pdf"
     paper_reader = PdfReader(paper_pdf)
     paper_metadata = paper_reader.metadata or {}
-    if len(paper_reader.pages) != 45:
+    if len(paper_reader.pages) != 46:
         raise AssertionError(f"unexpected public preprint length: {len(paper_reader.pages)}")
     if str(paper_metadata.get("/Author", "")) != "Ian Rhee":
         raise AssertionError("public preprint author metadata changed")
     release = json.loads(
         (root / "paper" / "greencert_arxiv_release.json").read_text(encoding="utf-8")
     )
-    if int(release["pages"]) != 45 or release["pdf"]["sha256"] != digest(paper_pdf):
+    if int(release["pages"]) != 46 or release["pdf"]["sha256"] != digest(paper_pdf):
         raise AssertionError("public preprint and arXiv release manifest differ")
     release_payloads = {
         "source_bundle": root / "paper" / "greencert_arxiv_source.zip",
@@ -242,6 +257,17 @@ def main() -> None:
             or int(release[key]["bytes"]) != path.stat().st_size
         ):
             raise AssertionError(f"public {key} and arXiv release manifest differ")
+
+    repair = release["numerical_repair"]
+    repair_zip = root / "artifacts/greencert_repaired_continuation_20260907.zip"
+    resolution_path = root / "audit_history/numerical_repair_resolution_20260907.json"
+    if (repair["sha256"] != digest(repair_zip) or repair["bytes"] != repair_zip.stat().st_size
+            or repair["resolution_sha256"] != digest(resolution_path)
+            or repair["historical_brackets"] != 79 or repair["new_prospective_events"] != 0):
+        raise AssertionError("public numerical repair and release manifest differ")
+    resolution = json.loads(resolution_path.read_text(encoding="utf-8"))
+    if resolution["status"] != "arithmetic_issue_resolved" or digest(root / "audit_history/numerical_release_hold_20260907.json").lower() != resolution["original_hold_sha256"]:
+        raise AssertionError("arithmetic resolution does not preserve original hold")
 
     v3_method_seal = json.loads(
         (root / "TRANSFORMER_V3_METHOD_SEAL.json").read_text(encoding="utf-8")
@@ -392,6 +418,21 @@ def main() -> None:
         if path.stat().st_size != row["bytes"] or digest(path) != row["sha256"]:
             raise AssertionError(f"public manifest mismatch: {relative}")
 
+    # Run the checker from the inspected checkout, not the maintainer's import
+    # path. This authenticates its public archive and all scoped replay reports.
+    repaired = json.loads(subprocess.check_output(
+        [sys.executable, str(root / "scripts/summarize_public_repair_validation.py")],
+        cwd=root, text=True, encoding="utf-8",
+    ))
+    if (repaired["status"], repaired["fixed_jobs"], repaired["historical_brackets"],
+            repaired["new_prospective_events"]) != ("PASS", 63, 79, 0):
+        raise AssertionError("corrected continuation artifact did not authenticate")
+    repaired_statistics = json.loads(subprocess.check_output(
+        [sys.executable, str(root / "scripts/audit_public_repair_statistics.py")],
+        cwd=root, text=True, encoding="utf-8",
+    ))
+    if repaired_statistics["status"] != "PASS" or not repaired_statistics["all_study_statistics_equal"]:
+        raise AssertionError("arithmetic appendix statistics do not reproduce")
     report = {
         "status": "public release audit passed",
         "root": str(root),
@@ -406,6 +447,10 @@ def main() -> None:
         "claim_audits_verified": len(expected_audits) + 1,
         "directional_anchors_verified": int(directional_anchor_audit["anchors"]),
         "v3_method_seal_files_verified": len(v3_method_seal["code_manifest"]),
+        "repaired_historical_brackets_verified": repaired["historical_brackets"],
+        "repaired_win_arm_output_results_equal": repaired["win_arm_output_job_results_equal"],
+        "repaired_full_neural_portability_windows": repaired["neural_recomputation"]["full_windows"],
+        "repaired_manuscript_statistics_reproduced": True,
     }
     print(json.dumps(report, indent=2, sort_keys=True))
 

@@ -1,0 +1,29 @@
+{
+  "status": "open",
+  "discovered_local_date": "2026-09-06",
+  "issue": "Legacy gamma-only binary64 matrix-product enclosures omit accumulated subnormal rounding error.",
+  "legacy_source": "scripts/outward_interval_certificate.py",
+  "legacy_source_sha256": "c85e2543d710619e47a57403351328e275c6c64e914c1b51753011aa9da10f18",
+  "counterexample_audit": "results/legacy_subnormal_matmul_audit_20260907T015437.656557+0000.json",
+  "counterexample_audit_sha256": "9aaa41e7ba76b0aee1b792f44eb49d8e5b16550c7acc44437d069d570d1d3738",
+  "affected_audit_callers": [
+    "scripts/outward_real_dataset_confirmation.py",
+    "scripts/outward_digits_confirmation.py",
+    "scripts/audit_wdbc_direct_validated_baseline.py"
+  ],
+  "observed_existing_neural_bracket_failure": null,
+  "experimental_issuance_or_coverage_records_changed": false,
+  "running_451008_parameter_arb_sources_changed": false,
+  "corrected_primitive": "scripts/binary64_interval_products.py",
+  "corrected_primitive_test": "results/binary64_interval_products_20260907T015903.440412+0000.json",
+  "corrected_primitive_test_sha256": "9223959322a2c77b08f248348421c1533caaf2c27949c2299fe3f917cf7cf784",
+  "corrected_full_neural_reaudit_completed": false,
+  "additional_dense_modular_events_requiring_reaudit": 16,
+  "total_affected_continuation_claims": 79,
+  "additional_scope_report": "results/legacy_modular_repair_scope_20260907T025411.561305Z.json",
+  "additional_scope_report_sha256": "d5627f50228ef6ac38b0340f7e9c27a9fbe82a423eace51082d24d5e8210214e",
+  "historical_source_extension_bridge": "results/prospective_v2_source_bridge_20260907T025850.524800Z.json",
+  "historical_source_extension_bridge_sha256": "43cb6f1526dbb2bd959f7a15095483cfdc317a5562f6d59d7a3cbb21ee77fa69",
+  "initial_hold_sha256_before_scope_expansion": "05f232bfb546d26a4cf35553f3a5ad78180ae23b4ad059d5ef8b3973857ef2f5",
+  "release_condition": "Resolve the documented numerical dependency audit, verify affected claimed brackets under corrected arithmetic or a fully justified alternative, and archive this hold with its evidence."
+}

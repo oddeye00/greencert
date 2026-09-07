@@ -1,5 +1,14 @@
 # Reproducibility guide
 
+The clean numerical-repair supplement is documented in
+[`PUBLIC_NUMERICAL_REPLAY.md`](PUBLIC_NUMERICAL_REPLAY.md): all 79 affected
+historical brackets survive isolated Windows/ARM exact-scalar and independent
+384-bit output recomputation. Full neural replay is also available in the
+package and was retested on three complete representative windows on ARM.
+The arithmetic hold has been resolved and archived, preserving its original
+bytes. Historical smoke/claim audits below do not replace this repair-specific
+audit; the public release check authenticates both the repair and its resolution.
+
 This guide distinguishes a fast claim audit from a complete regeneration. The
 distinction matters because the prospective experiments were defined by an
 ordering constraint: methods and candidates were committed before future
@@ -174,7 +183,7 @@ records the release-audit finding, the four restored method-seal hashes, and
 the source-isolated replay. The definitive audit calls the original
 `verify_method_seal()` before doing any v1.5 work.
 
-## Tier 4: validated WDBC/digits replay
+## Tier 4: corrected neural continuation replay
 
 Expected time: several CPU-hours.
 
@@ -182,9 +191,26 @@ Expected time: several CPU-hours.
 python reproduce.py outward
 ```
 
-These commands use python-flint/Arb to propagate the stored dyadic checkpoints
-under the exact-real optimizer map. Their scope starts at the checkpoint. They
-do not certify the floating-point training program that produced it.
+This shortcut checks the repaired matrix-product primitives, then authenticates
+and extracts the corrected public package into a new retained directory. It
+recomputes all 63 neural windows and independently checks their 79 historical
+brackets, including the 16 separate modular-addition appendix events. Existing
+evidence is not overwritten. The result file explicitly records whether neural
+derivatives and output margins were recomputed.
+
+For shorter, clearly scoped checks use:
+
+```bash
+python scripts/replay_corrected_continuation.py --mode ledger
+python scripts/replay_corrected_continuation.py --mode outputs
+python scripts/replay_corrected_continuation.py --mode neural --job 0 --job 40 --job 47
+```
+
+The continuation starts at the stored dyadic checkpoint under the documented
+Arb and ordinary-binary64 assumptions; it does not certify the preceding
+floating-point training program. `legacy-outward-audit` preserves the old
+relative-only arithmetic checks as historical diagnostics, not as the corrected
+numerical validation of the current paper.
 
 ## Paper build
 

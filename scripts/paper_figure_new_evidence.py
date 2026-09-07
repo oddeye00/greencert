@@ -9,6 +9,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 from paper_plot_style import COLORS, configure_paper_plots, save_paper_figure
+from read_public_repair_archive import recorded_brackets
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -68,7 +69,25 @@ def real_data_figure() -> None:
     axes[1].set_title("(b) Certified lead by gate")
     axes[1].grid(axis="y", alpha=0.18)
 
-    outward_rows = [row for row in outward["rows"] if row["outward_issued"]]
+    # Keep the frozen outcomes, but take the bracket coordinates from the
+    # public corrected-arithmetic package, without private orchestration files.
+    verified = {}
+    for claim_key, bracket in recorded_brackets().items():
+        if not claim_key.startswith("binary:results/real_dataset_confirmation/"):
+            continue
+        candidate = load(ROOT / claim_key.removeprefix("binary:"))
+        key = (candidate["seed"], candidate["anchor"], candidate["threshold"])
+        if key in verified:
+            raise ValueError("duplicate repaired WDBC claim")
+        verified[key] = bracket
+    outward_rows = [dict(row) for row in outward["rows"] if row["outward_issued"]]
+    if len(verified) != len(outward_rows) or len(verified) != 56:
+        raise ValueError("corrected WDBC population differs")
+    for row in outward_rows:
+        bracket = verified[(row["seed"], row["anchor"], row["threshold"])]
+        if bracket != row["outward_bracket"]:
+            raise ValueError("legacy plotted bracket not retained")
+        row["outward_bracket"] = bracket
     for threshold, label, color in zip(thresholds, labels, colors):
         selected = [row for row in outward_rows if abs(row["threshold"] - threshold) < 1e-12]
         actual = np.asarray([row["actual_event"] for row in selected], dtype=float)
@@ -79,8 +98,8 @@ def real_data_figure() -> None:
     axes[2].set_xlim(-4, maximum + 8)
     axes[2].set_ylim(-4, maximum + 8)
     axes[2].set_xlabel("revealed event lead")
-    axes[2].set_ylabel("192-bit bracket location")
-    axes[2].set_title("(c) Independent 192-bit replay")
+    axes[2].set_ylabel("outward bracket location")
+    axes[2].set_title("(c) Independent outward replay")
     axes[2].legend(frameon=False, loc="upper left")
     axes[2].set_aspect("equal", adjustable="box")
     axes[2].grid(alpha=0.15)
