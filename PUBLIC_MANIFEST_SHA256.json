@@ -9,8 +9,8 @@
       "sha256": "C1B770356A637F2C9062EF9CAA9049E185C39C3054BFF613F08BED154131EC55"
     },
     ".github/workflows/reproducibility.yml": {
-      "bytes": 5526,
-      "sha256": "256CE0C174703FDA4654F8DBC04CC03698C494F43603B195B34D554F1D9C5D83"
+      "bytes": 5829,
+      "sha256": "1B79C78016F13E4B7B093ED8808480C5DCD3046DB75C9992FCFE19FDBEFE6363"
     },
     ".gitignore": {
       "bytes": 291,
@@ -176,6 +176,10 @@
       "bytes": 5954,
       "sha256": "BD1D356D2DE57A27BE659602D794012C033409E48406F3D18CDA26BF0A43475D"
     },
+    "EXACT_INPUT_EVENT_INTERFACE.md": {
+      "bytes": 4676,
+      "sha256": "7BE71FB203F720B478DC63558D034D97B8DCBEE6A41EF77A84925730E0BF3DE8"
+    },
     "FIGURES.md": {
       "bytes": 2303,
       "sha256": "53C4A541E4AB21D2E93D569B63953CEB41028D29B323AB24640F62B6E2914BFC"
@@ -261,8 +265,8 @@
       "sha256": "5837696F48CE338D5143AC87DBF7855A0550F3BBF0B40FB2E1CF24D06731FA75"
     },
     "README.md": {
-      "bytes": 11257,
-      "sha256": "9150B1958E581B18CBC9A3CD566936F726F800D706D17C643708AC06F380BA69"
+      "bytes": 11465,
+      "sha256": "557FD9659513930FB522F56AD288E9388DA29F2A2DA7B44B612B6A5BC17AB64F"
     },
     "REAL_DATA_GREENCERT_CANDIDATE_SEAL.json": {
       "bytes": 329,
@@ -1255,6 +1259,22 @@
     "results/exact_dyadic_norm_portable_windows_20260907.json": {
       "bytes": 4145,
       "sha256": "F296684BB4BDD06683D922A34F2511B885A2B77800E3EDC37D61E99498238FF0"
+    },
+    "results/exact_input_event_assembly_arm_20260907_v1.json": {
+      "bytes": 1131,
+      "sha256": "353CE7959D9AC3E7E16EDA658307C74991B38768F9F1AFA60ABDDCD3B5CD031E"
+    },
+    "results/exact_input_event_assembly_windows_20260907_v1.json": {
+      "bytes": 1131,
+      "sha256": "353CE7959D9AC3E7E16EDA658307C74991B38768F9F1AFA60ABDDCD3B5CD031E"
+    },
+    "results/exact_input_scalar_closure_arm_20260907_v1.json": {
+      "bytes": 482,
+      "sha256": "27D02229B95691856795A3AD6158D2B4040D4961A29D9FEA6EE8D4B33C6FD127"
+    },
+    "results/exact_input_scalar_closure_windows_20260907_v1.json": {
+      "bytes": 482,
+      "sha256": "27D02229B95691856795A3AD6158D2B4040D4961A29D9FEA6EE8D4B33C6FD127"
     },
     "results/figure_reproducibility_audit.json": {
       "bytes": 3455,
@@ -2619,6 +2639,10 @@
     "results/real_dataset_outward_joined.json": {
       "bytes": 17303,
       "sha256": "3AE267A7E1678FD34C400DA4CA3CE99F811E29029FD6718D4038609FF5A172DE"
+    },
+    "results/recorded_exact_input_assembly_arm_20260907_v1.json": {
+      "bytes": 4213,
+      "sha256": "D1D5ADD68A97E67DE2D592A22E478F148FAA6880F39E2619C1B15E7FA857D31F"
     },
     "results/recorded_window_component_tests_arm_20260907.json": {
       "bytes": 489,
@@ -4436,6 +4460,10 @@
       "bytes": 10164,
       "sha256": "CF7D2A5DF133BB71823FAE2743AD1A32E96B44E69245411E3F68AE9A0C764B8F"
     },
+    "scripts/audit_recorded_exact_input_assembly.py": {
+      "bytes": 7498,
+      "sha256": "9FB1786950838DC27A76DB2574642A82205110EDFFD380D154BEBAE0A3C7D969"
+    },
     "scripts/audit_structured_parameter_green_transformer.py": {
       "bytes": 17995,
       "sha256": "6377CFEF7330A0E78889E45D1D7348B480EFDD29BD9C3816B3784FF17CC89960"
@@ -4804,6 +4832,14 @@
       "bytes": 3976,
       "sha256": "F22016CC3B25E4F5E648131C509D82BD09EB7FB73ADFA8D5E8CE4C511BFFFA1F"
     },
+    "scripts/exact_input_scalar_closure.py": {
+      "bytes": 5002,
+      "sha256": "6B2AB7AE564610BC446AEF4D6B3C131AD6B3EDBA18B9785A01561B55F3FCE3A3"
+    },
+    "scripts/exact_input_window_event_assembly.py": {
+      "bytes": 13213,
+      "sha256": "1FA3564B65B463CF7E366007E5B730C1F602195A4836B7EAC8179735C1D692D8"
+    },
     "scripts/export_transformer_anchor_state.py": {
       "bytes": 2628,
       "sha256": "D7BBFB684B98C24122C94C50073359C070DEA32F40FC77EB6813E04B6A3D767A"
@@ -4980,6 +5016,10 @@
       "bytes": 3699,
       "sha256": "1D724EC6D7D38E0011C4DB2D7726C2198F3E23909DD6EF374831888E687C5048"
     },
+    "scripts/response_centered_scalar_closure.py": {
+      "bytes": 2979,
+      "sha256": "B0DEBCD97869F57E4D07980318EBE6B0BD0831E545DD30882BD3D28747E1458E"
+    },
     "scripts/run_digits_signed_confirmation.py": {
       "bytes": 22477,
       "sha256": "E7E62D514287331FF3D6A71B2A49D929D1C2F04B2F020089EC5F237C7F09B058"
@@ -5021,8 +5061,8 @@
       "sha256": "74439AA5B4B5F8CAF11E94EC5D9B8D6BD838BD4FFE6E8711C373B02144EF77A4"
     },
     "scripts/stage_repaired_public_release.py": {
-      "bytes": 6507,
-      "sha256": "B1A6B00D1D10AB4690024D546D9B3B74075985AB89FD693D27DC8E6479FD8B26"
+      "bytes": 7265,
+      "sha256": "07EFA489BF0C747C56B23BD88FEAFAF8BC202DB87800F4FA49BC719A30C5374F"
     },
     "scripts/streaming_variational_centerline.py": {
       "bytes": 5818,
@@ -5163,6 +5203,14 @@
     "scripts/test_exact_dyadic_norm.py": {
       "bytes": 4019,
       "sha256": "858458BF92C7B965CA8BDB3ECD9A9953E599ADA756C65407E502C2B7C621520E"
+    },
+    "scripts/test_exact_input_scalar_closure.py": {
+      "bytes": 4070,
+      "sha256": "77B84E7192E98E946B04641C619309F74501B7903CBE739B7DDD678D01CC1D32"
+    },
+    "scripts/test_exact_input_window_event_assembly.py": {
+      "bytes": 10038,
+      "sha256": "7A23372D97658074078411AEA4C59482E235F84640FE7FF75463AE4751DE043D"
     },
     "scripts/test_heterogeneous_recenter_closure.py": {
       "bytes": 4618,
@@ -5412,6 +5460,10 @@
       "bytes": 7099,
       "sha256": "98598F8BB846F63563C31926C3031EDE954FD6561013CD0CD1063FD11DB98493"
     },
+    "scripts/test_window_event_assembly.py": {
+      "bytes": 13651,
+      "sha256": "F891256814802BCABB15DAA5389FEE6EE86084D75131BA0F98896C3B8377FCE1"
+    },
     "scripts/transformer_block_envelope.py": {
       "bytes": 11679,
       "sha256": "9AA1B18F26F7DE214DED1280026EBFBA7A3E332C86FA9228757ACB40265DB7C0"
@@ -5579,6 +5631,10 @@
     "scripts/weighted_recenter_closure.py": {
       "bytes": 7905,
       "sha256": "451DEE12A316D55C07B218BB4CE0D327868451AE8C40CE10B2F5931429664D41"
+    },
+    "scripts/window_event_assembly.py": {
+      "bytes": 11996,
+      "sha256": "0E2D2F5FC5B7946126A414ADCC5730142E50EE0FA1F90A7AB1697A5219631E11"
     }
   },
   "format": 1,

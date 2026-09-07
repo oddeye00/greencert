@@ -13,6 +13,20 @@ import subprocess
 
 ROOT = Path(__file__).resolve().parents[1]
 EXTRA = (
+    "EXACT_INPUT_EVENT_INTERFACE.md",
+    "scripts/exact_input_scalar_closure.py",
+    "scripts/test_exact_input_scalar_closure.py",
+    "scripts/exact_input_window_event_assembly.py",
+    "scripts/test_exact_input_window_event_assembly.py",
+    "scripts/audit_recorded_exact_input_assembly.py",
+    "scripts/window_event_assembly.py",
+    "scripts/test_window_event_assembly.py",
+    "scripts/response_centered_scalar_closure.py",
+    "results/exact_input_scalar_closure_windows_20260907_v1.json",
+    "results/exact_input_scalar_closure_arm_20260907_v1.json",
+    "results/exact_input_event_assembly_windows_20260907_v1.json",
+    "results/exact_input_event_assembly_arm_20260907_v1.json",
+    "results/recorded_exact_input_assembly_arm_20260907_v1.json",
     "PUBLIC_NUMERICAL_REPLAY.md",
     "NUMERICAL_REPAIR_RESOLUTION.md",
     "artifacts/greencert_repaired_continuation_20260907.zip",

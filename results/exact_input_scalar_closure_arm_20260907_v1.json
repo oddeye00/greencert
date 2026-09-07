@@ -1,0 +1,14 @@
+{
+  "balanced_extreme_exponents_certified": true,
+  "frozen_producers_modified": false,
+  "future_outcomes_accessed": false,
+  "invalid_input_refusals": 7,
+  "large_integer_domain_refusal": true,
+  "oracle": "exact rational inequalities, no Arb in oracle",
+  "rational_supersolutions": 200,
+  "schema": "exact_input_scalar_closure_tests_v1",
+  "status": "PASS",
+  "subnormal_radius_certified": true,
+  "underflow_source_refusal": true,
+  "unrepresentable_radius_abstention": true
+}

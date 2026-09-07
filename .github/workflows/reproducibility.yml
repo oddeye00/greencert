@@ -35,6 +35,12 @@ jobs:
           python -m pip install -r requirements.txt
       - name: Verify native-command fail-fast behavior
         run: python scripts/test_reproducibility_fail_fast.py
+      - name: Verify exact-input scalar and event contracts
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $PSNativeCommandUseErrorActionPreference = $true
+          python scripts/test_exact_input_scalar_closure.py
+          python scripts/test_exact_input_window_event_assembly.py
       - name: Record environment
         run: python scripts/check_reproduction_environment.py
       - name: Run numerical smoke audit

@@ -74,6 +74,9 @@ baseline.
 ## Start here
 
 - The current preprint is [`paper/greencert_arxiv.pdf`](paper/greencert_arxiv.pdf).
+- [`EXACT_INPUT_EVENT_INTERFACE.md`](EXACT_INPUT_EVENT_INTERFACE.md) documents
+  the separately versioned exact-number assembly interface and its
+  independent rational-oracle regressions on Windows and ARM.
 - [`PHYSICAL_ANCHOR_INTERFACE.md`](PHYSICAL_ANCHOR_INTERFACE.md) explains
   how the theorem preserves the physical checkpoint after rounded coordinate
   conversion, with an exact-rational audit on Windows and ARM.

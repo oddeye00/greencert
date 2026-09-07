@@ -1,0 +1,33 @@
+{
+  "conditional_brackets": 114,
+  "event_certificate_issued": false,
+  "exact_boundary_refusals": [
+    "integer_response_outside_exact_domain",
+    "positive_source_cannot_fit_zero_domain",
+    "tiny_nonzero_parameter_anchor",
+    "integer_drift_domain_does_not_cover",
+    "integer_output_domain_does_not_cover",
+    "integer_reversed_interval_cannot_collapse",
+    "tiny_negative_derivative",
+    "gain_just_below_identity_floor",
+    "tiny_probability_cannot_be_deterministic",
+    "probability_just_above_one",
+    "invalid_domain_bool",
+    "invalid_domain_str",
+    "invalid_domain_NoneType"
+  ],
+  "extreme_exponents_preserved": true,
+  "frozen_producers_modified": false,
+  "future_outcomes_accessed": false,
+  "legacy_configurations": 32,
+  "legacy_contract_refusals": 50,
+  "legacy_count_paths": 192,
+  "oracle": "exact rational sign-and-square comparisons, no Arb",
+  "precision_restored": true,
+  "rational_oracle_count_paths": 297,
+  "rational_output_cases": 200,
+  "schema": "exact_input_event_assembly_tests_v1",
+  "status": "PASS",
+  "tiny_positive_margin_preserved": true,
+  "tiny_probability_preserved": true
+}
