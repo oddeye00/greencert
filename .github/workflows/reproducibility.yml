@@ -53,6 +53,7 @@ jobs:
           python scripts/extract_recorded_replay_sources.py --extract output/recorded_replay_ci
           python output/recorded_replay_ci/scripts/test_recorded_window_components.py
           python output/recorded_replay_ci/scripts/test_recorded_evidence_replay.py
+          python output/recorded_replay_ci/scripts/test_portable_reference_margins.py
           python -m zipfile -e artifacts/greencert_recorded_replay_sources_20260907.zip output/recorded_replay_ci_legacy
           python scripts/check_recorded_reader_short_paths.py --legacy output/recorded_replay_ci_legacy/scripts/test_recorded_evidence_replay.py --corrected output/recorded_replay_ci/scripts/test_recorded_evidence_replay.py
       - name: Verify corrected continuation artifact
@@ -96,5 +97,6 @@ jobs:
           $ErrorActionPreference = 'Stop'
           $PSNativeCommandUseErrorActionPreference = $true
           python scripts/test_public_snapshot_scan.py
+          python scripts/test_public_manuscript_binding.py
           python scripts/scan_public_snapshot.py --root .
           python scripts/audit_public_release.py --root .

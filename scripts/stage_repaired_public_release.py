@@ -27,6 +27,7 @@ EXTRA = (
     "scripts/scan_public_snapshot.py",
     "scripts/test_public_snapshot_scan.py",
     "scripts/test_reproducibility_fail_fast.py",
+    "scripts/test_public_manuscript_binding.py",
     "EXACT_DYADIC_NORM_AUDIT.md",
     "RECORDED_WINDOW_REPLAY.md",
     "PHYSICAL_ANCHOR_INTERFACE.md",
@@ -36,6 +37,9 @@ EXTRA = (
     "scripts/extract_recorded_replay_sources.py",
     "artifacts/greencert_recorded_replay_sources_20260907.zip",
     "artifacts/greencert_recorded_replay_sources_20260907_v2.zip",
+    "artifacts/greencert_recorded_replay_sources_20260907_v3.zip",
+    "results/portable_reference_margins_windows_20260907_v1.json",
+    "results/portable_reference_margins_arm_20260907_v1.json",
     "scripts/check_recorded_reader_short_paths.py",
     "results/recorded_window_component_tests_windows_20260907.json",
     "results/recorded_window_component_tests_arm_20260907.json",
@@ -77,11 +81,19 @@ def digest(path):
         return hashlib.file_digest(stream, "sha256").hexdigest().upper()
 
 
+def check_manuscript_binding(root):
+    paper = root/"paper/certified_local_training_events_neurips2026.tex"
+    report = json.loads((root/"results/greencert_manuscript_claim_audit.json").read_text(encoding="utf-8"))
+    if report.get("paper_sha256") != digest(paper):
+        raise ValueError("stale manuscript claim audit; run python scripts/audit_greencert_manuscript_claims.py before staging")
+
+
 def stage(target):
     target = target.resolve()
     target.relative_to((ROOT/"output").resolve())
     if target == (ROOT/"output").resolve() or target.exists():
         raise ValueError("require a new, non-root output subdirectory")
+    check_manuscript_binding(ROOT)
     raw = subprocess.check_output(["git", "ls-files", "-z", "--cached"], cwd=ROOT)
     names = set(os.fsdecode(v).replace("\\", "/") for v in raw.split(b"\0") if v)
     names.update(EXTRA)

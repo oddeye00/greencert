@@ -2,7 +2,7 @@
 
 The source package in this note lets an independent reader test the
 read-only replay components without downloading a neural evidence graph.
-It contains 47 source files, including their unchanged reference auditors,
+It contains 50 source files, including their unchanged reference auditors,
 and generates small exact-quadratic and provenance fixtures at runtime.
 It contains no future optimizer trajectory and adds no empirical event to
 the manuscript.
@@ -15,14 +15,25 @@ Use the repository's pinned Python environment and run:
 python scripts/extract_recorded_replay_sources.py --extract output/recorded_replay_tests
 python output/recorded_replay_tests/scripts/test_recorded_window_components.py
 python output/recorded_replay_tests/scripts/test_recorded_evidence_replay.py
+python output/recorded_replay_tests/scripts/test_portable_reference_margins.py
 ```
 
 The extractor requires a fresh destination and authenticates the archive,
 its member population, and every source before exposing code. Archive:
-`artifacts/greencert_recorded_replay_sources_20260907_v2.zip`, 128,563 bytes.
-SHA256: `8680f837f29f516516a889fa3b598cd03de4df4c5510fb56f0e8aed29b886fa5`.
+`artifacts/greencert_recorded_replay_sources_20260907_v3.zip`, 137,025 bytes.
+SHA256: `661e34c23358b043ee59b966613ddefe7a7d75ff3c40d4f810a5ce24dae02389`.
 The embedded manifest hash is
-`4b2c7c26b9d28ebcce72c66ad402ecae8e343ae028c96b7813c378a32234d8b7`.
+`81cfb953fcb03bc75581bdf3197e08d5d4fb97664146eb454bbbe4d07bbc11e8`.
+
+Version 3 adds a separate portable margin adapter. The full ARM replay
+exposed a Windows-path parsing assumption in imported point references:
+`Path` on POSIX does not interpret a backslash as a separator before a
+basename/parent check. The adapter canonicalizes relative paths before those
+checks; it preserves all digest, provenance, arithmetic and margin tests.
+The original auditor and version-1/version-2 archives remain unchanged.
+Eight Windows/POSIX path-encoding cases and four coherently rehashed
+refusals pass on both hosts; Linux also reproduces the three legacy failures.
+Reports: `results/portable_reference_margins_{windows,arm}_20260907_v1.json`.
 
 The original archive without the `_v2` suffix is retained unchanged. Its
 numerical component suite passed in GitHub CI, but one portable-reader
@@ -88,6 +99,6 @@ records rather than rerunning every neural kernel.
 
 The complete 451,008-parameter development graph is about 11.75 GB and is
 not included in this source-only archive. Its full replay is consequently
-not reproduced by the three commands above. Distribution of that graph is
+not reproduced by the four commands above. Distribution of that graph is
 a separate outstanding release task. No larger-model outcome or new
 coverage count is claimed by this component package.

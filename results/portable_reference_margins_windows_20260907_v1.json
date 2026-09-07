@@ -1,0 +1,9 @@
+{
+  "coherent_refusals": 4,
+  "frozen_auditor_modified": false,
+  "legacy_posix_failures_reproduced": 0,
+  "neural_forward_replayed": false,
+  "path_encoding_equality_cases": 8,
+  "schema": "portable_reference_margin_tests_v1",
+  "status": "PASS"
+}
