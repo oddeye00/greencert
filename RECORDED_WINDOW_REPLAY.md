@@ -19,10 +19,20 @@ python output/recorded_replay_tests/scripts/test_recorded_evidence_replay.py
 
 The extractor requires a fresh destination and authenticates the archive,
 its member population, and every source before exposing code. Archive:
-`artifacts/greencert_recorded_replay_sources_20260907.zip`, 128,436 bytes.
-SHA256: `c799935f80b06e6bfd86e71031c0b4b8bdf74264d570aea83319ef1e39c0a2de`.
+`artifacts/greencert_recorded_replay_sources_20260907_v2.zip`, 128,563 bytes.
+SHA256: `8680f837f29f516516a889fa3b598cd03de4df4c5510fb56f0e8aed29b886fa5`.
 The embedded manifest hash is
-`c840c041d217dd0d4a76dd67184dac760c2de2477198da6da6bfaefe21113307`.
+`4b2c7c26b9d28ebcce72c66ad402ecae8e343ae028c96b7813c378a32234d8b7`.
+
+The original archive without the `_v2` suffix is retained unchanged. Its
+numerical component suite passed in GitHub CI, but one portable-reader
+fixture used an unresolved Windows 8.3 temporary path when calling an
+internal hook that expects a resolved path. Version 2 resolves that fixture
+root. No reader, numerical auditor, frozen producer, or certificate changes.
+The dedicated `check_recorded_reader_short_paths.py` regression reproduces
+the old failure under a short-name temporary directory and verifies all 31
+refusals with the corrected fixture. It reports an explicit non-exercised
+status on Windows volumes without 8.3 aliases.
 
 The same tests passed on Windows/AMD64 and Linux/aarch64, with Python 3.12,
 NumPy 2.5.2, and python-flint 0.9.0. Raw count reports are

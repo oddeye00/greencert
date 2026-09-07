@@ -31,6 +31,8 @@ EXTRA = (
     "RECORDED_WINDOW_REPLAY.md",
     "scripts/extract_recorded_replay_sources.py",
     "artifacts/greencert_recorded_replay_sources_20260907.zip",
+    "artifacts/greencert_recorded_replay_sources_20260907_v2.zip",
+    "scripts/check_recorded_reader_short_paths.py",
     "results/recorded_window_component_tests_windows_20260907.json",
     "results/recorded_window_component_tests_arm_20260907.json",
     "scripts/exact_dyadic_norm.py",

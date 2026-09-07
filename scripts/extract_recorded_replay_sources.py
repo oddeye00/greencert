@@ -10,9 +10,9 @@ from pathlib import Path, PurePosixPath
 import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
-ARCHIVE = ROOT/"artifacts/greencert_recorded_replay_sources_20260907.zip"
-ARCHIVE_SHA = "c799935f80b06e6bfd86e71031c0b4b8bdf74264d570aea83319ef1e39c0a2de"
-MANIFEST_SHA = "c840c041d217dd0d4a76dd67184dac760c2de2477198da6da6bfaefe21113307"
+ARCHIVE = ROOT/"artifacts/greencert_recorded_replay_sources_20260907_v2.zip"
+ARCHIVE_SHA = "8680f837f29f516516a889fa3b598cd03de4df4c5510fb56f0e8aed29b886fa5"
+MANIFEST_SHA = "4b2c7c26b9d28ebcce72c66ad402ecae8e343ae028c96b7813c378a32234d8b7"
 
 
 def payload(archive=ARCHIVE):

@@ -53,6 +53,8 @@ jobs:
           python scripts/extract_recorded_replay_sources.py --extract output/recorded_replay_ci
           python output/recorded_replay_ci/scripts/test_recorded_window_components.py
           python output/recorded_replay_ci/scripts/test_recorded_evidence_replay.py
+          python -m zipfile -e artifacts/greencert_recorded_replay_sources_20260907.zip output/recorded_replay_ci_legacy
+          python scripts/check_recorded_reader_short_paths.py --legacy output/recorded_replay_ci_legacy/scripts/test_recorded_evidence_replay.py --corrected output/recorded_replay_ci/scripts/test_recorded_evidence_replay.py
       - name: Verify corrected continuation artifact
         env:
           OMP_NUM_THREADS: '1'

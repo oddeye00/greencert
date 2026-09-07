@@ -9,8 +9,8 @@
       "sha256": "C1B770356A637F2C9062EF9CAA9049E185C39C3054BFF613F08BED154131EC55"
     },
     ".github/workflows/reproducibility.yml": {
-      "bytes": 4976,
-      "sha256": "1D53F1446275C721B310E8F16D8FA0E8FEB4365A246A174EDEFD11A998284D76"
+      "bytes": 5321,
+      "sha256": "7BB0B68C6EBFEF95728A400525A95DD29B8C92A0C8C60F19BEC8229E1407AB38"
     },
     ".gitignore": {
       "bytes": 291,
@@ -277,8 +277,8 @@
       "sha256": "3408AF37C03959264B3DC8888001F5BE4AA5702FEA4D7F90B694261AC2846F8C"
     },
     "RECORDED_WINDOW_REPLAY.md": {
-      "bytes": 4237,
-      "sha256": "231E24056FAC580FAECCE65BAD2FF2815E80434E254C26A49CD2F5161211E9D7"
+      "bytes": 4879,
+      "sha256": "97D5D7356E9238C7EA366EB2017561D6EE04D194D384756222567EDC52F732A9"
     },
     "RELINEARIZED_GREEN_AUDIT_PROTOCOL.md": {
       "bytes": 2403,
@@ -447,6 +447,10 @@
     "artifacts/greencert_recorded_replay_sources_20260907.zip": {
       "bytes": 128436,
       "sha256": "C799935F80B06E6BFD86E71031C0B4B8BDF74264D570AEA83319EF1E39C0A2DE"
+    },
+    "artifacts/greencert_recorded_replay_sources_20260907_v2.zip": {
+      "bytes": 128563,
+      "sha256": "8680F837F29F516516A889FA3B598CD03DE4DF4C5510FB56F0E8AED29B886FA5"
     },
     "artifacts/greencert_repaired_continuation_20260907.zip": {
       "bytes": 28866197,
@@ -4704,6 +4708,10 @@
       "bytes": 31840,
       "sha256": "68C95951D7361E0327D27FB2602A3F6102E2F802923E126E26827195B23E7D2A"
     },
+    "scripts/check_recorded_reader_short_paths.py": {
+      "bytes": 1999,
+      "sha256": "FE8C594A790259D065DE57637229ECFBE9C1548C562FE7B8CBF05E37E1BF13DA"
+    },
     "scripts/check_reproduction_environment.py": {
       "bytes": 2469,
       "sha256": "DA0831ECA13D53988A9134FF6C79FABF1EEAC9878511EB790928C0EFB6DD0DFB"
@@ -4777,8 +4785,8 @@
       "sha256": "82FF151EA19C769F7F5F04A4B6BF345FC6FFD13CE78A65FE9C61C2F06824C6B9"
     },
     "scripts/extract_recorded_replay_sources.py": {
-      "bytes": 2961,
-      "sha256": "75914E94602FB839020B49C4800C311B096E35C362AA747E2A29AC0947E7826E"
+      "bytes": 2964,
+      "sha256": "FB54D69991C0C86D7F42DC96F77BAD17825BB2BDF5BB3106FC432121C88B05F0"
     },
     "scripts/extract_saved_norm_benchmark.py": {
       "bytes": 2574,
@@ -4985,8 +4993,8 @@
       "sha256": "74439AA5B4B5F8CAF11E94EC5D9B8D6BD838BD4FFE6E8711C373B02144EF77A4"
     },
     "scripts/stage_repaired_public_release.py": {
-      "bytes": 5483,
-      "sha256": "D6CA9DEBF901E290259BBC1B566D6B2CA79FF87448A30BBF771631EC0955D802"
+      "bytes": 5602,
+      "sha256": "B2FEB573E81B41F73838B130BF9E03D60F3C01FDF395635BCBA77268C700AFE9"
     },
     "scripts/streaming_variational_centerline.py": {
       "bytes": 5818,
