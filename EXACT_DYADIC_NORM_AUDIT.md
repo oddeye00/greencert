@@ -5,6 +5,11 @@ GREENCERT theorem, a new certificate, or a claim of a new summation method.
 Its intended use is to check a saved binary64 norm bound without looping
 through one arbitrary-precision floating operation per coordinate.
 
+An earlier integer-limb prototype is retained and cross-checked against
+this implementation and a rational oracle in the
+[read-only replay component package](RECORDED_WINDOW_REPLAY.md). The speedups
+below are relative to the Arb loop, not to that earlier integer prototype.
+
 Fixed-point superaccumulation is established; see
 [Neal (2015), *Fast exact summation using small and large superaccumulators*](https://arxiv.org/abs/1505.05571).
 Here the accumulator receives exact significand products, rather than

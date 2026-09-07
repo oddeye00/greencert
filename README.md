@@ -85,6 +85,10 @@ baseline.
   exact-integer norm checker, its arithmetic argument, and a hash-locked
   six-vector benchmark (17.9x/20.8x kernel speedup on Windows/ARM).
   This separate development audit does not change the paper's event counts.
+- [`RECORDED_WINDOW_REPLAY.md`](RECORDED_WINDOW_REPLAY.md) provides a
+  self-contained source package for read-only replay regressions, including
+  rehashed-corruption tests on Windows and ARM. The full larger-model
+  evidence graph is separate from this component-test package.
 - [`SUPPLEMENT_README.md`](SUPPLEMENT_README.md) documents the full sealed
   artifact chain.
 - [`STRUCTURED_PARAMETER_GREEN_THEOREM_V2.md`](STRUCTURED_PARAMETER_GREEN_THEOREM_V2.md)

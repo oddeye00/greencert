@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "norm_cross_implementation_checks": 15,
+  "green_equal_cases": 4,
+  "response_equal_cases": 4,
+  "homogeneous_equal_cases": 6,
+  "semantic_refusals": 113,
+  "read_barrier_refusals": 8,
+  "existing_future_not_read_cases": 4,
+  "neural_kernels_replayed": false,
+  "event_certificates_issued": 0,
+  "future_outcome_access": false,
+  "frozen_implementations_modified": false,
+  "scope": "Synthetic exact-quadratic and provenance fixtures; not a neural event replay."
+}

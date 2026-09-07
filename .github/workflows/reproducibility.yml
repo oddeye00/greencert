@@ -46,6 +46,13 @@ jobs:
           python scripts/test_exact_dyadic_norm.py
           python scripts/extract_saved_norm_benchmark.py --extract output/norm_benchmark_ci
           python output/norm_benchmark_ci/scripts/benchmark_saved_dyadic_norms.py --manifest-sha256 5817bf337c156f7055e23108dc0d15e31935b0bff09a93e5d3899ac23baf2ea1 --report output/norm_benchmark_ci/replay.json
+      - name: Verify read-only replay component contracts
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $PSNativeCommandUseErrorActionPreference = $true
+          python scripts/extract_recorded_replay_sources.py --extract output/recorded_replay_ci
+          python output/recorded_replay_ci/scripts/test_recorded_window_components.py
+          python output/recorded_replay_ci/scripts/test_recorded_evidence_replay.py
       - name: Verify corrected continuation artifact
         env:
           OMP_NUM_THREADS: '1'
