@@ -39,6 +39,13 @@ jobs:
         run: python scripts/check_reproduction_environment.py
       - name: Run numerical smoke audit
         run: python reproduce.py smoke
+      - name: Verify exact-integer norm audit and fixed fixtures
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $PSNativeCommandUseErrorActionPreference = $true
+          python scripts/test_exact_dyadic_norm.py
+          python scripts/extract_saved_norm_benchmark.py --extract output/norm_benchmark_ci
+          python output/norm_benchmark_ci/scripts/benchmark_saved_dyadic_norms.py --manifest-sha256 5817bf337c156f7055e23108dc0d15e31935b0bff09a93e5d3899ac23baf2ea1 --report output/norm_benchmark_ci/replay.json
       - name: Verify corrected continuation artifact
         env:
           OMP_NUM_THREADS: '1'

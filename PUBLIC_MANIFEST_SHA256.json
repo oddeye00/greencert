@@ -9,8 +9,8 @@
       "sha256": "C1B770356A637F2C9062EF9CAA9049E185C39C3054BFF613F08BED154131EC55"
     },
     ".github/workflows/reproducibility.yml": {
-      "bytes": 4001,
-      "sha256": "C15B5E00F9BC0AFC0F401ECCC69507ED4EBE14CB20D722EA518DC973D78C5B78"
+      "bytes": 4536,
+      "sha256": "749A4FBE3C6E075545D72152AA185F02182192817769ACCE6DFD512A503182ED"
     },
     ".gitignore": {
       "bytes": 291,
@@ -172,6 +172,10 @@
       "bytes": 587,
       "sha256": "20F4D8E6AB7BADB3BEE8CC6F881E1C99BA395241A82939D8BDB775F6F5A58AF2"
     },
+    "EXACT_DYADIC_NORM_AUDIT.md": {
+      "bytes": 5679,
+      "sha256": "F856B58C45DC3C69C14D3FCEF41BFD5261F06943B495522C3B3CFD86965B8FA1"
+    },
     "FIGURES.md": {
       "bytes": 2303,
       "sha256": "53C4A541E4AB21D2E93D569B63953CEB41028D29B323AB24640F62B6E2914BFC"
@@ -253,8 +257,8 @@
       "sha256": "5837696F48CE338D5143AC87DBF7855A0550F3BBF0B40FB2E1CF24D06731FA75"
     },
     "README.md": {
-      "bytes": 10477,
-      "sha256": "C51539973D002BE4717C3F2DB22BA95375A3A5FE6EFB3AC069EC07F4FDD442E2"
+      "bytes": 10764,
+      "sha256": "DEFE775E59EC6AE138E8574855C189E8D2F48FC8E27F3138169B1F5314743487"
     },
     "REAL_DATA_GREENCERT_CANDIDATE_SEAL.json": {
       "bytes": 329,
@@ -431,6 +435,10 @@
     "WEIGHTED_GREENCERT_THEOREM.md": {
       "bytes": 4611,
       "sha256": "FF713690710C9A732DE0C51AB73F0571CA46427774269B3C4461350224ED9317"
+    },
+    "artifacts/greencert_exact_norm_benchmark_20260907.zip": {
+      "bytes": 43171952,
+      "sha256": "1943FBFBDA015E9B6907A55703A9D286E5EDE568512F78714E5856A6235B076D"
     },
     "artifacts/greencert_repaired_continuation_20260907.zip": {
       "bytes": 28866197,
@@ -1215,6 +1223,18 @@
     "results/disjoint_hvp_prospective_audit.json": {
       "bytes": 105903,
       "sha256": "67BDFD580FE71A47D22B007DB54F0A68B91842CD2058CACE87D1D3970011CE67"
+    },
+    "results/exact_dyadic_norm_benchmark_arm_20260907.json": {
+      "bytes": 4189,
+      "sha256": "C1FCBED080D3E081822045491266CCB7FC9DB489DB54679858C1325D3717493C"
+    },
+    "results/exact_dyadic_norm_benchmark_windows_20260907.json": {
+      "bytes": 8036,
+      "sha256": "E0DB532C26B3D73FE23700ADC112D341BF1206BD6D06552DAD853821C44976AB"
+    },
+    "results/exact_dyadic_norm_portable_windows_20260907.json": {
+      "bytes": 4145,
+      "sha256": "F296684BB4BDD06683D922A34F2511B885A2B77800E3EDC37D61E99498238FF0"
     },
     "results/figure_reproducibility_audit.json": {
       "bytes": 3455,
@@ -4728,6 +4748,10 @@
       "bytes": 8856,
       "sha256": "A2D9428C120BC92D9264C2456A0D209E8D6B9C6D7BDC1867EDD05A79A568D580"
     },
+    "scripts/exact_dyadic_norm.py": {
+      "bytes": 3976,
+      "sha256": "F22016CC3B25E4F5E648131C509D82BD09EB7FB73ADFA8D5E8CE4C511BFFFA1F"
+    },
     "scripts/export_transformer_anchor_state.py": {
       "bytes": 2628,
       "sha256": "D7BBFB684B98C24122C94C50073359C070DEA32F40FC77EB6813E04B6A3D767A"
@@ -4735,6 +4759,10 @@
     "scripts/export_transformer_corrected_parameter_path.py": {
       "bytes": 3129,
       "sha256": "82FF151EA19C769F7F5F04A4B6BF345FC6FFD13CE78A65FE9C61C2F06824C6B9"
+    },
+    "scripts/extract_saved_norm_benchmark.py": {
+      "bytes": 2574,
+      "sha256": "8C69369BCF0227194CF753AFC719246AF8D4CE3D53A754871F880B56405A8847"
     },
     "scripts/generate_prospective_v2_seed.py": {
       "bytes": 1226,
@@ -4937,8 +4965,8 @@
       "sha256": "74439AA5B4B5F8CAF11E94EC5D9B8D6BD838BD4FFE6E8711C373B02144EF77A4"
     },
     "scripts/stage_repaired_public_release.py": {
-      "bytes": 4793,
-      "sha256": "88D93992A0BE0ED8A04748575DC70FBC510350BA15DDEF866308FB7DBFCFE832"
+      "bytes": 5202,
+      "sha256": "584A3023064A4DBBAF146A851DA9BE641B1BC0C11FED787803A1403C609CF542"
     },
     "scripts/streaming_variational_centerline.py": {
       "bytes": 5818,
@@ -5075,6 +5103,10 @@
     "scripts/test_directional_two_response_theorem.py": {
       "bytes": 4353,
       "sha256": "DB8B3EF459589619121576D5108941C7C1AC39E6D7517A1FA2F7BBEC8C858EEB"
+    },
+    "scripts/test_exact_dyadic_norm.py": {
+      "bytes": 4019,
+      "sha256": "858458BF92C7B965CA8BDB3ECD9A9953E599ADA756C65407E502C2B7C621520E"
     },
     "scripts/test_heterogeneous_recenter_closure.py": {
       "bytes": 4618,

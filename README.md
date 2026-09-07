@@ -81,6 +81,10 @@ baseline.
   novelty search and object-level comparisons.
 - [`FIGURES.md`](FIGURES.md) maps every paper figure to a Python/Matplotlib
   generator and its input records.
+- [`EXACT_DYADIC_NORM_AUDIT.md`](EXACT_DYADIC_NORM_AUDIT.md) gives an
+  exact-integer norm checker, its arithmetic argument, and a hash-locked
+  six-vector benchmark (17.9x/20.8x kernel speedup on Windows/ARM).
+  This separate development audit does not change the paper's event counts.
 - [`SUPPLEMENT_README.md`](SUPPLEMENT_README.md) documents the full sealed
   artifact chain.
 - [`STRUCTURED_PARAMETER_GREEN_THEOREM_V2.md`](STRUCTURED_PARAMETER_GREEN_THEOREM_V2.md)

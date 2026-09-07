@@ -1,0 +1,198 @@
+{
+  "schema": "recorded_exact_dyadic_norm_audit_v1",
+  "status": "PASS",
+  "mode": "benchmark",
+  "created_utc": "2026-09-07T16:07:42.947841+00:00",
+  "identity": {
+    "candidate_sha256": "ffc56c312c343418d3624e8f3344e7a059781c384c13b8d9789b7ba710c69273",
+    "evaluation_set_sha256": "b34a0b16be2a8f88c32141215b5a5bd071691dd738a37671a808a342b395b9f9",
+    "horizon": 64,
+    "parameters": 451008,
+    "reference_sha256": "eb23da91377bbb75ebaeea28c22ae3fb0ab220c667c7e8fa2b2fc3fbd1862409",
+    "state_metric": "scaled_momentum_euclidean",
+    "training_set_sha256": "2f4c729792d4c2f739b8314f9a429b5450f575a32eadec100a843257b491b555"
+  },
+  "manifest_sha256": "bc6e54b5421ffcf71cd9e905142cadcfbd3dc0856f478fd001c221cd5072b425",
+  "norm_binding_population": 1408,
+  "checked_bindings": 6,
+  "all_population_checked": false,
+  "distinct_arrays_checked": 6,
+  "environment": {
+    "python": "3.12.10",
+    "system": "Windows",
+    "machine": "AMD64",
+    "numpy": "2.5.2"
+  },
+  "elapsed_seconds_including_array_reads": 31.121065200073645,
+  "timing_scope": "Norm verification only. Benchmarked kernels exclude array reads and hashes; no end-to-end construction claim.",
+  "rows": [
+    {
+      "ordinal": 0,
+      "summary": "results/larger_transformer_third_pass/construction_03925/known_anchor_homogeneous/product/forcing/summary.json",
+      "summary_sha256": "0ed5e3e474fa20fdd37452f5322181928c05c5c32e8faf66a210bf431d19818a",
+      "array": "results/larger_transformer_third_pass/construction_03925/known_anchor_homogeneous/product/forcing/row_000.npy",
+      "array_sha256": "0e78d6a8f6cd79cb5bcaf02f5ed3a2464e84d0088d893f112fbad01c096e9b0d",
+      "dimension": 902016,
+      "index": 0,
+      "saved_norm_upper": 7.279728632280719e-19,
+      "seconds": {
+        "arb": [
+          0.483368800021708,
+          0.42996750003658235,
+          0.41359329991973937
+        ],
+        "integer": [
+          0.049811300123110414,
+          0.0509655000641942,
+          0.058702100068330765
+        ]
+      },
+      "arb_median_seconds": 0.42996750003658235,
+      "integer_median_seconds": 0.0509655000641942,
+      "median_speedup": 8.436442289293966,
+      "saved_bound_retained": true
+    },
+    {
+      "ordinal": 281,
+      "summary": "results/larger_transformer_third_pass/construction_03925/outward_green/probe_0/power_01/forward/summary.json",
+      "summary_sha256": "dff59981dad399973b9e2d2c53a10ffb9246d10caf0884203b52af210dc3e612",
+      "array": "results/larger_transformer_third_pass/construction_03925/outward_green/probe_0/power_01/forward/row_025.npy",
+      "array_sha256": "edb6f776a83f9ab3a8d0f13bad4cbb5055e42b2cb0c79cb05f4604ab1f754268",
+      "dimension": 902016,
+      "index": 25,
+      "saved_norm_upper": 21725.722944190115,
+      "seconds": {
+        "arb": [
+          1.8748368001542985,
+          1.849376899888739,
+          1.917656400008127
+        ],
+        "integer": [
+          0.12552620004862547,
+          0.12337980000302196,
+          0.09570250008255243
+        ]
+      },
+      "arb_median_seconds": 1.8748368001542985,
+      "integer_median_seconds": 0.12337980000302196,
+      "median_speedup": 15.19565439487159,
+      "saved_bound_retained": true
+    },
+    {
+      "ordinal": 562,
+      "summary": "results/larger_transformer_third_pass/construction_03925/outward_green/probe_2/initial/summary.json",
+      "summary_sha256": "e2ba4b52e6e914a47230848f4c8bda410dab4449361e32518c8b2d577d9ea0b1",
+      "array": "results/larger_transformer_third_pass/construction_03925/outward_green/probe_2/initial/row_050.npy",
+      "array_sha256": "1fbaad4a25f2fc6ebf3c615eac5b4b65cd8f3e4e834340e9df123176b64506a8",
+      "dimension": 902016,
+      "index": 50,
+      "saved_norm_upper": 950.1643760504562,
+      "seconds": {
+        "arb": [
+          1.9022486000321805,
+          1.8632922999095172,
+          1.8239782999735326
+        ],
+        "integer": [
+          0.11718879989348352,
+          0.11337879998609424,
+          0.09939810005016625
+        ]
+      },
+      "arb_median_seconds": 1.8632922999095172,
+      "integer_median_seconds": 0.11337879998609424,
+      "median_speedup": 16.43422139004865,
+      "saved_bound_retained": true
+    },
+    {
+      "ordinal": 844,
+      "summary": "results/larger_transformer_third_pass/construction_03925/outward_green_dgx/probe_3/power_01/forward/summary.json",
+      "summary_sha256": "6034563bc6193be2d4116de68e19e2859ef626d755266681f7f257e464d48ecc",
+      "array": "results/larger_transformer_third_pass/construction_03925/outward_green_dgx/probe_3/power_01/forward/row_012.npy",
+      "array_sha256": "bd6829d19ae36010691792c7d5d7d7556d53f5ecafd4086b17d3ff053384c2f8",
+      "dimension": 902016,
+      "index": 12,
+      "saved_norm_upper": 10845.301253305803,
+      "seconds": {
+        "arb": [
+          1.7725662998855114,
+          1.8814656999893486,
+          1.8304497001226991
+        ],
+        "integer": [
+          0.085172199876979,
+          0.08998849987983704,
+          0.09331210004165769
+        ]
+      },
+      "arb_median_seconds": 1.8304497001226991,
+      "integer_median_seconds": 0.08998849987983704,
+      "median_speedup": 20.340929147245763,
+      "saved_bound_retained": true
+    },
+    {
+      "ordinal": 1125,
+      "summary": "results/larger_transformer_third_pass/construction_03925/outward_green_dgx_q2/probe_1/power_02/forward/summary.json",
+      "summary_sha256": "c51afc56203a5a1046df2160e8ce15418f7efd80b8828c294cbf979752ec7504",
+      "array": "results/larger_transformer_third_pass/construction_03925/outward_green_dgx_q2/probe_1/power_02/forward/row_037.npy",
+      "array_sha256": "d97554a1924910d58227ee715da11a4b09228c2c823f2932035270ff1735608b",
+      "dimension": 902016,
+      "index": 37,
+      "saved_norm_upper": 2681307101.245555,
+      "seconds": {
+        "arb": [
+          2.1854747999459505,
+          1.7342048999853432,
+          1.809530399972573
+        ],
+        "integer": [
+          0.09123859996907413,
+          0.09012289997190237,
+          0.08703000005334616
+        ]
+      },
+      "arb_median_seconds": 1.809530399972573,
+      "integer_median_seconds": 0.09012289997190237,
+      "median_speedup": 20.078475066123378,
+      "saved_bound_retained": true
+    },
+    {
+      "ordinal": 1407,
+      "summary": "results/larger_transformer_third_pass/construction_03925/outward_green_dgx_q2/probe_3/power_02/forward/summary.json",
+      "summary_sha256": "5783b05fee99c4fff36fed2494ab5cfbc7da7a4fa319383e951d0e3843293261",
+      "array": "results/larger_transformer_third_pass/construction_03925/outward_green_dgx_q2/probe_3/power_02/forward/row_063.npy",
+      "array_sha256": "7903391931d29cd626484d2b0bac9ca303160be07f2e96cc916826740f3abd9e",
+      "dimension": 902016,
+      "index": 63,
+      "saved_norm_upper": 3757845846.9520826,
+      "seconds": {
+        "arb": [
+          1.8511849001515657,
+          1.7983216000720859,
+          1.7412002999335527
+        ],
+        "integer": [
+          0.08690300001762807,
+          0.07296190015040338,
+          0.06215780018828809
+        ]
+      },
+      "arb_median_seconds": 1.7983216000720859,
+      "integer_median_seconds": 0.07296190015040338,
+      "median_speedup": 24.647406336252654,
+      "saved_bound_retained": true
+    }
+  ],
+  "saved_bounds_changed": false,
+  "neural_kernels_replayed": false,
+  "event_certificate_issued": false,
+  "future_outcome_access": false,
+  "sources": {
+    "audit_recorded_dyadic_norms.py": "34f7bdbe043132eee9385cd64a953069fb15b5dc98767c217c1a072efbb4bb40",
+    "exact_dyadic_norm.py": "f22016cc3b25e4f5e648131c509d82bd09eb7fb73adfa8d5e8ce4c511bfffa1f",
+    "recorded_evidence_replay.py": "4f696621c8e800e1a5839a3a5a54ebc82363f5b0fe38e6996bacb7b0f358d5f7",
+    "green_family_evidence.py": "c18f418aff7ea8fabe9f6e76fc883a613d18fc339702eb361e29ec30cfdf8eeb",
+    "outward_green_products.py": "4c5f563ca28a4e8b8cd6f58bf3e22d9afddc06173cd97eea4951f69c3d2e449c",
+    "verified_artifact_io.py": "43a07152998d653899210600b2225b21a153aea556d3801e2d350261edde8c46"
+  }
+}

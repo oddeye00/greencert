@@ -1,0 +1,145 @@
+{
+  "status": "PASS",
+  "manifest_sha256": "5817bf337c156f7055e23108dc0d15e31935b0bff09a93e5d3899ac23baf2ea1",
+  "rows": [
+    {
+      "ordinal": 0,
+      "array_sha256": "0e78d6a8f6cd79cb5bcaf02f5ed3a2464e84d0088d893f112fbad01c096e9b0d",
+      "dimension": 902016,
+      "seconds": {
+        "arb": [
+          0.1693671719986014,
+          0.16903462600021157,
+          0.16685499799496029
+        ],
+        "integer": [
+          0.009230035007931292,
+          0.007932011998491362,
+          0.007986444004927762
+        ]
+      },
+      "arb_median_seconds": 0.16903462600021157,
+      "integer_median_seconds": 0.007986444004927762,
+      "speedup": 21.165192655944818,
+      "saved_bound_retained": true
+    },
+    {
+      "ordinal": 281,
+      "array_sha256": "edb6f776a83f9ab3a8d0f13bad4cbb5055e42b2cb0c79cb05f4604ab1f754268",
+      "dimension": 902016,
+      "seconds": {
+        "arb": [
+          0.16647272399859503,
+          0.16559761499229353,
+          0.16480726000736468
+        ],
+        "integer": [
+          0.008119165009702556,
+          0.008048699994105846,
+          0.008109051996143535
+        ]
+      },
+      "arb_median_seconds": 0.16559761499229353,
+      "integer_median_seconds": 0.008109051996143535,
+      "speedup": 20.421328543835664,
+      "saved_bound_retained": true
+    },
+    {
+      "ordinal": 562,
+      "array_sha256": "1fbaad4a25f2fc6ebf3c615eac5b4b65cd8f3e4e834340e9df123176b64506a8",
+      "dimension": 902016,
+      "seconds": {
+        "arb": [
+          0.16674045300169382,
+          0.16915865898772608,
+          0.1685518080048496
+        ],
+        "integer": [
+          0.00803527700190898,
+          0.008065803995123133,
+          0.008043996000196785
+        ]
+      },
+      "arb_median_seconds": 0.1685518080048496,
+      "integer_median_seconds": 0.008043996000196785,
+      "speedup": 20.953740902000227,
+      "saved_bound_retained": true
+    },
+    {
+      "ordinal": 844,
+      "array_sha256": "bd6829d19ae36010691792c7d5d7d7556d53f5ecafd4086b17d3ff053384c2f8",
+      "dimension": 902016,
+      "seconds": {
+        "arb": [
+          0.16743186498933937,
+          0.16811489300744142,
+          0.1676308269961737
+        ],
+        "integer": [
+          0.008118685000226833,
+          0.008027436007978395,
+          0.008072779994108714
+        ]
+      },
+      "arb_median_seconds": 0.1676308269961737,
+      "integer_median_seconds": 0.008072779994108714,
+      "speedup": 20.764944308962455,
+      "saved_bound_retained": true
+    },
+    {
+      "ordinal": 1125,
+      "array_sha256": "d97554a1924910d58227ee715da11a4b09228c2c823f2932035270ff1735608b",
+      "dimension": 902016,
+      "seconds": {
+        "arb": [
+          0.1683663350122515,
+          0.16867579199606553,
+          0.16854988799605053
+        ],
+        "integer": [
+          0.00808186799986288,
+          0.00806737299717497,
+          0.008053372002905235
+        ]
+      },
+      "arb_median_seconds": 0.16854988799605053,
+      "integer_median_seconds": 0.00806737299717497,
+      "speedup": 20.892784808025272,
+      "saved_bound_retained": true
+    },
+    {
+      "ordinal": 1407,
+      "array_sha256": "7903391931d29cd626484d2b0bac9ca303160be07f2e96cc916826740f3abd9e",
+      "dimension": 902016,
+      "seconds": {
+        "arb": [
+          0.16915817899280228,
+          0.16831188699870836,
+          0.16791473201010376
+        ],
+        "integer": [
+          0.008146077001583762,
+          0.008086187997832894,
+          0.008312238001963124
+        ]
+      },
+      "arb_median_seconds": 0.16831188699870836,
+      "integer_median_seconds": 0.008146077001583762,
+      "speedup": 20.661710780046043,
+      "saved_bound_retained": true
+    }
+  ],
+  "median_pairwise_speedup": 20.828864558493862,
+  "environment": {
+    "python": "3.12.3",
+    "numpy": "2.5.2",
+    "flint": "0.9.0",
+    "system": "Linux",
+    "machine": "aarch64"
+  },
+  "scope": "Matched norm-verification kernels on six fixed stored vectors; IO/hash time excluded. Not end-to-end certificate construction.",
+  "new_empirical_cases": 0,
+  "neural_kernels_replayed": false,
+  "event_certificate_issued": false,
+  "future_outcome_access": false
+}
