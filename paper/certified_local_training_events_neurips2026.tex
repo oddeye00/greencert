@@ -290,6 +290,10 @@ residual $d_j=\widetilde z_{j+1}-J_j\widetilde z_j-\widetilde s_j$ with
 $\|d\|_U\le\tau$.  Since $\widetilde z=K_H(\widetilde s+d)$ exactly, one may
 take $\alpha=\kappa(\sigma+\tau)$.  Thus local verified residuals supply the
 outward response interface in Eq.~\eqref{eq:computererror}.
+If storing a coordinate change rounds the initial state, the physical
+checkpoint is retained by an explicit first-step injection rather than
+silently replacing the anchor; Corollary~\ref{cor:physical-anchor} gives the
+corresponding response-error interface.
 If $\widetilde q$ approximates $q=N(\widetilde z)$ and an anchor-fixed
 $\widetilde y$ has recurrence residual bounded by $\tau_q$, the same identity
 gives
@@ -1401,6 +1405,62 @@ $\widetilde y=K_H(\widetilde q+d^q)$.  Hence
 These are precisely the $\alpha$ and $\beta$ hypotheses of
 Theorem~\ref{thm:green}.
 \end{proof}
+
+\begin{corollary}[Physical checkpoint under an inexact stored anchor]
+\label{cor:physical-anchor}
+Let $x_a$ be the physical checkpoint and let the stored reference start at
+$c_0$, not necessarily equal to $x_a$.  Define
+\begin{equation}
+ a_0=G(x_a)-G(c_0),\qquad
+ \bar s=s+\mathcal I_0a_0,
+ \label{eq:physical-anchor-injection}
+\end{equation}
+where $\mathcal I_0a_0=(a_0,0,\ldots,0)\in U$.  On times $1,\ldots,H$, let
+$h_j=x_{a+j}-c_j$, and use the virtual value $h_0=0$ only in the sequence
+recurrence.  Put $N_+(h)_0=0$ and $N_+(h)_j=N_j(h_j)$ for $1\le j<H$.
+Then
+\begin{equation}
+ h=K_H\bar s+K_HN_+(h).
+ \label{eq:physical-anchor-fixedpoint}
+\end{equation}
+Theorem~\ref{thm:green} applies on times $1,\ldots,H$ with $s$ replaced by
+$\bar s$ and $q_0=0$.  In particular, if
+$\|s-\widetilde s\|_U\le\sigma$, $\|a_0-\widehat a_0\|\le\gamma$, and
+the computed response $\widetilde z_0=0$ satisfies
+\begin{equation}
+ d_j=\widetilde z_{j+1}-J_j\widetilde z_j-\widetilde s_j
+       -\mathbf 1_{j=0}\widehat a_0,\qquad \|d\|_U\le\tau,
+\end{equation}
+then $\alpha=\kappa(\sigma+\gamma+\tau)$ is valid.  Any event test at time
+zero must use an enclosure at the physical $x_a$, not the virtual anchor.
+\end{corollary}
+
+\begin{proof}
+The first physical error is $h_1=G(x_a)-c_1=s_0+a_0$.  For $j\ge1$,
+$h_{j+1}=J_jh_j+s_j+N_j(h_j)$.  These recurrences give
+Eq.~\eqref{eq:physical-anchor-fixedpoint}; $J_0$ is immaterial because the
+virtual initial error is zero.  Substitution of the computed recurrence
+gives $\widetilde z=K_H(\widetilde s+\mathcal I_0\widehat a_0+d)$ and hence
+the stated $\alpha$ bound.  The proof of Theorem~\ref{thm:green} now applies
+unchanged: only inputs $1\le j<H$ require the derivative envelope.  The
+virtual convention makes no claim about $x_a-c_0$ or its output at time zero.
+\end{proof}
+
+For example, consider scaled momentum
+$G(\theta,w)=(\theta-\mu w-\eta\nabla F(\theta),\mu w+\eta\nabla F(\theta))$.
+If the original stored checkpoint is $(\theta_0,v_0)$ and its scaled
+reference stores $\bar w_0=\operatorname{fl}(\eta v_0)$, then the physical
+scaled checkpoint is $(\theta_0,\eta v_0)$, with the product interpreted in
+exact arithmetic.  Writing $\delta=\eta v_0-\bar w_0$ gives the exact source
+$a_0=(-\mu\delta,\mu\delta)$.  This identity needs no Hessian product:
+momentum enters the map affinely.  The known source may be injected in the
+first signed sweep, or its homogeneous response added to an existing sweep;
+rounding in either construction belongs in $\tau$, and any unrepresented
+source tail belongs in $\gamma$.  The operator $K_H$ is unchanged, so this
+deterministic correction uses the same operator-norm event.  Without signed
+propagation one may instead set $\widehat a_0=0$ and charge
+$\gamma\ge\|a_0\|$.  For a general nonlinear map, replacing $a_0$ by
+$J_0(x_a-c_0)$ requires an enclosure of the omitted nonlinear residual.
 
 \begin{corollary}[Cancellation-safe directional second response]
 \label{cor:directional-two-response}

@@ -78,6 +78,7 @@ jobs:
           $ErrorActionPreference = 'Stop'
           $PSNativeCommandUseErrorActionPreference = $true
           python scripts/test_theorem_text_integrity.py
+          python scripts/audit_physical_anchor_injection.py
           python scripts/test_structured_parameter_green.py
           python scripts/test_structured_directional_two_response.py
           python scripts/test_causal_structured_resolvent.py

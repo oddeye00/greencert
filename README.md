@@ -74,6 +74,9 @@ baseline.
 ## Start here
 
 - The current preprint is [`paper/greencert_arxiv.pdf`](paper/greencert_arxiv.pdf).
+- [`PHYSICAL_ANCHOR_INTERFACE.md`](PHYSICAL_ANCHOR_INTERFACE.md) explains
+  how the theorem preserves the physical checkpoint after rounded coordinate
+  conversion, with an exact-rational audit on Windows and ARM.
 - [`REPRODUCIBILITY.md`](REPRODUCIBILITY.md) explains the audit levels,
   expected runtimes, and exact commands.
 - [`DATA.md`](DATA.md) records dataset origins, licenses, and hashes.

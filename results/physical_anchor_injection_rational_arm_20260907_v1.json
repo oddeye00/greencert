@@ -1,0 +1,16 @@
+{
+  "arithmetic": "Python Fraction (exact rational)",
+  "changed_initial_jacobian_cases": 48,
+  "future_outcomes_accessed": false,
+  "identity_cases": 48,
+  "incorrect_time_zero_gate_counterexamples": 1,
+  "inexact_response_identity_cases": 48,
+  "nonlinear_anchor_linearization_counterexamples": 1,
+  "nonlinear_closure_and_realized_tube_cases": 1,
+  "omitted_source_changes_response_cases": 48,
+  "scaled_momentum_identity_cases": 32,
+  "schema": "physical_anchor_injection_rational_audit_v1",
+  "scope": "Algebra/indexing regressions, not an independent proof or new neural experiment.",
+  "single_transition_boundary_cases": 1,
+  "status": "PASS"
+}

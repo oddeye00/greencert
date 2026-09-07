@@ -21,15 +21,15 @@
   },
   "pages": 46,
   "pdf": {
-    "bytes": 851760,
+    "bytes": 856858,
     "path": "output/pdf/greencert_arxiv.pdf",
-    "sha256": "728E413399973A9016A36351EB57FDBED353A6519F746845F154392FF9D4FD79"
+    "sha256": "16CAF67E2327FC1A755ADCDA5F6A0B471ACA297088A9F597C034DE8472DE5012"
   },
   "source_bundle": {
-    "bytes": 271938,
+    "bytes": 273053,
     "files": 17,
     "path": "output/arxiv/greencert_arxiv_source.zip",
-    "sha256": "A0558DADB324138BA50E9B74934633A01226553896D9E13896927101B13DF2AD"
+    "sha256": "8E9A36333FE31A996A69837CC2214078D5FEBD50B6781C9754DF79A1C53369A5"
   },
   "supplement": {
     "bytes": 25755026,
