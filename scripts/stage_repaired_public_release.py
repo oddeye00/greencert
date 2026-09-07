@@ -13,6 +13,14 @@ import subprocess
 
 ROOT = Path(__file__).resolve().parents[1]
 EXTRA = (
+    "451K_RESULT_FREEZE.md",
+    "results/full451k_public_materialization_arm_20260907_v1.json",
+    "results/full451k_public_replay_arm_20260907_v1.json",
+    "scripts/package_recorded_graph.py",
+    "results/large_recorded_graph_publication_scan_20260907.json",
+    "results/full451k_evidence_release_20260907_v1.json",
+    "results/full451k_evidence_assets_20260907_v1.json",
+    "results/dgx_451k_public_download_audit_20260907_v1.json",
     "scripts/audit_dgx_observer_source_chain.py",
     "scripts/audit_dgx_loader_variant.py",
     "results/dgx_loader_variant_arm_20260907_v1.json",

@@ -99,6 +99,9 @@ records rather than rerunning every neural kernel.
 
 The complete 451,008-parameter development graph is about 11.75 GB and is
 not included in this source-only archive. Its full replay is consequently
-not reproduced by the four commands above. Distribution of that graph is
-a separate outstanding release task. No larger-model outcome or new
-coverage count is claimed by this component package.
+not reproduced by the component commands above. The
+[full evidence release](https://github.com/oddeye00/greencert/releases/tag/evidence-451k-20260907)
+now provides all 17,713 recorded inputs; see `FULL_RECORDED_GRAPH_TRANSPORT.md`
+for download, exact-byte reconstruction and full-replay commands. The
+completed observation is reported separately in `451K_COMPLETED_RESULT.md`.
+The component package itself adds no empirical event.

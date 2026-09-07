@@ -2,19 +2,19 @@
 
 ## Current release status
 
-The user approved publication of the original graph, including the two
-unchanged hash-bound local-path records listed below. The approved upload
-uses a new evidence-only GitHub draft and authenticates every asset before
-transfer. It will be published only after all 14 uploaded asset sizes and
-SHA256 digests agree. Original source archives, evidence bytes and older
-releases are not replaced. The earlier pending-approval statements below
-are historical. See `451K_COMPLETED_RESULT.md` for the separately completed
-outcome observation.
+The [complete evidence release](https://github.com/oddeye00/greencert/releases/tag/evidence-451k-20260907)
+was published on 2026-09-07 at 22:43:37 UTC after all 14 asset sizes and
+SHA256 digests matched. The user approved the original graph, including the
+two unchanged hash-bound local-path records listed below. Original source
+archives, evidence bytes and older releases were not replaced. The release
+receipt and all asset digests are in
+`results/full451k_evidence_release_20260907_v1.json` and
+`results/full451k_evidence_assets_20260907_v1.json`.
+See `451K_COMPLETED_RESULT.md` for the separate outcome observation.
 
 ## Reproduce from the evidence release
 
-The evidence tag is `evidence-451k-20260907`. The following commands apply
-once its draft has been published. Allow roughly 24 GB of local storage
+The evidence tag is `evidence-451k-20260907`. Allow roughly 24 GB of local storage
 for the transport and reconstructed graph. The downloader uses public
 HTTPS without account credentials and verifies every downloaded asset.
 
@@ -32,6 +32,21 @@ These commands check the recorded enclosure and do not rerun the one-shot
 future observer. All outcomes are already disclosed in the separate
 completed-observation artifact.
 
+## Fresh public-download verification
+
+The commands above completed on DGX from fresh GitHub downloads, not from
+the prior SCP cache. All 14 assets authenticated, all 17,713 logical files
+were reconstructed and rehashed, and the portable replay returned the
+same assembly, Green bound, source hashes and recorded input hashes as the
+earlier ARM replay. Reconstruction took 20.2717 seconds and the recorded
+numerical replay took 53.7868 seconds, excluding download and original
+neural-bound construction. These are replay timings, not verifier-construction
+speedups.
+
+Reports: `results/full451k_public_materialization_arm_20260907_v1.json`
+and `results/full451k_public_replay_arm_20260907_v1.json`. The latter has
+SHA256 `74ef4b9e99cd25b6c57fb3e2d49bb37d37d000c114406d5bf3a6a45f6ff73191`.
+
 The complete dependency graph for the original 451,008-parameter certificate
 has been packaged without changing any recorded payload. The transport
 contains 17,713 logical files represented by 17,634 distinct SHA256 objects.
@@ -43,7 +58,7 @@ transport descriptor.
 This package reconstructs the inputs for a saved-evidence replay. It does
 not itself recompute neural derivatives, issue a certificate, reveal an
 outcome, or authorize publication. The original Windows replay is recorded
-in `RECORDED_WINDOW_LOCAL_RESULT.md`.
+in `results/recorded_window_exact_replay_windows_20260907.json`.
 
 ## Local files
 
@@ -53,6 +68,8 @@ in `RECORDED_WINDOW_LOCAL_RESULT.md`.
 - Original evidence manifest SHA256:
   `bc6e54b5421ffcf71cd9e905142cadcfbd3dc0856f478fd001c221cd5072b425`.
 - Builder: `scripts/package_recorded_graph.py`.
+  The builder requires the extracted replay toolkit on `PYTHONPATH`; it is
+  not needed for the public download/materialization commands above.
 - Standalone materializer: `scripts/materialize_recorded_graph.py`, SHA256
   `efd37ecd9dbd5207ef7a290a937f0b77f6035b55df6aed86f2bfab5f7cf29459`.
 - Tests: `scripts/test_recorded_graph_transport.py`. Both Windows and ARM
@@ -105,31 +122,10 @@ These are saved-evidence replay times, not controlled construction speedups.
 No future outcome was opened during those replays. The later outcome
 observation and publication approval are recorded separately.
 
-Earlier transfer-status paragraphs below are historical.
-
 The fresh Windows materialization passed: 17,713 logical files, 17,634
 distinct objects, 79 hardlinked aliases, and 47 source overlays, all
 byte-rechecked in 207.9734278 seconds. Report:
 `results/full_recorded_graph_materialization_windows_20260907_v1.json`.
-The numerical replay from that reconstruction passed in 532.7851270 seconds;
-its report and hash are recorded in `RECORDED_WINDOW_LOCAL_RESULT.md`.
-
-A private SCP transfer to the existing DGX task area is running. Do not
-restart it on an observation timeout. The source package is still version 1
-of the replay source archive; the later version-2 change corrects only a
-Windows temporary-path test fixture, not the replay driver or auditors.
-
-After the transfer is authoritatively complete, authenticate the descriptor,
-run the standalone materializer in a fresh directory, then run
-`scripts/replay_recorded_window.py` from that reconstructed directory with
-the original evidence-manifest hash. Keep this read-only replay separate
-from the one-shot future observer. No second-host full replay has completed
-yet.
-
-A separately authenticated cache inventory found 1,787 matching objects
-(6,870,279,811 bytes) in the explicitly named prior DGX task caches. The
-remaining 15,847 objects total 4,310,355,571 bytes. This inventory may help
-recover a genuinely interrupted transfer; it is not a substitute for full
-reconstruction and reauthentication. Local inventory report:
-`results/large_recorded_cache_inventory_arm_20260907.json`, SHA256
-`76379067914e3d53a6daacdde95414606407daecf9469e831917645b95216489`.
+The separately recorded original Windows replay passed in 492.8985672
+seconds; its public report is
+`results/recorded_window_exact_replay_windows_20260907.json`.

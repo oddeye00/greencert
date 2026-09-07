@@ -5,6 +5,12 @@ The registered five-update-persistent 35-of-58 event occurred at offset
 was update 3925, so the observed onset is update 3969. The observation
 completed all 64 registered optimizer updates before its outcome was read.
 
+The [full evidence graph](https://github.com/oddeye00/greencert/releases/tag/evidence-451k-20260907)
+is now public. A fresh download and reconstruction on DGX reproduced the
+complete recorded enclosure and all 17,713 input hashes. The separately
+downloaded public outcome package also reproduced the logit/event audit.
+The result-freeze record is `451K_RESULT_FREEZE.md`.
+
 This is a four-block, width-96 Transformer with learned LayerNorm, 451,008
 parameters, and full-batch momentum on mod-17 addition. It extends the
 complete construction beyond the earlier 13,792-parameter one-block case.

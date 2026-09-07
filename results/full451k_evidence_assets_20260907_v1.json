@@ -1,0 +1,120 @@
+{
+  "assets": [
+    {
+      "asset_id": 549392890,
+      "bytes": 4088137,
+      "digest": "sha256:bc6e54b5421ffcf71cd9e905142cadcfbd3dc0856f478fd001c221cd5072b425",
+      "name": "recorded_manifest.json",
+      "sha256": "bc6e54b5421ffcf71cd9e905142cadcfbd3dc0856f478fd001c221cd5072b425",
+      "state": "uploaded"
+    },
+    {
+      "asset_id": 549392951,
+      "bytes": 790871420,
+      "digest": "sha256:091669601813c70cc3b5f831899d3c2879bf355f66966b500ce7d4043e48f586",
+      "name": "recorded_objects_000.zip",
+      "sha256": "091669601813c70cc3b5f831899d3c2879bf355f66966b500ce7d4043e48f586",
+      "state": "uploaded"
+    },
+    {
+      "asset_id": 549398543,
+      "bytes": 1067791400,
+      "digest": "sha256:7d02c699b4000b3cf1f72571c6e20b2b7da49ba5750f31b778d6f5048ef470a9",
+      "name": "recorded_objects_001.zip",
+      "sha256": "7d02c699b4000b3cf1f72571c6e20b2b7da49ba5750f31b778d6f5048ef470a9",
+      "state": "uploaded"
+    },
+    {
+      "asset_id": 549406612,
+      "bytes": 1068613424,
+      "digest": "sha256:b63598d7d1688ec77c391de3bf4c0c64b99e67fd906757831d0e52b3b7fe787b",
+      "name": "recorded_objects_002.zip",
+      "sha256": "b63598d7d1688ec77c391de3bf4c0c64b99e67fd906757831d0e52b3b7fe787b",
+      "state": "uploaded"
+    },
+    {
+      "asset_id": 549414256,
+      "bytes": 1069564785,
+      "digest": "sha256:4f601df02f7bf53ab0219fe42439e3f00390fb46ca2e3922fc6d67ca362ef520",
+      "name": "recorded_objects_003.zip",
+      "sha256": "4f601df02f7bf53ab0219fe42439e3f00390fb46ca2e3922fc6d67ca362ef520",
+      "state": "uploaded"
+    },
+    {
+      "asset_id": 549420529,
+      "bytes": 1067133598,
+      "digest": "sha256:75c463347d02c7309bb1265af2c1b5e0da2ba4b49b67d2d8511a10ac06a37f75",
+      "name": "recorded_objects_004.zip",
+      "sha256": "75c463347d02c7309bb1265af2c1b5e0da2ba4b49b67d2d8511a10ac06a37f75",
+      "state": "uploaded"
+    },
+    {
+      "asset_id": 549427161,
+      "bytes": 1070461198,
+      "digest": "sha256:712f01fb829f2b8e2e33254bc81b866606d46900f53cc49ab4b22e197e37770d",
+      "name": "recorded_objects_005.zip",
+      "sha256": "712f01fb829f2b8e2e33254bc81b866606d46900f53cc49ab4b22e197e37770d",
+      "state": "uploaded"
+    },
+    {
+      "asset_id": 549435164,
+      "bytes": 1068145783,
+      "digest": "sha256:6bef2ae6fe6076afd45b717e678e9447b3fe33adc90c4c5aadca3fd06aa90915",
+      "name": "recorded_objects_006.zip",
+      "sha256": "6bef2ae6fe6076afd45b717e678e9447b3fe33adc90c4c5aadca3fd06aa90915",
+      "state": "uploaded"
+    },
+    {
+      "asset_id": 549444173,
+      "bytes": 1068827390,
+      "digest": "sha256:fdb30df08aac8b9c9b7113071b0e2a0d4600dec43e6844a3dd97e024216ae2ca",
+      "name": "recorded_objects_007.zip",
+      "sha256": "fdb30df08aac8b9c9b7113071b0e2a0d4600dec43e6844a3dd97e024216ae2ca",
+      "state": "uploaded"
+    },
+    {
+      "asset_id": 549452790,
+      "bytes": 1069906520,
+      "digest": "sha256:252bd2d27b148ed8cedd5cd44e330dc2120e7d8e1f40a7cffc98c889647a7c15",
+      "name": "recorded_objects_008.zip",
+      "sha256": "252bd2d27b148ed8cedd5cd44e330dc2120e7d8e1f40a7cffc98c889647a7c15",
+      "state": "uploaded"
+    },
+    {
+      "asset_id": 549463245,
+      "bytes": 1073186921,
+      "digest": "sha256:714226090539d7704aae4c336abfd5859f380da46062aa8747617621104e6f0c",
+      "name": "recorded_objects_009.zip",
+      "sha256": "714226090539d7704aae4c336abfd5859f380da46062aa8747617621104e6f0c",
+      "state": "uploaded"
+    },
+    {
+      "asset_id": 549473824,
+      "bytes": 770365345,
+      "digest": "sha256:0a1bce9f5bb0a93194e9f63e96412358ad4edad37a776682677b60a732e3971a",
+      "name": "recorded_objects_010.zip",
+      "sha256": "0a1bce9f5bb0a93194e9f63e96412358ad4edad37a776682677b60a732e3971a",
+      "state": "uploaded"
+    },
+    {
+      "asset_id": 549479754,
+      "bytes": 128436,
+      "digest": "sha256:c799935f80b06e6bfd86e71031c0b4b8bdf74264d570aea83319ef1e39c0a2de",
+      "name": "replay_sources.zip",
+      "sha256": "c799935f80b06e6bfd86e71031c0b4b8bdf74264d570aea83319ef1e39c0a2de",
+      "state": "uploaded"
+    },
+    {
+      "asset_id": 549392832,
+      "bytes": 4202935,
+      "digest": "sha256:b8490b76a42338d7e8bc1c08744e05f537c7a912bbc14c7842bc567f697ae25e",
+      "name": "transport.json",
+      "sha256": "b8490b76a42338d7e8bc1c08744e05f537c7a912bbc14c7842bc567f697ae25e",
+      "state": "uploaded"
+    }
+  ],
+  "count": 14,
+  "event": "all_assets_verified",
+  "release_id": 384321940,
+  "utc": "2026-09-07T22:43:36.668364+00:00"
+}

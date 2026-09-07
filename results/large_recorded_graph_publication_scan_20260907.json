@@ -1,0 +1,15 @@
+{
+  "credential_shapes": [],
+  "event_certificate_issued": false,
+  "future_outcome_access": false,
+  "machine_paths": [
+    "results/larger_transformer_third_pass/construction_03925/dgx_green_handover/receipt.json",
+    "results/larger_transformer_third_pass/construction_03925/outward_bound_rows/step_001/independent_audit_231.json"
+  ],
+  "manifest_sha256": "bc6e54b5421ffcf71cd9e905142cadcfbd3dc0856f478fd001c221cd5072b425",
+  "numerical_arrays_reauthenticated": false,
+  "original_records_changed": false,
+  "status": "publication_intake_required",
+  "text_files_scanned": 16236,
+  "unexpected_types": []
+}

@@ -1,0 +1,12 @@
+{
+  "asset_count": 14,
+  "event": "report",
+  "release_id": 384321940,
+  "repository": "oddeye00/greencert",
+  "status": "published_verified",
+  "tag": "evidence-451k-20260907",
+  "target_commit": "62ba2e3fac7bdda3784f87e5cb1772f5c5fc1238",
+  "total_bytes": 11193287292,
+  "transport_sha256": "b8490b76a42338d7e8bc1c08744e05f537c7a912bbc14c7842bc567f697ae25e",
+  "utc": "2026-09-07T22:43:38.229392+00:00"
+}
