@@ -1,0 +1,16 @@
+{
+  "all_logical_payloads_reauthenticated": true,
+  "copied_aliases": 0,
+  "elapsed_seconds": 207.973427799996,
+  "event_certificate_issued": false,
+  "future_outcome_access": false,
+  "hardlinked_aliases": 79,
+  "logical_files": 17713,
+  "numerical_replay_performed": false,
+  "original_records_changed": false,
+  "recorded_manifest_sha256": "bc6e54b5421ffcf71cd9e905142cadcfbd3dc0856f478fd001c221cd5072b425",
+  "source_overlay_files": 47,
+  "status": "complete_recorded_graph_materialized",
+  "transport_sha256": "b8490b76a42338d7e8bc1c08744e05f537c7a912bbc14c7842bc567f697ae25e",
+  "unique_objects": 17634
+}

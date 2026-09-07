@@ -1,0 +1,11 @@
+{
+  "schema": "post_outcome_source_chain_refusal_summary_v1",
+  "status": "REFUSED",
+  "source": "replay_recorded_window.py",
+  "expected_completed_replay_sha256": "4d73689d55dbfa7a38395494bd29bcb376a9770d4cbb54627916b0333aaa100e",
+  "actual_retained_source_sha256": "241506bb70206957076536d03eca7672903de21de6d0887e5a0d72773d5804a2",
+  "actual_search_location": "original evidence scripts, before portable toolkit scripts",
+  "observer_reexecuted": false,
+  "original_records_modified": false,
+  "scope": "Summary of the strict post-outcome source-chain rejection; absolute local paths omitted. The subsequent compatibility audit is separate and does not replace this refusal."
+}

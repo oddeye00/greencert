@@ -1,5 +1,12 @@
 # GREENCERT
 
+451k update (2026-09-07): the four-block LayerNorm Transformer's frozen
+`[44,44]` bracket contains the observed persistent crossing at +44.
+The complete CPU-float64 observation ledger and independent logit/event
+audit are in [`451K_COMPLETED_RESULT.md`](451K_COMPLETED_RESULT.md).
+This outcome-sealed development case is reported separately from the
+historical study totals below.
+
 Numerical update (2026-09-07): all 79 affected historical continuation
 brackets survive the corrected arithmetic audit. The clean public package
 passes isolated Windows/ARM scalar and output recomputation, and the original

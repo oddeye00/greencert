@@ -43,6 +43,9 @@ jobs:
           python scripts/test_exact_input_window_event_assembly.py
           python scripts/test_roundtrip_evidence_reader.py
           python scripts/test_dgx_outcome_amendment.py
+          python scripts/test_dgx_451k_outcome.py
+          python scripts/test_recorded_graph_transport.py
+          python -I -B scripts/audit_dgx_observer_source_chain.py --self-test
       - name: Record environment
         run: python scripts/check_reproduction_environment.py
       - name: Run numerical smoke audit

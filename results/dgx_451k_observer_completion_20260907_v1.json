@@ -1,0 +1,7 @@
+{
+  "exact_real_continuation_verified": false,
+  "future_outcome_access": true,
+  "outcome_path": "results/larger_transformer_third_pass/reveal.json",
+  "outcome_sha256": "25f204627419b5bbdfdbb902e1d0925f08f5a796aea51e8edbe48d2cb01040c3",
+  "status": "float64_outcome_recorded"
+}

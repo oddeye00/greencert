@@ -1,0 +1,37 @@
+{
+  "assembly_equal": true,
+  "bracket": [
+    44,
+    44
+  ],
+  "canonical_path_members": 17713,
+  "canonical_recorded_hashes_equal": true,
+  "controlled_speedup_claim": false,
+  "future_outcome_access": false,
+  "gain_upper": 4051.1181450297195,
+  "green_bound_equal": true,
+  "new_event_certificate_issued": false,
+  "new_neural_kernels_replayed": false,
+  "replay_seconds": {
+    "arm": 55.61751312398701,
+    "windows": 492.89856719993986
+  },
+  "replay_sources_changed": [
+    "portable_reference_margin_evidence.py",
+    "replay_recorded_window.py"
+  ],
+  "reports": {
+    "arm": {
+      "path": "results/recorded_window_exact_replay_arm_20260907_v3.json",
+      "sha256": "42727e4d4c1de036c16d4c67c42d3fc29a73420d991d6c5bce2c98a2efb4fa89"
+    },
+    "windows": {
+      "path": "results/recorded_window_exact_replay_windows_20260907.json",
+      "sha256": "6b33f2a8df2573370b6744572da93f2d3895d7a10b433184bba6bac2c1986d8a"
+    }
+  },
+  "schema": "recorded_replay_cross_host_comparison_v1",
+  "scope": "Comparison of authenticated saved-evidence replays conditional on original validated producers and ideal-Gaussian event.",
+  "status": "PASS",
+  "whole_json_reports_byte_identical": false
+}
