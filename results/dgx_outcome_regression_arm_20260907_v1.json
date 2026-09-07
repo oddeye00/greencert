@@ -1,0 +1,28 @@
+{
+  "current_candidate_future_access": false,
+  "scalar": {
+    "enumerated_event_paths": 1536,
+    "model_imported": false,
+    "retained_interruptions": 4,
+    "semantic_rejections": 22,
+    "synthetic_publications": 5
+  },
+  "scope": "software tests; not additional certificates or neural experimental results",
+  "sources": {
+    "anchor_response_evidence.py": "400d25baeeaf2eee7a9b4ec61b958a87d291f8fd4674d4cdd6af34481172783b",
+    "continue_candidate_sealed_outcome.py": "b3d7d6097a7531268f21b18222816427e8c8c39318d13e7d91322d98039db115",
+    "registered_outcome_continuation.py": "75b068af360d5878502b9a03bb8462df035503865e1096e868fe27e9cc34bacc",
+    "test_registered_outcome_continuation.py": "74173b3502b53a0aaf2c62bddf7c01090ac942e04ff515e784b642fcfb36fc6b",
+    "transformer_hvp_grokking.py": "7860d3f9b14427cc7ad49020943922dd07a655c269d846e17fb731f27c823f4f",
+    "verified_artifact_io.py": "43a07152998d653899210600b2225b21a153aea556d3801e2d350261edde8c46"
+  },
+  "tiny_neural": {
+    "bitwise_state_coordinates_compared": 1696,
+    "count_and_full_logit_rows_compared": 4,
+    "fixture": "independent mod-3 width-4 one-block LayerNorm model; not current candidate",
+    "future_steps": 3,
+    "original_unscaled_velocity_preserved": true,
+    "parameters": 212
+  },
+  "utc": "2026-09-07T20:53:05.172465+00:00"
+}

@@ -9,8 +9,8 @@
       "sha256": "C1B770356A637F2C9062EF9CAA9049E185C39C3054BFF613F08BED154131EC55"
     },
     ".github/workflows/reproducibility.yml": {
-      "bytes": 5888,
-      "sha256": "FB63D55F532A49D8433DFD93F8557227789E21E83E49C6F34E507C5D9FE353DD"
+      "bytes": 5943,
+      "sha256": "4C4C7D0A49F9EE959083361C54665A53404313CB1DE93D8207F04D067AB42B21"
     },
     ".gitignore": {
       "bytes": 291,
@@ -99,6 +99,10 @@
     "DATA.md": {
       "bytes": 1896,
       "sha256": "EF63476E0CD45342075D2735E58E93EEA0E0A42D8BA9BB62D18948178141D681"
+    },
+    "DGX_OUTCOME_AMENDMENT.md": {
+      "bytes": 3500,
+      "sha256": "8FEC5F2B851137CD2AB15F0124B5E0FC9A70CD7B4614B275FB50F2EFFB6D04AE"
     },
     "DIGITS_SIGNED_CANDIDATE_SEAL.json": {
       "bytes": 329,
@@ -448,6 +452,10 @@
       "bytes": 4611,
       "sha256": "FF713690710C9A732DE0C51AB73F0571CA46427774269B3C4461350224ED9317"
     },
+    "artifacts/greencert_dgx_outcome_amendment_20260907_v1.zip": {
+      "bytes": 1028859,
+      "sha256": "ACBABA1786066A1C15ACD1AD660F0DA92FF2BA8BD529D7C471C0910605E98AC6"
+    },
     "artifacts/greencert_exact_norm_benchmark_20260907.zip": {
       "bytes": 43171952,
       "sha256": "1943FBFBDA015E9B6907A55703A9D286E5EDE568512F78714E5856A6235B076D"
@@ -715,6 +723,22 @@
     "results/causal_forward_radius_synthetic_audit.json": {
       "bytes": 961,
       "sha256": "82385E78C554B244BFB6815892EB69656697729627700BC2EBB5C6D4541EBFD9"
+    },
+    "results/dgx_outcome_amendment_20260907_v1.json": {
+      "bytes": 9952,
+      "sha256": "D8F56172DB878C1A0986C6CFCAF384166B0A33A37284497E53514EC7A9D3E97A"
+    },
+    "results/dgx_outcome_preflight_20260907_v1.json": {
+      "bytes": 245,
+      "sha256": "6E31D65DB2D2BA8266B44D92A8A055DF5F799E0A9D0A90009FE4AEDE4DB273F8"
+    },
+    "results/dgx_outcome_regression_arm_20260907_v1.json": {
+      "bytes": 1327,
+      "sha256": "4EC53FC6D51927EDAC40EF388058AAF086BC69B5C98AF5596A30A741DF9A7E3A"
+    },
+    "results/dgx_outcome_runtime_20260907_v1.json": {
+      "bytes": 350,
+      "sha256": "B587D8B9020CBDF246767222293632AF308A64CF44209E2DD1E7B8EC6EF94A86"
     },
     "results/digits_outward_blind.json": {
       "bytes": 2319,
@@ -4816,6 +4840,10 @@
       "bytes": 5355,
       "sha256": "F2E3E638C03F350F5D5A6043AC56B741E66E1673CA40DB66DCC8AF432B4A972A"
     },
+    "scripts/dgx_outcome_bridge.py": {
+      "bytes": 12096,
+      "sha256": "EE515FE1261D85034656DAE3896D8B09433F91723883794E764F269326E5EA12"
+    },
     "scripts/diagnose_transformer_causal_row_green.py": {
       "bytes": 24318,
       "sha256": "3CDFF63273F01F80D95AAE514041D1C032240D0E060B873799AAE08E6F83295D"
@@ -4980,6 +5008,10 @@
       "bytes": 3929,
       "sha256": "758142A941D4039E72014C9352AFDE3CA01DD39EE5918D115017905E924B2D78"
     },
+    "scripts/prepare_dgx_outcome_amendment.py": {
+      "bytes": 5949,
+      "sha256": "34DA43601D9EE299ADAA20052257ADA1A56E56C6C515515B124F5A7813E22471"
+    },
     "scripts/probe_jacobian_bound.py": {
       "bytes": 12217,
       "sha256": "CAF1ACEC6941125FE0556ACF53DE65AEA77C8F298C5EEA5123D7F46CDE0B30DD"
@@ -5019,6 +5051,10 @@
     "scripts/regenerate_transformer_checkpoint.py": {
       "bytes": 3969,
       "sha256": "16D22BA8AA1ED0E2598985A9803860B3294C7E17B9218510774EAF248C99D382"
+    },
+    "scripts/registered_outcome_continuation.py": {
+      "bytes": 7642,
+      "sha256": "75B068AF360D5878502B9A03BB8462DF035503865E1096E868FE27E9CC34BACC"
     },
     "scripts/relinearized_green_closure.py": {
       "bytes": 3742,
@@ -5089,8 +5125,8 @@
       "sha256": "74439AA5B4B5F8CAF11E94EC5D9B8D6BD838BD4FFE6E8711C373B02144EF77A4"
     },
     "scripts/stage_repaired_public_release.py": {
-      "bytes": 7796,
-      "sha256": "FB9E698E7ADEEA74A88704F93C2E0447C0399DB3F056FA2C6F4FB502FD92315B"
+      "bytes": 8292,
+      "sha256": "90B0A042B421B1A181B69EFA951EFA336BBDE0548EA3ED2A194F97CA853C9CEE"
     },
     "scripts/streaming_variational_centerline.py": {
       "bytes": 5818,
@@ -5199,6 +5235,10 @@
     "scripts/test_cost_aware_forcing.py": {
       "bytes": 1928,
       "sha256": "92F2CAD60C1CE2344FB5A0412CEC6D76D125E521D2D6227D0FA26C8BE142A2A5"
+    },
+    "scripts/test_dgx_outcome_amendment.py": {
+      "bytes": 3072,
+      "sha256": "1AC23D700703AF8BFAD05150085B00D6BB77DBDDB92AFE3BE90BBFF2654AFD21"
     },
     "scripts/test_digits_parity_mlp.py": {
       "bytes": 1668,

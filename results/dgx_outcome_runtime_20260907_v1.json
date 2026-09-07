@@ -1,0 +1,14 @@
+{
+  "candidate_model_constructed": false,
+  "execution_device": "cpu",
+  "future_outcome_access": false,
+  "runtime": {
+    "machine": "aarch64",
+    "numpy": "2.5.2",
+    "platform": "Linux-6.17.0-1032-nvidia-aarch64-with-glibc2.39",
+    "python": "3.12.3",
+    "torch": "2.13.0"
+  },
+  "torch_build": "2.13.0+cu130",
+  "torch_cuda_build": "13.0"
+}

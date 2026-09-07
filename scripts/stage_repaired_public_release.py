@@ -13,6 +13,16 @@ import subprocess
 
 ROOT = Path(__file__).resolve().parents[1]
 EXTRA = (
+    "DGX_OUTCOME_AMENDMENT.md",
+    "scripts/dgx_outcome_bridge.py",
+    "scripts/test_dgx_outcome_amendment.py",
+    "scripts/prepare_dgx_outcome_amendment.py",
+    "scripts/registered_outcome_continuation.py",
+    "artifacts/greencert_dgx_outcome_amendment_20260907_v1.zip",
+    "results/dgx_outcome_amendment_20260907_v1.json",
+    "results/dgx_outcome_preflight_20260907_v1.json",
+    "results/dgx_outcome_regression_arm_20260907_v1.json",
+    "results/dgx_outcome_runtime_20260907_v1.json",
     "scripts/roundtrip_evidence_reader.py",
     "scripts/test_roundtrip_evidence_reader.py",
     "scripts/audit_recorded_json_contract.py",

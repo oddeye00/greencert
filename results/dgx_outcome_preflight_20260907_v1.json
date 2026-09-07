@@ -1,0 +1,10 @@
+{
+  "amendment_sha256": "d8f56172db878c1a0986c6cfcaf384166b0a33a37284497e53514ec7a9d3e97a",
+  "bracket": [
+    44,
+    44
+  ],
+  "future_outcome_access": false,
+  "model_constructed": false,
+  "status": "authenticated_for_one_dgx_observation"
+}
