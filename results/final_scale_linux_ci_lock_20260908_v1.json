@@ -1,0 +1,19 @@
+{
+  "schema": "final_scale_linux_ci_lock_v1",
+  "date_utc": "2026-09-08",
+  "original_protocol_commit": "bc8332e3b5bfe647b81ee322710fee1a2418065d",
+  "failed_ci_run": 34182268265,
+  "failed_stage": "Install locked dependencies; no control tests or scientific models executed",
+  "cause": "The historical lock lists only the Windows CPython 3.12 MarkupSafe 3.0.3 wheel hash. Linux selected the same package version's manylinux x86_64 wheel.",
+  "publisher_metadata": "https://pypi.org/pypi/MarkupSafe/3.0.3/json",
+  "wheel_url": "https://files.pythonhosted.org/packages/3c/2e/8d0c2ab90a8c1d9a24f0399058ab8519a3279d1bd4289511d74e909f060e/markupsafe-3.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl",
+  "publisher_and_downloaded_sha256": "d6dd0be5b5b189d31db7cda48b91d7e0a9795f31430b7f271219ab30f1d3ac9d",
+  "original_windows_lock_sha256": "7b6ce589773bfc15c9205a2cc24ac2d12d30587c59f2fa21324ed35efdb9409e",
+  "linux_ci_lock_sha256": "3c5f5673793ff21e165828e1853d5e8c1f2579de8297367b158dcbff5d7a91f9",
+  "changes": "Separate Linux CI lock adds only this validated wheel hash and explanatory comments; same dependency versions.",
+  "frozen_production_sources_changed": false,
+  "protocol_bytes_changed": false,
+  "dgx_runtime_changed": false,
+  "registered_model_constructed_before_correction": false,
+  "registered_future_accessed": false
+}

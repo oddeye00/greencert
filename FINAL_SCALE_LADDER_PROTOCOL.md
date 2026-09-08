@@ -101,6 +101,13 @@ python -B scripts/test_final_scale_release_suite_v1.py
 python -B scripts/test_final_scale_public_bundle_v1.py
 ```
 
+On Linux x86_64 with CPython 3.12, use `requirements-linux-ci.txt` for
+installation. It retains the same versions and adds the publisher-verified
+Linux MarkupSafe wheel hash missing from the historical Windows lock.
+This CI-only installation correction does not change the frozen production
+sources, protocol or DGX runtime; see the
+[provenance record](results/final_scale_linux_ci_lock_20260908_v1.json).
+
 The release suite has 68 tests: all passed on ARM Linux; 63 passed and five
 Linux-specific supervision tests were skipped on Windows. Four public-bundle
 checks also passed on Windows. The pinned release-test bundle and the

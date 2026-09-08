@@ -9,8 +9,8 @@
       "sha256": "C1B770356A637F2C9062EF9CAA9049E185C39C3054BFF613F08BED154131EC55"
     },
     ".github/workflows/final-scale-controls.yml": {
-      "bytes": 949,
-      "sha256": "562D29BADAA657508695B4B14183E1C2779162AB7F6B6BBB0C3C3C607A1A3C1A"
+      "bytes": 1064,
+      "sha256": "B309E54764AE4340EDFEC66E4F5C9487E7FECDF94E24B7765FAD5B2CEEA94C5E"
     },
     ".github/workflows/reproducibility.yml": {
       "bytes": 6451,
@@ -201,8 +201,8 @@
       "sha256": "53C4A541E4AB21D2E93D569B63953CEB41028D29B323AB24640F62B6E2914BFC"
     },
     "FINAL_SCALE_LADDER_PROTOCOL.md": {
-      "bytes": 7071,
-      "sha256": "323F9463743068B097FDA880392BFE6BD71509ECD1CF42A6CB04B7748DCA5912"
+      "bytes": 7478,
+      "sha256": "CB5C32F48D764E2766267440A6192013701B2C5ECFA35D615AF89B8B4E2135DA"
     },
     "FULL_RECORDED_GRAPH_TRANSPORT.md": {
       "bytes": 7492,
@@ -908,6 +908,10 @@
       "bytes": 4812,
       "sha256": "E875F6EC8B076AF7F171AB9C20632AD06893A3FC27527518C5D1D431A83C3EEF"
     },
+    "requirements-linux-ci.txt": {
+      "bytes": 57427,
+      "sha256": "3C5F5673793FF21E165828E1853D5E8C1F2579DE8297367B158DCBFF5D7A91F9"
+    },
     "requirements.in": {
       "bytes": 379,
       "sha256": "F794FDA0A6B3DC4779BFFBE7BF925EE02FE42153D7B39295350DF98C6FA50DFE"
@@ -1611,6 +1615,10 @@
     "results/figure_reproducibility_audit.json": {
       "bytes": 3455,
       "sha256": "097BA243E29F18A6938D5104E57CF960DF06A900F5868C8BD227D33A9FC9D358"
+    },
+    "results/final_scale_linux_ci_lock_20260908_v1.json": {
+      "bytes": 1376,
+      "sha256": "0FF72308828A00E402709BCEA48AFD4B0956A4C649B084A234CE999C72B28A93"
     },
     "results/final_scale_preseal_validation_20260908_v1.json": {
       "bytes": 3130,
@@ -5827,6 +5835,10 @@
     "scripts/test_final_scale_arb_codec_v1.py": {
       "bytes": 5160,
       "sha256": "B456B5030640CECE56ACEDE4B64DDD9FDE2B5D05831F9E63ED34E4BE4191237A"
+    },
+    "scripts/test_final_scale_ci_lock_v1.py": {
+      "bytes": 1269,
+      "sha256": "9450C23891E8330F9386EAE898CB4CBA4793703A9B77D5CE2C592E89A24E63BA"
     },
     "scripts/test_final_scale_construction_v1.py": {
       "bytes": 7374,

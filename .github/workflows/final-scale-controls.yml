@@ -24,8 +24,10 @@ jobs:
         with:
           python-version: '3.12.10'
           cache: pip
+      - name: Check CI-only lock provenance
+        run: python -B scripts/test_final_scale_ci_lock_v1.py
       - name: Install locked dependencies
-        run: python -m pip install -r requirements.txt
+        run: python -m pip install -r requirements-linux-ci.txt
       - name: Test controls, numerical replay and one-shot lifecycle
         run: python -B scripts/test_final_scale_release_suite_v1.py
       - name: Authenticate public bundle without launching a model
