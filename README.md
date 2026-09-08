@@ -1,5 +1,11 @@
 # GREENCERT
 
+Final scale protocol (2026-09-08): the bounded 1.01M / 2.10M / 4.94M
+four-block LayerNorm experiment is specified in
+[`FINAL_SCALE_LADDER_PROTOCOL.md`](FINAL_SCALE_LADDER_PROTOCOL.md).
+This is a preregistration, not a new certificate result; execution requires
+an immutable public protocol and passing release/CI checks.
+
 451k update (2026-09-07): the four-block LayerNorm Transformer's frozen
 `[44,44]` bracket contains the observed persistent crossing at +44.
 The complete CPU-float64 observation ledger and independent logit/event

@@ -1,0 +1,71 @@
+{
+  "schema": "final_scale_preseal_validation_v1",
+  "status": "engineering_checks_passed_not_a_scientific_result",
+  "date_utc": "2026-09-08",
+  "protocol_sha256": "5bd207454eaa5807e76675077157a6f01033c9338b05e25d0e4a194746995d26",
+  "production_manifest_sha256": "272780f8a1c63525fb75a00eeca7d2995c000814cc729973602545ff797a8a9e",
+  "runtime_sha256": "b11c1424fd933755cf740e49866f15ea369dcbe4ba1dce55ba65050de7785a27",
+  "release_test_manifest_sha256": "62c96333e1431d393348e0c99ec1f7226821e12222816c0626ce75cdf41d4ed0",
+  "inventories": [
+    "results/final_scale_source_inventory_20260908_v10.json",
+    "results/final_scale_production_source_inventory_20260908_v1.json"
+  ],
+  "tests": [
+    {
+      "file": "audit_history/final_scale_preseal_20260908/release_portable_windows.log",
+      "sha256": "c0ce0f3bb06011e8daf42d586788558eb28679651de5ceaab3fdd631d24dbb94",
+      "collected": 68,
+      "passed": 63,
+      "skipped": 5,
+      "seconds": 48.691,
+      "invocation": "Python -I -B authenticated release-test bundle"
+    },
+    {
+      "file": "audit_history/final_scale_preseal_20260908/release_portable_arm.log",
+      "sha256": "4f8d984e4326bf6dbb938a45fa8929d9e211eb67da17f72d0274393de52e9a92",
+      "collected": 68,
+      "passed": 68,
+      "skipped": 0,
+      "seconds": 9.948,
+      "invocation": "Python -I -B authenticated release-test bundle"
+    },
+    {
+      "file": "audit_history/final_scale_preseal_20260908/public_bundle_windows.log",
+      "sha256": "8ef9f60fde9afcea754c40f2e789ed84a2208eaf30bbb29aea56e5a2913001bc",
+      "collected": 4,
+      "passed": 4,
+      "skipped": 0,
+      "invocation": "python -B scripts/test_final_scale_public_bundle_v1.py"
+    }
+  ],
+  "production_preflight": {
+    "file": "audit_history/final_scale_preseal_20260908/production_preflight_arm_pass.log",
+    "sha256": "8ea065eb550490e2bb1122c431738d5cdcdc83b1bec4c1ee8e37183cd6cb61ac",
+    "status": "public_source_protocol_runtime_admitted",
+    "model_instantiated": false,
+    "future_outcome_accessed": false
+  },
+  "prior_preflight_refusal": {
+    "reason": "JSON reserialization changed exact numeric representation (including 0.0 to 0); admission refused before any model construction.",
+    "resolution": "Preserve original Python JSON output. No source or scientific settings changed. Earlier private transcript retained.",
+    "initial_protocol_sha256": "0ada82805fc9a5202ab9afdd30cbbfeccc9eab31760385c5e4f3680ce852eacd"
+  },
+  "other_diagnostics": {
+    "unpublished_run_refused_before_directory_reservation": true,
+    "worker_runtime_scalar_jvp_passed": true,
+    "scalar_probe_instantiated_neural_model": false,
+    "scalar_probe_is_source_attestation": false
+  },
+  "scope": {
+    "registered_model_constructed": false,
+    "registered_future_accessed": false,
+    "production_modules": 53,
+    "test_bundle_modules": 63,
+    "synthetic_gate_used_in_named_lifecycle_tests": true,
+    "unmocked_gate_rejection_tested": true,
+    "tiny_fixture_disposition": "abstention",
+    "independent_neural_redifferentiation": false,
+    "original_451k_observer_rerun": false,
+    "ci_still_required": true
+  }
+}

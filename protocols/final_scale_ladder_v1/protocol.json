@@ -1,0 +1,163 @@
+{
+  "automatic_retry_or_resume": false,
+  "bootstrap_sha256": "01b25ad50ce59701f1bbf0c7768bb0c325a98de280ce9e89b716fce4a9d425ae",
+  "construction_and_disposition_share_budget": true,
+  "fixture_execution_permitted": false,
+  "numerical_scope": "outward supplied neural bounds and local replay; ideal Gaussian event; float64 outcome observation",
+  "observation_and_audit_share_budget": true,
+  "one_canonical_observer_root_per_rung": true,
+  "phase_groups": {
+    "audit": "observation_audit",
+    "construction": "construction",
+    "disposition": "construction",
+    "observation": "observation_audit",
+    "selection": "selection"
+  },
+  "phase_order": [
+    "selection",
+    "construction",
+    "disposition",
+    "observation",
+    "audit"
+  ],
+  "public_seal_required_before_controller_start": true,
+  "resources": {
+    "automatic_retry_or_resume": false,
+    "maximum_complete_phase_artifact_mib": 524288,
+    "maximum_worker_rss_mib": 49152,
+    "minimum_free_disk_mib": 262144,
+    "minimum_free_memory_mib": 16384,
+    "supervisor_poll_seconds": 1.0,
+    "termination_grace_seconds": 5.0,
+    "worker_address_space_mib": 49152,
+    "worker_subprocesses_permitted": false
+  },
+  "runtime_sha256": "b11c1424fd933755cf740e49866f15ea369dcbe4ba1dce55ba65050de7785a27",
+  "schema": "final_scale_public_protocol_v1",
+  "scientific_settings": {
+    "architecture": {
+      "activation": "gelu",
+      "all_parameters_trainable": true,
+      "depth": 4,
+      "dropout": 0.0,
+      "heads": 4,
+      "modulus": 17,
+      "normalization": "layernorm"
+    },
+    "construction": {
+      "additional_float64_recenterings": 1,
+      "geometry_precision_ladder": [
+        64,
+        96,
+        192
+      ],
+      "global_failure_probability_ratio": [
+        1,
+        10000000
+      ],
+      "green_hvp_bits": 128,
+      "green_powers": [
+        1,
+        2
+      ],
+      "green_probes": 4,
+      "hvp_chunk_size": 8,
+      "outer_radius": 1e-08,
+      "per_rung_failure_probability_ratio": [
+        1,
+        30000000
+      ],
+      "probe_seed_base": 194101,
+      "response_bits": 192,
+      "scalar_bits": 256,
+      "transport_bits": 192
+    },
+    "data": {
+      "certification_count": 58,
+      "train_fraction": 0.6,
+      "training_count": 173,
+      "trigger_count": 58
+    },
+    "execution": {
+      "automatic_retry_or_resume": false,
+      "construction_seconds_per_rung": 86400,
+      "deterministic_algorithms": true,
+      "device": "cpu",
+      "dtype": "float64",
+      "interop_threads": 1,
+      "kernel_threads": 1,
+      "maximum_kernel_workers": 2,
+      "mha_fastpath": false,
+      "minimum_free_mib": 16384,
+      "observation_audit_seconds_per_rung": 3600,
+      "overall_seconds": 345600,
+      "selection_seconds_per_rung": 7200,
+      "training_threads": 4
+    },
+    "optimizer": {
+      "learning_rate": 0.003,
+      "loss": "cross_entropy",
+      "momentum": 0.9,
+      "name": "full_batch_momentum",
+      "weight_decay": 0.01
+    },
+    "rungs": [
+      {
+        "hidden_dim": 576,
+        "index": 0,
+        "model_dim": 144,
+        "parameters": 1008288,
+        "seed": 94101
+      },
+      {
+        "hidden_dim": 832,
+        "index": 1,
+        "model_dim": 208,
+        "parameters": 2095392,
+        "seed": 94101
+      },
+      {
+        "hidden_dim": 1280,
+        "index": 2,
+        "model_dim": 320,
+        "parameters": 4944000,
+        "seed": 94101
+      }
+    ],
+    "selection": {
+      "candidates_per_rung": 1,
+      "clock_sweeps": 4,
+      "horizon": 64,
+      "inspection_stride": 25,
+      "maximum_updates": 12000,
+      "numeric_cap": 1000000.0,
+      "persistence": 5,
+      "target_correct": 35,
+      "trigger_minimum_correct": 29
+    },
+    "stopping": {
+      "continue_after_no_candidate": true,
+      "continue_after_scientific_abstention": true,
+      "keep_all_rung_dispositions": true,
+      "order": "ascending_width",
+      "retune_after_outcome": false,
+      "stop_on_resource_limit_or_execution_failure": true,
+      "stop_on_uncovered_issued_bracket": true
+    }
+  },
+  "source_manifest_sha256": "272780f8a1c63525fb75a00eeca7d2995c000814cc729973602545ff797a8a9e",
+  "trusted_base": [
+    "bootstrap",
+    "Python interpreter",
+    "installed dependencies",
+    "operating system",
+    "cooperative storage"
+  ],
+  "worker_environment": {
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+  }
+}

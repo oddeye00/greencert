@@ -1,0 +1,491 @@
+{
+  "dynamic_dependency_closure_proved": false,
+  "external_top_level": [
+    "flint",
+    "matplotlib",
+    "numpy",
+    "torch"
+  ],
+  "future_outcome_access": false,
+  "imports": {
+    "arb_chunked_objective": [
+      "arb_reverse_transformer"
+    ],
+    "arb_deep_envelope": [
+      "arb_deep_point_gram",
+      "arb_matrix_bounds",
+      "arb_transformer_objective"
+    ],
+    "arb_deep_point_gram": [
+      "arb_matrix_bounds",
+      "arb_transformer_objective"
+    ],
+    "arb_deep_point_gram_bound_strategy": [
+      "arb_deep_point_gram",
+      "arb_deep_point_gram_structured",
+      "arb_matrix_bounds",
+      "arb_transformer_objective"
+    ],
+    "arb_deep_point_gram_structured": [
+      "arb_deep_point_gram",
+      "arb_matrix_bounds",
+      "arb_transformer_objective"
+    ],
+    "arb_deep_transformer_forward": [
+      "arb_transformer_objective"
+    ],
+    "arb_factored_regularizer_hvp": [
+      "arb_reverse",
+      "arb_reverse_transformer"
+    ],
+    "arb_matrix_bounds": [],
+    "arb_native_row_bounds": [],
+    "arb_psd_moment_bounds": [],
+    "arb_reverse": [],
+    "arb_reverse_transformer": [
+      "arb_reverse"
+    ],
+    "arb_transformer_objective": [
+      "transformer_hvp_grokking"
+    ],
+    "block_jet_bound": [],
+    "checkpointed_green_products": [
+      "outward_green_momentum",
+      "outward_green_products"
+    ],
+    "final_scale_arb_codec_v1": [],
+    "final_scale_artifacts_v1": [
+      "prospective_ledger_v1",
+      "verified_artifact_io"
+    ],
+    "final_scale_construction_v1": [
+      "final_scale_artifacts_v1",
+      "final_scale_numeric_core_v1",
+      "final_scale_numeric_replay_v1",
+      "final_scale_protocol_v1",
+      "final_scale_selection_v1",
+      "prospective_ledger_v1",
+      "transformer_hvp_grokking"
+    ],
+    "final_scale_controller_v1": [
+      "final_scale_protocol_v1",
+      "prospective_ledger_v1"
+    ],
+    "final_scale_engine_v1": [
+      "final_scale_protocol_v1",
+      "streaming_variational_centerline",
+      "transformer_hvp_grokking"
+    ],
+    "final_scale_entry_v1": [
+      "final_scale_artifacts_v1",
+      "final_scale_construction_v1",
+      "final_scale_controller_v1",
+      "final_scale_engine_v1",
+      "final_scale_observation_v1",
+      "final_scale_runtime_v1",
+      "final_scale_seal_v1",
+      "final_scale_selection_v1",
+      "prospective_ledger_v1"
+    ],
+    "final_scale_green_v1": [
+      "checkpointed_green_products",
+      "green_local_residual_bounds",
+      "outward_inexact_anytime_gram",
+      "prospective_ledger_v1"
+    ],
+    "final_scale_neural_v1": [
+      "arb_deep_envelope",
+      "arb_deep_point_gram_bound_strategy",
+      "arb_deep_transformer_forward",
+      "arb_matrix_bounds",
+      "arb_native_row_bounds",
+      "arb_psd_moment_bounds",
+      "transformer_hvp_grokking",
+      "transformer_optimizer_probe"
+    ],
+    "final_scale_numeric_core_v1": [
+      "arb_chunked_objective",
+      "arb_deep_transformer_forward",
+      "arb_factored_regularizer_hvp",
+      "final_scale_arb_codec_v1",
+      "final_scale_green_v1",
+      "final_scale_neural_v1",
+      "final_scale_response_v1",
+      "prospective_ledger_v1",
+      "window_event_assembly"
+    ],
+    "final_scale_numeric_replay_v1": [
+      "arb_matrix_bounds",
+      "checkpointed_green_products",
+      "final_scale_arb_codec_v1",
+      "final_scale_green_v1",
+      "final_scale_neural_v1",
+      "final_scale_response_v1",
+      "final_scale_selection_v1",
+      "outward_green_momentum",
+      "outward_green_products",
+      "prospective_ledger_v1",
+      "window_event_assembly"
+    ],
+    "final_scale_observation_v1": [
+      "final_scale_artifacts_v1",
+      "final_scale_construction_v1",
+      "final_scale_protocol_v1",
+      "final_scale_selection_v1",
+      "prospective_ledger_v1",
+      "transformer_hvp_grokking"
+    ],
+    "final_scale_protocol_v1": [],
+    "final_scale_response_v1": [
+      "known_anchor_response",
+      "outward_green_products",
+      "outward_variational_response"
+    ],
+    "final_scale_runtime_v1": [
+      "prospective_ledger_v1"
+    ],
+    "final_scale_seal_v1": [
+      "final_scale_protocol_v1",
+      "final_scale_runtime_v1",
+      "prospective_ledger_v1"
+    ],
+    "final_scale_selection_v1": [
+      "final_scale_artifacts_v1",
+      "final_scale_engine_v1",
+      "final_scale_protocol_v1",
+      "prospective_ledger_v1"
+    ],
+    "green_local_residual_bounds": [
+      "outward_inexact_anytime_gram"
+    ],
+    "inexact_anytime_gram": [],
+    "known_anchor_response": [],
+    "matrix_free_mlp": [
+      "smooth_mlp_modular_grokking"
+    ],
+    "outward_green_momentum": [],
+    "outward_green_products": [
+      "outward_green_momentum"
+    ],
+    "outward_inexact_anytime_gram": [
+      "inexact_anytime_gram"
+    ],
+    "outward_variational_response": [],
+    "pinned_source_bundle_v1": [],
+    "probe_jacobian_bound": [
+      "transformer_hvp_grokking"
+    ],
+    "prospective_ledger_v1": [],
+    "response_centered_scalar_closure": [],
+    "smooth_mlp_modular_grokking": [],
+    "streaming_variational_centerline": [
+      "transformer_four_sweep_development_audit",
+      "transformer_modal_forecast"
+    ],
+    "transformer_block_envelope": [
+      "block_jet_bound",
+      "transformer_hvp_grokking"
+    ],
+    "transformer_certificate_protocol": [
+      "probe_jacobian_bound"
+    ],
+    "transformer_four_sweep_development_audit": [
+      "matrix_free_mlp",
+      "probe_jacobian_bound",
+      "transformer_block_envelope",
+      "transformer_certificate_protocol",
+      "transformer_hvp_grokking",
+      "transformer_modal_forecast",
+      "transformer_optimizer_probe"
+    ],
+    "transformer_hvp_grokking": [],
+    "transformer_modal_forecast": [
+      "matrix_free_mlp",
+      "transformer_hvp_grokking"
+    ],
+    "transformer_optimizer_probe": [
+      "probe_jacobian_bound",
+      "transformer_hvp_grokking"
+    ],
+    "verified_artifact_io": [],
+    "window_event_assembly": [
+      "response_centered_scalar_closure"
+    ]
+  },
+  "inspected_code_executed": false,
+  "modules": 53,
+  "old_case_driver_imports": [],
+  "old_case_literal_findings": [],
+  "roots": [
+    "final_scale_entry_v1",
+    "pinned_source_bundle_v1"
+  ],
+  "sources": {
+    "arb_chunked_objective": {
+      "bytes": 2259,
+      "file": "arb_chunked_objective.py",
+      "sha256": "31fc410132c6492a726f949337394732d8653d120cc686b73d216a9e76786810"
+    },
+    "arb_deep_envelope": {
+      "bytes": 20389,
+      "file": "arb_deep_envelope.py",
+      "sha256": "28ea796b1b12832a7dc67672fc88e964fa6a4e149fe7a05c9ce28f293937e07a"
+    },
+    "arb_deep_point_gram": {
+      "bytes": 9431,
+      "file": "arb_deep_point_gram.py",
+      "sha256": "bf6b8f6995f88f4085e7e812d1477b066719010f8d52c57a5d2e7857ba949e9c"
+    },
+    "arb_deep_point_gram_bound_strategy": {
+      "bytes": 4837,
+      "file": "arb_deep_point_gram_bound_strategy.py",
+      "sha256": "371b0157f9adf10b0ddf80e496c0307261e1b7003a60d2582847b331eda90eec"
+    },
+    "arb_deep_point_gram_structured": {
+      "bytes": 6540,
+      "file": "arb_deep_point_gram_structured.py",
+      "sha256": "4e6c286b3a81aff0e7c20d5e01801421b93dc4cf483ce4fb4d2aa1361349070c"
+    },
+    "arb_deep_transformer_forward": {
+      "bytes": 6337,
+      "file": "arb_deep_transformer_forward.py",
+      "sha256": "0850599ffe33eb529269677b801c85da1caab8ad6aaa1d40742c81a937ebc0f5"
+    },
+    "arb_factored_regularizer_hvp": {
+      "bytes": 5278,
+      "file": "arb_factored_regularizer_hvp.py",
+      "sha256": "8048e9b9eedc436b8f30bed70523bb0c46c54310072538412419f2df0ad2c437"
+    },
+    "arb_matrix_bounds": {
+      "bytes": 3244,
+      "file": "arb_matrix_bounds.py",
+      "sha256": "170a76f461557dfe1a894684e96417af22100db03b70dd35ee122d29e8523ee4"
+    },
+    "arb_native_row_bounds": {
+      "bytes": 1204,
+      "file": "arb_native_row_bounds.py",
+      "sha256": "c6f0a8c16c76d8f01cc9b1221066c8d88c721789ba4618b1c3044c0a1be7545b"
+    },
+    "arb_psd_moment_bounds": {
+      "bytes": 3034,
+      "file": "arb_psd_moment_bounds.py",
+      "sha256": "c11d9758a0adaf7f5a736f74f66b6a7bf34c33e1bb2534f7d7c1a21fddee9179"
+    },
+    "arb_reverse": {
+      "bytes": 6954,
+      "file": "arb_reverse.py",
+      "sha256": "82843f0b9b42e321beaae03d405315e3b4daa5320337cf4a2a395dad7faba57f"
+    },
+    "arb_reverse_transformer": {
+      "bytes": 10712,
+      "file": "arb_reverse_transformer.py",
+      "sha256": "0be6ae9a8721bee572bd03383c25ea9acca16a870c15d8b582b495b464c43427"
+    },
+    "arb_transformer_objective": {
+      "bytes": 8533,
+      "file": "arb_transformer_objective.py",
+      "sha256": "59dc6b9889669725cd4257ee6e6f6263c46b0ea3c7d7daf5a514af714df5c736"
+    },
+    "block_jet_bound": {
+      "bytes": 6130,
+      "file": "block_jet_bound.py",
+      "sha256": "1be78a5069bba9c26755a88d77f89242b87639840ab5cd3c0577f5d2aa396966"
+    },
+    "checkpointed_green_products": {
+      "bytes": 12647,
+      "file": "checkpointed_green_products.py",
+      "sha256": "e27d17c878727bb8a9c3fcf564afb13cf1071012000e0a81bc942c719750e19a"
+    },
+    "final_scale_arb_codec_v1": {
+      "bytes": 4281,
+      "file": "final_scale_arb_codec_v1.py",
+      "sha256": "c35646c14834c3941f6ef8d51cdd9a6c0d69f470a8089e5c26d4656b4523a085"
+    },
+    "final_scale_artifacts_v1": {
+      "bytes": 11132,
+      "file": "final_scale_artifacts_v1.py",
+      "sha256": "008df660a2f04296ee3cacfa34c0f753cfe307eacb6cd4e8751f26c81ef2bf14"
+    },
+    "final_scale_construction_v1": {
+      "bytes": 15648,
+      "file": "final_scale_construction_v1.py",
+      "sha256": "4719e74843ab63e877370bcba9cdafc58b8074bc2bce04bb448b4281075f3382"
+    },
+    "final_scale_controller_v1": {
+      "bytes": 4338,
+      "file": "final_scale_controller_v1.py",
+      "sha256": "2e06a9252afe9a38492a2f2b01acf5b62be8a40634cbca1011cb29673231766e"
+    },
+    "final_scale_engine_v1": {
+      "bytes": 11477,
+      "file": "final_scale_engine_v1.py",
+      "sha256": "4be23f1b4c5fd17636bda3d127fcd4ef61dc45be873f27efb24679e9fa705289"
+    },
+    "final_scale_entry_v1": {
+      "bytes": 20162,
+      "file": "final_scale_entry_v1.py",
+      "sha256": "bd8bb3a982f0944578e0814481efe6a66d2c3a7acb744fcf4921cb93e8ae845c"
+    },
+    "final_scale_green_v1": {
+      "bytes": 15259,
+      "file": "final_scale_green_v1.py",
+      "sha256": "6b9136b42d46d1373dd099c75b4993cb9c72a219b86dfcfdf7b418d3dfdf4227"
+    },
+    "final_scale_neural_v1": {
+      "bytes": 10150,
+      "file": "final_scale_neural_v1.py",
+      "sha256": "c5e4ae0f99fbd375030df0c1d62b85ba5781d9735131dc02391e114825f66dba"
+    },
+    "final_scale_numeric_core_v1": {
+      "bytes": 12960,
+      "file": "final_scale_numeric_core_v1.py",
+      "sha256": "80208606a18440ededd6d9e24c5fe0d3d857c444b4663c74784d995879d047bd"
+    },
+    "final_scale_numeric_replay_v1": {
+      "bytes": 20413,
+      "file": "final_scale_numeric_replay_v1.py",
+      "sha256": "b3a0725e3bacfd7f92aaaf72060cbfa257bc9720cbfb3d8d68d0269a8585430b"
+    },
+    "final_scale_observation_v1": {
+      "bytes": 15125,
+      "file": "final_scale_observation_v1.py",
+      "sha256": "02ae12c427cd4e8e07ae9d8a60e4d2b670107892ff91cf3c6040c43f267c1c42"
+    },
+    "final_scale_protocol_v1": {
+      "bytes": 6460,
+      "file": "final_scale_protocol_v1.py",
+      "sha256": "0185f910cf579a7fcadd7535fd743a489cf41cff13fe60ebbdbdfc475254885b"
+    },
+    "final_scale_response_v1": {
+      "bytes": 4366,
+      "file": "final_scale_response_v1.py",
+      "sha256": "b42c395eef26e1c2d1ee165aacdf5aac87dda0371f82c723164ed9267dbb7f21"
+    },
+    "final_scale_runtime_v1": {
+      "bytes": 10378,
+      "file": "final_scale_runtime_v1.py",
+      "sha256": "c45e673edf5df28b957dc02eba48cbcb09358afbda83731fea79d2dc0fbc7359"
+    },
+    "final_scale_seal_v1": {
+      "bytes": 9591,
+      "file": "final_scale_seal_v1.py",
+      "sha256": "9220a649be2df9aa8603fc7cdf0989772c5c6dcb6bf0acbd60724736e070b15b"
+    },
+    "final_scale_selection_v1": {
+      "bytes": 18506,
+      "file": "final_scale_selection_v1.py",
+      "sha256": "757fb17752a76f1bd0f743525c31dfb16e84a8f87febeda6b94a2a5d8048c8a5"
+    },
+    "green_local_residual_bounds": {
+      "bytes": 4462,
+      "file": "green_local_residual_bounds.py",
+      "sha256": "e58f46ec3fe66113621c52781362a2b71dd2be8688f4882a0c5e8f4a6043b483"
+    },
+    "inexact_anytime_gram": {
+      "bytes": 4340,
+      "file": "inexact_anytime_gram.py",
+      "sha256": "b6757092194b508faebf8a512ef0266d6e95631392f1eab20b05b24ead1a12c3"
+    },
+    "known_anchor_response": {
+      "bytes": 3411,
+      "file": "known_anchor_response.py",
+      "sha256": "bbf20979e58d04324665a4e4c0bcaa460ae3d90eb49aa64f9ff7943548273120"
+    },
+    "matrix_free_mlp": {
+      "bytes": 7426,
+      "file": "matrix_free_mlp.py",
+      "sha256": "d4eb03510ea161a4b507d4bbc6cdd5738a9a880e13e9d507fbe86fc2ded32783"
+    },
+    "outward_green_momentum": {
+      "bytes": 3246,
+      "file": "outward_green_momentum.py",
+      "sha256": "b75c1f818159d6437af039ed0551a7f59c4494e629c6fd13328475b5b18f7c1f"
+    },
+    "outward_green_products": {
+      "bytes": 3607,
+      "file": "outward_green_products.py",
+      "sha256": "4c5f563ca28a4e8b8cd6f58bf3e22d9afddc06173cd97eea4951f69c3d2e449c"
+    },
+    "outward_inexact_anytime_gram": {
+      "bytes": 7221,
+      "file": "outward_inexact_anytime_gram.py",
+      "sha256": "f741a6dcaf32509d5c84fd175d65a6417cdbbb66139aa0c044150bf47a0c65fd"
+    },
+    "outward_variational_response": {
+      "bytes": 2543,
+      "file": "outward_variational_response.py",
+      "sha256": "380cde41355290596e69ad42d7874db3e85949f4047fcd6326700c7c788496df"
+    },
+    "pinned_source_bundle_v1": {
+      "bytes": 6667,
+      "file": "pinned_source_bundle_v1.py",
+      "sha256": "01b25ad50ce59701f1bbf0c7768bb0c325a98de280ce9e89b716fce4a9d425ae"
+    },
+    "probe_jacobian_bound": {
+      "bytes": 12217,
+      "file": "probe_jacobian_bound.py",
+      "sha256": "caf1acec6941125fe0556acf53de65aea77c8f298c5eea5123d7f46cde0b30dd"
+    },
+    "prospective_ledger_v1": {
+      "bytes": 8336,
+      "file": "prospective_ledger_v1.py",
+      "sha256": "7e32efeeb4271b66ff8843e2a57b15c5fb69af10bd18007311cad8826b92080b"
+    },
+    "response_centered_scalar_closure": {
+      "bytes": 2979,
+      "file": "response_centered_scalar_closure.py",
+      "sha256": "b0debcd97869f57e4d07980318ebe6b0bd0831e545dd30882bd3d28747e1458e"
+    },
+    "smooth_mlp_modular_grokking": {
+      "bytes": 13820,
+      "file": "smooth_mlp_modular_grokking.py",
+      "sha256": "74439aa5b4b5f8caf11e94ec5d9b8d6bd838bd4ffe6e8711c373b02144ef77a4"
+    },
+    "streaming_variational_centerline": {
+      "bytes": 5818,
+      "file": "streaming_variational_centerline.py",
+      "sha256": "cea0ade5fc1255969b7a93cb1d8525ebbee9020709ceb5399db9a090e450228a"
+    },
+    "transformer_block_envelope": {
+      "bytes": 11679,
+      "file": "transformer_block_envelope.py",
+      "sha256": "9aa1b18f26f7de214ded1280026ebfba7a3e332c86fa9228757acb40265db7c0"
+    },
+    "transformer_certificate_protocol": {
+      "bytes": 4522,
+      "file": "transformer_certificate_protocol.py",
+      "sha256": "c04a7b31ed4b8911a01f6292838fc7633e3bd5b1aa539bce7de865fb454740cb"
+    },
+    "transformer_four_sweep_development_audit": {
+      "bytes": 25934,
+      "file": "transformer_four_sweep_development_audit.py",
+      "sha256": "b60ea89574e82116a753f0c9f166a70e388f7707694596943d82dd13e10da5d1"
+    },
+    "transformer_hvp_grokking": {
+      "bytes": 16749,
+      "file": "transformer_hvp_grokking.py",
+      "sha256": "7860d3f9b14427cc7ad49020943922dd07a655c269d846e17fb731f27c823f4f"
+    },
+    "transformer_modal_forecast": {
+      "bytes": 8388,
+      "file": "transformer_modal_forecast.py",
+      "sha256": "1fe76ca893ec84e880ec6917274cbe51766c5a1857d96132f55d99532bc71e06"
+    },
+    "transformer_optimizer_probe": {
+      "bytes": 3008,
+      "file": "transformer_optimizer_probe.py",
+      "sha256": "3c7665274245731141f4e0f451652f486cb65d7a16b0dcf233baa66e8bfd5c79"
+    },
+    "verified_artifact_io": {
+      "bytes": 4989,
+      "file": "verified_artifact_io.py",
+      "sha256": "43a07152998d653899210600b2225b21a153aea556d3801e2d350261edde8c46"
+    },
+    "window_event_assembly": {
+      "bytes": 11996,
+      "file": "window_event_assembly.py",
+      "sha256": "0e2d2f5fc5b7946126a414adcc5730142e50ee0fa1f90a7ab1697a5219631e11"
+    }
+  },
+  "status": "static_source_inventory_completed"
+}

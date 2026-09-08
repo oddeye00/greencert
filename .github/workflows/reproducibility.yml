@@ -48,6 +48,12 @@ jobs:
           python -I -B scripts/audit_dgx_observer_source_chain.py --self-test
       - name: Record environment
         run: python scripts/check_reproduction_environment.py
+      - name: Verify final-scale controls without running registered models
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $PSNativeCommandUseErrorActionPreference = $true
+          python -B scripts/test_final_scale_release_suite_v1.py
+          python -B scripts/test_final_scale_public_bundle_v1.py
       - name: Run numerical smoke audit
         run: python reproduce.py smoke
       - name: Verify exact-integer norm audit and fixed fixtures

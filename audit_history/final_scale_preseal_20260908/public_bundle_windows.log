@@ -1,0 +1,9 @@
+test_bootstrap_authenticates_all_sources_without_execution (__main__.PublicBundleTests.test_bootstrap_authenticates_all_sources_without_execution) ... ok
+test_integer_looking_float_conversion_is_not_silently_admitted (__main__.PublicBundleTests.test_integer_looking_float_conversion_is_not_silently_admitted) ... ok
+test_production_cli_has_no_fixture_or_resume_option (__main__.PublicBundleTests.test_production_cli_has_no_fixture_or_resume_option) ... ok
+test_protocol_runtime_source_and_working_copy_byte_bindings (__main__.PublicBundleTests.test_protocol_runtime_source_and_working_copy_byte_bindings) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 6.801s
+
+OK

@@ -1,0 +1,32 @@
+name: final-scale-controls
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  linux-control-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      OMP_NUM_THREADS: '1'
+      OPENBLAS_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
+    steps:
+      - name: Check out exact sources
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+      - name: Set up Python
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+        with:
+          python-version: '3.12.10'
+          cache: pip
+      - name: Install locked dependencies
+        run: python -m pip install -r requirements.txt
+      - name: Test controls, numerical replay and one-shot lifecycle
+        run: python -B scripts/test_final_scale_release_suite_v1.py
+      - name: Authenticate public bundle without launching a model
+        run: python -B scripts/test_final_scale_public_bundle_v1.py

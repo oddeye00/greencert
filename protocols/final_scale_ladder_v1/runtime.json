@@ -1,0 +1,21 @@
+{
+  "distributions": {
+    "matplotlib": "3.11.1",
+    "numpy": "2.5.2",
+    "python-flint": "0.9.0",
+    "torch": "2.13.0"
+  },
+  "execution_device": "cpu",
+  "flint_build": "0.9.0",
+  "implementation": "CPython",
+  "installed_dependencies_independently_attested": false,
+  "machine": "aarch64",
+  "numpy_build": "2.5.2",
+  "platform": "Linux-6.17.0-1032-nvidia-aarch64-with-glibc2.39",
+  "python": "3.12.3",
+  "python_executable_sha256": "1401f5c1ddd9e8f9d77622113a8d04b5f7ef57c0e3f40dd29db248a5aa91622e",
+  "schema": "final_scale_runtime_identity_v1",
+  "torch_build": "2.13.0+cu130",
+  "torch_cpu_capability": "SVE128",
+  "torch_cuda_build": "13.0"
+}
